@@ -97,5 +97,5 @@ class APIResponseError(ClientResponseError):
         )
 
 
-class APIInvalidGrant(Exception):
+class APIInvalidGrantError(Exception):
     """Define an invalid grant error."""
