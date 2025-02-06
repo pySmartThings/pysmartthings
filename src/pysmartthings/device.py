@@ -465,7 +465,7 @@ class DeviceStatusBase:
 
     @property
     def power_consumption_power(self) -> int | None:
-        """Get the instantaneous power consumption during the reporting period in watts (W)."""
+        """Get the instantaneous power consumption in watts (W)."""
         try:
             return int(self.power_consumption["power"])
         except (KeyError, ValueError, TypeError):
@@ -473,7 +473,7 @@ class DeviceStatusBase:
 
     @property
     def power_consumption_energy(self) -> float | None:
-        """Get the accumulated energy consumption during the reporting period in watt-hours (Wh)."""
+        """Get the accumulated energy consumption in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["energy"])
         except (KeyError, ValueError, TypeError):
@@ -489,7 +489,7 @@ class DeviceStatusBase:
 
     @property
     def power_consumption_delta_energy(self) -> float | None:
-        """Get the delta of accumulated energy consumption during the reporting period in watt-hours (Wh)."""
+        """Get the delta of accumulated energy consumption in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["deltaEnergy"])
         except (KeyError, TypeError):
@@ -497,7 +497,7 @@ class DeviceStatusBase:
 
     @property
     def power_consumption_power_energy(self) -> float | None:
-        """Get the energy consumption during the reporting period calculated from instantaneous power consumption in watt-hours (Wh)."""
+        """Get the energy consumption calculated from instantaneous power in Wh."""
         try:
             return float(self.power_consumption["powerEnergy"])
         except (KeyError, TypeError):
@@ -513,7 +513,7 @@ class DeviceStatusBase:
 
     @property
     def power_consumption_persisted_energy(self) -> str | None:
-        """Get the accumulated energy consumption that was saved into device local DB in watt-hours (Wh)."""
+        """Get the accumulated persisted energy consumption in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["persistedEnergy"])
         except (KeyError, TypeError):
