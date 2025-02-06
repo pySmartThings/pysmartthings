@@ -7,7 +7,7 @@ import sys
 from pysmartthings.capability import CAPABILITIES
 
 
-def main():
+def main() -> None:
     """Run the script."""
     capabilities = CAPABILITIES.copy()
     capabilities.sort()
