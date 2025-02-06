@@ -1,0 +1,14 @@
+{
+  "name": "pysmartthings",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Asynchronous Python client for SmartThings.",
+  "scripts": {
+    "prettier": "prettier --write **/*.{json,js,md,yml,yaml}"
+  },
+  "author": "Andrew Sayre <andrew@sayre.net>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "prettier": "3.4.2"
+  }
+}

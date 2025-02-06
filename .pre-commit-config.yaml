@@ -99,6 +99,12 @@ repos:
         entry: poetry check
         pass_filenames: false
         always_run: true
+      - id: prettier
+        name: 💄 Ensuring files are prettier
+        language: system
+        types: [yaml, json, markdown]
+        entry: npm run prettier
+        pass_filenames: false
       - id: pylint
         name: 🌟 Starring code with pylint
         language: system
