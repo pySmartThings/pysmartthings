@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-from collections import defaultdict, namedtuple
+from collections import defaultdict
 from collections.abc import Mapping, Sequence
 import colorsys
 import re
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, NamedTuple
 
 from .capability import ATTRIBUTE_OFF_VALUES, ATTRIBUTE_ON_VALUES, Attribute, Capability
 from .entity import Entity
@@ -21,7 +21,16 @@ DEVICE_TYPE_ENDPOINT_APP = "ENDPOINT_APP"
 DEVICE_TYPE_VIPER = "VIPER"
 
 COLOR_HEX_MATCHER = re.compile("^#[A-Fa-f0-9]{6}$")
-Status = namedtuple("status", "value unit data")
+
+
+class Status(NamedTuple):
+    """Define a status object."""
+
+    value: Any
+    unit: Any
+    data: Any
+
+
 STATUS_NONE = Status(None, None, None)
 
 
