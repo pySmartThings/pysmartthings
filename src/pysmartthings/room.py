@@ -29,11 +29,10 @@ class Room:
 
     def to_data(self) -> dict:
         """Get a data structure representing this entity."""
-        data = {
+        return {
             "name": self._name,
             "backgroundImage": self._background_image,
         }
-        return data
 
     @property
     def room_id(self) -> str:

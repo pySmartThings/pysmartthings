@@ -351,6 +351,7 @@ class Api:
                     data=data,
                 )
             resp.raise_for_status()
+            return None
 
     async def get(self, resource: str, *, params: dict | None = None):
         """Get a resource."""
@@ -398,6 +399,7 @@ class Api:
                     data = await resp.json()
                 raise APIInvalidGrantError(data.get("error_description"))
             resp.raise_for_status()
+            return None
 
     @staticmethod
     def _get_next_link(data):
