@@ -1,9 +1,13 @@
 """Defines the rooms module."""
 
-from typing import Dict, Optional
+from __future__ import annotations
 
-from .api import Api
+from typing import TYPE_CHECKING, Dict
+
 from .entity import Entity
+
+if TYPE_CHECKING:
+    from .api import Api
 
 
 class Room:
@@ -78,7 +82,7 @@ class RoomEntity(Room, Entity):
     def __init__(
         self,
         api: Api,
-        data: Optional[Dict] = None,
+        data: Dict | None = None,
         *,
         location_id: str = None,
         room_id: str = None,

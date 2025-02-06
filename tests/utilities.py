@@ -1,5 +1,7 @@
 """Define testing utilities."""
 
+from __future__ import annotations
+
 import json as _json
 from typing import Optional, Sequence, Union
 from urllib.parse import parse_qs
@@ -141,7 +143,7 @@ class MockResponse:
         self._headers = headers or []
 
     def match_request(
-        self, method: str, url: URL, headers: Optional[Sequence], json: BodyFixtureType
+        self, method: str, url: URL, headers: Sequence | None, json: BodyFixtureType
     ):
         """Test if response answers request."""
         # Headers

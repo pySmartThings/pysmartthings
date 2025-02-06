@@ -1,10 +1,14 @@
 """Define the SmartThing location."""
 
-from typing import List, Optional
+from __future__ import annotations
 
-from .api import Api
+from typing import TYPE_CHECKING, List
+
 from .entity import Entity
 from .room import RoomEntity
+
+if TYPE_CHECKING:
+    from .api import Api
 
 
 class Location:
@@ -84,7 +88,7 @@ class LocationEntity(Entity, Location):
     """Define a location entity."""
 
     def __init__(
-        self, api: Api, data: Optional[dict] = None, location_id: Optional[str] = None
+        self, api: Api, data: dict | None = None, location_id: str | None = None
     ):
         """Create a new instance of the LocationEntity."""
         Entity.__init__(self, api)

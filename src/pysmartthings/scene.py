@@ -1,9 +1,13 @@
 """Define the scene module."""
 
-from typing import Dict, Optional
+from __future__ import annotations
 
-from .api import Api
+from typing import TYPE_CHECKING, Dict
+
 from .entity import Entity
+
+if TYPE_CHECKING:
+    from .api import Api
 
 
 class Scene:
@@ -54,7 +58,7 @@ class Scene:
 class SceneEntity(Entity, Scene):
     """Define a scene entity."""
 
-    def __init__(self, api: Api, data: Optional[Dict] = None):
+    def __init__(self, api: Api, data: Dict | None = None):
         """Create a new instance of the class."""
         Entity.__init__(self, api)
         Scene.__init__(self)

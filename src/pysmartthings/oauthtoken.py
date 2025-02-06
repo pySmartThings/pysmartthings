@@ -1,16 +1,19 @@
 """Define the oauth module."""
 
-from datetime import datetime, timedelta
-from typing import List, Optional
+from __future__ import annotations
 
-from .api import Api
+from datetime import datetime, timedelta
+from typing import TYPE_CHECKING, List
+
+if TYPE_CHECKING:
+    from .api import Api
 
 
 class OAuthToken:
     """Define oauth token information."""
 
     def __init__(
-        self, api: Api, data: Optional[dict] = None, refresh_token: Optional[str] = None
+        self, api: Api, data: dict | None = None, refresh_token: str | None = None
     ):
         """Create a new instance of the OAuthToken class."""
         self._api = api

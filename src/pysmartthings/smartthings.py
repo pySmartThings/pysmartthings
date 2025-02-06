@@ -1,8 +1,8 @@
 """Define the SmartThings Cloud API."""
 
-from typing import List, Optional, Sequence
+from __future__ import annotations
 
-from aiohttp import ClientSession
+from typing import TYPE_CHECKING, List, Sequence
 
 from .api import Api
 from .app import (
@@ -22,6 +22,9 @@ from .oauthtoken import OAuthToken
 from .room import Room, RoomEntity
 from .scene import SceneEntity
 from .subscription import Subscription, SubscriptionEntity
+
+if TYPE_CHECKING:
+    from aiohttp import ClientSession
 
 
 class SmartThings:
@@ -72,9 +75,9 @@ class SmartThings:
     async def devices(
         self,
         *,
-        location_ids: Optional[Sequence[str]] = None,
-        capabilities: Optional[Sequence[str]] = None,
-        device_ids: Optional[Sequence[str]] = None,
+        location_ids: Sequence[str] | None = None,
+        capabilities: Sequence[str] | None = None,
+        device_ids: Sequence[str] | None = None,
     ) -> List:
         """Retrieve SmartThings devices."""
         params = []
@@ -92,7 +95,7 @@ class SmartThings:
         entity = await self._service.get_device(device_id)
         return DeviceEntity(self._service, entity)
 
-    async def apps(self, *, app_type: Optional[str] = None) -> List[AppEntity]:
+    async def apps(self, *, app_type: str | None = None) -> List[AppEntity]:
         """Retrieve list of apps."""
         params = []
         if app_type:
@@ -142,8 +145,8 @@ class SmartThings:
     async def installed_apps(
         self,
         *,
-        location_id: Optional[str] = None,
-        installed_app_status: Optional[InstalledAppStatus] = None,
+        location_id: str | None = None,
+        installed_app_status: InstalledAppStatus | None = None,
     ) -> List[InstalledAppEntity]:
         """Get a list of the installed applications."""
         params = []
@@ -189,7 +192,7 @@ class SmartThings:
         )
         return SubscriptionEntity(self._service, entity)
 
-    async def scenes(self, *, location_id: Optional[str] = None):
+    async def scenes(self, *, location_id: str | None = None):
         """Get a list of scenes and optionally filter by location."""
         params = []
         if location_id:

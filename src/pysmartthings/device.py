@@ -1,13 +1,17 @@
 """Defines a SmartThings device."""
 
+from __future__ import annotations
+
 from collections import defaultdict, namedtuple
 import colorsys
 import re
-from typing import Any, Dict, Mapping, Optional, Sequence, Tuple
+from typing import TYPE_CHECKING, Any, Dict, Mapping, Sequence, Tuple
 
-from .api import Api
 from .capability import ATTRIBUTE_OFF_VALUES, ATTRIBUTE_ON_VALUES, Attribute, Capability
 from .entity import Entity
+
+if TYPE_CHECKING:
+    from .api import Api
 
 DEVICE_TYPE_OCF = "OCF"
 DEVICE_TYPE_DTH = "DTH"
@@ -133,7 +137,7 @@ class Device:
                 self._device_type_name = dth.get("deviceTypeName")
                 self._device_type_network = dth.get("deviceNetworkType")
 
-    def get_capability(self, *capabilities) -> Optional[str]:
+    def get_capability(self, *capabilities) -> str | None:
         """Return the first capability held by the device."""
         for capability in capabilities:
             if capability in self._capabilities:
@@ -200,7 +204,7 @@ class DeviceStatusBase:
     """Define the base status of device components."""
 
     def __init__(
-        self, component_id: str, attributes: Optional[Mapping[str, Status]] = None
+        self, component_id: str, attributes: Mapping[str, Status] | None = None
     ):
         """Initialize the status class."""
         self._attributes = defaultdict(lambda: STATUS_NONE, attributes or {})
@@ -230,7 +234,7 @@ class DeviceStatusBase:
         )
 
     @property
-    def color(self) -> Optional[str]:
+    def color(self) -> str | None:
         """Get the color attribute."""
         return self._attributes[Attribute.color].value
 
@@ -335,12 +339,12 @@ class DeviceStatusBase:
         self.update_attribute_value(Attribute.thermostat_fan_mode, value)
 
     @property
-    def humidity(self) -> Optional[int]:
+    def humidity(self) -> int | None:
         """Get the humidity in percentage."""
         return self._attributes[Attribute.humidity].value
 
     @property
-    def thermostat_mode(self) -> Optional[str]:
+    def thermostat_mode(self) -> str | None:
         """Get the thermostatMode attribute."""
         return self._attributes[Attribute.thermostat_mode].value
 
@@ -350,27 +354,27 @@ class DeviceStatusBase:
         self.update_attribute_value(Attribute.thermostat_mode, value)
 
     @property
-    def temperature(self) -> Optional[int]:
+    def temperature(self) -> int | None:
         """Get the temperature attribute."""
         return self._attributes[Attribute.temperature].value
 
     @property
-    def thermostat_operating_state(self) -> Optional[str]:
+    def thermostat_operating_state(self) -> str | None:
         """Get the thermostatOperatingState attribute."""
         return self._attributes[Attribute.thermostat_operating_state].value
 
     @property
-    def supported_thermostat_fan_modes(self) -> Optional[str]:
+    def supported_thermostat_fan_modes(self) -> str | None:
         """Get the supportedThermostatFanModes attribute."""
         return self._attributes[Attribute.supported_thermostat_fan_modes].value
 
     @property
-    def supported_thermostat_modes(self) -> Optional[str]:
+    def supported_thermostat_modes(self) -> str | None:
         """Get the supportedThermostatModes attribute."""
         return self._attributes[Attribute.supported_thermostat_modes].value
 
     @property
-    def cooling_setpoint(self) -> Optional[int]:
+    def cooling_setpoint(self) -> int | None:
         """Get the coolingSetpoint attribute."""
         return self._attributes[Attribute.cooling_setpoint].value
 
@@ -380,7 +384,7 @@ class DeviceStatusBase:
         self.update_attribute_value(Attribute.cooling_setpoint, value)
 
     @property
-    def heating_setpoint(self) -> Optional[int]:
+    def heating_setpoint(self) -> int | None:
         """Get the heatingSetpoint attribute."""
         return self._attributes[Attribute.heating_setpoint].value
 
@@ -405,12 +409,12 @@ class DeviceStatusBase:
         return self._attributes[Attribute.window_shade].value
 
     @property
-    def drlc_status(self) -> Optional[dict]:
+    def drlc_status(self) -> dict | None:
         """Get the demand response load control status."""
         return self._attributes[Attribute.drlc_status].value
 
     @property
-    def drlc_status_duration(self) -> Optional[int]:
+    def drlc_status_duration(self) -> int | None:
         """Get the duration component of the drlc status."""
         try:
             return int(self.drlc_status["duration"])
@@ -418,7 +422,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def drlc_status_level(self) -> Optional[int]:
+    def drlc_status_level(self) -> int | None:
         """Get the level component of the drlc status."""
         try:
             return int(self.drlc_status["drlcLevel"])
@@ -426,7 +430,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def drlc_status_start(self) -> Optional[str]:
+    def drlc_status_start(self) -> str | None:
         """Get the level component of the drlc status."""
         try:
             return self.drlc_status["start"]
@@ -434,7 +438,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def drlc_status_override(self) -> Optional[bool]:
+    def drlc_status_override(self) -> bool | None:
         """Get the override component of the drlc status."""
         try:
             return bool(self.drlc_status["override"])
@@ -442,12 +446,12 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption(self) -> Optional[dict]:
+    def power_consumption(self) -> dict | None:
         """Get the power consumption report data."""
         return self._attributes[Attribute.power_consumption].value
 
     @property
-    def power_consumption_start(self) -> Optional[str]:
+    def power_consumption_start(self) -> str | None:
         """Get the start date of the reporting period in Iso8601Date format."""
         try:
             return self.power_consumption["start"]
@@ -455,7 +459,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption_power(self) -> Optional[int]:
+    def power_consumption_power(self) -> int | None:
         """Get the instantaneous power consumption during the reporting period in watts (W)."""
         try:
             return int(self.power_consumption["power"])
@@ -463,7 +467,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption_energy(self) -> Optional[float]:
+    def power_consumption_energy(self) -> float | None:
         """Get the accumulated energy consumption during the reporting period in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["energy"])
@@ -471,7 +475,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption_end(self) -> Optional[str]:
+    def power_consumption_end(self) -> str | None:
         """Get the end date of the reporting period in Iso8601Date format."""
         try:
             return self.power_consumption["end"]
@@ -479,7 +483,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption_delta_energy(self) -> Optional[float]:
+    def power_consumption_delta_energy(self) -> float | None:
         """Get the delta of accumulated energy consumption during the reporting period in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["deltaEnergy"])
@@ -487,7 +491,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption_power_energy(self) -> Optional[float]:
+    def power_consumption_power_energy(self) -> float | None:
         """Get the energy consumption during the reporting period calculated from instantaneous power consumption in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["powerEnergy"])
@@ -495,7 +499,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption_energy_saved(self) -> Optional[float]:
+    def power_consumption_energy_saved(self) -> float | None:
         """Get the energy saved during the report period in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["energySaved"])
@@ -503,7 +507,7 @@ class DeviceStatusBase:
             return None
 
     @property
-    def power_consumption_persisted_energy(self) -> Optional[str]:
+    def power_consumption_persisted_energy(self) -> str | None:
         """Get the accumulated energy consumption that was saved into device local DB in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["persistedEnergy"])
@@ -511,47 +515,47 @@ class DeviceStatusBase:
             return None
 
     @property
-    def ocf_system_time(self) -> Optional[str]:
+    def ocf_system_time(self) -> str | None:
         """Get the OCF system time."""
         return self._attributes[Attribute.st].value
 
     @property
-    def ocf_firmware_version(self) -> Optional[str]:
+    def ocf_firmware_version(self) -> str | None:
         """Get the OCF firmware version."""
         return self._attributes[Attribute.mnfv].value
 
     @property
-    def ocf_date_of_manufacture(self) -> Optional[str]:
+    def ocf_date_of_manufacture(self) -> str | None:
         """Get the OCF date of manufacture."""
         return self._attributes[Attribute.mndt].value
 
     @property
-    def ocf_hardware_version(self) -> Optional[str]:
+    def ocf_hardware_version(self) -> str | None:
         """Get the OCF hardware version."""
         return self._attributes[Attribute.mnhw].value
 
     @property
-    def ocf_device_id(self) -> Optional[str]:
+    def ocf_device_id(self) -> str | None:
         """Get the OCF device id."""
         return self._attributes[Attribute.di].value
 
     @property
-    def ocf_support_link(self) -> Optional[str]:
+    def ocf_support_link(self) -> str | None:
         """Get the OCF support link."""
         return self._attributes[Attribute.mnsl].value
 
     @property
-    def ocf_data_model_version(self) -> Optional[str]:
+    def ocf_data_model_version(self) -> str | None:
         """Get the OCF data model version."""
         return self._attributes[Attribute.dmv].value
 
     @property
-    def ocf_name(self) -> Optional[str]:
+    def ocf_name(self) -> str | None:
         """Get the OCF name."""
         return self._attributes[Attribute.n].value
 
     @property
-    def ocf_vendor_id(self) -> Optional[str]:
+    def ocf_vendor_id(self) -> str | None:
         """Get the OCF vendor id."""
         return self._attributes[Attribute.vid].value
 
@@ -561,42 +565,42 @@ class DeviceStatusBase:
         return self._attributes[Attribute.mnmo].value
 
     @property
-    def ocf_manufacturer_name(self) -> Optional[str]:
+    def ocf_manufacturer_name(self) -> str | None:
         """Get the OCF manufacturer name."""
         return self._attributes[Attribute.mnmn].value
 
     @property
-    def ocf_manufacturer_details_link(self) -> Optional[str]:
+    def ocf_manufacturer_details_link(self) -> str | None:
         """Get the OCF manufacturer details link."""
         return self._attributes[Attribute.mnml].value
 
     @property
-    def ocf_platform_version(self) -> Optional[str]:
+    def ocf_platform_version(self) -> str | None:
         """Get the OCF platform version."""
         return self._attributes[Attribute.mnpv].value
 
     @property
-    def ocf_os_version(self) -> Optional[str]:
+    def ocf_os_version(self) -> str | None:
         """Get the OCF OS version."""
         return self._attributes[Attribute.mnos].value
 
     @property
-    def ocf_platform_id(self) -> Optional[str]:
+    def ocf_platform_id(self) -> str | None:
         """Get the OCF platform id."""
         return self._attributes[Attribute.pi].value
 
     @property
-    def ocf_spec_version(self) -> Optional[str]:
+    def ocf_spec_version(self) -> str | None:
         """Get the OCF spec version."""
         return self._attributes[Attribute.icv].value
 
     @property
-    def data(self) -> Optional[dict]:
+    def data(self) -> dict | None:
         """Get the data attribute."""
         return self._attributes[Attribute.data].value
 
     @property
-    def air_conditioner_mode(self) -> Optional[str]:
+    def air_conditioner_mode(self) -> str | None:
         """Get the air conditioner mode attribute."""
         return self._attributes[Attribute.air_conditioner_mode].value
 
@@ -610,12 +614,12 @@ class DeviceStatusBase:
         return []
 
     @property
-    def fan_mode(self) -> Optional[str]:
+    def fan_mode(self) -> str | None:
         """Get the fan mode attribute."""
         return self._attributes[Attribute.fan_mode].value
 
     @property
-    def fan_oscillation_mode(self) -> Optional[str]:
+    def fan_oscillation_mode(self) -> str | None:
         """Get the fan oscillation mode attribute."""
         return self._attributes[Attribute.fan_oscillation_mode].value
 
@@ -634,7 +638,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.air_flow_direction].value
 
     @property
-    def three_axis(self) -> Optional[Tuple[int, int, int]]:
+    def three_axis(self) -> Tuple[int, int, int] | None:
         """Get the three axis attribute."""
         return self._attributes[Attribute.three_axis].value
 
@@ -760,8 +764,8 @@ class DeviceStatus(DeviceStatusBase):
         capability: str,
         attribute: str,
         value: Any,
-        unit: Optional[str] = None,
-        data: Optional[Dict] = None,
+        unit: str | None = None,
+        data: Dict | None = None,
     ):
         """Apply an update to a specific attribute."""
         component = self
@@ -816,7 +820,7 @@ class DeviceEntity(Entity, Device):
     """Define a device entity."""
 
     def __init__(
-        self, api: Api, data: Optional[dict] = None, device_id: Optional[str] = None
+        self, api: Api, data: dict | None = None, device_id: str | None = None
     ):
         """Create a new instance of the DeviceEntity class."""
         Entity.__init__(self, api)
@@ -850,9 +854,9 @@ class DeviceEntity(Entity, Device):
 
     async def set_color(
         self,
-        hue: Optional[float] = None,
-        saturation: Optional[float] = None,
-        color_hex: Optional[str] = None,
+        hue: float | None = None,
+        saturation: float | None = None,
+        color_hex: str | None = None,
         set_status: bool = False,
         *,
         component_id: str = "main",

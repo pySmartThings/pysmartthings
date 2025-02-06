@@ -117,7 +117,6 @@ asyncio_mode = "auto"
 ignore = [
   "ANN401", # Opinioated warning on disallowing dynamically typed expressions
   "ANN201",
-  "FA100",
   "ANN204",
   "ANN202",
   "UP006",

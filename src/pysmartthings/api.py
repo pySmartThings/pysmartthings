@@ -1,5 +1,7 @@
 """Utility for invoking the SmartThings Cloud API."""
 
+from __future__ import annotations
+
 from typing import Optional, Sequence
 
 from aiohttp import BasicAuth, ClientSession
@@ -390,11 +392,11 @@ class Api:
             next_link = Api._get_next_link(resp)
         return items
 
-    async def post(self, resource: str, data: Optional[Sequence]):
+    async def post(self, resource: str, data: Sequence | None):
         """Perform a post request."""
         return await self.request("post", self._api_base + resource, data=data)
 
-    async def put(self, resource: str, data: Optional[Sequence]):
+    async def put(self, resource: str, data: Sequence | None):
         """Perform a put request."""
         return await self.request("put", self._api_base + resource, data=data)
 

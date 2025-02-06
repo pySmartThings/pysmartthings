@@ -1,7 +1,9 @@
 """Define errors that can be returned from the SmartThings API."""
 
+from __future__ import annotations
+
 import json
-from typing import Optional, Sequence
+from typing import Sequence
 
 from aiohttp import ClientResponseError
 
@@ -29,17 +31,17 @@ class APIErrorDetail:
             self._details.extend([APIErrorDetail(detail) for detail in details])
 
     @property
-    def code(self) -> Optional[str]:
+    def code(self) -> str | None:
         """Get the SmartThings-defined error code."""
         return self._code
 
     @property
-    def message(self) -> Optional[str]:
+    def message(self) -> str | None:
         """Get a description of the error."""
         return self._message
 
     @property
-    def target(self) -> Optional[str]:
+    def target(self) -> str | None:
         """Get the target of the particular error."""
         return self._target
 
@@ -73,7 +75,7 @@ class APIResponseError(ClientResponseError):
         return self._raw_error_response
 
     @property
-    def request_id(self) -> Optional[str]:
+    def request_id(self) -> str | None:
         """Get request correlation id."""
         return self._request_id
 

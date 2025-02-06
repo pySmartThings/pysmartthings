@@ -1,10 +1,14 @@
 """Define the subscription module."""
 
-from enum import Enum
-from typing import Any, Optional
+from __future__ import annotations
 
-from .api import Api
+from enum import Enum
+from typing import TYPE_CHECKING, Any
+
 from .entity import Entity
+
+if TYPE_CHECKING:
+    from .api import Api
 
 
 class SourceType(Enum):
@@ -201,7 +205,7 @@ class Subscription:
 class SubscriptionEntity(Entity, Subscription):
     """Define a subscription entity."""
 
-    def __init__(self, api: Api, data: Optional[dict] = None):
+    def __init__(self, api: Api, data: dict | None = None):
         """Create a new instance of the SubscriptionEntity class."""
         Entity.__init__(self, api)
         Subscription.__init__(self)

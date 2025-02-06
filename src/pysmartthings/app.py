@@ -1,10 +1,14 @@
 """Define the app module."""
 
-import re
-from typing import List, Optional
+from __future__ import annotations
 
-from .api import Api
+import re
+from typing import TYPE_CHECKING, List
+
 from .entity import Entity
+
+if TYPE_CHECKING:
+    from .api import Api
 
 APP_TYPE_LAMBDA = "LAMBDA_SMART_APP"
 APP_TYPE_WEBHOOK = "WEBHOOK_SMART_APP"
@@ -85,7 +89,7 @@ class App:
         Get the app name.
 
         A globally unique, developer-defined identifier for an app. It is
-        alpha-numeric, may contain dashes, underscores, periods, and must
+        alphanumeric, may contain dashes, underscores, periods, and must
         be less then 250 characters long. ^[a-z0-9.-_]{1,250}$
         """
         return self._app_name
@@ -97,7 +101,7 @@ class App:
             raise ValueError("value cannot be None or zero length.")
         if not _APP_NAME_PATTERN.match(value):
             raise ValueError(
-                "value must be alpha-numeric, may contain dashes "
+                "value must be alphanumeric, may contain dashes "
                 "underscores, periods, and must be less then 250 "
                 "characters long."
             )
@@ -361,7 +365,7 @@ class AppEntity(Entity, App):
 class AppOAuthClient:
     """Define an oauth client information."""
 
-    def __init__(self, data: Optional[dict]):
+    def __init__(self, data: dict | None):
         """Create a new instance of the OAuthClient."""
         self._client_id = None
         self._client_secret = None
@@ -387,7 +391,7 @@ class AppOAuthClient:
 class AppOAuthClientEntity(AppOAuthClient):
     """Define an oauth client information details."""
 
-    def __init__(self, api: Api, app_id: str, data: Optional[dict]):
+    def __init__(self, api: Api, app_id: str, data: dict | None):
         """Init the class."""
         self._client_details = AppOAuthEntity(api, app_id, None)
         super().__init__(data)
