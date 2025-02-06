@@ -136,7 +136,6 @@ ignore = [
   "S105",
   "PGH004",
   "EXE001",
-  "PTH123",
   "T201",
   "COM812", # Conflicts with other rules
   "D203", # Conflicts with other rules
