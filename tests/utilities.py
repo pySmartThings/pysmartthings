@@ -127,7 +127,8 @@ class ClientMocker:
             if response.match_request(method, url, headers or [], json):
                 return response
 
-        assert False, f"No mock registered for {method.upper()} {url} {params}"
+        msg = f"No mock registered for {method.upper()} {url} {params}"
+        raise AssertionError(msg)
 
 
 class MockResponse:

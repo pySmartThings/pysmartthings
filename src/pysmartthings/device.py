@@ -488,7 +488,7 @@ class DeviceStatusBase:
         """Get the delta of accumulated energy consumption during the reporting period in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["deltaEnergy"])
-        except (KeyError, TypeError, TypeError):
+        except (KeyError, TypeError):
             return None
 
     @property
@@ -496,7 +496,7 @@ class DeviceStatusBase:
         """Get the energy consumption during the reporting period calculated from instantaneous power consumption in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["powerEnergy"])
-        except (KeyError, TypeError, TypeError):
+        except (KeyError, TypeError):
             return None
 
     @property
@@ -504,7 +504,7 @@ class DeviceStatusBase:
         """Get the energy saved during the report period in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["energySaved"])
-        except (KeyError, TypeError, TypeError):
+        except (KeyError, TypeError):
             return None
 
     @property
@@ -512,7 +512,7 @@ class DeviceStatusBase:
         """Get the accumulated energy consumption that was saved into device local DB in watt-hours (Wh)."""
         try:
             return float(self.power_consumption["persistedEnergy"])
-        except (KeyError, TypeError, TypeError):
+        except (KeyError, TypeError):
             return None
 
     @property
