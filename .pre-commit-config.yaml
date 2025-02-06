@@ -85,6 +85,12 @@ repos:
         types: [text]
         entry: poetry run end-of-file-fixer
         stages: [pre-commit, pre-push, manual]
+      - id: mypy
+        name: 🆎 Static type checking using mypy
+        language: system
+        types: [python]
+        entry: poetry run mypy
+        require_serial: true
       - id: no-commit-to-branch
         name: 🛑 Don't commit to main branch
         language: system

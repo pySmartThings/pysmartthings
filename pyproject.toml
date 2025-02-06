@@ -41,6 +41,7 @@ yarl = "1.9.2"
 pre-commit = "^4.1.0"
 pre-commit-hooks = "^5.0.0"
 ruff = "^0.9.5"
+mypy = "^1.15.0"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/pySmartThings/pysmartthings/issues"
@@ -52,6 +53,36 @@ show_missing = true
 [tool.coverage.run]
 plugins = ["covdefaults"]
 source = ["pysmartthings"]
+
+[tool.mypy]
+# Specify the target platform details in config, so your developers are
+# free to run mypy on Windows, Linux, or macOS and get consistent
+# results.
+platform = "linux"
+python_version = "3.11"
+
+# show error messages from unrelated files
+follow_imports = "normal"
+
+# suppress errors about unsatisfied imports
+ignore_missing_imports = true
+
+# be strict
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_optional = true
+warn_incomplete_stub = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
 
 [tool.pylint.MASTER]
 ignore = [
