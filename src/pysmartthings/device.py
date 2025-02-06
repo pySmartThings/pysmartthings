@@ -249,7 +249,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.color].value
 
     @color.setter
-    def color(self, value: str):
+    def color(self, value: str) -> None:
         """Set the color attribute."""
         if not COLOR_HEX_MATCHER.match(value):
             msg = "value was not a properly formatted color hex, i.e. #000000."
@@ -262,7 +262,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.color_temperature].value or 1)
 
     @color_temperature.setter
-    def color_temperature(self, value: int):
+    def color_temperature(self, value: int) -> None:
         """Set the color temperature attribute."""
         if not 1 <= value <= 30000:
             msg = "value must be scaled between 1-30000."
@@ -280,7 +280,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.fan_speed].value or 0)
 
     @fan_speed.setter
-    def fan_speed(self, value: int):
+    def fan_speed(self, value: int) -> None:
         """Set the fan speed attribute."""
         if value < 0:
             msg = "value must be >= 0."
@@ -293,7 +293,7 @@ class DeviceStatusBase:
         return float(self._attributes[Attribute.hue].value or 0.0)
 
     @hue.setter
-    def hue(self, value: float):
+    def hue(self, value: float) -> None:
         """Set the hue attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -306,7 +306,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.level].value or 0)
 
     @level.setter
-    def level(self, value: int):
+    def level(self, value: int) -> None:
         """Set the level of the attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -319,7 +319,7 @@ class DeviceStatusBase:
         return float(self._attributes[Attribute.saturation].value or 0.0)
 
     @saturation.setter
-    def saturation(self, value: float):
+    def saturation(self, value: float) -> None:
         """Set the saturation attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -337,7 +337,7 @@ class DeviceStatusBase:
         return self.is_on(Attribute.switch)
 
     @switch.setter
-    def switch(self, value: bool):
+    def switch(self, value: bool) -> None:
         """Set the value of the switch attribute."""
         status_value = bool_to_value(Attribute.switch, value)
         self.update_attribute_value(Attribute.switch, status_value)
@@ -393,7 +393,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.cooling_setpoint].value
 
     @cooling_setpoint.setter
-    def cooling_setpoint(self, value: int):
+    def cooling_setpoint(self, value: int) -> None:
         """Set the coolingSetpoint attribute."""
         self.update_attribute_value(Attribute.cooling_setpoint, value)
 
@@ -662,7 +662,7 @@ class DeviceStatusBase:
         return self.is_on(Attribute.mute)
 
     @mute.setter
-    def mute(self, value: bool):
+    def mute(self, value: bool) -> None:
         """Set the mute attribute."""
         status_value = bool_to_value(Attribute.mute, value)
         self.update_attribute_value(Attribute.mute, status_value)
@@ -673,7 +673,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.volume].value
 
     @volume.setter
-    def volume(self, value: float):
+    def volume(self, value: float) -> None:
         """Set the volume attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -686,7 +686,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.playback_status].value
 
     @playback_status.setter
-    def playback_status(self, value: str):
+    def playback_status(self, value: str) -> None:
         """Set the playbackStatus attribute."""
         self.update_attribute_value(Attribute.playback_status, value)
 
@@ -696,7 +696,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.input_source].value
 
     @input_source.setter
-    def input_source(self, value: str):
+    def input_source(self, value: str) -> None:
         """Set the volume attribute."""
         if value not in self.supported_input_sources:
             msg = "value must be supported."
@@ -717,7 +717,7 @@ class DeviceStatusBase:
         return self.is_on(Attribute.playback_shuffle)
 
     @playback_shuffle.setter
-    def playback_shuffle(self, value: bool):
+    def playback_shuffle(self, value: bool) -> None:
         """Set the playbackShuffle attribute."""
         status_value = bool_to_value(Attribute.playback_shuffle, value)
         self.update_attribute_value(Attribute.playback_shuffle, status_value)
@@ -728,7 +728,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.playback_repeat_mode].value
 
     @playback_repeat_mode.setter
-    def playback_repeat_mode(self, value: str):
+    def playback_repeat_mode(self, value: str) -> None:
         """Set the playbackRepeatMode attribute."""
         if value not in ["all", "off", "one"]:
             msg = "value must be one of: all, off, one"
@@ -741,7 +741,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.tv_channel].value
 
     @tv_channel.setter
-    def tv_channel(self, value: str):
+    def tv_channel(self, value: str) -> None:
         """Set the tvChannel attribute."""
         self.update_attribute_value(Attribute.tv_channel, value)
 
@@ -756,7 +756,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.shade_level].value or 0)
 
     @shade_level.setter
-    def shade_level(self, value: int):
+    def shade_level(self, value: int) -> None:
         """Set the level of the attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -825,7 +825,7 @@ class DeviceStatus(DeviceStatusBase):
         return self._device_id
 
     @device_id.setter
-    def device_id(self, value: str):
+    def device_id(self, value: str) -> None:
         """Set the device id."""
         self._device_id = value
 

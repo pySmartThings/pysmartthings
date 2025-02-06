@@ -94,7 +94,7 @@ class App:
         return self._app_name
 
     @app_name.setter
-    def app_name(self, value: str):
+    def app_name(self, value: str) -> None:
         """Set the app name."""
         if not value:
             msg = "value cannot be None or zero length."
@@ -136,7 +136,7 @@ class App:
         return self._description
 
     @description.setter
-    def description(self, value: str):
+    def description(self, value: str) -> None:
         """Set the description."""
         if not value:
             msg = "value cannot be None or zero length."
@@ -156,7 +156,7 @@ class App:
         return self._single_instance
 
     @single_instance.setter
-    def single_instance(self, value: bool):
+    def single_instance(self, value: bool) -> None:
         """Set the single instance parameter."""
         self._single_instance = bool(value)
 
@@ -166,7 +166,7 @@ class App:
         return self._classifications
 
     @classifications.setter
-    def classifications(self, value: list[str]):
+    def classifications(self, value: list[str]) -> None:
         """Set the classifications of the app."""
         self._classifications = list(value)
 
@@ -179,7 +179,7 @@ class App:
         return self._app_type
 
     @app_type.setter
-    def app_type(self, value: str):
+    def app_type(self, value: str) -> None:
         """Set the app type."""
         if value not in (APP_TYPE_LAMBDA, APP_TYPE_WEBHOOK):
             msg = "value must be 'LAMBDA_SMART_APP' or 'WEBHOOK_SMART_APP'"
@@ -201,7 +201,7 @@ class App:
         return self._webhook_target_url
 
     @webhook_target_url.setter
-    def webhook_target_url(self, value: str):
+    def webhook_target_url(self, value: str) -> None:
         """Set the URL that should be invoked during execution."""
         self._webhook_target_url = value
 
@@ -238,7 +238,7 @@ class AppSettings:
         return self._settings
 
     @settings.setter
-    def settings(self, value: dict):
+    def settings(self, value: dict) -> None:
         """Set the settings for the app."""
         self._settings = value
 
@@ -301,7 +301,7 @@ class AppOAuth:
         return self._client_name
 
     @client_name.setter
-    def client_name(self, value: str):
+    def client_name(self, value: str) -> None:
         """Set the name given to the OAuth client."""
         if not value:
             msg = "Value can not be None or an empty string."

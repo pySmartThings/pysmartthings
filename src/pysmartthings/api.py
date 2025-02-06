@@ -328,7 +328,7 @@ class Api:
         return self._session
 
     @session.setter
-    def session(self, value: ClientSession):
+    def session(self, value: ClientSession) -> None:
         """Set the instance of the session."""
         self._session = value
 

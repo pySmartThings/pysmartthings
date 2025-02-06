@@ -107,7 +107,7 @@ class Subscription:
         return self._installed_app_id
 
     @installed_app_id.setter
-    def installed_app_id(self, value: str):
+    def installed_app_id(self, value: str) -> None:
         """Set the id of the subscripting app."""
         self._installed_app_id = value
 
@@ -117,7 +117,7 @@ class Subscription:
         return self._source_type
 
     @source_type.setter
-    def source_type(self, value: Any):
+    def source_type(self, value: Any) -> None:
         """Set the typ eof event that is being subscribed to."""
         self._source_type = SourceType(value)
 
@@ -127,7 +127,7 @@ class Subscription:
         return self._capability
 
     @capability.setter
-    def capability(self, value: str):
+    def capability(self, value: str) -> None:
         """Get the name of the capability that is subscribed."""
         self._capability = value
 
@@ -137,7 +137,7 @@ class Subscription:
         return self._attribute
 
     @attribute.setter
-    def attribute(self, value: str):
+    def attribute(self, value: str) -> None:
         """Set the name of the capabilities attribute or * for all."""
         self._attribute = value
 
@@ -147,7 +147,7 @@ class Subscription:
         return self._value
 
     @value.setter
-    def value(self, value: str):
+    def value(self, value: str) -> None:
         """Set the value for that will trigger the subscription."""
         self._value = value
 
@@ -157,7 +157,7 @@ class Subscription:
         return self._state_change_only
 
     @state_change_only.setter
-    def state_change_only(self, value: bool):
+    def state_change_only(self, value: bool) -> None:
         """Set to execute only on a state change."""
         self._state_change_only = value
 
@@ -167,7 +167,7 @@ class Subscription:
         return self._subscription_name
 
     @subscription_name.setter
-    def subscription_name(self, value: str):
+    def subscription_name(self, value: str) -> None:
         """Set a name for the subscription."""
         self._subscription_name = value
 

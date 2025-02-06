@@ -40,7 +40,7 @@ class Room:
         return self._room_id
 
     @room_id.setter
-    def room_id(self, value: str):
+    def room_id(self, value: str) -> None:
         """Set the id of the room."""
         self._room_id = value
 
@@ -50,7 +50,7 @@ class Room:
         return self._location_id
 
     @location_id.setter
-    def location_id(self, value: str):
+    def location_id(self, value: str) -> None:
         """Set the location id of the room."""
         self._location_id = value
 
@@ -60,7 +60,7 @@ class Room:
         return self._name
 
     @name.setter
-    def name(self, value: str):
+    def name(self, value: str) -> None:
         """Set the name of the room."""
         self._name = value
 
@@ -70,7 +70,7 @@ class Room:
         return self._background_image
 
     @background_image.setter
-    def background_image(self, value: str):
+    def background_image(self, value: str) -> None:
         """Set the background image."""
         self._background_image = value
 
