@@ -1,5 +1,4 @@
-"""
-Defines SmartThings capabilities and attributes.
+"""Defines SmartThings capabilities and attributes.
 
 https://smartthings.developer.samsung.com/docs/api-ref/capabilities.html
 """

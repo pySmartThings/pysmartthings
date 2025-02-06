@@ -36,8 +36,7 @@ API_SCENE_EXECUTE = "scenes/{scene_id}/execute"
 
 
 class Api:
-    """
-    Wrapper around the SmartThings Cloud API operations.
+    """Wrapper around the SmartThings Cloud API operations.
 
     https://smartthings.developer.samsung.com/docs/api-ref/st-api.html
     """
@@ -51,48 +50,42 @@ class Api:
         self._api_base = api_base
 
     async def get_locations(self) -> dict:
-        """
-        Get locations.
+        """Get locations.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/listLocations
         """
         return await self.get_items(API_LOCATIONS)
 
     async def get_location(self, location_id: str) -> dict:
-        """
-        Get a specific location.
+        """Get a specific location.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getLocation
         """
         return await self.get(API_LOCATION.format(location_id=location_id))
 
     async def get_rooms(self, location_id: str) -> dict:
-        """
-        Get a location's rooms.
+        """Get a location's rooms.
 
         This API call is undocumented.
         """
         return await self.get_items(API_ROOMS.format(location_id=location_id))
 
     async def get_room(self, location_id: str, room_id: str) -> dict:
-        """
-        Get a specific room within a location.
+        """Get a specific room within a location.
 
         This API call is undocumented.
         """
         return await self.get(API_ROOM.format(location_id=location_id, room_id=room_id))
 
     async def create_room(self, location_id: str, data: dict):
-        """
-        Create a room.
+        """Create a room.
 
         This API call is undocumented.
         """
         return await self.post(API_ROOMS.format(location_id=location_id), data)
 
     async def update_room(self, location_id: str, room_id: str, data: dict):
-        """
-        Update a room.
+        """Update a room.
 
         This API call is undocumented.
         """
@@ -101,8 +94,7 @@ class Api:
         )
 
     async def delete_room(self, location_id: str, room_id: str):
-        """
-        Delete a room.
+        """Delete a room.
 
         This API call is undocumented.
         """
@@ -111,16 +103,14 @@ class Api:
         )
 
     async def get_devices(self, params: Optional = None) -> dict:
-        """
-        Get the device definitions.
+        """Get the device definitions.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getDevices
         """
         return await self.get_items(API_DEVICES, params=params)
 
     async def get_device(self, device_id: str) -> dict:
-        """
-        Get as specific device.
+        """Get as specific device.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getDevice
         """
@@ -133,8 +123,7 @@ class Api:
     async def post_device_command(
         self, device_id, component_id, capability, command, args
     ) -> object:
-        """
-        Execute commands on a device.
+        """Execute commands on a device.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/executeDeviceCommands
         """
@@ -153,96 +142,84 @@ class Api:
         return await self.post(API_DEVICE_COMMAND.format(device_id=device_id), data)
 
     async def get_apps(self, params: Optional = None) -> dict:
-        """
-        Get list of apps.
+        """Get list of apps.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/listApps
         """
         return await self.get_items(API_APPS, params=params)
 
     async def get_app(self, app_id: str) -> dict:
-        """
-        Get the details of the specific app.
+        """Get the details of the specific app.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/getApp
         """
         return await self.get(API_APP.format(app_id=app_id))
 
     async def create_app(self, data: dict) -> dict:
-        """
-        Create a new app.
+        """Create a new app.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/createApp
         """
         return await self.post(API_APPS, data)
 
     async def update_app(self, app_id: str, data: dict) -> dict:
-        """
-        Update an existing app.
+        """Update an existing app.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/updateApp
         """
         return await self.put(API_APP.format(app_id=app_id), data)
 
     async def delete_app(self, app_id: str):
-        """
-        Delete an app.
+        """Delete an app.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/deleteApp
         """
         return await self.delete(API_APP.format(app_id=app_id))
 
     async def get_app_settings(self, app_id: str) -> dict:
-        """
-        Get an app's settings.
+        """Get an app's settings.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getAppSettings
         """
         return await self.get(API_APP_SETTINGS.format(app_id=app_id))
 
     async def update_app_settings(self, app_id: str, data: dict) -> dict:
-        """
-        Update an app's settings.
+        """Update an app's settings.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/updateAppSettings
         """
         return await self.put(API_APP_SETTINGS.format(app_id=app_id), data)
 
     async def get_app_oauth(self, app_id: str) -> dict:
-        """
-        Get an app's oauth settings.
+        """Get an app's oauth settings.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/getAppOauth
         """
         return await self.get(API_APP_OAUTH.format(app_id=app_id))
 
     async def update_app_oauth(self, app_id: str, data: dict) -> dict:
-        """
-        Update an app's oauth settings.
+        """Update an app's oauth settings.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/updateAppOauth
         """
         return await self.put(API_APP_OAUTH.format(app_id=app_id), data)
 
     async def generate_app_oauth(self, app_id: str, data: dict) -> dict:
-        """
-        Generate a new app oauth client/secret.
+        """Generate a new app oauth client/secret.
 
-         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/generateAppOauth
+        https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/generateAppOauth
         """
         return await self.post(API_APP_OAUTH_GENERATE.format(app_id=app_id), data)
 
     async def get_installed_apps(self, params: Optional = None) -> dict:
-        """
-        Get list of installedapps.
+        """Get list of installedapps.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/listInstallations
         """
         return await self.get_items(API_INSTALLEDAPPS, params=params)
 
     async def get_installed_app(self, installed_app_id: str) -> dict:
-        """
-        Get the details of the specific installedapp.
+        """Get the details of the specific installedapp.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getInstallation
         """
@@ -251,8 +228,7 @@ class Api:
         )
 
     async def delete_installed_app(self, installed_app_id: str):
-        """
-        Delete an app.
+        """Delete an app.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/deleteInstallation
         """
@@ -261,8 +237,7 @@ class Api:
         )
 
     async def get_subscriptions(self, installed_app_id: str) -> dict:
-        """
-        Get installedapp's subscriptions.
+        """Get installedapp's subscriptions.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/listSubscriptions
         """
@@ -271,8 +246,7 @@ class Api:
         )
 
     async def create_subscription(self, installed_app_id: str, data: dict) -> dict:
-        """
-        Create a subscription for an installedapp.
+        """Create a subscription for an installedapp.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/saveSubscription
         """
@@ -281,8 +255,7 @@ class Api:
         )
 
     async def delete_all_subscriptions(self, installed_app_id: str) -> dict:
-        """
-        Delete all subscriptions for an installedapp.
+        """Delete all subscriptions for an installedapp.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/deleteAllSubscriptions
         """
@@ -293,8 +266,7 @@ class Api:
     async def get_subscription(
         self, installed_app_id: str, subscription_id: str
     ) -> dict:
-        """
-        Get an individual subscription.
+        """Get an individual subscription.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/getSubscription
         """
@@ -305,8 +277,7 @@ class Api:
         )
 
     async def delete_subscription(self, installed_app_id: str, subscription_id: str):
-        """
-        Delete an individual subscription.
+        """Delete an individual subscription.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/deleteSubscription
         """
@@ -317,16 +288,14 @@ class Api:
         )
 
     async def get_scenes(self, params: Optional = None):
-        """
-        Get scenes.
+        """Get scenes.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/listScenes
         """
         return await self.get_items(API_SCENES, params=params)
 
     async def execute_scene(self, scene_id: str) -> bool:
-        """
-        Execute a scene.
+        """Execute a scene.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/executeScene
         """

@@ -85,8 +85,7 @@ class App:
 
     @property
     def app_name(self) -> str:
-        """
-        Get the app name.
+        """Get the app name.
 
         A globally unique, developer-defined identifier for an app. It is
         alphanumeric, may contain dashes, underscores, periods, and must
@@ -111,8 +110,7 @@ class App:
 
     @property
     def display_name(self) -> str:
-        """
-        Get the display name.
+        """Get the display name.
 
         A default display name for an app. <= 75 characters
         """
@@ -131,8 +129,7 @@ class App:
 
     @property
     def description(self) -> str:
-        """
-        Get the description.
+        """Get the description.
 
         A default description for an app. <= 250 characters
         """
@@ -151,8 +148,7 @@ class App:
 
     @property
     def single_instance(self) -> bool:
-        """
-        Get the single instance parameter.
+        """Get the single instance parameter.
 
         Inform the installation systems that a particular app can only be
         installed once within a user's account.
@@ -176,8 +172,7 @@ class App:
 
     @property
     def app_type(self) -> str:
-        """
-        Get the app type.
+        """Get the app type.
 
         Denotes the type of app. "LAMBDA_SMART_APP" "WEBHOOK_SMART_APP"
         """
@@ -193,8 +188,7 @@ class App:
 
     @property
     def lambda_functions(self) -> list[str]:
-        """
-        Get the list of AWS arns referencing a Lambda function.
+        """Get the list of AWS arns referencing a Lambda function.
 
         Details related to a Lambda Smart App implementation. This model
         should only be specified for apps of type LAMBDA_SMART_APP.
