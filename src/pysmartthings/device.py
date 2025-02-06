@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 from collections import defaultdict, namedtuple
+from collections.abc import Mapping, Sequence
 import colorsys
 import re
-from typing import TYPE_CHECKING, Any, Dict, Mapping, Sequence, Tuple
+from typing import TYPE_CHECKING, Any
 
 from .capability import ATTRIBUTE_OFF_VALUES, ATTRIBUTE_ON_VALUES, Attribute, Capability
 from .entity import Entity
@@ -30,7 +31,7 @@ def hs_to_hex(hue: float, saturation: float) -> str:
     return f"#{round(rgb[0]):02x}{round(rgb[1]):02x}{round(rgb[2]):02x}".upper()
 
 
-def hex_to_hs(color_hex: str) -> Tuple[int, int]:
+def hex_to_hs(color_hex: str) -> tuple[int, int]:
     """Convert a string hex color to hue and saturation components."""
     color_hex = color_hex.lstrip("#")
     rgb = [
@@ -190,7 +191,7 @@ class Device:
         return self._device_type_network
 
     @property
-    def components(self) -> Dict[str, Sequence[str]]:
+    def components(self) -> dict[str, Sequence[str]]:
         """Get the components of the device."""
         return self._components
 
@@ -222,12 +223,12 @@ class DeviceStatusBase:
         self._attributes[attribute] = Status(value, status.unit, status.data)
 
     @property
-    def attributes(self) -> Dict[str, Status]:
+    def attributes(self) -> dict[str, Status]:
         """Get all of the attribute status objects."""
         return self._attributes
 
     @property
-    def values(self) -> Dict[str, Any]:
+    def values(self) -> dict[str, Any]:
         """Get the values of the attributes."""
         return defaultdict(
             lambda: None, {k: v.value for k, v in self._attributes.items()}
@@ -638,7 +639,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.air_flow_direction].value
 
     @property
-    def three_axis(self) -> Tuple[int, int, int] | None:
+    def three_axis(self) -> tuple[int, int, int] | None:
         """Get the three axis attribute."""
         return self._attributes[Attribute.three_axis].value
 
@@ -765,7 +766,7 @@ class DeviceStatus(DeviceStatusBase):
         attribute: str,
         value: Any,
         unit: str | None = None,
-        data: Dict | None = None,
+        data: dict | None = None,
     ):
         """Apply an update to a specific attribute."""
         component = self
@@ -795,7 +796,7 @@ class DeviceStatus(DeviceStatusBase):
                 )
 
     @property
-    def components(self) -> Dict[str, DeviceStatusBase]:
+    def components(self) -> dict[str, DeviceStatusBase]:
         """Get the component status instances."""
         return self._components
 
@@ -1166,7 +1167,7 @@ class DeviceEntity(Entity, Device):
         return result
 
     async def execute(
-        self, command: str, args: Dict = None, *, component_id: str = "main"
+        self, command: str, args: dict = None, *, component_id: str = "main"
     ):
         """Call the execute command."""
         command_args = [command]

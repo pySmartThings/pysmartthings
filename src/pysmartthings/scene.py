@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Dict
+from typing import TYPE_CHECKING
 
 from .entity import Entity
 
@@ -58,7 +58,7 @@ class Scene:
 class SceneEntity(Entity, Scene):
     """Define a scene entity."""
 
-    def __init__(self, api: Api, data: Dict | None = None):
+    def __init__(self, api: Api, data: dict | None = None):
         """Create a new instance of the class."""
         Entity.__init__(self, api)
         Scene.__init__(self)

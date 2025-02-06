@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, List
+from typing import TYPE_CHECKING
 
 from .entity import Entity
 from .room import RoomEntity
@@ -108,7 +108,7 @@ class LocationEntity(Entity, Location):
         """Location does not support updating at this time."""
         raise NotImplementedError("Location does not support updating at this time.")
 
-    async def rooms(self) -> List[RoomEntity]:
+    async def rooms(self) -> list[RoomEntity]:
         """Get the rooms contained within the location."""
         resp = await self._api.get_rooms(self._location_id)
         return [RoomEntity(self._api, entity) for entity in resp]

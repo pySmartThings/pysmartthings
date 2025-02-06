@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from typing import TYPE_CHECKING, List
+from typing import TYPE_CHECKING
 
 from .entity import Entity
 
@@ -159,12 +159,12 @@ class App:
         self._single_instance = bool(value)
 
     @property
-    def classifications(self) -> List[str]:
+    def classifications(self) -> list[str]:
         """Get the classifications of the app."""
         return self._classifications
 
     @classifications.setter
-    def classifications(self, value: List[str]):
+    def classifications(self, value: list[str]):
         """Set the classifications of the app."""
         self._classifications = list(value)
 
@@ -185,7 +185,7 @@ class App:
         self._app_type = value
 
     @property
-    def lambda_functions(self) -> List[str]:
+    def lambda_functions(self) -> list[str]:
         """
         Get the list of AWS arns referencing a Lambda function.
 
@@ -303,7 +303,7 @@ class AppOAuth:
         self._client_name = value
 
     @property
-    def scope(self) -> List[str]:
+    def scope(self) -> list[str]:
         """Get the list of SmartThings API OAuth scope identifiers."""
         return self._scope
 

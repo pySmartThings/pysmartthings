@@ -1,7 +1,7 @@
 """Define the installedapp module."""
 
+from collections.abc import Sequence
 from enum import Enum
-from typing import Sequence
 
 from .api import Api
 from .entity import Entity

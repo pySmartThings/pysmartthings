@@ -3,12 +3,15 @@
 from __future__ import annotations
 
 import json as _json
-from typing import Optional, Sequence, Union
+from typing import Optional, Union, TYPE_CHECKING
 from urllib.parse import parse_qs
 
 from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientResponseError
 from yarl import URL
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
 
 BodyFixtureType = Optional[Union[str, list, dict]]
 BodyType = Optional[Union[list, dict]]

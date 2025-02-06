@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta
-from typing import TYPE_CHECKING, List
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from .api import Api
@@ -69,7 +69,7 @@ class OAuthToken:
         return self._token_type
 
     @property
-    def scope(self) -> List[str]:
+    def scope(self) -> list[str]:
         """Get the scopes the token has permission to."""
         return self._scope
 

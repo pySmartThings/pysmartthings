@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import json
-from typing import Sequence
+from typing import TYPE_CHECKING
 
 from aiohttp import ClientResponseError
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
 
 UNAUTHORIZED_ERROR = (
     "Authorization for the API is required, but the request has not been authenticated."

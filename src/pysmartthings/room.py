@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Dict
+from typing import TYPE_CHECKING
 
 from .entity import Entity
 
@@ -82,7 +82,7 @@ class RoomEntity(Room, Entity):
     def __init__(
         self,
         api: Api,
-        data: Dict | None = None,
+        data: dict | None = None,
         *,
         location_id: str = None,
         room_id: str = None,

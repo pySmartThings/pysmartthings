@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, List, Sequence
+from typing import TYPE_CHECKING
 
 from .api import Api
 from .app import (
@@ -24,6 +24,8 @@ from .scene import SceneEntity
 from .subscription import Subscription, SubscriptionEntity
 
 if TYPE_CHECKING:
+    from collections.abc import Sequence
+
     from aiohttp import ClientSession
 
 
@@ -36,7 +38,7 @@ class SmartThings:
         """Initialize the SmartThingsApi."""
         self._service = Api(session, token)
 
-    async def locations(self) -> List[LocationEntity]:
+    async def locations(self) -> list[LocationEntity]:
         """Retrieve SmartThings locations."""
         resp = await self._service.get_locations()
         return [LocationEntity(self._service, entity) for entity in resp]
@@ -46,7 +48,7 @@ class SmartThings:
         entity = await self._service.get_location(location_id)
         return LocationEntity(self._service, entity)
 
-    async def rooms(self, location_id: str) -> List[RoomEntity]:
+    async def rooms(self, location_id: str) -> list[RoomEntity]:
         """Retrieve a list of rooms for a location."""
         resp = await self._service.get_rooms(location_id)
         return [RoomEntity(self._service, entity) for entity in resp]
@@ -78,7 +80,7 @@ class SmartThings:
         location_ids: Sequence[str] | None = None,
         capabilities: Sequence[str] | None = None,
         device_ids: Sequence[str] | None = None,
-    ) -> List:
+    ) -> list:
         """Retrieve SmartThings devices."""
         params = []
         if location_ids:
@@ -95,7 +97,7 @@ class SmartThings:
         entity = await self._service.get_device(device_id)
         return DeviceEntity(self._service, entity)
 
-    async def apps(self, *, app_type: str | None = None) -> List[AppEntity]:
+    async def apps(self, *, app_type: str | None = None) -> list[AppEntity]:
         """Retrieve list of apps."""
         params = []
         if app_type:
@@ -147,7 +149,7 @@ class SmartThings:
         *,
         location_id: str | None = None,
         installed_app_status: InstalledAppStatus | None = None,
-    ) -> List[InstalledAppEntity]:
+    ) -> list[InstalledAppEntity]:
         """Get a list of the installed applications."""
         params = []
         if location_id:
@@ -167,7 +169,7 @@ class SmartThings:
         result = await self._service.delete_installed_app(installed_app_id)
         return result == {"count": 1}
 
-    async def subscriptions(self, installed_app_id: str) -> List[SubscriptionEntity]:
+    async def subscriptions(self, installed_app_id: str) -> list[SubscriptionEntity]:
         """Get an installedapp's subscriptions."""
         resp = await self._service.get_subscriptions(installed_app_id)
         return [SubscriptionEntity(self._service, entity) for entity in resp]

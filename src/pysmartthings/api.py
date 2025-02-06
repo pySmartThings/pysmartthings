@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 from contextlib import suppress
-from typing import Optional, Sequence
+from typing import TYPE_CHECKING, Optional
 
 from aiohttp import BasicAuth, ClientSession
 
 from .errors import APIInvalidGrant, APIResponseError
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
 
 API_OAUTH_TOKEN = "https://auth-global.api.smartthings.com/oauth/token"
 API_BASE = "https://api.smartthings.com/v1/"
