@@ -132,7 +132,6 @@ ignore = [
   "BLE001",
   "S110",
   "S105",
-  "PGH004",
   "EXE001",
   "T201",
   "COM812", # Conflicts with other rules

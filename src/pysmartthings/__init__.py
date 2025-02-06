@@ -20,7 +20,6 @@ from .capability import (
     Attribute,
     Capability,
 )
-from .const import __title__, __version__  # noqa
 from .device import (
     DEVICE_TYPE_DTH,
     DEVICE_TYPE_ENDPOINT_APP,
