@@ -153,9 +153,9 @@ ignore = [
   "SIM201",
   "SIM103",
   "B011",
-  "PT015",
+  "EXE001",
   "PTH123",
-  "PT011",
+  "T201",
   "COM812", # Conflicts with other rules
   "D203", # Conflicts with other rules
   "D213", # Conflicts with other rules
