@@ -243,9 +243,8 @@ class DeviceStatusBase:
     def color(self, value: str):
         """Set the color attribute."""
         if not COLOR_HEX_MATCHER.match(value):
-            raise ValueError(
-                "value was not a properly formatted color hex, i.e. #000000."
-            )
+            msg = "value was not a properly formatted color hex, i.e. #000000."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.color, value)
 
     @property
@@ -257,7 +256,8 @@ class DeviceStatusBase:
     def color_temperature(self, value: int):
         """Set the color temperature attribute."""
         if not 1 <= value <= 30000:
-            raise ValueError("value must be scaled between 1-30000.")
+            msg = "value must be scaled between 1-30000."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.color_temperature, value)
 
     @property
@@ -274,7 +274,8 @@ class DeviceStatusBase:
     def fan_speed(self, value: int):
         """Set the fan speed attribute."""
         if value < 0:
-            raise ValueError("value must be >= 0.")
+            msg = "value must be >= 0."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.fan_speed, value)
 
     @property
@@ -286,7 +287,8 @@ class DeviceStatusBase:
     def hue(self, value: float):
         """Set the hue attribute, scaled 0-100."""
         if not 0 <= value <= 100:
-            raise ValueError("value must be scaled between 0-100.")
+            msg = "value must be scaled between 0-100."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.hue, value)
 
     @property
@@ -298,7 +300,8 @@ class DeviceStatusBase:
     def level(self, value: int):
         """Set the level of the attribute, scaled 0-100."""
         if not 0 <= value <= 100:
-            raise ValueError("value must be scaled between 0-100.")
+            msg = "value must be scaled between 0-100."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.level, value)
 
     @property
@@ -310,7 +313,8 @@ class DeviceStatusBase:
     def saturation(self, value: float):
         """Set the saturation attribute, scaled 0-100."""
         if not 0 <= value <= 100:
-            raise ValueError("value must be scaled between 0-100.")
+            msg = "value must be scaled between 0-100."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.saturation, value)
 
     @property
@@ -663,7 +667,8 @@ class DeviceStatusBase:
     def volume(self, value: float):
         """Set the volume attribute, scaled 0-100."""
         if not 0 <= value <= 100:
-            raise ValueError("value must be scaled between 0-100.")
+            msg = "value must be scaled between 0-100."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.volume, value)
 
     @property
@@ -685,7 +690,8 @@ class DeviceStatusBase:
     def input_source(self, value: str):
         """Set the volume attribute."""
         if value not in self.supported_input_sources:
-            raise ValueError("value must be supported.")
+            msg = "value must be supported."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.input_source, value)
 
     @property
@@ -716,7 +722,8 @@ class DeviceStatusBase:
     def playback_repeat_mode(self, value: str):
         """Set the playbackRepeatMode attribute."""
         if value not in ["all", "off", "one"]:
-            raise ValueError("value must be one of: all, off, one")
+            msg = "value must be one of: all, off, one"
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.playback_repeat_mode, value)
 
     @property
@@ -743,7 +750,8 @@ class DeviceStatusBase:
     def shade_level(self, value: int):
         """Set the level of the attribute, scaled 0-100."""
         if not 0 <= value <= 100:
-            raise ValueError("value must be scaled between 0-100.")
+            msg = "value must be scaled between 0-100."
+            raise ValueError(msg)
         self.update_attribute_value(Attribute.shade_level, value)
 
 
@@ -866,15 +874,16 @@ class DeviceEntity(Entity, Device):
         color_map = {}
         if color_hex:
             if not COLOR_HEX_MATCHER.match(color_hex):
-                raise ValueError(
-                    "color_hex was not a properly formatted color hex, i.e. #000000."
-                )
+                msg = "color_hex was not a properly formatted color hex, i.e. #000000."
+                raise ValueError(msg)
             color_map["hex"] = color_hex
         else:
             if not 0 <= hue <= 100:
-                raise ValueError("hue must be scaled between 0-100.")
+                msg = "hue must be scaled between 0-100."
+                raise ValueError(msg)
             if not 0 <= saturation <= 100:
-                raise ValueError("saturation must be scaled between 0-100.")
+                msg = "saturation must be scaled between 0-100."
+                raise ValueError(msg)
             color_map["hue"] = hue
             color_map["saturation"] = saturation
 
@@ -896,7 +905,8 @@ class DeviceEntity(Entity, Device):
     ) -> bool:
         """Call the color temperature device command."""
         if not 1 <= temperature <= 30000:
-            raise ValueError("temperature must be scaled between 1-30000.")
+            msg = "temperature must be scaled between 1-30000."
+            raise ValueError(msg)
 
         result = await self.command(
             component_id,
@@ -913,7 +923,8 @@ class DeviceEntity(Entity, Device):
     ) -> bool:
         """Call the set fan speed device command."""
         if speed < 0:
-            raise ValueError("value must be >= 0.")
+            msg = "value must be >= 0."
+            raise ValueError(msg)
 
         result = await self.command(
             component_id, Capability.fan_speed, Command.set_fan_speed, [speed]
@@ -928,7 +939,8 @@ class DeviceEntity(Entity, Device):
     ) -> bool:
         """Call the set hue device command."""
         if not 0 <= hue <= 100:
-            raise ValueError("hue must be scaled between 0-100.")
+            msg = "hue must be scaled between 0-100."
+            raise ValueError(msg)
 
         result = await self.command(
             component_id, Capability.color_control, Command.set_hue, [hue]
@@ -947,9 +959,11 @@ class DeviceEntity(Entity, Device):
     ) -> bool:
         """Call the set level device command."""
         if not 0 <= level <= 100:
-            raise ValueError("level must be scaled between 0-100.")
+            msg = "level must be scaled between 0-100."
+            raise ValueError(msg)
         if duration < 0:
-            raise ValueError("duration must be >= 0.")
+            msg = "duration must be >= 0."
+            raise ValueError(msg)
 
         result = await self.command(
             component_id, Capability.switch_level, Command.set_level, [level, duration]
@@ -964,7 +978,8 @@ class DeviceEntity(Entity, Device):
     ) -> bool:
         """Call the set saturation device command."""
         if not 0 <= saturation <= 100:
-            raise ValueError("saturation must be scaled between 0-100.")
+            msg = "saturation must be scaled between 0-100."
+            raise ValueError(msg)
 
         result = await self.command(
             component_id, Capability.color_control, Command.set_saturation, [saturation]
@@ -1418,7 +1433,8 @@ class DeviceEntity(Entity, Device):
     ) -> bool:
         """Call the set shade level device command."""
         if not 0 <= level <= 100:
-            raise ValueError("level must be scaled between 0-100.")
+            msg = "level must be scaled between 0-100."
+            raise ValueError(msg)
 
         result = await self.command(
             component_id,

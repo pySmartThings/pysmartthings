@@ -98,13 +98,15 @@ class App:
     def app_name(self, value: str):
         """Set the app name."""
         if not value:
-            raise ValueError("value cannot be None or zero length.")
+            msg = "value cannot be None or zero length."
+            raise ValueError(msg)
         if not _APP_NAME_PATTERN.match(value):
-            raise ValueError(
+            msg = (
                 "value must be alphanumeric, may contain dashes "
                 "underscores, periods, and must be less then 250 "
                 "characters long."
             )
+            raise ValueError(msg)
         self._app_name = value
 
     @property
@@ -120,9 +122,11 @@ class App:
     def display_name(self, value: str):
         """Set the display name."""
         if not value:
-            raise ValueError("value cannot be None or zero length.")
+            msg = "value cannot be None or zero length."
+            raise ValueError(msg)
         if len(value) > 75:
-            raise ValueError("value must be <= 75 characters in length.")
+            msg = "value must be <= 75 characters in length."
+            raise ValueError(msg)
         self._display_name = value
 
     @property
@@ -138,9 +142,11 @@ class App:
     def description(self, value: str):
         """Set the description."""
         if not value:
-            raise ValueError("value cannot be None or zero length.")
+            msg = "value cannot be None or zero length."
+            raise ValueError(msg)
         if len(value) > 250:
-            raise ValueError("value must be <= 250 characters in length.")
+            msg = "value must be <= 250 characters in length."
+            raise ValueError(msg)
         self._description = value
 
     @property
@@ -181,7 +187,8 @@ class App:
     def app_type(self, value: str):
         """Set the app type."""
         if value not in (APP_TYPE_LAMBDA, APP_TYPE_WEBHOOK):
-            raise ValueError("value must be 'LAMBDA_SMART_APP' or 'WEBHOOK_SMART_APP'")
+            msg = "value must be 'LAMBDA_SMART_APP' or 'WEBHOOK_SMART_APP'"
+            raise ValueError(msg)
         self._app_type = value
 
     @property
@@ -255,14 +262,16 @@ class AppSettingsEntity(Entity, AppSettings):
     async def refresh(self):
         """Refresh the value of the entity."""
         if not self._app_id:
-            raise ValueError("Cannot refresh without an app_id")
+            msg = "Cannot refresh without an app_id"
+            raise ValueError(msg)
         data = await self._api.get_app_settings(self._app_id)
         self.apply_data(data)
 
     async def save(self):
         """Save the value of the entity."""
         if not self._app_id:
-            raise ValueError("Cannot save without an app_id")
+            msg = "Cannot save without an app_id"
+            raise ValueError(msg)
         data = await self._api.update_app_settings(self._app_id, self.to_data())
         self.apply_data(data)
 
@@ -299,7 +308,8 @@ class AppOAuth:
     def client_name(self, value: str):
         """Set the name given to the OAuth client."""
         if not value:
-            raise ValueError("Value can not be None or an empty string.")
+            msg = "Value can not be None or an empty string."
+            raise ValueError(msg)
         self._client_name = value
 
     @property

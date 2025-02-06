@@ -106,7 +106,8 @@ class LocationEntity(Entity, Location):
 
     async def save(self):
         """Location does not support updating at this time."""
-        raise NotImplementedError("Location does not support updating at this time.")
+        msg = "Location does not support updating at this time."
+        raise NotImplementedError(msg)
 
     async def rooms(self) -> list[RoomEntity]:
         """Get the rooms contained within the location."""
