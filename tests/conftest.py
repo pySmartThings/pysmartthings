@@ -3,6 +3,7 @@
 import glob
 import re
 
+from aiohttp import ClientSession
 from pysmartthings.api import (
     API_APP,
     API_APP_OAUTH,
@@ -224,5 +225,5 @@ def api(event_loop):
     event_loop.run_until_complete(session.close())
 
 
-async def __create_session(event_loop, mocker):
+async def __create_session(event_loop, mocker) -> ClientSession:
     return mocker.create_session(event_loop)
