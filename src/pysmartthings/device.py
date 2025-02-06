@@ -147,7 +147,7 @@ class Device:
                 self._device_type_name = dth.get("deviceTypeName")
                 self._device_type_network = dth.get("deviceNetworkType")
 
-    def get_capability(self, *capabilities) -> str | None:
+    def get_capability(self, *capabilities: list[dict[str, Any]]) -> str | None:
         """Return the first capability held by the device."""
         for capability in capabilities:
             if capability in self._capabilities:
