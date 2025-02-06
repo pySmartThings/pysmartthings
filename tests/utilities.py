@@ -164,9 +164,7 @@ class MockResponse:
             return False
 
         # Request body
-        if self._request and not json == _get_json_fixture(self._request):
-            return False
-        return True
+        return not (self._request and json != _get_json_fixture(self._request))
 
     @property
     def headers(self):

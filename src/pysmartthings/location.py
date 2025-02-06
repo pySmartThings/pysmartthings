@@ -26,13 +26,13 @@ class Location:
         """Apply the given data structure to the location."""
         self._name = data["name"]
         self._location_id = data["locationId"]
-        self._latitude = data.get("latitude", None)
-        self._longitude = data.get("longitude", None)
-        self._region_radius = data.get("regionRadius", None)
-        self._temperature_scale = data.get("temperatureScale", None)
-        self._locale = data.get("locale", None)
-        self._country_code = data.get("countryCode", None)
-        self._timezone_id = data.get("timeZoneId", None)
+        self._latitude = data.get("latitude")
+        self._longitude = data.get("longitude")
+        self._region_radius = data.get("regionRadius")
+        self._temperature_scale = data.get("temperatureScale")
+        self._locale = data.get("locale")
+        self._country_code = data.get("countryCode")
+        self._timezone_id = data.get("timeZoneId")
 
     @property
     def name(self) -> str:
