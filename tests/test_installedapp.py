@@ -17,7 +17,7 @@ class TestInstalledApp:
     """Tests for the InstalledApp class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Tests the initialization."""
         # Arrange/Act
         app = InstalledApp()
@@ -27,7 +27,7 @@ class TestInstalledApp:
         assert app.classifications == []
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Tests the apply_data function."""
         # Arrange
         app = InstalledApp()
@@ -52,7 +52,7 @@ class TestInstalledAppEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         app = InstalledAppEntity(api, installed_app_id=INSTALLED_APP_ID)
@@ -63,7 +63,7 @@ class TestInstalledAppEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the refresh method."""
         # Arrange
         app = InstalledAppEntity(api)
@@ -73,7 +73,7 @@ class TestInstalledAppEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_subscriptions(api):
+    async def test_subscriptions(api) -> None:
         """Tests the subscriptions method."""
         # Arrange
         app = InstalledAppEntity(api, installed_app_id=INSTALLED_APP_ID)

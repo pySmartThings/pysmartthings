@@ -12,7 +12,7 @@ class TestOAuthToken:
     """Tests for the OAuthToken class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Tests the init method."""
         # Arrange/Act
         token = OAuthToken(None, None)
@@ -21,7 +21,7 @@ class TestOAuthToken:
         assert token.scope == []
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Tests the apply data method."""
         # Arrange
         data = get_json("token_response.json")
@@ -36,7 +36,7 @@ class TestOAuthToken:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         token = OAuthToken(api, refresh_token=REFRESH_TOKEN)

@@ -12,7 +12,7 @@ class TestLocation:
     """Tests for the Location class."""
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Tests the apply_data function."""
         # Arrange
         data = get_json("location.json")
@@ -36,7 +36,7 @@ class TestLocationEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         entity = LocationEntity(api, location_id=LOCATION_ID)
@@ -47,7 +47,7 @@ class TestLocationEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the save method."""
         # Arrange
         entity = LocationEntity(api)
@@ -57,7 +57,7 @@ class TestLocationEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_rooms(api):
+    async def test_rooms(api) -> None:
         """Tests the refresh method."""
         # Arrange
         entity = LocationEntity(api, location_id=LOCATION_ID)

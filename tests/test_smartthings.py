@@ -26,7 +26,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_devices(smartthings):
+    async def test_devices(smartthings) -> None:
         """Tests devices are retrieved."""
         # Act
         devices = await smartthings.devices()
@@ -35,7 +35,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_devices_with_filter(smartthings):
+    async def test_devices_with_filter(smartthings) -> None:
         """Tests retrieving a filtered view of devices."""
         # Act
         devices = await smartthings.devices(
@@ -51,7 +51,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_device(smartthings):
+    async def test_device(smartthings) -> None:
         """Tests the device(id) method."""
         # Act
         device = await smartthings.device(DEVICE_ID)
@@ -60,7 +60,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_locations(smartthings):
+    async def test_locations(smartthings) -> None:
         """Tests locations are retrieved."""
         # Act
         locations = await smartthings.locations()
@@ -69,7 +69,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_location(smartthings):
+    async def test_location(smartthings) -> None:
         """Tests the location(id) method."""
         # Act
         location = await smartthings.location(LOCATION_ID)
@@ -78,7 +78,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_rooms(smartthings):
+    async def test_rooms(smartthings) -> None:
         """Tests the rooms(id) method."""
         # Act
         rooms = await smartthings.rooms(LOCATION_ID)
@@ -87,7 +87,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_create_room(smartthings):
+    async def test_create_room(smartthings) -> None:
         """Tests the create room method."""
         # Arrange
         room = Room()
@@ -101,7 +101,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_update_room(smartthings):
+    async def test_update_room(smartthings) -> None:
         """Tests the create room method."""
         # Arrange
         room = Room()
@@ -116,7 +116,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_room(smartthings):
+    async def test_room(smartthings) -> None:
         """Tests the room(id, id) method."""
         # Act
         room = await smartthings.room(LOCATION_ID, ROOM_ID)
@@ -125,7 +125,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_delete_room(smartthings):
+    async def test_delete_room(smartthings) -> None:
         """Tests the delete room."""
         # Act
         result = await smartthings.delete_room(LOCATION_ID, ROOM_ID)
@@ -134,7 +134,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_apps(smartthings):
+    async def test_apps(smartthings) -> None:
         """Tests locations are retrieved."""
         # Act
         apps = await smartthings.apps()
@@ -143,7 +143,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_app(smartthings):
+    async def test_app(smartthings) -> None:
         """Tests the app(id) method."""
         # Act
         app = await smartthings.app(APP_ID)
@@ -152,7 +152,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_create_app(smartthings):
+    async def test_create_app(smartthings) -> None:
         """Tests the create app method."""
         # Arrange
         app = App()
@@ -168,7 +168,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_delete_app(smartthings):
+    async def test_delete_app(smartthings) -> None:
         """Tests the delete app method."""
         # Act/Assert
         result = await smartthings.delete_app(APP_ID)
@@ -177,7 +177,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_app_settings(smartthings):
+    async def test_app_settings(smartthings) -> None:
         """Tests retrieval of app settings."""
         # Act
         settings = await smartthings.app_settings(APP_ID)
@@ -187,7 +187,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_update_app_settings(smartthings):
+    async def test_update_app_settings(smartthings) -> None:
         """Tests updating app settings."""
         # Arrange
         settings = AppSettings(APP_ID)
@@ -200,7 +200,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_app_oauth(smartthings):
+    async def test_app_oauth(smartthings) -> None:
         """Tests retrieval of OAuth settings."""
         # Act
         oauth = await smartthings.app_oauth(APP_ID)
@@ -211,7 +211,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_update_app_oauth(smartthings):
+    async def test_update_app_oauth(smartthings) -> None:
         """Tests updating OAuth settings."""
         # Arrange
         oauth = AppOAuth(APP_ID)
@@ -226,7 +226,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_generate_app_oauth(smartthings):
+    async def test_generate_app_oauth(smartthings) -> None:
         """Tests generating new OAuth info."""
         # Arrange
         oauth = AppOAuth(APP_ID)
@@ -243,7 +243,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_installed_apps(smartthings):
+    async def test_installed_apps(smartthings) -> None:
         """Tests the installedapps method."""
         # Act
         apps = await smartthings.installed_apps()
@@ -252,7 +252,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_installed_app(smartthings):
+    async def test_installed_app(smartthings) -> None:
         """Tests the installedapp(id) method."""
         # Act
         app = await smartthings.installed_app(INSTALLED_APP_ID)
@@ -261,7 +261,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_delete_installed_app(smartthings):
+    async def test_delete_installed_app(smartthings) -> None:
         """Tests the delete app method."""
         # Act/Assert
         result = await smartthings.delete_installed_app(INSTALLED_APP_ID)
@@ -270,7 +270,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_subscriptions(smartthings):
+    async def test_subscriptions(smartthings) -> None:
         """Tests the get subscriptions method."""
         # Act
         subscriptions = await smartthings.subscriptions(INSTALLED_APP_ID)
@@ -279,7 +279,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_delete_subscriptions(smartthings):
+    async def test_delete_subscriptions(smartthings) -> None:
         """Tests the delete subscriptions method."""
         # Act
         count = await smartthings.delete_subscriptions(INSTALLED_APP_ID)
@@ -288,7 +288,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_delete_subscription(smartthings):
+    async def test_delete_subscription(smartthings) -> None:
         """Tests the delete subscription method."""
         # Act
         deleted = await smartthings.delete_subscription(
@@ -299,7 +299,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_create_subscription(smartthings):
+    async def test_create_subscription(smartthings) -> None:
         """Tests the create subscription method."""
         # Arrange
         sub = Subscription()
@@ -314,7 +314,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_scenes(smartthings):
+    async def test_scenes(smartthings) -> None:
         """Tests the scenes method."""
         # Act
         scenes = await smartthings.scenes()
@@ -323,7 +323,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_scenes_with_location_filter(smartthings):
+    async def test_scenes_with_location_filter(smartthings) -> None:
         """Tests the scenes method."""
         # Act
         scenes = await smartthings.scenes(location_id=LOCATION_ID)
@@ -332,7 +332,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_execute_scene(smartthings):
+    async def test_execute_scene(smartthings) -> None:
         """Tests the execute scene method."""
         # Act
         result = await smartthings.execute_scene(SCENE_ID)
@@ -341,7 +341,7 @@ class TestSmartThings:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_generate_tokens(smartthings):
+    async def test_generate_tokens(smartthings) -> None:
         """Tests the generate_tokens method."""
         # Act
         token = await smartthings.generate_tokens(

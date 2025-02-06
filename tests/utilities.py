@@ -35,7 +35,7 @@ def _get_json_fixture(body: BodyFixtureType) -> BodyType:
 class ClientMocker:
     """Mock Aiohttp client requests."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize the request mocker."""
         self._mocks = []
         self.default_headers = None
@@ -135,7 +135,7 @@ class ClientMocker:
 class MockResponse:
     """Mock Aiohttp client response."""
 
-    def __init__(self, method, url, params, status, headers, request, response):
+    def __init__(self, method, url, params, status, headers, request, response) -> None:
         """Initialize a fake response."""
         self.method = method
         url = URL(url)

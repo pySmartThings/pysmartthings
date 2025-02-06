@@ -21,7 +21,7 @@ class TestApp:
     """Define tests for the App class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Tests the init function."""
         # Arrange/Act
         app = App()
@@ -30,7 +30,7 @@ class TestApp:
         assert app.lambda_functions is not None
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Tests the apply_data function."""
         # Arrange
         app = App()
@@ -54,7 +54,7 @@ class TestApp:
         assert app.last_updated_date == "2018-12-15T17:07:42Z"
 
     @staticmethod
-    def test_app_name():
+    def test_app_name() -> None:
         """Tests get/set of app_name."""
         # Arrange
         app = App()
@@ -66,7 +66,7 @@ class TestApp:
         assert app_name == expected_app_name
 
     @staticmethod
-    def test_app_name_invalid():
+    def test_app_name_invalid() -> None:
         """Tests valid values of app_name."""
         # Arrange
         app = App()
@@ -79,7 +79,7 @@ class TestApp:
             app.app_name = "My Super Cool App"
 
     @staticmethod
-    def test_display_name():
+    def test_display_name() -> None:
         """Tests get/set of display_name."""
         # Arrange
         app = App()
@@ -91,7 +91,7 @@ class TestApp:
         assert expected == actual
 
     @staticmethod
-    def test_display_name_invalid():
+    def test_display_name_invalid() -> None:
         """Tests valid values of display_name."""
         # Arrange
         app = App()
@@ -104,7 +104,7 @@ class TestApp:
             app.display_name = "x" * 76
 
     @staticmethod
-    def test_description():
+    def test_description() -> None:
         """Tests get/set of description."""
         # Arrange
         app = App()
@@ -116,7 +116,7 @@ class TestApp:
         assert expected == actual
 
     @staticmethod
-    def test_description_invalid():
+    def test_description_invalid() -> None:
         """Tests valid values of description."""
         # Arrange
         app = App()
@@ -129,7 +129,7 @@ class TestApp:
             app.description = "x" * 251
 
     @staticmethod
-    def test_single_instance():
+    def test_single_instance() -> None:
         """Tests get/set of single_instance."""
         # Arrange
         app = App()
@@ -141,7 +141,7 @@ class TestApp:
         assert expected == actual
 
     @staticmethod
-    def test_app_type_webhook():
+    def test_app_type_webhook() -> None:
         """Tests get/set of app_type to webhook."""
         # Arrange
         app = App()
@@ -153,7 +153,7 @@ class TestApp:
         assert expected == actual
 
     @staticmethod
-    def test_app_type_lambda():
+    def test_app_type_lambda() -> None:
         """Tests get/set of app_type to labmda."""
         # Arrange
         app = App()
@@ -165,7 +165,7 @@ class TestApp:
         assert expected == actual
 
     @staticmethod
-    def test_app_type_invalid():
+    def test_app_type_invalid() -> None:
         """Tests valid values of app_type."""
         # Arrange
         app = App()
@@ -178,7 +178,7 @@ class TestApp:
             app.app_type = "Some type"
 
     @staticmethod
-    def test_lambda_functions():
+    def test_lambda_functions() -> None:
         """Tests get of lambda_functions."""
         # Arrange
         app = App()
@@ -190,7 +190,7 @@ class TestApp:
         assert app.lambda_functions
 
     @staticmethod
-    def test_webhook_target_url():
+    def test_webhook_target_url() -> None:
         """Tests get/set of webhook_target_url."""
         # Arrange
         app = App()
@@ -206,7 +206,7 @@ class TestAppSettings:
     """Tests for the AppSettings class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Tests the init method."""
         # Arrange/Act
         settings = AppSettings(APP_ID)
@@ -214,7 +214,7 @@ class TestAppSettings:
         assert settings.app_id == APP_ID
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Tests the apply_data method."""
         # Arrange
         data = get_json("app_settings.json")
@@ -225,7 +225,7 @@ class TestAppSettings:
         assert settings.settings["test"] == "test"
 
     @staticmethod
-    def test_to_data():
+    def test_to_data() -> None:
         """Tests the to_data method."""
         # Arrange
         settings = AppSettings(APP_ID)
@@ -241,7 +241,7 @@ class TestAppSettingsEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests data is refreshed."""
         # Arrange
         data = {"settings": {"test2": "test"}}
@@ -253,7 +253,7 @@ class TestAppSettingsEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh_no_app_id(api):
+    async def test_refresh_no_app_id(api) -> None:
         """Tests refresh when there's no app id."""
         # Arrange
         settings = AppSettingsEntity(api, None)
@@ -263,7 +263,7 @@ class TestAppSettingsEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the save function."""
         # Arrange
         data = {"settings": {"test": "test"}}
@@ -275,7 +275,7 @@ class TestAppSettingsEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save_no_app_id(api):
+    async def test_save_no_app_id(api) -> None:
         """Tests save when there's no app id."""
         # Arrange
         settings = AppSettingsEntity(api, None)
@@ -289,7 +289,7 @@ class TestAppEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests data is refreshed."""
         # Arrange
         data = get_json("apps.json")["items"][0]
@@ -303,7 +303,7 @@ class TestAppEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests updating an entity."""
         # Arrange
         data = get_json("app_get.json")
@@ -316,7 +316,7 @@ class TestAppEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_oauth(api):
+    async def test_oauth(api) -> None:
         """Tests the oauth method."""
         # Arrange
         data = get_json("app_get.json")
@@ -330,7 +330,7 @@ class TestAppEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_settings(api):
+    async def test_settings(api) -> None:
         """Tests the settings method."""
         # Arrange
         data = get_json("app_get.json")
@@ -345,7 +345,7 @@ class TestOAuth:
     """Tests for the OAuth class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Tests the initialization."""
         # Arrange
         app_id = "5c03e518-118a-44cb-85ad-7877d0b302e4"
@@ -356,7 +356,7 @@ class TestOAuth:
         assert oauth.scope is not None
 
     @staticmethod
-    def test_client_name():
+    def test_client_name() -> None:
         """Tests get/set of client name."""
         # Arrange
         oauth = AppOAuth("5c03e518-118a-44cb-85ad-7877d0b302e4")
@@ -368,7 +368,7 @@ class TestOAuth:
         assert actual == expected
 
     @staticmethod
-    def test_client_name_invalid():
+    def test_client_name_invalid() -> None:
         """Tests setting an invalid client name."""
         # Arrange
         oauth = AppOAuth("5c03e518-118a-44cb-85ad-7877d0b302e4")
@@ -382,7 +382,7 @@ class TestOAuthEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         entity = AppOAuthEntity(api, "c6cde2b0-203e-44cf-a510-3b3ed4706996", None)
@@ -394,7 +394,7 @@ class TestOAuthEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the refresh method."""
         # Arrange
         entity = AppOAuthEntity(api, "c6cde2b0-203e-44cf-a510-3b3ed4706996", None)

@@ -7,7 +7,7 @@ class TestAPIResponseError:
     """Tests for the APIResponseError class."""
 
     @staticmethod
-    def test_is_target_error():
+    def test_is_target_error() -> None:
         """Tests the initialization."""
         # Arrange/Act
         data = {
@@ -40,7 +40,7 @@ class TestAPIResponseError:
         assert not detail.details
 
     @staticmethod
-    def test_str():
+    def test_str() -> None:
         """Tests the initialization."""
         # Arrange/Act
         data = {"requestId": "8B66A345-03B0-477F-A8A6-1A1CF0277040"}
