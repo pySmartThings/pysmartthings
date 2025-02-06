@@ -201,7 +201,7 @@ class MockResponse:
         """Return mock response as a string."""
         raise NotImplementedError
 
-    async def json(self, encoding="utf-8"):
+    async def json(self, encoding: str = "utf-8") -> dict | list:
         """Return mock response as a json."""
         return _get_json_fixture(self._response)
 

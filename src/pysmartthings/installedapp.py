@@ -1,11 +1,17 @@
 """Define the installedapp module."""
 
-from collections.abc import Sequence
-from enum import Enum
+from __future__ import annotations
 
-from .api import Api
+from enum import Enum
+from typing import TYPE_CHECKING, Any
+
 from .entity import Entity
 from .subscription import SubscriptionEntity
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
+
+    from .api import Api
 
 
 def format_install_url(app_id: str, location_id: str) -> str:
@@ -115,7 +121,12 @@ class InstalledApp:
 class InstalledAppEntity(Entity, InstalledApp):
     """Define the InstalledAppEntity class."""
 
-    def __init__(self, api: Api, data=None, installed_app_id=None):
+    def __init__(
+        self,
+        api: Api,
+        data: dict[str, Any] | None = None,
+        installed_app_id: str | None = None,
+    ) -> None:
         """Create a new instance of the InstalledAppEntity class."""
         Entity.__init__(self, api)
         InstalledApp.__init__(self)
@@ -124,12 +135,12 @@ class InstalledAppEntity(Entity, InstalledApp):
         if installed_app_id:
             self._installed_app_id = installed_app_id
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the installedapp information using the API."""
         data = await self._api.get_installed_app(self._installed_app_id)
         self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> None:
         """Save the changes made to the app."""
         raise NotImplementedError
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from contextlib import suppress
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 from aiohttp import BasicAuth, ClientSession
 
@@ -121,7 +121,12 @@ class Api:
         return await self.get(API_DEVICE_STATUS.format(device_id=device_id))
 
     async def post_device_command(
-        self, device_id, component_id, capability, command, args
+        self,
+        device_id: str,
+        component_id: str,
+        capability: str,
+        command: str,
+        args: list[dict[str, Any]] | None = None,
     ) -> object:
         """Execute commands on a device.
 
@@ -312,12 +317,12 @@ class Api:
         self._session = value
 
     @property
-    def token(self):
+    def token(self) -> str:
         """Get the token used when making requests."""
         return self._token
 
     @token.setter
-    def token(self, value):
+    def token(self, value: str) -> None:
         """Set the token to use when making requests."""
         self._token = value
 
@@ -402,7 +407,7 @@ class Api:
             return None
 
     @staticmethod
-    def _get_next_link(data):
+    def _get_next_link(data: dict[str, Any]) -> str | None:
         links = data.get("_links")
         if not links:
             return None

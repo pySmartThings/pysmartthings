@@ -217,7 +217,7 @@ class DeviceStatusBase:
             return bool(self._attributes[attribute].value)
         return self._attributes[attribute].value == ATTRIBUTE_ON_VALUES[attribute]
 
-    def update_attribute_value(self, attribute: str, value):
+    def update_attribute_value(self, attribute: str, value: Any):
         """Update the value of an attribute while maintaining unit and data."""
         status = self._attributes[attribute]
         self._attributes[attribute] = Status(value, status.unit, status.data)
@@ -394,7 +394,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.heating_setpoint].value
 
     @heating_setpoint.setter
-    def heating_setpoint(self, value):
+    def heating_setpoint(self, value: int) -> None:
         """Set the heatingSetpoint attribute."""
         self.update_attribute_value(Attribute.heating_setpoint, value)
 
@@ -758,7 +758,9 @@ class DeviceStatusBase:
 class DeviceStatus(DeviceStatusBase):
     """Define the device status."""
 
-    def __init__(self, api: Api, device_id: str, data=None):
+    def __init__(
+        self, api: Api, device_id: str, data: dict[str, Any] | None = None
+    ) -> None:
         """Create a new instance of the DeviceStatusEntity class."""
         super().__init__("main")
         self._api = api
@@ -851,7 +853,13 @@ class DeviceEntity(Entity, Device):
         """Save the changes made to the device."""
         raise NotImplementedError
 
-    async def command(self, component_id: str, capability, command, args=None) -> bool:
+    async def command(
+        self,
+        component_id: str,
+        capability: str,
+        command: str,
+        args: list[dict[str, Any]] | None = None,
+    ) -> bool:
         """Execute a command on the device."""
         response = await self._api.post_device_command(
             self._device_id, component_id, capability, command, args

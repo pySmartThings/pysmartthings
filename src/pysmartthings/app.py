@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from .entity import Entity
 
@@ -246,14 +246,16 @@ class AppSettings:
 class AppSettingsEntity(Entity, AppSettings):
     """Define a SmartThings App settings entity."""
 
-    def __init__(self, api: Api, app_id: str, data=None):
+    def __init__(
+        self, api: Api, app_id: str, data: dict[str, Any] | None = None
+    ) -> None:
         """Create a new instance of the AppSettingEntity class."""
         Entity.__init__(self, api)
         AppSettings.__init__(self, app_id)
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the value of the entity."""
         if not self._app_id:
             msg = "Cannot refresh without an app_id"
@@ -261,7 +263,7 @@ class AppSettingsEntity(Entity, AppSettings):
         data = await self._api.get_app_settings(self._app_id)
         self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> None:
         """Save the value of the entity."""
         if not self._app_id:
             msg = "Cannot save without an app_id"
@@ -315,20 +317,22 @@ class AppOAuth:
 class AppOAuthEntity(Entity, AppOAuth):
     """Define oauth client settings."""
 
-    def __init__(self, api: Api, app_id: str, data=None):
+    def __init__(
+        self, api: Api, app_id: str, data: dict[str, Any] | None = None
+    ) -> None:
         """Create a new instance of the OAuth class."""
         Entity.__init__(self, api)
         AppOAuth.__init__(self, app_id)
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Retrieve the latest values from the API."""
         data = await self._api.get_app_oauth(self._app_id)
         if data:
             self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> None:
         """Save changes to the app OAuth Client settings."""
         response = await self._api.update_app_oauth(self._app_id, self.to_data())
         if response:
@@ -338,19 +342,19 @@ class AppOAuthEntity(Entity, AppOAuth):
 class AppEntity(Entity, App):
     """Define a SmartThings App entity."""
 
-    def __init__(self, api: Api, data=None):
+    def __init__(self, api: Api, data: dict[str, Any] | None = None) -> None:
         """Create a new instance of the AppEntity class."""
         Entity.__init__(self, api)
         App.__init__(self)
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the app information using the API."""
         data = await self._api.get_app(self._app_id)
         self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> None:
         """Save the changes made to the app."""
         response = await self._api.update_app(self._app_id, self.to_data())
         self.apply_data(response)

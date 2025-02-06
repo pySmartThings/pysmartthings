@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import json
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
-from aiohttp import ClientResponseError
+from aiohttp import ClientResponse, ClientResponseError, RequestInfo
 
 if TYPE_CHECKING:
     from collections.abc import Sequence
+
+    from aiohttp.typedefs import LooseHeaders
 
 UNAUTHORIZED_ERROR = (
     "Authorization for the API is required, but the request has not been authenticated."
@@ -23,7 +25,7 @@ UNKNOWN_ERROR = "An unknown API error occurred."
 class APIErrorDetail:
     """Define details about an error."""
 
-    def __init__(self, data):
+    def __init__(self, data: dict[str, Any]) -> None:
         """Create a new instance of the error detail."""
         self._code = data.get("code")
         self._message = data.get("message")
@@ -58,8 +60,15 @@ class APIResponseError(ClientResponseError):
     """Define an error from the API."""
 
     def __init__(
-        self, request_info, history, *, status=None, message="", headers=None, data=None
-    ):
+        self,
+        request_info: RequestInfo,
+        history: tuple[ClientResponse],
+        *,
+        status: int | None = None,
+        message: str = "",
+        headers: LooseHeaders | None = None,
+        data: dict[str, Any] | None = None,
+    ) -> None:
         """Create a new instance of the API Error."""
         super().__init__(
             request_info, history, status=status, message=message, headers=headers
@@ -68,12 +77,12 @@ class APIResponseError(ClientResponseError):
         self._request_id = data.get("requestId")
         self._error = APIErrorDetail(data.get("error", {}))
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Return a string representation of the error."""
         return f"{self.message} ({self.status}): {json.dumps(self._raw_error_response)}"
 
     @property
-    def raw_error_response(self):
+    def raw_error_response(self) -> dict[str, Any] | None:
         """Get the raw error response returned."""
         return self._raw_error_response
 
