@@ -99,5 +99,3 @@ class APIResponseError(ClientResponseError):
 
 class APIInvalidGrant(Exception):
     """Define an invalid grant error."""
-
-    pass

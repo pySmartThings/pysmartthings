@@ -205,7 +205,6 @@ class MockResponse:
 
     def release(self):
         """Mock release."""
-        pass
 
     def raise_for_status(self):
         """Raise error if status is 400 or higher."""
@@ -216,4 +215,3 @@ class MockResponse:
 
     def close(self):
         """Mock close."""
-        pass
