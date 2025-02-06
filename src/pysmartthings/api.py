@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from contextlib import suppress
 from typing import Optional, Sequence
 
 from aiohttp import BasicAuth, ClientSession
@@ -363,10 +364,8 @@ class Api:
                 return await resp.json()
             if resp.status in (400, 422, 429, 500):
                 data = None
-                try:
+                with suppress(Exception):
                     data = await resp.json()
-                except Exception:  # pylint: disable=broad-except
-                    pass
                 raise APIResponseError(
                     resp.request_info,
                     resp.history,
@@ -419,10 +418,8 @@ class Api:
                 return await resp.json()
             if resp.status == 400:
                 data = {}
-                try:
+                with suppress(Exception):
                     data = await resp.json()
-                except Exception:  # pylint: disable=broad-except
-                    pass
                 raise APIInvalidGrant(data.get("error_description"))
             resp.raise_for_status()
 
