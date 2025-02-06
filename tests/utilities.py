@@ -9,6 +9,7 @@ from urllib.parse import parse_qs
 from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientResponseError
 from yarl import URL
+import json as _json
 
 if TYPE_CHECKING:
     from collections.abc import Sequence
@@ -17,10 +18,10 @@ BodyFixtureType = Optional[Union[str, list, dict]]
 BodyType = Optional[Union[list, dict]]
 
 
-def get_json(filename: str) -> str:
+def get_json(filename: str) -> dict | list:
     """Load a json file."""
     path = Path(__package__) / "fixtures" / filename
-    return path.read_text(encoding="utf-8")
+    return _json.loads(path.read_text(encoding="utf-8"))
 
 
 def _get_json_fixture(body: BodyFixtureType) -> BodyType:
