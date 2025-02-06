@@ -84,8 +84,8 @@ class RoomEntity(Room, Entity):
         api: Api,
         data: dict | None = None,
         *,
-        location_id: str = None,
-        room_id: str = None,
+        location_id: str | None = None,
+        room_id: str | None = None,
     ):
         """Initialize the room."""
         Entity.__init__(self, api)

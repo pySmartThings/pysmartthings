@@ -48,10 +48,20 @@ from .smartthings import SmartThings
 from .subscription import SourceType, Subscription, SubscriptionEntity
 
 __all__ = [
-    # app
     "APP_TYPE_LAMBDA",
     "APP_TYPE_WEBHOOK",
+    "ATTRIBUTES",
+    "CAPABILITIES",
+    "CAPABILITIES_TO_ATTRIBUTES",
     "CLASSIFICATION_AUTOMATION",
+    "DEVICE_TYPE_DTH",
+    "DEVICE_TYPE_ENDPOINT_APP",
+    "DEVICE_TYPE_OCF",
+    "DEVICE_TYPE_UNKNOWN",
+    "DEVICE_TYPE_VIPER",
+    "APIErrorDetail",
+    "APIInvalidGrantError",
+    "APIResponseError",
     "App",
     "AppEntity",
     "AppOAuth",
@@ -60,46 +70,25 @@ __all__ = [
     "AppOAuthEntity",
     "AppSettings",
     "AppSettingsEntity",
-    # capability
-    "ATTRIBUTES",
-    "CAPABILITIES",
-    "CAPABILITIES_TO_ATTRIBUTES",
     "Attribute",
     "Capability",
-    # device
-    "DEVICE_TYPE_DTH",
-    "DEVICE_TYPE_ENDPOINT_APP",
-    "DEVICE_TYPE_OCF",
-    "DEVICE_TYPE_UNKNOWN",
-    "DEVICE_TYPE_VIPER",
     "Command",
     "Device",
     "DeviceEntity",
     "DeviceStatus",
     "DeviceStatusBase",
-    # error
-    "APIErrorDetail",
-    "APIInvalidGrantError",
-    "APIResponseError",
-    # installed app
     "InstalledApp",
     "InstalledAppEntity",
     "InstalledAppStatus",
     "InstalledAppType",
-    # location
     "Location",
     "LocationEntity",
-    # room
+    "OAuthToken",
     "Room",
     "RoomEntity",
-    # oauthtoken
-    "OAuthToken",
-    # scene
     "Scene",
     "SceneEntity",
-    # smartthings
     "SmartThings",
-    # subscription
     "SourceType",
     "Subscription",
     "SubscriptionEntity",

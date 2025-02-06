@@ -42,7 +42,7 @@ class Api:
     https://smartthings.developer.samsung.com/docs/api-ref/st-api.html
     """
 
-    __slots__ = ["_session", "_token", "_api_base"]
+    __slots__ = ["_api_base", "_session", "_token"]
 
     def __init__(self, session: ClientSession, token: str, *, api_base: str = API_BASE):
         """Create a new API with the given session and token."""
@@ -353,7 +353,11 @@ class Api:
         self._token = value
 
     async def request(
-        self, method: str, url: str, params: dict = None, data: dict = None
+        self,
+        method: str,
+        url: str,
+        params: dict | None = None,
+        data: dict | None = None,
     ):
         """Perform a request against the specified parameters."""
         async with self._session.request(
@@ -379,11 +383,11 @@ class Api:
                 )
             resp.raise_for_status()
 
-    async def get(self, resource: str, *, params: dict = None):
+    async def get(self, resource: str, *, params: dict | None = None):
         """Get a resource."""
         return await self.request("get", self._api_base + resource, params)
 
-    async def get_items(self, resource: str, *, params: dict = None):
+    async def get_items(self, resource: str, *, params: dict | None = None):
         """Perform requests for a list of items that may have pages."""
         resp = await self.request("get", self._api_base + resource, params, None)
         items = resp.get("items", [])
@@ -402,7 +406,7 @@ class Api:
         """Perform a put request."""
         return await self.request("put", self._api_base + resource, data=data)
 
-    async def delete(self, resource: str, *, params: dict = None):
+    async def delete(self, resource: str, *, params: dict | None = None):
         """Delete a resource."""
         return await self.request("delete", self._api_base + resource, params)
 

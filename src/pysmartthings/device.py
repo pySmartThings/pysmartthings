@@ -1128,7 +1128,7 @@ class DeviceEntity(Entity, Device):
         drlc_level: int,
         start: str,
         duration: int,
-        reporting_period: int = None,
+        reporting_period: int | None = None,
         *,
         set_status: bool = False,
         component_id: str = "main",
@@ -1182,7 +1182,7 @@ class DeviceEntity(Entity, Device):
         return result
 
     async def execute(
-        self, command: str, args: dict = None, *, component_id: str = "main"
+        self, command: str, args: dict | None = None, *, component_id: str = "main"
     ):
         """Call the execute command."""
         command_args = [command]
