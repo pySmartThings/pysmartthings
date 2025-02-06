@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, Optional
 
 from aiohttp import BasicAuth, ClientSession
 
-from .errors import APIInvalidGrant, APIResponseError
+from .errors import APIInvalidGrantError, APIResponseError
 
 if TYPE_CHECKING:
     from collections.abc import Sequence
@@ -423,7 +423,7 @@ class Api:
                 data = {}
                 with suppress(Exception):
                     data = await resp.json()
-                raise APIInvalidGrant(data.get("error_description"))
+                raise APIInvalidGrantError(data.get("error_description"))
             resp.raise_for_status()
 
     @staticmethod

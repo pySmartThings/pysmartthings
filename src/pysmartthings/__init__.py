@@ -33,7 +33,7 @@ from .device import (
     DeviceStatus,
     DeviceStatusBase,
 )
-from .errors import APIErrorDetail, APIInvalidGrant, APIResponseError
+from .errors import APIErrorDetail, APIInvalidGrantError, APIResponseError
 from .installedapp import (
     InstalledApp,
     InstalledAppEntity,
@@ -79,7 +79,7 @@ __all__ = [
     "DeviceStatusBase",
     # error
     "APIErrorDetail",
-    "APIInvalidGrant",
+    "APIInvalidGrantError",
     "APIResponseError",
     # installed app
     "InstalledApp",
