@@ -72,8 +72,8 @@ class SceneEntity(Entity, Scene):
 
     async def refresh(self):
         """Refresh is not implemented."""
-        raise NotImplementedError()
+        raise NotImplementedError
 
     async def save(self):
         """Save is not implemented."""
-        raise NotImplementedError()
+        raise NotImplementedError
