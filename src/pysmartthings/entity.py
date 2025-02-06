@@ -8,7 +8,7 @@ from .api import Api
 class Entity:
     """Define an entity from the SmartThings API."""
 
-    def __init__(self, api: Api):
+    def __init__(self, api: Api) -> None:
         """Initialize a new instance of the entity."""
         self._api = api
 

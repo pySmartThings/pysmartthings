@@ -20,7 +20,7 @@ _APP_NAME_PATTERN = re.compile("^[a-z0-9._-]{1,250}$", re.IGNORECASE)
 class App:
     """Define the app class."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new instance of the App class."""
         self._app_name = None
         self._display_name = None
@@ -214,7 +214,7 @@ class App:
 class AppSettings:
     """Define a SmartThings app settings."""
 
-    def __init__(self, app_id: str):
+    def __init__(self, app_id: str) -> None:
         """Create a new instance of the AppSettings class."""
         self._app_id = app_id
         self._settings = {}
@@ -275,7 +275,7 @@ class AppSettingsEntity(Entity, AppSettings):
 class AppOAuth:
     """Define the app OAuth settings."""
 
-    def __init__(self, app_id: str):
+    def __init__(self, app_id: str) -> None:
         """Initialize a new instance of the OAuth class."""
         self._app_id = app_id
         self._client_name = None
@@ -373,7 +373,7 @@ class AppEntity(Entity, App):
 class AppOAuthClient:
     """Define an oauth client information."""
 
-    def __init__(self, data: dict | None):
+    def __init__(self, data: dict | None) -> None:
         """Create a new instance of the OAuthClient."""
         self._client_id = None
         self._client_secret = None
@@ -399,7 +399,7 @@ class AppOAuthClient:
 class AppOAuthClientEntity(AppOAuthClient):
     """Define an oauth client information details."""
 
-    def __init__(self, api: Api, app_id: str, data: dict | None):
+    def __init__(self, api: Api, app_id: str, data: dict | None) -> None:
         """Init the class."""
         self._client_details = AppOAuthEntity(api, app_id, None)
         super().__init__(data)

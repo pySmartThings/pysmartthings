@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 class Room:
     """Defines a SmartThings room."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize the room."""
         self._room_id = None
         self._location_id = None
@@ -85,7 +85,7 @@ class RoomEntity(Room, Entity):
         *,
         location_id: str | None = None,
         room_id: str | None = None,
-    ):
+    ) -> None:
         """Initialize the room."""
         Entity.__init__(self, api)
         Room.__init__(self)

@@ -34,7 +34,7 @@ class SmartThings:
 
     __slots__ = ["_service"]
 
-    def __init__(self, session: ClientSession, token: str):
+    def __init__(self, session: ClientSession, token: str) -> None:
         """Initialize the SmartThingsApi."""
         self._service = Api(session, token)
 

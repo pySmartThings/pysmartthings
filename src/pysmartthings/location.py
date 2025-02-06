@@ -14,7 +14,7 @@ if TYPE_CHECKING:
 class Location:
     """Represents a SmartThings Location."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new location."""
         self._name = None
         self._location_id = None
@@ -89,7 +89,7 @@ class LocationEntity(Entity, Location):
 
     def __init__(
         self, api: Api, data: dict | None = None, location_id: str | None = None
-    ):
+    ) -> None:
         """Create a new instance of the LocationEntity."""
         Entity.__init__(self, api)
         Location.__init__(self)

@@ -105,7 +105,7 @@ class Command:
 class Device:
     """Represents a SmartThings device."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new device."""
         self._device_id = None
         self._name = None
@@ -215,7 +215,7 @@ class DeviceStatusBase:
 
     def __init__(
         self, component_id: str, attributes: Mapping[str, Status] | None = None
-    ):
+    ) -> None:
         """Initialize the status class."""
         self._attributes = defaultdict(lambda: STATUS_NONE, attributes or {})
         self._component_id = component_id
@@ -841,7 +841,7 @@ class DeviceEntity(Entity, Device):
 
     def __init__(
         self, api: Api, data: dict | None = None, device_id: str | None = None
-    ):
+    ) -> None:
         """Create a new instance of the DeviceEntity class."""
         Entity.__init__(self, api)
         Device.__init__(self)

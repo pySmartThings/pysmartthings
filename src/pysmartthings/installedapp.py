@@ -41,7 +41,7 @@ class InstalledAppStatus(Enum):
 class InstalledApp:
     """Define the InstalledApp class."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Create a new instance of the InstalledApp class."""
         self._installed_app_id = None
         self._installed_app_type = InstalledAppType.UNKNOWN

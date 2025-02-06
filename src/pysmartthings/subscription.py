@@ -22,7 +22,7 @@ class SourceType(Enum):
 class Subscription:
     """Define the subscription class."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new instance of the subscription class."""
         self._subscription_id = None
         self._installed_app_id = None
@@ -205,7 +205,7 @@ class Subscription:
 class SubscriptionEntity(Entity, Subscription):
     """Define a subscription entity."""
 
-    def __init__(self, api: Api, data: dict | None = None):
+    def __init__(self, api: Api, data: dict | None = None) -> None:
         """Create a new instance of the SubscriptionEntity class."""
         Entity.__init__(self, api)
         Subscription.__init__(self)

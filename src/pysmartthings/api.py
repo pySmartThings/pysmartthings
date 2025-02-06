@@ -43,7 +43,9 @@ class Api:
 
     __slots__ = ["_api_base", "_session", "_token"]
 
-    def __init__(self, session: ClientSession, token: str, *, api_base: str = API_BASE):
+    def __init__(
+        self, session: ClientSession, token: str, *, api_base: str = API_BASE
+    ) -> None:
         """Create a new API with the given session and token."""
         self._session = session
         self._token = token

@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 class Scene:
     """Define a scene data entity."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Create a new instance of the Scene class."""
         self._color = None
         self._icon = None
@@ -58,7 +58,7 @@ class Scene:
 class SceneEntity(Entity, Scene):
     """Define a scene entity."""
 
-    def __init__(self, api: Api, data: dict | None = None):
+    def __init__(self, api: Api, data: dict | None = None) -> None:
         """Create a new instance of the class."""
         Entity.__init__(self, api)
         Scene.__init__(self)

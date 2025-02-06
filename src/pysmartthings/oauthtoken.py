@@ -14,7 +14,7 @@ class OAuthToken:
 
     def __init__(
         self, api: Api, data: dict | None = None, refresh_token: str | None = None
-    ):
+    ) -> None:
         """Create a new instance of the OAuthToken class."""
         self._api = api
         self._access_token = None
