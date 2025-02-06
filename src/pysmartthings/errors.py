@@ -1,12 +1,12 @@
 """Define errors that can be returned from the SmartThings API."""
+
 import json
 from typing import Optional, Sequence
 
 from aiohttp import ClientResponseError
 
 UNAUTHORIZED_ERROR = (
-    "Authorization for the API is required, but the request has not been "
-    "authenticated."
+    "Authorization for the API is required, but the request has not been authenticated."
 )
 FORBIDDEN_ERROR = (
     "The request has been authenticated but does not have appropriate"
@@ -64,7 +64,7 @@ class APIResponseError(ClientResponseError):
         self._error = APIErrorDetail(data.get("error", {}))
 
     def __str__(self):
-        """Return a string represenation of the error."""
+        """Return a string representation of the error."""
         return f"{self.message} ({self.status}): {json.dumps(self._raw_error_response)}"
 
     @property

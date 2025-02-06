@@ -1,7 +1,5 @@
 """Define tests for the app module."""
 
-import pytest
-
 from pysmartthings.app import (
     APP_TYPE_LAMBDA,
     APP_TYPE_WEBHOOK,
@@ -13,6 +11,7 @@ from pysmartthings.app import (
     AppSettings,
     AppSettingsEntity,
 )
+import pytest
 
 from .conftest import APP_ID
 from .utilities import get_json
@@ -185,8 +184,7 @@ class TestApp:
         app = App()
         # Act
         app.lambda_functions.append(
-            "arn:aws:lambda:eu-central-1:account-id:"
-            "function:function-name:alias-name"
+            "arn:aws:lambda:eu-central-1:account-id:function:function-name:alias-name"
         )
         # Assert
         assert app.lambda_functions

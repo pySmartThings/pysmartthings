@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate capability constants."""
+
 import re
 import sys
 

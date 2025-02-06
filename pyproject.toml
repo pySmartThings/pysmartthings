@@ -31,12 +31,7 @@ python = "^3.11"
 aiohttp = "3.9.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "23.3.0"
 coveralls = "3.3.1"
-flake8 = "6.0.0"
-flake8-docstrings = "1.7.0"
-pydocstyle = "6.3.0"
-isort = "5.12.0"
 pylint = "3.3.3"
 pytest = "7.4.0"
 pytest-asyncio = "0.21.0"
@@ -45,6 +40,7 @@ pytest-timeout = "2.1.0"
 yarl = "1.9.2"
 pre-commit = "^4.1.0"
 pre-commit-hooks = "^5.0.0"
+ruff = "^0.9.5"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/pySmartThings/pysmartthings/issues"
@@ -116,6 +112,71 @@ max-line-length = 88
 [tool.pytest.ini_options]
 addopts = "--cov"
 asyncio_mode = "auto"
+
+[tool.ruff.lint]
+ignore = [
+  "ANN401", # Opinioated warning on disallowing dynamically typed expressions
+  "ANN201",
+  "FA100",
+  "ANN204",
+  "ANN202",
+  "UP006",
+  "UP035",
+  "RSE102",
+  "RUF013",
+  "RET504",
+  "DTZ005",
+  "EM101",
+  "SIM910",
+  "ANN001",
+  "PIE790",
+  "N818",
+  "PLR0913",
+  "TRY003",
+  "FBT002",
+  "ARG002",
+  "FBT001",
+  "B014",
+  "E501",
+  "ANN002",
+  "PYI024",
+  "D212",
+  "ANN205",
+  "RET503",
+  "BLE001",
+  "S110",
+  "SIM105",
+  "RUF023",
+  "S105",
+  "RUF022",
+  "PGH004",
+  "SIM201",
+  "SIM103",
+  "B011",
+  "PT015",
+  "PTH123",
+  "PT011",
+  "COM812", # Conflicts with other rules
+  "D203", # Conflicts with other rules
+  "D213", # Conflicts with other rules
+  "D417", # False positives in some occasions
+  "ISC001", # Conflicts with other rules
+  "PLR2004", # Just annoying, not really useful
+]
+select = ["ALL"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.isort]
+known-first-party = ["python_overseerr"]
+force-sort-within-sections = true
+split-on-trailing-comma = false
+combine-as-imports = true
+
+[tool.ruff.lint.mccabe]
+max-complexity = 25
 
 [build-system]
 build-backend = "poetry.core.masonry.api"

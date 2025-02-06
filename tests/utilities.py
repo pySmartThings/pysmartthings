@@ -1,4 +1,5 @@
 """Define testing utilities."""
+
 import json as _json
 from typing import Optional, Sequence, Union
 from urllib.parse import parse_qs
@@ -13,7 +14,7 @@ BodyType = Optional[Union[list, dict]]
 
 def get_json(file):
     """Load a json file."""
-    with open("tests/json/" + file, "r", encoding="utf-8") as json_file:
+    with open("tests/json/" + file, encoding="utf-8") as json_file:
         return _json.load(json_file)
 
 

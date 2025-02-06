@@ -1,4 +1,5 @@
 """Defines a SmartThings device."""
+
 from collections import defaultdict, namedtuple
 import colorsys
 import re
@@ -984,7 +985,7 @@ class DeviceEntity(Entity, Device):
     async def set_thermostat_mode(
         self, mode: str, set_status: bool = False, *, component_id: str = "main"
     ) -> bool:
-        """Call the setThermostatMode deivce command."""
+        """Call the setThermostatMode device command."""
         capability = self.get_capability(
             Capability.thermostat_mode, Capability.thermostat
         )
@@ -998,7 +999,7 @@ class DeviceEntity(Entity, Device):
     async def set_cooling_setpoint(
         self, temperature: int, set_status: bool = False, *, component_id: str = "main"
     ) -> bool:
-        """Call the setThermostatMode deivce command."""
+        """Call the setThermostatMode device command."""
         capability = self.get_capability(
             Capability.thermostat_cooling_setpoint, Capability.thermostat
         )
@@ -1012,7 +1013,7 @@ class DeviceEntity(Entity, Device):
     async def set_heating_setpoint(
         self, temperature: int, set_status: bool = False, *, component_id: str = "main"
     ) -> bool:
-        """Call the setThermostatMode deivce command."""
+        """Call the setThermostatMode device command."""
         capability = self.get_capability(
             Capability.thermostat_heating_setpoint, Capability.thermostat
         )

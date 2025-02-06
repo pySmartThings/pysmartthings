@@ -1,4 +1,5 @@
 """Defines the rooms module."""
+
 from typing import Dict, Optional
 
 from .api import Api
@@ -80,7 +81,7 @@ class RoomEntity(Room, Entity):
         data: Optional[Dict] = None,
         *,
         location_id: str = None,
-        room_id: str = None
+        room_id: str = None,
     ):
         """Initialize the room."""
         Entity.__init__(self, api)

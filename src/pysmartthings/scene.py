@@ -1,4 +1,5 @@
 """Define the scene module."""
+
 from typing import Dict, Optional
 
 from .api import Api

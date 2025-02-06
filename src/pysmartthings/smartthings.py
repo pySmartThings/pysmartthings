@@ -74,7 +74,7 @@ class SmartThings:
         *,
         location_ids: Optional[Sequence[str]] = None,
         capabilities: Optional[Sequence[str]] = None,
-        device_ids: Optional[Sequence[str]] = None
+        device_ids: Optional[Sequence[str]] = None,
     ) -> List:
         """Retrieve SmartThings devices."""
         params = []
@@ -143,7 +143,7 @@ class SmartThings:
         self,
         *,
         location_id: Optional[str] = None,
-        installed_app_status: Optional[InstalledAppStatus] = None
+        installed_app_status: Optional[InstalledAppStatus] = None,
     ) -> List[InstalledAppEntity]:
         """Get a list of the installed applications."""
         params = []
