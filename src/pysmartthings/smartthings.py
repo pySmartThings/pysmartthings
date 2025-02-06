@@ -70,7 +70,7 @@ class SmartThings:
         )
         return RoomEntity(self._service, entity)
 
-    async def delete_room(self, location_id: str, room_id: str):
+    async def delete_room(self, location_id: str, room_id: str) -> bool:
         """Delete a room."""
         return await self._service.delete_room(location_id, room_id) == {}
 
@@ -115,7 +115,7 @@ class SmartThings:
         entity = await self._service.create_app(app.to_data())
         return AppEntity(self._service, entity["app"]), AppOAuthClient(entity)
 
-    async def delete_app(self, app_id: str):
+    async def delete_app(self, app_id: str) -> bool:
         """Delete an app."""
         return await self._service.delete_app(app_id) == {}
 
@@ -164,7 +164,7 @@ class SmartThings:
         entity = await self._service.get_installed_app(installed_app_id)
         return InstalledAppEntity(self._service, entity)
 
-    async def delete_installed_app(self, installed_app_id: str):
+    async def delete_installed_app(self, installed_app_id: str) -> bool:
         """Delete an installedapp."""
         result = await self._service.delete_installed_app(installed_app_id)
         return result == {"count": 1}
@@ -179,7 +179,9 @@ class SmartThings:
         resp = await self._service.delete_all_subscriptions(installed_app_id)
         return resp["count"]
 
-    async def delete_subscription(self, installed_app_id: str, subscription_id: str):
+    async def delete_subscription(
+        self, installed_app_id: str, subscription_id: str
+    ) -> bool:
         """Delete an individual subscription."""
         return await self._service.delete_subscription(
             installed_app_id, subscription_id
@@ -194,7 +196,7 @@ class SmartThings:
         )
         return SubscriptionEntity(self._service, entity)
 
-    async def scenes(self, *, location_id: str | None = None):
+    async def scenes(self, *, location_id: str | None = None) -> list[SceneEntity]:
         """Get a list of scenes and optionally filter by location."""
         params = []
         if location_id:

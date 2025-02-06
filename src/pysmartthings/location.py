@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, NoReturn
 
 from .entity import Entity
 from .room import RoomEntity
@@ -26,7 +26,7 @@ class Location:
         self._country_code = None
         self._timezone_id = None
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the given data structure to the location."""
         self._name = data["name"]
         self._location_id = data["locationId"]
@@ -98,13 +98,13 @@ class LocationEntity(Entity, Location):
         if location_id:
             self._location_id = location_id
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the location information."""
         data = await self._api.get_location(self._location_id)
         if data:
             self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> NoReturn:
         """Location does not support updating at this time."""
         msg = "Location does not support updating at this time."
         raise NotImplementedError(msg)

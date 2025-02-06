@@ -96,7 +96,7 @@ class APIResponseError(ClientResponseError):
         """Get the API error document."""
         return self._error
 
-    def is_target_error(self):
+    def is_target_error(self) -> bool:
         """Determine if the error is due to an issue with the target."""
         return (
             self.error.code == "ConstraintViolationError"

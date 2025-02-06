@@ -26,7 +26,7 @@ class OAuthToken:
         if data:
             self.apply_data(data)
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the given data to the entity."""
         self._access_token = data["access_token"]
         self._token_type = data["token_type"]
@@ -40,7 +40,7 @@ class OAuthToken:
             self._scope.clear()
             self._scope.append(data_scope)
 
-    async def refresh(self, client_id: str, client_secret: str):
+    async def refresh(self, client_id: str, client_secret: str) -> None:
         """Refresh the auth and refresh tokens."""
         data = await self._api.generate_tokens(
             client_id, client_secret, self._refresh_token
@@ -79,6 +79,6 @@ class OAuthToken:
         return self._expiration_date
 
     @property
-    def is_expired(self):
+    def is_expired(self) -> bool:
         """Return True if the token has expired."""
         return datetime.now() > self._expiration_date

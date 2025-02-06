@@ -35,7 +35,7 @@ class App:
         self._created_date = None
         self._last_updated_date = None
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Set the states of the app with the supplied data."""
         self._app_name = data["appName"]
         self._app_id = data["appId"]
@@ -74,12 +74,12 @@ class App:
         return self._app_id
 
     @property
-    def created_date(self):
+    def created_date(self) -> str:
         """Get the created date of the app."""
         return self._created_date
 
     @property
-    def last_updated_date(self):
+    def last_updated_date(self) -> str:
         """Get the last updated date of the app."""
         return self._last_updated_date
 
@@ -117,7 +117,7 @@ class App:
         return self._display_name
 
     @display_name.setter
-    def display_name(self, value: str):
+    def display_name(self, value: str) -> None:
         """Set the display name."""
         if not value:
             msg = "value cannot be None or zero length."
@@ -219,7 +219,7 @@ class AppSettings:
         self._app_id = app_id
         self._settings = {}
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Set the states of the app with the supplied data."""
         self._settings = data.get("settings", {})
 
@@ -228,7 +228,7 @@ class AppSettings:
         return {"settings": self._settings}
 
     @property
-    def app_id(self):
+    def app_id(self) -> str:
         """Get the associated app id."""
         return self._app_id
 
@@ -285,7 +285,7 @@ class AppOAuth:
         """Get a data representation of the instance."""
         return {"clientName": self._client_name, "scope": self._scope}
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Load the data of the instance."""
         self._client_name = data["clientName"]
         self._scope = data.get("scope", self._scope)
@@ -380,18 +380,18 @@ class AppOAuthClient:
         if data:
             self.apply_data(data)
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the given data to the entity."""
         self._client_id = data["oauthClientId"]
         self._client_secret = data["oauthClientSecret"]
 
     @property
-    def client_id(self):
+    def client_id(self) -> str:
         """Get the client id."""
         return self._client_id
 
     @property
-    def client_secret(self):
+    def client_secret(self) -> str:
         """Get the client secret."""
         return self._client_secret
 
@@ -404,7 +404,7 @@ class AppOAuthClientEntity(AppOAuthClient):
         self._client_details = AppOAuthEntity(api, app_id, None)
         super().__init__(data)
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the given data to the entity."""
         super().apply_data(data)
         self._client_details.apply_data(data["oauthClientDetails"])

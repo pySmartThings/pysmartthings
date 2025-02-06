@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from enum import Enum
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, NoReturn
 
 from .entity import Entity
 
@@ -38,7 +38,7 @@ class Subscription:
         self._device_id = None
         self._component_id = None
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Set the states of the app with the supplied data."""
         self._subscription_id = data["id"]
         self._installed_app_id = data["installedAppId"]
@@ -177,17 +177,17 @@ class Subscription:
         return self._location_id
 
     @location_id.setter
-    def location_id(self, value: str):
+    def location_id(self, value: str) -> None:
         """Set the location id that both the app and source device are in."""
         self._location_id = value
 
     @property
-    def device_id(self):
+    def device_id(self) -> str:
         """Get the GUID of the device that is subscribed to."""
         return self._device_id
 
     @device_id.setter
-    def device_id(self, value: str):
+    def device_id(self, value: str) -> None:
         """Set the GUID of the device that is subscribed to."""
         self._device_id = value
 
@@ -197,7 +197,7 @@ class Subscription:
         return self._component_id
 
     @component_id.setter
-    def component_id(self, value: str):
+    def component_id(self, value: str) -> None:
         """Set the component ID on the device that is subscribed to."""
         self._component_id = value
 
@@ -212,13 +212,13 @@ class SubscriptionEntity(Entity, Subscription):
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the subscription information using the API."""
         data = await self._api.get_subscription(
             self._installed_app_id, self._subscription_id
         )
         self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> NoReturn:
         """Subscriptions cannot be updated."""
         raise NotImplementedError

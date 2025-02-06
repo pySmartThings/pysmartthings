@@ -54,7 +54,7 @@ class InstalledApp:
         self._last_updated_date = None
         self._classifications = []
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the data structure to the properties."""
         self._installed_app_id = data["installedAppId"]
         self._installed_app_type = InstalledAppType(data["installedAppType"])

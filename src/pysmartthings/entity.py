@@ -1,5 +1,7 @@
 """Defines the entity module."""
 
+from typing import NoReturn
+
 from .api import Api
 
 
@@ -10,10 +12,10 @@ class Entity:
         """Initialize a new instance of the entity."""
         self._api = api
 
-    async def refresh(self):
+    async def refresh(self) -> NoReturn:
         """Retrieve the latest values from the API."""
         raise NotImplementedError
 
-    async def save(self):
+    async def save(self) -> NoReturn:
         """Update or create the entity."""
         raise NotImplementedError
