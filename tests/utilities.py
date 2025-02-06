@@ -157,13 +157,6 @@ class MockResponse:
         # Method
         if method.lower() != self.method.lower():
             return False
-        # Url
-        if (
-            self._url.scheme != url.scheme
-            or self._url.host != url.host
-            or self._url.path != url.path
-        ):
-            return False
         # Query string
         request_qs = parse_qs(url.query_string)
         matcher_qs = parse_qs(self._url.query_string)
