@@ -156,6 +156,10 @@ class SmartThings:
         resp = await self._get("scenes", params=params)
         return SceneResponse.from_json(resp).items
 
+    async def execute_scene(self, scene_id: str) -> None:
+        """Execute the scene with the specified ID."""
+        await self._post(f"scenes/{scene_id}/execute")
+
     # async def location(self, location_id: str) -> LocationEntity:
     #     """Retrieve a location with the specified ID."""
     #     entity = await self._service.get_location(location_id)
