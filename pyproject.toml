@@ -28,19 +28,22 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
-aiohttp = "3.9.0"
+aiohttp = ">=3.0.0"
+yarl = ">=1.6.0"
 
 [tool.poetry.group.dev.dependencies]
-coveralls = "3.3.1"
-pylint = "3.3.3"
-pytest = "7.4.0"
-pytest-asyncio = "0.21.0"
-pytest-cov = "4.1.0"
-pytest-timeout = "2.1.0"
-yarl = "1.9.2"
-pre-commit = "^4.1.0"
-pre-commit-hooks = "^5.0.0"
-ruff = "^0.9.5"
+codespell = "2.4.1"
+covdefaults = "2.3.0"
+coverage = {version = "7.6.10", extras = ["toml"]}
+pylint = "3.3.4"
+pytest = "8.3.4"
+pytest-asyncio = "0.25.3"
+pytest-cov = "6.0.0"
+pytest-timeout = "2.3.1"
+pre-commit = "4.1.0"
+pre-commit-hooks = "5.0.0"
+yamllint = "1.35.1"
+ruff = "0.9.5"
 mypy = "^1.15.0"
 
 [tool.poetry.urls]
@@ -147,19 +150,12 @@ asyncio_mode = "auto"
 [tool.ruff.lint]
 ignore = [
   "ANN401", # Opinioated warning on disallowing dynamically typed expressions
-  "ANN201",
-  "ANN204",
-  "ANN202",
   "DTZ005",
-  "ANN001",
   "PLR0913",
   "TRY003",
   "FBT002",
   "ARG002",
   "FBT001",
-  "ANN002",
-  "PYI024",
-  "ANN205",
   "BLE001",
   "S110",
   "S105",

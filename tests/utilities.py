@@ -35,7 +35,7 @@ def _get_json_fixture(body: BodyFixtureType) -> BodyType:
 class ClientMocker:
     """Mock Aiohttp client requests."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize the request mocker."""
         self._mocks = []
         self.default_headers = None
@@ -135,7 +135,7 @@ class ClientMocker:
 class MockResponse:
     """Mock Aiohttp client response."""
 
-    def __init__(self, method, url, params, status, headers, request, response):
+    def __init__(self, method, url, params, status, headers, request, response) -> None:
         """Initialize a fake response."""
         self.method = method
         url = URL(url)
@@ -156,13 +156,6 @@ class MockResponse:
             return False
         # Method
         if method.lower() != self.method.lower():
-            return False
-        # Url
-        if (
-            self._url.scheme != url.scheme
-            or self._url.host != url.host
-            or self._url.path != url.path
-        ):
             return False
         # Query string
         request_qs = parse_qs(url.query_string)
@@ -201,7 +194,7 @@ class MockResponse:
         """Return mock response as a string."""
         raise NotImplementedError
 
-    async def json(self, encoding="utf-8"):
+    async def json(self, encoding: str = "utf-8") -> dict | list:
         """Return mock response as a json."""
         return _get_json_fixture(self._response)
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from contextlib import suppress
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 from aiohttp import BasicAuth, ClientSession
 
@@ -43,7 +43,9 @@ class Api:
 
     __slots__ = ["_api_base", "_session", "_token"]
 
-    def __init__(self, session: ClientSession, token: str, *, api_base: str = API_BASE):
+    def __init__(
+        self, session: ClientSession, token: str, *, api_base: str = API_BASE
+    ) -> None:
         """Create a new API with the given session and token."""
         self._session = session
         self._token = token
@@ -77,14 +79,16 @@ class Api:
         """
         return await self.get(API_ROOM.format(location_id=location_id, room_id=room_id))
 
-    async def create_room(self, location_id: str, data: dict):
+    async def create_room(self, location_id: str, data: dict) -> dict[str, Any] | None:
         """Create a room.
 
         This API call is undocumented.
         """
         return await self.post(API_ROOMS.format(location_id=location_id), data)
 
-    async def update_room(self, location_id: str, room_id: str, data: dict):
+    async def update_room(
+        self, location_id: str, room_id: str, data: dict
+    ) -> dict[str, Any] | None:
         """Update a room.
 
         This API call is undocumented.
@@ -93,7 +97,9 @@ class Api:
             API_ROOM.format(location_id=location_id, room_id=room_id), data
         )
 
-    async def delete_room(self, location_id: str, room_id: str):
+    async def delete_room(
+        self, location_id: str, room_id: str
+    ) -> dict[str, Any] | None:
         """Delete a room.
 
         This API call is undocumented.
@@ -102,14 +108,14 @@ class Api:
             API_ROOM.format(location_id=location_id, room_id=room_id)
         )
 
-    async def get_devices(self, params: Optional = None) -> dict:
+    async def get_devices(self, params: Optional = None) -> dict[str, Any] | None:
         """Get the device definitions.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getDevices
         """
         return await self.get_items(API_DEVICES, params=params)
 
-    async def get_device(self, device_id: str) -> dict:
+    async def get_device(self, device_id: str) -> dict[str, Any] | None:
         """Get as specific device.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getDevice
@@ -121,7 +127,12 @@ class Api:
         return await self.get(API_DEVICE_STATUS.format(device_id=device_id))
 
     async def post_device_command(
-        self, device_id, component_id, capability, command, args
+        self,
+        device_id: str,
+        component_id: str,
+        capability: str,
+        command: str,
+        args: list[dict[str, Any]] | None = None,
     ) -> object:
         """Execute commands on a device.
 
@@ -169,42 +180,46 @@ class Api:
         """
         return await self.put(API_APP.format(app_id=app_id), data)
 
-    async def delete_app(self, app_id: str):
+    async def delete_app(self, app_id: str) -> dict[str, Any] | None:
         """Delete an app.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/deleteApp
         """
         return await self.delete(API_APP.format(app_id=app_id))
 
-    async def get_app_settings(self, app_id: str) -> dict:
+    async def get_app_settings(self, app_id: str) -> dict[str, Any] | None:
         """Get an app's settings.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getAppSettings
         """
         return await self.get(API_APP_SETTINGS.format(app_id=app_id))
 
-    async def update_app_settings(self, app_id: str, data: dict) -> dict:
+    async def update_app_settings(
+        self, app_id: str, data: dict
+    ) -> dict[str, Any] | None:
         """Update an app's settings.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/updateAppSettings
         """
         return await self.put(API_APP_SETTINGS.format(app_id=app_id), data)
 
-    async def get_app_oauth(self, app_id: str) -> dict:
+    async def get_app_oauth(self, app_id: str) -> dict[str, Any] | None:
         """Get an app's oauth settings.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/getAppOauth
         """
         return await self.get(API_APP_OAUTH.format(app_id=app_id))
 
-    async def update_app_oauth(self, app_id: str, data: dict) -> dict:
+    async def update_app_oauth(self, app_id: str, data: dict) -> dict[str, Any] | None:
         """Update an app's oauth settings.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/updateAppOauth
         """
         return await self.put(API_APP_OAUTH.format(app_id=app_id), data)
 
-    async def generate_app_oauth(self, app_id: str, data: dict) -> dict:
+    async def generate_app_oauth(
+        self, app_id: str, data: dict
+    ) -> dict[str, Any] | None:
         """Generate a new app oauth client/secret.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/generateAppOauth
@@ -218,7 +233,7 @@ class Api:
         """
         return await self.get_items(API_INSTALLEDAPPS, params=params)
 
-    async def get_installed_app(self, installed_app_id: str) -> dict:
+    async def get_installed_app(self, installed_app_id: str) -> dict[str, Any] | None:
         """Get the details of the specific installedapp.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getInstallation
@@ -227,7 +242,9 @@ class Api:
             API_INSTALLEDAPP.format(installed_app_id=installed_app_id)
         )
 
-    async def delete_installed_app(self, installed_app_id: str):
+    async def delete_installed_app(
+        self, installed_app_id: str
+    ) -> dict[str, Any] | None:
         """Delete an app.
 
         https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/deleteInstallation
@@ -236,7 +253,7 @@ class Api:
             API_INSTALLEDAPP.format(installed_app_id=installed_app_id)
         )
 
-    async def get_subscriptions(self, installed_app_id: str) -> dict:
+    async def get_subscriptions(self, installed_app_id: str) -> dict[str, Any] | None:
         """Get installedapp's subscriptions.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/listSubscriptions
@@ -245,7 +262,9 @@ class Api:
             API_SUBSCRIPTIONS.format(installed_app_id=installed_app_id)
         )
 
-    async def create_subscription(self, installed_app_id: str, data: dict) -> dict:
+    async def create_subscription(
+        self, installed_app_id: str, data: dict
+    ) -> dict[str, Any] | None:
         """Create a subscription for an installedapp.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/saveSubscription
@@ -254,7 +273,9 @@ class Api:
             API_SUBSCRIPTIONS.format(installed_app_id=installed_app_id), data
         )
 
-    async def delete_all_subscriptions(self, installed_app_id: str) -> dict:
+    async def delete_all_subscriptions(
+        self, installed_app_id: str
+    ) -> dict[str, Any] | None:
         """Delete all subscriptions for an installedapp.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/deleteAllSubscriptions
@@ -265,7 +286,7 @@ class Api:
 
     async def get_subscription(
         self, installed_app_id: str, subscription_id: str
-    ) -> dict:
+    ) -> dict[str, Any] | None:
         """Get an individual subscription.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/getSubscription
@@ -276,7 +297,9 @@ class Api:
             )
         )
 
-    async def delete_subscription(self, installed_app_id: str, subscription_id: str):
+    async def delete_subscription(
+        self, installed_app_id: str, subscription_id: str
+    ) -> dict[str, Any] | None:
         """Delete an individual subscription.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/deleteSubscription
@@ -287,7 +310,7 @@ class Api:
             )
         )
 
-    async def get_scenes(self, params: Optional = None):
+    async def get_scenes(self, params: Optional = None) -> dict[str, Any] | None:
         """Get scenes.
 
         https://smartthings.developer.samsung.com/develop/api-ref/st-api.html#operation/listScenes
@@ -307,17 +330,17 @@ class Api:
         return self._session
 
     @session.setter
-    def session(self, value: ClientSession):
+    def session(self, value: ClientSession) -> None:
         """Set the instance of the session."""
         self._session = value
 
     @property
-    def token(self):
+    def token(self) -> str:
         """Get the token used when making requests."""
         return self._token
 
     @token.setter
-    def token(self, value):
+    def token(self, value: str) -> None:
         """Set the token to use when making requests."""
         self._token = value
 
@@ -327,7 +350,7 @@ class Api:
         url: str,
         params: dict | None = None,
         data: dict | None = None,
-    ):
+    ) -> dict[str, Any] | None:
         """Perform a request against the specified parameters."""
         async with self._session.request(
             method,
@@ -353,11 +376,15 @@ class Api:
             resp.raise_for_status()
             return None
 
-    async def get(self, resource: str, *, params: dict | None = None):
+    async def get(
+        self, resource: str, *, params: dict | None = None
+    ) -> dict[str, Any] | None:
         """Get a resource."""
         return await self.request("get", self._api_base + resource, params)
 
-    async def get_items(self, resource: str, *, params: dict | None = None):
+    async def get_items(
+        self, resource: str, *, params: dict | None = None
+    ) -> dict[str, Any] | None:
         """Perform requests for a list of items that may have pages."""
         resp = await self.request("get", self._api_base + resource, params, None)
         items = resp.get("items", [])
@@ -368,21 +395,23 @@ class Api:
             next_link = Api._get_next_link(resp)
         return items
 
-    async def post(self, resource: str, data: Sequence | None):
+    async def post(self, resource: str, data: Sequence | None) -> dict[str, Any] | None:
         """Perform a post request."""
         return await self.request("post", self._api_base + resource, data=data)
 
-    async def put(self, resource: str, data: Sequence | None):
+    async def put(self, resource: str, data: Sequence | None) -> dict[str, Any] | None:
         """Perform a put request."""
         return await self.request("put", self._api_base + resource, data=data)
 
-    async def delete(self, resource: str, *, params: dict | None = None):
+    async def delete(
+        self, resource: str, *, params: dict | None = None
+    ) -> dict[str, Any] | None:
         """Delete a resource."""
         return await self.request("delete", self._api_base + resource, params)
 
     async def generate_tokens(
         self, client_id: str, client_secret: str, refresh_token: str
-    ):
+    ) -> dict[str, Any] | None:
         """Obtain a new access and refresh token."""
         payload = {"grant_type": "refresh_token", "refresh_token": refresh_token}
         async with self._session.request(
@@ -402,7 +431,7 @@ class Api:
             return None
 
     @staticmethod
-    def _get_next_link(data):
+    def _get_next_link(data: dict[str, Any]) -> str | None:
         links = data.get("_links")
         if not links:
             return None

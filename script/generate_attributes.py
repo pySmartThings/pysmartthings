@@ -7,7 +7,7 @@ import sys
 from pysmartthings.capability import ATTRIBUTES
 
 
-def main():
+def main() -> None:
     """Run the script."""
     attribs = list(ATTRIBUTES)
     attribs.sort()

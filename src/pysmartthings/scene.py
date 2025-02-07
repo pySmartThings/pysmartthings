@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, NoReturn
 
 from .entity import Entity
 
@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 class Scene:
     """Define a scene data entity."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Create a new instance of the Scene class."""
         self._color = None
         self._icon = None
@@ -21,7 +21,7 @@ class Scene:
         self._name = None
         self._scene_id = None
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the data structure to the class."""
         self._color = data["sceneColor"]
         self._icon = data["sceneIcon"]
@@ -58,22 +58,22 @@ class Scene:
 class SceneEntity(Entity, Scene):
     """Define a scene entity."""
 
-    def __init__(self, api: Api, data: dict | None = None):
+    def __init__(self, api: Api, data: dict | None = None) -> None:
         """Create a new instance of the class."""
         Entity.__init__(self, api)
         Scene.__init__(self)
         if data:
             self.apply_data(data)
 
-    async def execute(self):
+    async def execute(self) -> bool:
         """Execute the scene."""
         result = await self._api.execute_scene(self._scene_id)
         return result == {"status": "success"}
 
-    async def refresh(self):
+    async def refresh(self) -> NoReturn:
         """Refresh is not implemented."""
         raise NotImplementedError
 
-    async def save(self):
+    async def save(self) -> NoReturn:
         """Save is not implemented."""
         raise NotImplementedError

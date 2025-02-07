@@ -11,7 +11,7 @@ class TestRoom:
     """Tests for the Room class."""
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Test the init method."""
         # Arrange
         data = get_json("room.json")
@@ -29,7 +29,7 @@ class TestRoomEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         entity = RoomEntity(api, location_id=LOCATION_ID, room_id=ROOM_ID)
@@ -40,7 +40,7 @@ class TestRoomEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the save method."""
         # Arrange
         entity = RoomEntity(api, location_id=LOCATION_ID, room_id=ROOM_ID)

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from enum import Enum
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, NoReturn
 
 from .entity import Entity
 
@@ -22,7 +22,7 @@ class SourceType(Enum):
 class Subscription:
     """Define the subscription class."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new instance of the subscription class."""
         self._subscription_id = None
         self._installed_app_id = None
@@ -38,7 +38,7 @@ class Subscription:
         self._device_id = None
         self._component_id = None
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Set the states of the app with the supplied data."""
         self._subscription_id = data["id"]
         self._installed_app_id = data["installedAppId"]
@@ -107,7 +107,7 @@ class Subscription:
         return self._installed_app_id
 
     @installed_app_id.setter
-    def installed_app_id(self, value: str):
+    def installed_app_id(self, value: str) -> None:
         """Set the id of the subscripting app."""
         self._installed_app_id = value
 
@@ -117,7 +117,7 @@ class Subscription:
         return self._source_type
 
     @source_type.setter
-    def source_type(self, value: Any):
+    def source_type(self, value: Any) -> None:
         """Set the typ eof event that is being subscribed to."""
         self._source_type = SourceType(value)
 
@@ -127,7 +127,7 @@ class Subscription:
         return self._capability
 
     @capability.setter
-    def capability(self, value: str):
+    def capability(self, value: str) -> None:
         """Get the name of the capability that is subscribed."""
         self._capability = value
 
@@ -137,7 +137,7 @@ class Subscription:
         return self._attribute
 
     @attribute.setter
-    def attribute(self, value: str):
+    def attribute(self, value: str) -> None:
         """Set the name of the capabilities attribute or * for all."""
         self._attribute = value
 
@@ -147,7 +147,7 @@ class Subscription:
         return self._value
 
     @value.setter
-    def value(self, value: str):
+    def value(self, value: str) -> None:
         """Set the value for that will trigger the subscription."""
         self._value = value
 
@@ -157,7 +157,7 @@ class Subscription:
         return self._state_change_only
 
     @state_change_only.setter
-    def state_change_only(self, value: bool):
+    def state_change_only(self, value: bool) -> None:
         """Set to execute only on a state change."""
         self._state_change_only = value
 
@@ -167,7 +167,7 @@ class Subscription:
         return self._subscription_name
 
     @subscription_name.setter
-    def subscription_name(self, value: str):
+    def subscription_name(self, value: str) -> None:
         """Set a name for the subscription."""
         self._subscription_name = value
 
@@ -177,17 +177,17 @@ class Subscription:
         return self._location_id
 
     @location_id.setter
-    def location_id(self, value: str):
+    def location_id(self, value: str) -> None:
         """Set the location id that both the app and source device are in."""
         self._location_id = value
 
     @property
-    def device_id(self):
+    def device_id(self) -> str:
         """Get the GUID of the device that is subscribed to."""
         return self._device_id
 
     @device_id.setter
-    def device_id(self, value: str):
+    def device_id(self, value: str) -> None:
         """Set the GUID of the device that is subscribed to."""
         self._device_id = value
 
@@ -197,7 +197,7 @@ class Subscription:
         return self._component_id
 
     @component_id.setter
-    def component_id(self, value: str):
+    def component_id(self, value: str) -> None:
         """Set the component ID on the device that is subscribed to."""
         self._component_id = value
 
@@ -205,20 +205,20 @@ class Subscription:
 class SubscriptionEntity(Entity, Subscription):
     """Define a subscription entity."""
 
-    def __init__(self, api: Api, data: dict | None = None):
+    def __init__(self, api: Api, data: dict | None = None) -> None:
         """Create a new instance of the SubscriptionEntity class."""
         Entity.__init__(self, api)
         Subscription.__init__(self)
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the subscription information using the API."""
         data = await self._api.get_subscription(
             self._installed_app_id, self._subscription_id
         )
         self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> NoReturn:
         """Subscriptions cannot be updated."""
         raise NotImplementedError

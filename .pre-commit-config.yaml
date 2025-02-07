@@ -72,8 +72,6 @@ repos:
         types: [text]
         exclude: ^poetry\.lock$
         entry: poetry run codespell
-        args:
-          - --ignore-words-list=activite
       - id: detect-private-key
         name: 🕵️  Detect Private Keys
         language: system
@@ -105,6 +103,12 @@ repos:
         entry: poetry check
         pass_filenames: false
         always_run: true
+      - id: prettier
+        name: 💄 Ensuring files are prettier
+        language: system
+        types: [yaml, json, markdown]
+        entry: npm run prettier
+        pass_filenames: false
       - id: pylint
         name: 🌟 Starring code with pylint
         language: system
@@ -116,3 +120,8 @@ repos:
         types: [text]
         entry: poetry run trailing-whitespace-fixer
         stages: [pre-commit, pre-push, manual]
+      - id: yamllint
+        name: 🎗  Check YAML files with yamllint
+        language: system
+        types: [yaml]
+        entry: poetry run yamllint

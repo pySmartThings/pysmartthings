@@ -12,7 +12,7 @@ class TestSubscription:
     """Tests for the Subscription class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Test the initialization method."""
         # Arrange/Act
         sub = Subscription()
@@ -24,7 +24,7 @@ class TestSubscription:
         assert sub.state_change_only
 
     @staticmethod
-    def test_apply_data_capability():
+    def test_apply_data_capability() -> None:
         """Test apply data."""
         # Arrange
         data = get_json("subscription_capability_get_response.json")
@@ -43,7 +43,7 @@ class TestSubscription:
         assert sub.subscription_name == "switchLevel_sub"
 
     @staticmethod
-    def test_apply_data_device():
+    def test_apply_data_device() -> None:
         """Test apply data."""
         # Arrange
         data = get_json("subscription_device_get_response.json")
@@ -63,7 +63,7 @@ class TestSubscription:
         assert not sub.subscription_name
 
     @staticmethod
-    def test_to_data_capability():
+    def test_to_data_capability() -> None:
         """Test the to_data method for capabilities."""
         # Arrange
         sub = Subscription()
@@ -88,7 +88,7 @@ class TestSubscription:
         assert not data["capability"]["stateChangeOnly"]
 
     @staticmethod
-    def test_to_data_device():
+    def test_to_data_device() -> None:
         """Test the to_data method for devices."""
         # Arrange
         sub = Subscription()
@@ -118,7 +118,7 @@ class TestSubscriptionEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         app = SubscriptionEntity(api)
@@ -136,7 +136,7 @@ class TestSubscriptionEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the refresh method."""
         # Arrange
         app = SubscriptionEntity(api)

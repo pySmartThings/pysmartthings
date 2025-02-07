@@ -10,7 +10,7 @@ class TestScene:
     """Tests for the scene class."""
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Test the init method."""
         # Arrange
         data = get_json("scenes.json")
@@ -29,7 +29,7 @@ class TestSceneEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_execute(api):
+    async def test_execute(api) -> None:
         """Tests the execute method."""
         # Arrange
         data = get_json("scenes.json")
@@ -41,7 +41,7 @@ class TestSceneEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         entity = SceneEntity(api)
         with pytest.raises(NotImplementedError):
@@ -49,7 +49,7 @@ class TestSceneEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the refresh method."""
         entity = SceneEntity(api)
         with pytest.raises(NotImplementedError):

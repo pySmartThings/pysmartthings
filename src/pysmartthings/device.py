@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-from collections import defaultdict, namedtuple
+from collections import defaultdict
 from collections.abc import Mapping, Sequence
 import colorsys
 import re
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, NamedTuple, NoReturn
 
 from .capability import ATTRIBUTE_OFF_VALUES, ATTRIBUTE_ON_VALUES, Attribute, Capability
 from .entity import Entity
@@ -21,7 +21,16 @@ DEVICE_TYPE_ENDPOINT_APP = "ENDPOINT_APP"
 DEVICE_TYPE_VIPER = "VIPER"
 
 COLOR_HEX_MATCHER = re.compile("^#[A-Fa-f0-9]{6}$")
-Status = namedtuple("status", "value unit data")
+
+
+class Status(NamedTuple):
+    """Define a status object."""
+
+    value: Any
+    unit: Any
+    data: Any
+
+
 STATUS_NONE = Status(None, None, None)
 
 
@@ -96,7 +105,7 @@ class Command:
 class Device:
     """Represents a SmartThings device."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new device."""
         self._device_id = None
         self._name = None
@@ -110,7 +119,7 @@ class Device:
         self._components = {}
         self._capabilities = []
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the given data dictionary."""
         self._device_id = data.get("deviceId")
         self._name = data.get("name")
@@ -138,7 +147,7 @@ class Device:
                 self._device_type_name = dth.get("deviceTypeName")
                 self._device_type_network = dth.get("deviceNetworkType")
 
-    def get_capability(self, *capabilities) -> str | None:
+    def get_capability(self, *capabilities: list[dict[str, Any]]) -> str | None:
         """Return the first capability held by the device."""
         for capability in capabilities:
             if capability in self._capabilities:
@@ -166,7 +175,7 @@ class Device:
         return self._location_id
 
     @property
-    def room_id(self):
+    def room_id(self) -> str:
         """Get the room assigned to the device."""
         return self._room_id
 
@@ -206,7 +215,7 @@ class DeviceStatusBase:
 
     def __init__(
         self, component_id: str, attributes: Mapping[str, Status] | None = None
-    ):
+    ) -> None:
         """Initialize the status class."""
         self._attributes = defaultdict(lambda: STATUS_NONE, attributes or {})
         self._component_id = component_id
@@ -217,7 +226,7 @@ class DeviceStatusBase:
             return bool(self._attributes[attribute].value)
         return self._attributes[attribute].value == ATTRIBUTE_ON_VALUES[attribute]
 
-    def update_attribute_value(self, attribute: str, value):
+    def update_attribute_value(self, attribute: str, value: Any) -> None:
         """Update the value of an attribute while maintaining unit and data."""
         status = self._attributes[attribute]
         self._attributes[attribute] = Status(value, status.unit, status.data)
@@ -240,7 +249,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.color].value
 
     @color.setter
-    def color(self, value: str):
+    def color(self, value: str) -> None:
         """Set the color attribute."""
         if not COLOR_HEX_MATCHER.match(value):
             msg = "value was not a properly formatted color hex, i.e. #000000."
@@ -253,7 +262,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.color_temperature].value or 1)
 
     @color_temperature.setter
-    def color_temperature(self, value: int):
+    def color_temperature(self, value: int) -> None:
         """Set the color temperature attribute."""
         if not 1 <= value <= 30000:
             msg = "value must be scaled between 1-30000."
@@ -271,7 +280,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.fan_speed].value or 0)
 
     @fan_speed.setter
-    def fan_speed(self, value: int):
+    def fan_speed(self, value: int) -> None:
         """Set the fan speed attribute."""
         if value < 0:
             msg = "value must be >= 0."
@@ -284,7 +293,7 @@ class DeviceStatusBase:
         return float(self._attributes[Attribute.hue].value or 0.0)
 
     @hue.setter
-    def hue(self, value: float):
+    def hue(self, value: float) -> None:
         """Set the hue attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -297,7 +306,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.level].value or 0)
 
     @level.setter
-    def level(self, value: int):
+    def level(self, value: int) -> None:
         """Set the level of the attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -310,7 +319,7 @@ class DeviceStatusBase:
         return float(self._attributes[Attribute.saturation].value or 0.0)
 
     @saturation.setter
-    def saturation(self, value: float):
+    def saturation(self, value: float) -> None:
         """Set the saturation attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -328,18 +337,18 @@ class DeviceStatusBase:
         return self.is_on(Attribute.switch)
 
     @switch.setter
-    def switch(self, value: bool):
+    def switch(self, value: bool) -> None:
         """Set the value of the switch attribute."""
         status_value = bool_to_value(Attribute.switch, value)
         self.update_attribute_value(Attribute.switch, status_value)
 
     @property
-    def thermostat_fan_mode(self):
+    def thermostat_fan_mode(self) -> str | None:
         """Get the thermostatFanMode attribute."""
         return self._attributes[Attribute.thermostat_fan_mode].value
 
     @thermostat_fan_mode.setter
-    def thermostat_fan_mode(self, value: str):
+    def thermostat_fan_mode(self, value: str) -> None:
         """Update the thermostatFanMode attribute."""
         self.update_attribute_value(Attribute.thermostat_fan_mode, value)
 
@@ -354,7 +363,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.thermostat_mode].value
 
     @thermostat_mode.setter
-    def thermostat_mode(self, value: str):
+    def thermostat_mode(self, value: str) -> None:
         """Set the thermostatMode attribute."""
         self.update_attribute_value(Attribute.thermostat_mode, value)
 
@@ -384,7 +393,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.cooling_setpoint].value
 
     @cooling_setpoint.setter
-    def cooling_setpoint(self, value: int):
+    def cooling_setpoint(self, value: int) -> None:
         """Set the coolingSetpoint attribute."""
         self.update_attribute_value(Attribute.cooling_setpoint, value)
 
@@ -394,22 +403,22 @@ class DeviceStatusBase:
         return self._attributes[Attribute.heating_setpoint].value
 
     @heating_setpoint.setter
-    def heating_setpoint(self, value):
+    def heating_setpoint(self, value: int) -> None:
         """Set the heatingSetpoint attribute."""
         self.update_attribute_value(Attribute.heating_setpoint, value)
 
     @property
-    def lock(self):
+    def lock(self) -> str:
         """Get the lock attribute."""
         return self._attributes[Attribute.lock].value
 
     @property
-    def door(self):
+    def door(self) -> str:
         """Get the door attribute."""
         return self._attributes[Attribute.door].value
 
     @property
-    def window_shade(self):
+    def window_shade(self) -> str:
         """Get the windowShade attribute."""
         return self._attributes[Attribute.window_shade].value
 
@@ -565,7 +574,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.vid].value
 
     @property
-    def ocf_model_number(self):
+    def ocf_model_number(self) -> str | None:
         """Get the OCF model number."""
         return self._attributes[Attribute.mnmo].value
 
@@ -653,7 +662,7 @@ class DeviceStatusBase:
         return self.is_on(Attribute.mute)
 
     @mute.setter
-    def mute(self, value: bool):
+    def mute(self, value: bool) -> None:
         """Set the mute attribute."""
         status_value = bool_to_value(Attribute.mute, value)
         self.update_attribute_value(Attribute.mute, status_value)
@@ -664,7 +673,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.volume].value
 
     @volume.setter
-    def volume(self, value: float):
+    def volume(self, value: float) -> None:
         """Set the volume attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -677,7 +686,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.playback_status].value
 
     @playback_status.setter
-    def playback_status(self, value: str):
+    def playback_status(self, value: str) -> None:
         """Set the playbackStatus attribute."""
         self.update_attribute_value(Attribute.playback_status, value)
 
@@ -687,7 +696,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.input_source].value
 
     @input_source.setter
-    def input_source(self, value: str):
+    def input_source(self, value: str) -> None:
         """Set the volume attribute."""
         if value not in self.supported_input_sources:
             msg = "value must be supported."
@@ -708,7 +717,7 @@ class DeviceStatusBase:
         return self.is_on(Attribute.playback_shuffle)
 
     @playback_shuffle.setter
-    def playback_shuffle(self, value: bool):
+    def playback_shuffle(self, value: bool) -> None:
         """Set the playbackShuffle attribute."""
         status_value = bool_to_value(Attribute.playback_shuffle, value)
         self.update_attribute_value(Attribute.playback_shuffle, status_value)
@@ -719,7 +728,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.playback_repeat_mode].value
 
     @playback_repeat_mode.setter
-    def playback_repeat_mode(self, value: str):
+    def playback_repeat_mode(self, value: str) -> None:
         """Set the playbackRepeatMode attribute."""
         if value not in ["all", "off", "one"]:
             msg = "value must be one of: all, off, one"
@@ -732,7 +741,7 @@ class DeviceStatusBase:
         return self._attributes[Attribute.tv_channel].value
 
     @tv_channel.setter
-    def tv_channel(self, value: str):
+    def tv_channel(self, value: str) -> None:
         """Set the tvChannel attribute."""
         self.update_attribute_value(Attribute.tv_channel, value)
 
@@ -747,7 +756,7 @@ class DeviceStatusBase:
         return int(self._attributes[Attribute.shade_level].value or 0)
 
     @shade_level.setter
-    def shade_level(self, value: int):
+    def shade_level(self, value: int) -> None:
         """Set the level of the attribute, scaled 0-100."""
         if not 0 <= value <= 100:
             msg = "value must be scaled between 0-100."
@@ -758,7 +767,9 @@ class DeviceStatusBase:
 class DeviceStatus(DeviceStatusBase):
     """Define the device status."""
 
-    def __init__(self, api: Api, device_id: str, data=None):
+    def __init__(
+        self, api: Api, device_id: str, data: dict[str, Any] | None = None
+    ) -> None:
         """Create a new instance of the DeviceStatusEntity class."""
         super().__init__("main")
         self._api = api
@@ -775,7 +786,7 @@ class DeviceStatus(DeviceStatusBase):
         value: Any,
         unit: str | None = None,
         data: dict | None = None,
-    ):
+    ) -> None:
         """Apply an update to a specific attribute."""
         component = self
         if component_id != "main" and component_id in self._components:
@@ -785,7 +796,7 @@ class DeviceStatus(DeviceStatusBase):
         old_status = component.attributes[attribute]
         component.attributes[attribute] = Status(value, unit or old_status.unit, data)
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the values from the given data structure."""
         self._components.clear()
         for component_id, component in data["components"].items():
@@ -814,11 +825,11 @@ class DeviceStatus(DeviceStatusBase):
         return self._device_id
 
     @device_id.setter
-    def device_id(self, value: str):
+    def device_id(self, value: str) -> None:
         """Set the device id."""
         self._device_id = value
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the values of the entity."""
         data = await self._api.get_device_status(self.device_id)
         if data:
@@ -830,7 +841,7 @@ class DeviceEntity(Entity, Device):
 
     def __init__(
         self, api: Api, data: dict | None = None, device_id: str | None = None
-    ):
+    ) -> None:
         """Create a new instance of the DeviceEntity class."""
         Entity.__init__(self, api)
         Device.__init__(self)
@@ -840,18 +851,24 @@ class DeviceEntity(Entity, Device):
             self._device_id = device_id
         self._status = DeviceStatus(api, self._device_id)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the device information using the API."""
         data = await self._api.get_device(self._device_id)
         if data:
             self.apply_data(data)
         self._status.device_id = self._device_id
 
-    async def save(self):
+    async def save(self) -> NoReturn:
         """Save the changes made to the device."""
         raise NotImplementedError
 
-    async def command(self, component_id: str, capability, command, args=None) -> bool:
+    async def command(
+        self,
+        component_id: str,
+        capability: str,
+        command: str,
+        args: list[dict[str, Any]] | None = None,
+    ) -> bool:
         """Execute a command on the device."""
         response = await self._api.post_device_command(
             self._device_id, component_id, capability, command, args
@@ -1132,7 +1149,7 @@ class DeviceEntity(Entity, Device):
         *,
         set_status: bool = False,
         component_id: str = "main",
-    ):
+    ) -> bool:
         """Call the drlc action command."""
         args = [drlc_type, drlc_level, start, duration]
         if reporting_period is not None:
@@ -1160,7 +1177,7 @@ class DeviceEntity(Entity, Device):
 
     async def override_drlc_action(
         self, value: bool, *, set_status: bool = False, component_id: str = "main"
-    ):
+    ) -> bool:
         """Call the drlc override command."""
         result = await self.command(
             component_id,
@@ -1183,7 +1200,7 @@ class DeviceEntity(Entity, Device):
 
     async def execute(
         self, command: str, args: dict | None = None, *, component_id: str = "main"
-    ):
+    ) -> bool:
         """Call the execute command."""
         command_args = [command]
         if args:
@@ -1194,7 +1211,7 @@ class DeviceEntity(Entity, Device):
 
     async def set_air_conditioner_mode(
         self, mode: str, *, set_status: bool = False, component_id: str = "main"
-    ):
+    ) -> bool:
         """Call the set air conditioner mode command."""
         result = await self.command(
             component_id,
@@ -1208,7 +1225,7 @@ class DeviceEntity(Entity, Device):
 
     async def set_fan_mode(
         self, mode: str, *, set_status: bool = False, component_id: str = "main"
-    ):
+    ) -> bool:
         """Call the setFanMode command."""
         result = await self.command(
             component_id,
@@ -1222,7 +1239,7 @@ class DeviceEntity(Entity, Device):
 
     async def set_fan_oscillation_mode(
         self, mode: str, *, set_status: bool = False, component_id: str = "main"
-    ):
+    ) -> bool:
         """Call the setFanOscillationMode command."""
         result = await self.command(
             component_id,
@@ -1236,7 +1253,7 @@ class DeviceEntity(Entity, Device):
 
     async def set_air_flow_direction(
         self, direction: str, *, set_status: bool = False, component_id: str = "main"
-    ):
+    ) -> bool:
         """Call the setAirFlowDirection command."""
         result = await self.command(
             component_id,
@@ -1448,6 +1465,6 @@ class DeviceEntity(Entity, Device):
         return result
 
     @property
-    def status(self):
+    def status(self) -> DeviceStatus:
         """Get the status entity of the device."""
         return self._status

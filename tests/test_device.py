@@ -20,7 +20,7 @@ class TestDevice:
     """Tests for the Device class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Tests whether the Device class initializes correctly."""
         # Arrange/Act
         device = Device()
@@ -30,7 +30,7 @@ class TestDevice:
         assert not device.components
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Tests the apply data method."""
         # Arrange
         data = get_json("device.json")
@@ -63,7 +63,7 @@ class TestDevice:
         }
 
     @staticmethod
-    def test_get_capability():
+    def test_get_capability() -> None:
         """Test the capability retrieval method."""
         # Arrange
         data = get_json("device.json")
@@ -81,7 +81,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -92,7 +92,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_save(api):
+    async def test_save(api) -> None:
         """Tests the save method."""
         # Arrange
         device = DeviceEntity(api)
@@ -102,7 +102,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_switch_on(api):
+    async def test_switch_on(api) -> None:
         """Tests the switch_on method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -114,7 +114,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_switch_on_update(api):
+    async def test_switch_on_update(api) -> None:
         """Tests the switch_on method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -126,7 +126,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_switch_off(api):
+    async def test_switch_off(api) -> None:
         """Tests the switch_on method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -139,7 +139,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_switch_off_update(api):
+    async def test_switch_off_update(api) -> None:
         """Tests the switch_on method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -152,7 +152,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_lock(api):
+    async def test_lock(api) -> None:
         """Tests the lock method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -164,7 +164,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_lock_update(api):
+    async def test_lock_update(api) -> None:
         """Tests the lock method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -176,7 +176,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_unlock(api):
+    async def test_unlock(api) -> None:
         """Tests the unlock method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -188,7 +188,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_unlock_update(api):
+    async def test_unlock_update(api) -> None:
         """Tests the unlock method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -200,7 +200,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_level(api):
+    async def test_set_level(api) -> None:
         """Tests the set_level method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -213,7 +213,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_level_invalid(api):
+    async def test_set_level_invalid(api) -> None:
         """Tests the set_level method invalid values."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -228,7 +228,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_level_update(api):
+    async def test_set_level_update(api) -> None:
         """Tests the set_level method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -241,7 +241,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_fan_speed(api):
+    async def test_set_fan_speed(api) -> None:
         """Tests the set_fan_speed method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -254,7 +254,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_fan_speed_invalid(api):
+    async def test_set_fan_speed_invalid(api) -> None:
         """Tests the set_fan_speed method invalid values."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -264,7 +264,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_fan_speed_update(api):
+    async def test_set_fan_speed_update(api) -> None:
         """Tests the set_fan_speed method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -276,7 +276,7 @@ class TestDeviceEntity:
         assert device.status.switch
 
     @staticmethod
-    def test_status():
+    def test_status() -> None:
         """Tests the set_level method."""
         # Arrange
         device = DeviceEntity(None, device_id=DEVICE_ID)
@@ -287,7 +287,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_temperature(api):
+    async def test_set_color_temperature(api) -> None:
         """Tests the set_color_temperature method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -299,7 +299,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_temperature_invalid(api):
+    async def test_set_color_temperature_invalid(api) -> None:
         """Tests the set_color_temperature method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -311,7 +311,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_temperature_update(api):
+    async def test_set_color_temperature_update(api) -> None:
         """Tests the set_color_temperature method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -323,7 +323,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_hue(api):
+    async def test_set_hue(api) -> None:
         """Tests the set_hue method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -335,7 +335,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_hue_invalid(api):
+    async def test_set_hue_invalid(api) -> None:
         """Tests the set_hue method invalid values."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -347,7 +347,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_hue_update(api):
+    async def test_set_hue_update(api) -> None:
         """Tests the set_hue method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -359,7 +359,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_saturation(api):
+    async def test_set_saturation(api) -> None:
         """Tests the set_saturation method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -371,7 +371,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_saturation_invalid(api):
+    async def test_set_saturation_invalid(api) -> None:
         """Tests the set_saturation method invalid values."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -383,7 +383,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_saturation_update(api):
+    async def test_set_saturation_update(api) -> None:
         """Tests the set_saturation method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -395,7 +395,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color(api):
+    async def test_set_color(api) -> None:
         """Tests the set_color method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -409,7 +409,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_invalid(api):
+    async def test_set_color_invalid(api) -> None:
         """Tests the set_saturation method invalid values."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -423,7 +423,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_update(api):
+    async def test_set_color_update(api) -> None:
         """Tests the set_saturation method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -437,7 +437,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_hex(api):
+    async def test_set_color_hex(api) -> None:
         """Tests the set_color method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -451,7 +451,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_hex_invalid(api):
+    async def test_set_color_hex_invalid(api) -> None:
         """Tests the set_color method invalid values."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -463,7 +463,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_color_update_hex(api):
+    async def test_set_color_update_hex(api) -> None:
         """Tests the set_saturation method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -477,7 +477,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_thermostat_fan_mode_legacy(api):
+    async def test_set_thermostat_fan_mode_legacy(api) -> None:
         """Tests the set_saturation method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -491,7 +491,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_thermostat_fan_mode(api):
+    async def test_set_thermostat_fan_mode(api) -> None:
         """Tests the set_saturation method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -505,7 +505,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_thermostat_fan_mode_update(api):
+    async def test_set_thermostat_fan_mode_update(api) -> None:
         """Tests the set_saturation method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -519,7 +519,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_thermostat_mode_legacy(api):
+    async def test_set_thermostat_mode_legacy(api) -> None:
         """Tests the set_thermostat_mode method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -533,7 +533,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_thermostat_mode(api):
+    async def test_set_thermostat_mode(api) -> None:
         """Tests the set_thermostat_mode method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -547,7 +547,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_thermostat_mode_update(api):
+    async def test_set_thermostat_mode_update(api) -> None:
         """Tests the set_thermostat_mode method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -561,7 +561,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_cooling_setpoint_legacy(api):
+    async def test_set_cooling_setpoint_legacy(api) -> None:
         """Tests the set_cooling_setpoint method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -575,7 +575,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_cooling_setpoint_mode(api):
+    async def test_set_cooling_setpoint_mode(api) -> None:
         """Tests the set_cooling_setpoint method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -589,7 +589,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_cooling_setpoint_update(api):
+    async def test_set_cooling_setpoint_update(api) -> None:
         """Tests the set_cooling_setpoint method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -603,7 +603,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_heating_setpoint_legacy(api):
+    async def test_set_heating_setpoint_legacy(api) -> None:
         """Tests the set_heating_setpoint method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -617,7 +617,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_heating_setpoint_mode(api):
+    async def test_set_heating_setpoint_mode(api) -> None:
         """Tests the set_heating_setpoint method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -631,7 +631,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_heating_setpoint_update(api):
+    async def test_set_heating_setpoint_update(api) -> None:
         """Tests the set_heating_setpoint method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -645,7 +645,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_open(api):
+    async def test_open(api) -> None:
         """Tests the open method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -658,7 +658,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_open_legacy(api):
+    async def test_open_legacy(api) -> None:
         """Tests the open method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -671,7 +671,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_close(api):
+    async def test_close(api) -> None:
         """Tests the close method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -684,7 +684,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_close_legacy(api):
+    async def test_close_legacy(api) -> None:
         """Tests the close method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -697,7 +697,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_open_window_shade(api):
+    async def test_open_window_shade(api) -> None:
         """Tests the open method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -710,7 +710,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_close_window_shade(api):
+    async def test_close_window_shade(api) -> None:
         """Tests the close method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -723,7 +723,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_request_drlc_action(api):
+    async def test_request_drlc_action(api) -> None:
         """Tests the request_drlc_action method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -742,7 +742,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_override_drlc_action(api):
+    async def test_override_drlc_action(api) -> None:
         """Tests the override_drlc_action method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -754,7 +754,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_execute(api):
+    async def test_execute(api) -> None:
         """Tests the execute method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -763,7 +763,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_preset_position(api):
+    async def test_preset_position(api) -> None:
         """Tests the preset_position method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -772,7 +772,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_air_conditioner_mode(api):
+    async def test_set_air_conditioner_mode(api) -> None:
         """Tests the set_air_conditioner_mode method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -784,7 +784,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_fan_mode(api):
+    async def test_set_fan_mode(api) -> None:
         """Tests the set_fan_mode method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -796,7 +796,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_fan_oscillation_mode(api):
+    async def test_set_fan_oscillation_mode(api) -> None:
         """Tests the set_fan_oscillation_mode method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -808,7 +808,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_air_flow_direction(api):
+    async def test_set_air_flow_direction(api) -> None:
         """Tests the set_air_flow_direction method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -820,7 +820,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_mute(api):
+    async def test_mute(api) -> None:
         """Test the mute method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -833,7 +833,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_mute_update(api):
+    async def test_mute_update(api) -> None:
         """Test the mute method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -846,7 +846,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_unmute(api):
+    async def test_unmute(api) -> None:
         """Test the unmute method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -859,7 +859,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_unmute_update(api):
+    async def test_unmute_update(api) -> None:
         """Test the unmute method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -872,7 +872,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_volume(api):
+    async def test_set_volume(api) -> None:
         """Test the set_volume method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -885,7 +885,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_volume_update(api):
+    async def test_set_volume_update(api) -> None:
         """Test the set_volume method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -898,7 +898,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_volume_up(api):
+    async def test_volume_up(api) -> None:
         """Test the volume_up method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -911,7 +911,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_volume_up_update(api):
+    async def test_volume_up_update(api) -> None:
         """Test the volume_up method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -924,7 +924,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_volume_down(api):
+    async def test_volume_down(api) -> None:
         """Test the volume_down method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -937,7 +937,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_volume_down_update(api):
+    async def test_volume_down_update(api) -> None:
         """Test the volume_down method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -950,7 +950,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_play(api):
+    async def test_play(api) -> None:
         """Test the play method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -963,7 +963,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_play_update(api):
+    async def test_play_update(api) -> None:
         """Test the play method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -976,7 +976,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_pause(api):
+    async def test_pause(api) -> None:
         """Test the pause method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -989,7 +989,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_pause_update(api):
+    async def test_pause_update(api) -> None:
         """Test the pause method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1002,7 +1002,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_stop(api):
+    async def test_stop(api) -> None:
         """Test the stop method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1015,7 +1015,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_stop_update(api):
+    async def test_stop_update(api) -> None:
         """Test the stop method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1028,7 +1028,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_fast_forward(api):
+    async def test_fast_forward(api) -> None:
         """Test the fast_forward method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1041,7 +1041,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_fast_forward_update(api):
+    async def test_fast_forward_update(api) -> None:
         """Test the fast_forward method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1054,7 +1054,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_rewind(api):
+    async def test_rewind(api) -> None:
         """Test the rewind method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1067,7 +1067,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_rewind_update(api):
+    async def test_rewind_update(api) -> None:
         """Test the rewind method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1080,7 +1080,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_input_source(api):
+    async def test_set_input_source(api) -> None:
         """Test the set_input_source method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1096,7 +1096,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_input_source_update(api):
+    async def test_set_input_source_update(api) -> None:
         """Test the set_input_source method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1112,7 +1112,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_playback_shuffle(api):
+    async def test_set_playback_shuffle(api) -> None:
         """Test the set_playback_shuffle method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1125,7 +1125,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_playback_shuffle_update(api):
+    async def test_set_playback_shuffle_update(api) -> None:
         """Test the set_playback_shuffle method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1138,7 +1138,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_repeat(api):
+    async def test_set_repeat(api) -> None:
         """Test the set_repeat method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1151,7 +1151,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_repeat_update(api):
+    async def test_set_repeat_update(api) -> None:
         """Test the set_repeat method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1164,7 +1164,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_tv_channel(api):
+    async def test_set_tv_channel(api) -> None:
         """Test the tv_channel method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1177,7 +1177,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_tv_channel_update(api):
+    async def test_set_tv_channel_update(api) -> None:
         """Test the tv_channel method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1190,7 +1190,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_channel_up(api):
+    async def test_channel_up(api) -> None:
         """Test the channel_up method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1201,7 +1201,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_channel_down(api):
+    async def test_channel_down(api) -> None:
         """Test the channel_down method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1212,7 +1212,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_window_shade_level(api):
+    async def test_set_window_shade_level(api) -> None:
         """Tests the set_window_shade_level method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1225,7 +1225,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_window_shade_level_invalid(api):
+    async def test_set_window_shade_level_invalid(api) -> None:
         """Tests the set_window_shade_level method invalid values."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1237,7 +1237,7 @@ class TestDeviceEntity:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_set_window_shade_level_update(api):
+    async def test_set_window_shade_level_update(api) -> None:
         """Tests the set_window_shade_level method."""
         # Arrange
         device = DeviceEntity(api, device_id=DEVICE_ID)
@@ -1253,7 +1253,7 @@ class TestDeviceStatus:
     """Tests for the DeviceStatus class."""
 
     @staticmethod
-    def test_init():
+    def test_init() -> None:
         """Tests the init method."""
         # Arrange/Act
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1266,7 +1266,7 @@ class TestDeviceStatus:
         assert status.component_id == "main"
 
     @staticmethod
-    def test_apply_data():
+    def test_apply_data() -> None:
         """Tests the apply_data method."""
         # Arrange
         data = get_json("device_status.json")
@@ -1281,7 +1281,7 @@ class TestDeviceStatus:
         assert len(status.components["bottomButton"].attributes) == 3
 
     @staticmethod
-    def test_apply_attribute_update():
+    def test_apply_attribute_update() -> None:
         """Tests the apply_attribute_update method."""
         # Arrange
         data = get_json("device_status.json")
@@ -1297,7 +1297,7 @@ class TestDeviceStatus:
         assert status.data == {"test": "test"}
 
     @staticmethod
-    def test_apply_attribute_update_preserve_unit():
+    def test_apply_attribute_update_preserve_unit() -> None:
         """Tests the apply_attribute_update preserves the old unit."""
         # Arrange
         data = get_json("device_status.json")
@@ -1312,7 +1312,7 @@ class TestDeviceStatus:
         assert status.unit == "%"
 
     @staticmethod
-    def test_apply_attribute_update_child_status():
+    def test_apply_attribute_update_child_status() -> None:
         """Tests the apply_attribute_update method to a child status."""
         # Arrange
         data = get_json("device_status.json")
@@ -1323,7 +1323,7 @@ class TestDeviceStatus:
         assert status.components["bottomButton"].level == 50
 
     @staticmethod
-    def test_values():
+    def test_values() -> None:
         """Test the values property."""
         # Arrange
         data = get_json("device_status.json")
@@ -1342,7 +1342,7 @@ class TestDeviceStatus:
         }
 
     @staticmethod
-    def test_attributes():
+    def test_attributes() -> None:
         """Test the attributes property."""
         # Arrange
         data = get_json("device_status.json")
@@ -1365,7 +1365,7 @@ class TestDeviceStatus:
         }
 
     @staticmethod
-    def test_attributes_default():
+    def test_attributes_default() -> None:
         """Test the attributes property."""
         # Arrange
         data = get_json("device_status.json")
@@ -1375,7 +1375,7 @@ class TestDeviceStatus:
 
     @staticmethod
     @pytest.mark.asyncio
-    async def test_refresh(api):
+    async def test_refresh(api) -> None:
         """Tests the refresh method."""
         # Arrange
         status = DeviceStatus(api, device_id=DEVICE_ID)
@@ -1385,7 +1385,7 @@ class TestDeviceStatus:
         assert len(status.attributes) == 9
 
     @staticmethod
-    def test_switch():
+    def test_switch() -> None:
         """Tests the switch property."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1395,7 +1395,7 @@ class TestDeviceStatus:
         assert status.switch
 
     @staticmethod
-    def test_level():
+    def test_level() -> None:
         """Tests the level property."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1405,7 +1405,7 @@ class TestDeviceStatus:
         assert status.level == 50
 
     @staticmethod
-    def test_level_range():
+    def test_level_range() -> None:
         """Tests the level property's range."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1416,7 +1416,7 @@ class TestDeviceStatus:
                 status.level = value
 
     @staticmethod
-    def test_fan_speed():
+    def test_fan_speed() -> None:
         """Tests the fan_speed property."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1426,7 +1426,7 @@ class TestDeviceStatus:
         assert status.fan_speed == 50
 
     @staticmethod
-    def test_fan_speed_range():
+    def test_fan_speed_range() -> None:
         """Tests the fan_speed property's range."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1435,7 +1435,7 @@ class TestDeviceStatus:
             status.fan_speed = -1
 
     @staticmethod
-    def test_hue_range():
+    def test_hue_range() -> None:
         """Tests the hue property's range."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1446,7 +1446,7 @@ class TestDeviceStatus:
                 status.hue = value
 
     @staticmethod
-    def test_saturation_range():
+    def test_saturation_range() -> None:
         """Tests the hue property's range."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1457,7 +1457,7 @@ class TestDeviceStatus:
                 status.saturation = value
 
     @staticmethod
-    def test_color_temperature_range():
+    def test_color_temperature_range() -> None:
         """Tests the hue property's range."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1468,7 +1468,7 @@ class TestDeviceStatus:
                 status.color_temperature = value
 
     @staticmethod
-    def test_color_format():
+    def test_color_format() -> None:
         """Tests the color property's validation."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1479,7 +1479,7 @@ class TestDeviceStatus:
                 status.color = value
 
     @staticmethod
-    def test_volume_range(api):
+    def test_volume_range(api) -> None:
         """Test the volume property's range."""
         # Arrange
         status = DeviceStatus(api, device_id=DEVICE_ID)
@@ -1490,7 +1490,7 @@ class TestDeviceStatus:
                 status.volume = value
 
     @staticmethod
-    def test_input_source(api):
+    def test_input_source(api) -> None:
         """Test the volume property's range."""
         # Arrange
         status = DeviceStatus(api, device_id=DEVICE_ID)
@@ -1500,7 +1500,7 @@ class TestDeviceStatus:
             status.input_source = "INVALID"
 
     @staticmethod
-    def test_playback_repeat_mode(api):
+    def test_playback_repeat_mode(api) -> None:
         """Test the volume property's range."""
         # Arrange
         status = DeviceStatus(api, device_id=DEVICE_ID)
@@ -1509,7 +1509,7 @@ class TestDeviceStatus:
             status.playback_repeat_mode = "INVALID"
 
     @staticmethod
-    def test_is_on():
+    def test_is_on() -> None:
         """Tests the is_on method."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1521,7 +1521,7 @@ class TestDeviceStatus:
         assert not status.is_on(Attribute.switch)
 
     @staticmethod
-    def test_well_known_attributes():
+    def test_well_known_attributes() -> None:
         """Tests the humidity property."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1562,7 +1562,7 @@ class TestDeviceStatus:
         assert status.supported_ac_fan_modes == ["auto", "low"]
 
     @staticmethod
-    def test_well_known_ocf_attributes():
+    def test_well_known_ocf_attributes() -> None:
         """Tests the OCF related attributes."""
         # Arrange
         data = get_json("device_samsungac_status.json")
@@ -1589,7 +1589,7 @@ class TestDeviceStatus:
         assert status.ocf_vendor_id == "DA-AC-RAC-000001"
 
     @staticmethod
-    def test_well_known_drlc_attributes():
+    def test_well_known_drlc_attributes() -> None:
         """Tests the drlc related attributes."""
         status = DeviceStatus(None, device_id=DEVICE_ID)
         # No attribute
@@ -1626,7 +1626,7 @@ class TestDeviceStatus:
         assert status.drlc_status_level is None
 
     @staticmethod
-    def test_well_known_power_consumption_attributes():
+    def test_well_known_power_consumption_attributes() -> None:
         """Tests the power consumption related attributes."""
         status = DeviceStatus(None, device_id=DEVICE_ID)
         # No attribute
@@ -1695,7 +1695,7 @@ class TestDeviceStatus:
         assert status.power_consumption_power_energy is None
 
     @staticmethod
-    def test_shade_level():
+    def test_shade_level() -> None:
         """Tests the shade_level property."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)
@@ -1705,7 +1705,7 @@ class TestDeviceStatus:
         assert status.shade_level == 50
 
     @staticmethod
-    def test_shade_level_range():
+    def test_shade_level_range() -> None:
         """Tests the shade_level property's range."""
         # Arrange
         status = DeviceStatus(None, device_id=DEVICE_ID)

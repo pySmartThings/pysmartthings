@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from .entity import Entity
 
@@ -20,7 +20,7 @@ _APP_NAME_PATTERN = re.compile("^[a-z0-9._-]{1,250}$", re.IGNORECASE)
 class App:
     """Define the app class."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new instance of the App class."""
         self._app_name = None
         self._display_name = None
@@ -35,7 +35,7 @@ class App:
         self._created_date = None
         self._last_updated_date = None
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Set the states of the app with the supplied data."""
         self._app_name = data["appName"]
         self._app_id = data["appId"]
@@ -74,12 +74,12 @@ class App:
         return self._app_id
 
     @property
-    def created_date(self):
+    def created_date(self) -> str:
         """Get the created date of the app."""
         return self._created_date
 
     @property
-    def last_updated_date(self):
+    def last_updated_date(self) -> str:
         """Get the last updated date of the app."""
         return self._last_updated_date
 
@@ -94,7 +94,7 @@ class App:
         return self._app_name
 
     @app_name.setter
-    def app_name(self, value: str):
+    def app_name(self, value: str) -> None:
         """Set the app name."""
         if not value:
             msg = "value cannot be None or zero length."
@@ -117,7 +117,7 @@ class App:
         return self._display_name
 
     @display_name.setter
-    def display_name(self, value: str):
+    def display_name(self, value: str) -> None:
         """Set the display name."""
         if not value:
             msg = "value cannot be None or zero length."
@@ -136,7 +136,7 @@ class App:
         return self._description
 
     @description.setter
-    def description(self, value: str):
+    def description(self, value: str) -> None:
         """Set the description."""
         if not value:
             msg = "value cannot be None or zero length."
@@ -156,7 +156,7 @@ class App:
         return self._single_instance
 
     @single_instance.setter
-    def single_instance(self, value: bool):
+    def single_instance(self, value: bool) -> None:
         """Set the single instance parameter."""
         self._single_instance = bool(value)
 
@@ -166,7 +166,7 @@ class App:
         return self._classifications
 
     @classifications.setter
-    def classifications(self, value: list[str]):
+    def classifications(self, value: list[str]) -> None:
         """Set the classifications of the app."""
         self._classifications = list(value)
 
@@ -179,7 +179,7 @@ class App:
         return self._app_type
 
     @app_type.setter
-    def app_type(self, value: str):
+    def app_type(self, value: str) -> None:
         """Set the app type."""
         if value not in (APP_TYPE_LAMBDA, APP_TYPE_WEBHOOK):
             msg = "value must be 'LAMBDA_SMART_APP' or 'WEBHOOK_SMART_APP'"
@@ -201,7 +201,7 @@ class App:
         return self._webhook_target_url
 
     @webhook_target_url.setter
-    def webhook_target_url(self, value: str):
+    def webhook_target_url(self, value: str) -> None:
         """Set the URL that should be invoked during execution."""
         self._webhook_target_url = value
 
@@ -214,12 +214,12 @@ class App:
 class AppSettings:
     """Define a SmartThings app settings."""
 
-    def __init__(self, app_id: str):
+    def __init__(self, app_id: str) -> None:
         """Create a new instance of the AppSettings class."""
         self._app_id = app_id
         self._settings = {}
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Set the states of the app with the supplied data."""
         self._settings = data.get("settings", {})
 
@@ -228,7 +228,7 @@ class AppSettings:
         return {"settings": self._settings}
 
     @property
-    def app_id(self):
+    def app_id(self) -> str:
         """Get the associated app id."""
         return self._app_id
 
@@ -238,7 +238,7 @@ class AppSettings:
         return self._settings
 
     @settings.setter
-    def settings(self, value: dict):
+    def settings(self, value: dict) -> None:
         """Set the settings for the app."""
         self._settings = value
 
@@ -246,14 +246,16 @@ class AppSettings:
 class AppSettingsEntity(Entity, AppSettings):
     """Define a SmartThings App settings entity."""
 
-    def __init__(self, api: Api, app_id: str, data=None):
+    def __init__(
+        self, api: Api, app_id: str, data: dict[str, Any] | None = None
+    ) -> None:
         """Create a new instance of the AppSettingEntity class."""
         Entity.__init__(self, api)
         AppSettings.__init__(self, app_id)
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the value of the entity."""
         if not self._app_id:
             msg = "Cannot refresh without an app_id"
@@ -261,7 +263,7 @@ class AppSettingsEntity(Entity, AppSettings):
         data = await self._api.get_app_settings(self._app_id)
         self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> None:
         """Save the value of the entity."""
         if not self._app_id:
             msg = "Cannot save without an app_id"
@@ -273,7 +275,7 @@ class AppSettingsEntity(Entity, AppSettings):
 class AppOAuth:
     """Define the app OAuth settings."""
 
-    def __init__(self, app_id: str):
+    def __init__(self, app_id: str) -> None:
         """Initialize a new instance of the OAuth class."""
         self._app_id = app_id
         self._client_name = None
@@ -283,7 +285,7 @@ class AppOAuth:
         """Get a data representation of the instance."""
         return {"clientName": self._client_name, "scope": self._scope}
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Load the data of the instance."""
         self._client_name = data["clientName"]
         self._scope = data.get("scope", self._scope)
@@ -299,7 +301,7 @@ class AppOAuth:
         return self._client_name
 
     @client_name.setter
-    def client_name(self, value: str):
+    def client_name(self, value: str) -> None:
         """Set the name given to the OAuth client."""
         if not value:
             msg = "Value can not be None or an empty string."
@@ -315,20 +317,22 @@ class AppOAuth:
 class AppOAuthEntity(Entity, AppOAuth):
     """Define oauth client settings."""
 
-    def __init__(self, api: Api, app_id: str, data=None):
+    def __init__(
+        self, api: Api, app_id: str, data: dict[str, Any] | None = None
+    ) -> None:
         """Create a new instance of the OAuth class."""
         Entity.__init__(self, api)
         AppOAuth.__init__(self, app_id)
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Retrieve the latest values from the API."""
         data = await self._api.get_app_oauth(self._app_id)
         if data:
             self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> None:
         """Save changes to the app OAuth Client settings."""
         response = await self._api.update_app_oauth(self._app_id, self.to_data())
         if response:
@@ -338,19 +342,19 @@ class AppOAuthEntity(Entity, AppOAuth):
 class AppEntity(Entity, App):
     """Define a SmartThings App entity."""
 
-    def __init__(self, api: Api, data=None):
+    def __init__(self, api: Api, data: dict[str, Any] | None = None) -> None:
         """Create a new instance of the AppEntity class."""
         Entity.__init__(self, api)
         App.__init__(self)
         if data:
             self.apply_data(data)
 
-    async def refresh(self):
+    async def refresh(self) -> None:
         """Refresh the app information using the API."""
         data = await self._api.get_app(self._app_id)
         self.apply_data(data)
 
-    async def save(self):
+    async def save(self) -> None:
         """Save the changes made to the app."""
         response = await self._api.update_app(self._app_id, self.to_data())
         self.apply_data(response)
@@ -369,25 +373,25 @@ class AppEntity(Entity, App):
 class AppOAuthClient:
     """Define an oauth client information."""
 
-    def __init__(self, data: dict | None):
+    def __init__(self, data: dict | None) -> None:
         """Create a new instance of the OAuthClient."""
         self._client_id = None
         self._client_secret = None
         if data:
             self.apply_data(data)
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the given data to the entity."""
         self._client_id = data["oauthClientId"]
         self._client_secret = data["oauthClientSecret"]
 
     @property
-    def client_id(self):
+    def client_id(self) -> str:
         """Get the client id."""
         return self._client_id
 
     @property
-    def client_secret(self):
+    def client_secret(self) -> str:
         """Get the client secret."""
         return self._client_secret
 
@@ -395,12 +399,12 @@ class AppOAuthClient:
 class AppOAuthClientEntity(AppOAuthClient):
     """Define an oauth client information details."""
 
-    def __init__(self, api: Api, app_id: str, data: dict | None):
+    def __init__(self, api: Api, app_id: str, data: dict | None) -> None:
         """Init the class."""
         self._client_details = AppOAuthEntity(api, app_id, None)
         super().__init__(data)
 
-    def apply_data(self, data: dict):
+    def apply_data(self, data: dict) -> None:
         """Apply the given data to the entity."""
         super().apply_data(data)
         self._client_details.apply_data(data["oauthClientDetails"])
