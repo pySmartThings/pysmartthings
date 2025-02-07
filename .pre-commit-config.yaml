@@ -116,3 +116,8 @@ repos:
         types: [text]
         entry: poetry run trailing-whitespace-fixer
         stages: [pre-commit, pre-push, manual]
+      - id: yamllint
+        name: 🎗  Check YAML files with yamllint
+        language: system
+        types: [yaml]
+        entry: poetry run yamllint
