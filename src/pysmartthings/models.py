@@ -127,6 +127,15 @@ class Device(DataClassORJSONMixin):
 
 
 @dataclass
+class Scene(DataClassORJSONMixin):
+    """Scene model."""
+
+    scene_id: str = field(metadata=field_options(alias="sceneId"))
+    name: str = field(metadata=field_options(alias="sceneName"))
+    location_id: str = field(metadata=field_options(alias="locationId"))
+
+
+@dataclass
 class LocationResponse(DataClassORJSONMixin):
     """Location response model."""
 
@@ -145,3 +154,10 @@ class DeviceResponse(DataClassORJSONMixin):
     """Device response model."""
 
     items: list[Device]
+
+
+@dataclass
+class SceneResponse(DataClassORJSONMixin):
+    """Scene response model."""
+
+    items: list[Scene]

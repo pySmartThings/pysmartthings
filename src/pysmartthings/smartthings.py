@@ -21,6 +21,8 @@ from .models import (
     LocationResponse,
     Room,
     RoomResponse,
+    Scene,
+    SceneResponse,
 )
 
 
@@ -145,6 +147,14 @@ class SmartThings:
         """Retrieve a device with the specified ID."""
         resp = await self._get(f"devices/{device_id}")
         return Device.from_json(resp)
+
+    async def get_scenes(self, location_id: str | None = None) -> list[Scene]:
+        """Retrieve SmartThings scenes."""
+        params = {}
+        if location_id:
+            params["locationId"] = location_id
+        resp = await self._get("scenes", params=params)
+        return SceneResponse.from_json(resp).items
 
     # async def location(self, location_id: str) -> LocationEntity:
     #     """Retrieve a location with the specified ID."""
