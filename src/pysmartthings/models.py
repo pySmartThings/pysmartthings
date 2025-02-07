@@ -1,5 +1,7 @@
 """Models for SmartThings API."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from mashumaro import field_options
@@ -26,7 +28,23 @@ class Location(BaseLocation):
 
 
 @dataclass
+class Room(DataClassORJSONMixin):
+    """Room model."""
+
+    room_id: str = field(metadata=field_options(alias="roomId"))
+    location_id: str = field(metadata=field_options(alias="locationId"))
+    name: str
+
+
+@dataclass
 class LocationResponse(DataClassORJSONMixin):
     """Location response model."""
 
     items: list[BaseLocation]
+
+
+@dataclass
+class RoomResponse(DataClassORJSONMixin):
+    """Room response model."""
+
+    items: list[Room]

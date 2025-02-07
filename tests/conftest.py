@@ -2,8 +2,11 @@
 
 import glob
 import re
+from collections.abc import AsyncGenerator, Generator
 
 from aiohttp import ClientSession
+from aioresponses import aioresponses
+
 from pysmartthings.api import (
     API_APP,
     API_APP_OAUTH,
@@ -30,7 +33,9 @@ from pysmartthings.api import (
 )
 from pysmartthings.smartthings import SmartThings
 import pytest
+from syrupy import SnapshotAssertion
 
+from .syrupy import SmartThingsSnapshotExtension
 from .utilities import ClientMocker
 
 APP_ID = "c6cde2b0-203e-44cf-a510-3b3ed4706996"
@@ -46,6 +51,32 @@ SUBSCRIPTION_ID = "7bdf5909-57c4-41f3-9089-e520513bd92a"
 SCENE_ID = "9b58411f-5d26-418d-b193-3434a77c484a"
 
 DEVICE_COMMAND_PATTERN = re.compile(r"(device_command_post_[a-z_]+)")
+
+
+@pytest.fixture(name="snapshot")
+def snapshot_assertion(snapshot: SnapshotAssertion) -> SnapshotAssertion:
+    """Return snapshot assertion fixture with the SmartThings extension."""
+    return snapshot.use_extension(SmartThingsSnapshotExtension)
+
+
+@pytest.fixture
+async def client() -> AsyncGenerator[SmartThings, None]:
+    """Return a SmartThings client."""
+    async with (
+        ClientSession() as session,
+        SmartThings(
+            "token",
+            session=session,
+        ) as smartthings_client,
+    ):
+        yield smartthings_client
+
+
+@pytest.fixture(name="responses")
+def aioresponses_fixture() -> Generator[aioresponses, None, None]:
+    """Return aioresponses fixture."""
+    with aioresponses() as mocked_responses:
+        yield mocked_responses
 
 
 def register_device_commands(mocker):

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Self
 
 from aiohttp import ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
@@ -12,7 +12,7 @@ from yarl import URL
 
 from .const import API_BASE
 from .exceptions import SmartThingsConnectionError
-from .models import BaseLocation, LocationResponse
+from .models import BaseLocation, Location, LocationResponse, Room, RoomResponse
 
 
 @dataclass
@@ -37,7 +37,7 @@ class SmartThings:
             scheme="https",
             host=API_BASE,
             port=443,
-        ).joinpath(uri)
+        ).joinpath(f"v1/{uri}")
 
         headers = {
             "Accept": "application/json, text/plain, */*",
@@ -98,6 +98,21 @@ class SmartThings:
         """Retrieve SmartThings locations."""
         resp = await self._get("locations")
         return LocationResponse.from_json(resp).items
+
+    async def get_location(self, location_id: str) -> Location:
+        """Retrieve a location with the specified ID."""
+        resp = await self._get(f"locations/{location_id}")
+        return Location.from_json(resp)
+
+    async def get_rooms(self, location_id: str) -> list[Room]:
+        """Retrieve a list of rooms for a location."""
+        resp = await self._get(f"locations/{location_id}/rooms")
+        return RoomResponse.from_json(resp).items
+
+    async def get_room(self, location_id: str, room_id: str) -> Room:
+        """Retrieve a specific room."""
+        resp = await self._get(f"locations/{location_id}/rooms/{room_id}")
+        return Room.from_json(resp)
 
     # async def location(self, location_id: str) -> LocationEntity:
     #     """Retrieve a location with the specified ID."""
@@ -273,3 +288,28 @@ class SmartThings:
     #         client_id, client_secret, refresh_token
     #     )
     #     return OAuthToken(self._service, result)
+
+    async def close(self) -> None:
+        """Close open client session."""
+        if self.session and self._close_session:
+            await self.session.close()
+
+    async def __aenter__(self) -> Self:
+        """Async enter.
+
+        Returns
+        -------
+            The SmartThings object.
+
+        """
+        return self
+
+    async def __aexit__(self, *_exc_info: object) -> None:
+        """Async exit.
+
+        Args:
+        ----
+            _exc_info: Exec type.
+
+        """
+        await self.close()
