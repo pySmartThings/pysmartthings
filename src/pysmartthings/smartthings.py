@@ -14,6 +14,7 @@ from .const import API_BASE
 from .exceptions import SmartThingsConnectionError
 from .models import (
     BaseLocation,
+    Capability,
     Device,
     DeviceResponse,
     Location,
@@ -122,9 +123,22 @@ class SmartThings:
         resp = await self._get(f"locations/{location_id}/rooms/{room_id}")
         return Room.from_json(resp)
 
-    async def get_devices(self) -> list[Device]:
+    async def get_devices(
+        self,
+        *,
+        capabilities: list[Capability] | None = None,
+        location_ids: list[str] | None = None,
+        device_ids: list[str] | None = None,
+    ) -> list[Device]:
         """Retrieve SmartThings devices."""
-        resp = await self._get("devices")
+        params = {}
+        if capabilities:
+            params["capability"] = ",".join(capabilities)
+        if location_ids:
+            params["locationId"] = ",".join(location_ids)
+        if device_ids:
+            params["deviceId"] = ",".join(device_ids)
+        resp = await self._get("devices", params=params)
         return DeviceResponse.from_json(resp).items
 
     # async def location(self, location_id: str) -> LocationEntity:

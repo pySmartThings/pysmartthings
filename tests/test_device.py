@@ -1,10 +1,15 @@
 """Tests for the Device file."""
 
+from typing import Any
+
+import pytest
 from aiohttp.hdrs import METH_GET
 from aioresponses import aioresponses
 from syrupy import SnapshotAssertion
+from yarl import URL
 
 from pysmartthings import SmartThings
+from pysmartthings.models import Capability
 from . import load_fixture
 
 from .const import MOCK_URL, HEADERS
@@ -26,7 +31,42 @@ async def test_fetching_devices(
         f"{MOCK_URL}/devices",
         METH_GET,
         headers=HEADERS,
-        params=None,
+        params={},
+        json=None,
+    )
+
+
+@pytest.mark.parametrize(
+    ("kwargs", "params"),
+    [
+        ({"device_ids": ["abc", "def"]}, {"deviceId": "abc,def"}),
+        ({"device_ids": ["abc"]}, {"deviceId": "abc"}),
+        ({"location_ids": ["abc", "def"]}, {"locationId": "abc,def"}),
+        (
+            {"capabilities": [Capability.SWITCH, Capability.SWITCH_LEVEL]},
+            {"capability": "switch,switchLevel"},
+        ),
+    ],
+)
+async def test_fetching_specific_devices(
+    client: SmartThings,
+    responses: aioresponses,
+    kwargs: dict[str, Any],
+    params: dict[str, Any],
+) -> None:
+    """Test getting devices."""
+    url = str(URL(f"{MOCK_URL}/devices").with_query(params))
+    responses.get(
+        url,
+        status=200,
+        body=load_fixture("devices_2.json"),
+    )
+    assert await client.get_devices(**kwargs)
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/devices",
+        METH_GET,
+        headers=HEADERS,
+        params=params,
         json=None,
     )
 
