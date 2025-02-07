@@ -30,6 +30,8 @@ packages = [
 python = "^3.11"
 aiohttp = ">=3.0.0"
 yarl = ">=1.6.0"
+mashumaro = "^3.15"
+orjson = "^3.10.15"
 
 [tool.poetry.group.dev.dependencies]
 codespell = "2.4.1"
@@ -120,6 +122,7 @@ asyncio_mode = "auto"
 ignore = [
   "ANN401", # Opinioated warning on disallowing dynamically typed expressions
   "DTZ005",
+  "ERA001",
   "PLR0913",
   "TRY003",
   "FBT002",
