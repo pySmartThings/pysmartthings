@@ -13,6 +13,7 @@ lint.extend-ignore = [
   "PLR0915",
   "PT015",
   "ANN001",
+  "E501",
   "ANN201",
   "S101", # Use of assert detected. As these are tests...
   "S105", # Detection of passwords...

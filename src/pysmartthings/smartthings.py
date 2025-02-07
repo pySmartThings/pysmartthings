@@ -12,7 +12,15 @@ from yarl import URL
 
 from .const import API_BASE
 from .exceptions import SmartThingsConnectionError
-from .models import BaseLocation, Location, LocationResponse, Room, RoomResponse
+from .models import (
+    BaseLocation,
+    Device,
+    DeviceResponse,
+    Location,
+    LocationResponse,
+    Room,
+    RoomResponse,
+)
 
 
 @dataclass
@@ -113,6 +121,11 @@ class SmartThings:
         """Retrieve a specific room."""
         resp = await self._get(f"locations/{location_id}/rooms/{room_id}")
         return Room.from_json(resp)
+
+    async def get_devices(self) -> list[Device]:
+        """Retrieve SmartThings devices."""
+        resp = await self._get("devices")
+        return DeviceResponse.from_json(resp).items
 
     # async def location(self, location_id: str) -> LocationEntity:
     #     """Retrieve a location with the specified ID."""
