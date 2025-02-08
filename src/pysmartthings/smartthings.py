@@ -188,9 +188,9 @@ class SmartThings:
                         "component": component,
                         "capability": capability,
                         "command": command,
-                        "arguments": argument
-                        if isinstance(argument, list)
-                        else [argument],
+                        "arguments": (
+                            argument if isinstance(argument, list) else [argument]
+                        ),
                     }
                 ]
             },
