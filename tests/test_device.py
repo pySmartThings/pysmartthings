@@ -1,18 +1,21 @@
 """Tests for the Device file."""
 
-from typing import Any
+from __future__ import annotations
+from typing import Any, TYPE_CHECKING
 
 import pytest
-from aiohttp.hdrs import METH_GET
+from aiohttp.hdrs import METH_GET, METH_POST
 from aioresponses import aioresponses
-from syrupy import SnapshotAssertion
 from yarl import URL
 
 from pysmartthings import SmartThings
-from pysmartthings.models import Capability
-from . import load_fixture
+from pysmartthings.models import Capability, Command
+from . import load_fixture, load_json_fixture
 
 from .const import MOCK_URL, HEADERS
+
+if TYPE_CHECKING:
+    from syrupy import SnapshotAssertion
 
 
 async def test_fetching_devices(
@@ -126,6 +129,43 @@ async def test_fetching_status_of_single_device(
         headers=HEADERS,
         params=None,
         json=None,
+    )
+
+
+@pytest.mark.parametrize(
+    ("capability", "command", "argument", "fixture"),
+    [
+        (
+            Capability.COLOR_TEMPERATURE,
+            Command.SET_COLOR_TEMPERATURE,
+            3000,
+            "set_color_temperature",
+        )
+    ],
+)
+async def test_executing_command(
+    client: SmartThings,
+    responses: aioresponses,
+    capability: Capability,
+    command: Command,
+    argument: int | str | list | dict | None,
+    fixture: str,
+) -> None:
+    """Test executing a command."""
+    responses.post(
+        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
+        status=200,
+        body=load_fixture("executed_command.json"),
+    )
+    await client.execute_device_command(
+        "440063de-a200-40b5-8a6b-f3399eaa0370", capability, command, argument=argument
+    )
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json=load_json_fixture(f"device_commands/{fixture}.json"),
     )
 
 

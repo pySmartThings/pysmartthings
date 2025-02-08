@@ -16,6 +16,7 @@ from .models import (
     Attribute,
     BaseLocation,
     Capability,
+    Command,
     Device,
     DeviceResponse,
     DeviceStatus,
@@ -169,6 +170,31 @@ class SmartThings:
         """Retrieve the status of a device."""
         resp = await self._get(f"devices/{device_id}/status")
         return DeviceStatus.from_json(resp).components
+
+    async def execute_device_command(
+        self,
+        device_id: str,
+        capability: Capability,
+        command: Command,
+        component: str = "main",
+        argument: int | str | list | dict | None = None,
+    ) -> None:
+        """Execute a command on a device."""
+        await self._post(
+            f"devices/{device_id}/commands",
+            data={
+                "commands": [
+                    {
+                        "component": component,
+                        "capability": capability,
+                        "command": command,
+                        "arguments": argument
+                        if isinstance(argument, list)
+                        else [argument],
+                    }
+                ]
+            },
+        )
 
     # async def location(self, location_id: str) -> LocationEntity:
     #     """Retrieve a location with the specified ID."""

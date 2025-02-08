@@ -62,6 +62,86 @@ class Attribute(StrEnum):
     WINDOW_SHADE = "windowShade"
 
 
+class Command(StrEnum):
+    """Command model."""
+
+    AUTO = "auto"
+    CLOSE = "close"
+    COOL = "cool"
+    EMERGENCY_HEAT = "emergencyHeat"
+    HEAT = "heat"
+    OPEN = "open"
+    ON = "on"
+    OFF = "off"
+    PAUSE = "pause"
+    PING = "ping"
+    REFRESH = "refresh"
+    SET_COLOR = "setColor"
+    SET_COLOR_TEMPERATURE = "setColorTemperature"
+    SET_HUE = "setHue"
+    SET_LEVEL = "setLevel"
+    SET_SATURATION = "setSaturation"
+    SET_THERMOSTAT_MODE = "setThermostatMode"
+
+
+CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
+    Capability.BATTERY: [Attribute.BATTERY, Attribute.QUANTITY, Attribute.TYPE],
+    Capability.CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
+    Capability.COLOR_CONTROL: [Attribute.COLOR, Attribute.HUE, Attribute.SATURATION],
+    Capability.COLOR_TEMPERATURE: [
+        Attribute.COLOR_TEMPERATURE,
+        Attribute.COLOR_TEMPERATURE_RANGE,
+    ],
+    Capability.FADE_LIGHTNING_EFFECT: [Attribute.FADE],
+    Capability.HEALTH_CHECK: [
+        Attribute.DEVICE_WATCH_ENROLL,
+        Attribute.DEVICE_WATCH_DEVICE_STATUS,
+        Attribute.CHECK_INTERVAL,
+        Attribute.HEALTH_STATUS,
+    ],
+    Capability.HUE_SYNC_MODE: [Attribute.MODE],
+    Capability.MOTION_SENSOR: [Attribute.MOTION],
+    Capability.REFRESH: [],
+    Capability.RELATIVE_HUMIDITY_MEASUREMENT: [Attribute.HUMIDITY],
+    Capability.SWITCH: [Attribute.SWITCH],
+    Capability.SWITCH_LEVEL: [Attribute.LEVEL, Attribute.LEVEL_RANGE],
+    Capability.TEMPERATURE_MEASUREMENT: [
+        Attribute.TEMPERATURE,
+        Attribute.TEMPERATURE_RANGE,
+    ],
+    Capability.THERMOSTAT_MODE: [
+        Attribute.THERMOSTAT_MODE,
+        Attribute.SUPPORTED_THERMOSTAT_MODES,
+    ],
+    Capability.WINDOW_SHADE: [
+        Attribute.WINDOW_SHADE,
+        Attribute.SUPPORTED_WINDOW_SHADE_COMMANDS,
+    ],
+}
+
+CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
+    Capability.COLOR_CONTROL: [
+        Command.SET_COLOR,
+        Command.SET_HUE,
+        Command.SET_SATURATION,
+    ],
+    Capability.COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
+    Capability.HEALTH_CHECK: [Command.PING],
+    Capability.REFRESH: [Command.REFRESH],
+    Capability.SWITCH: [Command.ON, Command.OFF],
+    Capability.SWITCH_LEVEL: [Command.SET_LEVEL],
+    Capability.THERMOSTAT_MODE: [
+        Command.AUTO,
+        Command.COOL,
+        Command.EMERGENCY_HEAT,
+        Command.HEAT,
+        Command.OFF,
+        Command.SET_THERMOSTAT_MODE,
+    ],
+    Capability.WINDOW_SHADE: [Command.CLOSE, Command.OPEN, Command.PAUSE],
+}
+
+
 @dataclass
 class BaseLocation(DataClassORJSONMixin):
     """Base location model."""
