@@ -13,10 +13,12 @@ from yarl import URL
 from .const import API_BASE
 from .exceptions import SmartThingsConnectionError
 from .models import (
+    Attribute,
     BaseLocation,
     Capability,
     Device,
     DeviceResponse,
+    DeviceStatus,
     Location,
     LocationResponse,
     Room,
@@ -159,6 +161,13 @@ class SmartThings:
     async def execute_scene(self, scene_id: str) -> None:
         """Execute the scene with the specified ID."""
         await self._post(f"scenes/{scene_id}/execute")
+
+    async def get_device_status(
+        self, device_id: str
+    ) -> dict[str, dict[Attribute, dict[str, Any]]]:
+        """Retrieve the status of a device."""
+        resp = await self._get(f"devices/{device_id}/status")
+        return DeviceStatus.from_json(resp).components
 
     # async def location(self, location_id: str) -> LocationEntity:
     #     """Retrieve a location with the specified ID."""

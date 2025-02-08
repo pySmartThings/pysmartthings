@@ -22,8 +22,28 @@ class Capability(StrEnum):
     HUE_SYNC_MODE = "samsungim.hueSyncMode"
     MOTION_SENSOR = "motionSensor"
     REFRESH = "refresh"
+    RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
     SWITCH = "switch"
     SWITCH_LEVEL = "switchLevel"
+    TEMPERATURE_MEASUREMENT = "temperatureMeasurement"
+    THERMOSTAT_MODE = "thermostatMode"
+    WINDOW_SHADE = "windowShade"
+
+
+class Attribute(StrEnum):
+    """Attribute model."""
+
+    CHECK_INTERVAL = "checkInterval"
+    CIRCADIAN = "circadian"
+    COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
+    COLOR_TEMPERATURE = "colorTemperature"
+    DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
+    DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
+    FADE = "fade"
+    HEALTH_STATUS = "healthStatus"
+    LEVEL = "level"
+    LEVEL_RANGE = "levelRange"
+    SWITCH = "switch"
 
 
 @dataclass
@@ -133,6 +153,13 @@ class Scene(DataClassORJSONMixin):
     scene_id: str = field(metadata=field_options(alias="sceneId"))
     name: str = field(metadata=field_options(alias="sceneName"))
     location_id: str = field(metadata=field_options(alias="locationId"))
+
+
+@dataclass
+class DeviceStatus(DataClassORJSONMixin):
+    """Device status model."""
+
+    components: dict[str, dict[Capability, dict[Attribute, dict[str, Any]]]]
 
 
 @dataclass

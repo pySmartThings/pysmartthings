@@ -92,6 +92,30 @@ async def test_fetching_single_device(
     )
 
 
+async def test_fetching_status_of_single_device(
+    client: SmartThings,
+    responses: aioresponses,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test getting a single device."""
+    responses.get(
+        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
+        status=200,
+        body=load_fixture("device_status.json"),
+    )
+    assert (
+        await client.get_device_status("440063de-a200-40b5-8a6b-f3399eaa0370")
+        == snapshot
+    )
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
+        METH_GET,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
 # class TestDevice:
 #     """Tests for the Device class."""
 #

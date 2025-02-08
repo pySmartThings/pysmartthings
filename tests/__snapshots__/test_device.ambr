@@ -85,6 +85,52 @@
       'components': list([
         dict({
           'capabilities': list([
+            <Capability.WINDOW_SHADE: 'windowShade'>,
+            <Capability.SWITCH_LEVEL: 'switchLevel'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '571af102-15db-4030-b76b-245a691f74a5',
+      'device_manufacturer_code': 'WonderLabs Company',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Curtain 1A',
+      'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
+      'name': 'c2c-shade',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.WINDOW_SHADE: 'windowShade'>,
+            <Capability.SWITCH_LEVEL: 'switchLevel'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '42efbc29-b283-4d01-a343-f0963ae7dba4',
+      'device_manufacturer_code': 'WonderLabs Company',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Curtain 1E',
+      'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
+      'name': 'c2c-shade',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -214,6 +260,28 @@
       'components': list([
         dict({
           'capabilities': list([
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.THERMOSTAT_MODE: 'thermostatMode'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': 'f1e182eb-1e21-43ed-a32d-f3c2796b9865',
+      'device_manufacturer_code': 'Netatmo',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Netatmo NAPlug',
+      'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
+      'name': 'c2c-thermostat-bridge-1',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
@@ -242,6 +310,30 @@
       'components': list([
         dict({
           'capabilities': list([
+            <Capability.RELATIVE_HUMIDITY_MEASUREMENT: 'relativeHumidityMeasurement'>,
+            <Capability.BATTERY: 'battery'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '5ca2281d-fb11-4835-8990-0ea287556fe5',
+      'device_manufacturer_code': 'WonderLabs Company',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Hub 2 08',
+      'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
+      'name': 'c2c-humidity',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
@@ -264,6 +356,28 @@
       'label': 'Tv',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': 'e25e6818-efab-4f45-97f8-867ab2c1c33d',
+      'device_manufacturer_code': 'WonderLabs Company',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'TV',
+      'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
+      'name': 'c2c-switch',
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -430,5 +544,82 @@
     'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
     'name': 'hue-color-temperature-bulb',
     'type': <DeviceType.VIPER: 'VIPER'>,
+  })
+# ---
+# name: test_fetching_status_of_single_device
+  dict({
+    'main': dict({
+      <Capability.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+        <Attribute.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+          'timestamp': '2025-02-07T21:56:04.127Z',
+          'unit': 'K',
+          'value': 3000,
+        }),
+        <Attribute.COLOR_TEMPERATURE_RANGE: 'colorTemperatureRange'>: dict({
+          'timestamp': '2025-02-07T15:14:53.823Z',
+          'unit': 'K',
+          'value': dict({
+            'maximum': 6535,
+            'minimum': 2000,
+          }),
+        }),
+      }),
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+          }),
+          'timestamp': '2025-02-07T15:14:53.823Z',
+          'value': 'online',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': '2023-12-17T18:11:41.671Z',
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'timestamp': '2025-02-07T21:56:04.127Z',
+          'value': 'on',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'timestamp': '2025-02-07T21:56:04.127Z',
+          'unit': '%',
+          'value': 70,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'timestamp': '2025-02-07T15:14:53.823Z',
+          'unit': '%',
+          'value': dict({
+            'maximum': 100,
+            'minimum': 1,
+          }),
+        }),
+      }),
+      <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
+        <Attribute.CIRCADIAN: 'circadian'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
+        <Attribute.FADE: 'fade'>: dict({
+          'value': None,
+        }),
+      }),
+    }),
   })
 # ---
