@@ -180,20 +180,18 @@ class SmartThings:
         argument: int | str | list | dict | None = None,
     ) -> None:
         """Execute a command on a device."""
+        command_payload = {
+            "component": component,
+            "capability": capability,
+            "command": command,
+        }
+        if argument is not None:
+            command_payload["arguments"] = (
+                argument if isinstance(argument, list) else [argument]
+            )
         await self._post(
             f"devices/{device_id}/commands",
-            data={
-                "commands": [
-                    {
-                        "component": component,
-                        "capability": capability,
-                        "command": command,
-                        "arguments": (
-                            argument if isinstance(argument, list) else [argument]
-                        ),
-                    }
-                ]
-            },
+            data={"commands": [command_payload]},
         )
 
     # async def location(self, location_id: str) -> LocationEntity:

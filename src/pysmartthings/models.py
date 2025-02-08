@@ -255,7 +255,7 @@ class Scene(DataClassORJSONMixin):
 class Status(DataClassORJSONMixin):
     """Status model."""
 
-    value: str | int | dict[str, Any] | None
+    value: str | int | float | dict[str, Any] | None
     unit: str | None = None
     data: dict[str, Any] | None = None
     timestamp: datetime | None = None

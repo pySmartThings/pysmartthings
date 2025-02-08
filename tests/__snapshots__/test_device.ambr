@@ -968,7 +968,7 @@
           'data': None,
           'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 812000, tzinfo=datetime.timezone.utc),
           'unit': None,
-          'value': 1,
+          'value': 60.8072,
         }),
         <Attribute.SATURATION: 'saturation'>: dict({
           'data': None,
