@@ -30,8 +30,8 @@ packages = [
 python = "^3.11"
 aiohttp = ">=3.0.0"
 yarl = ">=1.6.0"
-mashumaro = "^3.15"
-orjson = "^3.10.15"
+mashumaro = "^3.11"
+orjson = "^3.9.10"
 
 [tool.poetry.group.dev.dependencies]
 codespell = "2.4.1"
