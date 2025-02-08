@@ -33,17 +33,32 @@ class Capability(StrEnum):
 class Attribute(StrEnum):
     """Attribute model."""
 
+    BATTERY = "battery"
     CHECK_INTERVAL = "checkInterval"
     CIRCADIAN = "circadian"
+    COLOR = "color"
     COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
     COLOR_TEMPERATURE = "colorTemperature"
     DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
     FADE = "fade"
     HEALTH_STATUS = "healthStatus"
+    HUE = "hue"
+    HUMIDITY = "humidity"
     LEVEL = "level"
     LEVEL_RANGE = "levelRange"
+    MODE = "mode"
+    MOTION = "motion"
+    QUANTITY = "quantity"
+    SATURATION = "saturation"
+    SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
+    SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
     SWITCH = "switch"
+    TEMPERATURE = "temperature"
+    TEMPERATURE_RANGE = "temperatureRange"
+    THERMOSTAT_MODE = "thermostatMode"
+    TYPE = "type"
+    WINDOW_SHADE = "windowShade"
 
 
 @dataclass

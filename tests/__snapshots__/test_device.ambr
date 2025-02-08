@@ -546,7 +546,244 @@
     'type': <DeviceType.VIPER: 'VIPER'>,
   })
 # ---
-# name: test_fetching_status_of_single_device
+# name: test_fetching_status_of_single_device[c2c_humidity]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'timestamp': '2025-02-08T09:04:47.696Z',
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+            'reason': 'DEVICE-OFFLINE',
+          }),
+          'timestamp': '2025-02-08T09:04:47.696Z',
+          'value': 'offline',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': '2025-02-07T23:01:15.973Z',
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.RELATIVE_HUMIDITY_MEASUREMENT: 'relativeHumidityMeasurement'>: dict({
+        <Attribute.HUMIDITY: 'humidity'>: dict({
+          'timestamp': '2025-02-08T09:04:47.696Z',
+          'unit': '%',
+          'value': 26,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'timestamp': '2025-02-08T09:04:47.696Z',
+          'unit': 'C',
+          'value': 26,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[c2c_motion_2]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'timestamp': '2025-02-08T03:31:03.047Z',
+          'unit': '%',
+          'value': 64,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+          }),
+          'timestamp': '2025-02-07T15:14:53.765Z',
+          'value': 'online',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': '2023-12-17T18:11:41.578Z',
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.MOTION_SENSOR: 'motionSensor'>: dict({
+        <Attribute.MOTION: 'motion'>: dict({
+          'timestamp': '2025-02-08T07:46:49.463Z',
+          'value': 'inactive',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[c2c_shade]
+  dict({
+    'main': dict({
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+            'reason': 'DEVICE-OFFLINE',
+          }),
+          'timestamp': '2025-02-08T09:04:47.694Z',
+          'value': 'offline',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': '2025-02-07T23:01:15.966Z',
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'timestamp': '2025-02-08T09:04:47.694Z',
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.WINDOW_SHADE: 'windowShade'>: dict({
+        <Attribute.SUPPORTED_WINDOW_SHADE_COMMANDS: 'supportedWindowShadeCommands'>: dict({
+          'value': None,
+        }),
+        <Attribute.WINDOW_SHADE: 'windowShade'>: dict({
+          'timestamp': '2025-02-08T09:04:47.694Z',
+          'value': 'open',
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[c2c_switch]
+  dict({
+    'main': dict({
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+            'reason': 'DEVICE-OFFLINE',
+          }),
+          'timestamp': '2025-02-08T09:04:47.691Z',
+          'value': 'offline',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': '2025-02-07T23:01:15.962Z',
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'timestamp': '2025-02-08T09:04:47.691Z',
+          'value': 'off',
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[c2c_thermostat_bridge_1]
+  dict({
+    'main': dict({
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'value': None,
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': '2025-02-07T23:03:33.797Z',
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.THERMOSTAT_MODE: 'thermostatMode'>: dict({
+        <Attribute.SUPPORTED_THERMOSTAT_MODES: 'supportedThermostatModes'>: dict({
+          'value': None,
+        }),
+        <Attribute.THERMOSTAT_MODE: 'thermostatMode'>: dict({
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[hue_color_temperature_bulb]
   dict({
     'main': dict({
       <Capability.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
@@ -603,6 +840,102 @@
         }),
         <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
           'timestamp': '2025-02-07T15:14:53.823Z',
+          'unit': '%',
+          'value': dict({
+            'maximum': 100,
+            'minimum': 1,
+          }),
+        }),
+      }),
+      <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
+        <Attribute.CIRCADIAN: 'circadian'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
+        <Attribute.FADE: 'fade'>: dict({
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[hue_rgbw_color_bulb]
+  dict({
+    'main': dict({
+      <Capability.COLOR_CONTROL: 'colorControl'>: dict({
+        <Attribute.COLOR: 'color'>: dict({
+          'value': None,
+        }),
+        <Attribute.HUE: 'hue'>: dict({
+          'timestamp': '2025-02-07T15:14:53.812Z',
+          'value': 1,
+        }),
+        <Attribute.SATURATION: 'saturation'>: dict({
+          'timestamp': '2025-02-07T15:14:53.812Z',
+          'value': 60,
+        }),
+      }),
+      <Capability.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+        <Attribute.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+          'timestamp': '2025-02-07T21:56:02.381Z',
+          'unit': 'K',
+          'value': 3000,
+        }),
+        <Attribute.COLOR_TEMPERATURE_RANGE: 'colorTemperatureRange'>: dict({
+          'timestamp': '2025-02-06T15:14:52.807Z',
+          'unit': 'K',
+          'value': dict({
+            'maximum': 6535,
+            'minimum': 2000,
+          }),
+        }),
+      }),
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+          }),
+          'timestamp': '2025-02-07T15:14:53.812Z',
+          'value': 'online',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': '2023-12-17T18:11:41.678Z',
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>: dict({
+        <Attribute.MODE: 'mode'>: dict({
+          'timestamp': '2025-02-07T15:14:53.812Z',
+          'value': 'normal',
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'timestamp': '2025-02-08T07:08:19.519Z',
+          'value': 'off',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'timestamp': '2025-02-07T21:56:02.381Z',
+          'unit': '%',
+          'value': 70,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'timestamp': '2025-02-07T15:14:53.812Z',
           'unit': '%',
           'value': dict({
             'maximum': 100,

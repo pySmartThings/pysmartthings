@@ -92,16 +92,29 @@ async def test_fetching_single_device(
     )
 
 
+@pytest.mark.parametrize(
+    "fixture",
+    [
+        "hue_color_temperature_bulb",
+        "hue_rgbw_color_bulb",
+        "c2c_shade",
+        "c2c_motion_2",
+        "c2c_thermostat_bridge_1",
+        "c2c_humidity",
+        "c2c_switch",
+    ],
+)
 async def test_fetching_status_of_single_device(
     client: SmartThings,
     responses: aioresponses,
     snapshot: SnapshotAssertion,
+    fixture: str,
 ) -> None:
     """Test getting a single device."""
     responses.get(
         f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
         status=200,
-        body=load_fixture("device_status.json"),
+        body=load_fixture(f"device_status/{fixture}.json"),
     )
     assert (
         await client.get_device_status("440063de-a200-40b5-8a6b-f3399eaa0370")
