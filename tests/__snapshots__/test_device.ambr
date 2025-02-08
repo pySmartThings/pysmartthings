@@ -551,14 +551,21 @@
     'main': dict({
       <Capability.BATTERY: 'battery'>: dict({
         <Attribute.BATTERY: 'battery'>: dict({
-          'timestamp': '2025-02-08T09:04:47.696Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 696000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': 100,
         }),
         <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -567,10 +574,14 @@
           'data': dict({
             'reason': 'DEVICE-OFFLINE',
           }),
-          'timestamp': '2025-02-08T09:04:47.696Z',
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 696000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'offline',
         }),
         <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
@@ -578,11 +589,14 @@
             'deviceScheme': 'UNTRACKED',
             'protocol': 'cloud',
           }),
-          'timestamp': '2025-02-07T23:01:15.973Z',
+          'timestamp': datetime.datetime(2025, 2, 7, 23, 1, 15, 973000, tzinfo=datetime.timezone.utc),
           'unit': 's',
           'value': 60,
         }),
         <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -590,18 +604,23 @@
       }),
       <Capability.RELATIVE_HUMIDITY_MEASUREMENT: 'relativeHumidityMeasurement'>: dict({
         <Attribute.HUMIDITY: 'humidity'>: dict({
-          'timestamp': '2025-02-08T09:04:47.696Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 696000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': 26,
         }),
       }),
       <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
         <Attribute.TEMPERATURE: 'temperature'>: dict({
-          'timestamp': '2025-02-08T09:04:47.696Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 696000, tzinfo=datetime.timezone.utc),
           'unit': 'C',
           'value': 26,
         }),
         <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -613,14 +632,21 @@
     'main': dict({
       <Capability.BATTERY: 'battery'>: dict({
         <Attribute.BATTERY: 'battery'>: dict({
-          'timestamp': '2025-02-08T03:31:03.047Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 3, 31, 3, 47000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': 64,
         }),
         <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -628,10 +654,14 @@
         <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
           'data': dict({
           }),
-          'timestamp': '2025-02-07T15:14:53.765Z',
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 765000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'online',
         }),
         <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
@@ -639,17 +669,22 @@
             'deviceScheme': 'UNTRACKED',
             'protocol': 'cloud',
           }),
-          'timestamp': '2023-12-17T18:11:41.578Z',
+          'timestamp': datetime.datetime(2023, 12, 17, 18, 11, 41, 578000, tzinfo=datetime.timezone.utc),
           'unit': 's',
           'value': 60,
         }),
         <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
       <Capability.MOTION_SENSOR: 'motionSensor'>: dict({
         <Attribute.MOTION: 'motion'>: dict({
-          'timestamp': '2025-02-08T07:46:49.463Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 7, 46, 49, 463000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'inactive',
         }),
       }),
@@ -666,10 +701,14 @@
           'data': dict({
             'reason': 'DEVICE-OFFLINE',
           }),
-          'timestamp': '2025-02-08T09:04:47.694Z',
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 694000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'offline',
         }),
         <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
@@ -677,11 +716,14 @@
             'deviceScheme': 'UNTRACKED',
             'protocol': 'cloud',
           }),
-          'timestamp': '2025-02-07T23:01:15.966Z',
+          'timestamp': datetime.datetime(2025, 2, 7, 23, 1, 15, 966000, tzinfo=datetime.timezone.utc),
           'unit': 's',
           'value': 60,
         }),
         <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -689,20 +731,29 @@
       }),
       <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
         <Attribute.LEVEL: 'level'>: dict({
-          'timestamp': '2025-02-08T09:04:47.694Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 694000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': 100,
         }),
         <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
       <Capability.WINDOW_SHADE: 'windowShade'>: dict({
         <Attribute.SUPPORTED_WINDOW_SHADE_COMMANDS: 'supportedWindowShadeCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.WINDOW_SHADE: 'windowShade'>: dict({
-          'timestamp': '2025-02-08T09:04:47.694Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 694000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'open',
         }),
       }),
@@ -717,10 +768,14 @@
           'data': dict({
             'reason': 'DEVICE-OFFLINE',
           }),
-          'timestamp': '2025-02-08T09:04:47.691Z',
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'offline',
         }),
         <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
@@ -728,11 +783,14 @@
             'deviceScheme': 'UNTRACKED',
             'protocol': 'cloud',
           }),
-          'timestamp': '2025-02-07T23:01:15.962Z',
+          'timestamp': datetime.datetime(2025, 2, 7, 23, 1, 15, 962000, tzinfo=datetime.timezone.utc),
           'unit': 's',
           'value': 60,
         }),
         <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -740,7 +798,9 @@
       }),
       <Capability.SWITCH: 'switch'>: dict({
         <Attribute.SWITCH: 'switch'>: dict({
-          'timestamp': '2025-02-08T09:04:47.691Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 9, 4, 47, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'off',
         }),
       }),
@@ -752,9 +812,15 @@
     'main': dict({
       <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
         <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
@@ -762,11 +828,14 @@
             'deviceScheme': 'UNTRACKED',
             'protocol': 'cloud',
           }),
-          'timestamp': '2025-02-07T23:03:33.797Z',
+          'timestamp': datetime.datetime(2025, 2, 7, 23, 3, 33, 797000, tzinfo=datetime.timezone.utc),
           'unit': 's',
           'value': 60,
         }),
         <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -774,9 +843,15 @@
       }),
       <Capability.THERMOSTAT_MODE: 'thermostatMode'>: dict({
         <Attribute.SUPPORTED_THERMOSTAT_MODES: 'supportedThermostatModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.THERMOSTAT_MODE: 'thermostatMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -788,12 +863,14 @@
     'main': dict({
       <Capability.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
         <Attribute.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
-          'timestamp': '2025-02-07T21:56:04.127Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 21, 56, 4, 127000, tzinfo=datetime.timezone.utc),
           'unit': 'K',
           'value': 3000,
         }),
         <Attribute.COLOR_TEMPERATURE_RANGE: 'colorTemperatureRange'>: dict({
-          'timestamp': '2025-02-07T15:14:53.823Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 823000, tzinfo=datetime.timezone.utc),
           'unit': 'K',
           'value': dict({
             'maximum': 6535,
@@ -805,10 +882,14 @@
         <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
           'data': dict({
           }),
-          'timestamp': '2025-02-07T15:14:53.823Z',
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 823000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'online',
         }),
         <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
@@ -816,11 +897,14 @@
             'deviceScheme': 'UNTRACKED',
             'protocol': 'cloud',
           }),
-          'timestamp': '2023-12-17T18:11:41.671Z',
+          'timestamp': datetime.datetime(2023, 12, 17, 18, 11, 41, 671000, tzinfo=datetime.timezone.utc),
           'unit': 's',
           'value': 60,
         }),
         <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -828,18 +912,22 @@
       }),
       <Capability.SWITCH: 'switch'>: dict({
         <Attribute.SWITCH: 'switch'>: dict({
-          'timestamp': '2025-02-07T21:56:04.127Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 21, 56, 4, 127000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'on',
         }),
       }),
       <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
         <Attribute.LEVEL: 'level'>: dict({
-          'timestamp': '2025-02-07T21:56:04.127Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 21, 56, 4, 127000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': 70,
         }),
         <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
-          'timestamp': '2025-02-07T15:14:53.823Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 823000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': dict({
             'maximum': 100,
@@ -849,11 +937,17 @@
       }),
       <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
         <Attribute.CIRCADIAN: 'circadian'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
       <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
         <Attribute.FADE: 'fade'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -865,25 +959,34 @@
     'main': dict({
       <Capability.COLOR_CONTROL: 'colorControl'>: dict({
         <Attribute.COLOR: 'color'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.HUE: 'hue'>: dict({
-          'timestamp': '2025-02-07T15:14:53.812Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 812000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 1,
         }),
         <Attribute.SATURATION: 'saturation'>: dict({
-          'timestamp': '2025-02-07T15:14:53.812Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 812000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 60,
         }),
       }),
       <Capability.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
         <Attribute.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
-          'timestamp': '2025-02-07T21:56:02.381Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 21, 56, 2, 381000, tzinfo=datetime.timezone.utc),
           'unit': 'K',
           'value': 3000,
         }),
         <Attribute.COLOR_TEMPERATURE_RANGE: 'colorTemperatureRange'>: dict({
-          'timestamp': '2025-02-06T15:14:52.807Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 15, 14, 52, 807000, tzinfo=datetime.timezone.utc),
           'unit': 'K',
           'value': dict({
             'maximum': 6535,
@@ -895,10 +998,14 @@
         <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
           'data': dict({
           }),
-          'timestamp': '2025-02-07T15:14:53.812Z',
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 812000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'online',
         }),
         <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
         <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
@@ -906,11 +1013,14 @@
             'deviceScheme': 'UNTRACKED',
             'protocol': 'cloud',
           }),
-          'timestamp': '2023-12-17T18:11:41.678Z',
+          'timestamp': datetime.datetime(2023, 12, 17, 18, 11, 41, 678000, tzinfo=datetime.timezone.utc),
           'unit': 's',
           'value': 60,
         }),
         <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
@@ -918,24 +1028,30 @@
       }),
       <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>: dict({
         <Attribute.MODE: 'mode'>: dict({
-          'timestamp': '2025-02-07T15:14:53.812Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 812000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'normal',
         }),
       }),
       <Capability.SWITCH: 'switch'>: dict({
         <Attribute.SWITCH: 'switch'>: dict({
-          'timestamp': '2025-02-08T07:08:19.519Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 7, 8, 19, 519000, tzinfo=datetime.timezone.utc),
+          'unit': None,
           'value': 'off',
         }),
       }),
       <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
         <Attribute.LEVEL: 'level'>: dict({
-          'timestamp': '2025-02-07T21:56:02.381Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 21, 56, 2, 381000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': 70,
         }),
         <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
-          'timestamp': '2025-02-07T15:14:53.812Z',
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 812000, tzinfo=datetime.timezone.utc),
           'unit': '%',
           'value': dict({
             'maximum': 100,
@@ -945,11 +1061,17 @@
       }),
       <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
         <Attribute.CIRCADIAN: 'circadian'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),
       <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
         <Attribute.FADE: 'fade'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
           'value': None,
         }),
       }),

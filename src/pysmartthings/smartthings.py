@@ -25,6 +25,7 @@ from .models import (
     RoomResponse,
     Scene,
     SceneResponse,
+    Status,
 )
 
 
@@ -164,7 +165,7 @@ class SmartThings:
 
     async def get_device_status(
         self, device_id: str
-    ) -> dict[str, dict[Attribute, dict[str, Any]]]:
+    ) -> dict[str, dict[Capability, dict[Attribute, Status]]]:
         """Retrieve the status of a device."""
         resp = await self._get(f"devices/{device_id}/status")
         return DeviceStatus.from_json(resp).components

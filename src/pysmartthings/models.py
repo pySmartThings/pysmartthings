@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import datetime  # noqa: TC003
 from enum import StrEnum
 from typing import Any
 
@@ -171,10 +172,20 @@ class Scene(DataClassORJSONMixin):
 
 
 @dataclass
+class Status(DataClassORJSONMixin):
+    """Status model."""
+
+    value: str | int | dict[str, Any] | None
+    unit: str | None = None
+    data: dict[str, Any] | None = None
+    timestamp: datetime | None = None
+
+
+@dataclass
 class DeviceStatus(DataClassORJSONMixin):
     """Device status model."""
 
-    components: dict[str, dict[Capability, dict[Attribute, dict[str, Any]]]]
+    components: dict[str, dict[Capability, dict[Attribute, Status]]]
 
 
 @dataclass
