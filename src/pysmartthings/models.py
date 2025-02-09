@@ -211,6 +211,9 @@ class Capability(StrEnum):
     SAMSUNG_VD_AUDIO_INPUT_SOURCE = "samsungvd.audioInputSource"
     SAMSUNG_VD_SOUND_FROM = "samsungvd.soundFrom"
     SAMSUNG_VD_THING_STATUS = "samsungvd.thingStatus"
+    VIDEO_CAPTURE = "videoCapture"
+    VIDEO_STREAM = "videoStream"
+    SOUND_SENSOR = "soundSensor"
 
 
 class Attribute(StrEnum):
@@ -620,6 +623,10 @@ class Attribute(StrEnum):
     WINDOW_SHADE = "windowShade"
     ZONE_BOOSTER = "zoneBooster"
     ZONE_INFO = "zoneInfo"
+    STREAM = "stream"
+    CLIP = "clip"
+    SUPPORTED_FEATURES = "supportedFeatures"
+    SOUND = "sound"
 
 
 class Command(StrEnum):
@@ -790,7 +797,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ROBOT_CLEANER_TURBO_MODE: [Attribute.ROBOT_CLEANER_TURBO_MODE],
     Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_CLEANING_MODE: [Attribute.ROBOT_CLEANER_CLEANING_MODE],
+    Capability.SOUND_SENSOR: [Attribute.SOUND],
     Capability.VERY_FINE_DUST_SENSOR: [Attribute.VERY_FINE_DUST_LEVEL],
+    Capability.VIDEO_CAPTURE: [Attribute.STREAM, Attribute.CLIP],
+    Capability.VIDEO_STREAM: [Attribute.SUPPORTED_FEATURES, Attribute.STREAM],
     Capability.WASHER_OPERATING_STATE: [
         Attribute.COMPLETION_TIME,
         Attribute.MACHINE_STATE,
