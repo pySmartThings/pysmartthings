@@ -64,7 +64,10 @@ def main() -> int:  # noqa: PLR0912
                 else:
                     if capability_name not in missing_attribute_mapping:
                         missing_attribute_mapping[capability_name] = []
-                    missing_attribute_mapping[capability_name].append(attribute_name)
+                    if attribute_name not in missing_attribute_mapping[capability_name]:
+                        missing_attribute_mapping[capability_name].append(
+                            attribute_name
+                        )
                 tree.create_node(
                     attribute,
                     f"{component_name}-{capability_name}-{attribute}",

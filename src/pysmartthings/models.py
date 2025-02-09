@@ -17,6 +17,7 @@ class Capability(StrEnum):
     BATTERY = "battery"
     COLOR_CONTROL = "colorControl"
     COLOR_TEMPERATURE = "colorTemperature"
+    CONTACT_SENSOR = "contactSensor"
     DEMAND_RESPONSE_LOAD_CONTROL = "demandResponseLoadControl"
     DISHWASHER_OPERATING_STATE = "dishwasherOperatingState"
     DOOR_CONTROL = "doorControl"
@@ -30,27 +31,34 @@ class Capability(StrEnum):
     OVEN_SETPOINT = "ovenSetpoint"
     POWER_CONSUMPTION_REPORT = "powerConsumptionReport"
     REFRESH = "refresh"
+    REFRIGERATION = "refrigeration"
     RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
     REMOTE_CONTROL_STATUS = "remoteControlStatus"
     SWITCH = "switch"
     SWITCH_LEVEL = "switchLevel"
     TEMPERATURE_MEASUREMENT = "temperatureMeasurement"
+    THERMOSTAT_COOLING_SETPOINT = "thermostatCoolingSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
     WINDOW_SHADE = "windowShade"
 
     CUSTOM_COOKTOP_OPERATING_STATE = "custom.cooktopOperatingState"
+    CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION = "custom.deviceReportStateConfiguration"
     CUSTOM_DISABLED_CAPABILITIES = "custom.disabledCapabilities"
+    CUSTOM_DISABLED_COMPONENTS = "custom.disabledComponents"
     CUSTOM_DISHWASHER_DELAY_START_TIME = "custom.dishwasherDelayStartTime"
     CUSTOM_DISHWASHER_OPERATING_PERCENTAGE = "custom.dishwasherOperatingPercentage"
     CUSTOM_DISHWASHER_OPERATING_PROGRESS = "custom.dishwasherOperatingProgress"
     CUSTOM_DRYER_DRY_LEVEL = "custom.dryerDryLevel"
     CUSTOM_DRYER_WRINKLE_PREVENT = "custom.dryerWrinklePrevent"
     CUSTOM_ENERGY_TYPE = "custom.energyType"
+    CUSTOM_FRIDGE_MODE = "custom.fridgeMode"
     CUSTOM_JOB_BEGINNING_STATUS = "custom.jobBeginningStatus"
     CUSTOM_OVEN_CAVITY_STATUS = "custom.ovenCavityStatus"
     CUSTOM_SUPPORTED_OPTIONS = "custom.supportedOptions"
+    CUSTOM_THERMOSTAT_SETPOINT_CONTROL = "custom.thermostatSetpointControl"
     CUSTOM_WATER_FILTER = "custom.waterFilter"
 
+    SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
     SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
     SAMSUNG_CE_DETERGENT_ORDER = "samsungce.detergentOrder"
@@ -74,19 +82,35 @@ class Capability(StrEnum):
     SAMSUNG_CE_DRYER_DRYING_TIME = "samsungce.dryerDryingTime"
     SAMSUNG_CE_DRYER_FREEZE_PREVENT = "samsungce.dryerFreezePrevent"
     SAMSUNG_CE_DRYER_OPERATING_STATE = "samsungce.dryerOperatingState"
+    SAMSUNG_CE_FOOD_DEFROST = "samsungce.foodDefrost"
+    SAMSUNG_CE_FREEZER_CONVERT_MODE = "samsungce.freezerConvertMode"
+    SAMSUNG_CE_FRIDGE_FOOD_LIST = "samsungce.fridgeFoodList"
+    SAMSUNG_CE_FRIDGE_PANTRY_INFO = "samsungce.fridgePantryInfo"
+    SAMSUNG_CE_FRIDGE_PANTRY_MODE = "samsungce.fridgePantryMode"
+    SAMSUNG_CE_FRIDGE_VACATION_MODE = "samsungce.fridgeVacationMode"
     SAMSUNG_CE_HOOD_FAN_SPEED = "samsungce.hoodFanSpeed"
     SAMSUNG_CE_KIDS_LOCK = "samsungce.kidsLock"
     SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS = "samsungce.kitchenDeviceDefaults"
     SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION = "samsungce.kitchenDeviceIdentification"
     SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION = "samsungce.kitchenModeSpecification"
     SAMSUNG_CE_LAMP = "samsungce.lamp"
+    SAMSUNG_CE_MEAT_AGING = "samsungce.meatAging"
     SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
     SAMSUNG_CE_MICROWAVE_POWER = "samsungce.microwavePower"
     SAMSUNG_CE_OVEN_MODE = "samsungce.ovenMode"
     SAMSUNG_CE_OVEN_OPERATING_STATE = "samsungce.ovenOperatingState"
+    SAMSUNG_CE_POWER_COOL = "samsungce.powerCool"
+    SAMSUNG_CE_POWER_FREEZE = "samsungce.powerFreeze"
     SAMSUNG_CE_QUICK_CONTROL = "samsungce.quickControl"
+    SAMSUNG_CE_RUNESTONE_HOME_CONTEXT = "samsungce.runestoneHomeContext"
+    SAMSUNG_CE_SABBATH_MODE = "samsungce.sabbathMode"
+    SAMSUNG_CE_SCALE_SETTINGS = "samsungce.scaleSettings"
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
+    SAMSUNG_CE_UNAVAILABLE_CAPABILITIES = "samsungce.unavailableCapabilities"
+    SAMSUNG_CE_VIEW_INSIDE = "samsungce.viewInside"
     SAMSUNG_CE_WATER_CONSUMPTION_REPORT = "samsungce.waterConsumptionReport"
+    SAMSUNG_CE_WEIGHT_MEASUREMENT = "samsungce.weightMeasurement"
+    SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION = "samsungce.weightMeasurementCalibration"
     SAMSUNG_CE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
 
     SAMSUNG_IM_HUE_SYNC_MODE = "samsungim.hueSyncMode"
@@ -103,6 +127,7 @@ class Capability(StrEnum):
 class Attribute(StrEnum):
     """Attribute model."""
 
+    ACTIVATED = "activated"
     ADD_RINSE = "addRinse"
     ALARM_ENABLED = "alarmEnabled"
     AUTO_RECONNECTION = "autoReconnection"
@@ -116,7 +141,12 @@ class Attribute(StrEnum):
     COLOR_TEMPERATURE = "colorTemperature"
     COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
     COMPLETION_TIME = "completionTime"
+    CONNECTION_STATE = "connectionState"
+    CONTACT = "contact"
+    CONTENTS = "contents"
     COOKTOP_OPERATING_STATE = "cooktopOperatingState"
+    COOLING_SETPOINT = "coolingSetpoint"
+    COOLING_SETPOINT_RANGE = "coolingSetpointRange"
     COURSE = "course"
     CUSTOM_COURSE_CANDIDATES = "customCourseCandidates"
     DATA = "data"
@@ -125,6 +155,7 @@ class Attribute(StrEnum):
     DEFAULT_OVEN_MODE = "defaultOvenMode"
     DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
     DEFINED_RECIPE = "definedRecipe"
+    DEFROST = "defrost"
     DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DESCRIPTION = "description"
     DETERGENT_TYPE = "detergentType"
@@ -133,6 +164,7 @@ class Attribute(StrEnum):
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
     DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
     DISABLED_CAPABILITIES = "disabledCapabilities"
+    DISABLED_COMPONENTS = "disabledComponents"
     DISHWASHER_DELAY_START_TIME = "dishwasherDelayStartTime"
     DISHWASHER_JOB_STATE = "dishwasherJobState"
     DISHWASHER_OPERATING_PERCENTAGE = "dishwasherOperatingPercentage"
@@ -150,6 +182,7 @@ class Attribute(StrEnum):
     DRY_PLUS = "dryPlus"
     DR_MAX_DURATION = "drMaxDuration"
     DUMP_TYPE = "dumpType"
+    ENABLED = "enabled"
     ENDPOINT = "endpoint"
     ENERGY_SAVING_INFO = "energySavingInfo"
     ENERGY_SAVING_LEVEL = "energySavingLevel"
@@ -160,6 +193,10 @@ class Attribute(StrEnum):
     ENERGY_USAGE_MAX = "energyUsageMax"
     FADE = "fade"
     FIRMWARE_VERSION = "mnfv"
+    FOOD_TYPE = "foodType"
+    FREEZER_CONVERT_MODE = "freezerConvertMode"
+    FRIDGE_MODE = "fridgeMode"
+    FRIDGE_MODE_VALUE = "fridgeModeValue"
     FUEL = "fuel"
     HARDWARE_VERSION = "mnhw"
     HEALTH_STATUS = "healthStatus"
@@ -172,6 +209,7 @@ class Attribute(StrEnum):
     INITIAL_AMOUNT = "initialAmount"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     LAST_UPDATED_DATE = "lastUpdatedDate"
+    LAST_UPDATED_TIME = "lastUpdatedTime"
     LEVEL = "level"
     LEVEL_RANGE = "levelRange"
     LOCK_STATE = "lockState"
@@ -180,8 +218,10 @@ class Attribute(StrEnum):
     MANUFACTURER_DETAILS_LINK = "mnml"
     MANUFACTURER_NAME = "mnmn"
     MANUFACTURE_DATE = "mndt"
+    MAXIMUM_SETPOINT = "maximumSetpoint"
     MAX_NUMBER_OF_PRESETS = "maxNumberOfPresets"
     MICOM_ASSAY_CODE = "micomAssayCode"
+    MINIMUM_SETPOINT = "minimumSetpoint"
     MIN_VERSION = "minVersion"
     MN_ID = "mnId"
     MODE = "mode"
@@ -190,6 +230,7 @@ class Attribute(StrEnum):
     MODEL_NAME = "modelName"
     MODEL_NUMBER = "mnmo"
     MOTION = "motion"
+    NAME = "name"
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
     NOTIFICATION_TEMPLATE_I_D = "notificationTemplateID"
     OPERATING_STATE = "operatingState"
@@ -197,6 +238,7 @@ class Attribute(StrEnum):
     ORDER_THRESHOLD = "orderThreshold"
     OS_VERSION = "mnos"
     OTN_D_U_I_D = "otnDUID"
+    OUT_OF_SYNC_CHANGES = "outOfSyncChanges"
     OVEN_CAVITY_STATUS = "ovenCavityStatus"
     OVEN_JOB_STATE = "ovenJobState"
     OVEN_MODE = "ovenMode"
@@ -212,13 +254,19 @@ class Attribute(StrEnum):
     PROGRESS_PERCENTAGE = "progressPercentage"
     PROTOCOL_TYPE = "protocolType"
     QUANTITY = "quantity"
+    RAPID_COOLING = "rapidCooling"
+    RAPID_FREEZING = "rapidFreezing"
     REFERENCE_TABLE = "referenceTable"
+    REFRESH_RESULT = "refreshResult"
     REGION_CODE = "regionCode"
     RELEASE_YEAR = "releaseYear"
     REMAINING_AMOUNT = "remainingAmount"
     REMAINING_TIME = "remainingTime"
     REMAINING_TIME_STR = "remainingTimeStr"
     REMOTE_CONTROL_ENABLED = "remoteControlEnabled"
+    REPORT_STATE_PERIOD = "reportStatePeriod"
+    REPORT_STATE_REALTIME = "reportStateRealtime"
+    REPORT_STATE_REALTIME_PERIOD = "reportStateRealtimePeriod"
     REPRESENTATIVE_COMPONENT = "representativeComponent"
     RESERVABLE = "reservable"
     RINSE_PLUS = "rinsePlus"
@@ -240,8 +288,11 @@ class Attribute(StrEnum):
     STATUS = "status"
     STEAM_SOAK = "steamSoak"
     STORM_WASH = "stormWash"
+    SUPPORTED_ACTIONS = "supportedActions"
+    SUPPORTED_AGING_METHODS = "supportedAgingMethods"
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
+    SUPPORTED_CONTEXTS = "supportedContexts"
     SUPPORTED_COOKTOP_OPERATING_STATE = "supportedCooktopOperatingState"
     SUPPORTED_COURSES = "supportedCourses"
     SUPPORTED_CYCLES = "supportedCycles"
@@ -249,12 +300,17 @@ class Attribute(StrEnum):
     SUPPORTED_DRYING_TEMPERATURE = "supportedDryingTemperature"
     SUPPORTED_DRYING_TIME = "supportedDryingTime"
     SUPPORTED_ENERGY_SAVING_LEVELS = "supportedEnergySavingLevels"
+    SUPPORTED_FOCUS_AREAS = "supportedFocusAreas"
+    SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
+    SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
     SUPPORTED_LIST = "supportedList"
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
+    SUPPORTED_MEAT_TYPES = "supportedMeatTypes"
     SUPPORTED_MODES = "supportedModes"
     SUPPORTED_OPERATING_STATE = "supportedOperatingState"
     SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
+    SUPPORTED_OPTIONS = "supportedOptions"
     SUPPORTED_OVEN_MODES = "supportedOvenModes"
     SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
@@ -271,6 +327,8 @@ class Attribute(StrEnum):
     TIME_LEFT_TO_START = "timeLeftToStart"
     TS_ID = "tsId"
     TYPE = "type"
+    UNAVAILABLE_COMMANDS = "unavailableCommands"
+    VACATION_MODE = "vacationMode"
     VENDOR_ID = "vid"
     VERSION = "version"
     VERSION_NUMBER = "versionNumber"
@@ -283,9 +341,11 @@ class Attribute(StrEnum):
     WATER_FILTER_USAGE = "waterFilterUsage"
     WATER_FILTER_USAGE_STEP = "waterFilterUsageStep"
     WATER_USAGE_MAX = "waterUsageMax"
+    WEIGHT = "weight"
     WELCOME_MESSAGE = "welcomeMessage"
     WINDOW_SHADE = "windowShade"
     ZONE_BOOSTER = "zoneBooster"
+    ZONE_INFO = "zoneInfo"
 
 
 class Command(StrEnum):
@@ -392,6 +452,16 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.PROGRESS,
         Attribute.SUPPORTED_MACHINE_STATES,
         Attribute.DISHWASHER_JOB_STATE,
+    ],
+    Capability.CONTACT_SENSOR: [Attribute.CONTACT],
+    Capability.THERMOSTAT_COOLING_SETPOINT: [
+        Attribute.COOLING_SETPOINT_RANGE,
+        Attribute.COOLING_SETPOINT,
+    ],
+    Capability.REFRIGERATION: [
+        Attribute.DEFROST,
+        Attribute.RAPID_COOLING,
+        Attribute.RAPID_FREEZING,
     ],
     # HCA capabilities
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
@@ -545,6 +615,59 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_DEFINED_RECIPE: [
         Attribute.DEFINED_RECIPE,
     ],
+    Capability.SAMSUNG_CE_FOOD_DEFROST: [
+        Attribute.SUPPORTED_OPTIONS,
+        Attribute.FOOD_TYPE,
+        Attribute.WEIGHT,
+        Attribute.OPERATION_TIME,
+        Attribute.REMAINING_TIME,
+    ],
+    Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: [Attribute.NAME],
+    Capability.SAMSUNG_CE_MEAT_AGING: [
+        Attribute.ZONE_INFO,
+        Attribute.SUPPORTED_MEAT_TYPES,
+        Attribute.SUPPORTED_AGING_METHODS,
+        Attribute.STATUS,
+    ],
+    Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: [
+        Attribute.MODE,
+        Attribute.SUPPORTED_MODES,
+    ],
+    Capability.SAMSUNG_CE_CONNECTION_STATE: [
+        Attribute.CONNECTION_STATE,
+    ],
+    Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: [
+        Attribute.WEIGHT,
+    ],
+    Capability.SAMSUNG_CE_SCALE_SETTINGS: [Attribute.ENABLED],
+    Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [Attribute.UNAVAILABLE_COMMANDS],
+    Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: [
+        Attribute.FREEZER_CONVERT_MODE,
+        Attribute.FREEZER_CONVERT_MODE,
+    ],
+    Capability.SAMSUNG_CE_VIEW_INSIDE: [
+        Attribute.SUPPORTED_FOCUS_AREAS,
+        Attribute.CONTENTS,
+        Attribute.LAST_UPDATED_TIME,
+    ],
+    Capability.SAMSUNG_CE_FRIDGE_FOOD_LIST: [
+        Attribute.OUT_OF_SYNC_CHANGES,
+        Attribute.REFRESH_RESULT,
+    ],
+    Capability.SAMSUNG_CE_FRIDGE_VACATION_MODE: [
+        Attribute.VACATION_MODE,
+    ],
+    Capability.SAMSUNG_CE_SABBATH_MODE: [
+        Attribute.SUPPORTED_ACTIONS,
+        Attribute.STATUS,
+    ],
+    Capability.SAMSUNG_CE_RUNESTONE_HOME_CONTEXT: [
+        Attribute.SUPPORTED_CONTEXTS,
+    ],
+    Capability.SAMSUNG_CE_POWER_COOL: [
+        Attribute.ACTIVATED,
+    ],
+    Capability.SAMSUNG_CE_POWER_FREEZE: [Attribute.ACTIVATED],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -603,6 +726,23 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WATER_FILTER_CAPACITY,
         Attribute.WATER_FILTER_LAST_RESET_DATE,
         Attribute.WATER_FILTER_RESET_TYPE,
+    ],
+    Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: [
+        Attribute.MINIMUM_SETPOINT,
+        Attribute.MAXIMUM_SETPOINT,
+    ],
+    Capability.CUSTOM_FRIDGE_MODE: [
+        Attribute.FRIDGE_MODE_VALUE,
+        Attribute.FRIDGE_MODE,
+        Attribute.SUPPORTED_FRIDGE_MODES,
+    ],
+    Capability.CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION: [
+        Attribute.REPORT_STATE_REALTIME_PERIOD,
+        Attribute.REPORT_STATE_REALTIME,
+        Attribute.REPORT_STATE_PERIOD,
+    ],
+    Capability.CUSTOM_DISABLED_COMPONENTS: [
+        Attribute.DISABLED_COMPONENTS,
     ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [
