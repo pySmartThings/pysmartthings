@@ -807,6 +807,7 @@ class Command(StrEnum):
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
     SET_COLOR = "setColor"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
+    SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
     SET_HUE = "setHue"
     SET_LEVEL = "setLevel"
     SET_SATURATION = "setSaturation"
@@ -1691,6 +1692,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
     Capability.HEALTH_CHECK: [Command.PING],
+    Capability.FAN_OSCILLATION_MODE: [Command.SET_FAN_OSCILLATION_MODE],
     Capability.REFRESH: [Command.REFRESH],
     Capability.SWITCH: [Command.ON, Command.OFF],
     Capability.SWITCH_LEVEL: [Command.SET_LEVEL],
