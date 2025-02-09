@@ -114,6 +114,7 @@ async def test_fetching_single_device(
         "c2c_humidity",
         "c2c_switch",
         "da_ks_range_0101x",
+        "da_wm_wd_00001",
     ],
 )
 async def test_fetching_status_of_single_device(

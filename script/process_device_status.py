@@ -29,9 +29,11 @@ def main() -> int:  # noqa: PLR0912
         tree.create_node(component_name, component_name, parent="root")
         for capability_name, attributes in capabilities.items():
             if capability_name not in Capability:
-                found_capabilities[capability_name] = re.sub(
-                    r"(?<!^)(?=[A-Z])", "_", capability_name
-                ).upper()
+                found_capabilities[capability_name] = (
+                    re.sub(r"(?<!^)(?=[A-Z])", "_", capability_name)
+                    .upper()
+                    .replace(".", "_")
+                )
                 missing_attribute_mapping[capability_name] = []
             tree.create_node(
                 capability_name,
