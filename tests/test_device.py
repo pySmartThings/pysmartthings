@@ -135,6 +135,10 @@ async def test_fetching_single_device(
         "c2c_arlo_pro_3_switch",
         "switch_level",
         "centralite",
+        "sengled",
+        "ikea_floor_lamp",
+        "ge_in_wall_smart_dimmer",
+        "zooz_zen16_multirelay",
     ],
 )
 async def test_fetching_status_of_single_device(

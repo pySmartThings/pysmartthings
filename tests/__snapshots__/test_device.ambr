@@ -2547,7 +2547,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2021, 4, 6, 16, 44, 10, 472000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -3123,7 +3123,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2024, 9, 10, 10, 26, 28, 552000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -3986,7 +3986,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 723000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -4617,7 +4617,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2023, 7, 3, 6, 44, 54, 757000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -5558,7 +5558,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 26, 132000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -6716,7 +6716,7 @@
           'unit': None,
           'value': '',
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2025, 1, 2, 12, 37, 43, 756000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -7374,7 +7374,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -7696,7 +7696,7 @@
           'unit': None,
           'value': '',
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -8150,7 +8150,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2023, 11, 2, 15, 58, 55, 699000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -8940,7 +8940,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2025, 1, 4, 22, 52, 14, 222000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -9733,7 +9733,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -10866,7 +10866,7 @@
           'unit': None,
           'value': None,
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2025, 1, 14, 6, 59, 13, 858000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -11734,6 +11734,36 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[ge_in_wall_smart_dimmer]
+  dict({
+    'main': dict({
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 23, 21, 22, 908000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 39, 25, 819000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 39,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[hub]
   dict({
   })
@@ -11937,6 +11967,116 @@
             'maximum': 100,
             'minimum': 1,
           }),
+        }),
+      }),
+      <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
+        <Attribute.CIRCADIAN: 'circadian'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
+        <Attribute.FADE: 'fade'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[ikea_floor_lamp]
+  dict({
+    'main': dict({
+      <Capability.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+        <Attribute.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 6, 22, 37, 47, 911000, tzinfo=datetime.timezone.utc),
+          'unit': 'K',
+          'value': 2857,
+        }),
+        <Attribute.COLOR_TEMPERATURE_RANGE: 'colorTemperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 6, 22, 39, 57, 915000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '11115720',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 6, 22, 39, 57, 609000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '11115720',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 6, 22, 39, 57, 911000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 6, 22, 39, 57, 913000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 6, 22, 37, 47, 16000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 6, 22, 37, 46, 588000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
         }),
       }),
       <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
@@ -12406,6 +12546,94 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[sengled]
+  dict({
+    'main': dict({
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 14, 56, 17, 80000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00000009',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 14, 56, 17, 81000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00000009',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 14, 56, 17, 80000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 14, 56, 17, 78000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 9, 35, 224000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 40, 49, 826000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
+        <Attribute.FADE: 'fade'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[switch_level]
   dict({
     'main': dict({
@@ -12666,7 +12894,7 @@
           'unit': None,
           'value': '2023-01-01',
         }),
-        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2024, 12, 31, 1, 3, 42, 587000, tzinfo=datetime.timezone.utc),
           'unit': None,
@@ -12801,6 +13029,92 @@
         <Attribute.SWITCH: 'switch'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2025, 2, 9, 17, 25, 51, 536000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[zooz_zen16_multirelay]
+  dict({
+    'main': dict({
+      <Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR: 'platemusic11009.associationGroupFour'>: dict({
+        <Attribute.ASSOCIATION_GROUP_FOUR: 'associationGroupFour'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 5, 22, 114000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'None',
+        }),
+      }),
+      <Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_THREE: 'platemusic11009.associationGroupThree'>: dict({
+        <Attribute.ASSOCIATION_GROUP_THREE: 'associationGroupThree'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 5, 22, 315000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'None',
+        }),
+      }),
+      <Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: 'platemusic11009.associationGroupTwo'>: dict({
+        <Attribute.ASSOCIATION_GROUP_TWO: 'associationGroupTwo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 5, 22, 663000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'None',
+        }),
+      }),
+      <Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: 'platemusic11009.deviceNetworkId'>: dict({
+        <Attribute.DEVICE_NETWORK_ID: 'deviceNetworkId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 10, 12, 0, 40, 9, 555000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[33]',
+        }),
+      }),
+      <Capability.PLATEMUSIC11009_FIRMWARE: 'platemusic11009.firmware'>: dict({
+        <Attribute.FIRMWARE_VERSION: 'firmwareVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 5, 18, 19, 52, 460000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 3.1,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 28, 27, 723000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+    }),
+    'relay1': dict({
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 28, 27, 170000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+    }),
+    'relay2': dict({
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 28, 27, 852000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+    }),
+    'relay3': dict({
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 28, 28, 349000, tzinfo=datetime.timezone.utc),
           'unit': None,
           'value': 'on',
         }),

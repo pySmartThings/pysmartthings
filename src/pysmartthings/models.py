@@ -227,6 +227,11 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND = "legendabsolute60149.effectsSetCommand"
     LEGENDABSOLUTE60149_PROGRESSIVE_OFF1 = "legendabsolute60149.progressiveOff1"
     LEGENDABSOLUTE60149_SIGNAL_METRICS = "legendabsolute60149.signalMetrics"
+    PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
+    PLATEMUSIC11009_ASSOCIATION_GROUP_THREE = "platemusic11009.associationGroupThree"
+    PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
+    PLATEMUSIC11009_ASSOCIATION_GROUP_TWO = "platemusic11009.associationGroupTwo"
+    PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR = "platemusic11009.associationGroupFour"
 
 
 class Attribute(StrEnum):
@@ -364,7 +369,7 @@ class Attribute(StrEnum):
     FAN_MODE = "fanMode"
     FAN_OSCILLATION_MODE = "fanOscillationMode"
     FINE_DUST_LEVEL = "fineDustLevel"
-    FIRMWARE_VERSION = "mnfv"
+    OCF_FIRMWARE_VERSION = "mnfv"
     FOOD_TYPE = "foodType"
     FREEZER_CONVERT_MODE = "freezerConvertMode"
     FRIDGE_MODE = "fridgeMode"
@@ -651,6 +656,11 @@ class Attribute(StrEnum):
     EFFECTS_SET_COMMAND = "effectsSetCommand"
     PROG_OFF = "progOff"
     SIGNAL_METRICS = "signalMetrics"
+    FIRMWARE_VERSION = "firmwareVersion"
+    ASSOCIATION_GROUP_THREE = "associationGroupThree"
+    DEVICE_NETWORK_ID = "deviceNetworkId"
+    ASSOCIATION_GROUP_TWO = "associationGroupTwo"
+    ASSOCIATION_GROUP_FOUR = "associationGroupFour"
 
 
 class Command(StrEnum):
@@ -748,7 +758,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.OCF: [
         Attribute.SYSTEM_TIME,
         Attribute.MANUFACTURE_DATE,
-        Attribute.FIRMWARE_VERSION,
+        Attribute.OCF_FIRMWARE_VERSION,
         Attribute.HARDWARE_VERSION,
         Attribute.DEVICE_ID,
         Attribute.SUPPORT_LINK,
@@ -1427,6 +1437,21 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: [Attribute.SIGNAL_METRICS],
     Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: [Attribute.LEVEL_STEPS],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Attribute.FORCED_ON_LEVEL],
+    Capability.PLATEMUSIC11009_FIRMWARE: [
+        Attribute.FIRMWARE_VERSION,
+    ],
+    Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_THREE: [
+        Attribute.ASSOCIATION_GROUP_THREE,
+    ],
+    Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [
+        Attribute.DEVICE_NETWORK_ID,
+    ],
+    Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: [
+        Attribute.ASSOCIATION_GROUP_TWO,
+    ],
+    Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR: [
+        Attribute.ASSOCIATION_GROUP_FOUR,
+    ],
 }
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
