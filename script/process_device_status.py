@@ -7,10 +7,10 @@ import sys
 
 from treelib import Tree
 
-from pysmartthings.models import Attribute, Capability
+from pysmartthings.models import CAPABILITY_ATTRIBUTES, Attribute, Capability
 
 
-def main() -> int:
+def main() -> int:  # noqa: PLR0912
     """Run the script."""
     if len(sys.argv) != 2:
         print("Usage: python process_device_status.py <filename>")
@@ -23,24 +23,41 @@ def main() -> int:
     tree = Tree()
     found_capabilities = {}
     found_attributes = {}
+    missing_attribute_mapping = {}
     tree.create_node(filename, "root")
-    for component_name, capabilities in components.items():
+    for component_name, capabilities in components.items():  # pylint: disable=too-many-nested-blocks
         tree.create_node(component_name, component_name, parent="root")
         for capability_name, attributes in capabilities.items():
             if capability_name not in Capability:
                 found_capabilities[capability_name] = re.sub(
                     r"(?<!^)(?=[A-Z])", "_", capability_name
                 ).upper()
+                missing_attribute_mapping[capability_name] = []
             tree.create_node(
                 capability_name,
                 f"{component_name}-{capability_name}",
                 parent=component_name,
             )
             for attribute in attributes:
+                attribute_name: str
                 if attribute not in Attribute:
-                    found_attributes[attribute] = re.sub(
+                    found_attributes[attribute] = attribute_name = re.sub(
                         r"(?<!^)(?=[A-Z])", "_", attribute
                     ).upper()
+                else:
+                    attribute_name = Attribute(attribute).name
+                attribute_name = f"Attribute.{attribute_name}"
+                if capability_name in CAPABILITY_ATTRIBUTES:
+                    if attribute not in CAPABILITY_ATTRIBUTES[capability_name]:
+                        if capability_name not in missing_attribute_mapping:
+                            missing_attribute_mapping[capability_name] = []
+                        missing_attribute_mapping[capability_name].append(
+                            attribute_name
+                        )
+                else:
+                    if capability_name not in missing_attribute_mapping:
+                        missing_attribute_mapping[capability_name] = []
+                    missing_attribute_mapping[capability_name].append(attribute_name)
                 tree.create_node(
                     attribute,
                     f"{component_name}-{capability_name}-{attribute}",
@@ -55,6 +72,7 @@ def main() -> int:
         print("\nFound attributes:")
         for attribute_name, slug in found_attributes.items():
             print(f'{slug} = "{attribute_name}"')
+    print(json.dumps(missing_attribute_mapping, indent=4))
     return 0
 
 

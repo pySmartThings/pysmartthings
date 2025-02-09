@@ -201,6 +201,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MANUFACTURER_DETAILS_LINK,
         Attribute.OS_VERSION,
         Attribute.PLATFORM_ID,
+        Attribute.PLATFORM_VERSION,
         Attribute.SPEC_VERSION,
     ],
     Capability.OVEN_MODE: [
@@ -239,6 +240,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     # Samsung IM capabilities
     Capability.SAMSUNG_IM_HUE_SYNC_MODE: [Attribute.MODE],
     # Samsung CE capabilities
+    Capability.SAMSUNG_CE_DRIVER_VERSION: [Attribute.VERSION_NUMBER],
     Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: [
         Attribute.COMPLETION_TIME,
         Attribute.OPERATING_STATE,
@@ -270,10 +272,34 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DESCRIPTION,
         Attribute.RELEASE_YEAR,
         Attribute.BINARY_ID,
+        Attribute.REGION_CODE,
+        Attribute.MODEL_CODE,
+        Attribute.FUEL,
+        Attribute.REPRESENTATIVE_COMPONENT,
+        Attribute.TYPE,
     ],
+    Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: [Attribute.SPECIFICATION],
+    Capability.SAMSUNG_CE_SOFTWARE_UPDATE: [
+        Attribute.TARGET_MODULE,
+        Attribute.OTN_D_U_I_D,
+        Attribute.LAST_UPDATED_DATE,
+        Attribute.AVAILABLE_MODULES,
+        Attribute.NEW_VERSION_AVAILABLE,
+        Attribute.OPERATING_STATE,
+        Attribute.PROGRESS,
+    ],
+    Capability.SAMSUNG_CE_LAMP: [
+        Attribute.BRIGHTNESS_LEVEL,
+        Attribute.SUPPORTED_BRIGHTNESS_LEVEL,
+    ],
+    Capability.SAMSUNG_CE_KIDS_LOCK: [Attribute.LOCK_STATE],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
+    Capability.CUSTOM_COOKTOP_OPERATING_STATE: [
+        Attribute.COOKTOP_OPERATING_STATE,
+        Attribute.SUPPORTED_COOKTOP_OPERATING_STATE,
+    ],
 }
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
