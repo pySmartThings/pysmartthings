@@ -103,6 +103,7 @@ class Capability(StrEnum):
     CUSTOM_HEPA_FILTER = "custom.hepaFilter"
     CUSTOM_JOB_BEGINNING_STATUS = "custom.jobBeginningStatus"
     CUSTOM_LAUNCH_APP = "custom.launchapp"
+    CUSTOM_OCF_RESOURCE_VERSION = "custom.ocfResourceVersion"
     CUSTOM_OVEN_CAVITY_STATUS = "custom.ovenCavityStatus"
     CUSTOM_PERIODIC_SENSING = "custom.periodicSensing"
     CUSTOM_PICTURE_MODE = "custom.picturemode"
@@ -206,6 +207,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
     SAMSUNG_CE_WIFI_KIT_SUB_DEVICES = "samsungce.wifiKitSubDevices"
 
+    SAMSUNG_IM_FIXED_FIND_NODE = "samsungim.fixedFindNode"
     SAMSUNG_IM_HUE_SYNC_MODE = "samsungim.hueSyncMode"
 
     SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT = "synthetic.lightingEffectCircadian"
@@ -233,6 +235,7 @@ class Capability(StrEnum):
     SAMSUNG_VD_AUDIO_INPUT_SOURCE = "samsungvd.audioInputSource"
     SAMSUNG_VD_DEVICE_CATEGORY = "samsungvd.deviceCategory"
     SAMSUNG_VD_FIRMWARE_VERSION = "samsungvd.firmwareVersion"
+    SAMSUNG_VD_LIGHT_CONTROL = "samsungvd.lightControl"
     SAMSUNG_VD_MEDIA_INPUT_SOURCE = "samsungvd.mediaInputSource"
     SAMSUNG_VD_REMOTE_CONTROL = "samsungvd.remoteControl"
     SAMSUNG_VD_SOUND_FROM = "samsungvd.soundFrom"
@@ -321,6 +324,12 @@ class Attribute(StrEnum):
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
     BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
+    SUPPORTED_MODE_MAP = "supportedModeMap"
+    REQUEST_ID = "requestId"
+    SELECTED_MODE = "selectedMode"
+    STREAM_CONTROL = "streamControl"
+    SELECTED_APP_ID = "selectedAppId"
+    ERROR_CODE = "errorCode"
     BABY_DETERGENT_DOSAGE = "babyDetergentDosage"
     BABY_DETERGENT_INITIAL_AMOUNT = "babyDetergentInitialAmount"
     BABY_DETERGENT_ORDER_THRESHOLD = "babyDetergentOrderThreshold"
@@ -541,6 +550,8 @@ class Attribute(StrEnum):
     NUMBER_OF_BUTTONS = "numberOfButtons"
     NUMBER_OF_CONNECTED_DEVICES = "numberOfConnectedDevices"
     OCF_FIRMWARE_VERSION = "mnfv"
+    OCF_RESOURCE_UPDATED_TIME = "ocfResourceUpdatedTime"
+    OCF_RESOURCE_VERSION = "ocfResourceVersion"
     ODOR_LEVEL = "odorLevel"
     OPERATING_STATE = "operatingState"
     OPERATION_TIME = "operationTime"
@@ -1003,6 +1014,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
     # Samsung IM capabilities
     Capability.SAMSUNG_IM_HUE_SYNC_MODE: [Attribute.MODE],
+    Capability.SAMSUNG_IM_FIXED_FIND_NODE: [],
     # Samsung CE capabilities
     Capability.SAMSUNG_CE_DRIVER_VERSION: [Attribute.VERSION_NUMBER],
     Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: [
@@ -1382,6 +1394,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.INPUT_SOURCE,
     ],
     Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Attribute.SUPPORTED_AMBIENT_APPS],
+    Capability.SAMSUNG_VD_LIGHT_CONTROL: [
+        Attribute.SUPPORTED_MODE_MAP,
+        Attribute.REQUEST_ID,
+        Attribute.SELECTED_MODE,
+        Attribute.STREAM_CONTROL,
+        Attribute.SELECTED_APP_ID,
+        Attribute.ERROR_CODE,
+        Attribute.SUPPORTED_MODES,
+    ],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -1557,6 +1578,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_SOUND_MODES_MAP,
         Attribute.SOUND_MODE,
         Attribute.SUPPORTED_SOUND_MODES,
+    ],
+    Capability.CUSTOM_OCF_RESOURCE_VERSION: [
+        Attribute.OCF_RESOURCE_VERSION,
+        Attribute.OCF_RESOURCE_UPDATED_TIME,
     ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [

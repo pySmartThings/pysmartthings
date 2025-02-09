@@ -28,6 +28,7 @@ if TYPE_CHECKING:
         "devices_6",
         "devices_7",
         "devices_8",
+        "devices_9",
     ],
 )
 async def test_fetching_devices(
@@ -131,6 +132,7 @@ async def test_fetching_single_device(
         "im_smarttag2_ble_uwb",
         "da_ac_rac_01001",
         "da_ac_rac_000001",
+        "da_ac_rac_000003",
         "da_sac_wifikit_000001",
         "vd_network_audio_002s",
         "c2c_arlo_pro_3_switch",
@@ -154,6 +156,7 @@ async def test_fetching_single_device(
         "basic_electric_meter",
         "iphone",
         "vd_stv_2017_k",
+        "vd_stv_2023",
         "virtual_calendar",
         "c2c_arlo_siren",
         "c2c_arlo_doorbell_battery",
