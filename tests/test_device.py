@@ -27,6 +27,7 @@ if TYPE_CHECKING:
         "devices_5",
         "devices_6",
         "devices_7",
+        "devices_8",
     ],
 )
 async def test_fetching_devices(
@@ -154,6 +155,11 @@ async def test_fetching_single_device(
         "iphone",
         "vd_stv_2017_k",
         "virtual_calendar",
+        "c2c_arlo_siren",
+        "c2c_arlo_doorbell_battery",
+        "ikea_remote_control",
+        "base_lock",
+        "main_virtual_device",
     ],
 )
 async def test_fetching_status_of_single_device(
