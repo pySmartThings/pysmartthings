@@ -804,6 +804,7 @@ class Command(StrEnum):
     PAUSE = "pause"
     PING = "ping"
     REFRESH = "refresh"
+    SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
     SET_COLOR = "setColor"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_HUE = "setHue"
@@ -1702,6 +1703,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_THERMOSTAT_MODE,
     ],
     Capability.WINDOW_SHADE: [Command.CLOSE, Command.OPEN, Command.PAUSE],
+    Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: [Command.SET_AC_OPTIONAL_MODE],
 }
 
 
