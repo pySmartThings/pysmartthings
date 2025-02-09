@@ -14,6 +14,8 @@ from mashumaro.mixins.orjson import DataClassORJSONMixin
 class Capability(StrEnum):
     """Capability model."""
 
+    ALARM = "alarm"
+    AUDIO_VOLUME = "audioVolume"
     BATTERY = "battery"
     BRIDGE = "bridge"
     COLOR_CONTROL = "colorControl"
@@ -24,6 +26,9 @@ class Capability(StrEnum):
     DOOR_CONTROL = "doorControl"
     DRYER_OPERATING_STATE = "dryerOperatingState"
     EXECUTE = "execute"
+    FIRMWARE_UPDATE = "firmwareUpdate"
+    GEOFENCE = "geofence"
+    GEOLOCATION = "geolocation"
     HEALTH_CHECK = "healthCheck"
     MOTION_SENSOR = "motionSensor"
     OCF = "ocf"
@@ -153,17 +158,29 @@ class Capability(StrEnum):
     SEC_DIAGNOSTICS_INFORMATION = "sec.diagnosticsInformation"
     SEC_WIFI_CONFIGURATION = "sec.wifiConfiguration"
 
+    TAG_E2E_ENCRYPTION = "tag.e2eEncryption"
+    TAG_FACTORY_RESET = "tag.factoryReset"
+    TAG_SEARCHING_STATUS = "tag.searchingStatus"
+    TAG_TAG_BUTTON = "tag.tagButton"
+    TAG_TAG_STATUS = "tag.tagStatus"
+    TAG_UPDATED_INFO = "tag.updatedInfo"
+    TAG_UWB_ACTIVATION = "tag.uwbActivation"
+
 
 class Attribute(StrEnum):
     """Attribute model."""
 
+    ACCURACY = "accuracy"
     ACTIVATED = "activated"
     ADD_RINSE = "addRinse"
+    ALARM = "alarm"
     ALARM_ENABLED = "alarmEnabled"
+    ALTITUDE_ACCURACY = "altitudeAccuracy"
     AMOUNT = "amount"
     AUTO_RECONNECTION = "autoReconnection"
     AVAILABLE_MODULES = "availableModules"
     AVAILABLE_TYPES = "availableTypes"
+    AVAILABLE_VERSION = "availableVersion"
     BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
     BABY_DETERGENT_DOSAGE = "babyDetergentDosage"
     BABY_DETERGENT_INITIAL_AMOUNT = "babyDetergentInitialAmount"
@@ -181,6 +198,9 @@ class Attribute(StrEnum):
     COLOR_TEMPERATURE = "colorTemperature"
     COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
     COMPLETION_TIME = "completionTime"
+    CONNECTED_DEVICE_ID = "connectedDeviceId"
+    CONNECTED_USER_ID = "connectedUserId"
+    CONNECTION = "connection"
     CONNECTION_STATE = "connectionState"
     CONTACT = "contact"
     CONTENTS = "contents"
@@ -188,6 +208,7 @@ class Attribute(StrEnum):
     COOLING_SETPOINT = "coolingSetpoint"
     COOLING_SETPOINT_RANGE = "coolingSetpointRange"
     COURSE = "course"
+    CURRENT_VERSION = "currentVersion"
     CUSTOM_COURSE_CANDIDATES = "customCourseCandidates"
     DATA = "data"
     DATA_MODEL_VERSION = "dmv"
@@ -224,6 +245,8 @@ class Attribute(StrEnum):
     DR_MAX_DURATION = "drMaxDuration"
     DUMP_TYPE = "dumpType"
     ENABLED = "enabled"
+    ENABLE_STATE = "enableState"
+    ENCRYPTION = "encryption"
     ENDPOINT = "endpoint"
     ENERGY_SAVING_INFO = "energySavingInfo"
     ENERGY_SAVING_LEVEL = "energySavingLevel"
@@ -239,7 +262,9 @@ class Attribute(StrEnum):
     FRIDGE_MODE = "fridgeMode"
     FRIDGE_MODE_VALUE = "fridgeModeValue"
     FUEL = "fuel"
+    GEOFENCE = "geofence"
     HARDWARE_VERSION = "mnhw"
+    HEADING = "heading"
     HEALTH_STATUS = "healthStatus"
     HEATED_DRY = "heatedDry"
     HIGH_TEMP_WASH = "highTempWash"
@@ -253,16 +278,22 @@ class Attribute(StrEnum):
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     LAST_UPDATED_DATE = "lastUpdatedDate"
     LAST_UPDATED_TIME = "lastUpdatedTime"
+    LAST_UPDATE_STATUS = "lastUpdateStatus"
+    LAST_UPDATE_STATUS_REASON = "lastUpdateStatusReason"
+    LAST_UPDATE_TIME = "lastUpdateTime"
+    LATITUDE = "latitude"
     LEVEL = "level"
     LEVEL_RANGE = "levelRange"
     LOCK_STATE = "lockState"
     LOG_TYPE = "logType"
+    LONGITUDE = "longitude"
     MACHINE_STATE = "machineState"
     MANUFACTURER_DETAILS_LINK = "mnml"
     MANUFACTURER_NAME = "mnmn"
     MANUFACTURE_DATE = "mndt"
     MAXIMUM_SETPOINT = "maximumSetpoint"
     MAX_NUMBER_OF_PRESETS = "maxNumberOfPresets"
+    METHOD = "method"
     MICOM_ASSAY_CODE = "micomAssayCode"
     MINIMUM_RESERVABLE_TIME = "minimumReservableTime"
     MINIMUM_SETPOINT = "minimumSetpoint"
@@ -343,6 +374,7 @@ class Attribute(StrEnum):
     SATURATION = "saturation"
     SCHEDULED_JOBS = "scheduledJobs"
     SCHEDULED_PHASES = "scheduledPhases"
+    SEARCHING_STATUS = "searchingStatus"
     SELECTED_ZONE = "selectedZone"
     SERIAL_NUMBER = "serialNumber"
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
@@ -354,7 +386,9 @@ class Attribute(StrEnum):
     SPECIALIZED_FUNCTION_CLASSIFICATION = "specializedFunctionClassification"
     SPECIFICATION = "specification"
     SPEC_VERSION = "icv"
+    SPEED = "speed"
     SPEED_BOOSTER = "speedBooster"
+    STATE = "state"
     STATUS = "status"
     STEAM_SOAK = "steamSoak"
     STORM_WASH = "stormWash"
@@ -364,6 +398,7 @@ class Attribute(StrEnum):
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
+    SUPPORTED_COMMANDS = "supportedCommands"
     SUPPORTED_CONTEXTS = "supportedContexts"
     SUPPORTED_COOKTOP_OPERATING_STATE = "supportedCooktopOperatingState"
     SUPPORTED_COURSES = "supportedCourses"
@@ -400,6 +435,8 @@ class Attribute(StrEnum):
     SUPPORT_REPEAT_MODE = "supportRepeatMode"
     SWITCH = "switch"
     SYSTEM_TIME = "st"
+    TAG_BUTTON = "tagButton"
+    TAG_STATUS = "tagStatus"
     TARGET_MODULE = "targetModule"
     TEMPERATURE = "temperature"
     TEMPERATURE_RANGE = "temperatureRange"
@@ -409,10 +446,13 @@ class Attribute(StrEnum):
     TS_ID = "tsId"
     TYPE = "type"
     UNAVAILABLE_COMMANDS = "unavailableCommands"
+    UPDATE_AVAILABLE = "updateAvailable"
+    UWB_ACTIVATION = "uwbActivation"
     VACATION_MODE = "vacationMode"
     VENDOR_ID = "vid"
     VERSION = "version"
     VERSION_NUMBER = "versionNumber"
+    VOLUME = "volume"
     WASHER_AUTO_DETERGENT = "washerAutoDetergent"
     WASHER_AUTO_SOFTENER = "washerAutoSoftener"
     WASHER_CYCLE = "washerCycle"
@@ -464,6 +504,8 @@ class Command(StrEnum):
 
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
+    Capability.ALARM: [Attribute.ALARM],
+    Capability.AUDIO_VOLUME: [Attribute.VOLUME],
     Capability.BATTERY: [Attribute.BATTERY, Attribute.QUANTITY, Attribute.TYPE],
     Capability.COLOR_CONTROL: [Attribute.COLOR, Attribute.HUE, Attribute.SATURATION],
     Capability.COLOR_TEMPERATURE: [
@@ -474,6 +516,27 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DOOR,
     ],
     Capability.EXECUTE: [Attribute.DATA],
+    Capability.FIRMWARE_UPDATE: [
+        Attribute.LAST_UPDATE_STATUS_REASON,
+        Attribute.AVAILABLE_VERSION,
+        Attribute.LAST_UPDATE_STATUS,
+        Attribute.SUPPORTED_COMMANDS,
+        Attribute.STATE,
+        Attribute.UPDATE_AVAILABLE,
+        Attribute.CURRENT_VERSION,
+        Attribute.LAST_UPDATE_TIME,
+    ],
+    Capability.GEOFENCE: [Attribute.ENABLE_STATE, Attribute.GEOFENCE, Attribute.NAME],
+    Capability.GEOLOCATION: [
+        Attribute.METHOD,
+        Attribute.HEADING,
+        Attribute.LATITUDE,
+        Attribute.ACCURACY,
+        Attribute.ALTITUDE_ACCURACY,
+        Attribute.SPEED,
+        Attribute.LONGITUDE,
+        Attribute.LAST_UPDATE_TIME,
+    ],
     Capability.HEALTH_CHECK: [
         Attribute.DEVICE_WATCH_ENROLL,
         Attribute.DEVICE_WATCH_DEVICE_STATUS,
@@ -1002,6 +1065,21 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MIN_VERSION,
         Attribute.PROTOCOL_TYPE,
     ],
+    # Tag capabilities
+    Capability.TAG_E2E_ENCRYPTION: [
+        Attribute.ENCRYPTION,
+    ],
+    Capability.TAG_UPDATED_INFO: [Attribute.CONNECTION],
+    Capability.TAG_SEARCHING_STATUS: [
+        Attribute.SEARCHING_STATUS,
+    ],
+    Capability.TAG_TAG_STATUS: [
+        Attribute.TAG_STATUS,
+        Attribute.CONNECTED_USER_ID,
+        Attribute.CONNECTED_DEVICE_ID,
+    ],
+    Capability.TAG_TAG_BUTTON: [Attribute.TAG_BUTTON],
+    Capability.TAG_UWB_ACTIVATION: [Attribute.UWB_ACTIVATION],
 }
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
