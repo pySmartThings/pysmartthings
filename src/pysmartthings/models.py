@@ -18,7 +18,9 @@ class Capability(StrEnum):
     AIR_CONDITIONER_MODE = "airConditionerMode"
     AIR_QUALITY_SENSOR = "airQualitySensor"
     ALARM = "alarm"
+    AUDIO_MUTE = "audioMute"
     AUDIO_NOTIFICATION = "audioNotification"
+    AUDIO_TRACK_DATA = "audioTrackData"
     AUDIO_VOLUME = "audioVolume"
     BATTERY = "battery"
     BRIDGE = "bridge"
@@ -38,6 +40,7 @@ class Capability(StrEnum):
     GEOFENCE = "geofence"
     GEOLOCATION = "geolocation"
     HEALTH_CHECK = "healthCheck"
+    MEDIA_PLAYBACK = "mediaPlayback"
     MOTION_SENSOR = "motionSensor"
     OCF = "ocf"
     ODOR_SENSOR = "odorSensor"
@@ -83,6 +86,7 @@ class Capability(StrEnum):
     CUSTOM_ELECTRIC_HEPA_FILTER = "custom.electricHepaFilter"
     CUSTOM_ENERGY_TYPE = "custom.energyType"
     CUSTOM_FRIDGE_MODE = "custom.fridgeMode"
+    CUSTOM_HEPA_FILTER = "custom.hepaFilter"
     CUSTOM_JOB_BEGINNING_STATUS = "custom.jobBeginningStatus"
     CUSTOM_OVEN_CAVITY_STATUS = "custom.ovenCavityStatus"
     CUSTOM_PERIODIC_SENSING = "custom.periodicSensing"
@@ -157,6 +161,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE = "samsungce.robotCleanerOperatingState"
     SAMSUNG_CE_RUNESTONE_HOME_CONTEXT = "samsungce.runestoneHomeContext"
     SAMSUNG_CE_SABBATH_MODE = "samsungce.sabbathMode"
+    SAMSUNG_CE_SAC_DISPLAY_CONDITION = "samsungce.sacDisplayCondition"
     SAMSUNG_CE_SCALE_SETTINGS = "samsungce.scaleSettings"
     SAMSUNG_CE_SELF_CHECK = "samsungce.selfCheck"
     SAMSUNG_CE_SILENT_ACTION = "samsungce.silentAction"
@@ -202,6 +207,11 @@ class Capability(StrEnum):
     TAG_UPDATED_INFO = "tag.updatedInfo"
     TAG_UWB_ACTIVATION = "tag.uwbActivation"
 
+    SAMSUNG_VD_AUDIO_GROUP_INFO = "samsungvd.audioGroupInfo"
+    SAMSUNG_VD_AUDIO_INPUT_SOURCE = "samsungvd.audioInputSource"
+    SAMSUNG_VD_SOUND_FROM = "samsungvd.soundFrom"
+    SAMSUNG_VD_THING_STATUS = "samsungvd.thingStatus"
+
 
 class Attribute(StrEnum):
     """Attribute model."""
@@ -222,6 +232,7 @@ class Attribute(StrEnum):
     ALTITUDE_ACCURACY = "altitudeAccuracy"
     ALWAYS_ON = "alwaysOn"
     AMOUNT = "amount"
+    AUDIO_TRACK_DATA = "audioTrackData"
     AUTOMATIC_EXECUTION_MODE = "automaticExecutionMode"
     AUTOMATIC_EXECUTION_SETTING = "automaticExecutionSetting"
     AUTO_CLEANING_MODE = "autoCleaningMode"
@@ -279,6 +290,7 @@ class Attribute(StrEnum):
     DEODOR_FILTER_USAGE = "deodorFilterUsage"
     DEODOR_FILTER_USAGE_STEP = "deodorFilterUsageStep"
     DESCRIPTION = "description"
+    DETAIL_NAME = "detailName"
     DETERGENT_TYPE = "detergentType"
     DEVICE_ID = "di"
     DEVICE_NAME = "n"
@@ -311,6 +323,7 @@ class Attribute(StrEnum):
     DUST_FILTER_USAGE = "dustFilterUsage"
     DUST_FILTER_USAGE_STEP = "dustFilterUsageStep"
     DUST_LEVEL = "dustLevel"
+    ELAPSED_TIME = "elapsedTime"
     ELECTRIC_HEPA_FILTER_CAPACITY = "electricHepaFilterCapacity"
     ELECTRIC_HEPA_FILTER_LAST_RESET_DATE = "electricHepaFilterLastResetDate"
     ELECTRIC_HEPA_FILTER_RESET_TYPE = "electricHepaFilterResetType"
@@ -346,6 +359,12 @@ class Attribute(StrEnum):
     HEADING = "heading"
     HEALTH_STATUS = "healthStatus"
     HEATED_DRY = "heatedDry"
+    HEPA_FILTER_CAPACITY = "hepaFilterCapacity"
+    HEPA_FILTER_LAST_RESET_DATE = "hepaFilterLastResetDate"
+    HEPA_FILTER_RESET_TYPE = "hepaFilterResetType"
+    HEPA_FILTER_STATUS = "hepaFilterStatus"
+    HEPA_FILTER_USAGE = "hepaFilterUsage"
+    HEPA_FILTER_USAGE_STEP = "hepaFilterUsageStep"
     HIGH_TEMP_WASH = "highTempWash"
     HOMING_REASON = "homingReason"
     HOOD_FAN_SPEED = "hoodFanSpeed"
@@ -353,6 +372,7 @@ class Attribute(StrEnum):
     HUE = "hue"
     HUMIDITY = "humidity"
     INITIAL_AMOUNT = "initialAmount"
+    INPUT_SOURCE = "inputSource"
     IS_MAP_BASED_OPERATION_AVAILABLE = "isMapBasedOperationAvailable"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     LAST_SENSING_LEVEL = "lastSensingLevel"
@@ -388,6 +408,7 @@ class Attribute(StrEnum):
     MODEL_NAME = "modelName"
     MODEL_NUMBER = "mnmo"
     MOTION = "motion"
+    MUTE = "mute"
     NAME = "name"
     NEUTRAL_DETERGENT_ALARM_ENABLED = "neutralDetergentAlarmEnabled"
     NEUTRAL_DETERGENT_DOSAGE = "neutralDetergentDosage"
@@ -417,6 +438,7 @@ class Attribute(StrEnum):
     PLAN = "plan"
     PLATFORM_ID = "pi"
     PLATFORM_VERSION = "mnpv"
+    PLAYBACK_STATUS = "playbackStatus"
     POWER = "power"
     POWER_CONSUMPTION = "powerConsumption"
     POWER_LEVEL = "powerLevel"
@@ -517,6 +539,7 @@ class Attribute(StrEnum):
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
+    SUPPORTED_INPUT_SOURCES = "supportedInputSources"
     SUPPORTED_LIGHTING_LEVELS = "supportedLightingLevels"
     SUPPORTED_LIST = "supportedList"
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
@@ -526,6 +549,7 @@ class Attribute(StrEnum):
     SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
     SUPPORTED_OPTIONS = "supportedOptions"
     SUPPORTED_OVEN_MODES = "supportedOvenModes"
+    SUPPORTED_PLAYBACK_COMMANDS = "supportedPlaybackCommands"
     SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
     SUPPORTED_WASHER_RINSE_CYCLES = "supportedWasherRinseCycles"
@@ -551,9 +575,11 @@ class Attribute(StrEnum):
     TIMED_CLEAN_DURATION = "timedCleanDuration"
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
     TIME_LEFT_TO_START = "timeLeftToStart"
+    TOTAL_TIME = "totalTime"
     TS_ID = "tsId"
     TYPE = "type"
     UNAVAILABLE_COMMANDS = "unavailableCommands"
+    UPDATED_TIME = "updatedTime"
     UPDATE_AVAILABLE = "updateAvailable"
     UWB_ACTIVATION = "uwbActivation"
     VACATION_MODE = "vacationMode"
@@ -631,6 +657,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.AIR_QUALITY_SENSOR: [Attribute.AIR_QUALITY],
     Capability.ALARM: [Attribute.ALARM],
+    Capability.AUDIO_MUTE: [Attribute.MUTE],
+    Capability.AUDIO_TRACK_DATA: [
+        Attribute.TOTAL_TIME,
+        Attribute.AUDIO_TRACK_DATA,
+        Attribute.ELAPSED_TIME,
+    ],
     Capability.AUDIO_VOLUME: [Attribute.VOLUME],
     Capability.BATTERY: [Attribute.BATTERY, Attribute.QUANTITY, Attribute.TYPE],
     Capability.BYPASSABLE: [Attribute.BYPASS_STATUS],
@@ -676,6 +708,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DEVICE_WATCH_DEVICE_STATUS,
         Attribute.CHECK_INTERVAL,
         Attribute.HEALTH_STATUS,
+    ],
+    Capability.MEDIA_PLAYBACK: [
+        Attribute.SUPPORTED_PLAYBACK_COMMANDS,
+        Attribute.PLAYBACK_STATUS,
     ],
     Capability.MOTION_SENSOR: [Attribute.MOTION],
     Capability.OCF: [
@@ -1128,6 +1164,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.NUMBER_OF_CONNECTED_DEVICES,
         Attribute.SUB_DEVICES,
     ],
+    Capability.SAMSUNG_CE_SAC_DISPLAY_CONDITION: [Attribute.SWITCH],
+    # Samsung VD capabilities
+    Capability.SAMSUNG_VD_SOUND_FROM: [Attribute.MODE, Attribute.DETAIL_NAME],
+    Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [Attribute.ROLE, Attribute.STATUS],
+    Capability.SAMSUNG_VD_AUDIO_INPUT_SOURCE: [
+        Attribute.SUPPORTED_INPUT_SOURCES,
+        Attribute.INPUT_SOURCE,
+    ],
+    Capability.SAMSUNG_VD_THING_STATUS: [Attribute.UPDATED_TIME, Attribute.STATUS],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -1284,6 +1329,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DO_NOT_DISTURB,
         Attribute.START_TIME,
         Attribute.END_TIME,
+    ],
+    Capability.CUSTOM_HEPA_FILTER: [
+        Attribute.HEPA_FILTER_CAPACITY,
+        Attribute.HEPA_FILTER_STATUS,
+        Attribute.HEPA_FILTER_RESET_TYPE,
+        Attribute.HEPA_FILTER_USAGE_STEP,
+        Attribute.HEPA_FILTER_USAGE,
+        Attribute.HEPA_FILTER_LAST_RESET_DATE,
     ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [

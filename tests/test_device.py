@@ -24,6 +24,8 @@ if TYPE_CHECKING:
         "devices_2",
         "devices_3",
         "devices_4",
+        "devices_5",
+        "devices_6",
     ],
 )
 async def test_fetching_devices(
@@ -127,6 +129,7 @@ async def test_fetching_single_device(
         "im_smarttag2_ble_uwb",
         "da_ac_rac_01001",
         "da_sac_wifikit_000001",
+        "vd_network_audio_002s",
     ],
 )
 async def test_fetching_status_of_single_device(
