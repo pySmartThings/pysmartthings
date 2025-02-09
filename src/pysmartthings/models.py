@@ -42,6 +42,7 @@ class Capability(StrEnum):
     TEMPERATURE_MEASUREMENT = "temperatureMeasurement"
     THERMOSTAT_COOLING_SETPOINT = "thermostatCoolingSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
+    WASHER_OPERATING_STATE = "washerOperatingState"
     WINDOW_SHADE = "windowShade"
 
     CUSTOM_COOKTOP_OPERATING_STATE = "custom.cooktopOperatingState"
@@ -59,11 +60,20 @@ class Capability(StrEnum):
     CUSTOM_OVEN_CAVITY_STATUS = "custom.ovenCavityStatus"
     CUSTOM_SUPPORTED_OPTIONS = "custom.supportedOptions"
     CUSTOM_THERMOSTAT_SETPOINT_CONTROL = "custom.thermostatSetpointControl"
+    CUSTOM_WASHER_AUTO_DETERGENT = "custom.washerAutoDetergent"
+    CUSTOM_WASHER_AUTO_SOFTENER = "custom.washerAutoSoftener"
+    CUSTOM_WASHER_RINSE_CYCLES = "custom.washerRinseCycles"
+    CUSTOM_WASHER_SOIL_LEVEL = "custom.washerSoilLevel"
+    CUSTOM_WASHER_SPIN_LEVEL = "custom.washerSpinLevel"
+    CUSTOM_WASHER_WATER_TEMPERATURE = "custom.washerWaterTemperature"
     CUSTOM_WATER_FILTER = "custom.waterFilter"
 
+    SAMSUNG_CE_AUTO_DISPENSE_DETERGENT = "samsungce.autoDispenseDetergent"
+    SAMSUNG_CE_AUTO_DISPENSE_SOFTENER = "samsungce.autoDispenseSoftener"
     SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
     SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
+    SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT = "samsungce.detergentAutoReplenishment"
     SAMSUNG_CE_DETERGENT_ORDER = "samsungce.detergentOrder"
     SAMSUNG_CE_DETERGENT_STATE = "samsungce.detergentState"
     SAMSUNG_CE_DEVICE_IDENTIFICATION = "samsungce.deviceIdentification"
@@ -85,6 +95,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_DRYER_DRYING_TIME = "samsungce.dryerDryingTime"
     SAMSUNG_CE_DRYER_FREEZE_PREVENT = "samsungce.dryerFreezePrevent"
     SAMSUNG_CE_DRYER_OPERATING_STATE = "samsungce.dryerOperatingState"
+    SAMSUNG_CE_ENERGY_PLANNER = "samsungce.energyPlanner"
     SAMSUNG_CE_FOOD_DEFROST = "samsungce.foodDefrost"
     SAMSUNG_CE_FREEZER_CONVERT_MODE = "samsungce.freezerConvertMode"
     SAMSUNG_CE_FRIDGE_FOOD_LIST = "samsungce.fridgeFoodList"
@@ -110,9 +121,21 @@ class Capability(StrEnum):
     SAMSUNG_CE_RUNESTONE_HOME_CONTEXT = "samsungce.runestoneHomeContext"
     SAMSUNG_CE_SABBATH_MODE = "samsungce.sabbathMode"
     SAMSUNG_CE_SCALE_SETTINGS = "samsungce.scaleSettings"
+    SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT = "samsungce.softenerAutoReplenishment"
+    SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
+    SAMSUNG_CE_SOFTENER_STATE = "samsungce.softenerState"
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
     SAMSUNG_CE_UNAVAILABLE_CAPABILITIES = "samsungce.unavailableCapabilities"
     SAMSUNG_CE_VIEW_INSIDE = "samsungce.viewInside"
+    SAMSUNG_CE_WASHER_BUBBLE_SOAK = "samsungce.washerBubbleSoak"
+    SAMSUNG_CE_WASHER_CYCLE = "samsungce.washerCycle"
+    SAMSUNG_CE_WASHER_CYCLE_PRESET = "samsungce.washerCyclePreset"
+    SAMSUNG_CE_WASHER_DELAY_END = "samsungce.washerDelayEnd"
+    SAMSUNG_CE_WASHER_FREEZE_PREVENT = "samsungce.washerFreezePrevent"
+    SAMSUNG_CE_WASHER_OPERATING_STATE = "samsungce.washerOperatingState"
+    SAMSUNG_CE_WASHER_WASHING_TIME = "samsungce.washerWashingTime"
+    SAMSUNG_CE_WASHER_WATER_LEVEL = "samsungce.washerWaterLevel"
+    SAMSUNG_CE_WASHER_WATER_VALVE = "samsungce.washerWaterValve"
     SAMSUNG_CE_WATER_CONSUMPTION_REPORT = "samsungce.waterConsumptionReport"
     SAMSUNG_CE_WEIGHT_MEASUREMENT = "samsungce.weightMeasurement"
     SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION = "samsungce.weightMeasurementCalibration"
@@ -124,6 +147,7 @@ class Capability(StrEnum):
     SYNTHETIC_FADE_LIGHTNING_EFFECT = "synthetic.lightingEffectFade"
 
     HCA_DRYER_MODE = "hca.dryerMode"
+    HCA_WASHER_MODE = "hca.washerMode"
 
     SEC_DIAGNOSTICS_INFORMATION = "sec.diagnosticsInformation"
     SEC_WIFI_CONFIGURATION = "sec.wifiConfiguration"
@@ -135,8 +159,16 @@ class Attribute(StrEnum):
     ACTIVATED = "activated"
     ADD_RINSE = "addRinse"
     ALARM_ENABLED = "alarmEnabled"
+    AMOUNT = "amount"
     AUTO_RECONNECTION = "autoReconnection"
     AVAILABLE_MODULES = "availableModules"
+    AVAILABLE_TYPES = "availableTypes"
+    BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
+    BABY_DETERGENT_DOSAGE = "babyDetergentDosage"
+    BABY_DETERGENT_INITIAL_AMOUNT = "babyDetergentInitialAmount"
+    BABY_DETERGENT_ORDER_THRESHOLD = "babyDetergentOrderThreshold"
+    BABY_DETERGENT_REMAINING_AMOUNT = "babyDetergentRemainingAmount"
+    BABY_DETERGENT_TYPE = "babyDetergentType"
     BATTERY = "battery"
     BINARY_ID = "binaryId"
     BRIGHTNESS_LEVEL = "brightnessLevel"
@@ -164,6 +196,7 @@ class Attribute(StrEnum):
     DEFINED_RECIPE = "definedRecipe"
     DEFROST = "defrost"
     DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
+    DENSITY = "density"
     DESCRIPTION = "description"
     DETERGENT_TYPE = "detergentType"
     DEVICE_ID = "di"
@@ -230,6 +263,7 @@ class Attribute(StrEnum):
     MAXIMUM_SETPOINT = "maximumSetpoint"
     MAX_NUMBER_OF_PRESETS = "maxNumberOfPresets"
     MICOM_ASSAY_CODE = "micomAssayCode"
+    MINIMUM_RESERVABLE_TIME = "minimumReservableTime"
     MINIMUM_SETPOINT = "minimumSetpoint"
     MIN_VERSION = "minVersion"
     MN_ID = "mnId"
@@ -240,6 +274,12 @@ class Attribute(StrEnum):
     MODEL_NUMBER = "mnmo"
     MOTION = "motion"
     NAME = "name"
+    NEUTRAL_DETERGENT_ALARM_ENABLED = "neutralDetergentAlarmEnabled"
+    NEUTRAL_DETERGENT_DOSAGE = "neutralDetergentDosage"
+    NEUTRAL_DETERGENT_INITIAL_AMOUNT = "neutralDetergentInitialAmount"
+    NEUTRAL_DETERGENT_ORDER_THRESHOLD = "neutralDetergentOrderThreshold"
+    NEUTRAL_DETERGENT_REMAINING_AMOUNT = "neutralDetergentRemainingAmount"
+    NEUTRAL_DETERGENT_TYPE = "neutralDetergentType"
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
     NOTIFICATION_TEMPLATE_I_D = "notificationTemplateID"
     OPERATING_STATE = "operatingState"
@@ -253,6 +293,7 @@ class Attribute(StrEnum):
     OVEN_MODE = "ovenMode"
     OVEN_SETPOINT = "ovenSetpoint"
     OVEN_SETPOINT_RANGE = "ovenSetpointRange"
+    PLAN = "plan"
     PLATFORM_ID = "pi"
     PLATFORM_VERSION = "mnpv"
     POWER_CONSUMPTION = "powerConsumption"
@@ -265,9 +306,22 @@ class Attribute(StrEnum):
     QUANTITY = "quantity"
     RAPID_COOLING = "rapidCooling"
     RAPID_FREEZING = "rapidFreezing"
+    RECOMMENDED_AMOUNT = "recommendedAmount"
     REFERENCE_TABLE = "referenceTable"
     REFRESH_RESULT = "refreshResult"
     REGION_CODE = "regionCode"
+    REGULAR_DETERGENT_ALARM_ENABLED = "regularDetergentAlarmEnabled"
+    REGULAR_DETERGENT_DOSAGE = "regularDetergentDosage"
+    REGULAR_DETERGENT_INITIAL_AMOUNT = "regularDetergentInitialAmount"
+    REGULAR_DETERGENT_ORDER_THRESHOLD = "regularDetergentOrderThreshold"
+    REGULAR_DETERGENT_REMAINING_AMOUNT = "regularDetergentRemainingAmount"
+    REGULAR_DETERGENT_TYPE = "regularDetergentType"
+    REGULAR_SOFTENER_ALARM_ENABLED = "regularSoftenerAlarmEnabled"
+    REGULAR_SOFTENER_DOSAGE = "regularSoftenerDosage"
+    REGULAR_SOFTENER_INITIAL_AMOUNT = "regularSoftenerInitialAmount"
+    REGULAR_SOFTENER_ORDER_THRESHOLD = "regularSoftenerOrderThreshold"
+    REGULAR_SOFTENER_REMAINING_AMOUNT = "regularSoftenerRemainingAmount"
+    REGULAR_SOFTENER_TYPE = "regularSoftenerType"
     RELEASE_YEAR = "releaseYear"
     REMAINING_AMOUNT = "remainingAmount"
     REMAINING_TIME = "remainingTime"
@@ -287,6 +341,7 @@ class Attribute(StrEnum):
     SANITIZING_WASH = "sanitizingWash"
     SATURATION = "saturation"
     SCHEDULED_JOBS = "scheduledJobs"
+    SCHEDULED_PHASES = "scheduledPhases"
     SELECTED_ZONE = "selectedZone"
     SERIAL_NUMBER = "serialNumber"
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
@@ -294,6 +349,7 @@ class Attribute(StrEnum):
     SETTABLE_MIN_FAN_SPEED = "settableMinFanSpeed"
     SETUP_ID = "setupId"
     SIGNIN_PERMISSION = "signinPermission"
+    SOFTENER_TYPE = "softenerType"
     SPECIALIZED_FUNCTION_CLASSIFICATION = "specializedFunctionClassification"
     SPECIFICATION = "specification"
     SPEC_VERSION = "icv"
@@ -303,6 +359,7 @@ class Attribute(StrEnum):
     STORM_WASH = "stormWash"
     SUPPORTED_ACTIONS = "supportedActions"
     SUPPORTED_AGING_METHODS = "supportedAgingMethods"
+    SUPPORTED_AMOUNT = "supportedAmount"
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
@@ -310,6 +367,7 @@ class Attribute(StrEnum):
     SUPPORTED_COOKTOP_OPERATING_STATE = "supportedCooktopOperatingState"
     SUPPORTED_COURSES = "supportedCourses"
     SUPPORTED_CYCLES = "supportedCycles"
+    SUPPORTED_DENSITY = "supportedDensity"
     SUPPORTED_DRYER_DRY_LEVEL = "supportedDryerDryLevel"
     SUPPORTED_DRYING_TEMPERATURE = "supportedDryingTemperature"
     SUPPORTED_DRYING_TIME = "supportedDryingTime"
@@ -328,6 +386,13 @@ class Attribute(StrEnum):
     SUPPORTED_OVEN_MODES = "supportedOvenModes"
     SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
+    SUPPORTED_WASHER_RINSE_CYCLES = "supportedWasherRinseCycles"
+    SUPPORTED_WASHER_SOIL_LEVEL = "supportedWasherSoilLevel"
+    SUPPORTED_WASHER_SPIN_LEVEL = "supportedWasherSpinLevel"
+    SUPPORTED_WASHER_WATER_TEMPERATURE = "supportedWasherWaterTemperature"
+    SUPPORTED_WASHING_TIMES = "supportedWashingTimes"
+    SUPPORTED_WATER_LEVEL = "supportedWaterLevel"
+    SUPPORTED_WATER_VALVE = "supportedWaterValve"
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
     SUPPORTED_WI_FI_FREQ = "supportedWiFiFreq"
     SUPPORT_LINK = "mnsl"
@@ -347,7 +412,17 @@ class Attribute(StrEnum):
     VENDOR_ID = "vid"
     VERSION = "version"
     VERSION_NUMBER = "versionNumber"
+    WASHER_AUTO_DETERGENT = "washerAutoDetergent"
+    WASHER_AUTO_SOFTENER = "washerAutoSoftener"
+    WASHER_CYCLE = "washerCycle"
+    WASHER_JOB_PHASE = "washerJobPhase"
+    WASHER_JOB_STATE = "washerJobState"
+    WASHER_RINSE_CYCLES = "washerRinseCycles"
+    WASHER_SOIL_LEVEL = "washerSoilLevel"
+    WASHER_SPIN_LEVEL = "washerSpinLevel"
+    WASHER_WATER_TEMPERATURE = "washerWaterTemperature"
     WASHING_COURSE = "washingCourse"
+    WASHING_TIME = "washingTime"
     WATER_CONSUMPTION = "waterConsumption"
     WATER_FILTER_CAPACITY = "waterFilterCapacity"
     WATER_FILTER_LAST_RESET_DATE = "waterFilterLastResetDate"
@@ -355,7 +430,9 @@ class Attribute(StrEnum):
     WATER_FILTER_STATUS = "waterFilterStatus"
     WATER_FILTER_USAGE = "waterFilterUsage"
     WATER_FILTER_USAGE_STEP = "waterFilterUsageStep"
+    WATER_LEVEL = "waterLevel"
     WATER_USAGE_MAX = "waterUsageMax"
+    WATER_VALVE = "waterValve"
     WEIGHT = "weight"
     WELCOME_MESSAGE = "welcomeMessage"
     WINDOW_SHADE = "windowShade"
@@ -481,8 +558,18 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ROBOT_CLEANER_TURBO_MODE: [Attribute.ROBOT_CLEANER_TURBO_MODE],
     Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_CLEANING_MODE: [Attribute.ROBOT_CLEANER_CLEANING_MODE],
+    Capability.WASHER_OPERATING_STATE: [
+        Attribute.COMPLETION_TIME,
+        Attribute.MACHINE_STATE,
+        Attribute.WASHER_JOB_STATE,
+        Attribute.SUPPORTED_MACHINE_STATES,
+    ],
     # HCA capabilities
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
+    Capability.HCA_WASHER_MODE: [
+        Attribute.MODE,
+        Attribute.SUPPORTED_MODES,
+    ],
     # Synthetic capabilities
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
@@ -699,6 +786,108 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORT_REPEAT_MODE,
         Attribute.CLEANING_MODE,
     ],
+    Capability.SAMSUNG_CE_WASHER_DELAY_END: [
+        Attribute.REMAINING_TIME,
+        Attribute.MINIMUM_RESERVABLE_TIME,
+    ],
+    Capability.SAMSUNG_CE_WASHER_WATER_LEVEL: [
+        Attribute.WATER_LEVEL,
+        Attribute.SUPPORTED_WATER_LEVEL,
+    ],
+    Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: [
+        Attribute.REGULAR_SOFTENER_TYPE,
+        Attribute.REGULAR_SOFTENER_ALARM_ENABLED,
+        Attribute.REGULAR_SOFTENER_INITIAL_AMOUNT,
+        Attribute.REGULAR_SOFTENER_REMAINING_AMOUNT,
+        Attribute.REGULAR_SOFTENER_DOSAGE,
+        Attribute.REGULAR_SOFTENER_ORDER_THRESHOLD,
+    ],
+    Capability.SAMSUNG_CE_AUTO_DISPENSE_SOFTENER: [
+        Attribute.REMAINING_AMOUNT,
+        Attribute.AMOUNT,
+        Attribute.SUPPORTED_DENSITY,
+        Attribute.DENSITY,
+        Attribute.SUPPORTED_AMOUNT,
+    ],
+    Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: [
+        Attribute.REMAINING_AMOUNT,
+        Attribute.AMOUNT,
+        Attribute.SUPPORTED_DENSITY,
+        Attribute.DENSITY,
+        Attribute.SUPPORTED_AMOUNT,
+        Attribute.AVAILABLE_TYPES,
+        Attribute.TYPE,
+        Attribute.RECOMMENDED_AMOUNT,
+    ],
+    Capability.SAMSUNG_CE_WASHER_WATER_VALVE: [
+        Attribute.WATER_VALVE,
+        Attribute.SUPPORTED_WATER_VALVE,
+    ],
+    Capability.SAMSUNG_CE_WASHER_FREEZE_PREVENT: [
+        Attribute.OPERATING_STATE,
+    ],
+    Capability.SAMSUNG_CE_WASHER_CYCLE: [
+        Attribute.SUPPORTED_CYCLES,
+        Attribute.WASHER_CYCLE,
+        Attribute.REFERENCE_TABLE,
+        Attribute.SPECIALIZED_FUNCTION_CLASSIFICATION,
+    ],
+    Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: [
+        Attribute.WASHER_JOB_STATE,
+        Attribute.OPERATING_STATE,
+        Attribute.SUPPORTED_OPERATING_STATES,
+        Attribute.SCHEDULED_JOBS,
+        Attribute.SCHEDULED_PHASES,
+        Attribute.PROGRESS,
+        Attribute.REMAINING_TIME_STR,
+        Attribute.WASHER_JOB_PHASE,
+        Attribute.OPERATION_TIME,
+        Attribute.REMAINING_TIME,
+    ],
+    Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: [
+        Attribute.NEUTRAL_DETERGENT_TYPE,
+        Attribute.REGULAR_DETERGENT_REMAINING_AMOUNT,
+        Attribute.BABY_DETERGENT_REMAINING_AMOUNT,
+        Attribute.NEUTRAL_DETERGENT_REMAINING_AMOUNT,
+        Attribute.NEUTRAL_DETERGENT_ALARM_ENABLED,
+        Attribute.NEUTRAL_DETERGENT_ORDER_THRESHOLD,
+        Attribute.BABY_DETERGENT_INITIAL_AMOUNT,
+        Attribute.BABY_DETERGENT_TYPE,
+        Attribute.NEUTRAL_DETERGENT_INITIAL_AMOUNT,
+        Attribute.REGULAR_DETERGENT_DOSAGE,
+        Attribute.BABY_DETERGENT_DOSAGE,
+        Attribute.REGULAR_DETERGENT_ORDER_THRESHOLD,
+        Attribute.REGULAR_DETERGENT_TYPE,
+        Attribute.REGULAR_DETERGENT_INITIAL_AMOUNT,
+        Attribute.REGULAR_DETERGENT_ALARM_ENABLED,
+        Attribute.NEUTRAL_DETERGENT_DOSAGE,
+        Attribute.BABY_DETERGENT_ORDER_THRESHOLD,
+        Attribute.BABY_DETERGENT_ALARM_ENABLED,
+    ],
+    Capability.SAMSUNG_CE_SOFTENER_ORDER: [
+        Attribute.ALARM_ENABLED,
+        Attribute.ORDER_THRESHOLD,
+    ],
+    Capability.CUSTOM_WASHER_SOIL_LEVEL: [
+        Attribute.SUPPORTED_WASHER_SOIL_LEVEL,
+        Attribute.WASHER_SOIL_LEVEL,
+    ],
+    Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Attribute.STATUS],
+    Capability.SAMSUNG_CE_WASHER_CYCLE_PRESET: [
+        Attribute.MAX_NUMBER_OF_PRESETS,
+        Attribute.PRESETS,
+    ],
+    Capability.SAMSUNG_CE_SOFTENER_STATE: [
+        Attribute.REMAINING_AMOUNT,
+        Attribute.DOSAGE,
+        Attribute.SOFTENER_TYPE,
+        Attribute.INITIAL_AMOUNT,
+    ],
+    Capability.SAMSUNG_CE_ENERGY_PLANNER: [Attribute.DATA, Attribute.PLAN],
+    Capability.SAMSUNG_CE_WASHER_WASHING_TIME: [
+        Attribute.SUPPORTED_WASHING_TIMES,
+        Attribute.WASHING_TIME,
+    ],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -774,6 +963,24 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.CUSTOM_DISABLED_COMPONENTS: [
         Attribute.DISABLED_COMPONENTS,
+    ],
+    Capability.CUSTOM_WASHER_WATER_TEMPERATURE: [
+        Attribute.WASHER_WATER_TEMPERATURE,
+        Attribute.SUPPORTED_WASHER_WATER_TEMPERATURE,
+    ],
+    Capability.CUSTOM_WASHER_AUTO_SOFTENER: [
+        Attribute.WASHER_AUTO_SOFTENER,
+    ],
+    Capability.CUSTOM_WASHER_RINSE_CYCLES: [
+        Attribute.WASHER_RINSE_CYCLES,
+        Attribute.SUPPORTED_WASHER_RINSE_CYCLES,
+    ],
+    Capability.CUSTOM_WASHER_AUTO_DETERGENT: [
+        Attribute.WASHER_AUTO_DETERGENT,
+    ],
+    Capability.CUSTOM_WASHER_SPIN_LEVEL: [
+        Attribute.WASHER_SPIN_LEVEL,
+        Attribute.SUPPORTED_WASHER_SPIN_LEVEL,
     ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [

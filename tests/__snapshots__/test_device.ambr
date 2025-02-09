@@ -5623,6 +5623,1156 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[da_wm_wm_000001]
+  dict({
+    'hca.main': dict({
+      <Capability.HCA_WASHER_MODE: 'hca.washerMode'>: dict({
+        <Attribute.MODE: 'mode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 623000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normal',
+        }),
+        <Attribute.SUPPORTED_MODES: 'supportedModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['normal', 'quickWash']",
+        }),
+      }),
+    }),
+    'main': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 7, 1, 16, 13, 35, 173000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['samsungce.autoDispenseDetergent', 'samsungce.autoDispenseSoftener', 'samsungce.waterConsumptionReport', 'samsungce.washerCyclePreset', 'samsungce.welcomeMessage', 'samsungce.dongleSoftwareInstallation', 'sec.wifiConfiguration', 'samsungce.quickControl', 'samsungce.deviceInfoPrivate', 'samsungce.energyPlanner', 'demandResponseLoadControl', 'samsungce.softenerAutoReplenishment', 'samsungce.softenerOrder', 'samsungce.softenerState', 'samsungce.washerBubbleSoak', 'samsungce.washerFreezePrevent', 'custom.dryerDryLevel', 'samsungce.washerWaterLevel', 'samsungce.washerWaterValve', 'samsungce.washerWashingTime', 'custom.washerAutoDetergent', 'custom.washerAutoSoftener']",
+        }),
+      }),
+      <Capability.CUSTOM_DRYER_DRY_LEVEL: 'custom.dryerDryLevel'>: dict({
+        <Attribute.DRYER_DRY_LEVEL: 'dryerDryLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_DRYER_DRY_LEVEL: 'supportedDryerDryLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>: dict({
+        <Attribute.DR_MAX_DURATION: 'drMaxDuration'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 6, 15, 14, 11, 37, 255000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 99999999,
+        }),
+        <Attribute.ENERGY_SAVING_INFO: 'energySavingInfo'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_LEVEL: 'energySavingLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_OPERATION: 'energySavingOperation'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_OPERATION_SUPPORT: 'energySavingOperationSupport'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 6, 15, 14, 11, 37, 255000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ENERGY_SAVING_SUPPORT: 'energySavingSupport'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 6, 15, 14, 26, 38, 584000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ENERGY_TYPE: 'energyType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 6, 15, 14, 11, 34, 909000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2.0',
+        }),
+        <Attribute.NOTIFICATION_TEMPLATE_I_D: 'notificationTemplateID'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_ENERGY_SAVING_LEVELS: 'supportedEnergySavingLevels'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_JOB_BEGINNING_STATUS: 'custom.jobBeginningStatus'>: dict({
+        <Attribute.JOB_BEGINNING_STATUS: 'jobBeginningStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_SUPPORTED_OPTIONS: 'custom.supportedOptions'>: dict({
+        <Attribute.COURSE: 'course'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REFERENCE_TABLE: 'referenceTable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 623000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'id': 'Table_00',
+          }),
+        }),
+        <Attribute.SUPPORTED_COURSES: 'supportedCourses'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['01', '70', '55', '71', '72', '77', 'E5', '57', '73', '74', '75', '78']",
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_AUTO_DETERGENT: 'custom.washerAutoDetergent'>: dict({
+        <Attribute.WASHER_AUTO_DETERGENT: 'washerAutoDetergent'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_AUTO_SOFTENER: 'custom.washerAutoSoftener'>: dict({
+        <Attribute.WASHER_AUTO_SOFTENER: 'washerAutoSoftener'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_RINSE_CYCLES: 'custom.washerRinseCycles'>: dict({
+        <Attribute.SUPPORTED_WASHER_RINSE_CYCLES: 'supportedWasherRinseCycles'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 760000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['0', '1', '2', '3', '4', '5']",
+        }),
+        <Attribute.WASHER_RINSE_CYCLES: 'washerRinseCycles'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2',
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_SOIL_LEVEL: 'custom.washerSoilLevel'>: dict({
+        <Attribute.SUPPORTED_WASHER_SOIL_LEVEL: 'supportedWasherSoilLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 760000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['none', 'extraLight', 'light', 'normal', 'heavy', 'extraHeavy']",
+        }),
+        <Attribute.WASHER_SOIL_LEVEL: 'washerSoilLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normal',
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_SPIN_LEVEL: 'custom.washerSpinLevel'>: dict({
+        <Attribute.SUPPORTED_WASHER_SPIN_LEVEL: 'supportedWasherSpinLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 760000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['rinseHold', 'noSpin', 'low', 'medium', 'high', 'extraHigh']",
+        }),
+        <Attribute.WASHER_SPIN_LEVEL: 'washerSpinLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'high',
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_WATER_TEMPERATURE: 'custom.washerWaterTemperature'>: dict({
+        <Attribute.SUPPORTED_WASHER_WATER_TEMPERATURE: 'supportedWasherWaterTemperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 760000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['none', 'tapCold', 'cold', 'warm', 'hot', 'extraHot']",
+        }),
+        <Attribute.WASHER_WATER_TEMPERATURE: 'washerWaterTemperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'warm',
+        }),
+      }),
+      <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>: dict({
+        <Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS: 'drlcStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': dict({
+            'href': '/information/vs/0',
+          }),
+          'timestamp': datetime.datetime(2023, 8, 6, 16, 52, 15, 994000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'payload': dict({
+              'if': list([
+                'oic.if.baseline',
+                'oic.if.a',
+              ]),
+              'rt': list([
+                'x.com.samsung.da.information',
+              ]),
+              'x.com.samsung.da.description': 'DA_WM_TP2_20_COMMON_WF6300R/DC92-02338B_0080',
+              'x.com.samsung.da.diagDumpType': 'file',
+              'x.com.samsung.da.diagEndPoint': 'SSM',
+              'x.com.samsung.da.diagLogType': list([
+                'errCode',
+                'dump',
+              ]),
+              'x.com.samsung.da.diagMinVersion': '1.0',
+              'x.com.samsung.da.diagMnid': '0AJT',
+              'x.com.samsung.da.diagProtocolType': 'WIFI_HTTPS',
+              'x.com.samsung.da.diagSetupid': '210',
+              'x.com.samsung.da.items': list([
+                dict({
+                  'x.com.samsung.da.description': 'DA_WM_TP2_20_COMMON|20233741|2001000100131100022B010000000000',
+                  'x.com.samsung.da.id': '0',
+                  'x.com.samsung.da.newVersionAvailable': '0',
+                  'x.com.samsung.da.number': '02674A220725(F541)',
+                  'x.com.samsung.da.type': 'Software',
+                }),
+                dict({
+                  'x.com.samsung.da.description': 'DA_WM_TP2_20_COMMON',
+                  'x.com.samsung.da.id': '1',
+                  'x.com.samsung.da.newVersionAvailable': '0',
+                  'x.com.samsung.da.number': '18112816,20050607',
+                  'x.com.samsung.da.type': 'Firmware',
+                }),
+              ]),
+              'x.com.samsung.da.modelNum': 'DA_WM_TP2_20_COMMON|20233741|2001000100131100022B010000000000',
+              'x.com.samsung.da.otnDUID': 'U7CNQWBWJM5U4',
+              'x.com.samsung.da.serialNum': '01FW57AR401623N',
+            }),
+          }),
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'f984b91d-f250-9d42-3436-33f09a422a47',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON_30230804',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'MediaTek',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON|20233741|2001000100131100022B010000000000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TizenRT 2.0 + IPv6',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DAWIT 2.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[washer] Samsung',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'f984b91d-f250-9d42-3436-33f09a422a47',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 131000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA-WM-WM-000001',
+        }),
+      }),
+      <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>: dict({
+        <Attribute.POWER_CONSUMPTION: 'powerConsumption'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 703000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'deltaEnergy': 0,
+            'end': '2025-02-07T03:09:45Z',
+            'energy': 352800,
+            'energySaved': 0,
+            'persistedEnergy': 0,
+            'power': 0,
+            'powerEnergy': 0.0,
+            'start': '2025-02-07T03:09:24Z',
+          }),
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>: dict({
+        <Attribute.REMOTE_CONTROL_ENABLED: 'remoteControlEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 634000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'false',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: 'samsungce.autoDispenseDetergent'>: dict({
+        <Attribute.AMOUNT: 'amount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.AVAILABLE_TYPES: 'availableTypes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DENSITY: 'density'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RECOMMENDED_AMOUNT: 'recommendedAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_AMOUNT: 'supportedAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_DENSITY: 'supportedDensity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_AUTO_DISPENSE_SOFTENER: 'samsungce.autoDispenseSoftener'>: dict({
+        <Attribute.AMOUNT: 'amount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DENSITY: 'density'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_AMOUNT: 'supportedAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_DENSITY: 'supportedDensity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: 'samsungce.detergentAutoReplenishment'>: dict({
+        <Attribute.BABY_DETERGENT_ALARM_ENABLED: 'babyDetergentAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_DOSAGE: 'babyDetergentDosage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_INITIAL_AMOUNT: 'babyDetergentInitialAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_ORDER_THRESHOLD: 'babyDetergentOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_REMAINING_AMOUNT: 'babyDetergentRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_TYPE: 'babyDetergentType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_ALARM_ENABLED: 'neutralDetergentAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_DOSAGE: 'neutralDetergentDosage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_INITIAL_AMOUNT: 'neutralDetergentInitialAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_ORDER_THRESHOLD: 'neutralDetergentOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_REMAINING_AMOUNT: 'neutralDetergentRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_TYPE: 'neutralDetergentType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REGULAR_DETERGENT_ALARM_ENABLED: 'regularDetergentAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.REGULAR_DETERGENT_DOSAGE: 'regularDetergentDosage'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_DETERGENT_INITIAL_AMOUNT: 'regularDetergentInitialAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_DETERGENT_ORDER_THRESHOLD: 'regularDetergentOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_DETERGENT_REMAINING_AMOUNT: 'regularDetergentRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_DETERGENT_TYPE: 'regularDetergentType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DETERGENT_ORDER: 'samsungce.detergentOrder'>: dict({
+        <Attribute.ALARM_ENABLED: 'alarmEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ORDER_THRESHOLD: 'orderThreshold'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DETERGENT_STATE: 'samsungce.detergentState'>: dict({
+        <Attribute.DETERGENT_TYPE: 'detergentType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 6, 1, 22, 52, 19, 999000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+        <Attribute.DOSAGE: 'dosage'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.INITIAL_AMOUNT: 'initialAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>: dict({
+        <Attribute.BINARY_ID: 'binaryId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON',
+        }),
+        <Attribute.DESCRIPTION: 'description'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON_WF6300R/DC92-02338B_0080',
+        }),
+        <Attribute.MICOM_ASSAY_CODE: 'micomAssayCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '20233741',
+        }),
+        <Attribute.MODEL_CLASSIFICATION_CODE: 'modelClassificationCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2001000100131100022B010000000000',
+        }),
+        <Attribute.MODEL_NAME: 'modelName'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RELEASE_YEAR: 'releaseYear'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER: 'serialNumber'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER_EXTRA: 'serialNumberExtra'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: 'samsungce.dongleSoftwareInstallation'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 6, 15, 14, 11, 34, 909000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'completed',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>: dict({
+        <Attribute.VERSION_NUMBER: 'versionNumber'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 2, 14, 52, 963000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 24110101,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_ENERGY_PLANNER: 'samsungce.energyPlanner'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PLAN: 'plan'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>: dict({
+        <Attribute.LOCK_STATE: 'lockState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 407000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'unlocked',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_QUICK_CONTROL: 'samsungce.quickControl'>: dict({
+        <Attribute.VERSION: 'version'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: 'samsungce.softenerAutoReplenishment'>: dict({
+        <Attribute.REGULAR_SOFTENER_ALARM_ENABLED: 'regularSoftenerAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REGULAR_SOFTENER_DOSAGE: 'regularSoftenerDosage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REGULAR_SOFTENER_INITIAL_AMOUNT: 'regularSoftenerInitialAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REGULAR_SOFTENER_ORDER_THRESHOLD: 'regularSoftenerOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REGULAR_SOFTENER_REMAINING_AMOUNT: 'regularSoftenerRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REGULAR_SOFTENER_TYPE: 'regularSoftenerType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTENER_ORDER: 'samsungce.softenerOrder'>: dict({
+        <Attribute.ALARM_ENABLED: 'alarmEnabled'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ORDER_THRESHOLD: 'orderThreshold'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTENER_STATE: 'samsungce.softenerState'>: dict({
+        <Attribute.DOSAGE: 'dosage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.INITIAL_AMOUNT: 'initialAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SOFTENER_TYPE: 'softenerType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>: dict({
+        <Attribute.AVAILABLE_MODULES: 'availableModules'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 1, 23, 36, 22, 798000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+        <Attribute.LAST_UPDATED_DATE: 'lastUpdatedDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEW_VERSION_AVAILABLE: 'newVersionAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 548000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OTN_D_U_I_D: 'otnDUID'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'U7CNQWBWJM5U4',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TARGET_MODULE: 'targetModule'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 548000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+          }),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: 'samsungce.washerBubbleSoak'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_CYCLE: 'samsungce.washerCycle'>: dict({
+        <Attribute.REFERENCE_TABLE: 'referenceTable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 6, 1, 22, 52, 20, 68000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'id': 'Table_00',
+          }),
+        }),
+        <Attribute.SPECIALIZED_FUNCTION_CLASSIFICATION: 'specializedFunctionClassification'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 152000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 4,
+        }),
+        <Attribute.SUPPORTED_CYCLES: 'supportedCycles'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 22, 13, 27, 760000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'cycle': '01', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C33E', 'default': 'normal', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A43B', 'default': 'high', 'options': ['rinseHold', 'noSpin', 'medium', 'high', 'extraHigh']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '833E', 'default': 'warm', 'options': ['tapCold', 'cold', 'warm', 'hot', 'extraHot']}}}, {'cycle': '70', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C53E', 'default': 'extraHeavy', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A53F', 'default': 'extraHigh', 'options': ['rinseHold', 'noSpin', 'low', 'medium', 'high', 'extraHigh']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '843E', 'default': 'hot', 'options': ['tapCold', 'cold', 'warm', 'hot', 'extraHot']}}}, {'cycle': '55', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C33E', 'default': 'normal', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A43F', 'default': 'high', 'options': ['rinseHold', 'noSpin', 'low', 'medium', 'high', 'extraHigh']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '831E', 'default': 'warm', 'options': ['tapCold', 'cold', 'warm', 'hot']}}}, {'cycle': '71', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C33E', 'default': 'normal', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A20F', 'default': 'low', 'options': ['rinseHold', 'noSpin', 'low', 'medium']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '830E', 'default': 'warm', 'options': ['tapCold', 'cold', 'warm']}}}, {'cycle': '72', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C33E', 'default': 'normal', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A43F', 'default': 'high', 'options': ['rinseHold', 'noSpin', 'low', 'medium', 'high', 'extraHigh']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '8520', 'default': 'extraHot', 'options': ['extraHot']}}}, {'cycle': '77', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C33E', 'default': 'normal', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A21F', 'default': 'low', 'options': ['rinseHold', 'noSpin', 'low', 'medium', 'high']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '830E', 'default': 'warm', 'options': ['tapCold', 'cold', 'warm']}}}, {'cycle': 'E5', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C53E', 'default': 'extraHeavy', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A43F', 'default': 'high', 'options': ['rinseHold', 'noSpin', 'low', 'medium', 'high', 'extraHigh']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '831E', 'default': 'warm', 'options': ['tapCold', 'cold', 'warm', 'hot']}}}, {'cycle': '57', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C000', 'default': 'none', 'options': []}, 'spinLevel': {'raw': 'A520', 'default': 'extraHigh', 'options': ['extraHigh']}, 'rinseCycle': {'raw': '9204', 'default': '2', 'options': ['2']}, 'waterTemperature': {'raw': '8520', 'default': 'extraHot', 'options': ['extraHot']}}}, {'cycle': '73', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C000', 'default': 'none', 'options': []}, 'spinLevel': {'raw': 'A43F', 'default': 'high', 'options': ['rinseHold', 'noSpin', 'low', 'medium', 'high', 'extraHigh']}, 'rinseCycle': {'raw': '913F', 'default': '1', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '8000', 'default': 'none', 'options': []}}}, {'cycle': '74', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C33E', 'default': 'normal', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A207', 'default': 'low', 'options': ['rinseHold', 'noSpin', 'low']}, 'rinseCycle': {'raw': '923F', 'default': '2', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '830E', 'default': 'warm', 'options': ['tapCold', 'cold', 'warm']}}}, {'cycle': '75', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C33E', 'default': 'normal', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A30F', 'default': 'medium', 'options': ['rinseHold', 'noSpin', 'low', 'medium']}, 'rinseCycle': {'raw': '920F', 'default': '2', 'options': ['0', '1', '2', '3']}, 'waterTemperature': {'raw': '810E', 'default': 'tapCold', 'options': ['tapCold', 'cold', 'warm']}}}, {'cycle': '78', 'cycleType': 'washingOnly', 'supportedOptions': {'soilLevel': {'raw': 'C13E', 'default': 'extraLight', 'options': ['extraLight', 'light', 'normal', 'heavy', 'extraHeavy']}, 'spinLevel': {'raw': 'A53F', 'default': 'extraHigh', 'options': ['rinseHold', 'noSpin', 'low', 'medium', 'high', 'extraHigh']}, 'rinseCycle': {'raw': '913F', 'default': '1', 'options': ['0', '1', '2', '3', '4', '5']}, 'waterTemperature': {'raw': '831E', 'default': 'warm', 'options': ['tapCold', 'cold', 'warm', 'hot']}}}]",
+        }),
+        <Attribute.WASHER_CYCLE: 'washerCycle'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 623000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Table_00_Course_01',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_CYCLE_PRESET: 'samsungce.washerCyclePreset'>: dict({
+        <Attribute.MAX_NUMBER_OF_PRESETS: 'maxNumberOfPresets'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 805000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 10,
+        }),
+        <Attribute.PRESETS: 'presets'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_DELAY_END: 'samsungce.washerDelayEnd'>: dict({
+        <Attribute.MINIMUM_RESERVABLE_TIME: 'minimumReservableTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 594000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 45,
+        }),
+        <Attribute.REMAINING_TIME: 'remainingTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 546000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_FREEZE_PREVENT: 'samsungce.washerFreezePrevent'>: dict({
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: 'samsungce.washerOperatingState'>: dict({
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 594000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 45,
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 1,
+        }),
+        <Attribute.REMAINING_TIME: 'remainingTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 45,
+        }),
+        <Attribute.REMAINING_TIME_STR: 'remainingTimeStr'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00:45',
+        }),
+        <Attribute.SCHEDULED_JOBS: 'scheduledJobs'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 30, 43, 851000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'jobName': 'wash', 'timeInMin': 23}, {'jobName': 'rinse', 'timeInMin': 10}, {'jobName': 'spin', 'timeInMin': 9}]",
+        }),
+        <Attribute.SCHEDULED_PHASES: 'scheduledPhases'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 30, 43, 851000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'phaseName': 'wash', 'timeInMin': 23}, {'phaseName': 'rinse', 'timeInMin': 10}, {'phaseName': 'spin', 'timeInMin': 9}]",
+        }),
+        <Attribute.SUPPORTED_OPERATING_STATES: 'supportedOperatingStates'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 11, 4, 14, 21, 57, 546000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['ready', 'running', 'paused']",
+        }),
+        <Attribute.WASHER_JOB_PHASE: 'washerJobPhase'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+        <Attribute.WASHER_JOB_STATE: 'washerJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_WASHING_TIME: 'samsungce.washerWashingTime'>: dict({
+        <Attribute.SUPPORTED_WASHING_TIMES: 'supportedWashingTimes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WASHING_TIME: 'washingTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_WATER_LEVEL: 'samsungce.washerWaterLevel'>: dict({
+        <Attribute.SUPPORTED_WATER_LEVEL: 'supportedWaterLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WATER_LEVEL: 'waterLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_WATER_VALVE: 'samsungce.washerWaterValve'>: dict({
+        <Attribute.SUPPORTED_WATER_VALVE: 'supportedWaterValve'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WATER_VALVE: 'waterValve'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WATER_CONSUMPTION_REPORT: 'samsungce.waterConsumptionReport'>: dict({
+        <Attribute.WATER_CONSUMPTION: 'waterConsumption'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WELCOME_MESSAGE: 'samsungce.welcomeMessage'>: dict({
+        <Attribute.WELCOME_MESSAGE: 'welcomeMessage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>: dict({
+        <Attribute.DUMP_TYPE: 'dumpType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'file',
+        }),
+        <Attribute.ENDPOINT: 'endpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'SSM',
+        }),
+        <Attribute.LOG_TYPE: 'logType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['errCode', 'dump']",
+        }),
+        <Attribute.MIN_VERSION: 'minVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1.0',
+        }),
+        <Attribute.MN_ID: 'mnId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0AJT',
+        }),
+        <Attribute.PROTOCOL_TYPE: 'protocolType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'wifi_https',
+        }),
+        <Attribute.SETUP_ID: 'setupId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 453000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '210',
+        }),
+        <Attribute.SIGNIN_PERMISSION: 'signinPermission'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TS_ID: 'tsId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SEC_WIFI_CONFIGURATION: 'sec.wifiConfiguration'>: dict({
+        <Attribute.AUTO_RECONNECTION: 'autoReconnection'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MIN_VERSION: 'minVersion'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PROTOCOL_TYPE: 'protocolType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_AUTH_TYPE: 'supportedAuthType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_WI_FI_FREQ: 'supportedWiFiFreq'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 456000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.WASHER_OPERATING_STATE: 'washerOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T03:54:45Z',
+        }),
+        <Attribute.MACHINE_STATE: 'machineState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'stop',
+        }),
+        <Attribute.SUPPORTED_MACHINE_STATES: 'supportedMachineStates'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 2, 29, 55, 546000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['stop', 'run', 'pause']",
+        }),
+        <Attribute.WASHER_JOB_STATE: 'washerJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 9, 45, 534000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[hue_color_temperature_bulb]
   dict({
     'main': dict({
