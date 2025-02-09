@@ -5584,6 +5584,252 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[da_sac_wifikit_000001]
+  dict({
+    'main': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 955000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0e168539-061a-5f02-2beb-cc5cb6bb3b7b',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '20240611.1',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'MIM-H04N|240611|61FFFF00001411000000000000000000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Tizen',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '4.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[system a/c] Samsung',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0e168539-061a-5f02-2beb-cc5cb6bb3b7b',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2021-01-01T00:01:01Z',
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 209000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA-SAC-WIFIKIT-000001',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>: dict({
+        <Attribute.BINARY_ID: 'binaryId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 955000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'MIM-H04N',
+        }),
+        <Attribute.DESCRIPTION: 'description'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MICOM_ASSAY_CODE: 'micomAssayCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_CLASSIFICATION_CODE: 'modelClassificationCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_NAME: 'modelName'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RELEASE_YEAR: 'releaseYear'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER: 'serialNumber'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER_EXTRA: 'serialNumberExtra'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>: dict({
+        <Attribute.VERSION_NUMBER: 'versionNumber'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 29, 22, 0, 56, 311000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 22100101,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>: dict({
+        <Attribute.AVAILABLE_MODULES: 'availableModules'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 955000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+        <Attribute.LAST_UPDATED_DATE: 'lastUpdatedDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEW_VERSION_AVAILABLE: 'newVersionAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 955000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OTN_D_U_I_D: 'otnDUID'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TARGET_MODULE: 'targetModule'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WIFI_KIT_SUB_DEVICES: 'samsungce.wifiKitSubDevices'>: dict({
+        <Attribute.NUMBER_OF_CONNECTED_DEVICES: 'numberOfConnectedDevices'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 955000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1,
+        }),
+        <Attribute.SUB_DEVICES: 'subDevices'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 955000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'deviceId': '0e168539-061a-5f02-2beb-000001200000', 'connected': True, 'name': 'Air Conditioner', 'description': 'RAC'}]",
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 15, 42, 12, 955000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[da_wm_dw_00001]
   dict({
     'main': dict({

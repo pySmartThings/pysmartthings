@@ -126,6 +126,7 @@ async def test_fetching_single_device(
         "im_smarttag_ble_uwb",
         "im_smarttag2_ble_uwb",
         "da_ac_rac_01001",
+        "da_sac_wifikit_000001",
     ],
 )
 async def test_fetching_status_of_single_device(

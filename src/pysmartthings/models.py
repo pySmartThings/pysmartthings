@@ -180,6 +180,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION = "samsungce.weightMeasurementCalibration"
     SAMSUNG_CE_WELCOME_COOLING = "samsungce.welcomeCooling"
     SAMSUNG_CE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
+    SAMSUNG_CE_WIFI_KIT_SUB_DEVICES = "samsungce.wifiKitSubDevices"
 
     SAMSUNG_IM_HUE_SYNC_MODE = "samsungim.hueSyncMode"
 
@@ -396,6 +397,7 @@ class Attribute(StrEnum):
     NEUTRAL_DETERGENT_TYPE = "neutralDetergentType"
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
     NOTIFICATION_TEMPLATE_I_D = "notificationTemplateID"
+    NUMBER_OF_CONNECTED_DEVICES = "numberOfConnectedDevices"
     ODOR_LEVEL = "odorLevel"
     OPERATING_STATE = "operatingState"
     OPERATION_TIME = "operationTime"
@@ -485,6 +487,7 @@ class Attribute(StrEnum):
     STATUS = "status"
     STEAM_SOAK = "steamSoak"
     STORM_WASH = "stormWash"
+    SUB_DEVICES = "subDevices"
     SUPPORTED_ACTIONS = "supportedActions"
     SUPPORTED_AC_FAN_MODES = "supportedAcFanModes"
     SUPPORTED_AC_MODES = "supportedAcModes"
@@ -1121,6 +1124,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SWITCH,
     ],
     Capability.SAMSUNG_CE_ALWAYS_ON_SENSING: [Attribute.ORIGINS, Attribute.ALWAYS_ON],
+    Capability.SAMSUNG_CE_WIFI_KIT_SUB_DEVICES: [
+        Attribute.NUMBER_OF_CONNECTED_DEVICES,
+        Attribute.SUB_DEVICES,
+    ],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
