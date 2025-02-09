@@ -1655,6 +1655,119 @@
     'type': <DeviceType.VIPER: 'VIPER'>,
   })
 # ---
+# name: test_fetching_status_of_single_device[c2c_arlo_go_switch]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 21, 56, 1, 357000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+          }),
+          'timestamp': datetime.datetime(2025, 2, 8, 21, 56, 1, 357000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'online',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': datetime.datetime(2024, 8, 29, 17, 58, 33, 700000, tzinfo=datetime.timezone.utc),
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.MOTION_SENSOR: 'motionSensor'>: dict({
+        <Attribute.MOTION: 'motion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 26, 36, 366000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'inactive',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SOUND_SENSOR: 'soundSensor'>: dict({
+        <Attribute.SOUND: 'sound'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 21, 56, 9, 726000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'not detected',
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 21, 56, 1, 357000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+      <Capability.VIDEO_CAPTURE: 'videoCapture'>: dict({
+        <Attribute.CLIP: 'clip'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STREAM: 'stream'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.VIDEO_STREAM: 'videoStream'>: dict({
+        <Attribute.STREAM: 'stream'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 13, 3, 27, 30, 261000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'InHomeURL': '',
+            'OutHomeURL': '',
+          }),
+        }),
+        <Attribute.SUPPORTED_FEATURES: 'supportedFeatures'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[c2c_arlo_pro_3_switch]
   dict({
     'main': dict({
@@ -12546,6 +12659,122 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[multipurpose_sensor]
+  dict({
+    'main': dict({
+      <Capability.ACCELERATION_SENSOR: 'accelerationSensor'>: dict({
+        <Attribute.ACCELERATION: 'acceleration'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 27, 46, 812000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'inactive',
+        }),
+      }),
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 12, 24, 2, 74000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 50,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 14, 0, 28, 332000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 4, 20, 25, 600000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0000001B',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 4, 20, 25, 593000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0000001B',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 4, 20, 25, 600000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 4, 20, 25, 601000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 56, 19, 744000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 67.0,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THREE_AXIS: 'threeAxis'>: dict({
+        <Attribute.THREE_AXIS: 'threeAxis'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 27, 36, 673000, tzinfo=datetime.timezone.utc),
+          'unit': 'mG',
+          'value': '[20, 8, -1042]',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[sengled]
   dict({
     'main': dict({
@@ -13032,6 +13261,171 @@
           'unit': None,
           'value': 'on',
         }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[yale_push_button_deadbolt_lock]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 18, 14, 150000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 86,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 11, 48, 45, 331000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00840847',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 11, 48, 45, 328000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00840847',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 11, 48, 45, 331000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 11, 48, 45, 332000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.LOCK: 'lock'>: dict({
+        <Attribute.LOCK: 'lock'>: dict({
+          'data': dict({
+          }),
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 29, 56, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'locked',
+        }),
+        <Attribute.SUPPORTED_LOCK_COMMANDS: 'supportedLockCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_LOCK_VALUES: 'supportedLockValues'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_UNLOCK_DIRECTIONS: 'supportedUnlockDirections'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.LOCK_CODES: 'lockCodes'>: dict({
+        <Attribute.CODE_CHANGED: 'codeChanged'>: dict({
+          'data': dict({
+            'codeName': 'Code 8',
+          }),
+          'timestamp': datetime.datetime(2025, 1, 6, 4, 56, 31, 712000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '8 unset',
+        }),
+        <Attribute.CODE_LENGTH: 'codeLength'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 8, 4, 15, 29, 24, 127000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.CODE_REPORT: 'codeReport'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 8, 1, 1, 36, 58, 424000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 5,
+        }),
+        <Attribute.LOCK: 'lock'>: dict({
+          'data': dict({
+            'method': 'manual',
+          }),
+          'timestamp': datetime.datetime(2023, 7, 10, 23, 3, 42, 305000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'locked',
+        }),
+        <Attribute.LOCK_CODES: 'lockCodes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 6, 4, 56, 28, 325000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '{"1":"Salim","2":"Saima","3":"Sarah","4":"Aisha","5":"Moiz"}',
+        }),
+        <Attribute.MAX_CODE_LENGTH: 'maxCodeLength'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 8, 22, 1, 34, 18, 690000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 8,
+        }),
+        <Attribute.MAX_CODES: 'maxCodes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 8, 22, 1, 34, 19, 751000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 250,
+        }),
+        <Attribute.MIN_CODE_LENGTH: 'minCodeLength'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 8, 22, 1, 34, 18, 781000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 4,
+        }),
+        <Attribute.SCAN_CODES: 'scanCodes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 6, 4, 56, 31, 730000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Complete',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
       }),
     }),
   })

@@ -232,6 +232,10 @@ class Capability(StrEnum):
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_ASSOCIATION_GROUP_TWO = "platemusic11009.associationGroupTwo"
     PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR = "platemusic11009.associationGroupFour"
+    THREE_AXIS = "threeAxis"
+    ACCELERATION_SENSOR = "accelerationSensor"
+    LOCK = "lock"
+    LOCK_CODES = "lockCodes"
 
 
 class Attribute(StrEnum):
@@ -661,6 +665,20 @@ class Attribute(StrEnum):
     DEVICE_NETWORK_ID = "deviceNetworkId"
     ASSOCIATION_GROUP_TWO = "associationGroupTwo"
     ASSOCIATION_GROUP_FOUR = "associationGroupFour"
+    THREE_AXIS = "threeAxis"
+    ACCELERATION = "acceleration"
+    SUPPORTED_UNLOCK_DIRECTIONS = "supportedUnlockDirections"
+    SUPPORTED_LOCK_VALUES = "supportedLockValues"
+    LOCK = "lock"
+    SUPPORTED_LOCK_COMMANDS = "supportedLockCommands"
+    CODE_LENGTH = "codeLength"
+    MAX_CODES = "maxCodes"
+    MAX_CODE_LENGTH = "maxCodeLength"
+    CODE_CHANGED = "codeChanged"
+    MIN_CODE_LENGTH = "minCodeLength"
+    CODE_REPORT = "codeReport"
+    SCAN_CODES = "scanCodes"
+    LOCK_CODES = "lockCodes"
 
 
 class Command(StrEnum):
@@ -686,6 +704,7 @@ class Command(StrEnum):
 
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
+    Capability.ACCELERATION_SENSOR: [Attribute.ACCELERATION],
     Capability.AIR_CONDITIONER_MODE: [
         Attribute.AVAILABLE_AC_MODES,
         Attribute.SUPPORTED_AC_MODES,
@@ -750,6 +769,23 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.CHECK_INTERVAL,
         Attribute.HEALTH_STATUS,
     ],
+    Capability.LOCK: [
+        Attribute.SUPPORTED_UNLOCK_DIRECTIONS,
+        Attribute.SUPPORTED_LOCK_VALUES,
+        Attribute.LOCK,
+        Attribute.SUPPORTED_LOCK_COMMANDS,
+    ],
+    Capability.LOCK_CODES: [
+        Attribute.CODE_LENGTH,
+        Attribute.MAX_CODES,
+        Attribute.MAX_CODE_LENGTH,
+        Attribute.CODE_CHANGED,
+        Attribute.LOCK,
+        Attribute.MIN_CODE_LENGTH,
+        Attribute.CODE_REPORT,
+        Attribute.SCAN_CODES,
+        Attribute.LOCK_CODES,
+    ],
     Capability.MEDIA_PLAYBACK: [
         Attribute.SUPPORTED_PLAYBACK_COMMANDS,
         Attribute.PLAYBACK_STATUS,
@@ -801,6 +837,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.THERMOSTAT_MODE,
         Attribute.SUPPORTED_THERMOSTAT_MODES,
     ],
+    Capability.THREE_AXIS: [Attribute.THREE_AXIS],
     Capability.DEMAND_RESPONSE_LOAD_CONTROL: [
         Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS
     ],

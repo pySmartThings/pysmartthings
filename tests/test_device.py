@@ -139,6 +139,9 @@ async def test_fetching_single_device(
         "ikea_floor_lamp",
         "ge_in_wall_smart_dimmer",
         "zooz_zen16_multirelay",
+        "c2c_arlo_go_switch",
+        "multipurpose_sensor",
+        "yale_push_button_deadbolt_lock",
     ],
 )
 async def test_fetching_status_of_single_device(
