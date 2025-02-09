@@ -143,6 +143,17 @@ async def test_fetching_single_device(
         "multipurpose_sensor",
         "yale_push_button_deadbolt_lock",
         "27_smart_monitor_m5",
+        "contact_sensor",
+        "da_ref_normal_000001",
+        "ge_dimmer_assoc",
+        "car_garage_door",
+        "ikea_e26",
+        "switch_binary_indicator",
+        "ledvance_switch",
+        "basic_electric_meter",
+        "iphone",
+        "vd_stv_2017_k",
+        "virtual_calendar",
     ],
 )
 async def test_fetching_status_of_single_device(

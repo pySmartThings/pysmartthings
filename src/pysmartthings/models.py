@@ -255,11 +255,37 @@ class Capability(StrEnum):
     CUSTOM_RECORDING = "custom.recording"
     CUSTOM_SOUND_MODE = "custom.soundmode"
     MEDIA_TRACK_CONTROL = "mediaTrackControl"
+    PRESENCE_SENSOR = "presenceSensor"
+    LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE = "legendabsolute60149.sunAzimuthAngle"
+    LEGENDABSOLUTE60149_EVEN_ODD_DAY = "legendabsolute60149.evenOddDay"
+    LEGENDABSOLUTE60149_LOCAL_HOUR_TWO = "legendabsolute60149.localHourTwo"
+    LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD = "legendabsolute60149.currentTimePeriod"
+    LEGENDABSOLUTE60149_LOCAL_MONTH = "legendabsolute60149.localMonth"
+    LEGENDABSOLUTE60149_LOCAL_HOUR_OFFSET = "legendabsolute60149.localHourOffset"
+    LEGENDABSOLUTE60149_LOCAL_HOUR = "legendabsolute60149.localHour"
+    LEGENDABSOLUTE60149_SUN_RISE_OFFSET1 = "legendabsolute60149.sunRiseOffset1"
+    LEGENDABSOLUTE60149_LOCAL_DAY_TWO = "legendabsolute60149.localDayTwo"
+    LEGENDABSOLUTE60149_LOCAL_DATE = "legendabsolute60149.localDate"
+    LEGENDABSOLUTE60149_LOCAL_MONTH_DAY_ONE = "legendabsolute60149.localMonthDayOne"
+    LEGENDABSOLUTE60149_LOCAL_DATE_TWO1 = "legendabsolute60149.localDateTwo1"
+    LEGENDABSOLUTE60149_SUN_RISE = "legendabsolute60149.sunRise"
+    LEGENDABSOLUTE60149_DAY_LENGTH = "legendabsolute60149.dayLength"
+    LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE = "legendabsolute60149.sunElevationAngle"
+    LEGENDABSOLUTE60149_LOCAL_DATE_ONE = "legendabsolute60149.localDateOne"
+    LEGENDABSOLUTE60149_CURRENT_TWILIGHT = "legendabsolute60149.currentTwilight"
+    LEGENDABSOLUTE60149_LOCAL_MONTH_DAY_TWO = "legendabsolute60149.localMonthDayTwo"
+    LEGENDABSOLUTE60149_SUN_SET_OFFSET1 = "legendabsolute60149.sunSetOffset1"
+    LEGENDABSOLUTE60149_SUN_SET = "legendabsolute60149.sunSet"
+    LEGENDABSOLUTE60149_LOCAL_MONTH_TWO = "legendabsolute60149.localMonthTwo"
+    LEGENDABSOLUTE60149_LOCAL_YEAR = "legendabsolute60149.localYear"
+    LEGENDABSOLUTE60149_LOCAL_WEEK_DAY = "legendabsolute60149.localWeekDay"
+    LEGENDABSOLUTE60149_LOCAL_DAY = "legendabsolute60149.localDay"
 
 
 class Attribute(StrEnum):
     """Attribute model."""
 
+    PRESENCE = "presence"
     ACCURACY = "accuracy"
     ACTIVATED = "activated"
     AC_OPTIONAL_MODE = "acOptionalMode"
@@ -719,6 +745,30 @@ class Attribute(StrEnum):
     SOUND_MODE = "soundMode"
     SUPPORTED_SOUND_MODES = "supportedSoundModes"
     SUPPORTED_TRACK_CONTROL_COMMANDS = "supportedTrackControlCommands"
+    SUN_AZIMUTH_ANGLE = "sunAzimuthAngle"
+    EVEN_ODD_DAY = "evenOddDay"
+    LOCAL_HOUR_TWO = "localHourTwo"
+    CURRENT_TIME_PERIOD = "currentTimePeriod"
+    LOCAL_MONTH = "localMonth"
+    LOCAL_HOUR_OFFSET = "localHourOffset"
+    LOCAL_HOUR = "localHour"
+    SUN_RISE_OFFSET = "sunRiseOffset"
+    LOCAL_DAY_TWO = "localDayTwo"
+    LOCAL_DATE = "localDate"
+    LOCAL_MONTH_DAY_ONE = "localMonthDayOne"
+    LOCAL_DATE_TWO = "localDateTwo"
+    SUN_RISE = "sunRise"
+    DAY_LENGTH = "dayLength"
+    SUN_ELEVATION_ANGLE = "sunElevationAngle"
+    LOCAL_DATE_ONE = "localDateOne"
+    CURRENT_TWILIGHT = "currentTwilight"
+    LOCAL_MONTH_DAY_TWO = "localMonthDayTwo"
+    SUN_SET_OFFSET = "sunSetOffset"
+    SUN_SET = "sunSet"
+    LOCAL_MONTH_TWO = "localMonthTwo"
+    LOCAL_YEAR = "localYear"
+    LOCAL_WEEK_DAY = "localWeekDay"
+    LOCAL_DAY = "localDay"
 
 
 class Command(StrEnum):
@@ -869,6 +919,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.OVEN_SETPOINT: [Attribute.OVEN_SETPOINT, Attribute.OVEN_SETPOINT_RANGE],
     Capability.POWER_METER: [Attribute.POWER],
+    Capability.PRESENCE_SENSOR: [Attribute.PRESENCE],
     Capability.REFRESH: [],
     Capability.RELATIVE_HUMIDITY_MEASUREMENT: [Attribute.HUMIDITY],
     Capability.REMOTE_CONTROL_STATUS: [Attribute.REMOTE_CONTROL_ENABLED],
@@ -1112,7 +1163,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [Attribute.UNAVAILABLE_COMMANDS],
     Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: [
         Attribute.FREEZER_CONVERT_MODE,
-        Attribute.FREEZER_CONVERT_MODE,
+        Attribute.SUPPORTED_FREEZER_CONVERT_MODES,
     ],
     Capability.SAMSUNG_CE_VIEW_INSIDE: [
         Attribute.SUPPORTED_FOCUS_AREAS,
@@ -1550,6 +1601,31 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: [Attribute.SIGNAL_METRICS],
     Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: [Attribute.LEVEL_STEPS],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Attribute.FORCED_ON_LEVEL],
+    Capability.LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE: [Attribute.SUN_AZIMUTH_ANGLE],
+    Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Attribute.EVEN_ODD_DAY],
+    Capability.LEGENDABSOLUTE60149_LOCAL_HOUR_TWO: [Attribute.LOCAL_HOUR_TWO],
+    Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [Attribute.CURRENT_TIME_PERIOD],
+    Capability.LEGENDABSOLUTE60149_LOCAL_MONTH: [Attribute.LOCAL_MONTH],
+    Capability.LEGENDABSOLUTE60149_LOCAL_HOUR_OFFSET: [Attribute.LOCAL_HOUR_OFFSET],
+    Capability.LEGENDABSOLUTE60149_LOCAL_HOUR: [Attribute.LOCAL_HOUR],
+    Capability.LEGENDABSOLUTE60149_SUN_RISE_OFFSET1: [Attribute.SUN_RISE_OFFSET],
+    Capability.LEGENDABSOLUTE60149_LOCAL_DAY_TWO: [Attribute.LOCAL_DAY_TWO],
+    Capability.LEGENDABSOLUTE60149_LOCAL_DATE: [Attribute.LOCAL_DATE],
+    Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_DAY_ONE: [Attribute.LOCAL_MONTH_DAY_ONE],
+    Capability.LEGENDABSOLUTE60149_LOCAL_DATE_TWO1: [Attribute.LOCAL_DATE_TWO],
+    Capability.LEGENDABSOLUTE60149_SUN_RISE: [Attribute.SUN_RISE],
+    Capability.LEGENDABSOLUTE60149_DAY_LENGTH: [Attribute.DAY_LENGTH],
+    Capability.LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE: [Attribute.SUN_ELEVATION_ANGLE],
+    Capability.LEGENDABSOLUTE60149_LOCAL_DATE_ONE: [Attribute.LOCAL_DATE_ONE],
+    Capability.LEGENDABSOLUTE60149_CURRENT_TWILIGHT: [Attribute.CURRENT_TWILIGHT],
+    Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_DAY_TWO: [Attribute.LOCAL_MONTH_DAY_TWO],
+    Capability.LEGENDABSOLUTE60149_SUN_SET_OFFSET1: [Attribute.SUN_SET_OFFSET],
+    Capability.LEGENDABSOLUTE60149_SUN_SET: [Attribute.SUN_SET],
+    Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_TWO: [Attribute.LOCAL_MONTH_TWO],
+    Capability.LEGENDABSOLUTE60149_LOCAL_YEAR: [Attribute.LOCAL_YEAR],
+    Capability.LEGENDABSOLUTE60149_LOCAL_WEEK_DAY: [Attribute.LOCAL_WEEK_DAY],
+    Capability.LEGENDABSOLUTE60149_LOCAL_DAY: [Attribute.LOCAL_DAY],
+    # PlateMusic11009 capabilities
     Capability.PLATEMUSIC11009_FIRMWARE: [
         Attribute.FIRMWARE_VERSION,
     ],

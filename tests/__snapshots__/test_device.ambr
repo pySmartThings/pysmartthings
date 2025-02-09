@@ -2017,6 +2017,30 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[basic_electric_meter]
+  dict({
+    'main': dict({
+      <Capability.ENERGY_METER: 'energyMeter'>: dict({
+        <Attribute.ENERGY: 'energy'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 56, 21, 918000, tzinfo=datetime.timezone.utc),
+          'unit': 'kWh',
+          'value': 1930.362,
+        }),
+      }),
+      <Capability.POWER_METER: 'powerMeter'>: dict({
+        <Attribute.POWER: 'power'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 56, 21, 748000, tzinfo=datetime.timezone.utc),
+          'unit': 'W',
+          'value': 938.3,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[c2c_arlo_go_switch]
   dict({
     'main': dict({
@@ -2560,6 +2584,106 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[car_garage_door]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 55, 2, 124000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 4, 3, 280000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 7, 6, 1, 2, 15, 881000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00000103',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 7, 6, 1, 2, 15, 882000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00000103',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 7, 6, 1, 2, 15, 882000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 17, 26, 766000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 46.4,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[centralite]
   dict({
     'main': dict({
@@ -2629,6 +2753,106 @@
           'timestamp': datetime.datetime(2025, 2, 9, 17, 14, 44, 853000, tzinfo=datetime.timezone.utc),
           'unit': None,
           'value': 'off',
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[contact_sensor]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 23, 50, 726000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 16, 42, 674000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 59, 19, 101000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00000103',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 59, 19, 102000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00000103',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 59, 19, 101000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 59, 19, 102000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 11, 44, 249000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 59.0,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
         }),
       }),
     }),
@@ -6692,6 +6916,1089 @@
           'value': 175,
         }),
         <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[da_ref_normal_000001]
+  dict({
+    'cooler': dict({
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 26, 21, 425000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 10, 12, 13, 55, 4, 8000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['custom.fridgeMode']",
+        }),
+      }),
+      <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>: dict({
+        <Attribute.FRIDGE_MODE: 'fridgeMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FRIDGE_MODE_VALUE: 'fridgeModeValue'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_FRIDGE_MODES: 'supportedFridgeModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>: dict({
+        <Attribute.MAXIMUM_SETPOINT: 'maximumSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 44,
+        }),
+        <Attribute.MINIMUM_SETPOINT: 'minimumSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 34,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>: dict({
+        <Attribute.UNAVAILABLE_COMMANDS: 'unavailableCommands'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 8, 4, 14, 59, 899000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 37,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 37,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': dict({
+            'maximum': 44,
+            'minimum': 34,
+            'step': 1,
+          }),
+        }),
+      }),
+    }),
+    'cvroom': dict({
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 11, 39, 42, 105000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['temperatureMeasurement', 'thermostatCoolingSetpoint']",
+        }),
+      }),
+      <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>: dict({
+        <Attribute.FRIDGE_MODE: 'fridgeMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FRIDGE_MODE_VALUE: 'fridgeModeValue'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_FRIDGE_MODES: 'supportedFridgeModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+    'freezer': dict({
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 14, 48, 16, 247000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 8, 1, 9, 17, 382000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['custom.fridgeMode', 'samsungce.freezerConvertMode']",
+        }),
+      }),
+      <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>: dict({
+        <Attribute.FRIDGE_MODE: 'fridgeMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FRIDGE_MODE_VALUE: 'fridgeModeValue'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_FRIDGE_MODES: 'supportedFridgeModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>: dict({
+        <Attribute.MAXIMUM_SETPOINT: 'maximumSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 5,
+        }),
+        <Attribute.MINIMUM_SETPOINT: 'minimumSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': -8,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>: dict({
+        <Attribute.FREEZER_CONVERT_MODE: 'freezerConvertMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_FREEZER_CONVERT_MODES: 'supportedFreezerConvertModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>: dict({
+        <Attribute.UNAVAILABLE_COMMANDS: 'unavailableCommands'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 8, 4, 14, 59, 899000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 23, 4, 42, 18, 178000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 0,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 0,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 764000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': dict({
+            'maximum': 5,
+            'minimum': -8,
+            'step': 1,
+          }),
+        }),
+      }),
+    }),
+    'icemaker': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 10, 12, 13, 55, 4, 8000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 55, 1, 720000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+    }),
+    'icemaker-02': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 11, 39, 42, 105000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+    'main': dict({
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 26, 21, 425000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.CUSTOM_DEODOR_FILTER: 'custom.deodorFilter'>: dict({
+        <Attribute.DEODOR_FILTER_CAPACITY: 'deodorFilterCapacity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEODOR_FILTER_LAST_RESET_DATE: 'deodorFilterLastResetDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEODOR_FILTER_RESET_TYPE: 'deodorFilterResetType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEODOR_FILTER_STATUS: 'deodorFilterStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEODOR_FILTER_USAGE: 'deodorFilterUsage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEODOR_FILTER_USAGE_STEP: 'deodorFilterUsageStep'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION: 'custom.deviceReportStateConfiguration'>: dict({
+        <Attribute.REPORT_STATE_PERIOD: 'reportStatePeriod'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 703000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'enabled',
+        }),
+        <Attribute.REPORT_STATE_REALTIME: 'reportStateRealtime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 703000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'state': 'disabled',
+          }),
+        }),
+        <Attribute.REPORT_STATE_REALTIME_PERIOD: 'reportStateRealtimePeriod'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 55, 1, 720000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['temperatureMeasurement', 'thermostatCoolingSetpoint', 'custom.fridgeMode', 'custom.deodorFilter', 'samsungce.dongleSoftwareInstallation', 'samsungce.quickControl', 'samsungce.deviceInfoPrivate', 'demandResponseLoadControl', 'samsungce.fridgeVacationMode', 'sec.diagnosticsInformation']",
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_COMPONENTS: 'custom.disabledComponents'>: dict({
+        <Attribute.DISABLED_COMPONENTS: 'disabledComponents'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 8, 1, 9, 17, 382000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['icemaker-02', 'pantry-01', 'pantry-02', 'cvroom', 'onedoor']",
+        }),
+      }),
+      <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>: dict({
+        <Attribute.DR_MAX_DURATION: 'drMaxDuration'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 11, 39, 47, 504000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 1440,
+        }),
+        <Attribute.ENERGY_SAVING_INFO: 'energySavingInfo'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_LEVEL: 'energySavingLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_OPERATION: 'energySavingOperation'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_OPERATION_SUPPORT: 'energySavingOperationSupport'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 11, 39, 47, 504000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ENERGY_SAVING_SUPPORT: 'energySavingSupport'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 10, 47, 54, 524000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ENERGY_TYPE: 'energyType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 10, 47, 54, 524000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2.0',
+        }),
+        <Attribute.NOTIFICATION_TEMPLATE_I_D: 'notificationTemplateID'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_ENERGY_SAVING_LEVELS: 'supportedEnergySavingLevels'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>: dict({
+        <Attribute.FRIDGE_MODE: 'fridgeMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FRIDGE_MODE_VALUE: 'fridgeModeValue'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_FRIDGE_MODES: 'supportedFridgeModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_WATER_FILTER: 'custom.waterFilter'>: dict({
+        <Attribute.WATER_FILTER_CAPACITY: 'waterFilterCapacity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WATER_FILTER_LAST_RESET_DATE: 'waterFilterLastResetDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WATER_FILTER_RESET_TYPE: 'waterFilterResetType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 758000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['replaceable']",
+        }),
+        <Attribute.WATER_FILTER_STATUS: 'waterFilterStatus'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 4, 2, 12, 910000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'replace',
+        }),
+        <Attribute.WATER_FILTER_USAGE: 'waterFilterUsage'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 4, 2, 12, 910000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 100,
+        }),
+        <Attribute.WATER_FILTER_USAGE_STEP: 'waterFilterUsageStep'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 758000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1,
+        }),
+      }),
+      <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>: dict({
+        <Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS: 'drlcStatus'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'drlcLevel': 0,
+            'drlcType': 1,
+            'duration': 0,
+            'override': False,
+          }),
+        }),
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': dict({
+            'href': '/rm/micomdata/vs/0',
+          }),
+          'timestamp': datetime.datetime(2023, 7, 19, 5, 25, 39, 852000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'payload': dict({
+              'if': list([
+                'oic.if.baseline',
+                'oic.if.a',
+              ]),
+              'rt': list([
+                'x.com.samsung.da.rm.micomdata',
+              ]),
+              'x.com.samsung.rm.micomdata': 'D0C0022B00000000000DFE15051F5AA54400000000000000000000000000000000000000000000000001F04A00C5E0',
+              'x.com.samsung.rm.micomdataLength': 94,
+            }),
+          }),
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '7db87911-7dce-1cf2-7119-b953432a2f09',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'A-RFWW-TP2-21-COMMON_20220110',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'MediaTek',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TP2X_REF_20K|00115641|0004014D011411200103000020000000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TizenRT 1.0 + IPv6',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DAWIT 2.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[refrigerator] Samsung',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '7db87911-7dce-1cf2-7119-b953432a2f09',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 21, 22, 4, 22, 37000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA-REF-NORMAL-000001',
+        }),
+      }),
+      <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>: dict({
+        <Attribute.POWER_CONSUMPTION: 'powerConsumption'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 49, 0, 507000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'deltaEnergy': 7,
+            'end': '2025-02-09T17:49:00Z',
+            'energy': 1568087,
+            'energySaved': 0,
+            'persistedEnergy': 0,
+            'power': 6,
+            'powerEnergy': 13.555977778169844,
+            'start': '2025-02-09T17:38:01Z',
+          }),
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.REFRIGERATION: 'refrigeration'>: dict({
+        <Attribute.DEFROST: 'defrost'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 772000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+        <Attribute.RAPID_COOLING: 'rapidCooling'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 725000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+        <Attribute.RAPID_FREEZING: 'rapidFreezing'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 725000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>: dict({
+        <Attribute.BINARY_ID: 'binaryId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 13, 55, 1, 720000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TP2X_REF_20K',
+        }),
+        <Attribute.DESCRIPTION: 'description'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MICOM_ASSAY_CODE: 'micomAssayCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_CLASSIFICATION_CODE: 'modelClassificationCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_NAME: 'modelName'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RELEASE_YEAR: 'releaseYear'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 8, 1, 9, 17, 382000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 20,
+        }),
+        <Attribute.SERIAL_NUMBER: 'serialNumber'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER_EXTRA: 'serialNumberExtra'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: 'samsungce.dongleSoftwareInstallation'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 10, 47, 54, 524000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'completed',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>: dict({
+        <Attribute.VERSION_NUMBER: 'versionNumber'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 8, 4, 14, 59, 25000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 24100101,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_FRIDGE_VACATION_MODE: 'samsungce.fridgeVacationMode'>: dict({
+        <Attribute.VACATION_MODE: 'vacationMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_POWER_COOL: 'samsungce.powerCool'>: dict({
+        <Attribute.ACTIVATED: 'activated'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 725000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_POWER_FREEZE: 'samsungce.powerFreeze'>: dict({
+        <Attribute.ACTIVATED: 'activated'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 725000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_QUICK_CONTROL: 'samsungce.quickControl'>: dict({
+        <Attribute.VERSION: 'version'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SABBATH_MODE: 'samsungce.sabbathMode'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 799000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+        <Attribute.SUPPORTED_ACTIONS: 'supportedActions'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 799000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['on', 'off']",
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>: dict({
+        <Attribute.AVAILABLE_MODULES: 'availableModules'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 744000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+        <Attribute.LAST_UPDATED_DATE: 'lastUpdatedDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEW_VERSION_AVAILABLE: 'newVersionAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 725000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OTN_D_U_I_D: 'otnDUID'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 744000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'P7CNQWBWM3XBW',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TARGET_MODULE: 'targetModule'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 19, 21, 7, 55, 725000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+          }),
+        }),
+      }),
+      <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>: dict({
+        <Attribute.DUMP_TYPE: 'dumpType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENDPOINT: 'endpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LOG_TYPE: 'logType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MIN_VERSION: 'minVersion'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MN_ID: 'mnId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PROTOCOL_TYPE: 'protocolType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SETUP_ID: 'setupId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SIGNIN_PERMISSION: 'signinPermission'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TS_ID: 'tsId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+    'onedoor': dict({
+      <Capability.CONTACT_SENSOR: 'contactSensor'>: dict({
+        <Attribute.CONTACT: 'contact'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 12, 8, 23, 59, 944000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['samsungce.freezerConvertMode', 'custom.fridgeMode']",
+        }),
+      }),
+      <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>: dict({
+        <Attribute.FRIDGE_MODE: 'fridgeMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FRIDGE_MODE_VALUE: 'fridgeModeValue'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_FRIDGE_MODES: 'supportedFridgeModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>: dict({
+        <Attribute.MAXIMUM_SETPOINT: 'maximumSetpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MINIMUM_SETPOINT: 'minimumSetpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>: dict({
+        <Attribute.FREEZER_CONVERT_MODE: 'freezerConvertMode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_FREEZER_CONVERT_MODES: 'supportedFreezerConvertModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>: dict({
+        <Attribute.UNAVAILABLE_COMMANDS: 'unavailableCommands'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 8, 4, 14, 59, 899000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+    'pantry-01': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 10, 47, 54, 524000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>: dict({
+        <Attribute.NAME: 'name'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>: dict({
+        <Attribute.MODE: 'mode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_MODES: 'supportedModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+    'pantry-02': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 7, 10, 47, 54, 524000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>: dict({
+        <Attribute.NAME: 'name'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>: dict({
+        <Attribute.MODE: 'mode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_MODES: 'supportedModes'>: dict({
           'data': None,
           'timestamp': None,
           'unit': None,
@@ -12209,6 +13516,36 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[ge_dimmer_assoc]
+  dict({
+    'main': dict({
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 17, 49, 842000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 14, 48, 48, 158000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[ge_in_wall_smart_dimmer]
   dict({
     'main': dict({
@@ -12442,6 +13779,116 @@
             'maximum': 100,
             'minimum': 1,
           }),
+        }),
+      }),
+      <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
+        <Attribute.CIRCADIAN: 'circadian'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
+        <Attribute.FADE: 'fade'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[ikea_e26]
+  dict({
+    'main': dict({
+      <Capability.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+        <Attribute.COLOR_TEMPERATURE: 'colorTemperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 42, 27, 494000, tzinfo=datetime.timezone.utc),
+          'unit': 'K',
+          'value': 3395,
+        }),
+        <Attribute.COLOR_TEMPERATURE_RANGE: 'colorTemperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 9, 37, 773000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '11115720',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 9, 37, 760000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '11115720',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 9, 37, 766000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 9, 37, 767000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 50, 29, 195000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 42, 27, 457000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 20,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
         }),
       }),
       <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
@@ -13021,6 +14468,86 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[iphone]
+  dict({
+    'main': dict({
+      <Capability.PRESENCE_SENSOR: 'presenceSensor'>: dict({
+        <Attribute.PRESENCE: 'presence'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 9, 22, 18, 12, 25, 12000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'present',
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[ledvance_switch]
+  dict({
+    'main': dict({
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 19, 8, 34, 692000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00102101',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 19, 8, 34, 690000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00102101',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 19, 8, 34, 691000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 8, 19, 8, 34, 693000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 24, 49, 699000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[multipurpose_sensor]
   dict({
     'main': dict({
@@ -13220,6 +14747,22 @@
           'timestamp': None,
           'unit': None,
           'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[switch_binary_indicator]
+  dict({
+    'main': dict({
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 26, 22, 800000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
         }),
       }),
     }),
@@ -13623,6 +15166,522 @@
           'unit': None,
           'value': 'on',
         }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[vd_stv_2017_k]
+  dict({
+    'main': dict({
+      <Capability.AUDIO_MUTE: 'audioMute'>: dict({
+        <Attribute.MUTE: 'mute'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 19, 19, 52, 832000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'muted',
+        }),
+      }),
+      <Capability.AUDIO_VOLUME: 'audioVolume'>: dict({
+        <Attribute.VOLUME: 'volume'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 19, 19, 52, 832000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 13,
+        }),
+      }),
+      <Capability.CUSTOM_ACCESSIBILITY: 'custom.accessibility'>: dict({
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 1, 17, 1, 10, 11, 985000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['samsungvd.ambient', 'samsungvd.ambientContent']",
+        }),
+      }),
+      <Capability.CUSTOM_ERROR: 'custom.error'>: dict({
+        <Attribute.ERROR: 'error'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 8, 4, 21, 53, 22, 148000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_LAUNCH_APP: 'custom.launchapp'>: dict({
+      }),
+      <Capability.CUSTOM_PICTURE_MODE: 'custom.picturemode'>: dict({
+        <Attribute.PICTURE_MODE: 'pictureMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 12, 23, 1, 33, 37, 69000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Dynamic',
+        }),
+        <Attribute.SUPPORTED_PICTURE_MODES: 'supportedPictureModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 585000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['Dynamic', 'Standard', 'Natural', 'Movie']",
+        }),
+        <Attribute.SUPPORTED_PICTURE_MODES_MAP: 'supportedPictureModesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 12, 23, 1, 33, 37, 69000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'id': 'modeDynamic', 'name': 'Dynamic'}, {'id': 'modeStandard', 'name': 'Standard'}, {'id': 'modeNatural', 'name': 'Natural'}, {'id': 'modeMovie', 'name': 'Movie'}]",
+        }),
+      }),
+      <Capability.CUSTOM_RECORDING: 'custom.recording'>: dict({
+      }),
+      <Capability.CUSTOM_SOUND_MODE: 'custom.soundmode'>: dict({
+        <Attribute.SOUND_MODE: 'soundMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 12, 23, 1, 33, 37, 272000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Standard',
+        }),
+        <Attribute.SUPPORTED_SOUND_MODES: 'supportedSoundModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 19, 19, 52, 887000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['Standard']",
+        }),
+        <Attribute.SUPPORTED_SOUND_MODES_MAP: 'supportedSoundModesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 19, 19, 52, 887000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'id': 'modeStandard', 'name': 'Standard'}]",
+        }),
+      }),
+      <Capability.CUSTOM_TV_SEARCH: 'custom.tvsearch'>: dict({
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': dict({
+            'href': '/sec/tv/deviceinfo',
+          }),
+          'timestamp': datetime.datetime(2021, 8, 30, 19, 18, 12, 303000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'payload': dict({
+              'if': list([
+                'oic.if.baseline',
+                'oic.if.r',
+              ]),
+              'rt': list([
+                'x.com.samsung.tv.deviceinfo',
+              ]),
+              'x.com.samsung.country': 'USA',
+              'x.com.samsung.infolinkversion': 'T-INFOLINK2017-1008',
+              'x.com.samsung.modelid': '17_KANTM_UHD',
+              'x.com.samsung.tv.blemac': 'CC:6E:A4:1F:4C:F7',
+              'x.com.samsung.tv.btmac': 'CC:6E:A4:1F:4C:F7',
+              'x.com.samsung.tv.category': 'tv',
+              'x.com.samsung.tv.countrycode': 'US',
+              'x.com.samsung.tv.duid': 'B2NBQRAG357IX',
+              'x.com.samsung.tv.ethmac': 'c0:48:e6:e7:fc:2c',
+              'x.com.samsung.tv.p2pmac': 'ce:6e:a4:1f:4c:f6',
+              'x.com.samsung.tv.udn': '717fb7ed-b310-4cfe-8954-1cd8211dd689',
+              'x.com.samsung.tv.wifimac': 'cc:6e:a4:1f:4c:f6',
+            }),
+          }),
+        }),
+      }),
+      <Capability.MEDIA_INPUT_SOURCE: 'mediaInputSource'>: dict({
+        <Attribute.INPUT_SOURCE: 'inputSource'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 28, 16, 29, 59, 716000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'HDMI1',
+        }),
+        <Attribute.SUPPORTED_INPUT_SOURCES: 'supportedInputSources'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 10, 16, 15, 18, 11, 622000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['digitalTv', 'HDMI1', 'HDMI4', 'HDMI4']",
+        }),
+      }),
+      <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>: dict({
+        <Attribute.PLAYBACK_STATUS: 'playbackStatus'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 8, 4, 21, 53, 22, 108000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_PLAYBACK_COMMANDS: 'supportedPlaybackCommands'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 250000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['play', 'pause', 'stop', 'fastForward', 'rewind']",
+        }),
+      }),
+      <Capability.MEDIA_TRACK_CONTROL: 'mediaTrackControl'>: dict({
+        <Attribute.SUPPORTED_TRACK_CONTROL_COMMANDS: 'supportedTrackControlCommands'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 8, 4, 21, 53, 22, 384000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '4588d2d9-a8cf-40f4-9a0b-ed5dfbaccda1',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 18, 52, 58, 71000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 18, 52, 58, 71000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 19, 19, 51, 890000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2017-01-01',
+        }),
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 18, 52, 57, 543000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'T-KTMAKUC-1290.3',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0-0',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'UN49MU8000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '4.1.10',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Tizen 3.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 19, 19, 51, 890000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com/sec/tv/overview/',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[TV] Samsung 8 Series (49)',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '4588d2d9-a8cf-40f4-9a0b-ed5dfbaccda1',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 19, 19, 51, 890000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2021-08-21T14:50:34Z',
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 206000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'VD-STV_2017_K',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_AMBIENT: 'samsungvd.ambient'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_AMBIENT_CONTENT: 'samsungvd.ambientContent'>: dict({
+        <Attribute.SUPPORTED_AMBIENT_APPS: 'supportedAmbientApps'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 1, 17, 1, 10, 11, 985000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_FIRMWARE_VERSION: 'samsungvd.firmwareVersion'>: dict({
+        <Attribute.FIRMWARE_VERSION: 'firmwareVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 10, 29, 10, 47, 19, 376000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: 'samsungvd.mediaInputSource'>: dict({
+        <Attribute.INPUT_SOURCE: 'inputSource'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 28, 16, 29, 59, 716000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'HDMI1',
+        }),
+        <Attribute.SUPPORTED_INPUT_SOURCES_MAP: 'supportedInputSourcesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 10, 16, 15, 18, 11, 622000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'id': 'dtv', 'name': 'TV'}, {'id': 'HDMI1', 'name': 'PlayStation 4'}, {'id': 'HDMI4', 'name': 'HT-CT370'}, {'id': 'HDMI4', 'name': 'HT-CT370'}]",
+        }),
+      }),
+      <Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: 'samsungvd.supportsPowerOnByOcf'>: dict({
+        <Attribute.SUPPORTS_POWER_ON_BY_OCF: 'supportsPowerOnByOcf'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 10, 29, 10, 47, 20, 305000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 10, 16, 15, 18, 11, 317000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+      <Capability.TV_CHANNEL: 'tvChannel'>: dict({
+        <Attribute.TV_CHANNEL: 'tvChannel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 5, 7, 2, 58, 10, 479000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.TV_CHANNEL_NAME: 'tvChannelName'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 8, 21, 18, 53, 6, 643000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[virtual_calendar]
+  dict({
+    'main': dict({
+      <Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: 'legendabsolute60149.currentTimePeriod'>: dict({
+        <Attribute.CURRENT_TIME_PERIOD: 'currentTimePeriod'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 12, 11, 51, 499000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Day',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_CURRENT_TWILIGHT: 'legendabsolute60149.currentTwilight'>: dict({
+        <Attribute.CURRENT_TWILIGHT: 'currentTwilight'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 12, 11, 51, 502000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'None',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_DAY_LENGTH: 'legendabsolute60149.dayLength'>: dict({
+        <Attribute.DAY_LENGTH: 'dayLength'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 0, 53, 933000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '10 hrs 31 min',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: 'legendabsolute60149.evenOddDay'>: dict({
+        <Attribute.EVEN_ODD_DAY: 'evenOddDay'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 220000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Odd',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_DATE: 'legendabsolute60149.localDate'>: dict({
+        <Attribute.LOCAL_DATE: 'localDate'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 58, 54, 337000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025/02/09  13:58',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_DATE_ONE: 'legendabsolute60149.localDateOne'>: dict({
+        <Attribute.LOCAL_DATE_ONE: 'localDateOne'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 262000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 20250209,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_DATE_TWO1: 'legendabsolute60149.localDateTwo1'>: dict({
+        <Attribute.LOCAL_DATE_TWO: 'localDateTwo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 265000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 20250209,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_DAY: 'legendabsolute60149.localDay'>: dict({
+        <Attribute.LOCAL_DAY: 'localDay'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 184000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 9,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_DAY_TWO: 'legendabsolute60149.localDayTwo'>: dict({
+        <Attribute.LOCAL_DAY_TWO: 'localDayTwo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 218000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 9,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_HOUR: 'legendabsolute60149.localHour'>: dict({
+        <Attribute.LOCAL_HOUR: 'localHour'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 58, 54, 347000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1358,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_HOUR_OFFSET: 'legendabsolute60149.localHourOffset'>: dict({
+        <Attribute.LOCAL_HOUR_OFFSET: 'localHourOffset'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 351000, tzinfo=datetime.timezone.utc),
+          'unit': 'hr',
+          'value': -4,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_HOUR_TWO: 'legendabsolute60149.localHourTwo'>: dict({
+        <Attribute.LOCAL_HOUR_TWO: 'localHourTwo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 58, 54, 367000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1358,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_MONTH: 'legendabsolute60149.localMonth'>: dict({
+        <Attribute.LOCAL_MONTH: 'localMonth'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 304000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 2,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_DAY_ONE: 'legendabsolute60149.localMonthDayOne'>: dict({
+        <Attribute.LOCAL_MONTH_DAY_ONE: 'localMonthDayOne'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 226000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 209,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_DAY_TWO: 'legendabsolute60149.localMonthDayTwo'>: dict({
+        <Attribute.LOCAL_MONTH_DAY_TWO: 'localMonthDayTwo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 230000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 209,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_TWO: 'legendabsolute60149.localMonthTwo'>: dict({
+        <Attribute.LOCAL_MONTH_TWO: 'localMonthTwo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 306000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 2,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_WEEK_DAY: 'legendabsolute60149.localWeekDay'>: dict({
+        <Attribute.LOCAL_WEEK_DAY: 'localWeekDay'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 347000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LOCAL_YEAR: 'legendabsolute60149.localYear'>: dict({
+        <Attribute.LOCAL_YEAR: 'localYear'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 30, 54, 306000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 2025,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE: 'legendabsolute60149.sunAzimuthAngle'>: dict({
+        <Attribute.SUN_AZIMUTH_ANGLE: 'sunAzimuthAngle'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 58, 54, 376000, tzinfo=datetime.timezone.utc),
+          'unit': 'º',
+          'value': 190.7,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE: 'legendabsolute60149.sunElevationAngle'>: dict({
+        <Attribute.SUN_ELEVATION_ANGLE: 'sunElevationAngle'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 56, 54, 376000, tzinfo=datetime.timezone.utc),
+          'unit': 'º',
+          'value': 35.8,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_SUN_RISE: 'legendabsolute60149.sunRise'>: dict({
+        <Attribute.SUN_RISE: 'sunRise'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 0, 53, 872000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '08:07:00',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_SUN_RISE_OFFSET1: 'legendabsolute60149.sunRiseOffset1'>: dict({
+        <Attribute.SUN_RISE_OFFSET: 'sunRiseOffset'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 58, 54, 320000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 351,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_SUN_SET: 'legendabsolute60149.sunSet'>: dict({
+        <Attribute.SUN_SET: 'sunSet'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 0, 53, 871000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '18:38:00',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_SUN_SET_OFFSET1: 'legendabsolute60149.sunSetOffset1'>: dict({
+        <Attribute.SUN_SET_OFFSET: 'sunSetOffset'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 58, 54, 321000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': -280,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
       }),
     }),
   })
