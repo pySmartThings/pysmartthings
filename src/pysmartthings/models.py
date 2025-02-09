@@ -18,6 +18,7 @@ class Capability(StrEnum):
     COLOR_CONTROL = "colorControl"
     COLOR_TEMPERATURE = "colorTemperature"
     DEMAND_RESPONSE_LOAD_CONTROL = "demandResponseLoadControl"
+    DISHWASHER_OPERATING_STATE = "dishwasherOperatingState"
     DRYER_OPERATING_STATE = "dryerOperatingState"
     EXECUTE = "execute"
     HEALTH_CHECK = "healthCheck"
@@ -38,17 +39,28 @@ class Capability(StrEnum):
 
     CUSTOM_COOKTOP_OPERATING_STATE = "custom.cooktopOperatingState"
     CUSTOM_DISABLED_CAPABILITIES = "custom.disabledCapabilities"
+    CUSTOM_DISHWASHER_DELAY_START_TIME = "custom.dishwasherDelayStartTime"
+    CUSTOM_DISHWASHER_OPERATING_PERCENTAGE = "custom.dishwasherOperatingPercentage"
+    CUSTOM_DISHWASHER_OPERATING_PROGRESS = "custom.dishwasherOperatingProgress"
     CUSTOM_DRYER_DRY_LEVEL = "custom.dryerDryLevel"
     CUSTOM_DRYER_WRINKLE_PREVENT = "custom.dryerWrinklePrevent"
     CUSTOM_ENERGY_TYPE = "custom.energyType"
     CUSTOM_JOB_BEGINNING_STATUS = "custom.jobBeginningStatus"
     CUSTOM_OVEN_CAVITY_STATUS = "custom.ovenCavityStatus"
     CUSTOM_SUPPORTED_OPTIONS = "custom.supportedOptions"
+    CUSTOM_WATER_FILTER = "custom.waterFilter"
 
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
     SAMSUNGCE_DETERGENT_ORDER = "samsungce.detergentOrder"
     SAMSUNGCE_DETERGENT_STATE = "samsungce.detergentState"
     SAMSUNG_CE_DEVICE_IDENTIFICATION = "samsungce.deviceIdentification"
+    SAMSUNGCE_DISHWASHER_JOB_STATE = "samsungce.dishwasherJobState"
+    SAMSUNGCE_DISHWASHER_OPERATION = "samsungce.dishwasherOperation"
+    SAMSUNGCE_DISHWASHER_WASHING_COURSE = "samsungce.dishwasherWashingCourse"
+    SAMSUNGCE_DISHWASHER_WASHING_COURSE_DETAILS = (
+        "samsungce.dishwasherWashingCourseDetails"
+    )
+    SAMSUNGCE_DISHWASHER_WASHING_OPTIONS = "samsungce.dishwasherWashingOptions"
     SAMSUNGCE_DONGLE_SOFTWARE_INSTALLATION = "samsungce.dongleSoftwareInstallation"
     SAMSUNG_CE_DOOR_STATE = "samsungce.doorState"
     SAMSUNG_CE_DRIVER_VERSION = "samsungce.driverVersion"
@@ -70,6 +82,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_OVEN_OPERATING_STATE = "samsungce.ovenOperatingState"
     SAMSUNGCE_QUICK_CONTROL = "samsungce.quickControl"
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
+    SAMSUNGCE_WATER_CONSUMPTION_REPORT = "samsungce.waterConsumptionReport"
     SAMSUNGCE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
 
     SAMSUNG_IM_HUE_SYNC_MODE = "samsungim.hueSyncMode"
@@ -86,6 +99,7 @@ class Capability(StrEnum):
 class Attribute(StrEnum):
     """Attribute model."""
 
+    ADD_RINSE = "addRinse"
     ALARM_ENABLED = "alarmEnabled"
     AUTO_RECONNECTION = "autoReconnection"
     AVAILABLE_MODULES = "availableModules"
@@ -100,11 +114,13 @@ class Attribute(StrEnum):
     COMPLETION_TIME = "completionTime"
     COOKTOP_OPERATING_STATE = "cooktopOperatingState"
     COURSE = "course"
+    CUSTOM_COURSE_CANDIDATES = "customCourseCandidates"
     DATA = "data"
     DATA_MODEL_VERSION = "dmv"
     DEFAULT_OPERATION_TIME = "defaultOperationTime"
     DEFAULT_OVEN_MODE = "defaultOvenMode"
     DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
+    DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DESCRIPTION = "description"
     DETERGENT_TYPE = "detergentType"
     DEVICE_ID = "di"
@@ -112,9 +128,12 @@ class Attribute(StrEnum):
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
     DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
     DISABLED_CAPABILITIES = "disabledCapabilities"
+    DISHWASHER_DELAY_START_TIME = "dishwasherDelayStartTime"
+    DISHWASHER_JOB_STATE = "dishwasherJobState"
+    DISHWASHER_OPERATING_PERCENTAGE = "dishwasherOperatingPercentage"
+    DISHWASHER_OPERATING_PROGRESS = "dishwasherOperatingProgress"
     DOOR_STATE = "doorState"
     DOSAGE = "dosage"
-    DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DRYER_AUTO_CYCLE_LINK = "dryerAutoCycleLink"
     DRYER_CYCLE = "dryerCycle"
     DRYER_DRY_LEVEL = "dryerDryLevel"
@@ -122,6 +141,7 @@ class Attribute(StrEnum):
     DRYER_WRINKLE_PREVENT = "dryerWrinklePrevent"
     DRYING_TEMPERATURE = "dryingTemperature"
     DRYING_TIME = "dryingTime"
+    DRY_PLUS = "dryPlus"
     DR_MAX_DURATION = "drMaxDuration"
     DUMP_TYPE = "dumpType"
     ENDPOINT = "endpoint"
@@ -131,11 +151,15 @@ class Attribute(StrEnum):
     ENERGY_SAVING_OPERATION_SUPPORT = "energySavingOperationSupport"
     ENERGY_SAVING_SUPPORT = "energySavingSupport"
     ENERGY_TYPE = "energyType"
+    ENERGY_USAGE_MAX = "energyUsageMax"
     FADE = "fade"
     FIRMWARE_VERSION = "mnfv"
     FUEL = "fuel"
     HARDWARE_VERSION = "mnhw"
     HEALTH_STATUS = "healthStatus"
+    HEATED_DRY = "heatedDry"
+    HIGH_TEMP_WASH = "highTempWash"
+    HOT_AIR_DRY = "hotAirDry"
     HUE = "hue"
     HUMIDITY = "humidity"
     INITIAL_AMOUNT = "initialAmount"
@@ -174,8 +198,10 @@ class Attribute(StrEnum):
     PLATFORM_ID = "pi"
     PLATFORM_VERSION = "mnpv"
     POWER_CONSUMPTION = "powerConsumption"
+    PREDEFINED_COURSES = "predefinedCourses"
     PRESETS = "presets"
     PROGRESS = "progress"
+    PROGRESS_PERCENTAGE = "progressPercentage"
     PROTOCOL_TYPE = "protocolType"
     QUANTITY = "quantity"
     REFERENCE_TABLE = "referenceTable"
@@ -186,8 +212,13 @@ class Attribute(StrEnum):
     REMAINING_TIME_STR = "remainingTimeStr"
     REMOTE_CONTROL_ENABLED = "remoteControlEnabled"
     REPRESENTATIVE_COMPONENT = "representativeComponent"
+    RESERVABLE = "reservable"
+    RINSE_PLUS = "rinsePlus"
+    SANITIZE = "sanitize"
+    SANITIZING_WASH = "sanitizingWash"
     SATURATION = "saturation"
     SCHEDULED_JOBS = "scheduledJobs"
+    SELECTED_ZONE = "selectedZone"
     SERIAL_NUMBER = "serialNumber"
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
     SETUP_ID = "setupId"
@@ -195,7 +226,10 @@ class Attribute(StrEnum):
     SPECIALIZED_FUNCTION_CLASSIFICATION = "specializedFunctionClassification"
     SPECIFICATION = "specification"
     SPEC_VERSION = "icv"
+    SPEED_BOOSTER = "speedBooster"
     STATUS = "status"
+    STEAM_SOAK = "steamSoak"
+    STORM_WASH = "stormWash"
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
     SUPPORTED_COOKTOP_OPERATING_STATE = "supportedCooktopOperatingState"
@@ -205,8 +239,10 @@ class Attribute(StrEnum):
     SUPPORTED_DRYING_TEMPERATURE = "supportedDryingTemperature"
     SUPPORTED_DRYING_TIME = "supportedDryingTime"
     SUPPORTED_ENERGY_SAVING_LEVELS = "supportedEnergySavingLevels"
+    SUPPORTED_LIST = "supportedList"
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
     SUPPORTED_MODES = "supportedModes"
+    SUPPORTED_OPERATING_STATE = "supportedOperatingState"
     SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
     SUPPORTED_OVEN_MODES = "supportedOvenModes"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
@@ -220,13 +256,24 @@ class Attribute(StrEnum):
     TEMPERATURE_RANGE = "temperatureRange"
     TEMPERATURE_SETPOINT = "temperatureSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
+    TIME_LEFT_TO_START = "timeLeftToStart"
     TS_ID = "tsId"
     TYPE = "type"
     VENDOR_ID = "vid"
     VERSION = "version"
     VERSION_NUMBER = "versionNumber"
+    WASHING_COURSE = "washingCourse"
+    WATER_CONSUMPTION = "waterConsumption"
+    WATER_FILTER_CAPACITY = "waterFilterCapacity"
+    WATER_FILTER_LAST_RESET_DATE = "waterFilterLastResetDate"
+    WATER_FILTER_RESET_TYPE = "waterFilterResetType"
+    WATER_FILTER_STATUS = "waterFilterStatus"
+    WATER_FILTER_USAGE = "waterFilterUsage"
+    WATER_FILTER_USAGE_STEP = "waterFilterUsageStep"
+    WATER_USAGE_MAX = "waterUsageMax"
     WELCOME_MESSAGE = "welcomeMessage"
     WINDOW_SHADE = "windowShade"
+    ZONE_BOOSTER = "zoneBooster"
 
 
 class Command(StrEnum):
@@ -323,6 +370,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MACHINE_STATE,
         Attribute.SUPPORTED_MACHINE_STATES,
         Attribute.DRYER_JOB_STATE,
+    ],
+    Capability.DISHWASHER_OPERATING_STATE: [
+        Attribute.COMPLETION_TIME,
+        Attribute.MACHINE_STATE,
+        Attribute.PROGRESS,
+        Attribute.SUPPORTED_MACHINE_STATES,
+        Attribute.DISHWASHER_JOB_STATE,
     ],
     # HCA capabilities
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
@@ -428,6 +482,30 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DRYING_TIME,
         Attribute.SUPPORTED_DRYING_TIME,
     ],
+    Capability.SAMSUNGCE_DISHWASHER_WASHING_COURSE: [
+        Attribute.WASHING_COURSE,
+        Attribute.SUPPORTED_COURSES,
+        Attribute.CUSTOM_COURSE_CANDIDATES,
+    ],
+    Capability.SAMSUNGCE_DISHWASHER_WASHING_OPTIONS: [
+        Attribute.DRY_PLUS,
+        Attribute.STORM_WASH,
+        Attribute.HOT_AIR_DRY,
+        Attribute.SELECTED_ZONE,
+        Attribute.SPEED_BOOSTER,
+        Attribute.HIGH_TEMP_WASH,
+        Attribute.SANITIZING_WASH,
+        Attribute.HEATED_DRY,
+        Attribute.ZONE_BOOSTER,
+        Attribute.ADD_RINSE,
+        Attribute.RINSE_PLUS,
+        Attribute.SUPPORTED_LIST,
+        Attribute.SANITIZE,
+        Attribute.STEAM_SOAK,
+    ],
+    Capability.SAMSUNGCE_WATER_CONSUMPTION_REPORT: [
+        Attribute.WATER_CONSUMPTION,
+    ],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -459,6 +537,42 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ENERGY_SAVING_OPERATION,
         Attribute.NOTIFICATION_TEMPLATE_I_D,
         Attribute.ENERGY_SAVING_OPERATION_SUPPORT,
+    ],
+    Capability.CUSTOM_DISHWASHER_OPERATING_PROGRESS: [
+        Attribute.DISHWASHER_OPERATING_PROGRESS,
+    ],
+    Capability.SAMSUNGCE_DISHWASHER_OPERATION: [
+        Attribute.SUPPORTED_OPERATING_STATE,
+        Attribute.OPERATING_STATE,
+        Attribute.RESERVABLE,
+        Attribute.PROGRESS_PERCENTAGE,
+        Attribute.REMAINING_TIME_STR,
+        Attribute.OPERATION_TIME,
+        Attribute.REMAINING_TIME,
+        Attribute.TIME_LEFT_TO_START,
+    ],
+    Capability.SAMSUNGCE_DISHWASHER_JOB_STATE: [
+        Attribute.SCHEDULED_JOBS,
+        Attribute.DISHWASHER_JOB_STATE,
+    ],
+    Capability.SAMSUNGCE_DISHWASHER_WASHING_COURSE_DETAILS: [
+        Attribute.PREDEFINED_COURSES,
+        Attribute.WATER_USAGE_MAX,
+        Attribute.ENERGY_USAGE_MAX,
+    ],
+    Capability.CUSTOM_DISHWASHER_OPERATING_PERCENTAGE: [
+        Attribute.DISHWASHER_OPERATING_PERCENTAGE,
+    ],
+    Capability.CUSTOM_DISHWASHER_DELAY_START_TIME: [
+        Attribute.DISHWASHER_DELAY_START_TIME,
+    ],
+    Capability.CUSTOM_WATER_FILTER: [
+        Attribute.WATER_FILTER_STATUS,
+        Attribute.WATER_FILTER_USAGE_STEP,
+        Attribute.WATER_FILTER_USAGE,
+        Attribute.WATER_FILTER_CAPACITY,
+        Attribute.WATER_FILTER_LAST_RESET_DATE,
+        Attribute.WATER_FILTER_RESET_TYPE,
     ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [

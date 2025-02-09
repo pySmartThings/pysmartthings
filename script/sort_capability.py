@@ -1,5 +1,7 @@
 """Script to sort the capability constants."""
 
+import pyperclip
+
 from pysmartthings.models import Capability
 
 
@@ -16,16 +18,17 @@ def main() -> int:
         else:
             capabilities[capability.value] = capability
     capabilities = dict(sorted(capabilities.items()))
-    print("class Capability(StrEnum):")
-    print('    """Capability model."""')
-    print()
+    result = "class Capability(StrEnum):"
+    result += '\n    """Capability model."""\n\n'
     for name, capability in capabilities.items():
-        print(f'    {capability.name} = "{name}"')
+        result += f'    {capability.name} = "{name}"\n'
     for category_capabilities in dot_capabilities.values():
-        print()
+        result += "\n"
         capabilities = dict(sorted(category_capabilities.items()))
         for name, capability in capabilities.items():
-            print(f'    {capability.name} = "{name}"')
+            result += f'    {capability.name} = "{name}"\n'
+    print(result)
+    pyperclip.copy(result)
     return 0
 
 

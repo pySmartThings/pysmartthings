@@ -1,5 +1,7 @@
 """Sort the Attribute enum."""
 
+import pyperclip
+
 from pysmartthings.models import Attribute
 
 
@@ -7,11 +9,12 @@ def main() -> int:
     """Run the script."""
     attributes = {attr.name: attr for attr in Attribute}
     attributes = dict(sorted(attributes.items()))
-    print("class Attribute(StrEnum):")
-    print('    """Attribute model."""')
-    print()
+    result = "class Attribute(StrEnum):"
+    result += '\n    """Attribute model."""\n\n'
     for name, attribute in attributes.items():
-        print(f'    {name} = "{attribute.value}"')
+        result += f'    {name} = "{attribute.value}"\n'
+    pyperclip.copy(result)
+    print(result)
     return 0
 
 
