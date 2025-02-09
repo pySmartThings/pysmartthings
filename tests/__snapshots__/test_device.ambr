@@ -2085,6 +2085,80 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[centralite]
+  dict({
+    'main': dict({
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 31, 19, 45, 30, 464000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '16015010',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 31, 19, 45, 30, 461000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '16015010',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 31, 19, 45, 30, 464000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 31, 19, 45, 30, 462000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.POWER_METER: 'powerMeter'>: dict({
+        <Attribute.POWER: 'power'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 49, 44, 159000, tzinfo=datetime.timezone.utc),
+          'unit': 'W',
+          'value': 0.0,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 14, 44, 853000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[da_ac_rac_000001]
   dict({
     '1': dict({

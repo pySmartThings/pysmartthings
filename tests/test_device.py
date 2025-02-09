@@ -134,6 +134,7 @@ async def test_fetching_single_device(
         "vd_network_audio_002s",
         "c2c_arlo_pro_3_switch",
         "switch_level",
+        "centralite",
     ],
 )
 async def test_fetching_status_of_single_device(
