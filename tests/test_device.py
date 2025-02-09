@@ -123,6 +123,7 @@ async def test_fetching_single_device(
         "da_wm_wm_000001",
         "hub",
         "im_smarttag_ble_uwb",
+        "im_smarttag2_ble_uwb",
     ],
 )
 async def test_fetching_status_of_single_device(

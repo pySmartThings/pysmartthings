@@ -7430,6 +7430,230 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[im_smarttag2_ble_uwb]
+  dict({
+    'main': dict({
+      <Capability.ALARM: 'alarm'>: dict({
+        <Attribute.ALARM: 'alarm'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.AUDIO_VOLUME: 'audioVolume'>: dict({
+        <Attribute.VOLUME: 'volume'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 6, 25, 5, 56, 22, 227000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.GEOFENCE: 'geofence'>: dict({
+        <Attribute.ENABLE_STATE: 'enableState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.GEOFENCE: 'geofence'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NAME: 'name'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.GEOLOCATION: 'geolocation'>: dict({
+        <Attribute.ACCURACY: 'accuracy'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ALTITUDE_ACCURACY: 'altitudeAccuracy'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.HEADING: 'heading'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LATITUDE: 'latitude'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LONGITUDE: 'longitude'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.METHOD: 'method'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SPEED: 'speed'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TAG_E2E_ENCRYPTION: 'tag.e2eEncryption'>: dict({
+        <Attribute.ENCRYPTION: 'encryption'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TAG_FACTORY_RESET: 'tag.factoryReset'>: dict({
+      }),
+      <Capability.TAG_SEARCHING_STATUS: 'tag.searchingStatus'>: dict({
+        <Attribute.SEARCHING_STATUS: 'searchingStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TAG_TAG_BUTTON: 'tag.tagButton'>: dict({
+        <Attribute.TAG_BUTTON: 'tagButton'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TAG_TAG_STATUS: 'tag.tagStatus'>: dict({
+        <Attribute.CONNECTED_DEVICE_ID: 'connectedDeviceId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.CONNECTED_USER_ID: 'connectedUserId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TAG_STATUS: 'tagStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TAG_UPDATED_INFO: 'tag.updatedInfo'>: dict({
+        <Attribute.CONNECTION: 'connection'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 2, 27, 17, 44, 57, 638000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'connected',
+        }),
+      }),
+      <Capability.TAG_UWB_ACTIVATION: 'tag.uwbActivation'>: dict({
+        <Attribute.UWB_ACTIVATION: 'uwbActivation'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[im_smarttag_ble_uwb]
   dict({
     'main': dict({
