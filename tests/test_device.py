@@ -23,6 +23,7 @@ if TYPE_CHECKING:
     [
         "devices_2",
         "devices_3",
+        "devices_4",
     ],
 )
 async def test_fetching_devices(
@@ -120,6 +121,7 @@ async def test_fetching_single_device(
         "da_ref_normal_01001",
         "da_rvc_normal_000001",
         "da_wm_wm_000001",
+        "hub",
     ],
 )
 async def test_fetching_status_of_single_device(

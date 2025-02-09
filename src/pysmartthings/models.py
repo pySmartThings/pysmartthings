@@ -15,6 +15,7 @@ class Capability(StrEnum):
     """Capability model."""
 
     BATTERY = "battery"
+    BRIDGE = "bridge"
     COLOR_CONTROL = "colorControl"
     COLOR_TEMPERATURE = "colorTemperature"
     CONTACT_SENSOR = "contactSensor"
