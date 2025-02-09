@@ -807,6 +807,7 @@ class Command(StrEnum):
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
     SET_COLOR = "setColor"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
+    SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
     SET_HUE = "setHue"
     SET_LEVEL = "setLevel"
@@ -1704,6 +1705,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.OFF,
         Command.SET_THERMOSTAT_MODE,
     ],
+    Capability.THERMOSTAT_COOLING_SETPOINT: [Command.SET_COOLING_SETPOINT],
     Capability.WINDOW_SHADE: [Command.CLOSE, Command.OPEN, Command.PAUSE],
     Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: [Command.SET_AC_OPTIONAL_MODE],
 }
