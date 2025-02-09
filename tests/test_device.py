@@ -118,6 +118,7 @@ async def test_fetching_single_device(
         "da_wm_dw_00001",
         "da_ks_microwave_0101x",
         "da_ref_normal_01001",
+        "da_rvc_normal_000001",
     ],
 )
 async def test_fetching_status_of_single_device(

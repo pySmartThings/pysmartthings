@@ -3700,6 +3700,376 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[da_rvc_normal_000001]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 9, 22, 55, 13, 962000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 8, 1, 3, 48, 820000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['samsungce.robotCleanerMapAreaInfo', 'samsungce.robotCleanerMapCleaningInfo', 'samsungce.robotCleanerPatrol', 'samsungce.robotCleanerPetMonitoring', 'samsungce.robotCleanerPetMonitoringReport', 'samsungce.robotCleanerPetCleaningSchedule', 'soundDetection', 'samsungce.soundDetectionSensitivity', 'samsungce.musicPlaylist', 'mediaPlayback', 'mediaTrackControl', 'imageCapture', 'videoCapture', 'audioVolume', 'audioMute', 'audioNotification', 'powerConsumptionReport', 'custom.hepaFilter', 'samsungce.robotCleanerMotorFilter', 'samsungce.robotCleanerRelayCleaning', 'audioTrackAddressing', 'samsungce.robotCleanerWelcome']",
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_COMPONENTS: 'custom.disabledComponents'>: dict({
+        <Attribute.DISABLED_COMPONENTS: 'disabledComponents'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 3, 4, 43, 7, 114000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['station']",
+        }),
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': dict({
+            'href': '/alarms/vs/0',
+          }),
+          'timestamp': datetime.datetime(2023, 6, 18, 15, 59, 28, 267000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'payload': dict({
+              'if': list([
+                'oic.if.baseline',
+                'oic.if.a',
+              ]),
+              'rt': list([
+                'x.com.samsung.da.alarms',
+              ]),
+              'x.com.samsung.da.items': list([
+                dict({
+                  'x.com.samsung.da.alarmType': 'Device',
+                  'x.com.samsung.da.code': '4',
+                  'x.com.samsung.da.state': 'deleted',
+                  'x.com.samsung.da.triggeredTime': '2023-06-18T15:59:30',
+                }),
+              ]),
+            }),
+          }),
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '3442dfc6-17c0-a65f-dae0-4c6e01786f44',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 12, 23, 7, 9, 40, 610000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 6, 3, 13, 34, 18, 508000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1.0',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1.0',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 7, 6, 42, 36, 551000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'powerbot_7000_17M|50016055|80010404011141000100000000000000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Tizen(3/0)',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 6, 3, 0, 49, 53, 813000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[robot vacuum] Samsung',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '3442dfc6-17c0-a65f-dae0-4c6e01786f44',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 6, 2, 23, 30, 52, 793000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 7, 7, 19, 45, 19, 771000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA-RVC-NORMAL-000001',
+        }),
+      }),
+      <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>: dict({
+        <Attribute.POWER_CONSUMPTION: 'powerConsumption'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 3, 4, 43, 7, 92000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.ROBOT_CLEANER_CLEANING_MODE: 'robotCleanerCleaningMode'>: dict({
+        <Attribute.ROBOT_CLEANER_CLEANING_MODE: 'robotCleanerCleaningMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 9, 21, 25, 20, 601000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'stop',
+        }),
+      }),
+      <Capability.ROBOT_CLEANER_MOVEMENT: 'robotCleanerMovement'>: dict({
+        <Attribute.ROBOT_CLEANER_MOVEMENT: 'robotCleanerMovement'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 6, 18, 15, 59, 24, 580000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'idle',
+        }),
+      }),
+      <Capability.ROBOT_CLEANER_TURBO_MODE: 'robotCleanerTurboMode'>: dict({
+        <Attribute.ROBOT_CLEANER_TURBO_MODE: 'robotCleanerTurboMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 8, 2, 53, 49, 826000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>: dict({
+        <Attribute.BINARY_ID: 'binaryId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DESCRIPTION: 'description'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MICOM_ASSAY_CODE: 'micomAssayCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_CLASSIFICATION_CODE: 'modelClassificationCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_NAME: 'modelName'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RELEASE_YEAR: 'releaseYear'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER: 'serialNumber'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER_EXTRA: 'serialNumberExtra'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>: dict({
+        <Attribute.VERSION_NUMBER: 'versionNumber'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 11, 1, 9, 26, 7, 107000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 22100101,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_ROBOT_CLEANER_CLEANING_MODE: 'samsungce.robotCleanerCleaningMode'>: dict({
+        <Attribute.CLEANING_MODE: 'cleaningMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 9, 21, 25, 20, 601000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'stop',
+        }),
+        <Attribute.REPEAT_MODE_ENABLED: 'repeatModeEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 12, 21, 1, 32, 56, 245000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.SUPPORT_REPEAT_MODE: 'supportRepeatMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 3, 4, 43, 6, 547000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'True',
+        }),
+        <Attribute.SUPPORTED_CLEANING_MODE: 'supportedCleaningMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 3, 4, 43, 6, 547000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['auto', 'spot', 'manual', 'stop']",
+        }),
+      }),
+      <Capability.SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE: 'samsungce.robotCleanerOperatingState'>: dict({
+        <Attribute.CLEANING_STEP: 'cleaningStep'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.HOMING_REASON: 'homingReason'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 3, 4, 43, 22, 926000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+        <Attribute.IS_MAP_BASED_OPERATION_AVAILABLE: 'isMapBasedOperationAvailable'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 6, 18, 15, 59, 24, 580000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'idle',
+        }),
+        <Attribute.SUPPORTED_OPERATING_STATE: 'supportedOperatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 3, 4, 43, 6, 547000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['homing', 'error', 'idle', 'charging', 'chargingForRemainingJob', 'paused', 'cleaning']",
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>: dict({
+        <Attribute.AVAILABLE_MODULES: 'availableModules'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATED_DATE: 'lastUpdatedDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEW_VERSION_AVAILABLE: 'newVersionAvailable'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OTN_D_U_I_D: 'otnDUID'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TARGET_MODULE: 'targetModule'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 6, 18, 15, 59, 27, 658000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[da_wm_dw_00001]
   dict({
     'main': dict({
