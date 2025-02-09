@@ -121,6 +121,7 @@ async def test_fetching_single_device(
         "da_ref_normal_01001",
         "da_rvc_normal_000001",
         "da_wm_wm_000001",
+        "da_wm_wm_000001_2",
         "hub",
         "im_smarttag_ble_uwb",
         "im_smarttag2_ble_uwb",
