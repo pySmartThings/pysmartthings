@@ -25,10 +25,7 @@
       },
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "samsungce.meatAging",
-            "samsungce.foodDefrost"
-          ],
+          "value": ["samsungce.meatAging", "samsungce.foodDefrost"],
           "timestamp": "2022-02-07T10:54:05.580Z"
         }
       },
@@ -109,9 +106,7 @@
     "camera-01": {
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "switch"
-          ],
+          "value": ["switch"],
           "timestamp": "2023-12-17T11:19:18.845Z"
         }
       },
@@ -194,9 +189,7 @@
       },
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "samsungce.freezerConvertMode"
-          ],
+          "value": ["samsungce.freezerConvertMode"],
           "timestamp": "2024-11-06T09:00:29.743Z"
         }
       },
@@ -257,9 +250,7 @@
       },
       "samsungce.viewInside": {
         "supportedFocusAreas": {
-          "value": [
-            "mainShelves"
-          ],
+          "value": ["mainShelves"],
           "timestamp": "2025-02-01T19:39:00.946Z"
         },
         "contents": {
@@ -438,10 +429,7 @@
       },
       "sec.diagnosticsInformation": {
         "logType": {
-          "value": [
-            "errCode",
-            "dump"
-          ],
+          "value": ["errCode", "dump"],
           "timestamp": "2025-02-01T19:39:00.523Z"
         },
         "endpoint": {
@@ -733,12 +721,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.fridge"
-              ],
-              "if": [
-                "oic.if.a"
-              ],
+              "rt": ["x.com.samsung.da.fridge"],
+              "if": ["oic.if.a"],
               "x.com.samsung.da.rapidFridge": "Off",
               "x.com.samsung.da.rapidFreezing": "Off"
             }
@@ -759,25 +743,15 @@
           "timestamp": "2025-02-01T19:39:01.951Z"
         },
         "supportedWiFiFreq": {
-          "value": [
-            "2.4G",
-            "5G"
-          ],
+          "value": ["2.4G", "5G"],
           "timestamp": "2025-02-01T19:39:01.951Z"
         },
         "supportedAuthType": {
-          "value": [
-            "OPEN",
-            "WEP",
-            "WPA-PSK",
-            "WPA2-PSK"
-          ],
+          "value": ["OPEN", "WEP", "WPA-PSK", "WPA2-PSK"],
           "timestamp": "2025-02-01T19:39:01.951Z"
         },
         "protocolType": {
-          "value": [
-            "helper_hotspot"
-          ],
+          "value": ["helper_hotspot"],
           "timestamp": "2025-02-01T19:39:01.951Z"
         }
       },
@@ -874,9 +848,7 @@
           "timestamp": "2025-02-01T19:38:59.973Z"
         },
         "waterFilterResetType": {
-          "value": [
-            "replaceable"
-          ],
+          "value": ["replaceable"],
           "timestamp": "2025-02-01T19:38:59.973Z"
         },
         "waterFilterCapacity": {

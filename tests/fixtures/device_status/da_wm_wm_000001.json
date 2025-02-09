@@ -7,10 +7,7 @@
           "timestamp": "2025-02-07T02:29:55.623Z"
         },
         "supportedModes": {
-          "value": [
-            "normal",
-            "quickWash"
-          ],
+          "value": ["normal", "quickWash"],
           "timestamp": "2025-02-07T02:29:55.152Z"
         }
       }
@@ -43,14 +40,7 @@
       },
       "custom.washerWaterTemperature": {
         "supportedWasherWaterTemperature": {
-          "value": [
-            "none",
-            "tapCold",
-            "cold",
-            "warm",
-            "hot",
-            "extraHot"
-          ],
+          "value": ["none", "tapCold", "cold", "warm", "hot", "extraHot"],
           "timestamp": "2024-12-25T22:13:27.760Z"
         },
         "washerWaterTemperature": {
@@ -179,11 +169,7 @@
           "timestamp": "2025-02-07T03:09:45.534Z"
         },
         "supportedMachineStates": {
-          "value": [
-            "stop",
-            "run",
-            "pause"
-          ],
+          "value": ["stop", "run", "pause"],
           "timestamp": "2025-02-07T02:29:55.546Z"
         }
       },
@@ -240,25 +226,12 @@
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "833E",
                   "default": "warm",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm",
-                    "hot",
-                    "extraHot"
-                  ]
+                  "options": ["tapCold", "cold", "warm", "hot", "extraHot"]
                 }
               }
             },
@@ -292,25 +265,12 @@
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "843E",
                   "default": "hot",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm",
-                    "hot",
-                    "extraHot"
-                  ]
+                  "options": ["tapCold", "cold", "warm", "hot", "extraHot"]
                 }
               }
             },
@@ -344,24 +304,12 @@
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "831E",
                   "default": "warm",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm",
-                    "hot"
-                  ]
+                  "options": ["tapCold", "cold", "warm", "hot"]
                 }
               }
             },
@@ -383,33 +331,17 @@
                 "spinLevel": {
                   "raw": "A20F",
                   "default": "low",
-                  "options": [
-                    "rinseHold",
-                    "noSpin",
-                    "low",
-                    "medium"
-                  ]
+                  "options": ["rinseHold", "noSpin", "low", "medium"]
                 },
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "830E",
                   "default": "warm",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm"
-                  ]
+                  "options": ["tapCold", "cold", "warm"]
                 }
               }
             },
@@ -443,21 +375,12 @@
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "8520",
                   "default": "extraHot",
-                  "options": [
-                    "extraHot"
-                  ]
+                  "options": ["extraHot"]
                 }
               }
             },
@@ -479,34 +402,17 @@
                 "spinLevel": {
                   "raw": "A21F",
                   "default": "low",
-                  "options": [
-                    "rinseHold",
-                    "noSpin",
-                    "low",
-                    "medium",
-                    "high"
-                  ]
+                  "options": ["rinseHold", "noSpin", "low", "medium", "high"]
                 },
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "830E",
                   "default": "warm",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm"
-                  ]
+                  "options": ["tapCold", "cold", "warm"]
                 }
               }
             },
@@ -540,24 +446,12 @@
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "831E",
                   "default": "warm",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm",
-                    "hot"
-                  ]
+                  "options": ["tapCold", "cold", "warm", "hot"]
                 }
               }
             },
@@ -573,23 +467,17 @@
                 "spinLevel": {
                   "raw": "A520",
                   "default": "extraHigh",
-                  "options": [
-                    "extraHigh"
-                  ]
+                  "options": ["extraHigh"]
                 },
                 "rinseCycle": {
                   "raw": "9204",
                   "default": "2",
-                  "options": [
-                    "2"
-                  ]
+                  "options": ["2"]
                 },
                 "waterTemperature": {
                   "raw": "8520",
                   "default": "extraHot",
-                  "options": [
-                    "extraHot"
-                  ]
+                  "options": ["extraHot"]
                 }
               }
             },
@@ -617,14 +505,7 @@
                 "rinseCycle": {
                   "raw": "913F",
                   "default": "1",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "8000",
@@ -651,32 +532,17 @@
                 "spinLevel": {
                   "raw": "A207",
                   "default": "low",
-                  "options": [
-                    "rinseHold",
-                    "noSpin",
-                    "low"
-                  ]
+                  "options": ["rinseHold", "noSpin", "low"]
                 },
                 "rinseCycle": {
                   "raw": "923F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "830E",
                   "default": "warm",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm"
-                  ]
+                  "options": ["tapCold", "cold", "warm"]
                 }
               }
             },
@@ -698,31 +564,17 @@
                 "spinLevel": {
                   "raw": "A30F",
                   "default": "medium",
-                  "options": [
-                    "rinseHold",
-                    "noSpin",
-                    "low",
-                    "medium"
-                  ]
+                  "options": ["rinseHold", "noSpin", "low", "medium"]
                 },
                 "rinseCycle": {
                   "raw": "920F",
                   "default": "2",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                  ]
+                  "options": ["0", "1", "2", "3"]
                 },
                 "waterTemperature": {
                   "raw": "810E",
                   "default": "tapCold",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm"
-                  ]
+                  "options": ["tapCold", "cold", "warm"]
                 }
               }
             },
@@ -756,24 +608,12 @@
                 "rinseCycle": {
                   "raw": "913F",
                   "default": "1",
-                  "options": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ]
+                  "options": ["0", "1", "2", "3", "4", "5"]
                 },
                 "waterTemperature": {
                   "raw": "831E",
                   "default": "warm",
-                  "options": [
-                    "tapCold",
-                    "cold",
-                    "warm",
-                    "hot"
-                  ]
+                  "options": ["tapCold", "cold", "warm", "hot"]
                 }
               }
             }
@@ -903,14 +743,7 @@
       },
       "custom.washerRinseCycles": {
         "supportedWasherRinseCycles": {
-          "value": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ],
+          "value": ["0", "1", "2", "3", "4", "5"],
           "timestamp": "2024-12-25T22:13:27.760Z"
         },
         "washerRinseCycles": {
@@ -926,10 +759,7 @@
       },
       "sec.diagnosticsInformation": {
         "logType": {
-          "value": [
-            "errCode",
-            "dump"
-          ],
+          "value": ["errCode", "dump"],
           "timestamp": "2025-02-07T02:29:55.453Z"
         },
         "endpoint": {
@@ -973,11 +803,7 @@
           "timestamp": "2025-02-07T03:09:45.534Z"
         },
         "supportedOperatingStates": {
-          "value": [
-            "ready",
-            "running",
-            "paused"
-          ],
+          "value": ["ready", "running", "paused"],
           "timestamp": "2022-11-04T14:21:57.546Z"
         },
         "scheduledJobs": {
@@ -1211,22 +1037,14 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.information"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "rt": ["x.com.samsung.da.information"],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "x.com.samsung.da.modelNum": "DA_WM_TP2_20_COMMON|20233741|2001000100131100022B010000000000",
               "x.com.samsung.da.description": "DA_WM_TP2_20_COMMON_WF6300R/DC92-02338B_0080",
               "x.com.samsung.da.serialNum": "01FW57AR401623N",
               "x.com.samsung.da.otnDUID": "U7CNQWBWJM5U4",
               "x.com.samsung.da.diagProtocolType": "WIFI_HTTPS",
-              "x.com.samsung.da.diagLogType": [
-                "errCode",
-                "dump"
-              ],
+              "x.com.samsung.da.diagLogType": ["errCode", "dump"],
               "x.com.samsung.da.diagDumpType": "file",
               "x.com.samsung.da.diagEndPoint": "SSM",
               "x.com.samsung.da.diagMnid": "0AJT",

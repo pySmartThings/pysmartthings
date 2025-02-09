@@ -173,17 +173,7 @@
                       "max": 425,
                       "default": 350,
                       "supportedValues": [
-                        100,
-                        200,
-                        225,
-                        250,
-                        275,
-                        300,
-                        325,
-                        350,
-                        375,
-                        400,
-                        425
+                        100, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425
                       ]
                     }
                   },
@@ -201,16 +191,7 @@
                       "max": 425,
                       "default": 325,
                       "supportedValues": [
-                        200,
-                        225,
-                        250,
-                        275,
-                        300,
-                        325,
-                        350,
-                        375,
-                        400,
-                        425
+                        200, 225, 250, 275, 300, 325, 350, 375, 400, 425
                       ]
                     }
                   },
@@ -243,12 +224,7 @@
                   },
                   "powerLevel": {
                     "default": "30%",
-                    "supportedValues": [
-                      "10%",
-                      "30%",
-                      "50%",
-                      "70%"
-                    ]
+                    "supportedValues": ["10%", "30%", "50%", "70%"]
                   }
                 }
               },
@@ -260,12 +236,7 @@
                   },
                   "powerLevel": {
                     "default": "30%",
-                    "supportedValues": [
-                      "10%",
-                      "30%",
-                      "50%",
-                      "70%"
-                    ]
+                    "supportedValues": ["10%", "30%", "50%", "70%"]
                   }
                 }
               },
@@ -320,10 +291,7 @@
       },
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "doorControl",
-            "samsungce.hoodFanSpeed"
-          ],
+          "value": ["doorControl", "samsungce.hoodFanSpeed"],
           "timestamp": "2025-02-08T21:13:36.152Z"
         }
       },
@@ -335,10 +303,7 @@
       },
       "sec.diagnosticsInformation": {
         "logType": {
-          "value": [
-            "errCode",
-            "dump"
-          ],
+          "value": ["errCode", "dump"],
           "timestamp": "2025-02-08T21:13:36.256Z"
         },
         "endpoint": {
@@ -468,14 +433,7 @@
           "timestamp": "2025-02-09T00:01:07.813Z"
         },
         "supportedHoodFanSpeed": {
-          "value": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
+          "value": [0, 1, 2, 3, 4, 5],
           "timestamp": "2022-03-23T15:59:12.796Z"
         },
         "settableMinFanSpeed": {
@@ -515,13 +473,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.temperatures"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "rt": ["x.com.samsung.da.temperatures"],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "x.com.samsung.da.items": [
                 {
                   "x.com.samsung.da.id": "0",
@@ -624,14 +577,7 @@
           "timestamp": "2025-02-09T00:01:07.813Z"
         },
         "supportedHoodFanSpeed": {
-          "value": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
+          "value": [0, 1, 2, 3, 4, 5],
           "timestamp": "2022-03-23T15:59:12.796Z"
         },
         "settableMinFanSpeed": {
@@ -645,11 +591,7 @@
           "timestamp": "2025-02-08T21:13:36.289Z"
         },
         "supportedBrightnessLevel": {
-          "value": [
-            "off",
-            "low",
-            "high"
-          ],
+          "value": ["off", "low", "high"],
           "timestamp": "2025-02-08T21:13:36.289Z"
         }
       }

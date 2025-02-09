@@ -148,13 +148,7 @@
           "timestamp": "2021-04-06T16:44:10.381Z"
         },
         "supportedAcFanModes": {
-          "value": [
-            "auto",
-            "low",
-            "medium",
-            "high",
-            "turbo"
-          ],
+          "value": ["auto", "low", "medium", "high", "turbo"],
           "timestamp": "2024-09-10T10:26:28.605Z"
         },
         "availableAcFanModes": {
@@ -419,13 +413,7 @@
           "value": null
         },
         "supportedAcModes": {
-          "value": [
-            "cool",
-            "dry",
-            "wind",
-            "auto",
-            "heat"
-          ],
+          "value": ["cool", "dry", "wind", "auto", "heat"],
           "timestamp": "2024-09-10T10:26:28.781Z"
         },
         "airConditionerMode": {
@@ -481,10 +469,7 @@
       },
       "custom.airConditionerOptionalMode": {
         "supportedAcOptionalMode": {
-          "value": [
-            "off",
-            "windFree"
-          ],
+          "value": ["off", "windFree"],
           "timestamp": "2024-09-10T10:26:28.781Z"
         },
         "acOptionalMode": {
@@ -576,13 +561,7 @@
           "timestamp": "2025-02-09T09:14:39.249Z"
         },
         "supportedAcFanModes": {
-          "value": [
-            "auto",
-            "low",
-            "medium",
-            "high",
-            "turbo"
-          ],
+          "value": ["auto", "low", "medium", "high", "turbo"],
           "timestamp": "2025-02-09T09:14:39.249Z"
         },
         "availableAcFanModes": {
@@ -673,9 +652,7 @@
       },
       "custom.disabledComponents": {
         "disabledComponents": {
-          "value": [
-            "1"
-          ],
+          "value": ["1"],
           "timestamp": "2025-02-09T09:14:39.642Z"
         }
       },
@@ -742,17 +719,9 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "oic.r.temperature"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
-              "range": [
-                16.0,
-                30.0
-              ],
+              "rt": ["oic.r.temperature"],
+              "if": ["oic.if.baseline", "oic.if.a"],
+              "range": [16.0, 30.0],
               "units": "C",
               "temperature": 22.0
             }
@@ -768,9 +737,7 @@
           "value": null
         },
         "supportedActions": {
-          "value": [
-            "start"
-          ],
+          "value": ["start"],
           "timestamp": "2024-09-04T06:35:09.557Z"
         },
         "progress": {

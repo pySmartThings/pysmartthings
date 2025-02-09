@@ -23,13 +23,7 @@
           "value": null
         },
         "supportedAcModes": {
-          "value": [
-            "auto",
-            "cool",
-            "dry",
-            "wind",
-            "heat"
-          ],
+          "value": ["auto", "cool", "dry", "wind", "heat"],
           "timestamp": "2025-01-29T22:00:58.071Z"
         },
         "airConditionerMode": {
@@ -76,10 +70,7 @@
       },
       "custom.airConditionerOptionalMode": {
         "supportedAcOptionalMode": {
-          "value": [
-            "windFree",
-            "off"
-          ],
+          "value": ["windFree", "off"],
           "timestamp": "2025-02-09T15:42:13.241Z"
         },
         "acOptionalMode": {
@@ -165,13 +156,7 @@
           "timestamp": "2025-02-09T15:42:13.241Z"
         },
         "supportedAcFanModes": {
-          "value": [
-            "auto",
-            "low",
-            "medium",
-            "high",
-            "turbo"
-          ],
+          "value": ["auto", "low", "medium", "high", "turbo"],
           "timestamp": "2025-01-29T22:00:58.071Z"
         },
         "availableAcFanModes": {
@@ -203,12 +188,7 @@
       },
       "fanOscillationMode": {
         "supportedFanOscillationModes": {
-          "value": [
-            "horizontal",
-            "vertical",
-            "all",
-            "fixed"
-          ],
+          "value": ["horizontal", "vertical", "all", "fixed"],
           "timestamp": "2025-01-29T22:00:58.071Z"
         },
         "availableFanOscillationModes": {
@@ -367,9 +347,7 @@
           "timestamp": "2025-02-09T15:42:13.241Z"
         },
         "dustFilterResetType": {
-          "value": [
-            "washable"
-          ],
+          "value": ["washable"],
           "timestamp": "2025-02-09T15:42:13.241Z"
         }
       },

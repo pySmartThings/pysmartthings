@@ -81,10 +81,7 @@
       },
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "samsungce.freezerConvertMode",
-            "custom.fridgeMode"
-          ],
+          "value": ["samsungce.freezerConvertMode", "custom.fridgeMode"],
           "timestamp": "2024-11-12T08:23:59.944Z"
         }
       },
@@ -147,9 +144,7 @@
       },
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "custom.fridgeMode"
-          ],
+          "value": ["custom.fridgeMode"],
           "timestamp": "2024-10-12T13:55:04.008Z"
         }
       },
@@ -218,10 +213,7 @@
       },
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "custom.fridgeMode",
-            "samsungce.freezerConvertMode"
-          ],
+          "value": ["custom.fridgeMode", "samsungce.freezerConvertMode"],
           "timestamp": "2024-11-08T01:09:17.382Z"
         }
       },
@@ -506,10 +498,7 @@
       },
       "samsungce.sabbathMode": {
         "supportedActions": {
-          "value": [
-            "on",
-            "off"
-          ],
+          "value": ["on", "off"],
           "timestamp": "2025-01-19T21:07:55.799Z"
         },
         "status": {
@@ -537,13 +526,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.rm.micomdata"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "rt": ["x.com.samsung.da.rm.micomdata"],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "x.com.samsung.rm.micomdata": "D0C0022B00000000000DFE15051F5AA54400000000000000000000000000000000000000000000000001F04A00C5E0",
               "x.com.samsung.rm.micomdataLength": 94
             }
@@ -667,9 +651,7 @@
           "timestamp": "2025-01-19T21:07:55.758Z"
         },
         "waterFilterResetType": {
-          "value": [
-            "replaceable"
-          ],
+          "value": ["replaceable"],
           "timestamp": "2025-01-19T21:07:55.758Z"
         },
         "waterFilterCapacity": {
@@ -707,10 +689,7 @@
       },
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "temperatureMeasurement",
-            "thermostatCoolingSetpoint"
-          ],
+          "value": ["temperatureMeasurement", "thermostatCoolingSetpoint"],
           "timestamp": "2022-02-07T11:39:42.105Z"
         }
       },

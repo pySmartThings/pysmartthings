@@ -3,11 +3,7 @@
     "main": {
       "mediaPlayback": {
         "supportedPlaybackCommands": {
-          "value": [
-            "play",
-            "pause",
-            "stop"
-          ],
+          "value": ["play", "pause", "stop"],
           "timestamp": "2025-02-09T15:42:12.923Z"
         },
         "playbackStatus": {
@@ -49,13 +45,7 @@
       },
       "samsungvd.audioInputSource": {
         "supportedInputSources": {
-          "value": [
-            "digital",
-            "HDMI1",
-            "bluetooth",
-            "wifi",
-            "HDMI2"
-          ],
+          "value": ["digital", "HDMI1", "bluetooth", "wifi", "HDMI2"],
           "timestamp": "2025-02-09T17:18:44.680Z"
         },
         "inputSource": {

@@ -3,13 +3,7 @@
     "main": {
       "mediaPlayback": {
         "supportedPlaybackCommands": {
-          "value": [
-            "play",
-            "pause",
-            "stop",
-            "fastForward",
-            "rewind"
-          ],
+          "value": ["play", "pause", "stop", "fastForward", "rewind"],
           "timestamp": "2020-05-07T02:58:10.250Z"
         },
         "playbackStatus": {
@@ -59,12 +53,7 @@
       },
       "mediaInputSource": {
         "supportedInputSources": {
-          "value": [
-            "digitalTv",
-            "HDMI1",
-            "HDMI4",
-            "HDMI4"
-          ],
+          "value": ["digitalTv", "HDMI1", "HDMI4", "HDMI4"],
           "timestamp": "2021-10-16T15:18:11.622Z"
         },
         "inputSource": {
@@ -85,13 +74,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.tv.deviceinfo"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.r"
-              ],
+              "rt": ["x.com.samsung.tv.deviceinfo"],
+              "if": ["oic.if.baseline", "oic.if.r"],
               "x.com.samsung.country": "USA",
               "x.com.samsung.infolinkversion": "T-INFOLINK2017-1008",
               "x.com.samsung.modelid": "17_KANTM_UHD",
@@ -200,12 +184,7 @@
           "timestamp": "2020-12-23T01:33:37.069Z"
         },
         "supportedPictureModes": {
-          "value": [
-            "Dynamic",
-            "Standard",
-            "Natural",
-            "Movie"
-          ],
+          "value": ["Dynamic", "Standard", "Natural", "Movie"],
           "timestamp": "2020-05-07T02:58:10.585Z"
         },
         "supportedPictureModesMap": {
@@ -240,10 +219,7 @@
       "custom.recording": {},
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "samsungvd.ambient",
-            "samsungvd.ambientContent"
-          ],
+          "value": ["samsungvd.ambient", "samsungvd.ambientContent"],
           "timestamp": "2021-01-17T01:10:11.985Z"
         }
       },
@@ -262,9 +238,7 @@
           "timestamp": "2020-12-23T01:33:37.272Z"
         },
         "supportedSoundModes": {
-          "value": [
-            "Standard"
-          ],
+          "value": ["Standard"],
           "timestamp": "2021-08-21T19:19:52.887Z"
         }
       },

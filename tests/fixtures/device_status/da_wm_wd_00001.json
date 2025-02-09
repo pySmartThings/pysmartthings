@@ -7,11 +7,7 @@
           "timestamp": "2025-02-08T18:10:11.023Z"
         },
         "supportedModes": {
-          "value": [
-            "normal",
-            "timeDry",
-            "quickDry"
-          ],
+          "value": ["normal", "timeDry", "quickDry"],
           "timestamp": "2025-02-08T18:10:10.497Z"
         }
       }
@@ -33,14 +29,7 @@
           "timestamp": "2025-02-08T18:10:10.840Z"
         },
         "supportedDryingTemperature": {
-          "value": [
-            "none",
-            "extraLow",
-            "low",
-            "mediumLow",
-            "medium",
-            "high"
-          ],
+          "value": ["none", "extraLow", "low", "mediumLow", "medium", "high"],
           "timestamp": "2025-01-04T22:52:14.884Z"
         }
       },
@@ -180,14 +169,7 @@
           "timestamp": "2025-02-08T18:10:10.840Z"
         },
         "supportedDryerDryLevel": {
-          "value": [
-            "none",
-            "damp",
-            "less",
-            "normal",
-            "more",
-            "very"
-          ],
+          "value": ["none", "damp", "less", "normal", "more", "very"],
           "timestamp": "2021-06-01T22:54:28.224Z"
         }
       },
@@ -210,20 +192,12 @@
                 "dryingLevel": {
                   "raw": "D33E",
                   "default": "normal",
-                  "options": [
-                    "damp",
-                    "less",
-                    "normal",
-                    "more",
-                    "very"
-                  ]
+                  "options": ["damp", "less", "normal", "more", "very"]
                 },
                 "dryingTemperature": {
                   "raw": "8410",
                   "default": "medium",
-                  "options": [
-                    "medium"
-                  ]
+                  "options": ["medium"]
                 }
               }
             },
@@ -233,20 +207,12 @@
                 "dryingLevel": {
                   "raw": "D33E",
                   "default": "normal",
-                  "options": [
-                    "damp",
-                    "less",
-                    "normal",
-                    "more",
-                    "very"
-                  ]
+                  "options": ["damp", "less", "normal", "more", "very"]
                 },
                 "dryingTemperature": {
                   "raw": "8520",
                   "default": "high",
-                  "options": [
-                    "high"
-                  ]
+                  "options": ["high"]
                 }
               }
             },
@@ -256,20 +222,12 @@
                 "dryingLevel": {
                   "raw": "D33E",
                   "default": "normal",
-                  "options": [
-                    "damp",
-                    "less",
-                    "normal",
-                    "more",
-                    "very"
-                  ]
+                  "options": ["damp", "less", "normal", "more", "very"]
                 },
                 "dryingTemperature": {
                   "raw": "8520",
                   "default": "high",
-                  "options": [
-                    "high"
-                  ]
+                  "options": ["high"]
                 }
               }
             },
@@ -279,20 +237,12 @@
                 "dryingLevel": {
                   "raw": "D33E",
                   "default": "normal",
-                  "options": [
-                    "damp",
-                    "less",
-                    "normal",
-                    "more",
-                    "very"
-                  ]
+                  "options": ["damp", "less", "normal", "more", "very"]
                 },
                 "dryingTemperature": {
                   "raw": "8308",
                   "default": "mediumLow",
-                  "options": [
-                    "mediumLow"
-                  ]
+                  "options": ["mediumLow"]
                 }
               }
             },
@@ -302,16 +252,12 @@
                 "dryingLevel": {
                   "raw": "D520",
                   "default": "very",
-                  "options": [
-                    "very"
-                  ]
+                  "options": ["very"]
                 },
                 "dryingTemperature": {
                   "raw": "8520",
                   "default": "high",
-                  "options": [
-                    "high"
-                  ]
+                  "options": ["high"]
                 }
               }
             },
@@ -326,9 +272,7 @@
                 "dryingTemperature": {
                   "raw": "8520",
                   "default": "high",
-                  "options": [
-                    "high"
-                  ]
+                  "options": ["high"]
                 }
               }
             },
@@ -373,13 +317,7 @@
                 "dryingTemperature": {
                   "raw": "853E",
                   "default": "high",
-                  "options": [
-                    "extraLow",
-                    "low",
-                    "mediumLow",
-                    "medium",
-                    "high"
-                  ]
+                  "options": ["extraLow", "low", "mediumLow", "medium", "high"]
                 }
               }
             },
@@ -394,9 +332,7 @@
                 "dryingTemperature": {
                   "raw": "8520",
                   "default": "high",
-                  "options": [
-                    "high"
-                  ]
+                  "options": ["high"]
                 }
               }
             },
@@ -406,16 +342,12 @@
                 "dryingLevel": {
                   "raw": "D308",
                   "default": "normal",
-                  "options": [
-                    "normal"
-                  ]
+                  "options": ["normal"]
                 },
                 "dryingTemperature": {
                   "raw": "8410",
                   "default": "medium",
-                  "options": [
-                    "medium"
-                  ]
+                  "options": ["medium"]
                 }
               }
             },
@@ -425,20 +357,12 @@
                 "dryingLevel": {
                   "raw": "D33E",
                   "default": "normal",
-                  "options": [
-                    "damp",
-                    "less",
-                    "normal",
-                    "more",
-                    "very"
-                  ]
+                  "options": ["damp", "less", "normal", "more", "very"]
                 },
                 "dryingTemperature": {
                   "raw": "8102",
                   "default": "extraLow",
-                  "options": [
-                    "extraLow"
-                  ]
+                  "options": ["extraLow"]
                 }
               }
             }
@@ -554,11 +478,7 @@
           "timestamp": "2025-02-08T18:10:10.962Z"
         },
         "supportedMachineStates": {
-          "value": [
-            "stop",
-            "run",
-            "pause"
-          ],
+          "value": ["stop", "run", "pause"],
           "timestamp": "2025-02-08T18:10:10.962Z"
         },
         "dryerJobState": {
@@ -604,13 +524,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.information"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "rt": ["x.com.samsung.da.information"],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "x.com.samsung.da.modelNum": "DA_WM_A51_20_COMMON|20233741|3000000100111100020B000000000000",
               "x.com.samsung.da.description": "DA_WM_A51_20_COMMON_DV6300R/DC92-02385A_0090",
               "x.com.samsung.da.serialNum": "FFFFFFFFFFFFFFF",
@@ -727,11 +642,7 @@
           "timestamp": "2025-02-07T04:00:18.186Z"
         },
         "supportedOperatingStates": {
-          "value": [
-            "ready",
-            "running",
-            "paused"
-          ],
+          "value": ["ready", "running", "paused"],
           "timestamp": "2022-11-01T13:43:26.961Z"
         },
         "scheduledJobs": {
@@ -794,14 +705,7 @@
       },
       "samsungce.dryerDryingTime": {
         "supportedDryingTime": {
-          "value": [
-            "0",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60"
-          ],
+          "value": ["0", "20", "30", "40", "50", "60"],
           "timestamp": "2021-06-01T22:54:28.224Z"
         },
         "dryingTime": {

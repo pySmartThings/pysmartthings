@@ -35,11 +35,7 @@
           "value": null
         },
         "supportedMachineStates": {
-          "value": [
-            "stop",
-            "run",
-            "pause"
-          ],
+          "value": ["stop", "run", "pause"],
           "timestamp": "2024-09-10T10:21:02.853Z"
         },
         "dishwasherJobState": {
@@ -60,32 +56,21 @@
         "selectedZone": {
           "value": {
             "value": "all",
-            "settable": [
-              "none",
-              "upper",
-              "lower",
-              "all"
-            ]
+            "settable": ["none", "upper", "lower", "all"]
           },
           "timestamp": "2022-11-09T00:20:42.461Z"
         },
         "speedBooster": {
           "value": {
             "value": false,
-            "settable": [
-              false,
-              true
-            ]
+            "settable": [false, true]
           },
           "timestamp": "2023-11-24T14:46:55.375Z"
         },
         "highTempWash": {
           "value": {
             "value": false,
-            "settable": [
-              false,
-              true
-            ]
+            "settable": [false, true]
           },
           "timestamp": "2025-02-08T07:39:54.739Z"
         },
@@ -98,12 +83,7 @@
         "zoneBooster": {
           "value": {
             "value": "none",
-            "settable": [
-              "none",
-              "left",
-              "right",
-              "all"
-            ]
+            "settable": ["none", "left", "right", "all"]
           },
           "timestamp": "2022-11-20T07:10:27.445Z"
         },
@@ -126,10 +106,7 @@
         "sanitize": {
           "value": {
             "value": false,
-            "settable": [
-              false,
-              true
-            ]
+            "settable": [false, true]
           },
           "timestamp": "2025-01-18T23:49:09.964Z"
         },
@@ -301,11 +278,7 @@
       },
       "samsungce.dishwasherOperation": {
         "supportedOperatingState": {
-          "value": [
-            "ready",
-            "running",
-            "paused"
-          ],
+          "value": ["ready", "running", "paused"],
           "timestamp": "2024-09-10T10:21:02.853Z"
         },
         "operatingState": {
@@ -408,39 +381,23 @@
               "options": {
                 "highTempWash": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "sanitize": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "speedBooster": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "zoneBooster": {
                   "default": "none",
-                  "settable": [
-                    "none",
-                    "left"
-                  ]
+                  "settable": ["none", "left"]
                 },
                 "selectedZone": {
                   "default": "all",
-                  "settable": [
-                    "none",
-                    "lower",
-                    "all"
-                  ]
+                  "settable": ["none", "lower", "all"]
                 }
               }
             },
@@ -460,39 +417,23 @@
               "options": {
                 "highTempWash": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "sanitize": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "speedBooster": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "zoneBooster": {
                   "default": "none",
-                  "settable": [
-                    "none",
-                    "left"
-                  ]
+                  "settable": ["none", "left"]
                 },
                 "selectedZone": {
                   "default": "all",
-                  "settable": [
-                    "none",
-                    "lower",
-                    "all"
-                  ]
+                  "settable": ["none", "lower", "all"]
                 }
               }
             },
@@ -512,39 +453,23 @@
               "options": {
                 "highTempWash": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "sanitize": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "speedBooster": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "zoneBooster": {
                   "default": "none",
-                  "settable": [
-                    "none",
-                    "left"
-                  ]
+                  "settable": ["none", "left"]
                 },
                 "selectedZone": {
                   "default": "all",
-                  "settable": [
-                    "none",
-                    "lower",
-                    "all"
-                  ]
+                  "settable": ["none", "lower", "all"]
                 }
               }
             },
@@ -572,10 +497,7 @@
                 },
                 "speedBooster": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "zoneBooster": {
                   "default": "none",
@@ -583,11 +505,7 @@
                 },
                 "selectedZone": {
                   "default": "all",
-                  "settable": [
-                    "none",
-                    "lower",
-                    "all"
-                  ]
+                  "settable": ["none", "lower", "all"]
                 }
               }
             },
@@ -607,17 +525,11 @@
               "options": {
                 "highTempWash": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "sanitize": {
                   "default": false,
-                  "settable": [
-                    false,
-                    true
-                  ]
+                  "settable": [false, true]
                 },
                 "speedBooster": {
                   "default": false,
@@ -625,18 +537,11 @@
                 },
                 "zoneBooster": {
                   "default": "none",
-                  "settable": [
-                    "none",
-                    "left"
-                  ]
+                  "settable": ["none", "left"]
                 },
                 "selectedZone": {
                   "default": "all",
-                  "settable": [
-                    "none",
-                    "lower",
-                    "all"
-                  ]
+                  "settable": ["none", "lower", "all"]
                 }
               }
             },
@@ -672,11 +577,7 @@
                 },
                 "selectedZone": {
                   "default": "all",
-                  "settable": [
-                    "none",
-                    "lower",
-                    "all"
-                  ]
+                  "settable": ["none", "lower", "all"]
                 }
               }
             },
@@ -712,10 +613,7 @@
                 },
                 "selectedZone": {
                   "default": "all",
-                  "settable": [
-                    "none",
-                    "all"
-                  ]
+                  "settable": ["none", "all"]
                 }
               }
             }
@@ -735,19 +633,10 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "oic.r.operational.state"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "rt": ["oic.r.operational.state"],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "currentMachineState": "idle",
-              "machineStates": [
-                "pause",
-                "active",
-                "idle"
-              ],
+              "machineStates": ["pause", "active", "idle"],
               "jobStates": [
                 "None",
                 "Predrain",
@@ -805,15 +694,7 @@
           "value": null
         },
         "supportedCourses": {
-          "value": [
-            "82",
-            "83",
-            "84",
-            "85",
-            "86",
-            "87",
-            "88"
-          ],
+          "value": ["82", "83", "84", "85", "86", "87", "88"],
           "timestamp": "2025-02-08T18:00:37.194Z"
         }
       },

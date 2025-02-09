@@ -1,4 +1,4 @@
 {
-	"clientName": "pysmartthings-test",
-	"scope": ["r:devices"]
+  "clientName": "pysmartthings-test",
+  "scope": ["r:devices"]
 }

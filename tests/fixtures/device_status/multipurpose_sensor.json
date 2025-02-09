@@ -9,11 +9,7 @@
       },
       "threeAxis": {
         "threeAxis": {
-          "value": [
-            20,
-            8,
-            -1042
-          ],
+          "value": [20, 8, -1042],
           "unit": "mG",
           "timestamp": "2025-02-09T17:27:36.673Z"
         }

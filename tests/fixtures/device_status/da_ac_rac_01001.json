@@ -3,9 +3,7 @@
     "main": {
       "samsungce.unavailableCapabilities": {
         "unavailableCommands": {
-          "value": [
-            "custom.spiMode.setSpiMode"
-          ],
+          "value": ["custom.spiMode.setSpiMode"],
           "timestamp": "2025-02-09T05:44:01.769Z"
         }
       },
@@ -34,13 +32,7 @@
           "timestamp": "2025-02-09T14:35:56.800Z"
         },
         "supportedAcModes": {
-          "value": [
-            "auto",
-            "cool",
-            "dry",
-            "wind",
-            "heat"
-          ],
+          "value": ["auto", "cool", "dry", "wind", "heat"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "airConditionerMode": {
@@ -174,10 +166,7 @@
       },
       "sec.diagnosticsInformation": {
         "logType": {
-          "value": [
-            "errCode",
-            "dump"
-          ],
+          "value": ["errCode", "dump"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "endpoint": {
@@ -214,12 +203,7 @@
       },
       "fanOscillationMode": {
         "supportedFanOscillationModes": {
-          "value": [
-            "fixed",
-            "vertical",
-            "horizontal",
-            "all"
-          ],
+          "value": ["fixed", "vertical", "horizontal", "all"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "availableFanOscillationModes": {
@@ -347,26 +331,15 @@
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "supportedWiFiFreq": {
-          "value": [
-            "2.4G"
-          ],
+          "value": ["2.4G"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "supportedAuthType": {
-          "value": [
-            "OPEN",
-            "WEP",
-            "WPA-PSK",
-            "WPA2-PSK",
-            "SAE"
-          ],
+          "value": ["OPEN", "WEP", "WPA-PSK", "WPA2-PSK", "SAE"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "protocolType": {
-          "value": [
-            "helper_hotspot",
-            "ble_ocf"
-          ],
+          "value": ["helper_hotspot", "ble_ocf"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         }
       },
@@ -375,10 +348,7 @@
           "value": null
         },
         "supportedActions": {
-          "value": [
-            "start",
-            "cancel"
-          ],
+          "value": ["start", "cancel"],
           "timestamp": "2025-02-09T04:52:00.923Z"
         },
         "progress": {
@@ -417,10 +387,7 @@
           "timestamp": "2025-02-09T12:00:10.310Z"
         },
         "dustFilterResetType": {
-          "value": [
-            "replaceable",
-            "washable"
-          ],
+          "value": ["replaceable", "washable"],
           "timestamp": "2025-02-09T12:00:10.310Z"
         }
       },
@@ -593,23 +560,11 @@
           "timestamp": "2025-02-09T14:07:45.816Z"
         },
         "supportedAcFanModes": {
-          "value": [
-            "auto",
-            "low",
-            "medium",
-            "high",
-            "turbo"
-          ],
+          "value": ["auto", "low", "medium", "high", "turbo"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "availableAcFanModes": {
-          "value": [
-            "auto",
-            "low",
-            "medium",
-            "high",
-            "turbo"
-          ],
+          "value": ["auto", "low", "medium", "high", "turbo"],
           "timestamp": "2025-02-09T05:44:01.769Z"
         }
       },
@@ -620,12 +575,7 @@
           "timestamp": "2025-02-09T12:00:10.310Z"
         },
         "supportedAlarmThresholds": {
-          "value": [
-            180,
-            300,
-            500,
-            700
-          ],
+          "value": [180, 300, 500, 700],
           "unit": "Hour",
           "timestamp": "2025-02-09T15:42:13.444Z"
         }
@@ -652,10 +602,7 @@
       },
       "samsungce.airConditionerLighting": {
         "supportedLightingLevels": {
-          "value": [
-            "on",
-            "off"
-          ],
+          "value": ["on", "off"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "lighting": {
@@ -689,9 +636,7 @@
       },
       "sec.calmConnectionCare": {
         "role": {
-          "value": [
-            "things"
-          ],
+          "value": ["things"],
           "timestamp": "2025-02-09T15:42:13.444Z"
         },
         "protocols": {

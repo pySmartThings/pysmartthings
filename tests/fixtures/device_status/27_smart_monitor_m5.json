@@ -3,13 +3,7 @@
     "main": {
       "mediaPlayback": {
         "supportedPlaybackCommands": {
-          "value": [
-            "play",
-            "pause",
-            "stop",
-            "fastForward",
-            "rewind"
-          ],
+          "value": ["play", "pause", "stop", "fastForward", "rewind"],
           "timestamp": "2024-12-31T09:18:21.859Z"
         },
         "playbackStatus": {
@@ -141,10 +135,7 @@
       "custom.accessibility": {},
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "samsungvd.ambient",
-            "samsungvd.ambientContent"
-          ],
+          "value": ["samsungvd.ambient", "samsungvd.ambientContent"],
           "timestamp": "2025-01-07T15:42:44.749Z"
         }
       },
@@ -217,9 +208,7 @@
           "timestamp": "2024-12-31T13:55:01.293Z"
         },
         "supportedPictureModes": {
-          "value": [
-            "Eye Saver Low"
-          ],
+          "value": ["Eye Saver Low"],
           "timestamp": "2024-12-31T13:55:01.293Z"
         },
         "supportedPictureModesMap": {
@@ -262,11 +251,7 @@
           "timestamp": "2024-12-31T13:55:00.792Z"
         },
         "supportedSoundModes": {
-          "value": [
-            "Adaptive Sound",
-            "Amplify",
-            "Standard"
-          ],
+          "value": ["Adaptive Sound", "Amplify", "Standard"],
           "timestamp": "2024-12-31T13:55:00.792Z"
         }
       },

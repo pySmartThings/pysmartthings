@@ -69,9 +69,7 @@
       },
       "ovenMode": {
         "supportedOvenModes": {
-          "value": [
-            "Others"
-          ],
+          "value": ["Others"],
           "timestamp": "2022-02-21T22:37:08.409Z"
         },
         "ovenMode": {
@@ -107,11 +105,7 @@
       },
       "samsungce.ovenMode": {
         "supportedOvenModes": {
-          "value": [
-            "SelfClean",
-            "SteamClean",
-            "NoOperation"
-          ],
+          "value": ["SelfClean", "SteamClean", "NoOperation"],
           "timestamp": "2022-02-21T22:37:08.409Z"
         },
         "ovenMode": {
@@ -171,13 +165,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.information"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "rt": ["x.com.samsung.da.information"],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "x.com.samsung.da.modelNum": "TP1X_DA-KS-RANGE-0101X|40445041|5001011E03151101020000000000000",
               "x.com.samsung.da.description": "TP1X_DA-KS-OVEN-01011",
               "x.com.samsung.da.serialNum": "0J4D7DARB00000K",
@@ -330,10 +319,7 @@
             "single": [
               {
                 "mode": "Bake",
-                "supportedOperations": [
-                  "start",
-                  "set"
-                ],
+                "supportedOperations": ["start", "set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
@@ -359,38 +345,27 @@
               },
               {
                 "mode": "Broil",
-                "supportedOperations": [
-                  "set"
-                ],
+                "supportedOperations": ["set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
                       "min": 61441,
                       "max": 61442,
                       "default": 61441,
-                      "supportedValues": [
-                        61441,
-                        61442
-                      ]
+                      "supportedValues": [61441, 61442]
                     },
                     "F": {
                       "min": 61441,
                       "max": 61442,
                       "default": 61441,
-                      "supportedValues": [
-                        61441,
-                        61442
-                      ]
+                      "supportedValues": [61441, 61442]
                     }
                   }
                 }
               },
               {
                 "mode": "ConvectionBake",
-                "supportedOperations": [
-                  "start",
-                  "set"
-                ],
+                "supportedOperations": ["start", "set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
@@ -416,10 +391,7 @@
               },
               {
                 "mode": "ConvectionRoast",
-                "supportedOperations": [
-                  "start",
-                  "set"
-                ],
+                "supportedOperations": ["start", "set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
@@ -445,62 +417,47 @@
               },
               {
                 "mode": "KeepWarm",
-                "supportedOperations": [
-                  "set"
-                ],
+                "supportedOperations": ["set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
                       "min": 80,
                       "max": 80,
                       "default": 80,
-                      "supportedValues": [
-                        80
-                      ]
+                      "supportedValues": [80]
                     },
                     "F": {
                       "min": 175,
                       "max": 175,
                       "default": 175,
-                      "supportedValues": [
-                        175
-                      ]
+                      "supportedValues": [175]
                     }
                   }
                 }
               },
               {
                 "mode": "BreadProof",
-                "supportedOperations": [
-                  "set"
-                ],
+                "supportedOperations": ["set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
                       "min": 35,
                       "max": 35,
                       "default": 35,
-                      "supportedValues": [
-                        35
-                      ]
+                      "supportedValues": [35]
                     },
                     "F": {
                       "min": 95,
                       "max": 95,
                       "default": 95,
-                      "supportedValues": [
-                        95
-                      ]
+                      "supportedValues": [95]
                     }
                   }
                 }
               },
               {
                 "mode": "AirFryer",
-                "supportedOperations": [
-                  "start",
-                  "set"
-                ],
+                "supportedOperations": ["start", "set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
@@ -526,10 +483,7 @@
               },
               {
                 "mode": "Dehydrate",
-                "supportedOperations": [
-                  "start",
-                  "set"
-                ],
+                "supportedOperations": ["start", "set"],
                 "supportedOptions": {
                   "temperature": {
                     "C": {
@@ -570,10 +524,7 @@
       },
       "custom.cooktopOperatingState": {
         "supportedCooktopOperatingState": {
-          "value": [
-            "run",
-            "ready"
-          ],
+          "value": ["run", "ready"],
           "timestamp": "2022-02-21T22:37:05.293Z"
         },
         "cooktopOperatingState": {
@@ -722,10 +673,7 @@
           "timestamp": "2025-02-07T03:07:52.875Z"
         },
         "supportedBrightnessLevel": {
-          "value": [
-            "off",
-            "high"
-          ],
+          "value": ["off", "high"],
           "timestamp": "2025-02-07T03:07:52.875Z"
         }
       },

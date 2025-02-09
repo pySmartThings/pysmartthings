@@ -3,9 +3,7 @@
     "main": {
       "custom.disabledComponents": {
         "disabledComponents": {
-          "value": [
-            "station"
-          ],
+          "value": ["station"],
           "timestamp": "2020-11-03T04:43:07.114Z"
         }
       },
@@ -61,13 +59,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.alarms"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "rt": ["x.com.samsung.da.alarms"],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "x.com.samsung.da.items": [
                 {
                   "x.com.samsung.da.code": "4",
@@ -190,12 +183,7 @@
       },
       "samsungce.robotCleanerCleaningMode": {
         "supportedCleaningMode": {
-          "value": [
-            "auto",
-            "spot",
-            "manual",
-            "stop"
-          ],
+          "value": ["auto", "spot", "manual", "stop"],
           "timestamp": "2020-11-03T04:43:06.547Z"
         },
         "repeatModeEnabled": {
