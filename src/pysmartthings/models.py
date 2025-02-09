@@ -25,6 +25,7 @@ class Capability(StrEnum):
     DISHWASHER_OPERATING_STATE = "dishwasherOperatingState"
     DOOR_CONTROL = "doorControl"
     DRYER_OPERATING_STATE = "dryerOperatingState"
+    ENERGY_METER = "energyMeter"
     EXECUTE = "execute"
     FIRMWARE_UPDATE = "firmwareUpdate"
     GEOFENCE = "geofence"
@@ -36,6 +37,7 @@ class Capability(StrEnum):
     OVEN_OPERATING_STATE = "ovenOperatingState"
     OVEN_SETPOINT = "ovenSetpoint"
     POWER_CONSUMPTION_REPORT = "powerConsumptionReport"
+    POWER_METER = "powerMeter"
     REFRESH = "refresh"
     REFRIGERATION = "refrigeration"
     RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
@@ -248,6 +250,7 @@ class Attribute(StrEnum):
     ENABLE_STATE = "enableState"
     ENCRYPTION = "encryption"
     ENDPOINT = "endpoint"
+    ENERGY = "energy"
     ENERGY_SAVING_INFO = "energySavingInfo"
     ENERGY_SAVING_LEVEL = "energySavingLevel"
     ENERGY_SAVING_OPERATION = "energySavingOperation"
@@ -328,6 +331,7 @@ class Attribute(StrEnum):
     PLAN = "plan"
     PLATFORM_ID = "pi"
     PLATFORM_VERSION = "mnpv"
+    POWER = "power"
     POWER_CONSUMPTION = "powerConsumption"
     POWER_LEVEL = "powerLevel"
     PREDEFINED_COURSES = "predefinedCourses"
@@ -515,6 +519,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.DOOR_CONTROL: [
         Attribute.DOOR,
     ],
+    Capability.ENERGY_METER: [Attribute.ENERGY],
     Capability.EXECUTE: [Attribute.DATA],
     Capability.FIRMWARE_UPDATE: [
         Attribute.LAST_UPDATE_STATUS_REASON,
@@ -575,6 +580,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OPERATION_TIME,
     ],
     Capability.OVEN_SETPOINT: [Attribute.OVEN_SETPOINT, Attribute.OVEN_SETPOINT_RANGE],
+    Capability.POWER_METER: [Attribute.POWER],
     Capability.REFRESH: [],
     Capability.RELATIVE_HUMIDITY_MEASUREMENT: [Attribute.HUMIDITY],
     Capability.REMOTE_CONTROL_STATUS: [Attribute.REMOTE_CONTROL_ENABLED],
