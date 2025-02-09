@@ -809,6 +809,7 @@ class Command(StrEnum):
     SET_COLOR = "setColor"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
+    SET_FAN_MODE = "setFanMode"
     SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
     SET_HUE = "setHue"
     SET_LEVEL = "setLevel"
@@ -1688,6 +1689,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.AIR_CONDITIONER_MODE: [Command.SET_AIR_CONDITIONER_MODE],
+    Capability.AIR_CONDITIONER_FAN_MODE: [Command.SET_FAN_MODE],
     Capability.COLOR_CONTROL: [
         Command.SET_COLOR,
         Command.SET_HUE,
