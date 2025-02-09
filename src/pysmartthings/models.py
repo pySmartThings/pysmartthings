@@ -214,6 +214,19 @@ class Capability(StrEnum):
     VIDEO_CAPTURE = "videoCapture"
     VIDEO_STREAM = "videoStream"
     SOUND_SENSOR = "soundSensor"
+    LEGENDABSOLUTE60149_RANDOM_NEXT_STEP = "legendabsolute60149.randomNextStep"
+    LEGENDABSOLUTE60149_RANDOM_ON_OFF1 = "legendabsolute60149.randomOnOff1"
+    LEGENDABSOLUTE60149_GET_GROUPS = "legendabsolute60149.getGroups"
+    LEGENDABSOLUTE60149_LEVEL_STEPS = "legendabsolute60149.levelSteps"
+    LEGENDABSOLUTE60149_FORCED_ON_LEVEL = "legendabsolute60149.forcedOnLevel"
+    LEGENDABSOLUTE60149_PROGRESSIVE_ON1 = "legendabsolute60149.progressiveOn1"
+    LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION = (
+        "legendabsolute60149.mirrorGroupFunction"
+    )
+    LEGENDABSOLUTE60149_DRIVER_VERSION1 = "legendabsolute60149.driverVersion1"
+    LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND = "legendabsolute60149.effectsSetCommand"
+    LEGENDABSOLUTE60149_PROGRESSIVE_OFF1 = "legendabsolute60149.progressiveOff1"
+    LEGENDABSOLUTE60149_SIGNAL_METRICS = "legendabsolute60149.signalMetrics"
 
 
 class Attribute(StrEnum):
@@ -627,6 +640,17 @@ class Attribute(StrEnum):
     CLIP = "clip"
     SUPPORTED_FEATURES = "supportedFeatures"
     SOUND = "sound"
+    RANDOM_NEXT = "randomNext"
+    RANDOM_ON_OFF = "randomOnOff"
+    GET_GROUPS = "getGroups"
+    LEVEL_STEPS = "levelSteps"
+    FORCED_ON_LEVEL = "forcedOnLevel"
+    PROG_ON = "progOn"
+    MIRROR_GROUP_FUNCTION = "mirrorGroupFunction"
+    DRIVER_VERSION = "driverVersion"
+    EFFECTS_SET_COMMAND = "effectsSetCommand"
+    PROG_OFF = "progOff"
+    SIGNAL_METRICS = "signalMetrics"
 
 
 class Command(StrEnum):
@@ -1387,6 +1411,22 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.TAG_TAG_BUTTON: [Attribute.TAG_BUTTON],
     Capability.TAG_UWB_ACTIVATION: [Attribute.UWB_ACTIVATION],
+    # Legendabsolute60419 capabilities
+    Capability.LEGENDABSOLUTE60149_RANDOM_NEXT_STEP: [
+        Attribute.RANDOM_NEXT,
+    ],
+    Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF1: [Attribute.RANDOM_ON_OFF],
+    Capability.LEGENDABSOLUTE60149_GET_GROUPS: [Attribute.GET_GROUPS],
+    Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Attribute.PROG_ON],
+    Capability.LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION: [
+        Attribute.MIRROR_GROUP_FUNCTION
+    ],
+    Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: [Attribute.DRIVER_VERSION],
+    Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [Attribute.EFFECTS_SET_COMMAND],
+    Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Attribute.PROG_OFF],
+    Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: [Attribute.SIGNAL_METRICS],
+    Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: [Attribute.LEVEL_STEPS],
+    Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Attribute.FORCED_ON_LEVEL],
 }
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {

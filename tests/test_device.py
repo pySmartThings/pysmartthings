@@ -133,6 +133,7 @@ async def test_fetching_single_device(
         "da_sac_wifikit_000001",
         "vd_network_audio_002s",
         "c2c_arlo_pro_3_switch",
+        "switch_level",
     ],
 )
 async def test_fetching_status_of_single_device(

@@ -12332,6 +12332,174 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[switch_level]
+  dict({
+    'main': dict({
+      <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>: dict({
+        <Attribute.AVAILABLE_VERSION: 'availableVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 57, 40, 214000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0000000C',
+        }),
+        <Attribute.CURRENT_VERSION: 'currentVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 57, 40, 212000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0000000C',
+        }),
+        <Attribute.LAST_UPDATE_STATUS: 'lastUpdateStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_STATUS_REASON: 'lastUpdateStatusReason'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.LAST_UPDATE_TIME: 'lastUpdateTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.STATE: 'state'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 57, 40, 212000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normalOperation',
+        }),
+        <Attribute.SUPPORTED_COMMANDS: 'supportedCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.UPDATE_AVAILABLE: 'updateAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 16, 57, 40, 210000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: 'legendabsolute60149.driverVersion1'>: dict({
+        <Attribute.DRIVER_VERSION: 'driverVersion'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: 'legendabsolute60149.effectsSetCommand'>: dict({
+        <Attribute.EFFECTS_SET_COMMAND: 'effectsSetCommand'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 10, 2, 12, 5, 15, 168000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Inactive',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: 'legendabsolute60149.forcedOnLevel'>: dict({
+        <Attribute.FORCED_ON_LEVEL: 'forcedOnLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 10, 2, 12, 5, 15, 136000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 0,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_GET_GROUPS: 'legendabsolute60149.getGroups'>: dict({
+        <Attribute.GET_GROUPS: 'getGroups'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 10, 2, 12, 5, 15, 321000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'All Deleted',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: 'legendabsolute60149.levelSteps'>: dict({
+        <Attribute.LEVEL_STEPS: 'levelSteps'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 3, 19, 12, 20, 57, 785000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 0,
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION: 'legendabsolute60149.mirrorGroupFunction'>: dict({
+        <Attribute.MIRROR_GROUP_FUNCTION: 'mirrorGroupFunction'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 10, 2, 12, 5, 15, 137000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Inactive',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: 'legendabsolute60149.progressiveOff1'>: dict({
+        <Attribute.PROG_OFF: 'progOff'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 10, 2, 12, 5, 15, 143000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Inactive',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: 'legendabsolute60149.progressiveOn1'>: dict({
+        <Attribute.PROG_ON: 'progOn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 10, 2, 12, 5, 15, 116000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Inactive',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_RANDOM_NEXT_STEP: 'legendabsolute60149.randomNextStep'>: dict({
+        <Attribute.RANDOM_NEXT: 'randomNext'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 9, 8, 20, 28, 14, 452000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Inactive',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF1: 'legendabsolute60149.randomOnOff1'>: dict({
+        <Attribute.RANDOM_ON_OFF: 'randomOnOff'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 9, 8, 20, 28, 14, 454000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Inactive',
+        }),
+      }),
+      <Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: 'legendabsolute60149.signalMetrics'>: dict({
+        <Attribute.SIGNAL_METRICS: 'signalMetrics'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 54, 48, 996000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025/02/09 Time: 17:54, LQI: 254 ... rssi: -64',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 39, 48, 986000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SWITCH_LEVEL: 'switchLevel'>: dict({
+        <Attribute.LEVEL: 'level'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 17, 5, 4, 951000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.LEVEL_RANGE: 'levelRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[vd_network_audio_002s]
   dict({
     'main': dict({
