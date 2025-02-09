@@ -34,6 +34,9 @@ class Capability(StrEnum):
     REFRIGERATION = "refrigeration"
     RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
     REMOTE_CONTROL_STATUS = "remoteControlStatus"
+    ROBOT_CLEANER_CLEANING_MODE = "robotCleanerCleaningMode"
+    ROBOT_CLEANER_MOVEMENT = "robotCleanerMovement"
+    ROBOT_CLEANER_TURBO_MODE = "robotCleanerTurboMode"
     SWITCH = "switch"
     SWITCH_LEVEL = "switchLevel"
     TEMPERATURE_MEASUREMENT = "temperatureMeasurement"
@@ -102,6 +105,8 @@ class Capability(StrEnum):
     SAMSUNG_CE_POWER_COOL = "samsungce.powerCool"
     SAMSUNG_CE_POWER_FREEZE = "samsungce.powerFreeze"
     SAMSUNG_CE_QUICK_CONTROL = "samsungce.quickControl"
+    SAMSUNG_CE_ROBOT_CLEANER_CLEANING_MODE = "samsungce.robotCleanerCleaningMode"
+    SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE = "samsungce.robotCleanerOperatingState"
     SAMSUNG_CE_RUNESTONE_HOME_CONTEXT = "samsungce.runestoneHomeContext"
     SAMSUNG_CE_SABBATH_MODE = "samsungce.sabbathMode"
     SAMSUNG_CE_SCALE_SETTINGS = "samsungce.scaleSettings"
@@ -137,6 +142,8 @@ class Attribute(StrEnum):
     BRIGHTNESS_LEVEL = "brightnessLevel"
     CHECK_INTERVAL = "checkInterval"
     CIRCADIAN = "circadian"
+    CLEANING_MODE = "cleaningMode"
+    CLEANING_STEP = "cleaningStep"
     COLOR = "color"
     COLOR_TEMPERATURE = "colorTemperature"
     COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
@@ -202,11 +209,13 @@ class Attribute(StrEnum):
     HEALTH_STATUS = "healthStatus"
     HEATED_DRY = "heatedDry"
     HIGH_TEMP_WASH = "highTempWash"
+    HOMING_REASON = "homingReason"
     HOOD_FAN_SPEED = "hoodFanSpeed"
     HOT_AIR_DRY = "hotAirDry"
     HUE = "hue"
     HUMIDITY = "humidity"
     INITIAL_AMOUNT = "initialAmount"
+    IS_MAP_BASED_OPERATION_AVAILABLE = "isMapBasedOperationAvailable"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     LAST_UPDATED_DATE = "lastUpdatedDate"
     LAST_UPDATED_TIME = "lastUpdatedTime"
@@ -264,12 +273,16 @@ class Attribute(StrEnum):
     REMAINING_TIME = "remainingTime"
     REMAINING_TIME_STR = "remainingTimeStr"
     REMOTE_CONTROL_ENABLED = "remoteControlEnabled"
+    REPEAT_MODE_ENABLED = "repeatModeEnabled"
     REPORT_STATE_PERIOD = "reportStatePeriod"
     REPORT_STATE_REALTIME = "reportStateRealtime"
     REPORT_STATE_REALTIME_PERIOD = "reportStateRealtimePeriod"
     REPRESENTATIVE_COMPONENT = "representativeComponent"
     RESERVABLE = "reservable"
     RINSE_PLUS = "rinsePlus"
+    ROBOT_CLEANER_CLEANING_MODE = "robotCleanerCleaningMode"
+    ROBOT_CLEANER_MOVEMENT = "robotCleanerMovement"
+    ROBOT_CLEANER_TURBO_MODE = "robotCleanerTurboMode"
     SANITIZE = "sanitize"
     SANITIZING_WASH = "sanitizingWash"
     SATURATION = "saturation"
@@ -292,6 +305,7 @@ class Attribute(StrEnum):
     SUPPORTED_AGING_METHODS = "supportedAgingMethods"
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
+    SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
     SUPPORTED_CONTEXTS = "supportedContexts"
     SUPPORTED_COOKTOP_OPERATING_STATE = "supportedCooktopOperatingState"
     SUPPORTED_COURSES = "supportedCourses"
@@ -317,6 +331,7 @@ class Attribute(StrEnum):
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
     SUPPORTED_WI_FI_FREQ = "supportedWiFiFreq"
     SUPPORT_LINK = "mnsl"
+    SUPPORT_REPEAT_MODE = "supportRepeatMode"
     SWITCH = "switch"
     SYSTEM_TIME = "st"
     TARGET_MODULE = "targetModule"
@@ -463,6 +478,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.RAPID_COOLING,
         Attribute.RAPID_FREEZING,
     ],
+    Capability.ROBOT_CLEANER_TURBO_MODE: [Attribute.ROBOT_CLEANER_TURBO_MODE],
+    Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
+    Capability.ROBOT_CLEANER_CLEANING_MODE: [Attribute.ROBOT_CLEANER_CLEANING_MODE],
     # HCA capabilities
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
     # Synthetic capabilities
@@ -668,6 +686,19 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ACTIVATED,
     ],
     Capability.SAMSUNG_CE_POWER_FREEZE: [Attribute.ACTIVATED],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE: [
+        Attribute.SUPPORTED_OPERATING_STATE,
+        Attribute.OPERATING_STATE,
+        Attribute.CLEANING_STEP,
+        Attribute.HOMING_REASON,
+        Attribute.IS_MAP_BASED_OPERATION_AVAILABLE,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_CLEANING_MODE: [
+        Attribute.SUPPORTED_CLEANING_MODE,
+        Attribute.REPEAT_MODE_ENABLED,
+        Attribute.SUPPORT_REPEAT_MODE,
+        Attribute.CLEANING_MODE,
+    ],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
