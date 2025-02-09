@@ -116,6 +116,7 @@ async def test_fetching_single_device(
         "da_ks_range_0101x",
         "da_wm_wd_00001",
         "da_wm_dw_00001",
+        "da_ks_microwave_0101x",
     ],
 )
 async def test_fetching_status_of_single_device(

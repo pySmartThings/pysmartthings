@@ -19,6 +19,7 @@ class Capability(StrEnum):
     COLOR_TEMPERATURE = "colorTemperature"
     DEMAND_RESPONSE_LOAD_CONTROL = "demandResponseLoadControl"
     DISHWASHER_OPERATING_STATE = "dishwasherOperatingState"
+    DOOR_CONTROL = "doorControl"
     DRYER_OPERATING_STATE = "dryerOperatingState"
     EXECUTE = "execute"
     HEALTH_CHECK = "healthCheck"
@@ -51,39 +52,42 @@ class Capability(StrEnum):
     CUSTOM_WATER_FILTER = "custom.waterFilter"
 
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
-    SAMSUNGCE_DETERGENT_ORDER = "samsungce.detergentOrder"
-    SAMSUNGCE_DETERGENT_STATE = "samsungce.detergentState"
+    SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
+    SAMSUNG_CE_DETERGENT_ORDER = "samsungce.detergentOrder"
+    SAMSUNG_CE_DETERGENT_STATE = "samsungce.detergentState"
     SAMSUNG_CE_DEVICE_IDENTIFICATION = "samsungce.deviceIdentification"
-    SAMSUNGCE_DISHWASHER_JOB_STATE = "samsungce.dishwasherJobState"
-    SAMSUNGCE_DISHWASHER_OPERATION = "samsungce.dishwasherOperation"
-    SAMSUNGCE_DISHWASHER_WASHING_COURSE = "samsungce.dishwasherWashingCourse"
-    SAMSUNGCE_DISHWASHER_WASHING_COURSE_DETAILS = (
+    SAMSUNG_CE_DISHWASHER_JOB_STATE = "samsungce.dishwasherJobState"
+    SAMSUNG_CE_DISHWASHER_OPERATION = "samsungce.dishwasherOperation"
+    SAMSUNG_CE_DISHWASHER_WASHING_COURSE = "samsungce.dishwasherWashingCourse"
+    SAMSUNG_CE_DISHWASHER_WASHING_COURSE_DETAILS = (
         "samsungce.dishwasherWashingCourseDetails"
     )
-    SAMSUNGCE_DISHWASHER_WASHING_OPTIONS = "samsungce.dishwasherWashingOptions"
-    SAMSUNGCE_DONGLE_SOFTWARE_INSTALLATION = "samsungce.dongleSoftwareInstallation"
+    SAMSUNG_CE_DISHWASHER_WASHING_OPTIONS = "samsungce.dishwasherWashingOptions"
+    SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION = "samsungce.dongleSoftwareInstallation"
     SAMSUNG_CE_DOOR_STATE = "samsungce.doorState"
     SAMSUNG_CE_DRIVER_VERSION = "samsungce.driverVersion"
-    SAMSUNGCE_DRYER_AUTO_CYCLE_LINK = "samsungce.dryerAutoCycleLink"
-    SAMSUNGCE_DRYER_CYCLE = "samsungce.dryerCycle"
-    SAMSUNGCE_DRYER_CYCLE_PRESET = "samsungce.dryerCyclePreset"
-    SAMSUNGCE_DRYER_DELAY_END = "samsungce.dryerDelayEnd"
-    SAMSUNGCE_DRYER_DRYING_TEMPERATURE = "samsungce.dryerDryingTemperature"
-    SAMSUNGCE_DRYER_DRYING_TIME = "samsungce.dryerDryingTime"
-    SAMSUNGCE_DRYER_FREEZE_PREVENT = "samsungce.dryerFreezePrevent"
-    SAMSUNGCE_DRYER_OPERATING_STATE = "samsungce.dryerOperatingState"
+    SAMSUNG_CE_DRYER_AUTO_CYCLE_LINK = "samsungce.dryerAutoCycleLink"
+    SAMSUNG_CE_DRYER_CYCLE = "samsungce.dryerCycle"
+    SAMSUNG_CE_DRYER_CYCLE_PRESET = "samsungce.dryerCyclePreset"
+    SAMSUNG_CE_DRYER_DELAY_END = "samsungce.dryerDelayEnd"
+    SAMSUNG_CE_DRYER_DRYING_TEMPERATURE = "samsungce.dryerDryingTemperature"
+    SAMSUNG_CE_DRYER_DRYING_TIME = "samsungce.dryerDryingTime"
+    SAMSUNG_CE_DRYER_FREEZE_PREVENT = "samsungce.dryerFreezePrevent"
+    SAMSUNG_CE_DRYER_OPERATING_STATE = "samsungce.dryerOperatingState"
+    SAMSUNG_CE_HOOD_FAN_SPEED = "samsungce.hoodFanSpeed"
     SAMSUNG_CE_KIDS_LOCK = "samsungce.kidsLock"
     SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS = "samsungce.kitchenDeviceDefaults"
     SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION = "samsungce.kitchenDeviceIdentification"
     SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION = "samsungce.kitchenModeSpecification"
     SAMSUNG_CE_LAMP = "samsungce.lamp"
     SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
+    SAMSUNG_CE_MICROWAVE_POWER = "samsungce.microwavePower"
     SAMSUNG_CE_OVEN_MODE = "samsungce.ovenMode"
     SAMSUNG_CE_OVEN_OPERATING_STATE = "samsungce.ovenOperatingState"
-    SAMSUNGCE_QUICK_CONTROL = "samsungce.quickControl"
+    SAMSUNG_CE_QUICK_CONTROL = "samsungce.quickControl"
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
-    SAMSUNGCE_WATER_CONSUMPTION_REPORT = "samsungce.waterConsumptionReport"
-    SAMSUNGCE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
+    SAMSUNG_CE_WATER_CONSUMPTION_REPORT = "samsungce.waterConsumptionReport"
+    SAMSUNG_CE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
 
     SAMSUNG_IM_HUE_SYNC_MODE = "samsungim.hueSyncMode"
 
@@ -120,6 +124,7 @@ class Attribute(StrEnum):
     DEFAULT_OPERATION_TIME = "defaultOperationTime"
     DEFAULT_OVEN_MODE = "defaultOvenMode"
     DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
+    DEFINED_RECIPE = "definedRecipe"
     DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DESCRIPTION = "description"
     DETERGENT_TYPE = "detergentType"
@@ -132,6 +137,7 @@ class Attribute(StrEnum):
     DISHWASHER_JOB_STATE = "dishwasherJobState"
     DISHWASHER_OPERATING_PERCENTAGE = "dishwasherOperatingPercentage"
     DISHWASHER_OPERATING_PROGRESS = "dishwasherOperatingProgress"
+    DOOR = "door"
     DOOR_STATE = "doorState"
     DOSAGE = "dosage"
     DRYER_AUTO_CYCLE_LINK = "dryerAutoCycleLink"
@@ -159,6 +165,7 @@ class Attribute(StrEnum):
     HEALTH_STATUS = "healthStatus"
     HEATED_DRY = "heatedDry"
     HIGH_TEMP_WASH = "highTempWash"
+    HOOD_FAN_SPEED = "hoodFanSpeed"
     HOT_AIR_DRY = "hotAirDry"
     HUE = "hue"
     HUMIDITY = "humidity"
@@ -198,6 +205,7 @@ class Attribute(StrEnum):
     PLATFORM_ID = "pi"
     PLATFORM_VERSION = "mnpv"
     POWER_CONSUMPTION = "powerConsumption"
+    POWER_LEVEL = "powerLevel"
     PREDEFINED_COURSES = "predefinedCourses"
     PRESETS = "presets"
     PROGRESS = "progress"
@@ -221,6 +229,8 @@ class Attribute(StrEnum):
     SELECTED_ZONE = "selectedZone"
     SERIAL_NUMBER = "serialNumber"
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
+    SETTABLE_MAX_FAN_SPEED = "settableMaxFanSpeed"
+    SETTABLE_MIN_FAN_SPEED = "settableMinFanSpeed"
     SETUP_ID = "setupId"
     SIGNIN_PERMISSION = "signinPermission"
     SPECIALIZED_FUNCTION_CLASSIFICATION = "specializedFunctionClassification"
@@ -239,12 +249,14 @@ class Attribute(StrEnum):
     SUPPORTED_DRYING_TEMPERATURE = "supportedDryingTemperature"
     SUPPORTED_DRYING_TIME = "supportedDryingTime"
     SUPPORTED_ENERGY_SAVING_LEVELS = "supportedEnergySavingLevels"
+    SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
     SUPPORTED_LIST = "supportedList"
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
     SUPPORTED_MODES = "supportedModes"
     SUPPORTED_OPERATING_STATE = "supportedOperatingState"
     SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
     SUPPORTED_OVEN_MODES = "supportedOvenModes"
+    SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
     SUPPORTED_WI_FI_FREQ = "supportedWiFiFreq"
@@ -304,6 +316,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.COLOR_TEMPERATURE: [
         Attribute.COLOR_TEMPERATURE,
         Attribute.COLOR_TEMPERATURE_RANGE,
+    ],
+    Capability.DOOR_CONTROL: [
+        Attribute.DOOR,
     ],
     Capability.EXECUTE: [Attribute.DATA],
     Capability.HEALTH_CHECK: [
@@ -418,13 +433,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DESCRIPTION,
         Attribute.RELEASE_YEAR,
         Attribute.BINARY_ID,
+    ],
+    Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: [Attribute.SPECIFICATION],
+    Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: [
         Attribute.REGION_CODE,
         Attribute.MODEL_CODE,
         Attribute.FUEL,
-        Attribute.REPRESENTATIVE_COMPONENT,
         Attribute.TYPE,
+        Attribute.REPRESENTATIVE_COMPONENT,
     ],
-    Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: [Attribute.SPECIFICATION],
     Capability.SAMSUNG_CE_SOFTWARE_UPDATE: [
         Attribute.TARGET_MODULE,
         Attribute.OTN_D_U_I_D,
@@ -439,37 +456,37 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_BRIGHTNESS_LEVEL,
     ],
     Capability.SAMSUNG_CE_KIDS_LOCK: [Attribute.LOCK_STATE],
-    Capability.SAMSUNGCE_DRYER_DRYING_TEMPERATURE: [
+    Capability.SAMSUNG_CE_DRYER_DRYING_TEMPERATURE: [
         Attribute.DRYING_TEMPERATURE,
         Attribute.SUPPORTED_DRYING_TEMPERATURE,
     ],
-    Capability.SAMSUNGCE_WELCOME_MESSAGE: [Attribute.WELCOME_MESSAGE],
-    Capability.SAMSUNGCE_DONGLE_SOFTWARE_INSTALLATION: [Attribute.STATUS],
-    Capability.SAMSUNGCE_DRYER_CYCLE_PRESET: [
+    Capability.SAMSUNG_CE_WELCOME_MESSAGE: [Attribute.WELCOME_MESSAGE],
+    Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: [Attribute.STATUS],
+    Capability.SAMSUNG_CE_DRYER_CYCLE_PRESET: [
         Attribute.MAX_NUMBER_OF_PRESETS,
         Attribute.PRESETS,
     ],
-    Capability.SAMSUNGCE_QUICK_CONTROL: [Attribute.VERSION],
-    Capability.SAMSUNGCE_DRYER_FREEZE_PREVENT: [Attribute.OPERATING_STATE],
-    Capability.SAMSUNGCE_DRYER_AUTO_CYCLE_LINK: [Attribute.DRYER_AUTO_CYCLE_LINK],
-    Capability.SAMSUNGCE_DRYER_CYCLE: [
+    Capability.SAMSUNG_CE_QUICK_CONTROL: [Attribute.VERSION],
+    Capability.SAMSUNG_CE_DRYER_FREEZE_PREVENT: [Attribute.OPERATING_STATE],
+    Capability.SAMSUNG_CE_DRYER_AUTO_CYCLE_LINK: [Attribute.DRYER_AUTO_CYCLE_LINK],
+    Capability.SAMSUNG_CE_DRYER_CYCLE: [
         Attribute.DRYER_CYCLE,
         Attribute.SUPPORTED_CYCLES,
         Attribute.REFERENCE_TABLE,
         Attribute.SPECIALIZED_FUNCTION_CLASSIFICATION,
     ],
-    Capability.SAMSUNGCE_DETERGENT_ORDER: [
+    Capability.SAMSUNG_CE_DETERGENT_ORDER: [
         Attribute.ALARM_ENABLED,
         Attribute.ORDER_THRESHOLD,
     ],
-    Capability.SAMSUNGCE_DETERGENT_STATE: [
+    Capability.SAMSUNG_CE_DETERGENT_STATE: [
         Attribute.REMAINING_AMOUNT,
         Attribute.DOSAGE,
         Attribute.INITIAL_AMOUNT,
         Attribute.DETERGENT_TYPE,
     ],
-    Capability.SAMSUNGCE_DRYER_DELAY_END: [Attribute.REMAINING_TIME],
-    Capability.SAMSUNGCE_DRYER_OPERATING_STATE: [
+    Capability.SAMSUNG_CE_DRYER_DELAY_END: [Attribute.REMAINING_TIME],
+    Capability.SAMSUNG_CE_DRYER_OPERATING_STATE: [
         Attribute.OPERATING_STATE,
         Attribute.SUPPORTED_OPERATING_STATES,
         Attribute.SCHEDULED_JOBS,
@@ -478,16 +495,16 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DRYER_JOB_STATE,
         Attribute.REMAINING_TIME,
     ],
-    Capability.SAMSUNGCE_DRYER_DRYING_TIME: [
+    Capability.SAMSUNG_CE_DRYER_DRYING_TIME: [
         Attribute.DRYING_TIME,
         Attribute.SUPPORTED_DRYING_TIME,
     ],
-    Capability.SAMSUNGCE_DISHWASHER_WASHING_COURSE: [
+    Capability.SAMSUNG_CE_DISHWASHER_WASHING_COURSE: [
         Attribute.WASHING_COURSE,
         Attribute.SUPPORTED_COURSES,
         Attribute.CUSTOM_COURSE_CANDIDATES,
     ],
-    Capability.SAMSUNGCE_DISHWASHER_WASHING_OPTIONS: [
+    Capability.SAMSUNG_CE_DISHWASHER_WASHING_OPTIONS: [
         Attribute.DRY_PLUS,
         Attribute.STORM_WASH,
         Attribute.HOT_AIR_DRY,
@@ -503,8 +520,30 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SANITIZE,
         Attribute.STEAM_SOAK,
     ],
-    Capability.SAMSUNGCE_WATER_CONSUMPTION_REPORT: [
+    Capability.SAMSUNG_CE_WATER_CONSUMPTION_REPORT: [
         Attribute.WATER_CONSUMPTION,
+    ],
+    Capability.SAMSUNG_CE_DISHWASHER_JOB_STATE: [
+        Attribute.SCHEDULED_JOBS,
+        Attribute.DISHWASHER_JOB_STATE,
+    ],
+    Capability.SAMSUNG_CE_DISHWASHER_WASHING_COURSE_DETAILS: [
+        Attribute.PREDEFINED_COURSES,
+        Attribute.WATER_USAGE_MAX,
+        Attribute.ENERGY_USAGE_MAX,
+    ],
+    Capability.SAMSUNG_CE_HOOD_FAN_SPEED: [
+        Attribute.SETTABLE_MAX_FAN_SPEED,
+        Attribute.HOOD_FAN_SPEED,
+        Attribute.SUPPORTED_HOOD_FAN_SPEED,
+        Attribute.SETTABLE_MIN_FAN_SPEED,
+    ],
+    Capability.SAMSUNG_CE_MICROWAVE_POWER: [
+        Attribute.SUPPORTED_POWER_LEVELS,
+        Attribute.POWER_LEVEL,
+    ],
+    Capability.SAMSUNG_CE_DEFINED_RECIPE: [
+        Attribute.DEFINED_RECIPE,
     ],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
@@ -541,7 +580,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.CUSTOM_DISHWASHER_OPERATING_PROGRESS: [
         Attribute.DISHWASHER_OPERATING_PROGRESS,
     ],
-    Capability.SAMSUNGCE_DISHWASHER_OPERATION: [
+    Capability.SAMSUNG_CE_DISHWASHER_OPERATION: [
         Attribute.SUPPORTED_OPERATING_STATE,
         Attribute.OPERATING_STATE,
         Attribute.RESERVABLE,
@@ -550,15 +589,6 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OPERATION_TIME,
         Attribute.REMAINING_TIME,
         Attribute.TIME_LEFT_TO_START,
-    ],
-    Capability.SAMSUNGCE_DISHWASHER_JOB_STATE: [
-        Attribute.SCHEDULED_JOBS,
-        Attribute.DISHWASHER_JOB_STATE,
-    ],
-    Capability.SAMSUNGCE_DISHWASHER_WASHING_COURSE_DETAILS: [
-        Attribute.PREDEFINED_COURSES,
-        Attribute.WATER_USAGE_MAX,
-        Attribute.ENERGY_USAGE_MAX,
     ],
     Capability.CUSTOM_DISHWASHER_OPERATING_PERCENTAGE: [
         Attribute.DISHWASHER_OPERATING_PERCENTAGE,

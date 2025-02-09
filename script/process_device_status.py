@@ -33,6 +33,7 @@ def main() -> int:  # noqa: PLR0912
                     re.sub(r"(?<!^)(?=[A-Z])", "_", capability_name)
                     .upper()
                     .replace(".", "_")
+                    .replace("SAMSUNGCE", "SAMSUNG_CE")
                 )
                 missing_attribute_mapping[capability_name] = []
             tree.create_node(
@@ -53,9 +54,13 @@ def main() -> int:  # noqa: PLR0912
                     if attribute not in CAPABILITY_ATTRIBUTES[capability_name]:
                         if capability_name not in missing_attribute_mapping:
                             missing_attribute_mapping[capability_name] = []
-                        missing_attribute_mapping[capability_name].append(
+                        if (
                             attribute_name
-                        )
+                            not in missing_attribute_mapping[capability_name]
+                        ):
+                            missing_attribute_mapping[capability_name].append(
+                                attribute_name
+                            )
                 else:
                     if capability_name not in missing_attribute_mapping:
                         missing_attribute_mapping[capability_name] = []
