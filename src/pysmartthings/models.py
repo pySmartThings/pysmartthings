@@ -14,10 +14,15 @@ from mashumaro.mixins.orjson import DataClassORJSONMixin
 class Capability(StrEnum):
     """Capability model."""
 
+    AIR_CONDITIONER_FAN_MODE = "airConditionerFanMode"
+    AIR_CONDITIONER_MODE = "airConditionerMode"
+    AIR_QUALITY_SENSOR = "airQualitySensor"
     ALARM = "alarm"
+    AUDIO_NOTIFICATION = "audioNotification"
     AUDIO_VOLUME = "audioVolume"
     BATTERY = "battery"
     BRIDGE = "bridge"
+    BYPASSABLE = "bypassable"
     COLOR_CONTROL = "colorControl"
     COLOR_TEMPERATURE = "colorTemperature"
     CONTACT_SENSOR = "contactSensor"
@@ -25,14 +30,17 @@ class Capability(StrEnum):
     DISHWASHER_OPERATING_STATE = "dishwasherOperatingState"
     DOOR_CONTROL = "doorControl"
     DRYER_OPERATING_STATE = "dryerOperatingState"
+    DUST_SENSOR = "dustSensor"
     ENERGY_METER = "energyMeter"
     EXECUTE = "execute"
+    FAN_OSCILLATION_MODE = "fanOscillationMode"
     FIRMWARE_UPDATE = "firmwareUpdate"
     GEOFENCE = "geofence"
     GEOLOCATION = "geolocation"
     HEALTH_CHECK = "healthCheck"
     MOTION_SENSOR = "motionSensor"
     OCF = "ocf"
+    ODOR_SENSOR = "odorSensor"
     OVEN_MODE = "ovenMode"
     OVEN_OPERATING_STATE = "ovenOperatingState"
     OVEN_SETPOINT = "ovenSetpoint"
@@ -50,24 +58,38 @@ class Capability(StrEnum):
     TEMPERATURE_MEASUREMENT = "temperatureMeasurement"
     THERMOSTAT_COOLING_SETPOINT = "thermostatCoolingSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
+    VERY_FINE_DUST_SENSOR = "veryFineDustSensor"
     WASHER_OPERATING_STATE = "washerOperatingState"
     WINDOW_SHADE = "windowShade"
 
+    CUSTOM_AIR_CONDITIONER_ODOR_CONTROLLER = "custom.airConditionerOdorController"
+    CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE = "custom.airConditionerOptionalMode"
+    CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE = (
+        "custom.airConditionerTropicalNightMode"
+    )
+    CUSTOM_AUTO_CLEANING_MODE = "custom.autoCleaningMode"
     CUSTOM_COOKTOP_OPERATING_STATE = "custom.cooktopOperatingState"
+    CUSTOM_DEODOR_FILTER = "custom.deodorFilter"
     CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION = "custom.deviceReportStateConfiguration"
     CUSTOM_DISABLED_CAPABILITIES = "custom.disabledCapabilities"
     CUSTOM_DISABLED_COMPONENTS = "custom.disabledComponents"
     CUSTOM_DISHWASHER_DELAY_START_TIME = "custom.dishwasherDelayStartTime"
     CUSTOM_DISHWASHER_OPERATING_PERCENTAGE = "custom.dishwasherOperatingPercentage"
     CUSTOM_DISHWASHER_OPERATING_PROGRESS = "custom.dishwasherOperatingProgress"
+    CUSTOM_DO_NOT_DISTURB_MODE = "custom.doNotDisturbMode"
     CUSTOM_DRYER_DRY_LEVEL = "custom.dryerDryLevel"
     CUSTOM_DRYER_WRINKLE_PREVENT = "custom.dryerWrinklePrevent"
+    CUSTOM_DUST_FILTER = "custom.dustFilter"
+    CUSTOM_ELECTRIC_HEPA_FILTER = "custom.electricHepaFilter"
     CUSTOM_ENERGY_TYPE = "custom.energyType"
     CUSTOM_FRIDGE_MODE = "custom.fridgeMode"
     CUSTOM_JOB_BEGINNING_STATUS = "custom.jobBeginningStatus"
     CUSTOM_OVEN_CAVITY_STATUS = "custom.ovenCavityStatus"
+    CUSTOM_PERIODIC_SENSING = "custom.periodicSensing"
+    CUSTOM_SPI_MODE = "custom.spiMode"
     CUSTOM_SUPPORTED_OPTIONS = "custom.supportedOptions"
     CUSTOM_THERMOSTAT_SETPOINT_CONTROL = "custom.thermostatSetpointControl"
+    CUSTOM_VERY_FINE_DUST_FILTER = "custom.veryFineDustFilter"
     CUSTOM_WASHER_AUTO_DETERGENT = "custom.washerAutoDetergent"
     CUSTOM_WASHER_AUTO_SOFTENER = "custom.washerAutoSoftener"
     CUSTOM_WASHER_RINSE_CYCLES = "custom.washerRinseCycles"
@@ -76,8 +98,13 @@ class Capability(StrEnum):
     CUSTOM_WASHER_WATER_TEMPERATURE = "custom.washerWaterTemperature"
     CUSTOM_WATER_FILTER = "custom.waterFilter"
 
+    SAMSUNG_CE_AIR_CONDITIONER_BEEP = "samsungce.airConditionerBeep"
+    SAMSUNG_CE_AIR_CONDITIONER_LIGHTING = "samsungce.airConditionerLighting"
+    SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN = "samsungce.airQualityHealthConcern"
+    SAMSUNG_CE_ALWAYS_ON_SENSING = "samsungce.alwaysOnSensing"
     SAMSUNG_CE_AUTO_DISPENSE_DETERGENT = "samsungce.autoDispenseDetergent"
     SAMSUNG_CE_AUTO_DISPENSE_SOFTENER = "samsungce.autoDispenseSoftener"
+    SAMSUNG_CE_BUTTON_DISPLAY_CONDITION = "samsungce.buttonDisplayCondition"
     SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
     SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
@@ -103,6 +130,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_DRYER_DRYING_TIME = "samsungce.dryerDryingTime"
     SAMSUNG_CE_DRYER_FREEZE_PREVENT = "samsungce.dryerFreezePrevent"
     SAMSUNG_CE_DRYER_OPERATING_STATE = "samsungce.dryerOperatingState"
+    SAMSUNG_CE_DUST_FILTER_ALARM = "samsungce.dustFilterAlarm"
     SAMSUNG_CE_ENERGY_PLANNER = "samsungce.energyPlanner"
     SAMSUNG_CE_FOOD_DEFROST = "samsungce.foodDefrost"
     SAMSUNG_CE_FREEZER_CONVERT_MODE = "samsungce.freezerConvertMode"
@@ -111,6 +139,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_FRIDGE_PANTRY_MODE = "samsungce.fridgePantryMode"
     SAMSUNG_CE_FRIDGE_VACATION_MODE = "samsungce.fridgeVacationMode"
     SAMSUNG_CE_HOOD_FAN_SPEED = "samsungce.hoodFanSpeed"
+    SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK = "samsungce.individualControlLock"
     SAMSUNG_CE_KIDS_LOCK = "samsungce.kidsLock"
     SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS = "samsungce.kitchenDeviceDefaults"
     SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION = "samsungce.kitchenDeviceIdentification"
@@ -129,6 +158,8 @@ class Capability(StrEnum):
     SAMSUNG_CE_RUNESTONE_HOME_CONTEXT = "samsungce.runestoneHomeContext"
     SAMSUNG_CE_SABBATH_MODE = "samsungce.sabbathMode"
     SAMSUNG_CE_SCALE_SETTINGS = "samsungce.scaleSettings"
+    SAMSUNG_CE_SELF_CHECK = "samsungce.selfCheck"
+    SAMSUNG_CE_SILENT_ACTION = "samsungce.silentAction"
     SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT = "samsungce.softenerAutoReplenishment"
     SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
     SAMSUNG_CE_SOFTENER_STATE = "samsungce.softenerState"
@@ -147,6 +178,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_WATER_CONSUMPTION_REPORT = "samsungce.waterConsumptionReport"
     SAMSUNG_CE_WEIGHT_MEASUREMENT = "samsungce.weightMeasurement"
     SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION = "samsungce.weightMeasurementCalibration"
+    SAMSUNG_CE_WELCOME_COOLING = "samsungce.welcomeCooling"
     SAMSUNG_CE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
 
     SAMSUNG_IM_HUE_SYNC_MODE = "samsungim.hueSyncMode"
@@ -157,6 +189,7 @@ class Capability(StrEnum):
     HCA_DRYER_MODE = "hca.dryerMode"
     HCA_WASHER_MODE = "hca.washerMode"
 
+    SEC_CALM_CONNECTION_CARE = "sec.calmConnectionCare"
     SEC_DIAGNOSTICS_INFORMATION = "sec.diagnosticsInformation"
     SEC_WIFI_CONFIGURATION = "sec.wifiConfiguration"
 
@@ -174,12 +207,27 @@ class Attribute(StrEnum):
 
     ACCURACY = "accuracy"
     ACTIVATED = "activated"
+    AC_OPTIONAL_MODE = "acOptionalMode"
+    AC_TROPICAL_NIGHT_MODE_LEVEL = "acTropicalNightModeLevel"
     ADD_RINSE = "addRinse"
+    AIR_CONDITIONER_MODE = "airConditionerMode"
+    AIR_CONDITIONER_ODOR_CONTROLLER_PROGRESS = "airConditionerOdorControllerProgress"
+    AIR_CONDITIONER_ODOR_CONTROLLER_STATE = "airConditionerOdorControllerState"
+    AIR_QUALITY = "airQuality"
+    AIR_QUALITY_HEALTH_CONCERN = "airQualityHealthConcern"
     ALARM = "alarm"
     ALARM_ENABLED = "alarmEnabled"
+    ALARM_THRESHOLD = "alarmThreshold"
     ALTITUDE_ACCURACY = "altitudeAccuracy"
+    ALWAYS_ON = "alwaysOn"
     AMOUNT = "amount"
+    AUTOMATIC_EXECUTION_MODE = "automaticExecutionMode"
+    AUTOMATIC_EXECUTION_SETTING = "automaticExecutionSetting"
+    AUTO_CLEANING_MODE = "autoCleaningMode"
     AUTO_RECONNECTION = "autoReconnection"
+    AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
+    AVAILABLE_AC_MODES = "availableAcModes"
+    AVAILABLE_FAN_OSCILLATION_MODES = "availableFanOscillationModes"
     AVAILABLE_MODULES = "availableModules"
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
@@ -190,8 +238,10 @@ class Attribute(StrEnum):
     BABY_DETERGENT_REMAINING_AMOUNT = "babyDetergentRemainingAmount"
     BABY_DETERGENT_TYPE = "babyDetergentType"
     BATTERY = "battery"
+    BEEP = "beep"
     BINARY_ID = "binaryId"
     BRIGHTNESS_LEVEL = "brightnessLevel"
+    BYPASS_STATUS = "bypassStatus"
     CHECK_INTERVAL = "checkInterval"
     CIRCADIAN = "circadian"
     CLEANING_MODE = "cleaningMode"
@@ -221,6 +271,12 @@ class Attribute(StrEnum):
     DEFROST = "defrost"
     DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DENSITY = "density"
+    DEODOR_FILTER_CAPACITY = "deodorFilterCapacity"
+    DEODOR_FILTER_LAST_RESET_DATE = "deodorFilterLastResetDate"
+    DEODOR_FILTER_RESET_TYPE = "deodorFilterResetType"
+    DEODOR_FILTER_STATUS = "deodorFilterStatus"
+    DEODOR_FILTER_USAGE = "deodorFilterUsage"
+    DEODOR_FILTER_USAGE_STEP = "deodorFilterUsageStep"
     DESCRIPTION = "description"
     DETERGENT_TYPE = "detergentType"
     DEVICE_ID = "di"
@@ -236,6 +292,7 @@ class Attribute(StrEnum):
     DOOR = "door"
     DOOR_STATE = "doorState"
     DOSAGE = "dosage"
+    DO_NOT_DISTURB = "doNotDisturb"
     DRYER_AUTO_CYCLE_LINK = "dryerAutoCycleLink"
     DRYER_CYCLE = "dryerCycle"
     DRYER_DRY_LEVEL = "dryerDryLevel"
@@ -246,10 +303,24 @@ class Attribute(StrEnum):
     DRY_PLUS = "dryPlus"
     DR_MAX_DURATION = "drMaxDuration"
     DUMP_TYPE = "dumpType"
+    DUST_FILTER_CAPACITY = "dustFilterCapacity"
+    DUST_FILTER_LAST_RESET_DATE = "dustFilterLastResetDate"
+    DUST_FILTER_RESET_TYPE = "dustFilterResetType"
+    DUST_FILTER_STATUS = "dustFilterStatus"
+    DUST_FILTER_USAGE = "dustFilterUsage"
+    DUST_FILTER_USAGE_STEP = "dustFilterUsageStep"
+    DUST_LEVEL = "dustLevel"
+    ELECTRIC_HEPA_FILTER_CAPACITY = "electricHepaFilterCapacity"
+    ELECTRIC_HEPA_FILTER_LAST_RESET_DATE = "electricHepaFilterLastResetDate"
+    ELECTRIC_HEPA_FILTER_RESET_TYPE = "electricHepaFilterResetType"
+    ELECTRIC_HEPA_FILTER_STATUS = "electricHepaFilterStatus"
+    ELECTRIC_HEPA_FILTER_USAGE = "electricHepaFilterUsage"
+    ELECTRIC_HEPA_FILTER_USAGE_STEP = "electricHepaFilterUsageStep"
     ENABLED = "enabled"
     ENABLE_STATE = "enableState"
     ENCRYPTION = "encryption"
     ENDPOINT = "endpoint"
+    END_TIME = "endTime"
     ENERGY = "energy"
     ENERGY_SAVING_INFO = "energySavingInfo"
     ENERGY_SAVING_LEVEL = "energySavingLevel"
@@ -258,7 +329,11 @@ class Attribute(StrEnum):
     ENERGY_SAVING_SUPPORT = "energySavingSupport"
     ENERGY_TYPE = "energyType"
     ENERGY_USAGE_MAX = "energyUsageMax"
+    ERRORS = "errors"
     FADE = "fade"
+    FAN_MODE = "fanMode"
+    FAN_OSCILLATION_MODE = "fanOscillationMode"
+    FINE_DUST_LEVEL = "fineDustLevel"
     FIRMWARE_VERSION = "mnfv"
     FOOD_TYPE = "foodType"
     FREEZER_CONVERT_MODE = "freezerConvertMode"
@@ -279,14 +354,18 @@ class Attribute(StrEnum):
     INITIAL_AMOUNT = "initialAmount"
     IS_MAP_BASED_OPERATION_AVAILABLE = "isMapBasedOperationAvailable"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
+    LAST_SENSING_LEVEL = "lastSensingLevel"
+    LAST_SENSING_TIME = "lastSensingTime"
     LAST_UPDATED_DATE = "lastUpdatedDate"
     LAST_UPDATED_TIME = "lastUpdatedTime"
     LAST_UPDATE_STATUS = "lastUpdateStatus"
     LAST_UPDATE_STATUS_REASON = "lastUpdateStatusReason"
     LAST_UPDATE_TIME = "lastUpdateTime"
+    LATEST_REQUEST_ID = "latestRequestId"
     LATITUDE = "latitude"
     LEVEL = "level"
     LEVEL_RANGE = "levelRange"
+    LIGHTING = "lighting"
     LOCK_STATE = "lockState"
     LOG_TYPE = "logType"
     LONGITUDE = "longitude"
@@ -317,9 +396,11 @@ class Attribute(StrEnum):
     NEUTRAL_DETERGENT_TYPE = "neutralDetergentType"
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
     NOTIFICATION_TEMPLATE_I_D = "notificationTemplateID"
+    ODOR_LEVEL = "odorLevel"
     OPERATING_STATE = "operatingState"
     OPERATION_TIME = "operationTime"
     ORDER_THRESHOLD = "orderThreshold"
+    ORIGINS = "origins"
     OS_VERSION = "mnos"
     OTN_D_U_I_D = "otnDUID"
     OUT_OF_SYNC_CHANGES = "outOfSyncChanges"
@@ -328,6 +409,9 @@ class Attribute(StrEnum):
     OVEN_MODE = "ovenMode"
     OVEN_SETPOINT = "ovenSetpoint"
     OVEN_SETPOINT_RANGE = "ovenSetpointRange"
+    PERIODIC_SENSING = "periodicSensing"
+    PERIODIC_SENSING_INTERVAL = "periodicSensingInterval"
+    PERIODIC_SENSING_STATUS = "periodicSensingStatus"
     PLAN = "plan"
     PLATFORM_ID = "pi"
     PLATFORM_VERSION = "mnpv"
@@ -338,6 +422,7 @@ class Attribute(StrEnum):
     PRESETS = "presets"
     PROGRESS = "progress"
     PROGRESS_PERCENTAGE = "progressPercentage"
+    PROTOCOLS = "protocols"
     PROTOCOL_TYPE = "protocolType"
     QUANTITY = "quantity"
     RAPID_COOLING = "rapidCooling"
@@ -369,10 +454,12 @@ class Attribute(StrEnum):
     REPORT_STATE_REALTIME_PERIOD = "reportStateRealtimePeriod"
     REPRESENTATIVE_COMPONENT = "representativeComponent"
     RESERVABLE = "reservable"
+    RESULT = "result"
     RINSE_PLUS = "rinsePlus"
     ROBOT_CLEANER_CLEANING_MODE = "robotCleanerCleaningMode"
     ROBOT_CLEANER_MOVEMENT = "robotCleanerMovement"
     ROBOT_CLEANER_TURBO_MODE = "robotCleanerTurboMode"
+    ROLE = "role"
     SANITIZE = "sanitize"
     SANITIZING_WASH = "sanitizingWash"
     SATURATION = "saturation"
@@ -392,14 +479,24 @@ class Attribute(StrEnum):
     SPEC_VERSION = "icv"
     SPEED = "speed"
     SPEED_BOOSTER = "speedBooster"
+    SPI_MODE = "spiMode"
+    START_TIME = "startTime"
     STATE = "state"
     STATUS = "status"
     STEAM_SOAK = "steamSoak"
     STORM_WASH = "stormWash"
     SUPPORTED_ACTIONS = "supportedActions"
+    SUPPORTED_AC_FAN_MODES = "supportedAcFanModes"
+    SUPPORTED_AC_MODES = "supportedAcModes"
+    SUPPORTED_AC_OPTIONAL_MODE = "supportedAcOptionalMode"
     SUPPORTED_AGING_METHODS = "supportedAgingMethods"
+    SUPPORTED_AIR_QUALITY_HEALTH_CONCERNS = "supportedAirQualityHealthConcerns"
+    SUPPORTED_ALARM_THRESHOLDS = "supportedAlarmThresholds"
     SUPPORTED_AMOUNT = "supportedAmount"
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
+    SUPPORTED_AUTOMATIC_EXECUTION_MODE = "supportedAutomaticExecutionMode"
+    SUPPORTED_AUTOMATIC_EXECUTION_SETTING = "supportedAutomaticExecutionSetting"
+    SUPPORTED_AUTO_CLEANING_MODES = "supportedAutoCleaningModes"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
     SUPPORTED_COMMANDS = "supportedCommands"
@@ -412,10 +509,12 @@ class Attribute(StrEnum):
     SUPPORTED_DRYING_TEMPERATURE = "supportedDryingTemperature"
     SUPPORTED_DRYING_TIME = "supportedDryingTime"
     SUPPORTED_ENERGY_SAVING_LEVELS = "supportedEnergySavingLevels"
+    SUPPORTED_FAN_OSCILLATION_MODES = "supportedFanOscillationModes"
     SUPPORTED_FOCUS_AREAS = "supportedFocusAreas"
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
+    SUPPORTED_LIGHTING_LEVELS = "supportedLightingLevels"
     SUPPORTED_LIST = "supportedList"
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
     SUPPORTED_MEAT_TYPES = "supportedMeatTypes"
@@ -446,6 +545,8 @@ class Attribute(StrEnum):
     TEMPERATURE_RANGE = "temperatureRange"
     TEMPERATURE_SETPOINT = "temperatureSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
+    TIMED_CLEAN_DURATION = "timedCleanDuration"
+    TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
     TIME_LEFT_TO_START = "timeLeftToStart"
     TS_ID = "tsId"
     TYPE = "type"
@@ -456,6 +557,13 @@ class Attribute(StrEnum):
     VENDOR_ID = "vid"
     VERSION = "version"
     VERSION_NUMBER = "versionNumber"
+    VERY_FINE_DUST_FILTER_CAPACITY = "veryFineDustFilterCapacity"
+    VERY_FINE_DUST_FILTER_LAST_RESET_DATE = "veryFineDustFilterLastResetDate"
+    VERY_FINE_DUST_FILTER_RESET_TYPE = "veryFineDustFilterResetType"
+    VERY_FINE_DUST_FILTER_STATUS = "veryFineDustFilterStatus"
+    VERY_FINE_DUST_FILTER_USAGE = "veryFineDustFilterUsage"
+    VERY_FINE_DUST_FILTER_USAGE_STEP = "veryFineDustFilterUsageStep"
+    VERY_FINE_DUST_LEVEL = "veryFineDustLevel"
     VOLUME = "volume"
     WASHER_AUTO_DETERGENT = "washerAutoDetergent"
     WASHER_AUTO_SOFTENER = "washerAutoSoftener"
@@ -508,9 +616,21 @@ class Command(StrEnum):
 
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
+    Capability.AIR_CONDITIONER_MODE: [
+        Attribute.AVAILABLE_AC_MODES,
+        Attribute.SUPPORTED_AC_MODES,
+        Attribute.AIR_CONDITIONER_MODE,
+    ],
+    Capability.AIR_CONDITIONER_FAN_MODE: [
+        Attribute.FAN_MODE,
+        Attribute.SUPPORTED_AC_FAN_MODES,
+        Attribute.AVAILABLE_AC_FAN_MODES,
+    ],
+    Capability.AIR_QUALITY_SENSOR: [Attribute.AIR_QUALITY],
     Capability.ALARM: [Attribute.ALARM],
     Capability.AUDIO_VOLUME: [Attribute.VOLUME],
     Capability.BATTERY: [Attribute.BATTERY, Attribute.QUANTITY, Attribute.TYPE],
+    Capability.BYPASSABLE: [Attribute.BYPASS_STATUS],
     Capability.COLOR_CONTROL: [Attribute.COLOR, Attribute.HUE, Attribute.SATURATION],
     Capability.COLOR_TEMPERATURE: [
         Attribute.COLOR_TEMPERATURE,
@@ -519,8 +639,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.DOOR_CONTROL: [
         Attribute.DOOR,
     ],
+    Capability.DUST_SENSOR: [Attribute.DUST_LEVEL, Attribute.FINE_DUST_LEVEL],
     Capability.ENERGY_METER: [Attribute.ENERGY],
     Capability.EXECUTE: [Attribute.DATA],
+    Capability.FAN_OSCILLATION_MODE: [
+        Attribute.SUPPORTED_FAN_OSCILLATION_MODES,
+        Attribute.AVAILABLE_FAN_OSCILLATION_MODES,
+        Attribute.FAN_OSCILLATION_MODE,
+    ],
     Capability.FIRMWARE_UPDATE: [
         Attribute.LAST_UPDATE_STATUS_REASON,
         Attribute.AVAILABLE_VERSION,
@@ -567,6 +693,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.PLATFORM_VERSION,
         Attribute.SPEC_VERSION,
     ],
+    Capability.ODOR_SENSOR: [Attribute.ODOR_LEVEL],
     Capability.OVEN_MODE: [
         Attribute.OVEN_MODE,
         Attribute.SUPPORTED_OVEN_MODES,
@@ -593,10 +720,6 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.THERMOSTAT_MODE: [
         Attribute.THERMOSTAT_MODE,
         Attribute.SUPPORTED_THERMOSTAT_MODES,
-    ],
-    Capability.WINDOW_SHADE: [
-        Attribute.WINDOW_SHADE,
-        Attribute.SUPPORTED_WINDOW_SHADE_COMMANDS,
     ],
     Capability.DEMAND_RESPONSE_LOAD_CONTROL: [
         Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS
@@ -628,11 +751,16 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ROBOT_CLEANER_TURBO_MODE: [Attribute.ROBOT_CLEANER_TURBO_MODE],
     Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_CLEANING_MODE: [Attribute.ROBOT_CLEANER_CLEANING_MODE],
+    Capability.VERY_FINE_DUST_SENSOR: [Attribute.VERY_FINE_DUST_LEVEL],
     Capability.WASHER_OPERATING_STATE: [
         Attribute.COMPLETION_TIME,
         Attribute.MACHINE_STATE,
         Attribute.WASHER_JOB_STATE,
         Attribute.SUPPORTED_MACHINE_STATES,
+    ],
+    Capability.WINDOW_SHADE: [
+        Attribute.WINDOW_SHADE,
+        Attribute.SUPPORTED_WINDOW_SHADE_COMMANDS,
     ],
     # HCA capabilities
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
@@ -938,10 +1066,6 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ALARM_ENABLED,
         Attribute.ORDER_THRESHOLD,
     ],
-    Capability.CUSTOM_WASHER_SOIL_LEVEL: [
-        Attribute.SUPPORTED_WASHER_SOIL_LEVEL,
-        Attribute.WASHER_SOIL_LEVEL,
-    ],
     Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Attribute.STATUS],
     Capability.SAMSUNG_CE_WASHER_CYCLE_PRESET: [
         Attribute.MAX_NUMBER_OF_PRESETS,
@@ -958,6 +1082,45 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_WASHING_TIMES,
         Attribute.WASHING_TIME,
     ],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Attribute.BEEP],
+    Capability.SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK: [Attribute.LOCK_STATE],
+    Capability.SAMSUNG_CE_WELCOME_COOLING: [
+        Attribute.LATEST_REQUEST_ID,
+        Attribute.OPERATING_STATE,
+    ],
+    Capability.SAMSUNG_CE_SELF_CHECK: [
+        Attribute.RESULT,
+        Attribute.SUPPORTED_ACTIONS,
+        Attribute.PROGRESS,
+        Attribute.ERRORS,
+        Attribute.STATUS,
+    ],
+    Capability.SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN: [
+        Attribute.SUPPORTED_AIR_QUALITY_HEALTH_CONCERNS,
+        Attribute.AIR_QUALITY_HEALTH_CONCERN,
+    ],
+    Capability.SAMSUNG_CE_DISHWASHER_OPERATION: [
+        Attribute.SUPPORTED_OPERATING_STATE,
+        Attribute.OPERATING_STATE,
+        Attribute.RESERVABLE,
+        Attribute.PROGRESS_PERCENTAGE,
+        Attribute.REMAINING_TIME_STR,
+        Attribute.OPERATION_TIME,
+        Attribute.REMAINING_TIME,
+        Attribute.TIME_LEFT_TO_START,
+    ],
+    Capability.SAMSUNG_CE_DUST_FILTER_ALARM: [
+        Attribute.ALARM_THRESHOLD,
+        Attribute.SUPPORTED_ALARM_THRESHOLDS,
+    ],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_LIGHTING: [
+        Attribute.SUPPORTED_LIGHTING_LEVELS,
+        Attribute.LIGHTING,
+    ],
+    Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [
+        Attribute.SWITCH,
+    ],
+    Capability.SAMSUNG_CE_ALWAYS_ON_SENSING: [Attribute.ORIGINS, Attribute.ALWAYS_ON],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -972,6 +1135,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.CUSTOM_DRYER_DRY_LEVEL: [
         Attribute.DRYER_DRY_LEVEL,
         Attribute.SUPPORTED_DRYER_DRY_LEVEL,
+    ],
+    Capability.CUSTOM_WASHER_SOIL_LEVEL: [
+        Attribute.SUPPORTED_WASHER_SOIL_LEVEL,
+        Attribute.WASHER_SOIL_LEVEL,
     ],
     Capability.CUSTOM_JOB_BEGINNING_STATUS: [Attribute.JOB_BEGINNING_STATUS],
     Capability.CUSTOM_SUPPORTED_OPTIONS: [
@@ -992,16 +1159,6 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.CUSTOM_DISHWASHER_OPERATING_PROGRESS: [
         Attribute.DISHWASHER_OPERATING_PROGRESS,
-    ],
-    Capability.SAMSUNG_CE_DISHWASHER_OPERATION: [
-        Attribute.SUPPORTED_OPERATING_STATE,
-        Attribute.OPERATING_STATE,
-        Attribute.RESERVABLE,
-        Attribute.PROGRESS_PERCENTAGE,
-        Attribute.REMAINING_TIME_STR,
-        Attribute.OPERATION_TIME,
-        Attribute.REMAINING_TIME,
-        Attribute.TIME_LEFT_TO_START,
     ],
     Capability.CUSTOM_DISHWASHER_OPERATING_PERCENTAGE: [
         Attribute.DISHWASHER_OPERATING_PERCENTAGE,
@@ -1052,6 +1209,75 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WASHER_SPIN_LEVEL,
         Attribute.SUPPORTED_WASHER_SPIN_LEVEL,
     ],
+    Capability.CUSTOM_SPI_MODE: [Attribute.SPI_MODE],
+    Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: [
+        Attribute.SUPPORTED_AC_OPTIONAL_MODE,
+        Attribute.AC_OPTIONAL_MODE,
+    ],
+    Capability.CUSTOM_PERIODIC_SENSING: [
+        Attribute.AUTOMATIC_EXECUTION_SETTING,
+        Attribute.AUTOMATIC_EXECUTION_MODE,
+        Attribute.SUPPORTED_AUTOMATIC_EXECUTION_SETTING,
+        Attribute.SUPPORTED_AUTOMATIC_EXECUTION_MODE,
+        Attribute.PERIODIC_SENSING,
+        Attribute.PERIODIC_SENSING_INTERVAL,
+        Attribute.LAST_SENSING_TIME,
+        Attribute.LAST_SENSING_LEVEL,
+        Attribute.PERIODIC_SENSING_STATUS,
+    ],
+    Capability.CUSTOM_AUTO_CLEANING_MODE: [
+        Attribute.SUPPORTED_AUTO_CLEANING_MODES,
+        Attribute.TIMED_CLEAN_DURATION,
+        Attribute.OPERATING_STATE,
+        Attribute.TIMED_CLEAN_DURATION_RANGE,
+        Attribute.SUPPORTED_OPERATING_STATES,
+        Attribute.PROGRESS,
+        Attribute.AUTO_CLEANING_MODE,
+    ],
+    Capability.CUSTOM_DUST_FILTER: [
+        Attribute.DUST_FILTER_USAGE_STEP,
+        Attribute.DUST_FILTER_USAGE,
+        Attribute.DUST_FILTER_LAST_RESET_DATE,
+        Attribute.DUST_FILTER_STATUS,
+        Attribute.DUST_FILTER_CAPACITY,
+        Attribute.DUST_FILTER_RESET_TYPE,
+    ],
+    Capability.CUSTOM_VERY_FINE_DUST_FILTER: [
+        Attribute.VERY_FINE_DUST_FILTER_STATUS,
+        Attribute.VERY_FINE_DUST_FILTER_RESET_TYPE,
+        Attribute.VERY_FINE_DUST_FILTER_USAGE,
+        Attribute.VERY_FINE_DUST_FILTER_LAST_RESET_DATE,
+        Attribute.VERY_FINE_DUST_FILTER_USAGE_STEP,
+        Attribute.VERY_FINE_DUST_FILTER_CAPACITY,
+    ],
+    Capability.CUSTOM_AIR_CONDITIONER_ODOR_CONTROLLER: [
+        Attribute.AIR_CONDITIONER_ODOR_CONTROLLER_PROGRESS,
+        Attribute.AIR_CONDITIONER_ODOR_CONTROLLER_STATE,
+    ],
+    Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: [
+        Attribute.AC_TROPICAL_NIGHT_MODE_LEVEL
+    ],
+    Capability.CUSTOM_ELECTRIC_HEPA_FILTER: [
+        Attribute.ELECTRIC_HEPA_FILTER_CAPACITY,
+        Attribute.ELECTRIC_HEPA_FILTER_USAGE_STEP,
+        Attribute.ELECTRIC_HEPA_FILTER_LAST_RESET_DATE,
+        Attribute.ELECTRIC_HEPA_FILTER_STATUS,
+        Attribute.ELECTRIC_HEPA_FILTER_USAGE,
+        Attribute.ELECTRIC_HEPA_FILTER_RESET_TYPE,
+    ],
+    Capability.CUSTOM_DEODOR_FILTER: [
+        Attribute.DEODOR_FILTER_CAPACITY,
+        Attribute.DEODOR_FILTER_LAST_RESET_DATE,
+        Attribute.DEODOR_FILTER_STATUS,
+        Attribute.DEODOR_FILTER_RESET_TYPE,
+        Attribute.DEODOR_FILTER_USAGE,
+        Attribute.DEODOR_FILTER_USAGE_STEP,
+    ],
+    Capability.CUSTOM_DO_NOT_DISTURB_MODE: [
+        Attribute.DO_NOT_DISTURB,
+        Attribute.START_TIME,
+        Attribute.END_TIME,
+    ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [
         Attribute.LOG_TYPE,
@@ -1070,6 +1296,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AUTO_RECONNECTION,
         Attribute.MIN_VERSION,
         Attribute.PROTOCOL_TYPE,
+    ],
+    Capability.SEC_CALM_CONNECTION_CARE: [
+        Attribute.ROLE,
+        Attribute.PROTOCOLS,
+        Attribute.VERSION,
     ],
     # Tag capabilities
     Capability.TAG_E2E_ENCRYPTION: [
