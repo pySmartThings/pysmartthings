@@ -1655,6 +1655,368 @@
     'type': <DeviceType.VIPER: 'VIPER'>,
   })
 # ---
+# name: test_fetching_status_of_single_device[27_smart_monitor_m5]
+  dict({
+    'main': dict({
+      <Capability.AUDIO_MUTE: 'audioMute'>: dict({
+        <Attribute.MUTE: 'mute'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 0, 858000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'muted',
+        }),
+      }),
+      <Capability.AUDIO_VOLUME: 'audioVolume'>: dict({
+        <Attribute.VOLUME: 'volume'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 0, 858000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 15,
+        }),
+      }),
+      <Capability.CUSTOM_ACCESSIBILITY: 'custom.accessibility'>: dict({
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 7, 15, 42, 44, 749000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['samsungvd.ambient', 'samsungvd.ambientContent']",
+        }),
+      }),
+      <Capability.CUSTOM_ERROR: 'custom.error'>: dict({
+        <Attribute.ERROR: 'error'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_LAUNCH_APP: 'custom.launchapp'>: dict({
+      }),
+      <Capability.CUSTOM_PICTURE_MODE: 'custom.picturemode'>: dict({
+        <Attribute.PICTURE_MODE: 'pictureMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 1, 293000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Eye Saver Low',
+        }),
+        <Attribute.SUPPORTED_PICTURE_MODES: 'supportedPictureModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 1, 293000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['Eye Saver Low']",
+        }),
+        <Attribute.SUPPORTED_PICTURE_MODES_MAP: 'supportedPictureModesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 1, 293000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'id': 'modeGen_327699', 'name': 'Eye Saver Low'}]",
+        }),
+      }),
+      <Capability.CUSTOM_RECORDING: 'custom.recording'>: dict({
+      }),
+      <Capability.CUSTOM_SOUND_MODE: 'custom.soundmode'>: dict({
+        <Attribute.SOUND_MODE: 'soundMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 0, 792000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Adaptive Sound',
+        }),
+        <Attribute.SUPPORTED_SOUND_MODES: 'supportedSoundModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 0, 792000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['Adaptive Sound', 'Amplify', 'Standard']",
+        }),
+        <Attribute.SUPPORTED_SOUND_MODES_MAP: 'supportedSoundModesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 0, 792000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'id': 'modeAdaptive', 'name': 'Adaptive Sound'}, {'id': 'modeAmplify', 'name': 'Amplify'}, {'id': 'modeStandard', 'name': 'Standard'}]",
+        }),
+      }),
+      <Capability.CUSTOM_TV_SEARCH: 'custom.tvsearch'>: dict({
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.MEDIA_INPUT_SOURCE: 'mediaInputSource'>: dict({
+        <Attribute.INPUT_SOURCE: 'inputSource'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 4, 29, 15, 33, 43, 606000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'HDMI1',
+        }),
+        <Attribute.SUPPORTED_INPUT_SOURCES: 'supportedInputSources'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 21, 859000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>: dict({
+        <Attribute.PLAYBACK_STATUS: 'playbackStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_PLAYBACK_COMMANDS: 'supportedPlaybackCommands'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 21, 859000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['play', 'pause', 'stop', 'fastForward', 'rewind']",
+        }),
+      }),
+      <Capability.MEDIA_TRACK_CONTROL: 'mediaTrackControl'>: dict({
+        <Attribute.SUPPORTED_TRACK_CONTROL_COMMANDS: 'supportedTrackControlCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '3f01bf2b-e9a3-3543-1047-42320283a5c1',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2022-01-01',
+        }),
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'T-NKLBWWC-1651.10',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'LS27BM501ENXZA',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Tizen',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '6.5',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '27" Smart Monitor M5',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '3f01bf2b-e9a3-3543-1047-42320283a5c1',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2024-12-21T16:13:44Z',
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 22, 478000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'VD-SMONITOR-2022',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_AMBIENT: 'samsungvd.ambient'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_AMBIENT_CONTENT: 'samsungvd.ambientContent'>: dict({
+        <Attribute.SUPPORTED_AMBIENT_APPS: 'supportedAmbientApps'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 21, 859000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_DEVICE_CATEGORY: 'samsungvd.deviceCategory'>: dict({
+        <Attribute.CATEGORY: 'category'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 1, 350000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'monitor',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_FIRMWARE_VERSION: 'samsungvd.firmwareVersion'>: dict({
+        <Attribute.FIRMWARE_VERSION: 'firmwareVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 13, 55, 1, 350000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '3.5.1',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: 'samsungvd.mediaInputSource'>: dict({
+        <Attribute.INPUT_SOURCE: 'inputSource'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 23, 46, 45, 670000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'HDMI2',
+        }),
+        <Attribute.SUPPORTED_INPUT_SOURCES_MAP: 'supportedInputSourcesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 23, 46, 45, 670000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "[{'id': 'HDMI2', 'name': 'PC'}]",
+        }),
+      }),
+      <Capability.SAMSUNG_VD_REMOTE_CONTROL: 'samsungvd.remoteControl'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_SUPPORTS_FEATURES: 'samsungvd.supportsFeatures'>: dict({
+        <Attribute.EXECUTABLE_SERVICE_LIST: 'executableServiceList'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.IME_ADV_SUPPORTED: 'imeAdvSupported'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 23, 100000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'True',
+        }),
+        <Attribute.MEDIA_OUTPUT_SUPPORTED: 'mediaOutputSupported'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 23, 100000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'True',
+        }),
+        <Attribute.MOBILE_CAM_SUPPORTED: 'mobileCamSupported'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 23, 100000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'True',
+        }),
+        <Attribute.REMOTELESS_SUPPORTED: 'remotelessSupported'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WIFI_UPDATE_SUPPORT: 'wifiUpdateSupport'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: 'samsungvd.supportsPowerOnByOcf'>: dict({
+        <Attribute.SUPPORTS_POWER_ON_BY_OCF: 'supportsPowerOnByOcf'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 23, 46, 45, 548000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'true',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_THING_STATUS: 'samsungvd.thingStatus'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 23, 46, 45, 445000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Idle',
+        }),
+        <Attribute.UPDATED_TIME: 'updatedTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 23, 46, 45, 445000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1735688805,
+        }),
+      }),
+      <Capability.SEC_DEVICE_CONNECTION_STATE: 'sec.deviceConnectionState'>: dict({
+        <Attribute.DEVICE_CONNECTION_STATE: 'deviceConnectionState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 1, 1, 29, 26, 300000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.TV_CHANNEL: 'tvChannel'>: dict({
+        <Attribute.TV_CHANNEL: 'tvChannel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 20, 25, 47, 18000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.TV_CHANNEL_NAME: 'tvChannelName'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 25, 20, 25, 47, 18000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[c2c_arlo_go_switch]
   dict({
     'main': dict({

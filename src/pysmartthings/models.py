@@ -236,6 +236,25 @@ class Capability(StrEnum):
     ACCELERATION_SENSOR = "accelerationSensor"
     LOCK = "lock"
     LOCK_CODES = "lockCodes"
+    SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF = "samsungvd.supportsPowerOnByOcf"
+    SEC_DEVICE_CONNECTION_STATE = "sec.deviceConnectionState"
+    MEDIA_INPUT_SOURCE = "mediaInputSource"
+    SAMSUNG_VD_DEVICE_CATEGORY = "samsungvd.deviceCategory"
+    SAMSUNG_VD_SUPPORTS_FEATURES = "samsungvd.supportsFeatures"
+    CUSTOM_ACCESSIBILITY = "custom.accessibility"
+    SAMSUNG_VD_REMOTE_CONTROL = "samsungvd.remoteControl"
+    CUSTOM_LAUNCH_APP = "custom.launchapp"
+    SAMSUNG_VD_FIRMWARE_VERSION = "samsungvd.firmwareVersion"
+    SAMSUNG_VD_MEDIA_INPUT_SOURCE = "samsungvd.mediaInputSource"
+    CUSTOM_TV_SEARCH = "custom.tvsearch"
+    SAMSUNG_VD_AMBIENT = "samsungvd.ambient"
+    CUSTOM_ERROR = "custom.error"
+    TV_CHANNEL = "tvChannel"
+    CUSTOM_PICTURE_MODE = "custom.picturemode"
+    SAMSUNG_VD_AMBIENT_CONTENT = "samsungvd.ambientContent"
+    CUSTOM_RECORDING = "custom.recording"
+    CUSTOM_SOUND_MODE = "custom.soundmode"
+    MEDIA_TRACK_CONTROL = "mediaTrackControl"
 
 
 class Attribute(StrEnum):
@@ -679,6 +698,27 @@ class Attribute(StrEnum):
     CODE_REPORT = "codeReport"
     SCAN_CODES = "scanCodes"
     LOCK_CODES = "lockCodes"
+    SUPPORTS_POWER_ON_BY_OCF = "supportsPowerOnByOcf"
+    DEVICE_CONNECTION_STATE = "deviceConnectionState"
+    CATEGORY = "category"
+    MEDIA_OUTPUT_SUPPORTED = "mediaOutputSupported"
+    IME_ADV_SUPPORTED = "imeAdvSupported"
+    WIFI_UPDATE_SUPPORT = "wifiUpdateSupport"
+    EXECUTABLE_SERVICE_LIST = "executableServiceList"
+    REMOTELESS_SUPPORTED = "remotelessSupported"
+    MOBILE_CAM_SUPPORTED = "mobileCamSupported"
+    SUPPORTED_INPUT_SOURCES_MAP = "supportedInputSourcesMap"
+    ERROR = "error"
+    TV_CHANNEL = "tvChannel"
+    TV_CHANNEL_NAME = "tvChannelName"
+    PICTURE_MODE = "pictureMode"
+    SUPPORTED_PICTURE_MODES = "supportedPictureModes"
+    SUPPORTED_PICTURE_MODES_MAP = "supportedPictureModesMap"
+    SUPPORTED_AMBIENT_APPS = "supportedAmbientApps"
+    SUPPORTED_SOUND_MODES_MAP = "supportedSoundModesMap"
+    SOUND_MODE = "soundMode"
+    SUPPORTED_SOUND_MODES = "supportedSoundModes"
+    SUPPORTED_TRACK_CONTROL_COMMANDS = "supportedTrackControlCommands"
 
 
 class Command(StrEnum):
@@ -790,6 +830,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_PLAYBACK_COMMANDS,
         Attribute.PLAYBACK_STATUS,
     ],
+    Capability.MEDIA_INPUT_SOURCE: [
+        Attribute.SUPPORTED_INPUT_SOURCES,
+        Attribute.INPUT_SOURCE,
+    ],
+    Capability.MEDIA_TRACK_CONTROL: [Attribute.SUPPORTED_TRACK_CONTROL_COMMANDS],
     Capability.MOTION_SENSOR: [Attribute.MOTION],
     Capability.OCF: [
         Attribute.SYSTEM_TIME,
@@ -838,6 +883,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_THERMOSTAT_MODES,
     ],
     Capability.THREE_AXIS: [Attribute.THREE_AXIS],
+    Capability.TV_CHANNEL: [Attribute.TV_CHANNEL, Attribute.TV_CHANNEL_NAME],
     Capability.DEMAND_RESPONSE_LOAD_CONTROL: [
         Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS
     ],
@@ -1254,6 +1300,24 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.INPUT_SOURCE,
     ],
     Capability.SAMSUNG_VD_THING_STATUS: [Attribute.UPDATED_TIME, Attribute.STATUS],
+    Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: [
+        Attribute.SUPPORTS_POWER_ON_BY_OCF
+    ],
+    Capability.SAMSUNG_VD_DEVICE_CATEGORY: [Attribute.CATEGORY],
+    Capability.SAMSUNG_VD_SUPPORTS_FEATURES: [
+        Attribute.MEDIA_OUTPUT_SUPPORTED,
+        Attribute.IME_ADV_SUPPORTED,
+        Attribute.WIFI_UPDATE_SUPPORT,
+        Attribute.EXECUTABLE_SERVICE_LIST,
+        Attribute.REMOTELESS_SUPPORTED,
+        Attribute.MOBILE_CAM_SUPPORTED,
+    ],
+    Capability.SAMSUNG_VD_FIRMWARE_VERSION: [Attribute.FIRMWARE_VERSION],
+    Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: [
+        Attribute.SUPPORTED_INPUT_SOURCES_MAP,
+        Attribute.INPUT_SOURCE,
+    ],
+    Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Attribute.SUPPORTED_AMBIENT_APPS],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -1419,6 +1483,17 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.HEPA_FILTER_USAGE,
         Attribute.HEPA_FILTER_LAST_RESET_DATE,
     ],
+    Capability.CUSTOM_ERROR: [Attribute.ERROR],
+    Capability.CUSTOM_PICTURE_MODE: [
+        Attribute.PICTURE_MODE,
+        Attribute.SUPPORTED_PICTURE_MODES,
+        Attribute.SUPPORTED_PICTURE_MODES_MAP,
+    ],
+    Capability.CUSTOM_SOUND_MODE: [
+        Attribute.SUPPORTED_SOUND_MODES_MAP,
+        Attribute.SOUND_MODE,
+        Attribute.SUPPORTED_SOUND_MODES,
+    ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [
         Attribute.LOG_TYPE,
@@ -1443,6 +1518,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.PROTOCOLS,
         Attribute.VERSION,
     ],
+    Capability.SEC_DEVICE_CONNECTION_STATE: [Attribute.DEVICE_CONNECTION_STATE],
     # Tag capabilities
     Capability.TAG_E2E_ENCRYPTION: [
         Attribute.ENCRYPTION,

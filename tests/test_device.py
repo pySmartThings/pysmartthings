@@ -142,6 +142,7 @@ async def test_fetching_single_device(
         "c2c_arlo_go_switch",
         "multipurpose_sensor",
         "yale_push_button_deadbolt_lock",
+        "27_smart_monitor_m5",
     ],
 )
 async def test_fetching_status_of_single_device(
