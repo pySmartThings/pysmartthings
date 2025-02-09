@@ -18,16 +18,24 @@ if TYPE_CHECKING:
     from syrupy import SnapshotAssertion
 
 
+@pytest.mark.parametrize(
+    "fixture",
+    [
+        "devices_2",
+        "devices_3",
+    ],
+)
 async def test_fetching_devices(
     client: SmartThings,
     responses: aioresponses,
     snapshot: SnapshotAssertion,
+    fixture: str,
 ) -> None:
     """Test getting devices."""
     responses.get(
         f"{MOCK_URL}/devices",
         status=200,
-        body=load_fixture("devices_2.json"),
+        body=load_fixture(f"{fixture}.json"),
     )
     assert await client.get_devices() == snapshot
     responses.assert_called_once_with(
@@ -105,6 +113,7 @@ async def test_fetching_single_device(
         "c2c_thermostat_bridge_1",
         "c2c_humidity",
         "c2c_switch",
+        "da_ks_range_0101x",
     ],
 )
 async def test_fetching_status_of_single_device(

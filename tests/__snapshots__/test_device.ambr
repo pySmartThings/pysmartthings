@@ -1,5 +1,5 @@
 # serializer version: 1
-# name: test_fetching_devices
+# name: test_fetching_devices[devices_2]
   list([
     dict({
       'components': list([
@@ -10,8 +10,8 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -37,9 +37,9 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -64,8 +64,8 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -136,8 +136,8 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -185,8 +185,8 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -211,8 +211,8 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -238,9 +238,9 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -288,9 +288,9 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -340,9 +340,9 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -390,9 +390,9 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -417,8 +417,8 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -444,9 +444,9 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -471,8 +471,8 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -498,9 +498,9 @@
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
-            <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
-            <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-            <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+            <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>,
+            <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+            <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
           ]),
           'id': 'main',
           'label': 'main',
@@ -518,6 +518,67 @@
     }),
   ])
 # ---
+# name: test_fetching_devices[devices_3]
+  list([
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.OCF: 'ocf'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>,
+            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
+            <Capability.OVEN_MODE: 'ovenMode'>,
+            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>,
+            <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: 'samsungce.kitchenDeviceIdentification'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
+            <Capability.SAMSUNG_CE_DOOR_STATE: 'samsungce.doorState'>,
+            <Capability.SAMSUNG_CE_CUSTOM_RECIPE: 'samsungce.customRecipe'>,
+            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
+            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
+            <Capability.SAMSUNG_CE_MEAT_PROBE: 'samsungce.meatProbe'>,
+            <Capability.SAMSUNG_CE_LAMP: 'samsungce.lamp'>,
+            <Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: 'samsungce.kitchenModeSpecification'>,
+            <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>,
+            <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>,
+            <Capability.CUSTOM_COOKTOP_OPERATING_STATE: 'custom.cooktopOperatingState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
+            <Capability.OVEN_MODE: 'ovenMode'>,
+            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
+            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
+            <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'cavity-01',
+          'label': 'cavity-01',
+        }),
+      ]),
+      'device_id': '2c3cbaa0-1899-5ddc-7b58-9d657bd53d18',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Range',
+      'label': 'Vulcan',
+      'location_id': '597a4912-13c9-47ab-5916-3cbe28b61abd',
+      'name': 'Samsung Range',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+  ])
+# ---
 # name: test_fetching_single_device
   dict({
     'components': list([
@@ -528,8 +589,8 @@
           <Capability.SWITCH_LEVEL: 'switchLevel'>,
           <Capability.HEALTH_CHECK: 'healthCheck'>,
           <Capability.REFRESH: 'refresh'>,
-          <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
-          <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
+          <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>,
+          <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>,
         ]),
         'id': 'main',
         'label': 'main',
@@ -858,6 +919,928 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[da_ks_range_0101x]
+  dict({
+    'cavity-01': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 7, 22, 35, 34, 197000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>: dict({
+        <Attribute.OVEN_CAVITY_STATUS: 'ovenCavityStatus'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 165000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.OVEN_MODE: 'ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 6, 983000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Others',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 8, 409000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['Others']",
+        }),
+      }),
+      <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 4, 584000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2024-05-14T19:00:04.579Z',
+        }),
+        <Attribute.MACHINE_STATE: 'machineState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 1,
+        }),
+        <Attribute.SUPPORTED_MACHINE_STATES: 'supportedMachineStates'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+        <Attribute.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 6, 976000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_SETPOINT_RANGE: 'ovenSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>: dict({
+        <Attribute.DEFAULT_OPERATION_TIME: 'defaultOperationTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEFAULT_OVEN_MODE: 'defaultOvenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 6, 983000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ConvectionBake',
+        }),
+        <Attribute.DEFAULT_OVEN_SETPOINT: 'defaultOvenSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 6, 976000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 350,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 6, 983000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'NoOperation',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 8, 409000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['SelfClean', 'SteamClean', 'NoOperation']",
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 4, 584000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2024-05-14T19:00:04.579Z',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00:00:00',
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 415000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 6, 976000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 175,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+    'main': dict({
+      <Capability.CUSTOM_COOKTOP_OPERATING_STATE: 'custom.cooktopOperatingState'>: dict({
+        <Attribute.COOKTOP_OPERATING_STATE: 'cooktopOperatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 49, 976000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.SUPPORTED_COOKTOP_OPERATING_STATE: 'supportedCooktopOperatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 5, 293000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['run', 'ready']",
+        }),
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': dict({
+            'href': '/information/vs/0',
+          }),
+          'timestamp': datetime.datetime(2023, 11, 28, 22, 49, 9, 333000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'payload': dict({
+              'if': list([
+                'oic.if.baseline',
+                'oic.if.a',
+              ]),
+              'rt': list([
+                'x.com.samsung.da.information',
+              ]),
+              'x.com.samsung.da.description': 'TP1X_DA-KS-OVEN-01011',
+              'x.com.samsung.da.items': list([
+                dict({
+                  'x.com.samsung.da.description': 'Version',
+                  'x.com.samsung.da.id': '0',
+                  'x.com.samsung.da.newVersionAvailable': '0',
+                  'x.com.samsung.da.number': '02144A221005',
+                  'x.com.samsung.da.type': 'Software',
+                }),
+                dict({
+                  'x.com.samsung.da.description': 'Version',
+                  'x.com.samsung.da.id': '1',
+                  'x.com.samsung.da.newVersionAvailable': '0',
+                  'x.com.samsung.da.number': '20121600,FFFFFFFF',
+                  'x.com.samsung.da.type': 'Firmware',
+                }),
+              ]),
+              'x.com.samsung.da.modelNum': 'TP1X_DA-KS-RANGE-0101X|40445041|5001011E03151101020000000000000',
+              'x.com.samsung.da.otnDUID': 'ZPCNQWBWXI53Q',
+              'x.com.samsung.da.serialNum': '0J4D7DARB00000K',
+            }),
+          }),
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 282000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2c3cbaa0-1899-5ddc-7b58-9d657bd48f18',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 12, 19, 22, 33, 9, 710000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1.2.1',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 282000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 26, 132000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'AKS-WW-TP1-20-OVEN-3-CR_40240205',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 26, 132000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Realtek',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 282000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 282000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 26, 132000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TP1X_DA-KS-RANGE-0101X|40445041|5001011E031511010200000000000000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 26, 132000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TizenRT 3.1',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 26, 132000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DAWIT 3.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 282000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 26, 132000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Range',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 282000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2c3cbaa0-1899-5ddc-7b58-9d657bd48f18',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 282000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA-KS-RANGE-0101X',
+        }),
+      }),
+      <Capability.OVEN_MODE: 'ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Others',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 165000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['Bake', 'Broil', 'ConvectionBake', 'ConvectionRoast', 'warming', 'Others', 'Dehydrate']",
+        }),
+      }),
+      <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T00:50:48.803Z',
+        }),
+        <Attribute.MACHINE_STATE: 'machineState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 49, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 1,
+        }),
+        <Attribute.SUPPORTED_MACHINE_STATES: 'supportedMachineStates'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+        <Attribute.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 980000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_SETPOINT_RANGE: 'ovenSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>: dict({
+        <Attribute.REMOTE_CONTROL_ENABLED: 'remoteControlEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 50, 886000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'true',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_CUSTOM_RECIPE: 'samsungce.customRecipe'>: dict({
+      }),
+      <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>: dict({
+        <Attribute.BINARY_ID: 'binaryId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 124000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TP1X_DA-KS-RANGE-0101X',
+        }),
+        <Attribute.DESCRIPTION: 'description'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MICOM_ASSAY_CODE: 'micomAssayCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_CLASSIFICATION_CODE: 'modelClassificationCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_NAME: 'modelName'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RELEASE_YEAR: 'releaseYear'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER: 'serialNumber'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER_EXTRA: 'serialNumberExtra'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DOOR_STATE: 'samsungce.doorState'>: dict({
+        <Attribute.DOOR_STATE: 'doorState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 5, 24, 873000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>: dict({
+        <Attribute.VERSION_NUMBER: 'versionNumber'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 11, 1, 21, 37, 51, 304000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 22100101,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>: dict({
+        <Attribute.LOCK_STATE: 'lockState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 275000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'unlocked',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>: dict({
+        <Attribute.DEFAULT_OPERATION_TIME: 'defaultOperationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 3600,
+        }),
+        <Attribute.DEFAULT_OVEN_MODE: 'defaultOvenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ConvectionBake',
+        }),
+        <Attribute.DEFAULT_OVEN_SETPOINT: 'defaultOvenSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 980000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 350,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: 'samsungce.kitchenDeviceIdentification'>: dict({
+        <Attribute.FUEL: 'fuel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_CODE: 'modelCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'NE6516A-/AA0',
+        }),
+        <Attribute.REGION_CODE: 'regionCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'US',
+        }),
+        <Attribute.REPRESENTATIVE_COMPONENT: 'representativeComponent'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 487000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'range',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: 'samsungce.kitchenModeSpecification'>: dict({
+        <Attribute.SPECIFICATION: 'specification'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 5, 14, 19, 0, 30, 62000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'single': list([
+              dict({
+                'mode': 'Bake',
+                'supportedOperations': list([
+                  'start',
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'default': '01:00:00',
+                    'max': '09:59:00',
+                    'min': '00:01:00',
+                    'resolution': '00:01:00',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 175,
+                      'max': 285,
+                      'min': 80,
+                      'resolution': 0,
+                    }),
+                    'F': dict({
+                      'default': 350,
+                      'max': 550,
+                      'min': 175,
+                      'resolution': 0,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'Broil',
+                'supportedOperations': list([
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 61441,
+                      'max': 61442,
+                      'min': 61441,
+                      'supportedValues': list([
+                        61441,
+                        61442,
+                      ]),
+                    }),
+                    'F': dict({
+                      'default': 61441,
+                      'max': 61442,
+                      'min': 61441,
+                      'supportedValues': list([
+                        61441,
+                        61442,
+                      ]),
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'ConvectionBake',
+                'supportedOperations': list([
+                  'start',
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'default': '01:00:00',
+                    'max': '09:59:00',
+                    'min': '00:01:00',
+                    'resolution': '00:01:00',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 285,
+                      'min': 80,
+                      'resolution': 0,
+                    }),
+                    'F': dict({
+                      'default': 325,
+                      'max': 550,
+                      'min': 175,
+                      'resolution': 0,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'ConvectionRoast',
+                'supportedOperations': list([
+                  'start',
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'default': '01:00:00',
+                    'max': '09:59:00',
+                    'min': '00:01:00',
+                    'resolution': '00:01:00',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 285,
+                      'min': 80,
+                      'resolution': 0,
+                    }),
+                    'F': dict({
+                      'default': 325,
+                      'max': 550,
+                      'min': 175,
+                      'resolution': 0,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'KeepWarm',
+                'supportedOperations': list([
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 80,
+                      'max': 80,
+                      'min': 80,
+                      'supportedValues': list([
+                        80,
+                      ]),
+                    }),
+                    'F': dict({
+                      'default': 175,
+                      'max': 175,
+                      'min': 175,
+                      'supportedValues': list([
+                        175,
+                      ]),
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'BreadProof',
+                'supportedOperations': list([
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 35,
+                      'max': 35,
+                      'min': 35,
+                      'supportedValues': list([
+                        35,
+                      ]),
+                    }),
+                    'F': dict({
+                      'default': 95,
+                      'max': 95,
+                      'min': 95,
+                      'supportedValues': list([
+                        95,
+                      ]),
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'AirFryer',
+                'supportedOperations': list([
+                  'start',
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'default': '01:00:00',
+                    'max': '09:59:00',
+                    'min': '00:01:00',
+                    'resolution': '00:01:00',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 220,
+                      'max': 260,
+                      'min': 175,
+                      'resolution': 0,
+                    }),
+                    'F': dict({
+                      'default': 425,
+                      'max': 500,
+                      'min': 350,
+                      'resolution': 0,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'Dehydrate',
+                'supportedOperations': list([
+                  'start',
+                  'set',
+                ]),
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'default': '01:00:00',
+                    'max': '09:59:00',
+                    'min': '00:01:00',
+                    'resolution': '00:01:00',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 65,
+                      'max': 105,
+                      'min': 40,
+                      'resolution': 0,
+                    }),
+                    'F': dict({
+                      'default': 150,
+                      'max': 225,
+                      'min': 100,
+                      'resolution': 0,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'SelfClean',
+                'supportedOperations': list([
+                ]),
+                'supportedOptions': dict({
+                }),
+              }),
+              dict({
+                'mode': 'SteamClean',
+                'supportedOperations': list([
+                ]),
+                'supportedOptions': dict({
+                }),
+              }),
+            ]),
+          }),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_LAMP: 'samsungce.lamp'>: dict({
+        <Attribute.BRIGHTNESS_LEVEL: 'brightnessLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+        <Attribute.SUPPORTED_BRIGHTNESS_LEVEL: 'supportedBrightnessLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['off', 'high']",
+        }),
+      }),
+      <Capability.SAMSUNG_CE_MEAT_PROBE: 'samsungce.meatProbe'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 679000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'disconnected',
+        }),
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 619000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 0,
+        }),
+        <Attribute.TEMPERATURE_SETPOINT: 'temperatureSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 2, 21, 22, 37, 2, 619000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 3, 7, 52, 875000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'NoOperation',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 165000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': "['Bake', 'Broil', 'ConvectionBake', 'ConvectionRoast', 'KeepWarm', 'BreadProof', 'AirFryer', 'Dehydrate', 'SelfClean', 'SteamClean']",
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T00:50:48.803Z',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00:00:00',
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 49, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 830000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>: dict({
+        <Attribute.AVAILABLE_MODULES: 'availableModules'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 124000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[]',
+        }),
+        <Attribute.LAST_UPDATED_DATE: 'lastUpdatedDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEW_VERSION_AVAILABLE: 'newVersionAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 124000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OTN_D_U_I_D: 'otnDUID'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 3, 7, 46, 10, 124000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ZPCNQWBWXI47Q',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TARGET_MODULE: 'targetModule'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 980000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 175,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[hue_color_temperature_bulb]
   dict({
     'main': dict({
@@ -935,7 +1918,7 @@
           }),
         }),
       }),
-      <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
+      <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
         <Attribute.CIRCADIAN: 'circadian'>: dict({
           'data': None,
           'timestamp': None,
@@ -943,7 +1926,7 @@
           'value': None,
         }),
       }),
-      <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
+      <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
         <Attribute.FADE: 'fade'>: dict({
           'data': None,
           'timestamp': None,
@@ -1026,7 +2009,7 @@
       }),
       <Capability.REFRESH: 'refresh'>: dict({
       }),
-      <Capability.HUE_SYNC_MODE: 'samsungim.hueSyncMode'>: dict({
+      <Capability.SAMSUNG_IM_HUE_SYNC_MODE: 'samsungim.hueSyncMode'>: dict({
         <Attribute.MODE: 'mode'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2025, 2, 7, 15, 14, 53, 812000, tzinfo=datetime.timezone.utc),
@@ -1059,7 +2042,7 @@
           }),
         }),
       }),
-      <Capability.CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
+      <Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: 'synthetic.lightingEffectCircadian'>: dict({
         <Attribute.CIRCADIAN: 'circadian'>: dict({
           'data': None,
           'timestamp': None,
@@ -1067,7 +2050,7 @@
           'value': None,
         }),
       }),
-      <Capability.FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
+      <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
         <Attribute.FADE: 'fade'>: dict({
           'data': None,
           'timestamp': None,

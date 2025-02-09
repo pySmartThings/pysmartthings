@@ -15,50 +15,137 @@ class Capability(StrEnum):
     """Capability model."""
 
     BATTERY = "battery"
-    CIRCADIAN_LIGHTING_EFFECT = "synthetic.lightingEffectCircadian"
     COLOR_CONTROL = "colorControl"
     COLOR_TEMPERATURE = "colorTemperature"
-    FADE_LIGHTNING_EFFECT = "synthetic.lightingEffectFade"
+    EXECUTE = "execute"
     HEALTH_CHECK = "healthCheck"
-    HUE_SYNC_MODE = "samsungim.hueSyncMode"
     MOTION_SENSOR = "motionSensor"
+    OCF = "ocf"
+    OVEN_MODE = "ovenMode"
+    OVEN_OPERATING_STATE = "ovenOperatingState"
+    OVEN_SETPOINT = "ovenSetpoint"
     REFRESH = "refresh"
     RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
+    REMOTE_CONTROL_STATUS = "remoteControlStatus"
     SWITCH = "switch"
     SWITCH_LEVEL = "switchLevel"
     TEMPERATURE_MEASUREMENT = "temperatureMeasurement"
     THERMOSTAT_MODE = "thermostatMode"
     WINDOW_SHADE = "windowShade"
 
+    CUSTOM_COOKTOP_OPERATING_STATE = "custom.cooktopOperatingState"
+    CUSTOM_DISABLED_CAPABILITIES = "custom.disabledCapabilities"
+    CUSTOM_OVEN_CAVITY_STATUS = "custom.ovenCavityStatus"
+
+    SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
+    SAMSUNG_CE_DEVICE_IDENTIFICATION = "samsungce.deviceIdentification"
+    SAMSUNG_CE_DOOR_STATE = "samsungce.doorState"
+    SAMSUNG_CE_DRIVER_VERSION = "samsungce.driverVersion"
+    SAMSUNG_CE_KIDS_LOCK = "samsungce.kidsLock"
+    SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS = "samsungce.kitchenDeviceDefaults"
+    SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION = "samsungce.kitchenDeviceIdentification"
+    SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION = "samsungce.kitchenModeSpecification"
+    SAMSUNG_CE_LAMP = "samsungce.lamp"
+    SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
+    SAMSUNG_CE_OVEN_MODE = "samsungce.ovenMode"
+    SAMSUNG_CE_OVEN_OPERATING_STATE = "samsungce.ovenOperatingState"
+    SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
+
+    SAMSUNG_IM_HUE_SYNC_MODE = "samsungim.hueSyncMode"
+
+    SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT = "synthetic.lightingEffectCircadian"
+    SYNTHETIC_FADE_LIGHTNING_EFFECT = "synthetic.lightingEffectFade"
+
 
 class Attribute(StrEnum):
     """Attribute model."""
 
+    AVAILABLE_MODULES = "availableModules"
     BATTERY = "battery"
+    BINARY_ID = "binaryId"
+    BRIGHTNESS_LEVEL = "brightnessLevel"
     CHECK_INTERVAL = "checkInterval"
     CIRCADIAN = "circadian"
     COLOR = "color"
-    COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
     COLOR_TEMPERATURE = "colorTemperature"
-    DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
+    COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
+    COMPLETION_TIME = "completionTime"
+    COOKTOP_OPERATING_STATE = "cooktopOperatingState"
+    DATA = "data"
+    DATA_MODEL_VERSION = "dmv"
+    DEFAULT_OPERATION_TIME = "defaultOperationTime"
+    DEFAULT_OVEN_MODE = "defaultOvenMode"
+    DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
+    DESCRIPTION = "description"
+    DEVICE_ID = "di"
+    DEVICE_NAME = "n"
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
+    DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
+    DISABLED_CAPABILITIES = "disabledCapabilities"
+    DOOR_STATE = "doorState"
     FADE = "fade"
+    FIRMWARE_VERSION = "mnfv"
+    FUEL = "fuel"
+    HARDWARE_VERSION = "mnhw"
     HEALTH_STATUS = "healthStatus"
     HUE = "hue"
     HUMIDITY = "humidity"
+    LAST_UPDATED_DATE = "lastUpdatedDate"
     LEVEL = "level"
     LEVEL_RANGE = "levelRange"
+    LOCK_STATE = "lockState"
+    MACHINE_STATE = "machineState"
+    MANUFACTURER_DETAILS_LINK = "mnml"
+    MANUFACTURER_NAME = "mnmn"
+    MANUFACTURE_DATE = "mndt"
+    MICOM_ASSAY_CODE = "micomAssayCode"
     MODE = "mode"
+    MODEL_CLASSIFICATION_CODE = "modelClassificationCode"
+    MODEL_CODE = "modelCode"
+    MODEL_NAME = "modelName"
+    MODEL_NUMBER = "mnmo"
     MOTION = "motion"
+    NEW_VERSION_AVAILABLE = "newVersionAvailable"
+    OPERATING_STATE = "operatingState"
+    OPERATION_TIME = "operationTime"
+    OS_VERSION = "mnos"
+    OTN_D_U_I_D = "otnDUID"
+    OVEN_CAVITY_STATUS = "ovenCavityStatus"
+    OVEN_JOB_STATE = "ovenJobState"
+    OVEN_MODE = "ovenMode"
+    OVEN_SETPOINT = "ovenSetpoint"
+    OVEN_SETPOINT_RANGE = "ovenSetpointRange"
+    PLATFORM_ID = "pi"
+    PLATFORM_VERSION = "mnpv"
+    PROGRESS = "progress"
     QUANTITY = "quantity"
+    REGION_CODE = "regionCode"
+    RELEASE_YEAR = "releaseYear"
+    REMOTE_CONTROL_ENABLED = "remoteControlEnabled"
+    REPRESENTATIVE_COMPONENT = "representativeComponent"
     SATURATION = "saturation"
+    SERIAL_NUMBER = "serialNumber"
+    SERIAL_NUMBER_EXTRA = "serialNumberExtra"
+    SPECIFICATION = "specification"
+    SPEC_VERSION = "icv"
+    STATUS = "status"
+    SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
+    SUPPORTED_COOKTOP_OPERATING_STATE = "supportedCooktopOperatingState"
+    SUPPORTED_MACHINE_STATES = "supportedMachineStates"
+    SUPPORTED_OVEN_MODES = "supportedOvenModes"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
+    SUPPORT_LINK = "mnsl"
     SWITCH = "switch"
+    SYSTEM_TIME = "st"
+    TARGET_MODULE = "targetModule"
     TEMPERATURE = "temperature"
     TEMPERATURE_RANGE = "temperatureRange"
+    TEMPERATURE_SETPOINT = "temperatureSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
     TYPE = "type"
+    VENDOR_ID = "vid"
+    VERSION_NUMBER = "versionNumber"
     WINDOW_SHADE = "windowShade"
 
 
@@ -86,23 +173,52 @@ class Command(StrEnum):
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.BATTERY: [Attribute.BATTERY, Attribute.QUANTITY, Attribute.TYPE],
-    Capability.CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.COLOR_CONTROL: [Attribute.COLOR, Attribute.HUE, Attribute.SATURATION],
     Capability.COLOR_TEMPERATURE: [
         Attribute.COLOR_TEMPERATURE,
         Attribute.COLOR_TEMPERATURE_RANGE,
     ],
-    Capability.FADE_LIGHTNING_EFFECT: [Attribute.FADE],
+    Capability.EXECUTE: [Attribute.DATA],
     Capability.HEALTH_CHECK: [
         Attribute.DEVICE_WATCH_ENROLL,
         Attribute.DEVICE_WATCH_DEVICE_STATUS,
         Attribute.CHECK_INTERVAL,
         Attribute.HEALTH_STATUS,
     ],
-    Capability.HUE_SYNC_MODE: [Attribute.MODE],
     Capability.MOTION_SENSOR: [Attribute.MOTION],
+    Capability.OCF: [
+        Attribute.SYSTEM_TIME,
+        Attribute.MANUFACTURE_DATE,
+        Attribute.FIRMWARE_VERSION,
+        Attribute.HARDWARE_VERSION,
+        Attribute.DEVICE_ID,
+        Attribute.SUPPORT_LINK,
+        Attribute.DATA_MODEL_VERSION,
+        Attribute.DEVICE_NAME,
+        Attribute.MODEL_NUMBER,
+        Attribute.VENDOR_ID,
+        Attribute.MANUFACTURER_NAME,
+        Attribute.MANUFACTURER_DETAILS_LINK,
+        Attribute.OS_VERSION,
+        Attribute.PLATFORM_ID,
+        Attribute.SPEC_VERSION,
+    ],
+    Capability.OVEN_MODE: [
+        Attribute.OVEN_MODE,
+        Attribute.SUPPORTED_OVEN_MODES,
+    ],
+    Capability.OVEN_OPERATING_STATE: [
+        Attribute.COMPLETION_TIME,
+        Attribute.MACHINE_STATE,
+        Attribute.PROGRESS,
+        Attribute.SUPPORTED_MACHINE_STATES,
+        Attribute.OVEN_JOB_STATE,
+        Attribute.OPERATION_TIME,
+    ],
+    Capability.OVEN_SETPOINT: [Attribute.OVEN_SETPOINT, Attribute.OVEN_SETPOINT_RANGE],
     Capability.REFRESH: [],
     Capability.RELATIVE_HUMIDITY_MEASUREMENT: [Attribute.HUMIDITY],
+    Capability.REMOTE_CONTROL_STATUS: [Attribute.REMOTE_CONTROL_ENABLED],
     Capability.SWITCH: [Attribute.SWITCH],
     Capability.SWITCH_LEVEL: [Attribute.LEVEL, Attribute.LEVEL_RANGE],
     Capability.TEMPERATURE_MEASUREMENT: [
@@ -117,6 +233,47 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WINDOW_SHADE,
         Attribute.SUPPORTED_WINDOW_SHADE_COMMANDS,
     ],
+    # Synthetic capabilities
+    Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
+    Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
+    # Samsung IM capabilities
+    Capability.SAMSUNG_IM_HUE_SYNC_MODE: [Attribute.MODE],
+    # Samsung CE capabilities
+    Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: [
+        Attribute.COMPLETION_TIME,
+        Attribute.OPERATING_STATE,
+        Attribute.PROGRESS,
+        Attribute.OVEN_JOB_STATE,
+        Attribute.OPERATION_TIME,
+    ],
+    Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: [
+        Attribute.DEFAULT_OPERATION_TIME,
+        Attribute.DEFAULT_OVEN_MODE,
+        Attribute.DEFAULT_OVEN_SETPOINT,
+    ],
+    Capability.SAMSUNG_CE_OVEN_MODE: [
+        Attribute.SUPPORTED_OVEN_MODES,
+        Attribute.OVEN_MODE,
+    ],
+    Capability.SAMSUNG_CE_MEAT_PROBE: [
+        Attribute.TEMPERATURE_SETPOINT,
+        Attribute.TEMPERATURE,
+        Attribute.STATUS,
+    ],
+    Capability.SAMSUNG_CE_DOOR_STATE: [Attribute.DOOR_STATE],
+    Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: [
+        Attribute.MICOM_ASSAY_CODE,
+        Attribute.MODEL_NAME,
+        Attribute.SERIAL_NUMBER,
+        Attribute.SERIAL_NUMBER_EXTRA,
+        Attribute.MODEL_CLASSIFICATION_CODE,
+        Attribute.DESCRIPTION,
+        Attribute.RELEASE_YEAR,
+        Attribute.BINARY_ID,
+    ],
+    # Custom capabilities
+    Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
+    Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
 }
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
