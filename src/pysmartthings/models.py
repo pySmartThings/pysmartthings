@@ -805,6 +805,7 @@ class Command(StrEnum):
     PING = "ping"
     REFRESH = "refresh"
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
+    SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
     SET_COLOR = "setColor"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
@@ -1686,6 +1687,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
 }
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
+    Capability.AIR_CONDITIONER_MODE: [Command.SET_AIR_CONDITIONER_MODE],
     Capability.COLOR_CONTROL: [
         Command.SET_COLOR,
         Command.SET_HUE,
