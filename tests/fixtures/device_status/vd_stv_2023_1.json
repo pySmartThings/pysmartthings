@@ -3,13 +3,7 @@
     "main": {
       "mediaPlayback": {
         "supportedPlaybackCommands": {
-          "value": [
-            "play",
-            "pause",
-            "stop",
-            "fastForward",
-            "rewind"
-          ],
+          "value": ["play", "pause", "stop", "fastForward", "rewind"],
           "timestamp": "2024-10-29T22:38:21.668Z"
         },
         "playbackStatus": {
@@ -252,13 +246,8 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.tv.deviceinfo"
-              ],
-              "if": [
-                "oic.if.r",
-                "oic.if.baseline"
-              ],
+              "rt": ["x.com.samsung.tv.deviceinfo"],
+              "if": ["oic.if.r", "oic.if.baseline"],
               "x.com.samsung.tv.btmac": "E0:9D:13:9A:6F:67",
               "x.com.samsung.tv.blemac": "E0:9D:13:9A:6F:67",
               "x.com.samsung.tv.wifimac": "e0:9d:13:9a:6f:66",
@@ -306,13 +295,7 @@
           "timestamp": "2024-10-29T22:38:23.436Z"
         },
         "supportedPictureModes": {
-          "value": [
-            "Dynamic",
-            "Eco",
-            "FILMMAKER MODE",
-            "Movie",
-            "Standard"
-          ],
+          "value": ["Dynamic", "Eco", "FILMMAKER MODE", "Movie", "Standard"],
           "timestamp": "2024-10-29T22:38:23.436Z"
         },
         "supportedPictureModesMap": {
@@ -343,9 +326,7 @@
       },
       "samsungvd.ambientContent": {
         "supportedAmbientApps": {
-          "value": [
-            "weather"
-          ],
+          "value": ["weather"],
           "timestamp": "2024-10-29T22:38:22.933Z"
         }
       },
@@ -372,9 +353,7 @@
           "value": null
         },
         "supportedEnergySavingLevels": {
-          "value": [
-            1
-          ],
+          "value": [1],
           "timestamp": "2024-09-04T23:30:21.308Z"
         },
         "energySavingOperation": {
@@ -408,10 +387,7 @@
           "timestamp": "2024-10-21T02:22:15.343Z"
         },
         "supportedSoundModes": {
-          "value": [
-            "Amplify",
-            "Standard"
-          ],
+          "value": ["Amplify", "Standard"],
           "timestamp": "2024-10-30T02:22:09.629Z"
         }
       },

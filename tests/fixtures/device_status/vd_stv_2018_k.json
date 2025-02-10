@@ -3,13 +3,7 @@
     "main": {
       "mediaPlayback": {
         "supportedPlaybackCommands": {
-          "value": [
-            "play",
-            "pause",
-            "stop",
-            "fastForward",
-            "rewind"
-          ],
+          "value": ["play", "pause", "stop", "fastForward", "rewind"],
           "timestamp": "2020-08-28T18:07:41.571Z"
         },
         "playbackStatus": {
@@ -25,9 +19,7 @@
       },
       "mediaInputSource": {
         "supportedInputSources": {
-          "value": [
-            "digitalTv"
-          ],
+          "value": ["digitalTv"],
           "timestamp": "2023-07-08T11:32:59.982Z"
         },
         "inputSource": {
@@ -115,10 +107,7 @@
       "custom.accessibility": {},
       "custom.disabledCapabilities": {
         "disabledCapabilities": {
-          "value": [
-            "samsungvd.ambient18",
-            "sec.diagnosticsInformation"
-          ],
+          "value": ["samsungvd.ambient18", "sec.diagnosticsInformation"],
           "timestamp": "2023-07-08T11:33:00.033Z"
         }
       },
@@ -213,12 +202,7 @@
           "timestamp": "2021-08-15T13:43:23.214Z"
         },
         "supportedPictureModes": {
-          "value": [
-            "Dynamisk",
-            "Standard",
-            "Naturlig",
-            "Film"
-          ],
+          "value": ["Dynamisk", "Standard", "Naturlig", "Film"],
           "timestamp": "2021-08-15T13:43:23.214Z"
         },
         "supportedPictureModesMap": {
@@ -245,9 +229,7 @@
       },
       "samsungvd.ambientContent": {
         "supportedAmbientApps": {
-          "value": [
-            "weather"
-          ],
+          "value": ["weather"],
           "timestamp": "2023-07-08T11:33:00.033Z"
         }
       },
@@ -272,10 +254,7 @@
           "timestamp": "2021-08-15T13:43:23.231Z"
         },
         "supportedSoundModes": {
-          "value": [
-            "Standard",
-            "F\u00f6rst\u00e4rk"
-          ],
+          "value": ["Standard", "F\u00f6rst\u00e4rk"],
           "timestamp": "2021-08-15T17:22:13.242Z"
         }
       },

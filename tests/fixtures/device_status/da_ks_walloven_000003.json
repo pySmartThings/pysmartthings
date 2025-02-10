@@ -82,11 +82,7 @@
       },
       "ovenMode": {
         "supportedOvenModes": {
-          "value": [
-            "Bake",
-            "Others",
-            "BottomHeat"
-          ],
+          "value": ["Bake", "Others", "BottomHeat"],
           "timestamp": "2021-06-28T02:59:42.083Z"
         },
         "ovenMode": {
@@ -187,16 +183,9 @@
         "data": {
           "value": {
             "payload": {
-              "rt": [
-                "x.com.samsung.da.rm.wifi"
-              ],
-              "if": [
-                "oic.if.baseline",
-                "oic.if.s"
-              ],
-              "x.com.samsung.rm.rssi": [
-                -67
-              ]
+              "rt": ["x.com.samsung.da.rm.wifi"],
+              "if": ["oic.if.baseline", "oic.if.s"],
+              "x.com.samsung.rm.rssi": [-67]
             }
           },
           "data": {
@@ -710,11 +699,7 @@
       },
       "ovenMode": {
         "supportedOvenModes": {
-          "value": [
-            "Bake",
-            "Broil",
-            "Others"
-          ],
+          "value": ["Bake", "Broil", "Others"],
           "timestamp": "2025-02-07T19:04:44.989Z"
         },
         "ovenMode": {
@@ -751,11 +736,7 @@
       },
       "samsungce.ovenMode": {
         "supportedOvenModes": {
-          "value": [
-            "Convection",
-            "LargeGrill",
-            "TopConvection"
-          ],
+          "value": ["Convection", "LargeGrill", "TopConvection"],
           "timestamp": "2025-02-07T19:04:44.989Z"
         },
         "ovenMode": {
