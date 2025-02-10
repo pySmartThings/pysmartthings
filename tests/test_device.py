@@ -30,6 +30,7 @@ if TYPE_CHECKING:
         "devices_8",
         "devices_9",
         "devices_10",
+        "devices_11",
     ],
 )
 async def test_fetching_devices(
@@ -167,6 +168,7 @@ async def test_fetching_single_device(
         "base_lock",
         "main_virtual_device",
         "soundbar_hw_q80_r",
+        "sensibo_airconditioner_1",
     ],
 )
 async def test_fetching_status_of_single_device(

@@ -129,6 +129,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_AUTO_DISPENSE_DETERGENT = "samsungce.autoDispenseDetergent"
     SAMSUNG_CE_AUTO_DISPENSE_SOFTENER = "samsungce.autoDispenseSoftener"
     SAMSUNG_CE_BUTTON_DISPLAY_CONDITION = "samsungce.buttonDisplayCondition"
+    SAMSUNG_CE_CLOTHING_EXTRA_CARE = "samsungce.clothingExtraCare"
     SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
     SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
@@ -156,6 +157,9 @@ class Capability(StrEnum):
     SAMSUNG_CE_DRYER_OPERATING_STATE = "samsungce.dryerOperatingState"
     SAMSUNG_CE_DUST_FILTER_ALARM = "samsungce.dustFilterAlarm"
     SAMSUNG_CE_ENERGY_PLANNER = "samsungce.energyPlanner"
+    SAMSUNG_CE_FLEXIBLE_AUTO_DISPENSE_DETERGENT = (
+        "samsungce.flexibleAutoDispenseDetergent"
+    )
     SAMSUNG_CE_FOOD_DEFROST = "samsungce.foodDefrost"
     SAMSUNG_CE_FREEZER_CONVERT_MODE = "samsungce.freezerConvertMode"
     SAMSUNG_CE_FRIDGE_FOOD_LIST = "samsungce.fridgeFoodList"
@@ -196,6 +200,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_WASHER_CYCLE_PRESET = "samsungce.washerCyclePreset"
     SAMSUNG_CE_WASHER_DELAY_END = "samsungce.washerDelayEnd"
     SAMSUNG_CE_WASHER_FREEZE_PREVENT = "samsungce.washerFreezePrevent"
+    SAMSUNG_CE_WASHER_LABEL_SCAN_CYCLE_PRESET = "samsungce.washerLabelScanCyclePreset"
     SAMSUNG_CE_WASHER_OPERATING_STATE = "samsungce.washerOperatingState"
     SAMSUNG_CE_WASHER_WASHING_TIME = "samsungce.washerWashingTime"
     SAMSUNG_CE_WASHER_WATER_LEVEL = "samsungce.washerWaterLevel"
@@ -325,12 +330,6 @@ class Attribute(StrEnum):
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
     BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
-    SUPPORTED_MODE_MAP = "supportedModeMap"
-    REQUEST_ID = "requestId"
-    SELECTED_MODE = "selectedMode"
-    STREAM_CONTROL = "streamControl"
-    SELECTED_APP_ID = "selectedAppId"
-    ERROR_CODE = "errorCode"
     BABY_DETERGENT_DOSAGE = "babyDetergentDosage"
     BABY_DETERGENT_INITIAL_AMOUNT = "babyDetergentInitialAmount"
     BABY_DETERGENT_ORDER_THRESHOLD = "babyDetergentOrderThreshold"
@@ -447,6 +446,7 @@ class Attribute(StrEnum):
     ENERGY_USAGE_MAX = "energyUsageMax"
     ERROR = "error"
     ERRORS = "errors"
+    ERROR_CODE = "errorCode"
     EVEN_ODD_DAY = "evenOddDay"
     EXECUTABLE_SERVICE_LIST = "executableServiceList"
     FADE = "fade"
@@ -557,6 +557,7 @@ class Attribute(StrEnum):
     OCF_RESOURCE_VERSION = "ocfResourceVersion"
     ODOR_LEVEL = "odorLevel"
     OPERATING_STATE = "operatingState"
+    OPERATION_MODE = "operationMode"
     OPERATION_TIME = "operationTime"
     ORDER_THRESHOLD = "orderThreshold"
     ORIGINS = "origins"
@@ -620,6 +621,7 @@ class Attribute(StrEnum):
     REPORT_STATE_REALTIME = "reportStateRealtime"
     REPORT_STATE_REALTIME_PERIOD = "reportStateRealtimePeriod"
     REPRESENTATIVE_COMPONENT = "representativeComponent"
+    REQUEST_ID = "requestId"
     RESERVABLE = "reservable"
     RESULT = "result"
     RINSE_PLUS = "rinsePlus"
@@ -634,6 +636,8 @@ class Attribute(StrEnum):
     SCHEDULED_JOBS = "scheduledJobs"
     SCHEDULED_PHASES = "scheduledPhases"
     SEARCHING_STATUS = "searchingStatus"
+    SELECTED_APP_ID = "selectedAppId"
+    SELECTED_MODE = "selectedMode"
     SELECTED_ZONE = "selectedZone"
     SERIAL_NUMBER = "serialNumber"
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
@@ -657,6 +661,7 @@ class Attribute(StrEnum):
     STEAM_SOAK = "steamSoak"
     STORM_WASH = "stormWash"
     STREAM = "stream"
+    STREAM_CONTROL = "streamControl"
     SUB_DEVICES = "subDevices"
     SUN_AZIMUTH_ANGLE = "sunAzimuthAngle"
     SUN_ELEVATION_ANGLE = "sunElevationAngle"
@@ -705,6 +710,7 @@ class Attribute(StrEnum):
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
     SUPPORTED_MEAT_TYPES = "supportedMeatTypes"
     SUPPORTED_MODES = "supportedModes"
+    SUPPORTED_MODE_MAP = "supportedModeMap"
     SUPPORTED_OPERATING_STATE = "supportedOperatingState"
     SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
     SUPPORTED_OPTIONS = "supportedOptions"
@@ -751,6 +757,7 @@ class Attribute(StrEnum):
     UNAVAILABLE_COMMANDS = "unavailableCommands"
     UPDATED_TIME = "updatedTime"
     UPDATE_AVAILABLE = "updateAvailable"
+    USER_LOCATION = "userLocation"
     UWB_ACTIVATION = "uwbActivation"
     VACATION_MODE = "vacationMode"
     VENDOR_ID = "vid"
@@ -1379,6 +1386,21 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUB_DEVICES,
     ],
     Capability.SAMSUNG_CE_SAC_DISPLAY_CONDITION: [Attribute.SWITCH],
+    Capability.SAMSUNG_CE_WASHER_LABEL_SCAN_CYCLE_PRESET: [Attribute.PRESETS],
+    Capability.SAMSUNG_CE_CLOTHING_EXTRA_CARE: [
+        Attribute.OPERATION_MODE,
+        Attribute.USER_LOCATION,
+    ],
+    Capability.SAMSUNG_CE_FLEXIBLE_AUTO_DISPENSE_DETERGENT: [
+        Attribute.REMAINING_AMOUNT,
+        Attribute.AMOUNT,
+        Attribute.SUPPORTED_DENSITY,
+        Attribute.DENSITY,
+        Attribute.SUPPORTED_AMOUNT,
+        Attribute.AVAILABLE_TYPES,
+        Attribute.TYPE,
+        Attribute.RECOMMENDED_AMOUNT,
+    ],
     # Samsung VD capabilities
     Capability.SAMSUNG_VD_SOUND_FROM: [Attribute.MODE, Attribute.DETAIL_NAME],
     Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [Attribute.ROLE, Attribute.STATUS],

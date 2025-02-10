@@ -464,6 +464,245 @@
     }),
   ])
 # ---
+# name: test_fetching_devices[devices_11]
+  list([
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.AIR_CONDITIONER_MODE: 'airConditionerMode'>,
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+            <Capability.REFRESH: 'refresh'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': 'bf4b1167-48a3-4af7-9186-0900a678ffa5',
+      'device_manufacturer_code': 'Sensibo',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Office',
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': 'sensibo-airconditioner-1',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.OCF: 'ocf'>,
+            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>,
+            <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>,
+            <Capability.SWITCH: 'switch'>,
+            <Capability.WASHER_OPERATING_STATE: 'washerOperatingState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_DRYER_DRY_LEVEL: 'custom.dryerDryLevel'>,
+            <Capability.CUSTOM_DRYER_WRINKLE_PREVENT: 'custom.dryerWrinklePrevent'>,
+            <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>,
+            <Capability.CUSTOM_JOB_BEGINNING_STATUS: 'custom.jobBeginningStatus'>,
+            <Capability.CUSTOM_SUPPORTED_OPTIONS: 'custom.supportedOptions'>,
+            <Capability.CUSTOM_WASHER_AUTO_DETERGENT: 'custom.washerAutoDetergent'>,
+            <Capability.CUSTOM_WASHER_AUTO_SOFTENER: 'custom.washerAutoSoftener'>,
+            <Capability.CUSTOM_WASHER_RINSE_CYCLES: 'custom.washerRinseCycles'>,
+            <Capability.CUSTOM_WASHER_SOIL_LEVEL: 'custom.washerSoilLevel'>,
+            <Capability.CUSTOM_WASHER_SPIN_LEVEL: 'custom.washerSpinLevel'>,
+            <Capability.CUSTOM_WASHER_WATER_TEMPERATURE: 'custom.washerWaterTemperature'>,
+            <Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: 'samsungce.autoDispenseDetergent'>,
+            <Capability.SAMSUNG_CE_AUTO_DISPENSE_SOFTENER: 'samsungce.autoDispenseSoftener'>,
+            <Capability.SAMSUNG_CE_DETERGENT_ORDER: 'samsungce.detergentOrder'>,
+            <Capability.SAMSUNG_CE_DETERGENT_STATE: 'samsungce.detergentState'>,
+            <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>,
+            <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>,
+            <Capability.SAMSUNG_CE_DRYER_DRYING_TIME: 'samsungce.dryerDryingTime'>,
+            <Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: 'samsungce.detergentAutoReplenishment'>,
+            <Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: 'samsungce.softenerAutoReplenishment'>,
+            <Capability.SAMSUNG_CE_FLEXIBLE_AUTO_DISPENSE_DETERGENT: 'samsungce.flexibleAutoDispenseDetergent'>,
+            <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>,
+            <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>,
+            <Capability.SAMSUNG_CE_SOFTENER_ORDER: 'samsungce.softenerOrder'>,
+            <Capability.SAMSUNG_CE_SOFTENER_STATE: 'samsungce.softenerState'>,
+            <Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: 'samsungce.washerBubbleSoak'>,
+            <Capability.SAMSUNG_CE_WASHER_CYCLE: 'samsungce.washerCycle'>,
+            <Capability.SAMSUNG_CE_WASHER_CYCLE_PRESET: 'samsungce.washerCyclePreset'>,
+            <Capability.SAMSUNG_CE_WASHER_DELAY_END: 'samsungce.washerDelayEnd'>,
+            <Capability.SAMSUNG_CE_WASHER_FREEZE_PREVENT: 'samsungce.washerFreezePrevent'>,
+            <Capability.SAMSUNG_CE_WASHER_LABEL_SCAN_CYCLE_PRESET: 'samsungce.washerLabelScanCyclePreset'>,
+            <Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: 'samsungce.washerOperatingState'>,
+            <Capability.SAMSUNG_CE_WASHER_WASHING_TIME: 'samsungce.washerWashingTime'>,
+            <Capability.SAMSUNG_CE_WASHER_WATER_LEVEL: 'samsungce.washerWaterLevel'>,
+            <Capability.SAMSUNG_CE_WASHER_WATER_VALVE: 'samsungce.washerWaterValve'>,
+            <Capability.SAMSUNG_CE_WELCOME_MESSAGE: 'samsungce.welcomeMessage'>,
+            <Capability.SAMSUNG_CE_WATER_CONSUMPTION_REPORT: 'samsungce.waterConsumptionReport'>,
+            <Capability.SAMSUNG_CE_CLOTHING_EXTRA_CARE: 'samsungce.clothingExtraCare'>,
+            <Capability.SAMSUNG_CE_QUICK_CONTROL: 'samsungce.quickControl'>,
+            <Capability.SAMSUNG_CE_ENERGY_PLANNER: 'samsungce.energyPlanner'>,
+            <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>,
+            <Capability.SEC_WIFI_CONFIGURATION: 'sec.wifiConfiguration'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+        }),
+      ]),
+      'device_id': 'b905ade6-4f96-b00e-3292-0703f5866809',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Washer',
+      'label': 'Washer',
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': '[washer] Samsung',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.BRIDGE: 'bridge'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '71526aa9-6457-417a-9bae-b83c87761e6a',
+      'device_manufacturer_code': None,
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Garage Hub',
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': 'SmartThings v3 Hub',
+      'type': <DeviceType.HUB: 'HUB'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.BRIDGE: 'bridge'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '148606b0-9c62-417c-8c0a-c6e4ef7ce269',
+      'device_manufacturer_code': None,
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Upstairs Hub',
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': 'SmartThings v3 Hub',
+      'type': <DeviceType.HUB: 'HUB'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.POWER_METER: 'powerMeter'>,
+            <Capability.ENERGY_METER: 'energyMeter'>,
+            <Capability.REFRESH: 'refresh'>,
+          ]),
+          'id': 'main',
+          'label': 'Geyser',
+        }),
+      ]),
+      'device_id': 'dd7ab462-c277-4aed-a9fb-ec66f9c6cc59',
+      'device_manufacturer_code': '0086-0003-004E',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Geyser',
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': 'Aeotec Switch',
+      'type': <DeviceType.ZWAVE: 'ZWAVE'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.AIR_CONDITIONER_MODE: 'airConditionerMode'>,
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+            <Capability.REFRESH: 'refresh'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '80d3956d-b94d-4a43-9bad-d3cdc8a9cb1d',
+      'device_manufacturer_code': 'Sensibo',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Main Bedroom',
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': 'sensibo-airconditioner-1',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.POWER_METER: 'powerMeter'>,
+            <Capability.ENERGY_METER: 'energyMeter'>,
+            <Capability.REFRESH: 'refresh'>,
+          ]),
+          'id': 'main',
+          'label': 'Geyser',
+        }),
+      ]),
+      'device_id': '23a4c0a4-2dae-47d0-b987-cba764414672',
+      'device_manufacturer_code': '0086-0003-004E',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Geyser',
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': 'Aeotec Switch',
+      'type': <DeviceType.ZWAVE: 'ZWAVE'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.AIR_CONDITIONER_MODE: 'airConditionerMode'>,
+            <Capability.HEALTH_CHECK: 'healthCheck'>,
+            <Capability.REFRESH: 'refresh'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '4c08fbf8-f77b-4236-a18b-0bbe7da61ea8',
+      'device_manufacturer_code': 'Sensibo',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': "Harry's room",
+      'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
+      'name': 'sensibo-airconditioner-1',
+      'type': <DeviceType.VIPER: 'VIPER'>,
+    }),
+  ])
+# ---
 # name: test_fetching_devices[devices_2]
   list([
     dict({
@@ -22249,6 +22488,86 @@
       }),
       <Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: 'synthetic.lightingEffectFade'>: dict({
         <Attribute.FADE: 'fade'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[sensibo_airconditioner_1]
+  dict({
+    'main': dict({
+      <Capability.AIR_CONDITIONER_MODE: 'airConditionerMode'>: dict({
+        <Attribute.AIR_CONDITIONER_MODE: 'airConditionerMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 10, 9, 47, 758000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'cool',
+        }),
+        <Attribute.AVAILABLE_AC_MODES: 'availableAcModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_AC_MODES: 'supportedAcModes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+          }),
+          'timestamp': datetime.datetime(2025, 2, 9, 10, 9, 47, 758000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'online',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': datetime.datetime(2024, 12, 4, 10, 10, 2, 934000, tzinfo=datetime.timezone.utc),
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 10, 9, 47, 758000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 10, 9, 47, 758000, tzinfo=datetime.timezone.utc),
+          'unit': 'C',
+          'value': 20,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
           'data': None,
           'timestamp': None,
           'unit': None,
