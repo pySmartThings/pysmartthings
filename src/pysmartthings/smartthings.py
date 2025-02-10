@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass
+import logging
 from typing import Any, Self
 
 from aiohttp import ClientSession
@@ -28,6 +29,8 @@ from .models import (
     SceneResponse,
     Status,
 )
+
+_LOGGER = logging.getLogger(__name__)
 
 
 @dataclass
@@ -189,6 +192,7 @@ class SmartThings:
             command_payload["arguments"] = (
                 argument if isinstance(argument, list) else [argument]
             )
+        _LOGGER.debug("Executing command for device %s: %s", device_id, command_payload)
         await self._post(
             f"devices/{device_id}/commands",
             data={"commands": [command_payload]},

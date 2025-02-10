@@ -27,6 +27,7 @@ class Capability(StrEnum):
     BRIDGE = "bridge"
     BUTTON = "button"
     BYPASSABLE = "bypassable"
+    VOLTAGE_MEASUREMENT = "voltageMeasurement"
     COLOR_CONTROL = "colorControl"
     COLOR_TEMPERATURE = "colorTemperature"
     CONTACT_SENSOR = "contactSensor"
@@ -459,6 +460,7 @@ class Attribute(StrEnum):
     FAN_OSCILLATION_MODE = "fanOscillationMode"
     FINE_DUST_LEVEL = "fineDustLevel"
     FIRMWARE_VERSION = "firmwareVersion"
+    VOLTAGE = "voltage"
     FOOD_TYPE = "foodType"
     FORCED_ON_LEVEL = "forcedOnLevel"
     FREEZER_CONVERT_MODE = "freezerConvertMode"
@@ -1033,6 +1035,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.VERY_FINE_DUST_SENSOR: [Attribute.VERY_FINE_DUST_LEVEL],
     Capability.VIDEO_CAPTURE: [Attribute.STREAM, Attribute.CLIP],
     Capability.VIDEO_STREAM: [Attribute.SUPPORTED_FEATURES, Attribute.STREAM],
+    Capability.VOLTAGE_MEASUREMENT: [Attribute.VOLTAGE],
     Capability.WASHER_OPERATING_STATE: [
         Attribute.COMPLETION_TIME,
         Attribute.MACHINE_STATE,
