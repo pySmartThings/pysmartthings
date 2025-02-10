@@ -176,6 +176,7 @@ async def test_fetching_single_device(
         "sensibo_airconditioner_1",
         "aeotec_home_energy_meter_gen5",
         "virtual_water_sensor",
+        "virtual_thermostat",
     ],
 )
 async def test_fetching_status_of_single_device(

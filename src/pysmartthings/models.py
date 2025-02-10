@@ -46,6 +46,9 @@ class Capability(StrEnum):
     LOCK = "lock"
     LOCK_CODES = "lockCodes"
     MEDIA_GROUP = "mediaGroup"
+    THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
+    THERMOSTAT_HEATING_SETPOINT = "thermostatHeatingSetpoint"
+    THERMOSTAT_FAN_MODE = "thermostatFanMode"
     MEDIA_INPUT_SOURCE = "mediaInputSource"
     MEDIA_PLAYBACK = "mediaPlayback"
     MEDIA_PRESETS = "mediaPresets"
@@ -387,6 +390,11 @@ class Attribute(StrEnum):
     DEFROST = "defrost"
     DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DENSITY = "density"
+    THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
+    HEATING_SETPOINT = "heatingSetpoint"
+    HEATING_SETPOINT_RANGE = "heatingSetpointRange"
+    THERMOSTAT_FAN_MODE = "thermostatFanMode"
+    SUPPORTED_THERMOSTAT_FAN_MODES = "supportedThermostatFanModes"
     DEODOR_FILTER_CAPACITY = "deodorFilterCapacity"
     DEODOR_FILTER_LAST_RESET_DATE = "deodorFilterLastResetDate"
     DEODOR_FILTER_RESET_TYPE = "deodorFilterResetType"
@@ -997,10 +1005,19 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.TEMPERATURE,
         Attribute.TEMPERATURE_RANGE,
     ],
+    Capability.THERMOSTAT_FAN_MODE: [
+        Attribute.THERMOSTAT_FAN_MODE,
+        Attribute.SUPPORTED_THERMOSTAT_FAN_MODES,
+    ],
+    Capability.THERMOSTAT_HEATING_SETPOINT: [
+        Attribute.HEATING_SETPOINT,
+        Attribute.HEATING_SETPOINT_RANGE,
+    ],
     Capability.THERMOSTAT_MODE: [
         Attribute.THERMOSTAT_MODE,
         Attribute.SUPPORTED_THERMOSTAT_MODES,
     ],
+    Capability.THERMOSTAT_OPERATING_STATE: [Attribute.THERMOSTAT_OPERATING_STATE],
     Capability.THREE_AXIS: [Attribute.THREE_AXIS],
     Capability.TV_CHANNEL: [Attribute.TV_CHANNEL, Attribute.TV_CHANNEL_NAME],
     Capability.DEMAND_RESPONSE_LOAD_CONTROL: [

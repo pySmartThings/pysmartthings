@@ -27798,6 +27798,128 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[virtual_thermostat]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 51,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '38140',
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 8554.194688973037,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': dict({
+            'maximum': 1826.722761785079,
+            'minimum': 9268.726934158902,
+            'step': 138.2080712609211,
+          }),
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 244.33726326608746,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': dict({
+            'maximum': 7288.145606306409,
+            'minimum': 4997.721228739137,
+            'step': 7620.031701049315,
+          }),
+        }),
+      }),
+      <Capability.THERMOSTAT_FAN_MODE: 'thermostatFanMode'>: dict({
+        <Attribute.SUPPORTED_THERMOSTAT_FAN_MODES: 'supportedThermostatFanModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'on',
+          ]),
+        }),
+        <Attribute.THERMOSTAT_FAN_MODE: 'thermostatFanMode'>: dict({
+          'data': dict({
+          }),
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'followschedule',
+        }),
+      }),
+      <Capability.THERMOSTAT_HEATING_SETPOINT: 'thermostatHeatingSetpoint'>: dict({
+        <Attribute.HEATING_SETPOINT: 'heatingSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 814.7469111058201,
+        }),
+        <Attribute.HEATING_SETPOINT_RANGE: 'heatingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': dict({
+            'maximum': 3226.693210895862,
+            'minimum': 6214.940743832475,
+            'step': 9234.459191378826,
+          }),
+        }),
+      }),
+      <Capability.THERMOSTAT_MODE: 'thermostatMode'>: dict({
+        <Attribute.SUPPORTED_THERMOSTAT_MODES: 'supportedThermostatModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'rush hour',
+          ]),
+        }),
+        <Attribute.THERMOSTAT_MODE: 'thermostatMode'>: dict({
+          'data': dict({
+          }),
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'auxheatonly',
+        }),
+      }),
+      <Capability.THERMOSTAT_OPERATING_STATE: 'thermostatOperatingState'>: dict({
+        <Attribute.THERMOSTAT_OPERATING_STATE: 'thermostatOperatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 22, 4, 56, 341000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'pending cool',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[virtual_water_sensor]
   dict({
     'main': dict({
