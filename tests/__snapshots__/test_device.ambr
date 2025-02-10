@@ -27798,6 +27798,42 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[virtual_water_sensor]
+  dict({
+    'main': dict({
+      <Capability.BATTERY: 'battery'>: dict({
+        <Attribute.BATTERY: 'battery'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 21, 58, 18, 784000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 100,
+        }),
+        <Attribute.QUANTITY: 'quantity'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 21, 58, 18, 784000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 84,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 21, 58, 18, 784000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '46120',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.WATER_SENSOR: 'waterSensor'>: dict({
+        <Attribute.WATER: 'water'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 21, 58, 18, 784000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'dry',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[yale_push_button_deadbolt_lock]
   dict({
     'main': dict({

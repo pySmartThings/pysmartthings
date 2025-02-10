@@ -78,6 +78,7 @@ class Capability(StrEnum):
     VIDEO_CAPTURE = "videoCapture"
     VIDEO_STREAM = "videoStream"
     WASHER_OPERATING_STATE = "washerOperatingState"
+    WATER_SENSOR = "waterSensor"
     WINDOW_SHADE = "windowShade"
 
     CUSTOM_ACCESSIBILITY = "custom.accessibility"
@@ -794,6 +795,7 @@ class Attribute(StrEnum):
     WASHER_WATER_TEMPERATURE = "washerWaterTemperature"
     WASHING_COURSE = "washingCourse"
     WASHING_TIME = "washingTime"
+    WATER = "water"
     WATER_CONSUMPTION = "waterConsumption"
     WATER_FILTER_CAPACITY = "waterFilterCapacity"
     WATER_FILTER_LAST_RESET_DATE = "waterFilterLastResetDate"
@@ -1036,6 +1038,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.VIDEO_CAPTURE: [Attribute.STREAM, Attribute.CLIP],
     Capability.VIDEO_STREAM: [Attribute.SUPPORTED_FEATURES, Attribute.STREAM],
     Capability.VOLTAGE_MEASUREMENT: [Attribute.VOLTAGE],
+    Capability.WATER_SENSOR: [Attribute.WATER],
     Capability.WASHER_OPERATING_STATE: [
         Attribute.COMPLETION_TIME,
         Attribute.MACHINE_STATE,

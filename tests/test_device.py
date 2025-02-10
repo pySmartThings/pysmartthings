@@ -175,6 +175,7 @@ async def test_fetching_single_device(
         "soundbar_hw_q80_r",
         "sensibo_airconditioner_1",
         "aeotec_home_energy_meter_gen5",
+        "virtual_water_sensor",
     ],
 )
 async def test_fetching_status_of_single_device(
