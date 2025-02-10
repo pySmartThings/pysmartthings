@@ -235,6 +235,7 @@ class Capability(StrEnum):
     SAMSUNG_VD_AUDIO_INPUT_SOURCE = "samsungvd.audioInputSource"
     SAMSUNG_VD_DEVICE_CATEGORY = "samsungvd.deviceCategory"
     SAMSUNG_VD_FIRMWARE_VERSION = "samsungvd.firmwareVersion"
+    SAMSUNG_VD_GROUP_INFO = "samsungvd.groupInfo"
     SAMSUNG_VD_LIGHT_CONTROL = "samsungvd.lightControl"
     SAMSUNG_VD_MEDIA_INPUT_SOURCE = "samsungvd.mediaInputSource"
     SAMSUNG_VD_REMOTE_CONTROL = "samsungvd.remoteControl"
@@ -342,6 +343,7 @@ class Attribute(StrEnum):
     BUTTON = "button"
     BYPASS_STATUS = "bypassStatus"
     CATEGORY = "category"
+    CHANNEL = "channel"
     CHECK_INTERVAL = "checkInterval"
     CIRCADIAN = "circadian"
     CLEANING_MODE = "cleaningMode"
@@ -517,6 +519,7 @@ class Attribute(StrEnum):
     MANUFACTURER_DETAILS_LINK = "mnml"
     MANUFACTURER_NAME = "mnmn"
     MANUFACTURE_DATE = "mndt"
+    MASTER_NAME = "masterName"
     MAXIMUM_SETPOINT = "maximumSetpoint"
     MAX_CODES = "maxCodes"
     MAX_CODE_LENGTH = "maxCodeLength"
@@ -1408,6 +1411,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ERROR_CODE,
         Attribute.SUPPORTED_MODES,
     ],
+    Capability.SAMSUNG_VD_GROUP_INFO: [
+        Attribute.ROLE,
+        Attribute.CHANNEL,
+        Attribute.MASTER_NAME,
+        Attribute.STATUS,
+    ],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -1828,7 +1837,7 @@ class Scene(DataClassORJSONMixin):
 class Status(DataClassORJSONMixin):
     """Status model."""
 
-    value: str | int | float | dict[str, Any] | None
+    value: str | int | float | dict[str, Any] | list[Any] | None
     unit: str | None = None
     data: dict[str, Any] | None = None
     timestamp: datetime | None = None
