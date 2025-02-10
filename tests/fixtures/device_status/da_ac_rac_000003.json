@@ -33,13 +33,7 @@
           "value": null
         },
         "supportedAcModes": {
-          "value": [
-            "auto",
-            "cool",
-            "dry",
-            "wind",
-            "heat"
-          ],
+          "value": ["auto", "cool", "dry", "wind", "heat"],
           "timestamp": "2025-01-10T17:55:09.348Z"
         },
         "airConditionerMode": {
@@ -183,13 +177,7 @@
           "timestamp": "2025-02-09T11:38:10.259Z"
         },
         "supportedAcFanModes": {
-          "value": [
-            "auto",
-            "low",
-            "medium",
-            "high",
-            "turbo"
-          ],
+          "value": ["auto", "low", "medium", "high", "turbo"],
           "timestamp": "2025-01-10T17:55:09.749Z"
         },
         "availableAcFanModes": {
@@ -203,12 +191,7 @@
           "timestamp": "2025-02-09T11:38:10.250Z"
         },
         "supportedAlarmThresholds": {
-          "value": [
-            180,
-            300,
-            500,
-            700
-          ],
+          "value": [180, 300, 500, 700],
           "unit": "Hour",
           "timestamp": "2025-02-09T11:38:10.250Z"
         }
@@ -270,12 +253,7 @@
       },
       "fanOscillationMode": {
         "supportedFanOscillationModes": {
-          "value": [
-            "fixed",
-            "all",
-            "vertical",
-            "horizontal"
-          ],
+          "value": ["fixed", "all", "vertical", "horizontal"],
           "timestamp": "2025-02-09T11:38:10.360Z"
         },
         "availableFanOscillationModes": {
@@ -423,9 +401,7 @@
           "value": null
         },
         "supportedActions": {
-          "value": [
-            "start"
-          ],
+          "value": ["start"],
           "timestamp": "2025-01-10T17:55:07.240Z"
         },
         "progress": {
@@ -461,10 +437,7 @@
           "timestamp": "2025-02-09T11:38:10.250Z"
         },
         "dustFilterResetType": {
-          "value": [
-            "replaceable",
-            "washable"
-          ],
+          "value": ["replaceable", "washable"],
           "timestamp": "2025-02-09T11:38:10.250Z"
         }
       },
