@@ -44,8 +44,10 @@ class Capability(StrEnum):
     HEALTH_CHECK = "healthCheck"
     LOCK = "lock"
     LOCK_CODES = "lockCodes"
+    MEDIA_GROUP = "mediaGroup"
     MEDIA_INPUT_SOURCE = "mediaInputSource"
     MEDIA_PLAYBACK = "mediaPlayback"
+    MEDIA_PRESETS = "mediaPresets"
     MEDIA_TRACK_CONTROL = "mediaTrackControl"
     MOTION_SENSOR = "motionSensor"
     OCF = "ocf"
@@ -166,6 +168,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_FRIDGE_PANTRY_INFO = "samsungce.fridgePantryInfo"
     SAMSUNG_CE_FRIDGE_PANTRY_MODE = "samsungce.fridgePantryMode"
     SAMSUNG_CE_FRIDGE_VACATION_MODE = "samsungce.fridgeVacationMode"
+    SAMSUNG_CE_FRIDGE_WELCOME_LIGHTING = "samsungce.fridgeWelcomeLighting"
     SAMSUNG_CE_HOOD_FAN_SPEED = "samsungce.hoodFanSpeed"
     SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK = "samsungce.individualControlLock"
     SAMSUNG_CE_KIDS_LOCK = "samsungce.kidsLock"
@@ -193,6 +196,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
     SAMSUNG_CE_SOFTENER_STATE = "samsungce.softenerState"
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
+    SAMSUNG_CE_TEMPERATURE_SETTING = "samsungce.temperatureSetting"
     SAMSUNG_CE_UNAVAILABLE_CAPABILITIES = "samsungce.unavailableCapabilities"
     SAMSUNG_CE_VIEW_INSIDE = "samsungce.viewInside"
     SAMSUNG_CE_WASHER_BUBBLE_SOAK = "samsungce.washerBubbleSoak"
@@ -235,6 +239,7 @@ class Capability(StrEnum):
     TAG_UWB_ACTIVATION = "tag.uwbActivation"
 
     SAMSUNG_VD_AMBIENT = "samsungvd.ambient"
+    SAMSUNG_VD_AMBIENT18 = "samsungvd.ambient18"
     SAMSUNG_VD_AMBIENT_CONTENT = "samsungvd.ambientContent"
     SAMSUNG_VD_AUDIO_GROUP_INFO = "samsungvd.audioGroupInfo"
     SAMSUNG_VD_AUDIO_INPUT_SOURCE = "samsungvd.audioInputSource"
@@ -462,6 +467,11 @@ class Attribute(StrEnum):
     FUEL = "fuel"
     GEOFENCE = "geofence"
     GET_GROUPS = "getGroups"
+    GROUP_ID = "groupId"
+    GROUP_MUTE = "groupMute"
+    GROUP_PRIMARY_DEVICE_ID = "groupPrimaryDeviceId"
+    GROUP_ROLE = "groupRole"
+    GROUP_VOLUME = "groupVolume"
     HARDWARE_VERSION = "mnhw"
     HEADING = "heading"
     HEALTH_STATUS = "healthStatus"
@@ -798,6 +808,10 @@ class Attribute(StrEnum):
     WINDOW_SHADE = "windowShade"
     ZONE_BOOSTER = "zoneBooster"
     ZONE_INFO = "zoneInfo"
+    SUPPORTED_DESIRED_TEMPERATURES = "supportedDesiredTemperatures"
+    DESIRED_TEMPERATURE = "desiredTemperature"
+    DETECTION_PROXIMITY = "detectionProximity"
+    SUPPORTED_DETECTION_PROXIMITIES = "supportedDetectionProximities"
 
 
 class Command(StrEnum):
@@ -918,10 +932,18 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SCAN_CODES,
         Attribute.LOCK_CODES,
     ],
+    Capability.MEDIA_GROUP: [
+        Attribute.GROUP_MUTE,
+        Attribute.GROUP_PRIMARY_DEVICE_ID,
+        Attribute.GROUP_ID,
+        Attribute.GROUP_VOLUME,
+        Attribute.GROUP_ROLE,
+    ],
     Capability.MEDIA_PLAYBACK: [
         Attribute.SUPPORTED_PLAYBACK_COMMANDS,
         Attribute.PLAYBACK_STATUS,
     ],
+    Capability.MEDIA_PRESETS: [Attribute.PRESETS],
     Capability.MEDIA_INPUT_SOURCE: [
         Attribute.SUPPORTED_INPUT_SOURCES,
         Attribute.INPUT_SOURCE,
@@ -1400,6 +1422,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AVAILABLE_TYPES,
         Attribute.TYPE,
         Attribute.RECOMMENDED_AMOUNT,
+    ],
+    Capability.SAMSUNG_CE_TEMPERATURE_SETTING: [
+        Attribute.SUPPORTED_DESIRED_TEMPERATURES,
+        Attribute.DESIRED_TEMPERATURE,
+    ],
+    Capability.SAMSUNG_CE_FRIDGE_WELCOME_LIGHTING: [
+        Attribute.DETECTION_PROXIMITY,
+        Attribute.SUPPORTED_DETECTION_PROXIMITIES,
+        Attribute.STATUS,
     ],
     # Samsung VD capabilities
     Capability.SAMSUNG_VD_SOUND_FROM: [Attribute.MODE, Attribute.DETAIL_NAME],

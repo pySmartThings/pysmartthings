@@ -956,6 +956,590 @@
     }),
   ])
 # ---
+# name: test_fetching_devices[devices_14]
+  list([
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.OCF: 'ocf'>,
+            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>,
+            <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>,
+            <Capability.SWITCH: 'switch'>,
+            <Capability.WASHER_OPERATING_STATE: 'washerOperatingState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_DRYER_DRY_LEVEL: 'custom.dryerDryLevel'>,
+            <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>,
+            <Capability.CUSTOM_JOB_BEGINNING_STATUS: 'custom.jobBeginningStatus'>,
+            <Capability.CUSTOM_SUPPORTED_OPTIONS: 'custom.supportedOptions'>,
+            <Capability.CUSTOM_WASHER_AUTO_DETERGENT: 'custom.washerAutoDetergent'>,
+            <Capability.CUSTOM_WASHER_AUTO_SOFTENER: 'custom.washerAutoSoftener'>,
+            <Capability.CUSTOM_WASHER_RINSE_CYCLES: 'custom.washerRinseCycles'>,
+            <Capability.CUSTOM_WASHER_SOIL_LEVEL: 'custom.washerSoilLevel'>,
+            <Capability.CUSTOM_WASHER_SPIN_LEVEL: 'custom.washerSpinLevel'>,
+            <Capability.CUSTOM_WASHER_WATER_TEMPERATURE: 'custom.washerWaterTemperature'>,
+            <Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: 'samsungce.autoDispenseDetergent'>,
+            <Capability.SAMSUNG_CE_AUTO_DISPENSE_SOFTENER: 'samsungce.autoDispenseSoftener'>,
+            <Capability.SAMSUNG_CE_DETERGENT_ORDER: 'samsungce.detergentOrder'>,
+            <Capability.SAMSUNG_CE_DETERGENT_STATE: 'samsungce.detergentState'>,
+            <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>,
+            <Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: 'samsungce.dongleSoftwareInstallation'>,
+            <Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: 'samsungce.detergentAutoReplenishment'>,
+            <Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: 'samsungce.softenerAutoReplenishment'>,
+            <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>,
+            <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>,
+            <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>,
+            <Capability.SAMSUNG_CE_SOFTENER_ORDER: 'samsungce.softenerOrder'>,
+            <Capability.SAMSUNG_CE_SOFTENER_STATE: 'samsungce.softenerState'>,
+            <Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: 'samsungce.washerBubbleSoak'>,
+            <Capability.SAMSUNG_CE_WASHER_CYCLE: 'samsungce.washerCycle'>,
+            <Capability.SAMSUNG_CE_WASHER_CYCLE_PRESET: 'samsungce.washerCyclePreset'>,
+            <Capability.SAMSUNG_CE_WASHER_DELAY_END: 'samsungce.washerDelayEnd'>,
+            <Capability.SAMSUNG_CE_WASHER_FREEZE_PREVENT: 'samsungce.washerFreezePrevent'>,
+            <Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: 'samsungce.washerOperatingState'>,
+            <Capability.SAMSUNG_CE_WASHER_WASHING_TIME: 'samsungce.washerWashingTime'>,
+            <Capability.SAMSUNG_CE_WASHER_WATER_LEVEL: 'samsungce.washerWaterLevel'>,
+            <Capability.SAMSUNG_CE_WASHER_WATER_VALVE: 'samsungce.washerWaterValve'>,
+            <Capability.SAMSUNG_CE_WELCOME_MESSAGE: 'samsungce.welcomeMessage'>,
+            <Capability.SAMSUNG_CE_WATER_CONSUMPTION_REPORT: 'samsungce.waterConsumptionReport'>,
+            <Capability.SAMSUNG_CE_QUICK_CONTROL: 'samsungce.quickControl'>,
+            <Capability.SAMSUNG_CE_ENERGY_PLANNER: 'samsungce.energyPlanner'>,
+            <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>,
+            <Capability.SEC_WIFI_CONFIGURATION: 'sec.wifiConfiguration'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+        }),
+      ]),
+      'device_id': 'bc5c7ce0-b54d-2797-062b-b0da64c0ead5',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Washer',
+      'label': 'Tvättmaskin',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': '[washer] Samsung',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.OCF: 'ocf'>,
+            <Capability.SWITCH: 'switch'>,
+            <Capability.AUDIO_VOLUME: 'audioVolume'>,
+            <Capability.AUDIO_MUTE: 'audioMute'>,
+            <Capability.TV_CHANNEL: 'tvChannel'>,
+            <Capability.MEDIA_INPUT_SOURCE: 'mediaInputSource'>,
+            <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>,
+            <Capability.MEDIA_TRACK_CONTROL: 'mediaTrackControl'>,
+            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
+            <Capability.CUSTOM_ERROR: 'custom.error'>,
+            <Capability.CUSTOM_PICTURE_MODE: 'custom.picturemode'>,
+            <Capability.CUSTOM_SOUND_MODE: 'custom.soundmode'>,
+            <Capability.CUSTOM_ACCESSIBILITY: 'custom.accessibility'>,
+            <Capability.CUSTOM_LAUNCH_APP: 'custom.launchapp'>,
+            <Capability.CUSTOM_RECORDING: 'custom.recording'>,
+            <Capability.CUSTOM_TV_SEARCH: 'custom.tvsearch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.SAMSUNG_VD_REMOTE_CONTROL: 'samsungvd.remoteControl'>,
+            <Capability.SAMSUNG_VD_AMBIENT: 'samsungvd.ambient'>,
+            <Capability.SAMSUNG_VD_AMBIENT_CONTENT: 'samsungvd.ambientContent'>,
+            <Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: 'samsungvd.mediaInputSource'>,
+            <Capability.SAMSUNG_VD_SUPPORTS_FEATURES: 'samsungvd.supportsFeatures'>,
+            <Capability.SAMSUNG_IM_FIXED_FIND_NODE: 'samsungim.fixedFindNode'>,
+            <Capability.SAMSUNG_VD_THING_STATUS: 'samsungvd.thingStatus'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.SAMSUNG_VD_FIRMWARE_VERSION: 'samsungvd.firmwareVersion'>,
+            <Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: 'samsungvd.supportsPowerOnByOcf'>,
+            <Capability.SAMSUNG_VD_DEVICE_CATEGORY: 'samsungvd.deviceCategory'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '70650a5c-3e57-c66b-8c43-d48d06852948',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF TV',
+      'label': 'Samsung QN95AA 75 TV',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': 'Samsung QN95AA 75 TV',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.OCF: 'ocf'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.SWITCH: 'switch'>,
+            <Capability.AUDIO_VOLUME: 'audioVolume'>,
+            <Capability.AUDIO_MUTE: 'audioMute'>,
+            <Capability.AUDIO_TRACK_DATA: 'audioTrackData'>,
+            <Capability.SAMSUNG_VD_AUDIO_INPUT_SOURCE: 'samsungvd.audioInputSource'>,
+            <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>,
+            <Capability.AUDIO_NOTIFICATION: 'audioNotification'>,
+            <Capability.SAMSUNG_VD_SOUND_FROM: 'samsungvd.soundFrom'>,
+            <Capability.SAMSUNG_VD_THING_STATUS: 'samsungvd.thingStatus'>,
+            <Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: 'samsungvd.audioGroupInfo'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': 'afcecd0b-a633-baf2-c6b7-da74bf675a7d',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Network Audio Player',
+      'label': 'Samsung Soundbar Q950T',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': 'Samsung Soundbar Q950T',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.OCF: 'ocf'>,
+            <Capability.SWITCH: 'switch'>,
+            <Capability.AUDIO_VOLUME: 'audioVolume'>,
+            <Capability.AUDIO_MUTE: 'audioMute'>,
+            <Capability.TV_CHANNEL: 'tvChannel'>,
+            <Capability.MEDIA_INPUT_SOURCE: 'mediaInputSource'>,
+            <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>,
+            <Capability.MEDIA_TRACK_CONTROL: 'mediaTrackControl'>,
+            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
+            <Capability.CUSTOM_ERROR: 'custom.error'>,
+            <Capability.CUSTOM_PICTURE_MODE: 'custom.picturemode'>,
+            <Capability.CUSTOM_SOUND_MODE: 'custom.soundmode'>,
+            <Capability.CUSTOM_ACCESSIBILITY: 'custom.accessibility'>,
+            <Capability.CUSTOM_LAUNCH_APP: 'custom.launchapp'>,
+            <Capability.CUSTOM_RECORDING: 'custom.recording'>,
+            <Capability.CUSTOM_TV_SEARCH: 'custom.tvsearch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.SAMSUNG_VD_REMOTE_CONTROL: 'samsungvd.remoteControl'>,
+            <Capability.SAMSUNG_VD_AMBIENT: 'samsungvd.ambient'>,
+            <Capability.SAMSUNG_VD_AMBIENT_CONTENT: 'samsungvd.ambientContent'>,
+            <Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: 'samsungvd.mediaInputSource'>,
+            <Capability.SAMSUNG_VD_SUPPORTS_FEATURES: 'samsungvd.supportsFeatures'>,
+            <Capability.SAMSUNG_IM_FIXED_FIND_NODE: 'samsungim.fixedFindNode'>,
+            <Capability.SAMSUNG_VD_THING_STATUS: 'samsungvd.thingStatus'>,
+            <Capability.SEC_DEVICE_CONNECTION_STATE: 'sec.deviceConnectionState'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.SAMSUNG_VD_FIRMWARE_VERSION: 'samsungvd.firmwareVersion'>,
+            <Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: 'samsungvd.supportsPowerOnByOcf'>,
+            <Capability.SAMSUNG_VD_DEVICE_CATEGORY: 'samsungvd.deviceCategory'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '5aeee631-b8f1-ba8d-5d11-58177181b32a',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF TV',
+      'label': 'Samsung The Frame 55',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': 'Samsung The Frame 55',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.BRIDGE: 'bridge'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': '2f7f7d2b-e683-48ae-86f7-e57df6a0bce2',
+      'device_manufacturer_code': None,
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Hubb',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': 'SmartThings v3 Hub',
+      'type': <DeviceType.HUB: 'HUB'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.OCF: 'ocf'>,
+            <Capability.SWITCH: 'switch'>,
+            <Capability.AUDIO_VOLUME: 'audioVolume'>,
+            <Capability.AUDIO_MUTE: 'audioMute'>,
+            <Capability.TV_CHANNEL: 'tvChannel'>,
+            <Capability.MEDIA_INPUT_SOURCE: 'mediaInputSource'>,
+            <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>,
+            <Capability.MEDIA_TRACK_CONTROL: 'mediaTrackControl'>,
+            <Capability.CUSTOM_ERROR: 'custom.error'>,
+            <Capability.CUSTOM_PICTURE_MODE: 'custom.picturemode'>,
+            <Capability.CUSTOM_SOUND_MODE: 'custom.soundmode'>,
+            <Capability.CUSTOM_ACCESSIBILITY: 'custom.accessibility'>,
+            <Capability.CUSTOM_LAUNCH_APP: 'custom.launchapp'>,
+            <Capability.CUSTOM_RECORDING: 'custom.recording'>,
+            <Capability.CUSTOM_TV_SEARCH: 'custom.tvsearch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.SAMSUNG_VD_REMOTE_CONTROL: 'samsungvd.remoteControl'>,
+            <Capability.SAMSUNG_VD_AMBIENT: 'samsungvd.ambient'>,
+            <Capability.SAMSUNG_VD_AMBIENT_CONTENT: 'samsungvd.ambientContent'>,
+            <Capability.SAMSUNG_VD_AMBIENT18: 'samsungvd.ambient18'>,
+            <Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: 'samsungvd.mediaInputSource'>,
+            <Capability.SAMSUNG_VD_DEVICE_CATEGORY: 'samsungvd.deviceCategory'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.SAMSUNG_VD_FIRMWARE_VERSION: 'samsungvd.firmwareVersion'>,
+            <Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: 'samsungvd.supportsPowerOnByOcf'>,
+            <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': 'a106da6d-2981-4c39-84c4-5d5b75b4784c',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF TV',
+      'label': 'Samsung Q70 Series',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': '[TV] Samsung Q70 Series (65)',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.OCF: 'ocf'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.OVEN_MODE: 'ovenMode'>,
+            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
+            <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>,
+            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>,
+            <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>,
+            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
+            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
+            <Capability.SAMSUNG_CE_DOOR_STATE: 'samsungce.doorState'>,
+            <Capability.SAMSUNG_CE_MEAT_PROBE: 'samsungce.meatProbe'>,
+            <Capability.SAMSUNG_CE_LAMP: 'samsungce.lamp'>,
+            <Capability.SAMSUNG_CE_DEFINED_RECIPE: 'samsungce.definedRecipe'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: 'samsungce.kitchenDeviceIdentification'>,
+            <Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: 'samsungce.kitchenModeSpecification'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
+            <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>,
+            <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'main',
+          'label': 'Oven',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.OVEN_MODE: 'ovenMode'>,
+            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
+            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
+            <Capability.SAMSUNG_CE_DEFINED_RECIPE: 'samsungce.definedRecipe'>,
+            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
+            <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'cavity-01',
+          'label': '1',
+        }),
+      ]),
+      'device_id': 'e3ffcb5a-294b-c68a-438d-9e27bb7660a0',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Oven',
+      'label': 'Ugn',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': '[oven] Samsung',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>,
+            <Capability.MEDIA_GROUP: 'mediaGroup'>,
+            <Capability.MEDIA_PRESETS: 'mediaPresets'>,
+            <Capability.MEDIA_TRACK_CONTROL: 'mediaTrackControl'>,
+            <Capability.AUDIO_MUTE: 'audioMute'>,
+            <Capability.AUDIO_NOTIFICATION: 'audioNotification'>,
+            <Capability.AUDIO_TRACK_DATA: 'audioTrackData'>,
+            <Capability.AUDIO_VOLUME: 'audioVolume'>,
+            <Capability.REFRESH: 'refresh'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+      ]),
+      'device_id': 'c85fced9-c474-4a47-93c2-037cc7829536',
+      'device_manufacturer_code': 'Sonos',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'label': 'Elliots Rum',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': 'sonos-player',
+      'type': <DeviceType.LAN: 'LAN'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.OCF: 'ocf'>,
+            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
+            <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.REFRIGERATION: 'refrigeration'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DEODOR_FILTER: 'custom.deodorFilter'>,
+            <Capability.CUSTOM_DUST_FILTER: 'custom.dustFilter'>,
+            <Capability.CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION: 'custom.deviceReportStateConfiguration'>,
+            <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_DISABLED_COMPONENTS: 'custom.disabledComponents'>,
+            <Capability.CUSTOM_WATER_FILTER: 'custom.waterFilter'>,
+            <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>,
+            <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>,
+            <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>,
+            <Capability.SAMSUNG_CE_FRIDGE_VACATION_MODE: 'samsungce.fridgeVacationMode'>,
+            <Capability.SAMSUNG_CE_POWER_COOL: 'samsungce.powerCool'>,
+            <Capability.SAMSUNG_CE_POWER_FREEZE: 'samsungce.powerFreeze'>,
+            <Capability.SAMSUNG_CE_SABBATH_MODE: 'samsungce.sabbathMode'>,
+            <Capability.SAMSUNG_CE_SELF_CHECK: 'samsungce.selfCheck'>,
+            <Capability.SAMSUNG_CE_VIEW_INSIDE: 'samsungce.viewInside'>,
+            <Capability.SAMSUNG_CE_FRIDGE_WELCOME_LIGHTING: 'samsungce.fridgeWelcomeLighting'>,
+            <Capability.SAMSUNG_CE_QUICK_CONTROL: 'samsungce.quickControl'>,
+            <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>,
+            <Capability.SEC_WIFI_CONFIGURATION: 'sec.wifiConfiguration'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'freezer',
+          'label': 'freezer',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'cooler',
+          'label': 'cooler',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+          ]),
+          'id': 'cvroom',
+          'label': 'cvroom',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'onedoor',
+          'label': 'onedoor',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker',
+          'label': 'icemaker',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-02',
+          'label': 'icemaker-02',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-03',
+          'label': 'icemaker-03',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
+            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-10',
+          'label': 'scale-10',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-11',
+          'label': 'scale-11',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
+            <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
+            <Capability.SAMSUNG_CE_MEAT_AGING: 'samsungce.meatAging'>,
+            <Capability.SAMSUNG_CE_FOOD_DEFROST: 'samsungce.foodDefrost'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'pantry-01',
+          'label': 'pantry-01',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
+            <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
+            <Capability.SAMSUNG_CE_MEAT_AGING: 'samsungce.meatAging'>,
+            <Capability.SAMSUNG_CE_FOOD_DEFROST: 'samsungce.foodDefrost'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'pantry-02',
+          'label': 'pantry-02',
+        }),
+      ]),
+      'device_id': 'aafdee8c-4ede-2ed7-9d29-d596b84d65aa',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Refrigerator',
+      'label': 'Kylskåp',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': 'Samsung-Refrigerator',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.OCF: 'ocf'>,
+            <Capability.EXECUTE: 'execute'>,
+            <Capability.REFRESH: 'refresh'>,
+            <Capability.SWITCH: 'switch'>,
+            <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>,
+            <Capability.DRYER_OPERATING_STATE: 'dryerOperatingState'>,
+            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
+            <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_DRYER_DRY_LEVEL: 'custom.dryerDryLevel'>,
+            <Capability.CUSTOM_DRYER_WRINKLE_PREVENT: 'custom.dryerWrinklePrevent'>,
+            <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>,
+            <Capability.CUSTOM_JOB_BEGINNING_STATUS: 'custom.jobBeginningStatus'>,
+            <Capability.CUSTOM_SUPPORTED_OPTIONS: 'custom.supportedOptions'>,
+            <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>,
+            <Capability.SAMSUNG_CE_DETERGENT_ORDER: 'samsungce.detergentOrder'>,
+            <Capability.SAMSUNG_CE_DETERGENT_STATE: 'samsungce.detergentState'>,
+            <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>,
+            <Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: 'samsungce.dongleSoftwareInstallation'>,
+            <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>,
+            <Capability.SAMSUNG_CE_DRYER_AUTO_CYCLE_LINK: 'samsungce.dryerAutoCycleLink'>,
+            <Capability.SAMSUNG_CE_DRYER_CYCLE: 'samsungce.dryerCycle'>,
+            <Capability.SAMSUNG_CE_DRYER_CYCLE_PRESET: 'samsungce.dryerCyclePreset'>,
+            <Capability.SAMSUNG_CE_DRYER_DELAY_END: 'samsungce.dryerDelayEnd'>,
+            <Capability.SAMSUNG_CE_DRYER_DRYING_TEMPERATURE: 'samsungce.dryerDryingTemperature'>,
+            <Capability.SAMSUNG_CE_DRYER_DRYING_TIME: 'samsungce.dryerDryingTime'>,
+            <Capability.SAMSUNG_CE_DRYER_FREEZE_PREVENT: 'samsungce.dryerFreezePrevent'>,
+            <Capability.SAMSUNG_CE_DRYER_OPERATING_STATE: 'samsungce.dryerOperatingState'>,
+            <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>,
+            <Capability.SAMSUNG_CE_WELCOME_MESSAGE: 'samsungce.welcomeMessage'>,
+            <Capability.SAMSUNG_CE_QUICK_CONTROL: 'samsungce.quickControl'>,
+            <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>,
+            <Capability.SEC_WIFI_CONFIGURATION: 'sec.wifiConfiguration'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+        }),
+        dict({
+          'capabilities': list([
+            <Capability.HCA_DRYER_MODE: 'hca.dryerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+        }),
+      ]),
+      'device_id': 'eb6afef1-f59a-247f-95e2-7387a58632e1',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Dryer',
+      'label': 'Torktumlare',
+      'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
+      'name': '[dryer] Samsung',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+  ])
+# ---
 # name: test_fetching_devices[devices_2]
   list([
     dict({
@@ -11896,6 +12480,1000 @@
           'timestamp': datetime.datetime(2025, 2, 7, 0, 50, 48, 980000, tzinfo=datetime.timezone.utc),
           'unit': 'F',
           'value': 175,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[da_ks_walloven_000003]
+  dict({
+    'cavity-01': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 9, 8, 5, 3, 53, 786000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+          ]),
+        }),
+      }),
+      <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>: dict({
+        <Attribute.OVEN_CAVITY_STATUS: 'ovenCavityStatus'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 989000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'on',
+        }),
+      }),
+      <Capability.OVEN_MODE: 'ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 821000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Others',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 6, 28, 2, 59, 42, 83000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'Bake',
+            'Others',
+            'BottomHeat',
+          ]),
+        }),
+      }),
+      <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T19:04:44.900Z',
+        }),
+        <Attribute.MACHINE_STATE: 'machineState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 928000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 0,
+        }),
+        <Attribute.SUPPORTED_MACHINE_STATES: 'supportedMachineStates'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 3, 2, 13, 12, 59, 472000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+        <Attribute.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 46, 87000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_SETPOINT_RANGE: 'ovenSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DEFINED_RECIPE: 'samsungce.definedRecipe'>: dict({
+        <Attribute.DEFINED_RECIPE: 'definedRecipe'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 928000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'browingLevel': 0,
+            'categoryId': 0,
+            'cavityId': '0',
+            'itemId': 0,
+            'option': 0,
+            'recipeType': '0',
+            'servingSize': 0,
+          }),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>: dict({
+        <Attribute.DEFAULT_OPERATION_TIME: 'defaultOperationTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEFAULT_OVEN_MODE: 'defaultOvenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 821000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Convection',
+        }),
+        <Attribute.DEFAULT_OVEN_SETPOINT: 'defaultOvenSetpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 821000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'NoOperation',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 6, 28, 2, 59, 42, 83000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'Convection',
+            'BottomConvection',
+            'Bottom',
+            'EcoConvection',
+          ]),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T19:04:44.900Z',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00:00:00',
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 928000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 903000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 46, 87000, tzinfo=datetime.timezone.utc),
+          'unit': 'C',
+          'value': 0,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+    'main': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 634000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+          ]),
+        }),
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': dict({
+            'href': '/rm/wifi/vs/0',
+          }),
+          'timestamp': datetime.datetime(2023, 7, 19, 0, 4, 40, 229000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'payload': dict({
+              'if': list([
+                'oic.if.baseline',
+                'oic.if.s',
+              ]),
+              'rt': list([
+                'x.com.samsung.da.rm.wifi',
+              ]),
+              'x.com.samsung.rm.rssi': list([
+                -67,
+              ]),
+            }),
+          }),
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 800000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'e3ffcb5a-294b-c68a-438d-9e27bb7660a0',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 5, 5, 15, 28, 37, 385000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1.2.1',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 4, 9, 51, 31, 711000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 5, 5, 15, 28, 37, 385000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ARTIK051_GB_WO_003_40200913',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 731000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1.0',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 762000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 770000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 755000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ARTIK051_GB_WO_003|40423141|50030018001211510200000000000000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 740000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TizenRT2.0',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 748000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0.1.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 4, 7, 51, 23, 672000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 823000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[oven] Samsung',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 778000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'e3ffcb5a-294b-c68a-438d-9e27bb7660a0',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 4, 4, 51, 10, 904000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2019, 9, 13, 5, 37, 11, 785000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA-KS-WALLOVEN-000003',
+        }),
+      }),
+      <Capability.OVEN_MODE: 'ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 835000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Others',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 989000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'Bake',
+            'Broil',
+            'Others',
+          ]),
+        }),
+      }),
+      <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T19:04:44.802Z',
+        }),
+        <Attribute.MACHINE_STATE: 'machineState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 910000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 0,
+        }),
+        <Attribute.SUPPORTED_MACHINE_STATES: 'supportedMachineStates'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 11, 4, 3, 51, 1, 343000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+        <Attribute.OVEN_SETPOINT: 'ovenSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 954000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+        <Attribute.OVEN_SETPOINT_RANGE: 'ovenSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>: dict({
+        <Attribute.REMOTE_CONTROL_ENABLED: 'remoteControlEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 46, 51000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'false',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DEFINED_RECIPE: 'samsungce.definedRecipe'>: dict({
+        <Attribute.DEFINED_RECIPE: 'definedRecipe'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 910000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'browingLevel': 0,
+            'categoryId': 0,
+            'cavityId': '0',
+            'itemId': 0,
+            'option': 0,
+            'recipeType': '0',
+            'servingSize': 0,
+          }),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>: dict({
+        <Attribute.BINARY_ID: 'binaryId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 634000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ARTIK051_GB_WO_003',
+        }),
+        <Attribute.DESCRIPTION: 'description'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MICOM_ASSAY_CODE: 'micomAssayCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_CLASSIFICATION_CODE: 'modelClassificationCode'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_NAME: 'modelName'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RELEASE_YEAR: 'releaseYear'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER: 'serialNumber'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER_EXTRA: 'serialNumberExtra'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DOOR_STATE: 'samsungce.doorState'>: dict({
+        <Attribute.DOOR_STATE: 'doorState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 445000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>: dict({
+        <Attribute.VERSION_NUMBER: 'versionNumber'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2022, 11, 1, 14, 15, 2, 215000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 22100101,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>: dict({
+        <Attribute.LOCK_STATE: 'lockState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 734000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'unlocked',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>: dict({
+        <Attribute.DEFAULT_OPERATION_TIME: 'defaultOperationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 3600,
+        }),
+        <Attribute.DEFAULT_OVEN_MODE: 'defaultOvenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 835000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Convection',
+        }),
+        <Attribute.DEFAULT_OVEN_SETPOINT: 'defaultOvenSetpoint'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: 'samsungce.kitchenDeviceIdentification'>: dict({
+        <Attribute.FUEL: 'fuel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MODEL_CODE: 'modelCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 835000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'NE7000NP/EU0',
+        }),
+        <Attribute.REGION_CODE: 'regionCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 835000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'EU',
+        }),
+        <Attribute.REPRESENTATIVE_COMPONENT: 'representativeComponent'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2020, 7, 14, 7, 25, 2, 969000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'oven',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: 'samsungce.kitchenModeSpecification'>: dict({
+        <Attribute.SPECIFICATION: 'specification'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2021, 6, 28, 2, 59, 42, 83000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'lower': list([
+              dict({
+                'mode': 'Convection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'BottomConvection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 200,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'Bottom',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 150,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'EcoConvection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+            ]),
+            'single': list([
+              dict({
+                'mode': 'Convection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 250,
+                      'min': 30,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'Conventional',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 180,
+                      'max': 250,
+                      'min': 30,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'LargeGrill',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 220,
+                      'max': 270,
+                      'min': 100,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'SmallGrill',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 220,
+                      'max': 270,
+                      'min': 100,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'TopHeatPluseConvection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 180,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'BottomHeatPluseConvection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 200,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'Bottom',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 150,
+                      'max': 230,
+                      'min': 100,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'ProRoasting',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 200,
+                      'min': 80,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'EcoConvection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 250,
+                      'min': 30,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'KeepWarm',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 60,
+                      'max': 100,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'PlateWarm',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 50,
+                      'max': 80,
+                      'min': 30,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+            ]),
+            'upper': list([
+              dict({
+                'mode': 'Convection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 160,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'LargeGrill',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 220,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+              dict({
+                'mode': 'TopConvection',
+                'supportedOptions': dict({
+                  'operationTime': dict({
+                    'max': '09:59:59',
+                  }),
+                  'temperature': dict({
+                    'C': dict({
+                      'default': 180,
+                      'max': 250,
+                      'min': 40,
+                      'resolution': 5,
+                    }),
+                  }),
+                }),
+              }),
+            ]),
+          }),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_LAMP: 'samsungce.lamp'>: dict({
+        <Attribute.BRIGHTNESS_LEVEL: 'brightnessLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_BRIGHTNESS_LEVEL: 'supportedBrightnessLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_MEAT_PROBE: 'samsungce.meatProbe'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 835000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'disconnected',
+        }),
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 954000, tzinfo=datetime.timezone.utc),
+          'unit': 'C',
+          'value': 0,
+        }),
+        <Attribute.TEMPERATURE_SETPOINT: 'temperatureSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 954000, tzinfo=datetime.timezone.utc),
+          'unit': 'C',
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>: dict({
+        <Attribute.OVEN_MODE: 'ovenMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 835000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'NoOperation',
+        }),
+        <Attribute.SUPPORTED_OVEN_MODES: 'supportedOvenModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 989000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'Convection',
+            'LargeGrill',
+            'TopConvection',
+          ]),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T19:04:44.802Z',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '00:00:00',
+        }),
+        <Attribute.OVEN_JOB_STATE: 'ovenJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 910000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 44, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>: dict({
+        <Attribute.AVAILABLE_MODULES: 'availableModules'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 634000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+          ]),
+        }),
+        <Attribute.LAST_UPDATED_DATE: 'lastUpdatedDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEW_VERSION_AVAILABLE: 'newVersionAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 634000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OTN_D_U_I_D: 'otnDUID'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TARGET_MODULE: 'targetModule'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 19, 4, 45, 954000, tzinfo=datetime.timezone.utc),
+          'unit': 'C',
+          'value': 0,
         }),
         <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
           'data': None,
@@ -23888,6 +25466,450 @@
         <Attribute.TV_CHANNEL_NAME: 'tvChannelName'>: dict({
           'data': None,
           'timestamp': datetime.datetime(2021, 8, 21, 18, 53, 6, 643000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[vd_stv_2021]
+  dict({
+    'main': dict({
+      <Capability.AUDIO_MUTE: 'audioMute'>: dict({
+        <Attribute.MUTE: 'mute'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 630000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'unmuted',
+        }),
+      }),
+      <Capability.AUDIO_VOLUME: 'audioVolume'>: dict({
+        <Attribute.VOLUME: 'volume'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 630000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 11,
+        }),
+      }),
+      <Capability.CUSTOM_ACCESSIBILITY: 'custom.accessibility'>: dict({
+      }),
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 6, 212000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'samsungim.fixedFindNode',
+            'samsungvd.supportsFeatures',
+            'samsungim.findNodeGeolocation',
+            'powerConsumptionReport',
+          ]),
+        }),
+      }),
+      <Capability.CUSTOM_ERROR: 'custom.error'>: dict({
+        <Attribute.ERROR: 'error'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_LAUNCH_APP: 'custom.launchapp'>: dict({
+      }),
+      <Capability.CUSTOM_PICTURE_MODE: 'custom.picturemode'>: dict({
+        <Attribute.PICTURE_MODE: 'pictureMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 811000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'FILMMAKER MODE',
+        }),
+        <Attribute.SUPPORTED_PICTURE_MODES: 'supportedPictureModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 811000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'Dynamisk',
+            'FILMMAKER MODE',
+            'Film',
+            'Naturlig',
+            'Standard',
+          ]),
+        }),
+        <Attribute.SUPPORTED_PICTURE_MODES_MAP: 'supportedPictureModesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 811000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            dict({
+              'id': 'modeDynamic',
+              'name': 'Dynamisk',
+            }),
+            dict({
+              'id': 'modeFilmmakerMode',
+              'name': 'FILMMAKER MODE',
+            }),
+            dict({
+              'id': 'modeMovie',
+              'name': 'Film',
+            }),
+            dict({
+              'id': 'modeNatural',
+              'name': 'Naturlig',
+            }),
+            dict({
+              'id': 'modeStandard',
+              'name': 'Standard',
+            }),
+          ]),
+        }),
+      }),
+      <Capability.CUSTOM_RECORDING: 'custom.recording'>: dict({
+      }),
+      <Capability.CUSTOM_SOUND_MODE: 'custom.soundmode'>: dict({
+        <Attribute.SOUND_MODE: 'soundMode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 544000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Surround',
+        }),
+        <Attribute.SUPPORTED_SOUND_MODES: 'supportedSoundModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 544000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'Adaptivt ljud',
+            'Spel',
+            'Standard',
+            'Surround',
+          ]),
+        }),
+        <Attribute.SUPPORTED_SOUND_MODES_MAP: 'supportedSoundModesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 544000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            dict({
+              'id': 'modeExternalAdaptive',
+              'name': 'Adaptivt ljud',
+            }),
+            dict({
+              'id': 'modeExternalGame',
+              'name': 'Spel',
+            }),
+            dict({
+              'id': 'modeExternalStandard',
+              'name': 'Standard',
+            }),
+            dict({
+              'id': 'modeExternal3DSurround',
+              'name': 'Surround',
+            }),
+          ]),
+        }),
+      }),
+      <Capability.CUSTOM_TV_SEARCH: 'custom.tvsearch'>: dict({
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.MEDIA_INPUT_SOURCE: 'mediaInputSource'>: dict({
+        <Attribute.INPUT_SOURCE: 'inputSource'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2023, 12, 10, 9, 32, 2, 350000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'HDMI4',
+        }),
+        <Attribute.SUPPORTED_INPUT_SOURCES: 'supportedInputSources'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 4, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+          ]),
+        }),
+      }),
+      <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>: dict({
+        <Attribute.PLAYBACK_STATUS: 'playbackStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_PLAYBACK_COMMANDS: 'supportedPlaybackCommands'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 4, 815000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'play',
+            'pause',
+            'stop',
+            'fastForward',
+            'rewind',
+          ]),
+        }),
+      }),
+      <Capability.MEDIA_TRACK_CONTROL: 'mediaTrackControl'>: dict({
+        <Attribute.SUPPORTED_TRACK_CONTROL_COMMANDS: 'supportedTrackControlCommands'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '70650a5c-3e57-c66b-8c43-d48d06852948',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2021-01-01',
+        }),
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'T-NKM2DEUC-2220.9',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'QE75QN95AATXXC',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Tizen',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '6.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung QN95AA 75 TV',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '70650a5c-3e57-c66b-8c43-d48d06852948',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-01T22:03:42Z',
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 29000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'VD-STV-2021',
+        }),
+      }),
+      <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>: dict({
+        <Attribute.POWER_CONSUMPTION: 'powerConsumption'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.SAMSUNG_IM_FIXED_FIND_NODE: 'samsungim.fixedFindNode'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_AMBIENT: 'samsungvd.ambient'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_AMBIENT_CONTENT: 'samsungvd.ambientContent'>: dict({
+        <Attribute.SUPPORTED_AMBIENT_APPS: 'supportedAmbientApps'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 912000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'weather',
+          ]),
+        }),
+      }),
+      <Capability.SAMSUNG_VD_DEVICE_CATEGORY: 'samsungvd.deviceCategory'>: dict({
+        <Attribute.CATEGORY: 'category'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 6, 565000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'tv',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_FIRMWARE_VERSION: 'samsungvd.firmwareVersion'>: dict({
+        <Attribute.FIRMWARE_VERSION: 'firmwareVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 6, 565000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '3.5.0',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: 'samsungvd.mediaInputSource'>: dict({
+        <Attribute.INPUT_SOURCE: 'inputSource'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 23, 0, 34, 25000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'HDMI4',
+        }),
+        <Attribute.SUPPORTED_INPUT_SOURCES_MAP: 'supportedInputSourcesMap'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 23, 0, 34, 25000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            dict({
+              'id': 'dtv',
+              'name': 'TV',
+            }),
+            dict({
+              'id': 'HDMI2',
+              'name': 'PC',
+            }),
+            dict({
+              'id': 'HDMI3',
+              'name': 'HDMI 3',
+            }),
+            dict({
+              'id': 'HDMI4',
+              'name': 'PlayStation 5',
+            }),
+          ]),
+        }),
+      }),
+      <Capability.SAMSUNG_VD_REMOTE_CONTROL: 'samsungvd.remoteControl'>: dict({
+      }),
+      <Capability.SAMSUNG_VD_SUPPORTS_FEATURES: 'samsungvd.supportsFeatures'>: dict({
+        <Attribute.EXECUTABLE_SERVICE_LIST: 'executableServiceList'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.IME_ADV_SUPPORTED: 'imeAdvSupported'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MEDIA_OUTPUT_SUPPORTED: 'mediaOutputSupported'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MOBILE_CAM_SUPPORTED: 'mobileCamSupported'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REMOTELESS_SUPPORTED: 'remotelessSupported'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WIFI_UPDATE_SUPPORT: 'wifiUpdateSupport'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: 'samsungvd.supportsPowerOnByOcf'>: dict({
+        <Attribute.SUPPORTS_POWER_ON_BY_OCF: 'supportsPowerOnByOcf'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 23, 0, 33, 790000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'true',
+        }),
+      }),
+      <Capability.SAMSUNG_VD_THING_STATUS: 'samsungvd.thingStatus'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 23, 0, 33, 389000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Idle',
+        }),
+        <Attribute.UPDATED_TIME: 'updatedTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 9, 23, 0, 33, 389000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 1739142033,
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 10, 3, 14, 17, 614000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.TV_CHANNEL: 'tvChannel'>: dict({
+        <Attribute.TV_CHANNEL: 'tvChannel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 693000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '',
+        }),
+        <Attribute.TV_CHANNEL_NAME: 'tvChannelName'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 2, 14, 15, 5, 693000, tzinfo=datetime.timezone.utc),
           'unit': None,
           'value': '',
         }),

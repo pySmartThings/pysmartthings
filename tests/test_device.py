@@ -33,6 +33,7 @@ if TYPE_CHECKING:
         "devices_11",
         "devices_12",
         "devices_13",
+        "devices_14",
     ],
 )
 async def test_fetching_devices(
@@ -124,6 +125,7 @@ async def test_fetching_single_device(
         "c2c_humidity",
         "c2c_switch",
         "da_ks_range_0101x",
+        "da_ks_walloven_000003",
         "da_wm_wd_00001",
         "da_wm_dw_00001",
         "da_ks_microwave_0101x",
@@ -160,6 +162,7 @@ async def test_fetching_single_device(
         "basic_electric_meter",
         "iphone",
         "vd_stv_2017_k",
+        "vd_stv_2021",
         "vd_stv_2022",
         "vd_stv_2023",
         "vd_stv_2023_1",
