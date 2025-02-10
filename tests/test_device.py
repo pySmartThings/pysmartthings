@@ -31,6 +31,8 @@ if TYPE_CHECKING:
         "devices_9",
         "devices_10",
         "devices_11",
+        "devices_12",
+        "devices_13",
     ],
 )
 async def test_fetching_devices(
