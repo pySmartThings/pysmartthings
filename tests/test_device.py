@@ -163,6 +163,7 @@ async def test_fetching_single_device(
         "ikea_remote_control",
         "base_lock",
         "main_virtual_device",
+        "soundbar_hw_q80_r",
     ],
 )
 async def test_fetching_status_of_single_device(
