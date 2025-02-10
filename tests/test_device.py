@@ -29,6 +29,7 @@ if TYPE_CHECKING:
         "devices_7",
         "devices_8",
         "devices_9",
+        "devices_10",
     ],
 )
 async def test_fetching_devices(
@@ -156,7 +157,9 @@ async def test_fetching_single_device(
         "basic_electric_meter",
         "iphone",
         "vd_stv_2017_k",
+        "vd_stv_2022",
         "vd_stv_2023",
+        "vd_stv_2023_1",
         "virtual_calendar",
         "c2c_arlo_siren",
         "c2c_arlo_doorbell_battery",
