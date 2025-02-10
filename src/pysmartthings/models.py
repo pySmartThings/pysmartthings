@@ -801,6 +801,7 @@ class Command(StrEnum):
     COOL = "cool"
     EMERGENCY_HEAT = "emergencyHeat"
     HEAT = "heat"
+    LOCK = "lock"
     OPEN = "open"
     ON = "on"
     OFF = "off"
@@ -818,6 +819,8 @@ class Command(StrEnum):
     SET_LEVEL = "setLevel"
     SET_SATURATION = "setSaturation"
     SET_THERMOSTAT_MODE = "setThermostatMode"
+    UNLATCH = "unlatch"
+    UNLOCK = "unlock"
 
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
@@ -1706,6 +1709,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
     Capability.HEALTH_CHECK: [Command.PING],
+    Capability.LOCK: [Command.LOCK, Command.UNLOCK, Command.UNLATCH],
     Capability.FAN_OSCILLATION_MODE: [Command.SET_FAN_OSCILLATION_MODE],
     Capability.REFRESH: [Command.REFRESH],
     Capability.SWITCH: [Command.ON, Command.OFF],
