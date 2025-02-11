@@ -27920,6 +27920,22 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[virtual_valve]
+  dict({
+    'main': dict({
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.VALVE: 'valve'>: dict({
+        <Attribute.VALVE: 'valve'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 11, 27, 2, 262000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'closed',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[virtual_water_sensor]
   dict({
     'main': dict({

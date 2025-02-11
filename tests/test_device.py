@@ -177,6 +177,7 @@ async def test_fetching_single_device(
         "aeotec_home_energy_meter_gen5",
         "virtual_water_sensor",
         "virtual_thermostat",
+        "virtual_valve",
     ],
 )
 async def test_fetching_status_of_single_device(

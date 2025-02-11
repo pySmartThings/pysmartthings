@@ -303,6 +303,7 @@ class Capability(StrEnum):
     PLATEMUSIC11009_ASSOCIATION_GROUP_TWO = "platemusic11009.associationGroupTwo"
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
+    VALVE = "valve"
 
 
 class Attribute(StrEnum):
@@ -824,6 +825,7 @@ class Attribute(StrEnum):
     DESIRED_TEMPERATURE = "desiredTemperature"
     DETECTION_PROXIMITY = "detectionProximity"
     SUPPORTED_DETECTION_PROXIMITIES = "supportedDetectionProximities"
+    VALVE = "valve"
 
 
 class Command(StrEnum):
@@ -1053,6 +1055,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_CLEANING_MODE: [Attribute.ROBOT_CLEANER_CLEANING_MODE],
     Capability.SOUND_SENSOR: [Attribute.SOUND],
+    Capability.VALVE: [Attribute.VALVE],
     Capability.VERY_FINE_DUST_SENSOR: [Attribute.VERY_FINE_DUST_LEVEL],
     Capability.VIDEO_CAPTURE: [Attribute.STREAM, Attribute.CLIP],
     Capability.VIDEO_STREAM: [Attribute.SUPPORTED_FEATURES, Attribute.STREAM],
