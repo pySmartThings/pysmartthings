@@ -304,6 +304,9 @@ class Capability(StrEnum):
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
     VALVE = "valve"
+    FILTER_STATUS = "filterStatus"
+    TAMPER_ALERT = "tamperAlert"
+    FAN_SPEED = "fanSpeed"
 
 
 class Attribute(StrEnum):
@@ -826,38 +829,9 @@ class Attribute(StrEnum):
     DETECTION_PROXIMITY = "detectionProximity"
     SUPPORTED_DETECTION_PROXIMITIES = "supportedDetectionProximities"
     VALVE = "valve"
-
-
-class Command(StrEnum):
-    """Command model."""
-
-    AUTO = "auto"
-    CLOSE = "close"
-    COOL = "cool"
-    EMERGENCY_HEAT = "emergencyHeat"
-    HEAT = "heat"
-    LOCK = "lock"
-    OPEN = "open"
-    ON = "on"
-    OFF = "off"
-    PAUSE = "pause"
-    PING = "ping"
-    REFRESH = "refresh"
-    SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
-    SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
-    SET_COLOR = "setColor"
-    SET_COLOR_TEMPERATURE = "setColorTemperature"
-    SET_COOLING_SETPOINT = "setCoolingSetpoint"
-    SET_FAN_MODE = "setFanMode"
-    SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
-    SET_HEATING_SETPOINT = "setHeatingSetpoint"
-    SET_HUE = "setHue"
-    SET_LEVEL = "setLevel"
-    SET_SATURATION = "setSaturation"
-    SET_THERMOSTAT_MODE = "setThermostatMode"
-    SET_THERMOSTAT_FAN_MODE = "setThermostatFanMode"
-    UNLATCH = "unlatch"
-    UNLOCK = "unlock"
+    FILTER_STATUS = "filterStatus"
+    TAMPER = "tamper"
+    FAN_SPEED = "fanSpeed"
 
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
@@ -904,6 +878,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AVAILABLE_FAN_OSCILLATION_MODES,
         Attribute.FAN_OSCILLATION_MODE,
     ],
+    Capability.FAN_SPEED: [Attribute.FAN_SPEED],
+    Capability.FILTER_STATUS: [Attribute.FILTER_STATUS],
     Capability.FIRMWARE_UPDATE: [
         Attribute.LAST_UPDATE_STATUS_REASON,
         Attribute.AVAILABLE_VERSION,
@@ -1005,6 +981,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.REMOTE_CONTROL_STATUS: [Attribute.REMOTE_CONTROL_ENABLED],
     Capability.SWITCH: [Attribute.SWITCH],
     Capability.SWITCH_LEVEL: [Attribute.LEVEL, Attribute.LEVEL_RANGE],
+    Capability.TAMPER_ALERT: [Attribute.TAMPER],
     Capability.TEMPERATURE_MEASUREMENT: [
         Attribute.TEMPERATURE,
         Attribute.TEMPERATURE_RANGE,
@@ -1780,6 +1757,40 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
 }
 
+
+class Command(StrEnum):
+    """Command model."""
+
+    AUTO = "auto"
+    CLOSE = "close"
+    COOL = "cool"
+    EMERGENCY_HEAT = "emergencyHeat"
+    HEAT = "heat"
+    LOCK = "lock"
+    OPEN = "open"
+    ON = "on"
+    OFF = "off"
+    PAUSE = "pause"
+    PING = "ping"
+    REFRESH = "refresh"
+    SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
+    SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
+    SET_COLOR = "setColor"
+    SET_COLOR_TEMPERATURE = "setColorTemperature"
+    SET_COOLING_SETPOINT = "setCoolingSetpoint"
+    SET_FAN_MODE = "setFanMode"
+    SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
+    SET_FAN_SPEED = "setFanSpeed"
+    SET_HEATING_SETPOINT = "setHeatingSetpoint"
+    SET_HUE = "setHue"
+    SET_LEVEL = "setLevel"
+    SET_SATURATION = "setSaturation"
+    SET_THERMOSTAT_MODE = "setThermostatMode"
+    SET_THERMOSTAT_FAN_MODE = "setThermostatFanMode"
+    UNLATCH = "unlatch"
+    UNLOCK = "unlock"
+
+
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.AIR_CONDITIONER_MODE: [Command.SET_AIR_CONDITIONER_MODE],
     Capability.AIR_CONDITIONER_FAN_MODE: [Command.SET_FAN_MODE],
@@ -1792,6 +1803,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.HEALTH_CHECK: [Command.PING],
     Capability.LOCK: [Command.LOCK, Command.UNLOCK, Command.UNLATCH],
     Capability.FAN_OSCILLATION_MODE: [Command.SET_FAN_OSCILLATION_MODE],
+    Capability.FAN_SPEED: [Command.SET_FAN_SPEED],
     Capability.REFRESH: [Command.REFRESH],
     Capability.SWITCH: [Command.ON, Command.OFF],
     Capability.SWITCH_LEVEL: [Command.SET_LEVEL],
