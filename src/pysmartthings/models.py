@@ -113,6 +113,7 @@ class Capability(StrEnum):
     RADON_MEASUREMENT = "radonMeasurement"
     REFRESH = "refresh"
     REFRIGERATION = "refrigeration"
+    RELATIVE_BRIGHTNESS = "relativeBrightness"
     RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
     REMOTE_CONTROL_STATUS = "remoteControlStatus"
     RICE_COOKER = "riceCooker"
@@ -193,6 +194,8 @@ class Capability(StrEnum):
     CUSTOM_RECORDING = "custom.recording"
     CUSTOM_SOUND_MODE = "custom.soundmode"
     CUSTOM_SPI_MODE = "custom.spiMode"
+    CUSTOM_STEAM_CLOSET_OPERATING_STATE = "custom.steamClosetOperatingState"
+    CUSTOM_STEAM_CLOSET_WRINKLE_PREVENT = "custom.steamClosetWrinklePrevent"
     CUSTOM_SUPPORTED_OPTIONS = "custom.supportedOptions"
     CUSTOM_THERMOSTAT_SETPOINT_CONTROL = "custom.thermostatSetpointControl"
     CUSTOM_TV_SEARCH = "custom.tvsearch"
@@ -277,6 +280,12 @@ class Capability(StrEnum):
     SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
     SAMSUNG_CE_SOFTENER_STATE = "samsungce.softenerState"
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
+    SAMSUNG_CE_STEAM_CLOSET_AUTO_CYCLE_LINK = "samsungce.steamClosetAutoCycleLink"
+    SAMSUNG_CE_STEAM_CLOSET_CYCLE = "samsungce.steamClosetCycle"
+    SAMSUNG_CE_STEAM_CLOSET_CYCLE_PRESET = "samsungce.steamClosetCyclePreset"
+    SAMSUNG_CE_STEAM_CLOSET_DELAY_END = "samsungce.steamClosetDelayEnd"
+    SAMSUNG_CE_STEAM_CLOSET_KEEP_FRESH_MODE = "samsungce.steamClosetKeepFreshMode"
+    SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE = "samsungce.steamClosetSanitizeMode"
     SAMSUNG_CE_TEMPERATURE_SETTING = "samsungce.temperatureSetting"
     SAMSUNG_CE_UNAVAILABLE_CAPABILITIES = "samsungce.unavailableCapabilities"
     SAMSUNG_CE_VIEW_INSIDE = "samsungce.viewInside"
@@ -329,8 +338,11 @@ class Capability(StrEnum):
     SAMSUNG_VD_GROUP_INFO = "samsungvd.groupInfo"
     SAMSUNG_VD_LIGHT_CONTROL = "samsungvd.lightControl"
     SAMSUNG_VD_MEDIA_INPUT_SOURCE = "samsungvd.mediaInputSource"
+    SAMSUNG_VD_PICTURE_MODE = "samsungvd.pictureMode"
     SAMSUNG_VD_REMOTE_CONTROL = "samsungvd.remoteControl"
+    SAMSUNG_VD_SOUND_DETECTION = "samsungvd.soundDetection"
     SAMSUNG_VD_SOUND_FROM = "samsungvd.soundFrom"
+    SAMSUNG_VD_SOUND_MODE = "samsungvd.soundMode"
     SAMSUNG_VD_SUPPORTS_FEATURES = "samsungvd.supportsFeatures"
     SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF = "samsungvd.supportsPowerOnByOcf"
     SAMSUNG_VD_THING_STATUS = "samsungvd.thingStatus"
@@ -430,6 +442,7 @@ class Attribute(StrEnum):
     BINARY_ID = "binaryId"
     BMI_MEASUREMENT = "bmiMeasurement"
     BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
+    BRIGHTNESS_INTENSITY = "brightnessIntensity"
     BRIGHTNESS_LEVEL = "brightnessLevel"
     BUTTON = "button"
     BYPASS_STATUS = "bypassStatus"
@@ -830,6 +843,12 @@ class Attribute(StrEnum):
     STATE = "state"
     STATUS = "status"
     STATUS_MESSAGE = "statusMessage"
+    STEAM_CLOSET_AUTO_CYCLE_LINK = "steamClosetAutoCycleLink"
+    STEAM_CLOSET_CYCLE = "steamClosetCycle"
+    STEAM_CLOSET_DELAY_END_TIME = "steamClosetDelayEndTime"
+    STEAM_CLOSET_JOB_STATE = "steamClosetJobState"
+    STEAM_CLOSET_MACHINE_STATE = "steamClosetMachineState"
+    STEAM_CLOSET_WRINKLE_PREVENT = "steamClosetWrinklePrevent"
     STEAM_SOAK = "steamSoak"
     STORM_WASH = "stormWash"
     STREAM = "stream"
@@ -908,6 +927,8 @@ class Attribute(StrEnum):
     SUPPORTED_SOUND_MODES_MAP = "supportedSoundModesMap"
     SUPPORTED_SOUND_TYPES = "supportedSoundTypes"
     SUPPORTED_SPIN_SPEEDS = "supportedSpinSpeeds"
+    SUPPORTED_STEAM_CLOSET_JOB_STATE = "supportedSteamClosetJobState"
+    SUPPORTED_STEAM_CLOSET_MACHINE_STATE = "supportedSteamClosetMachineState"
     SUPPORTED_TEMPERATURE_LEVELS = "supportedTemperatureLevels"
     SUPPORTED_THERMOSTAT_FAN_MODES = "supportedThermostatFanModes"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
@@ -1248,6 +1269,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.RAPID_COOLING,
         Attribute.RAPID_FREEZING,
     ],
+    Capability.RELATIVE_BRIGHTNESS: [Attribute.BRIGHTNESS_INTENSITY],
     Capability.RELATIVE_HUMIDITY_MEASUREMENT: [Attribute.HUMIDITY],
     Capability.REMOTE_CONTROL_STATUS: [Attribute.REMOTE_CONTROL_ENABLED],
     Capability.RICE_COOKER: [
@@ -1752,6 +1774,24 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_DETECTION_PROXIMITIES,
         Attribute.STATUS,
     ],
+    Capability.SAMSUNG_CE_STEAM_CLOSET_CYCLE: [
+        Attribute.SUPPORTED_CYCLES,
+        Attribute.STEAM_CLOSET_CYCLE,
+        Attribute.REFERENCE_TABLE,
+    ],
+    Capability.SAMSUNG_CE_STEAM_CLOSET_CYCLE_PRESET: [
+        Attribute.MAX_NUMBER_OF_PRESETS,
+        Attribute.PRESETS,
+    ],
+    Capability.SAMSUNG_CE_STEAM_CLOSET_KEEP_FRESH_MODE: [
+        Attribute.OPERATING_STATE,
+        Attribute.STATUS,
+    ],
+    Capability.SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE: [Attribute.STATUS],
+    Capability.SAMSUNG_CE_STEAM_CLOSET_DELAY_END: [Attribute.REMAINING_TIME],
+    Capability.SAMSUNG_CE_STEAM_CLOSET_AUTO_CYCLE_LINK: [
+        Attribute.STEAM_CLOSET_AUTO_CYCLE_LINK
+    ],
     # Samsung VD capabilities
     Capability.SAMSUNG_VD_SOUND_FROM: [Attribute.MODE, Attribute.DETAIL_NAME],
     Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [Attribute.ROLE, Attribute.STATUS],
@@ -1793,6 +1833,17 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MASTER_NAME,
         Attribute.STATUS,
     ],
+    Capability.SAMSUNG_VD_PICTURE_MODE: [
+        Attribute.PICTURE_MODE,
+        Attribute.SUPPORTED_PICTURE_MODES,
+        Attribute.SUPPORTED_PICTURE_MODES_MAP,
+    ],
+    Capability.SAMSUNG_VD_SOUND_MODE: [
+        Attribute.SUPPORTED_SOUND_MODES_MAP,
+        Attribute.SOUND_MODE,
+        Attribute.SUPPORTED_SOUND_MODES,
+    ],
+    Capability.SAMSUNG_VD_SOUND_DETECTION: [Attribute.SOUND_DETECTED],
     # Custom capabilities
     Capability.CUSTOM_DISABLED_CAPABILITIES: [Attribute.DISABLED_CAPABILITIES],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
@@ -1972,6 +2023,20 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.CUSTOM_OCF_RESOURCE_VERSION: [
         Attribute.OCF_RESOURCE_VERSION,
         Attribute.OCF_RESOURCE_UPDATED_TIME,
+    ],
+    Capability.CUSTOM_STEAM_CLOSET_WRINKLE_PREVENT: [
+        Attribute.STEAM_CLOSET_WRINKLE_PREVENT
+    ],
+    Capability.CUSTOM_STEAM_CLOSET_OPERATING_STATE: [
+        Attribute.SUPPORTED_STEAM_CLOSET_JOB_STATE,
+        Attribute.COMPLETION_TIME,
+        Attribute.STEAM_CLOSET_MACHINE_STATE,
+        Attribute.SUPPORTED_STEAM_CLOSET_MACHINE_STATE,
+        Attribute.STEAM_CLOSET_JOB_STATE,
+        Attribute.PROGRESS,
+        Attribute.REMAINING_TIME_STR,
+        Attribute.STEAM_CLOSET_DELAY_END_TIME,
+        Attribute.REMAINING_TIME,
     ],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [
