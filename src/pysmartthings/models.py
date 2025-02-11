@@ -852,6 +852,7 @@ class Command(StrEnum):
     SET_LEVEL = "setLevel"
     SET_SATURATION = "setSaturation"
     SET_THERMOSTAT_MODE = "setThermostatMode"
+    SET_THERMOSTAT_FAN_MODE = "setThermostatFanMode"
     UNLATCH = "unlatch"
     UNLOCK = "unlock"
 
@@ -1798,6 +1799,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.OFF,
         Command.SET_THERMOSTAT_MODE,
     ],
+    Capability.THERMOSTAT_FAN_MODE: [Command.SET_THERMOSTAT_FAN_MODE],
     Capability.THERMOSTAT_COOLING_SETPOINT: [Command.SET_COOLING_SETPOINT],
     Capability.WINDOW_SHADE: [Command.CLOSE, Command.OPEN, Command.PAUSE],
     Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: [Command.SET_AC_OPTIONAL_MODE],
