@@ -15,74 +15,150 @@ class Capability(StrEnum):
     """Capability model."""
 
     ACCELERATION_SENSOR = "accelerationSensor"
+    ACTIVITY_LIGHTING_MODE = "activityLightingMode"
+    ACTIVITY_SENSOR = "activitySensor"
     AIR_CONDITIONER_FAN_MODE = "airConditionerFanMode"
     AIR_CONDITIONER_MODE = "airConditionerMode"
+    AIR_PURIFIER_FAN_MODE = "airPurifierFanMode"
+    AIR_QUALITY_HEALTH_CONCERN = "airQualityHealthConcern"
     AIR_QUALITY_SENSOR = "airQualitySensor"
     ALARM = "alarm"
+    ATMOSPHERIC_PRESSURE_MEASUREMENT = "atmosphericPressureMeasurement"
     AUDIO_MUTE = "audioMute"
     AUDIO_NOTIFICATION = "audioNotification"
+    AUDIO_STREAM = "audioStream"
     AUDIO_TRACK_DATA = "audioTrackData"
     AUDIO_VOLUME = "audioVolume"
     BATTERY = "battery"
+    BODY_MASS_INDEX_MEASUREMENT = "bodyMassIndexMeasurement"
+    BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
     BRIDGE = "bridge"
     BUTTON = "button"
     BYPASSABLE = "bypassable"
-    VOLTAGE_MEASUREMENT = "voltageMeasurement"
+    CARBON_DIOXIDE_HEALTH_CONCERN = "carbonDioxideHealthConcern"
+    CARBON_DIOXIDE_MEASUREMENT = "carbonDioxideMeasurement"
+    CARBON_MONOXIDE_DETECTOR = "carbonMonoxideDetector"
+    CARBON_MONOXIDE_MEASUREMENT = "carbonMonoxideMeasurement"
+    CHIME = "chime"
     COLOR_CONTROL = "colorControl"
     COLOR_TEMPERATURE = "colorTemperature"
     CONTACT_SENSOR = "contactSensor"
+    CONFIGURATION = "configuration"
+    CURRENT_MEASUREMENT = "currentMeasurement"
     DEMAND_RESPONSE_LOAD_CONTROL = "demandResponseLoadControl"
+    DEW_POINT = "dewPoint"
     DISHWASHER_OPERATING_STATE = "dishwasherOperatingState"
     DOOR_CONTROL = "doorControl"
     DRYER_OPERATING_STATE = "dryerOperatingState"
+    DUST_HEALTH_CONCERN = "dustHealthConcern"
     DUST_SENSOR = "dustSensor"
+    ELEVATOR_CALL = "elevatorCall"
     ENERGY_METER = "energyMeter"
+    EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT = "equivalentCarbonDioxideMeasurement"
     EXECUTE = "execute"
     FAN_OSCILLATION_MODE = "fanOscillationMode"
+    FAN_SPEED = "fanSpeed"
+    FILTER_STATE = "filterState"
+    FILTER_STATUS = "filterStatus"
+    FINE_DUST_HEALTH_CONCERN = "fineDustHealthConcern"
+    FINE_DUST_SENSOR = "fineDustSensor"
     FIRMWARE_UPDATE = "firmwareUpdate"
+    FORMALDEHYDE_HEALTH_CONCERN = "formaldehydeHealthConcern"
+    FORMALDEHYDE_MEASUREMENT = "formaldehydeMeasurement"
+    GAS_DETECTOR = "gasDetector"
+    GAS_METER = "gasMeter"
     GEOFENCE = "geofence"
     GEOLOCATION = "geolocation"
+    HARDWARE_FAULT = "hardwareFault"
+    HUMIDIFIER_MODE = "humidifierMode"
     HEALTH_CHECK = "healthCheck"
+    ILLUMINANCE_MEASUREMENT = "illuminanceMeasurement"
+    IMAGE_CAPTURE = "imageCapture"
+    INFRARED_LEVEL = "infraredLevel"
+    KEYPAD_INPUT = "keypadInput"
+    LAUNDRY_WASHER_RINSE_MODE = "laundryWasherRinseMode"
+    LAUNDRY_WASHER_SPIN_SPEED = "laundryWasherSpinSpeed"
+    MOLD_HEALTH_CONCERN = "moldHealthConcern"
+    MOMENTARY = "momentary"
     LOCK = "lock"
     LOCK_CODES = "lockCodes"
     MEDIA_GROUP = "mediaGroup"
-    THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
-    THERMOSTAT_HEATING_SETPOINT = "thermostatHeatingSetpoint"
-    THERMOSTAT_FAN_MODE = "thermostatFanMode"
     MEDIA_INPUT_SOURCE = "mediaInputSource"
     MEDIA_PLAYBACK = "mediaPlayback"
     MEDIA_PRESETS = "mediaPresets"
     MEDIA_TRACK_CONTROL = "mediaTrackControl"
     MOTION_SENSOR = "motionSensor"
+    MODE = "mode"
+    NETWORK_METER = "networkMeter"
+    NITROGEN_DIOXIDE_HEALTH_CONCERN = "nitrogenDioxideHealthConcern"
+    NITROGEN_DIOXIDE_MEASUREMENT = "nitrogenDioxideMeasurement"
+    NOTIFICATION = "notification"
+    OBJECT_DETECTION = "objectDetection"
+    OCCUPANCY_SENSOR = "occupancySensor"
     OCF = "ocf"
     ODOR_SENSOR = "odorSensor"
     OVEN_MODE = "ovenMode"
     OVEN_OPERATING_STATE = "ovenOperatingState"
     OVEN_SETPOINT = "ovenSetpoint"
+    OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
+    OZONE_MEASUREMENT = "ozoneMeasurement"
+    PANIC_ALARM = "panicAlarm"
+    PEST_CONTROL = "pestControl"
+    PH_MEASUREMENT = "pHMeasurement"
     POWER_CONSUMPTION_REPORT = "powerConsumptionReport"
     POWER_METER = "powerMeter"
+    POWER_SOURCE = "powerSource"
+    PRECIPITATION_SENSOR = "precipitationSensor"
     PRESENCE_SENSOR = "presenceSensor"
+    RADON_MEASUREMENT = "radonMeasurement"
     REFRESH = "refresh"
     REFRIGERATION = "refrigeration"
     RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
     REMOTE_CONTROL_STATUS = "remoteControlStatus"
+    RICE_COOKER = "riceCooker"
     ROBOT_CLEANER_CLEANING_MODE = "robotCleanerCleaningMode"
     ROBOT_CLEANER_MOVEMENT = "robotCleanerMovement"
+    ROBOT_CLEANER_OPERATING_STATE = "robotCleanerOperatingState"
     ROBOT_CLEANER_TURBO_MODE = "robotCleanerTurboMode"
+    SECURITY_SYSTEM = "securitySystem"
+    SIGNAL_STRENGTH = "signalStrength"
+    SLEEP_SENSOR = "sleepSensor"
+    SMOKE_DETECTOR = "smokeDetector"
+    SOUND_DETECTION = "soundDetection"
+    SOUND_PRESSURE_LEVEL = "soundPressureLevel"
     SOUND_SENSOR = "soundSensor"
     SWITCH = "switch"
     SWITCH_LEVEL = "switchLevel"
+    TAMPER_ALERT = "tamperAlert"
+    TEMPERATURE_ALARM = "temperatureAlarm"
+    TEMPERATURE_LEVEL = "temperatureLevel"
     TEMPERATURE_MEASUREMENT = "temperatureMeasurement"
+    TEMPERATURE_SETPOINT = "temperatureSetpoint"
     THERMOSTAT_COOLING_SETPOINT = "thermostatCoolingSetpoint"
+    THERMOSTAT_FAN_MODE = "thermostatFanMode"
+    THERMOSTAT_HEATING_SETPOINT = "thermostatHeatingSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
+    THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
     THREE_AXIS = "threeAxis"
+    TONE = "tone"
     TV_CHANNEL = "tvChannel"
+    TVOC_MEASUREMENT = "tvocMeasurement"
+    ULTRAVIOLET_INDEX = "ultravioletIndex"
+    VALVE = "valve"
+    VERY_FINE_DUST_HEALTH_CONCERN = "veryFineDustHealthConcern"
     VERY_FINE_DUST_SENSOR = "veryFineDustSensor"
+    VIDEO_CAMERA = "videoCamera"
     VIDEO_CAPTURE = "videoCapture"
     VIDEO_STREAM = "videoStream"
+    VOLTAGE_MEASUREMENT = "voltageMeasurement"
     WASHER_OPERATING_STATE = "washerOperatingState"
     WATER_SENSOR = "waterSensor"
     WINDOW_SHADE = "windowShade"
+    WEBRTC = "webrtc"
+    WIND_MODE = "windMode"
+    WINDOW_SHADE_LEVEL = "windowShadeLevel"
+    WINDOW_SHADE_PRESET = "windowShadePreset"
+    ZWAVE_MULTICHANNEL = "zwMultichannel"
 
     CUSTOM_ACCESSIBILITY = "custom.accessibility"
     CUSTOM_AIR_CONDITIONER_ODOR_CONTROLLER = "custom.airConditionerOdorController"
@@ -303,17 +379,16 @@ class Capability(StrEnum):
     PLATEMUSIC11009_ASSOCIATION_GROUP_TWO = "platemusic11009.associationGroupTwo"
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
-    VALVE = "valve"
-    FILTER_STATUS = "filterStatus"
-    TAMPER_ALERT = "tamperAlert"
-    FAN_SPEED = "fanSpeed"
 
 
 class Attribute(StrEnum):
     """Attribute model."""
 
+    AIR_PURIFIER_FAN_MODE = "airPurifierFanMode"
+    SUPPORTED_AIR_PURIFIER_FAN_MODES = "supportedAirPurifierFanModes"
     ACCELERATION = "acceleration"
     ACCURACY = "accuracy"
+    ACTIVITY = "activity"
     ACTIVATED = "activated"
     AC_OPTIONAL_MODE = "acOptionalMode"
     AC_TROPICAL_NIGHT_MODE_LEVEL = "acTropicalNightModeLevel"
@@ -329,6 +404,16 @@ class Attribute(StrEnum):
     ALTITUDE_ACCURACY = "altitudeAccuracy"
     ALWAYS_ON = "alwaysOn"
     AMOUNT = "amount"
+    URI = "uri"
+    CARBON_DIOXIDE_HEALTH_CONCERN = "carbonDioxideHealthConcern"
+    CARBON_DIOXIDE = "carbonDioxide"
+    CARBON_MONOXIDE = "carbonMonoxide"
+    CARBON_MONOXIDE_LEVEL = "carbonMonoxideLevel"
+    CHIME = "chime"
+    CURRENT = "current"
+    BMI_MEASUREMENT = "bmiMeasurement"
+    BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
+    ATMOSPHERIC_PRESSURE = "atmosphericPressure"
     ASSOCIATION_GROUP_FOUR = "associationGroupFour"
     ASSOCIATION_GROUP_THREE = "associationGroupThree"
     ASSOCIATION_GROUP_TWO = "associationGroupTwo"
@@ -374,6 +459,7 @@ class Attribute(StrEnum):
     CONNECTION = "connection"
     CONNECTION_STATE = "connectionState"
     CONTACT = "contact"
+    CALL_STATUS = "callStatus"
     CONTENTS = "contents"
     COOKTOP_OPERATING_STATE = "cooktopOperatingState"
     COOLING_SETPOINT = "coolingSetpoint"
@@ -394,6 +480,8 @@ class Attribute(StrEnum):
     DEFROST = "defrost"
     DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DENSITY = "density"
+    DEWPOINT = "dewpoint"
+    DUST_HEALTH_CONCERN = "dustHealthConcern"
     THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
     HEATING_SETPOINT = "heatingSetpoint"
     HEATING_SETPOINT_RANGE = "heatingSetpointRange"
@@ -405,11 +493,15 @@ class Attribute(StrEnum):
     DEODOR_FILTER_STATUS = "deodorFilterStatus"
     DEODOR_FILTER_USAGE = "deodorFilterUsage"
     DEODOR_FILTER_USAGE_STEP = "deodorFilterUsageStep"
+    EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT = "equivalentCarbonDioxideMeasurement"
     DESCRIPTION = "description"
     DETAIL_NAME = "detailName"
     DETERGENT_TYPE = "detergentType"
     DEVICE_CONNECTION_STATE = "deviceConnectionState"
     DEVICE_ID = "di"
+    FILTER_LIFE_REMAINING = "filterLifeRemaining"
+    SUPPORTED_FILTER_COMMANDS = "supportedFilterCommands"
+    FINE_DUST_HEALTH_CONCERN = "fineDustHealthConcern"
     DEVICE_NAME = "n"
     DEVICE_NETWORK_ID = "deviceNetworkId"
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
@@ -473,13 +565,44 @@ class Attribute(StrEnum):
     FAN_OSCILLATION_MODE = "fanOscillationMode"
     FINE_DUST_LEVEL = "fineDustLevel"
     FIRMWARE_VERSION = "firmwareVersion"
+    FORMALDEHYDE_HEALTH_CONCERN = "formaldehydeHealthConcern"
+    FORMALDEHYDE_LEVEL = "formaldehydeLevel"
     VOLTAGE = "voltage"
     FOOD_TYPE = "foodType"
     FORCED_ON_LEVEL = "forcedOnLevel"
     FREEZER_CONVERT_MODE = "freezerConvertMode"
     FRIDGE_MODE = "fridgeMode"
     FRIDGE_MODE_VALUE = "fridgeModeValue"
+    HARDWARE_FAULT = "hardwareFault"
+    HUMIDIFIER_MODE = "humidifierMode"
+    ILLUMINANCE = "illuminance"
+    CAPTURE_TIME = "captureTime"
+    ENCRYPTED = "encrypted"
+    IMAGE = "image"
+    INFRARED_LEVEL = "infraredLevel"
+    MOLD_HEALTH_CONCERN = "moldHealthConcern"
+    DOWNLINK_SPEED = "downlinkSpeed"
+    UPLINK_SPEED = "uplinkSpeed"
+    RINSE_MODE = "rinseMode"
+    SUPPORTED_RINSE_MODES = "supportedRinseModes"
+    SPIN_SPEED = "spinSpeed"
+    SUPPORTED_SPIN_SPEEDS = "supportedSpinSpeeds"
+    SUPPORTED_KEY_CODES = "supportedKeyCodes"
     FUEL = "fuel"
+    GAS = "gas"
+    MODE = "mode"
+    NITROGEN_DIOXIDE_HEALTH_CONCERN = "nitrogenDioxideHealthConcern"
+    NITROGEN_DIOXIDE = "nitrogenDioxide"
+    DETECTED = "detected"
+    SUPPORTED_VALUES = "supportedValues"
+    SUPPORTED_ARGUMENTS = "supportedArguments"
+    SUPPORTED_MODES = "supportedModes"
+    GAS_METER = "gasMeter"
+    GAS_METER_CALORIFIC = "gasMeterCalorific"
+    GAS_METER_CONVERSION = "gasMeterConversion"
+    GAS_METER_PRECISION = "gasMeterPrecision"
+    GAS_METER_TIME = "gasMeterTime"
+    GAS_METER_VOLUME = "gasMeterVolume"
     GEOFENCE = "geofence"
     GET_GROUPS = "getGroups"
     GROUP_ID = "groupId"
@@ -487,7 +610,46 @@ class Attribute(StrEnum):
     GROUP_PRIMARY_DEVICE_ID = "groupPrimaryDeviceId"
     GROUP_ROLE = "groupRole"
     GROUP_VOLUME = "groupVolume"
+    POWER_SOURCE = "powerSource"
+    PRECIPITATION_INTENSITY = "precipitationIntensity"
+    RADON_LEVEL = "radonLevel"
+    COOKER_MODE = "cookerMode"
+    COOKER_STATE = "cookerState"
+    EVENT = "event"
+    MENU = "menu"
+    SCHEDULABLE_MENUS = "schedulableMenus"
+    SCHEDULED_TIME = "scheduledTime"
+    SCHEDULING_ENABLED = "schedulingEnabled"
+    START_TIME = "startTime"
+    SUPPORTED_COOKER_MODES = "supportedCookerModes"
+    SUPPORTED_EVENTS = "supportedEvents"
+    SUPPORTED_MENUS = "supportedMenus"
     HARDWARE_VERSION = "mnhw"
+    OCCUPANCY = "occupancy"
+    OPERATING_STATE = "operatingState"
+    SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
+    SECURITY_SYSTEM_STATUS = "securitySystemStatus"
+    SENSOR_STATUS = "sensorStatus"
+    SUPPORTED_SECURITY_SYSTEM_COMMANDS = "supportedSecuritySystemCommands"
+    SUPPORTED_SECURITY_SYSTEM_STATUSES = "supportedSecuritySystemStatuses"
+    LQI = "lqi"
+    SOUND_PRESSURE_LEVEL = "soundPressureLevel"
+    TEMPERATURE_ALARM = "temperatureAlarm"
+    TEMPERATURE_LEVEL = "temperatureLevel"
+    SUPPORTED_TEMPERATURE_LEVELS = "supportedTemperatureLevels"
+    TEMPERATURE_SETPOINT = "temperatureSetpoint"
+    TEMPERATURE_SETPOINT_RANGE = "temperatureSetpointRange"
+    RSSI = "rssi"
+    SLEEPING = "sleeping"
+    SMOKE = "smoke"
+    SOUND_DETECTED = "soundDetected"
+    SOUND_DETECTION_STATE = "soundDetectionState"
+    SUPPORTED_SOUND_TYPES = "supportedSoundTypes"
+    OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
+    OZONE = "ozone"
+    PANIC_ALARM = "panicAlarm"
+    PEST_CONTROL = "pestControl"
+    PH = "pH"
     HEADING = "heading"
     HEALTH_STATUS = "healthStatus"
     HEATED_DRY = "heatedDry"
@@ -512,6 +674,21 @@ class Attribute(StrEnum):
     LAST_SENSING_TIME = "lastSensingTime"
     LAST_UPDATED_DATE = "lastUpdatedDate"
     LAST_UPDATED_TIME = "lastUpdatedTime"
+    TVOC_LEVEL = "tvocLevel"
+    VERY_FINE_DUST_HEALTH_CONCERN = "veryFineDustHealthConcern"
+    CAMERA = "camera"
+    SETTINGS = "settings"
+    STATUS_MESSAGE = "statusMessage"
+    AUDIO_ONLY = "audioOnly"
+    DEVICE_ICE = "deviceIce"
+    SDP_ANSWER = "sdpAnswer"
+    STUN_URL = "stunUrl"
+    SUPPORTED_FEATURES = "supportedFeatures"
+    TALKBACK = "talkback"
+    TURN_INFO = "turnInfo"
+    WIND_MODE = "windMode"
+    SUPPORTED_WIND_MODES = "supportedWindModes"
+    ULTRAVIOLET_INDEX = "ultravioletIndex"
     LAST_UPDATE_STATUS = "lastUpdateStatus"
     LAST_UPDATE_STATUS_REASON = "lastUpdateStatusReason"
     LAST_UPDATE_TIME = "lastUpdateTime"
@@ -521,6 +698,10 @@ class Attribute(StrEnum):
     LEVEL_RANGE = "levelRange"
     LEVEL_STEPS = "levelSteps"
     LIGHTING = "lighting"
+    EP_EVENT = "epEvent"
+    EP_INFO = "epInfo"
+    SHADE_LEVEL = "shadeLevel"
+    LIGHTING_MODE = "lightningMode"
     LOCAL_DATE = "localDate"
     LOCAL_DATE_ONE = "localDateOne"
     LOCAL_DATE_TWO = "localDateTwo"
@@ -559,7 +740,6 @@ class Attribute(StrEnum):
     MIRROR_GROUP_FUNCTION = "mirrorGroupFunction"
     MN_ID = "mnId"
     MOBILE_CAM_SUPPORTED = "mobileCamSupported"
-    MODE = "mode"
     MODEL_CLASSIFICATION_CODE = "modelClassificationCode"
     MODEL_CODE = "modelCode"
     MODEL_NAME = "modelName"
@@ -581,7 +761,6 @@ class Attribute(StrEnum):
     OCF_RESOURCE_UPDATED_TIME = "ocfResourceUpdatedTime"
     OCF_RESOURCE_VERSION = "ocfResourceVersion"
     ODOR_LEVEL = "odorLevel"
-    OPERATING_STATE = "operatingState"
     OPERATION_MODE = "operationMode"
     OPERATION_TIME = "operationTime"
     ORDER_THRESHOLD = "orderThreshold"
@@ -680,7 +859,6 @@ class Attribute(StrEnum):
     SPEED = "speed"
     SPEED_BOOSTER = "speedBooster"
     SPI_MODE = "spiMode"
-    START_TIME = "startTime"
     STATE = "state"
     STATUS = "status"
     STEAM_SOAK = "steamSoak"
@@ -721,7 +899,6 @@ class Attribute(StrEnum):
     SUPPORTED_DRYING_TIME = "supportedDryingTime"
     SUPPORTED_ENERGY_SAVING_LEVELS = "supportedEnergySavingLevels"
     SUPPORTED_FAN_OSCILLATION_MODES = "supportedFanOscillationModes"
-    SUPPORTED_FEATURES = "supportedFeatures"
     SUPPORTED_FOCUS_AREAS = "supportedFocusAreas"
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
@@ -734,10 +911,8 @@ class Attribute(StrEnum):
     SUPPORTED_LOCK_VALUES = "supportedLockValues"
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
     SUPPORTED_MEAT_TYPES = "supportedMeatTypes"
-    SUPPORTED_MODES = "supportedModes"
     SUPPORTED_MODE_MAP = "supportedModeMap"
     SUPPORTED_OPERATING_STATE = "supportedOperatingState"
-    SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
     SUPPORTED_OPTIONS = "supportedOptions"
     SUPPORTED_OVEN_MODES = "supportedOvenModes"
     SUPPORTED_PICTURE_MODES = "supportedPictureModes"
@@ -768,7 +943,6 @@ class Attribute(StrEnum):
     TARGET_MODULE = "targetModule"
     TEMPERATURE = "temperature"
     TEMPERATURE_RANGE = "temperatureRange"
-    TEMPERATURE_SETPOINT = "temperatureSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
     THREE_AXIS = "threeAxis"
     TIMED_CLEAN_DURATION = "timedCleanDuration"
@@ -836,19 +1010,28 @@ class Attribute(StrEnum):
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ACCELERATION_SENSOR: [Attribute.ACCELERATION],
-    Capability.AIR_CONDITIONER_MODE: [
-        Attribute.AVAILABLE_AC_MODES,
-        Attribute.SUPPORTED_AC_MODES,
-        Attribute.AIR_CONDITIONER_MODE,
-    ],
+    Capability.ACTIVITY_LIGHTING_MODE: [Attribute.LIGHTING_MODE],
+    Capability.ACTIVITY_SENSOR: [Attribute.ACTIVITY],
     Capability.AIR_CONDITIONER_FAN_MODE: [
         Attribute.FAN_MODE,
         Attribute.SUPPORTED_AC_FAN_MODES,
         Attribute.AVAILABLE_AC_FAN_MODES,
     ],
+    Capability.AIR_CONDITIONER_MODE: [
+        Attribute.AVAILABLE_AC_MODES,
+        Attribute.SUPPORTED_AC_MODES,
+        Attribute.AIR_CONDITIONER_MODE,
+    ],
+    Capability.AIR_PURIFIER_FAN_MODE: [
+        Attribute.AIR_PURIFIER_FAN_MODE,
+        Attribute.SUPPORTED_AIR_PURIFIER_FAN_MODES,
+    ],
+    Capability.AIR_QUALITY_HEALTH_CONCERN: [Attribute.AIR_QUALITY_HEALTH_CONCERN],
     Capability.AIR_QUALITY_SENSOR: [Attribute.AIR_QUALITY],
     Capability.ALARM: [Attribute.ALARM],
+    Capability.ATMOSPHERIC_PRESSURE_MEASUREMENT: [Attribute.ATMOSPHERIC_PRESSURE],
     Capability.AUDIO_MUTE: [Attribute.MUTE],
+    Capability.AUDIO_STREAM: [Attribute.URI],
     Capability.AUDIO_TRACK_DATA: [
         Attribute.TOTAL_TIME,
         Attribute.AUDIO_TRACK_DATA,
@@ -856,22 +1039,36 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.AUDIO_VOLUME: [Attribute.VOLUME],
     Capability.BATTERY: [Attribute.BATTERY, Attribute.QUANTITY, Attribute.TYPE],
+    Capability.BODY_MASS_INDEX_MEASUREMENT: [Attribute.BMI_MEASUREMENT],
+    Capability.BODY_WEIGHT_MEASUREMENT: [Attribute.BODY_WEIGHT_MEASUREMENT],
     Capability.BUTTON: [
         Attribute.BUTTON,
         Attribute.NUMBER_OF_BUTTONS,
         Attribute.SUPPORTED_BUTTON_VALUES,
     ],
     Capability.BYPASSABLE: [Attribute.BYPASS_STATUS],
+    Capability.CARBON_DIOXIDE_HEALTH_CONCERN: [Attribute.CARBON_DIOXIDE_HEALTH_CONCERN],
+    Capability.CARBON_DIOXIDE_MEASUREMENT: [Attribute.CARBON_DIOXIDE],
+    Capability.CARBON_MONOXIDE_DETECTOR: [Attribute.CARBON_MONOXIDE],
+    Capability.CARBON_MONOXIDE_MEASUREMENT: [Attribute.CARBON_MONOXIDE_LEVEL],
+    Capability.CHIME: [Attribute.CHIME],
     Capability.COLOR_CONTROL: [Attribute.COLOR, Attribute.HUE, Attribute.SATURATION],
     Capability.COLOR_TEMPERATURE: [
         Attribute.COLOR_TEMPERATURE,
         Attribute.COLOR_TEMPERATURE_RANGE,
     ],
+    Capability.CURRENT_MEASUREMENT: [Attribute.CURRENT],
+    Capability.DEW_POINT: [Attribute.DEWPOINT],
     Capability.DOOR_CONTROL: [
         Attribute.DOOR,
     ],
     Capability.DUST_SENSOR: [Attribute.DUST_LEVEL, Attribute.FINE_DUST_LEVEL],
+    Capability.DUST_HEALTH_CONCERN: [Attribute.DUST_HEALTH_CONCERN],
+    Capability.ELEVATOR_CALL: [Attribute.CALL_STATUS],
     Capability.ENERGY_METER: [Attribute.ENERGY],
+    Capability.EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT: [
+        Attribute.EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT
+    ],
     Capability.EXECUTE: [Attribute.DATA],
     Capability.FAN_OSCILLATION_MODE: [
         Attribute.SUPPORTED_FAN_OSCILLATION_MODES,
@@ -879,7 +1076,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.FAN_OSCILLATION_MODE,
     ],
     Capability.FAN_SPEED: [Attribute.FAN_SPEED],
+    Capability.FILTER_STATE: [
+        Attribute.FILTER_LIFE_REMAINING,
+        Attribute.SUPPORTED_FILTER_COMMANDS,
+    ],
     Capability.FILTER_STATUS: [Attribute.FILTER_STATUS],
+    Capability.FINE_DUST_HEALTH_CONCERN: [Attribute.FINE_DUST_HEALTH_CONCERN],
+    Capability.FINE_DUST_SENSOR: [Attribute.FINE_DUST_LEVEL],
     Capability.FIRMWARE_UPDATE: [
         Attribute.LAST_UPDATE_STATUS_REASON,
         Attribute.AVAILABLE_VERSION,
@@ -890,6 +1093,19 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.CURRENT_VERSION,
         Attribute.LAST_UPDATE_TIME,
     ],
+    Capability.FORMALDEHYDE_HEALTH_CONCERN: [Attribute.FORMALDEHYDE_HEALTH_CONCERN],
+    Capability.FORMALDEHYDE_MEASUREMENT: [Attribute.FORMALDEHYDE_LEVEL],
+    Capability.GAS_DETECTOR: [Attribute.GAS],
+    Capability.GAS_METER: [
+        Attribute.GAS_METER,
+        Attribute.GAS_METER_CALORIFIC,
+        Attribute.GAS_METER_CONVERSION,
+        Attribute.GAS_METER_PRECISION,
+        Attribute.GAS_METER_TIME,
+        Attribute.GAS_METER_VOLUME,
+    ],
+    Capability.HARDWARE_FAULT: [Attribute.HARDWARE_FAULT],
+    Capability.HUMIDIFIER_MODE: [Attribute.HUMIDIFIER_MODE],
     Capability.GEOFENCE: [Attribute.ENABLE_STATE, Attribute.GEOFENCE, Attribute.NAME],
     Capability.GEOLOCATION: [
         Attribute.METHOD,
@@ -907,11 +1123,16 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.CHECK_INTERVAL,
         Attribute.HEALTH_STATUS,
     ],
-    Capability.LOCK: [
-        Attribute.SUPPORTED_UNLOCK_DIRECTIONS,
-        Attribute.SUPPORTED_LOCK_VALUES,
-        Attribute.LOCK,
-        Attribute.SUPPORTED_LOCK_COMMANDS,
+    Capability.ILLUMINANCE_MEASUREMENT: [Attribute.ILLUMINANCE],
+    Capability.INFRARED_LEVEL: [Attribute.INFRARED_LEVEL],
+    Capability.KEYPAD_INPUT: [Attribute.SUPPORTED_KEY_CODES],
+    Capability.LAUNDRY_WASHER_RINSE_MODE: [
+        Attribute.RINSE_MODE,
+        Attribute.SUPPORTED_RINSE_MODES,
+    ],
+    Capability.LAUNDRY_WASHER_SPIN_SPEED: [
+        Attribute.SPIN_SPEED,
+        Attribute.SUPPORTED_SPIN_SPEEDS,
     ],
     Capability.LOCK_CODES: [
         Attribute.CODE_LENGTH,
@@ -923,6 +1144,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.CODE_REPORT,
         Attribute.SCAN_CODES,
         Attribute.LOCK_CODES,
+    ],
+    Capability.LOCK: [
+        Attribute.SUPPORTED_UNLOCK_DIRECTIONS,
+        Attribute.SUPPORTED_LOCK_VALUES,
+        Attribute.LOCK,
+        Attribute.SUPPORTED_LOCK_COMMANDS,
     ],
     Capability.MEDIA_GROUP: [
         Attribute.GROUP_MUTE,
@@ -941,7 +1168,20 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.INPUT_SOURCE,
     ],
     Capability.MEDIA_TRACK_CONTROL: [Attribute.SUPPORTED_TRACK_CONTROL_COMMANDS],
+    Capability.MODE: [
+        Attribute.MODE,
+        Attribute.SUPPORTED_ARGUMENTS,
+        Attribute.SUPPORTED_MODES,
+    ],
+    Capability.MOLD_HEALTH_CONCERN: [Attribute.MOLD_HEALTH_CONCERN],
     Capability.MOTION_SENSOR: [Attribute.MOTION],
+    Capability.NETWORK_METER: [Attribute.DOWNLINK_SPEED, Attribute.UPLINK_SPEED],
+    Capability.NITROGEN_DIOXIDE_HEALTH_CONCERN: [
+        Attribute.NITROGEN_DIOXIDE_HEALTH_CONCERN
+    ],
+    Capability.NITROGEN_DIOXIDE_MEASUREMENT: [Attribute.NITROGEN_DIOXIDE],
+    Capability.OBJECT_DETECTION: [Attribute.DETECTED, Attribute.SUPPORTED_VALUES],
+    Capability.OCCUPANCY_SENSOR: [Attribute.OCCUPANCY],
     Capability.OCF: [
         Attribute.SYSTEM_TIME,
         Attribute.MANUFACTURE_DATE,
@@ -974,17 +1214,76 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OPERATION_TIME,
     ],
     Capability.OVEN_SETPOINT: [Attribute.OVEN_SETPOINT, Attribute.OVEN_SETPOINT_RANGE],
+    Capability.OZONE_HEALTH_CONCERN: [Attribute.OZONE_HEALTH_CONCERN],
+    Capability.OZONE_MEASUREMENT: [Attribute.OZONE],
+    Capability.PANIC_ALARM: [Attribute.PANIC_ALARM],
+    Capability.PEST_CONTROL: [Attribute.PEST_CONTROL],
+    Capability.PH_MEASUREMENT: [Attribute.PH],
     Capability.POWER_METER: [Attribute.POWER],
+    Capability.POWER_SOURCE: [Attribute.POWER_SOURCE],
+    Capability.PRECIPITATION_SENSOR: [Attribute.PRECIPITATION_INTENSITY],
     Capability.PRESENCE_SENSOR: [Attribute.PRESENCE],
+    Capability.RADON_MEASUREMENT: [Attribute.RADON_LEVEL],
     Capability.REFRESH: [],
+    Capability.REFRIGERATION: [
+        Attribute.DEFROST,
+        Attribute.RAPID_COOLING,
+        Attribute.RAPID_FREEZING,
+    ],
     Capability.RELATIVE_HUMIDITY_MEASUREMENT: [Attribute.HUMIDITY],
     Capability.REMOTE_CONTROL_STATUS: [Attribute.REMOTE_CONTROL_ENABLED],
+    Capability.RICE_COOKER: [
+        Attribute.COMPLETION_TIME,
+        Attribute.COOKER_MODE,
+        Attribute.COOKER_STATE,
+        Attribute.EVENT,
+        Attribute.MENU,
+        Attribute.SCHEDULABLE_MENUS,
+        Attribute.SCHEDULED_TIME,
+        Attribute.SCHEDULING_ENABLED,
+        Attribute.START_TIME,
+        Attribute.SUPPORTED_COOKER_MODES,
+        Attribute.SUPPORTED_EVENTS,
+        Attribute.SUPPORTED_MENUS,
+    ],
+    Capability.ROBOT_CLEANER_CLEANING_MODE: [Attribute.ROBOT_CLEANER_CLEANING_MODE],
+    Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
+    Capability.ROBOT_CLEANER_OPERATING_STATE: [
+        Attribute.OPERATING_STATE,
+        Attribute.SUPPORTED_OPERATING_STATES,
+    ],
+    Capability.ROBOT_CLEANER_TURBO_MODE: [Attribute.ROBOT_CLEANER_TURBO_MODE],
+    Capability.SECURITY_SYSTEM: [
+        Attribute.ALARM,
+        Attribute.SECURITY_SYSTEM_STATUS,
+        Attribute.SENSOR_STATUS,
+        Attribute.SUPPORTED_SECURITY_SYSTEM_COMMANDS,
+        Attribute.SUPPORTED_SECURITY_SYSTEM_STATUSES,
+    ],
+    Capability.SIGNAL_STRENGTH: [Attribute.LQI, Attribute.RSSI],
+    Capability.SLEEP_SENSOR: [Attribute.SLEEPING],
+    Capability.SMOKE_DETECTOR: [Attribute.SMOKE],
+    Capability.SOUND_DETECTION: [
+        Attribute.SOUND_DETECTED,
+        Attribute.SOUND_DETECTION_STATE,
+        Attribute.SUPPORTED_SOUND_TYPES,
+    ],
+    Capability.SOUND_PRESSURE_LEVEL: [Attribute.SOUND_PRESSURE_LEVEL],
     Capability.SWITCH: [Attribute.SWITCH],
     Capability.SWITCH_LEVEL: [Attribute.LEVEL, Attribute.LEVEL_RANGE],
     Capability.TAMPER_ALERT: [Attribute.TAMPER],
+    Capability.TEMPERATURE_ALARM: [Attribute.TEMPERATURE_ALARM],
+    Capability.TEMPERATURE_LEVEL: [
+        Attribute.TEMPERATURE_LEVEL,
+        Attribute.SUPPORTED_TEMPERATURE_LEVELS,
+    ],
     Capability.TEMPERATURE_MEASUREMENT: [
         Attribute.TEMPERATURE,
         Attribute.TEMPERATURE_RANGE,
+    ],
+    Capability.TEMPERATURE_SETPOINT: [
+        Attribute.TEMPERATURE_SETPOINT,
+        Attribute.TEMPERATURE_SETPOINT_RANGE,
     ],
     Capability.THERMOSTAT_FAN_MODE: [
         Attribute.THERMOSTAT_FAN_MODE,
@@ -1001,6 +1300,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.THERMOSTAT_OPERATING_STATE: [Attribute.THERMOSTAT_OPERATING_STATE],
     Capability.THREE_AXIS: [Attribute.THREE_AXIS],
     Capability.TV_CHANNEL: [Attribute.TV_CHANNEL, Attribute.TV_CHANNEL_NAME],
+    Capability.TVOC_MEASUREMENT: [Attribute.TVOC_LEVEL],
+    Capability.ULTRAVIOLET_INDEX: [Attribute.ULTRAVIOLET_INDEX],
     Capability.DEMAND_RESPONSE_LOAD_CONTROL: [
         Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS
     ],
@@ -1023,17 +1324,16 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.COOLING_SETPOINT_RANGE,
         Attribute.COOLING_SETPOINT,
     ],
-    Capability.REFRIGERATION: [
-        Attribute.DEFROST,
-        Attribute.RAPID_COOLING,
-        Attribute.RAPID_FREEZING,
-    ],
-    Capability.ROBOT_CLEANER_TURBO_MODE: [Attribute.ROBOT_CLEANER_TURBO_MODE],
-    Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
-    Capability.ROBOT_CLEANER_CLEANING_MODE: [Attribute.ROBOT_CLEANER_CLEANING_MODE],
     Capability.SOUND_SENSOR: [Attribute.SOUND],
     Capability.VALVE: [Attribute.VALVE],
+    Capability.VERY_FINE_DUST_HEALTH_CONCERN: [Attribute.VERY_FINE_DUST_HEALTH_CONCERN],
     Capability.VERY_FINE_DUST_SENSOR: [Attribute.VERY_FINE_DUST_LEVEL],
+    Capability.VIDEO_CAMERA: [
+        Attribute.CAMERA,
+        Attribute.MUTE,
+        Attribute.SETTINGS,
+        Attribute.STATUS_MESSAGE,
+    ],
     Capability.VIDEO_CAPTURE: [Attribute.STREAM, Attribute.CLIP],
     Capability.VIDEO_STREAM: [Attribute.SUPPORTED_FEATURES, Attribute.STREAM],
     Capability.VOLTAGE_MEASUREMENT: [Attribute.VOLTAGE],
@@ -1044,10 +1344,25 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WASHER_JOB_STATE,
         Attribute.SUPPORTED_MACHINE_STATES,
     ],
+    Capability.WEBRTC: [
+        Attribute.AUDIO_ONLY,
+        Attribute.DEVICE_ICE,
+        Attribute.SDP_ANSWER,
+        Attribute.STUN_URL,
+        Attribute.SUPPORTED_FEATURES,
+        Attribute.TALKBACK,
+        Attribute.TURN_INFO,
+    ],
+    Capability.WIND_MODE: [
+        Attribute.WIND_MODE,
+        Attribute.SUPPORTED_WIND_MODES,
+    ],
+    Capability.WINDOW_SHADE_LEVEL: [Attribute.SHADE_LEVEL],
     Capability.WINDOW_SHADE: [
         Attribute.WINDOW_SHADE,
         Attribute.SUPPORTED_WINDOW_SHADE_COMMANDS,
     ],
+    Capability.ZWAVE_MULTICHANNEL: [Attribute.EP_INFO, Attribute.EP_EVENT],
     # HCA capabilities
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
     Capability.HCA_WASHER_MODE: [
@@ -1775,6 +2090,7 @@ class Command(StrEnum):
     REFRESH = "refresh"
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
     SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
+    SET_AIR_PURIFIER_FAN_MODE = "setAirPurifierFanMode"
     SET_COLOR = "setColor"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
@@ -1784,29 +2100,220 @@ class Command(StrEnum):
     SET_HEATING_SETPOINT = "setHeatingSetpoint"
     SET_HUE = "setHue"
     SET_LEVEL = "setLevel"
+    SET_LIGHTNING_MODE = "setLightningMode"
     SET_SATURATION = "setSaturation"
     SET_THERMOSTAT_MODE = "setThermostatMode"
     SET_THERMOSTAT_FAN_MODE = "setThermostatFanMode"
     UNLATCH = "unlatch"
     UNLOCK = "unlock"
+    BOTH = "both"
+    SIREN = "siren"
+    STROBE = "strobe"
+    MUTE = "mute"
+    UNMUTE = "unmute"
+    SET_MUTE = "setMute"
+    PLAY_TRACK = "playTrack"
+    PLAY_TRACK_AND_RESTORE = "playTrackAndRestore"
+    PLAY_TRACK_AND_RESUME = "playTrackAndResume"
+    START_AUDIO = "startAudio"
+    STOP_AUDIO = "stopAudio"
+    SET_VOLUME = "setVolume"
+    VOLUME_UP = "volumeUp"
+    VOLUME_DOWN = "volumeDown"
+    CHIME = "chime"
+    CONFIGURE = "configure"
+    OVERRIDE_DEMAND_RESPONSE_LOAD_CONTROL_ACTION = "overrideDrlcAction"
+    REQUEST_DEMAND_RESPONSE_LOAD_CONTROL_ACTION = "requestDrlcAction"
+    SET_MACHINE_STATE = "setMachineState"
+    CALL = "call"
+    RESET_ENERGY_METER = "resetEnergyMeter"
+    RESET_FILTER = "resetFilter"
+    CHECK_FOR_FIRMWARE_UPDATE = "checkForFirmwareUpdate"
+    UPDATE_FIRMWARE = "updateFirmware"
+    SET_HUMIDIFIER_MODE = "setHumidifierMode"
+    TAKE = "take"
+    UPLOAD_COMPLETE = "uploadComplete"
+    UPLOAD_FAILED = "uploadFailed"
+    SET_INFRARED_LEVEL = "setInfraredLevel"
+    SEND_KEY = "sendKey"
+    SET_RINSE_MODE = "setRinseMode"
+    SET_SPIN_SPEED = "setSpinSpeed"
+    DELETE_CODE = "deleteCode"
+    NAME_SLOT = "nameSlot"
+    RELOAD_ALL_CODES = "reloadAllCodes"
+    REQUEST_CODE = "requestCode"
+    SET_CODE = "setCode"
+    SET_CODE_LENGTH = "setCodeLength"
+    UPDATE_CODES = "updateCodes"
+    SET_INPUT_SOURCE = "setInputSource"
+    FAST_FORWARD = "fastForward"
+    PLAY = "play"
+    REWIND = "rewind"
+    SET_PLAYBACK_STATUS = "setPlaybackStatus"
+    STOP = "stop"
+    NEXT_TRACK = "nextTrack"
+    PREVIOUS_TRACK = "previousTrack"
+    SET_MODE = "setMode"
+    PUSH = "push"
+    DEVICE_NOTIFICATION = "deviceNotification"
+    SET_OVEN_MODE = "setOvenMode"
+    START = "start"
+    SET_OVEN_SETPOINT = "setOvenSetpoint"
+    SET_DEFROST = "setDefrost"
+    SET_RAPID_COOLING = "setRapidCooling"
+    SET_RAPID_FREEZING = "setRapidFreezing"
+    SCHEDULE_COOKING = "scheduleCooking"
+    START_COOKING = "startCooking"
+    SET_ROBOT_CLEANER_CLEANING_MODE = "setRobotCleanerCleaningMode"
+    SET_ROBOT_CLEANER_MOVEMENT = "setRobotCleanerMovement"
+    SET_ROBOT_CLEANER_TURBO_MODE = "setRobotCleanerTurboMode"
+    ARM_AWAY = "armAway"
+    ARM_STAY = "armStay"
+    DISARM = "disarm"
+    DISABLE_SOUND_DETECTION = "disableSoundDetection"
+    ENABLE_SOUND_DETECTION = "enableSoundDetection"
+    SET_TEMPERATURE_LEVEL = "setTemperatureLevel"
+    SET_TEMPERATURE_SETPOINT = "setTemperatureSetpoint"
+    FAN_AUTO = "fanAuto"
+    FAN_CIRCULATE = "fanCirculate"
+    FAN_ON = "fanOn"
+    BEEP = "beep"
+    CHANNEL_DOWN = "channelDown"
+    CHANNEL_UP = "channelUp"
+    SET_TV_CHANNEL = "setTvChannel"
+    SET_TV_CHANNEL_NAME = "setTvChannelName"
+    FLIP = "flip"
+    CAPTURE = "capture"
+    START_STREAM = "startStream"
+    STOP_STREAM = "stopStream"
+    CLIENT_ICE = "clientIce"
+    END = "end"
+    REQUEST_TURN_INTO = "requestTurnInto"
+    SDP_OFFER = "sdpOffer"
+    START_TALKBACK = "startTalkback"
+    STOP_TALKBACK = "stopTalkback"
+    SET_WIND_MODE = "setWindMode"
+    SET_SHADE_LEVEL = "setShadeLevel"
+    PRESET_POSITION = "presetPosition"
+    ENABLE_EP_EVENTS = "enableEpEvents"
+    EP_CMD = "epCmd"
 
 
 CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
-    Capability.AIR_CONDITIONER_MODE: [Command.SET_AIR_CONDITIONER_MODE],
+    Capability.ACTIVITY_LIGHTING_MODE: [Command.SET_LIGHTNING_MODE],
     Capability.AIR_CONDITIONER_FAN_MODE: [Command.SET_FAN_MODE],
+    Capability.AIR_CONDITIONER_MODE: [Command.SET_AIR_CONDITIONER_MODE],
+    Capability.AIR_PURIFIER_FAN_MODE: [Command.SET_AIR_PURIFIER_FAN_MODE],
+    Capability.ALARM: [Command.BOTH, Command.OFF, Command.SIREN, Command.STROBE],
+    Capability.AUDIO_MUTE: [Command.MUTE, Command.UNMUTE, Command.SET_MUTE],
+    Capability.AUDIO_NOTIFICATION: [
+        Command.PLAY_TRACK,
+        Command.PLAY_TRACK_AND_RESUME,
+        Command.PLAY_TRACK_AND_RESTORE,
+    ],
+    Capability.AUDIO_STREAM: [Command.START_AUDIO, Command.STOP_AUDIO],
+    Capability.AUDIO_VOLUME: [
+        Command.SET_VOLUME,
+        Command.VOLUME_UP,
+        Command.VOLUME_DOWN,
+    ],
+    Capability.CHIME: [Command.CHIME, Command.OFF],
     Capability.COLOR_CONTROL: [
         Command.SET_COLOR,
         Command.SET_HUE,
         Command.SET_SATURATION,
     ],
     Capability.COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
-    Capability.HEALTH_CHECK: [Command.PING],
-    Capability.LOCK: [Command.LOCK, Command.UNLOCK, Command.UNLATCH],
+    Capability.CONFIGURATION: [Command.CONFIGURE],
+    Capability.DEMAND_RESPONSE_LOAD_CONTROL: [
+        Command.OVERRIDE_DEMAND_RESPONSE_LOAD_CONTROL_ACTION,
+        Command.REQUEST_DEMAND_RESPONSE_LOAD_CONTROL_ACTION,
+    ],
+    Capability.DISHWASHER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
+    Capability.DOOR_CONTROL: [Command.OPEN, Command.CLOSE],
+    Capability.DRYER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
+    Capability.ELEVATOR_CALL: [Command.CALL],
+    Capability.ENERGY_METER: [Command.RESET_ENERGY_METER],
     Capability.FAN_OSCILLATION_MODE: [Command.SET_FAN_OSCILLATION_MODE],
     Capability.FAN_SPEED: [Command.SET_FAN_SPEED],
+    Capability.FILTER_STATE: [Command.RESET_FILTER],
+    Capability.FIRMWARE_UPDATE: [
+        Command.CHECK_FOR_FIRMWARE_UPDATE,
+        Command.UPDATE_FIRMWARE,
+    ],
+    Capability.HEALTH_CHECK: [Command.PING],
+    Capability.HUMIDIFIER_MODE: [Command.SET_HUMIDIFIER_MODE],
+    Capability.IMAGE_CAPTURE: [
+        Command.TAKE,
+        Command.UPLOAD_COMPLETE,
+        Command.UPLOAD_FAILED,
+    ],
+    Capability.INFRARED_LEVEL: [Command.SET_INFRARED_LEVEL],
+    Capability.KEYPAD_INPUT: [Command.SEND_KEY],
+    Capability.LAUNDRY_WASHER_RINSE_MODE: [Command.SET_RINSE_MODE],
+    Capability.LAUNDRY_WASHER_SPIN_SPEED: [Command.SET_SPIN_SPEED],
+    Capability.LOCK_CODES: [
+        Command.DELETE_CODE,
+        Command.NAME_SLOT,
+        Command.RELOAD_ALL_CODES,
+        Command.REQUEST_CODE,
+        Command.SET_CODE,
+        Command.SET_CODE_LENGTH,
+        Command.UPDATE_CODES,
+    ],
+    Capability.LOCK: [Command.LOCK, Command.UNLOCK, Command.UNLATCH],
+    Capability.MEDIA_INPUT_SOURCE: [Command.SET_INPUT_SOURCE],
+    Capability.MEDIA_PLAYBACK: [
+        Command.FAST_FORWARD,
+        Command.PAUSE,
+        Command.PLAY,
+        Command.REWIND,
+        Command.SET_PLAYBACK_STATUS,
+        Command.STOP,
+    ],
+    Capability.MEDIA_TRACK_CONTROL: [Command.NEXT_TRACK, Command.PREVIOUS_TRACK],
+    Capability.MODE: [Command.SET_MODE],
+    Capability.MOMENTARY: [Command.PUSH],
+    Capability.NOTIFICATION: [Command.DEVICE_NOTIFICATION],
+    Capability.OVEN_MODE: [Command.SET_OVEN_MODE],
+    Capability.OVEN_OPERATING_STATE: [
+        Command.SET_MACHINE_STATE,
+        Command.START,
+        Command.STOP,
+    ],
+    Capability.OVEN_SETPOINT: [Command.SET_OVEN_SETPOINT],
     Capability.REFRESH: [Command.REFRESH],
+    Capability.REFRIGERATION: [
+        Command.SET_DEFROST,
+        Command.SET_RAPID_COOLING,
+        Command.SET_RAPID_FREEZING,
+    ],
+    Capability.RICE_COOKER: [
+        Command.SCHEDULE_COOKING,
+        Command.SET_MODE,
+        Command.START_COOKING,
+        Command.STOP,
+    ],
+    Capability.ROBOT_CLEANER_CLEANING_MODE: [Command.SET_ROBOT_CLEANER_CLEANING_MODE],
+    Capability.ROBOT_CLEANER_MOVEMENT: [Command.SET_ROBOT_CLEANER_MOVEMENT],
+    Capability.ROBOT_CLEANER_TURBO_MODE: [Command.SET_ROBOT_CLEANER_TURBO_MODE],
+    Capability.SECURITY_SYSTEM: [Command.ARM_AWAY, Command.ARM_STAY, Command.DISARM],
+    Capability.SOUND_DETECTION: [
+        Command.ENABLE_SOUND_DETECTION,
+        Command.DISABLE_SOUND_DETECTION,
+    ],
     Capability.SWITCH: [Command.ON, Command.OFF],
     Capability.SWITCH_LEVEL: [Command.SET_LEVEL],
+    Capability.TEMPERATURE_LEVEL: [Command.SET_TEMPERATURE_LEVEL],
+    Capability.TEMPERATURE_SETPOINT: [Command.SET_TEMPERATURE_SETPOINT],
+    Capability.THERMOSTAT_COOLING_SETPOINT: [Command.SET_COOLING_SETPOINT],
+    Capability.THERMOSTAT_FAN_MODE: [
+        Command.SET_THERMOSTAT_FAN_MODE,
+        Command.FAN_ON,
+        Command.FAN_AUTO,
+        Command.FAN_CIRCULATE,
+    ],
+    Capability.THERMOSTAT_HEATING_SETPOINT: [Command.SET_HEATING_SETPOINT],
     Capability.THERMOSTAT_MODE: [
         Command.AUTO,
         Command.COOL,
@@ -1815,10 +2322,37 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.OFF,
         Command.SET_THERMOSTAT_MODE,
     ],
-    Capability.THERMOSTAT_FAN_MODE: [Command.SET_THERMOSTAT_FAN_MODE],
-    Capability.THERMOSTAT_HEATING_SETPOINT: [Command.SET_HEATING_SETPOINT],
-    Capability.THERMOSTAT_COOLING_SETPOINT: [Command.SET_COOLING_SETPOINT],
+    Capability.TONE: [Command.BEEP],
+    Capability.TV_CHANNEL: [
+        Command.CHANNEL_UP,
+        Command.CHANNEL_DOWN,
+        Command.SET_TV_CHANNEL,
+        Command.SET_TV_CHANNEL_NAME,
+    ],
+    Capability.VALVE: [Command.OPEN, Command.CLOSE],
+    Capability.VIDEO_CAMERA: [
+        Command.FLIP,
+        Command.MUTE,
+        Command.OFF,
+        Command.ON,
+        Command.UNMUTE,
+    ],
+    Capability.VIDEO_CAPTURE: [Command.CAPTURE],
+    Capability.VIDEO_STREAM: [Command.START_STREAM, Command.STOP_STREAM],
+    Capability.WASHER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
+    Capability.WEBRTC: [
+        Command.CLIENT_ICE,
+        Command.END,
+        Command.REQUEST_TURN_INTO,
+        Command.SDP_OFFER,
+        Command.STOP_TALKBACK,
+        Command.START_TALKBACK,
+    ],
+    Capability.WIND_MODE: [Command.SET_WIND_MODE],
+    Capability.WINDOW_SHADE_LEVEL: [Command.SET_SHADE_LEVEL],
+    Capability.WINDOW_SHADE_PRESET: [Command.PRESET_POSITION],
     Capability.WINDOW_SHADE: [Command.CLOSE, Command.OPEN, Command.PAUSE],
+    Capability.ZWAVE_MULTICHANNEL: [Command.ENABLE_EP_EVENTS, Command.EP_CMD],
     Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: [Command.SET_AC_OPTIONAL_MODE],
 }
 
