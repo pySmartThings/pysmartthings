@@ -2464,6 +2464,8 @@ class Scene(DataClassORJSONMixin):
     scene_id: str = field(metadata=field_options(alias="sceneId"))
     name: str = field(metadata=field_options(alias="sceneName"))
     location_id: str = field(metadata=field_options(alias="locationId"))
+    icon: str = field(metadata=field_options(alias="sceneIcon"))
+    color: str | None = field(metadata=field_options(alias="sceneColor"), default=None)
 
 
 @dataclass
