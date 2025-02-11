@@ -199,10 +199,11 @@ class SmartThings:
                 argument if isinstance(argument, list) else [argument]
             )
         _LOGGER.debug("Executing command for device %s: %s", device_id, command_payload)
-        await self._post(
+        response = await self._post(
             f"devices/{device_id}/commands",
             data={"commands": [command_payload]},
         )
+        _LOGGER.debug("Command response: %s", response)
 
     # async def location(self, location_id: str) -> LocationEntity:
     #     """Retrieve a location with the specified ID."""
