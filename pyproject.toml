@@ -43,7 +43,7 @@ pytest-timeout = "2.3.1"
 pre-commit = "4.1.0"
 pre-commit-hooks = "5.0.0"
 yamllint = "1.35.1"
-ruff = "0.9.5"
+ruff = "0.9.6"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/pySmartThings/pysmartthings/issues"
