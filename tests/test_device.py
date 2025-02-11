@@ -178,6 +178,8 @@ async def test_fetching_single_device(
         "virtual_water_sensor",
         "virtual_thermostat",
         "virtual_valve",
+        "ecobee_thermostat",
+        "ecobee_sensor",
     ],
 )
 async def test_fetching_status_of_single_device(

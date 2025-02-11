@@ -22985,6 +22985,218 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[ecobee_sensor]
+  dict({
+    'main': dict({
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+          }),
+          'timestamp': datetime.datetime(2025, 2, 11, 14, 23, 22, 53000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'online',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': datetime.datetime(2025, 1, 16, 21, 14, 7, 471000, tzinfo=datetime.timezone.utc),
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.MOTION_SENSOR: 'motionSensor'>: dict({
+        <Attribute.MOTION: 'motion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 58, 50, 44000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'inactive',
+        }),
+      }),
+      <Capability.PRESENCE_SENSOR: 'presenceSensor'>: dict({
+        <Attribute.PRESENCE: 'presence'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 58, 50, 44000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'not present',
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 14, 36, 16, 823000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 71,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+    }),
+  })
+# ---
+# name: test_fetching_status_of_single_device[ecobee_thermostat]
+  dict({
+    'main': dict({
+      <Capability.HEALTH_CHECK: 'healthCheck'>: dict({
+        <Attribute.DEVICE_WATCH_DEVICE_STATUS: 'DeviceWatch-DeviceStatus'>: dict({
+          'data': dict({
+          }),
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'online',
+        }),
+        <Attribute.DEVICE_WATCH_ENROLL: 'DeviceWatch-Enroll'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.CHECK_INTERVAL: 'checkInterval'>: dict({
+          'data': dict({
+            'deviceScheme': 'UNTRACKED',
+            'protocol': 'cloud',
+          }),
+          'timestamp': datetime.datetime(2025, 1, 16, 21, 14, 7, 448000, tzinfo=datetime.timezone.utc),
+          'unit': 's',
+          'value': 60,
+        }),
+        <Attribute.HEALTH_STATUS: 'healthStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.RELATIVE_HUMIDITY_MEASUREMENT: 'relativeHumidityMeasurement'>: dict({
+        <Attribute.HUMIDITY: 'humidity'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 14, 36, 17, 275000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 32,
+        }),
+      }),
+      <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>: dict({
+        <Attribute.TEMPERATURE: 'temperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 14, 23, 21, 556000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 71,
+        }),
+        <Attribute.TEMPERATURE_RANGE: 'temperatureRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>: dict({
+        <Attribute.COOLING_SETPOINT: 'coolingSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 73,
+        }),
+        <Attribute.COOLING_SETPOINT_RANGE: 'coolingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_FAN_MODE: 'thermostatFanMode'>: dict({
+        <Attribute.SUPPORTED_THERMOSTAT_FAN_MODES: 'supportedThermostatFanModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'on',
+            'auto',
+          ]),
+        }),
+        <Attribute.THERMOSTAT_FAN_MODE: 'thermostatFanMode'>: dict({
+          'data': dict({
+            'supportedThermostatFanModes': list([
+              'on',
+              'auto',
+            ]),
+          }),
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'auto',
+        }),
+      }),
+      <Capability.THERMOSTAT_HEATING_SETPOINT: 'thermostatHeatingSetpoint'>: dict({
+        <Attribute.HEATING_SETPOINT: 'heatingSetpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': 'F',
+          'value': 71,
+        }),
+        <Attribute.HEATING_SETPOINT_RANGE: 'heatingSetpointRange'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.THERMOSTAT_MODE: 'thermostatMode'>: dict({
+        <Attribute.SUPPORTED_THERMOSTAT_MODES: 'supportedThermostatModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'off',
+            'cool',
+            'auxheatonly',
+            'auto',
+          ]),
+        }),
+        <Attribute.THERMOSTAT_MODE: 'thermostatMode'>: dict({
+          'data': dict({
+            'supportedThermostatModes': list([
+              'off',
+              'cool',
+              'auxheatonly',
+              'auto',
+            ]),
+          }),
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'heat',
+        }),
+      }),
+      <Capability.THERMOSTAT_OPERATING_STATE: 'thermostatOperatingState'>: dict({
+        <Attribute.THERMOSTAT_OPERATING_STATE: 'thermostatOperatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 11, 13, 39, 58, 286000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'heating',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[ge_dimmer_assoc]
   dict({
     'main': dict({
