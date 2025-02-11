@@ -12,7 +12,7 @@ from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from yarl import URL
 
 from .const import API_BASE
-from .exceptions import SmartThingsConnectionError
+from .exceptions import SmartThingsCommandError, SmartThingsConnectionError
 from .models import (
     Attribute,
     BaseLocation,
@@ -21,6 +21,7 @@ from .models import (
     Device,
     DeviceResponse,
     DeviceStatus,
+    ErrorResponse,
     Location,
     LocationResponse,
     Room,
@@ -79,7 +80,12 @@ class SmartThings:
             msg = "Timeout occurred while connecting to SmartThings"
             raise SmartThingsConnectionError(msg) from exception
 
-        return await response.text()
+        text = await response.text()
+
+        if response.status == 422:
+            raise SmartThingsCommandError(ErrorResponse.from_json(text))
+
+        return text
 
     async def _get(self, uri: str, params: dict[str, Any] | None = None) -> str:
         """Handle a GET request to SmartThings."""

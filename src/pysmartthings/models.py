@@ -2576,3 +2576,21 @@ class SceneResponse(DataClassORJSONMixin):
     """Scene response model."""
 
     items: list[Scene]
+
+
+@dataclass
+class ErrorResponse(DataClassORJSONMixin):
+    """Error response model."""
+
+    request_id: str = field(metadata=field_options(alias="requestId"))
+    error: ErrorDetails
+
+
+@dataclass
+class ErrorDetails:
+    """Error details model."""
+
+    code: str
+    message: str
+    details: list[ErrorDetails]
+    target: str | None = field(default=None)

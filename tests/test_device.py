@@ -1,6 +1,8 @@
 """Tests for the Device file."""
 
 from __future__ import annotations
+
+import re
 from typing import Any, TYPE_CHECKING
 
 import pytest
@@ -9,6 +11,7 @@ from aioresponses import aioresponses
 from yarl import URL
 
 from pysmartthings import SmartThings
+from pysmartthings.exceptions import SmartThingsCommandError
 from pysmartthings.models import Capability, Command
 from . import load_fixture, load_json_fixture
 
@@ -250,6 +253,30 @@ async def test_executing_command(
         params=None,
         json=load_json_fixture(f"device_commands/{fixture}.json"),
     )
+
+
+async def test_executing_command_error(
+    client: SmartThings,
+    responses: aioresponses,
+) -> None:
+    """Test executing a command."""
+    responses.post(
+        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
+        status=422,
+        body=load_fixture("device_command_error.json"),
+    )
+    with pytest.raises(
+        SmartThingsCommandError,
+        match=re.escape(
+            "SmartThingsCommandError (ConstraintViolationError, The request is malformed.) -> UnprocessableEntityError: commands[0].arguments[0]: must have a maximum value of 30000"
+        ),
+    ):
+        await client.execute_device_command(
+            "440063de-a200-40b5-8a6b-f3399eaa0370",
+            Capability.COLOR_TEMPERATURE,
+            Command.SET_COLOR_TEMPERATURE,
+            argument=300000,
+        )
 
 
 # class TestDevice:
