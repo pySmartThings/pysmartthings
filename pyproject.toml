@@ -93,6 +93,8 @@ disable = [
   "too-many-arguments",
   "too-many-public-methods",
   "wrong-import-order",
+  "too-many-positional-arguments",
+  "too-many-branches",
 ]
 
 [tool.pylint.SIMILARITIES]
