@@ -58,6 +58,7 @@ Changelog = "https://github.com/pySmartThings/pysmartthings/releases"
 
 [tool.coverage.report]
 show_missing = true
+fail_under = 80
 
 [tool.coverage.run]
 plugins = ["covdefaults"]
