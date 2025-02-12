@@ -2483,18 +2483,147 @@ class DeviceNetworkType(StrEnum):
     ZWAVE = "ZWAVE"
 
 
+class Category(StrEnum):
+    """Category model."""
+
+    AIR_CONDITIONER = "AirConditioner"
+    AIR_PURIFIER = "AirPurifier"
+    AIR_QUALITY_DETECTOR = "AirQualityDetector"
+    BATTERY = "Battery"
+    BED = "Bed"
+    BIDET = "Bidet"
+    BLIND = "Blind"
+    BLU_RAY_PLAYER = "BluRayPlayer"
+    BLUETOOTH_CAR_SPEAKER = "BluetoothCarSpeaker"
+    BLUETOOTH_TRACKER = "BluetoothTracker"
+    BRIDGES = "Bridges"
+    BUTTON = "Button"
+    CAMERA = "Camera"
+    CAR = "Car"
+    CHARGER = "Charger"
+    CLOTHING_CARE_MACHINE = "ClothingCareMachine"
+    COFFEE_MAKER = "CoffeeMaker"
+    CONTACT_SENSOR = "ContactSensor"
+    COOKTOP = "Cooktop"
+    CUBE_REFRIGERATOR = "CubeRefrigerator"
+    CURB_POWER_METER = "CurbPowerMeter"
+    DEHUMIDIFIER = "Dehumidifier"
+    DISHWASHER = "Dishwasher"
+    DOOR = "Door"
+    DOOR_BELL = "DoorBell"
+    DRYER = "Dryer"
+    EARBUDS = "Earbuds"
+    ELEVATOR = "Elevator"
+    FAN = "Fan"
+    FEEDER = "Feeder"
+    FITNESS_MAT = "FitnessMat"
+    FLASHLIGHT = "Flashlight"
+    GARAGE_DOOR = "GarageDoor"
+    GAS_VALVE = "GasValve"
+    GAS_METER = "GasMeter"
+    GENERIC_SENSOR = "GenericSensor"
+    HEALTH_TRACKER = "HealthTracker"
+    HEATED_MATTRESS_PAD = "Heatedmattresspad"
+    HOME_THEATER = "HomeTheater"
+    HUB = "Hub"
+    HUMIDIFIER = "Humidifier"
+    HUMIDITY_SENSOR = "HumiditySensor"
+    IR_REMOTE = "IrRemote"
+    IRRIGATION = "Irrigation"
+    KIMCHI_REFRIGERATOR = "KimchiRefrigerator"
+    KITCHEN_HOOD = "KitchenHood"
+    LEAK_SENSOR = "LeakSensor"
+    LIGHT = "Light"
+    LIGHT_SENSOR = "LightSensor"
+    MICRO_FIBER_FILTER = "MicroFiberFilter"
+    MICROWAVE = "Microwave"
+    MOBILE = "Mobile"
+    MOBILE_PRESENCE = "MobilePresence"
+    MOTION_SENSOR = "MotionSensor"
+    MULTI_FUNCTIONAL_SENSOR = "MultiFunctionalSensor"
+    NETWORK_AUDIO = "NetworkAudio"
+    NETWORKING = "Networking"
+    OTHER = "Other"
+    OVEN = "Oven"
+    PRESENCE_SENSOR = "PresenceSensor"
+    PRINTER = "Printer"
+    PRINTER_MULTI_FUNCTION = "PrinterMultiFunction"
+    PROJECTOR = "Projector"
+    PUMP = "Pump"
+    RAIN_SENSOR = "RainSensor"
+    RANGE = "Range"
+    RECEIVER = "Receiver"
+    REFRIGERATOR = "Refrigerator"
+    REMOTE_CONTROLLER = "RemoteController"
+    RICE_COOKER = "RiceCooker"
+    ROBOT_CLEANER = "RobotCleaner"
+    SCALE_TO_MEASURE_MASS_OF_HUMAN_BODY = "ScaleToMeasureMassOfHumanBody"
+    SCANNER = "Scanner"
+    SECURITY_PANEL = "SecurityPanel"
+    SET_TOP = "SetTop"
+    SHADE = "Shade"
+    SHOES_CARE_MACHINE = "ShoesCareMachine"
+    SHOWER = "Shower"
+    SIREN = "Siren"
+    SMART_LOCK = "SmartLock"
+    SMART_MONITOR = "SmartMonitor"
+    SMART_PLUG = "SmartPlug"
+    SMOKE_DETECTOR = "SmokeDetector"
+    SOLAR_PANEL = "SolarPanel"
+    SOUND_SENSOR = "SoundSensor"
+    SOUND_MACHINE = "SoundMachine"
+    SPEAKER = "Speaker"
+    STICK_VACUUM_CLEANER = "StickVacuumCleaner"
+    STORAGE = "Storage"
+    STOVE = "Stove"
+    SWITCH = "Switch"
+    TELEVISION = "Television"
+    TEMP_HUMIDITY_SENSOR = "TempHumiditySensor"
+    TEMP_SENSOR = "TempSensor"
+    THERMOSTAT = "Thermostat"
+    TRACKER = "Tracker"
+    UPNP_MEDIA_RENDERER = "UPnPMediaRenderer"
+    VENT = "Vent"
+    VISION_SENSOR = "VisionSensor"
+    VOICE_ASSISTANCE = "VoiceAssistance"
+    WASHER = "Washer"
+    WATER_FREEZER_DETECTOR = "WaterFreezeDetector"
+    WATER_HEATER = "WaterHeater"
+    WATER_VALVE = "WaterValve"
+    WATER_PURIFIER = "WaterPurifier"
+    WEATHER_STATION = "WeatherStation"
+    WIFI_ROUTER = "WiFiRouter"
+    WINDOW = "Window"
+    WINE_CELLAR = "WineCellar"
+
+
+@dataclass
+class Categories(DataClassORJSONMixin):
+    """Categories model."""
+
+    user: Category | None
+    manufacturer: Category
+
+
 @dataclass
 class Component(DataClassORJSONMixin):
     """Component model."""
 
     id: str
     capabilities: list[Capability]
+    manufacturer_category: Category
     label: str | None = None
+    user_category: Category | None = None
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
         """Pre deserialize hook."""
         d["capabilities"] = [c["id"] for c in d["capabilities"]]
+        for cat in d["categories"]:
+            if cat["categoryType"] == "manufacturer":
+                d["manufacturer_category"] = cat["name"]
+            else:
+                d["user_category"] = cat["name"]
         return d
 
 
