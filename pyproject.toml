@@ -86,30 +86,13 @@ max-attributes = 8
 
 [tool.pylint."MESSAGES CONTROL"]
 disable = [
-  "format",
-  "abstract-method",
-  "cyclic-import",
-  "global-statement",
-  "inconsistent-return-statements",
-  "locally-disabled",
-  "not-an-iterable",
-  "not-context-manager",
-  "too-few-public-methods",
-  "too-many-arguments",
-  "too-many-branches",
-  "too-many-lines",
-  "too-many-locals",
-  "too-many-public-methods",
-  "too-many-return-statements",
-  "too-many-statements",
-  "unnecessary-pass",
-  "unused-argument",
   "duplicate-code",
+  "format",
   "unsubscriptable-object",
   "too-many-instance-attributes",
-  "wrong-import-order",
   "too-many-arguments",
-  "too-many-positional-arguments",
+  "too-many-public-methods",
+  "wrong-import-order",
 ]
 
 [tool.pylint.SIMILARITIES]
