@@ -65,10 +65,10 @@ async def client() -> AsyncGenerator[SmartThings, None]:
     async with (
         ClientSession() as session,
         SmartThings(
-            "token",
             session=session,
         ) as smartthings_client,
     ):
+        smartthings_client.authenticate("token")
         yield smartthings_client
 
 

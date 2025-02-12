@@ -5,7 +5,7 @@ from __future__ import annotations
 import asyncio
 from dataclasses import dataclass
 import logging
-from typing import Any, Self
+from typing import TYPE_CHECKING, Any, Callable, Self
 
 from aiohttp import ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
@@ -31,6 +31,9 @@ from .models import (
     Status,
 )
 
+if TYPE_CHECKING:
+    from collections.abc import Awaitable
+
 _LOGGER = logging.getLogger(__name__)
 
 
@@ -38,10 +41,20 @@ _LOGGER = logging.getLogger(__name__)
 class SmartThings:
     """Define a class for interacting with the SmartThings Cloud API."""
 
-    token: str
     request_timeout: int = 10
     _close_session: bool = False
+    _token: str | None = None
     session: ClientSession | None = None
+    refresh_token_function: Callable[[], Awaitable[str]] | None = None
+
+    async def refresh_token(self) -> None:
+        """Refresh token with provided function."""
+        if self.refresh_token_function:
+            self._token = await self.refresh_token_function()
+
+    def authenticate(self, token: str) -> None:
+        """Authenticate the user with a token."""
+        self._token = token
 
     async def _request(
         self,
@@ -58,9 +71,11 @@ class SmartThings:
             port=443,
         ).joinpath(f"v1/{uri}")
 
+        await self.refresh_token()
+
         headers = {
             "Accept": "application/json, text/plain, */*",
-            "Authorization": f"Bearer {self.token}",
+            "Authorization": f"Bearer {self._token}",
         }
 
         if self.session is None:
