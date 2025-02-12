@@ -2598,14 +2598,6 @@ class Category(StrEnum):
 
 
 @dataclass
-class Categories(DataClassORJSONMixin):
-    """Categories model."""
-
-    user: Category | None
-    manufacturer: Category
-
-
-@dataclass
 class Component(DataClassORJSONMixin):
     """Component model."""
 
