@@ -48,11 +48,6 @@ yamllint = "1.35.1"
 ruff = "0.9.6"
 syrupy = "^4.8.1"
 aioresponses = "^0.7.8"
-
-[tool.poetry.group.cli]
-optional = true
-
-[tool.poetry.group.cli.dependencies]
 treelib = "^1.7.0"
 pyperclip = "^1.9.0"
 
