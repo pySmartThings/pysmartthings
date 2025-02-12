@@ -1,7 +1,0 @@
-{
-    "clientName": "pysmartthings-test",
-    "scope": [
-        "r:devices"
-    ],
-    "redirectUris": []
-}

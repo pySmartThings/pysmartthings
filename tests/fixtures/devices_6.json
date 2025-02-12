@@ -1,0 +1,898 @@
+{
+  "items": [
+    {
+      "deviceId": "4ece486b-89db-f06a-d54d-748b676b4d8e",
+      "name": "Samsung-Room-Air-Conditioner",
+      "label": "Aire Dormitorio Principal",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-AC-RAC-01001",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "c4189ac1-208f-461a-8ab6-ea67937b3743",
+      "ownerId": "85ea07e1-7063-f673-3ba5-125293f297c8",
+      "roomId": "1f66199a-1773-4d8f-97b7-44c312a62cf7",
+      "deviceTypeName": "Samsung OCF Air Conditioner",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "airConditionerMode",
+              "version": 1
+            },
+            {
+              "id": "airConditionerFanMode",
+              "version": 1
+            },
+            {
+              "id": "bypassable",
+              "version": 1
+            },
+            {
+              "id": "fanOscillationMode",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "relativeHumidityMeasurement",
+              "version": 1
+            },
+            {
+              "id": "airQualitySensor",
+              "version": 1
+            },
+            {
+              "id": "odorSensor",
+              "version": 1
+            },
+            {
+              "id": "dustSensor",
+              "version": 1
+            },
+            {
+              "id": "veryFineDustSensor",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "audioNotification",
+              "version": 1
+            },
+            {
+              "id": "custom.spiMode",
+              "version": 1
+            },
+            {
+              "id": "custom.thermostatSetpointControl",
+              "version": 1
+            },
+            {
+              "id": "custom.airConditionerOptionalMode",
+              "version": 1
+            },
+            {
+              "id": "custom.airConditionerTropicalNightMode",
+              "version": 1
+            },
+            {
+              "id": "custom.autoCleaningMode",
+              "version": 1
+            },
+            {
+              "id": "custom.deviceReportStateConfiguration",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.dustFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.veryFineDustFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.deodorFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.electricHepaFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.doNotDisturbMode",
+              "version": 1
+            },
+            {
+              "id": "custom.periodicSensing",
+              "version": 1
+            },
+            {
+              "id": "custom.airConditionerOdorController",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungce.alwaysOnSensing",
+              "version": 1
+            },
+            {
+              "id": "samsungce.airConditionerBeep",
+              "version": 1
+            },
+            {
+              "id": "samsungce.airConditionerLighting",
+              "version": 1
+            },
+            {
+              "id": "samsungce.airQualityHealthConcern",
+              "version": 1
+            },
+            {
+              "id": "samsungce.buttonDisplayCondition",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dustFilterAlarm",
+              "version": 1
+            },
+            {
+              "id": "samsungce.individualControlLock",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.selfCheck",
+              "version": 1
+            },
+            {
+              "id": "samsungce.silentAction",
+              "version": 1
+            },
+            {
+              "id": "samsungce.quickControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.welcomeCooling",
+              "version": 1
+            },
+            {
+              "id": "samsungce.unavailableCapabilities",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            },
+            {
+              "id": "sec.wifiConfiguration",
+              "version": 1
+            },
+            {
+              "id": "sec.calmConnectionCare",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "AirConditioner",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-01-28T21:31:35.755Z",
+      "profile": {
+        "id": "091a55f4-7054-39fa-b23e-b56deb7580f8"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.airconditioner",
+        "name": "Samsung-Room-Air-Conditioner",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "1.2.1",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "ARA-WW-TP1-22-COMMON|10229641|60010523001511014600083200800000",
+        "platformVersion": "DAWIT 2.0",
+        "platformOS": "TizenRT 3.1",
+        "hwVersion": "Realtek",
+        "firmwareVersion": "ARA-WW-TP1-22-COMMON_11240702",
+        "vendorId": "DA-AC-RAC-01001",
+        "vendorResourceClientServerVersion": "Realtek Release 3.1.240221",
+        "lastSignupTime": "2025-01-28T21:31:30.090416369Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "0d94e5db-8501-2355-eb4f-214163702cac",
+      "name": "Soundbar",
+      "label": "Soundbar Living",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-NetworkAudio-002S",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "c4189ac1-208f-461a-8ab6-ea67937b3743",
+      "ownerId": "85ea07e1-7063-f673-3ba5-125293f297c8",
+      "roomId": "db506ec3-83b1-4125-9c4c-eb597da5db6a",
+      "deviceTypeName": "Samsung OCF Network Audio Player",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "audioTrackData",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.audioInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "audioNotification",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.soundFrom",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.audioGroupInfo",
+              "version": 1,
+              "ephemeral": true
+            }
+          ],
+          "categories": [
+            {
+              "name": "NetworkAudio",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2024-10-26T02:58:40.549Z",
+      "profile": {
+        "id": "3a714028-20ea-3feb-9891-46092132c737"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.networkaudio",
+        "name": "Soundbar Living",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "HW-Q990C",
+        "platformVersion": "7.0",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "SAT-iMX8M23WWC-1010.5",
+        "vendorId": "VD-NetworkAudio-002S",
+        "vendorResourceClientServerVersion": "3.2.41",
+        "lastSignupTime": "2024-10-26T02:58:36.491256384Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "0e168539-061a-5f02-2beb-cc5cb6bb3b7b",
+      "name": "[system a/c] Samsung",
+      "label": "Kit AC Wifi",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-SAC-WIFIKIT-000001",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "c4189ac1-208f-461a-8ab6-ea67937b3743",
+      "ownerId": "85ea07e1-7063-f673-3ba5-125293f297c8",
+      "roomId": "072d28ca-996a-420f-95e6-0bedf5df4718",
+      "deviceTypeName": "Samsung OCF Air Conditioner",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.wifiKitSubDevices",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "AirConditioner",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-01-29T22:00:56.061Z",
+      "childDevices": [
+        {
+          "deviceId": "0e168539-061a-5f02-2beb-000001200000",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        }
+      ],
+      "profile": {
+        "id": "3713e35a-1dd9-3742-beee-b747773228c5"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.airconditioner",
+        "name": "[system a/c] Samsung",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "MIM-H04N|240611|61FFFF00001411000000000000000000",
+        "platformVersion": "4.0",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "20240611.1",
+        "vendorId": "DA-SAC-WIFIKIT-000001",
+        "vendorResourceClientServerVersion": "3.2.20",
+        "lastSignupTime": "2025-01-29T22:00:53.860224354Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "0e168539-061a-5f02-2beb-000001200000",
+      "name": "Air Conditioner",
+      "label": "Aire Oficina",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-SAC-INDOOR-000001-SUB",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "c4189ac1-208f-461a-8ab6-ea67937b3743",
+      "ownerId": "85ea07e1-7063-f673-3ba5-125293f297c8",
+      "roomId": "072d28ca-996a-420f-95e6-0bedf5df4718",
+      "deviceTypeName": "Samsung OCF Air Conditioner",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "airConditionerMode",
+              "version": 1
+            },
+            {
+              "id": "airConditionerFanMode",
+              "version": 1
+            },
+            {
+              "id": "fanOscillationMode",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "relativeHumidityMeasurement",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "remoteControlStatus",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "airQualitySensor",
+              "version": 1
+            },
+            {
+              "id": "dustSensor",
+              "version": 1
+            },
+            {
+              "id": "veryFineDustSensor",
+              "version": 1
+            },
+            {
+              "id": "custom.spiMode",
+              "version": 1
+            },
+            {
+              "id": "custom.thermostatSetpointControl",
+              "version": 1
+            },
+            {
+              "id": "custom.airConditionerOptionalMode",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.dustFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.autoCleaningMode",
+              "version": 1
+            },
+            {
+              "id": "custom.deviceReportStateConfiguration",
+              "version": 1
+            },
+            {
+              "id": "custom.deodorFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.hepaFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.veryFineDustFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.sacDisplayCondition",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "AirConditioner",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-01-29T22:00:56.982Z",
+      "parentDeviceId": "0e168539-061a-5f02-2beb-cc5cb6bb3b7b",
+      "profile": {
+        "id": "ce0b3091-4ab0-30ea-9f1a-6afa49642269"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.airconditioner",
+        "name": "Air Conditioner",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "SAC_RAC|230127|610C0A00001700890400010000000000",
+        "platformVersion": "4.0",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "20240611.1",
+        "vendorId": "DA-SAC-INDOOR-000001-SUB",
+        "vendorResourceClientServerVersion": "3.2.20",
+        "lastSignupTime": "2025-01-29T22:00:56.103552240Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "bcedebe0-b3e9-4536-2b7c-dbc74dc29fce",
+      "name": "Samsung-Room-Air-Conditioner",
+      "label": "Aire Estar Segundo Piso",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-AC-RAC-01001",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "c4189ac1-208f-461a-8ab6-ea67937b3743",
+      "ownerId": "85ea07e1-7063-f673-3ba5-125293f297c8",
+      "roomId": "f1dabf87-1533-44ee-940c-d350ce0d7283",
+      "deviceTypeName": "Samsung OCF Air Conditioner",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "airConditionerMode",
+              "version": 1
+            },
+            {
+              "id": "airConditionerFanMode",
+              "version": 1
+            },
+            {
+              "id": "bypassable",
+              "version": 1
+            },
+            {
+              "id": "fanOscillationMode",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "relativeHumidityMeasurement",
+              "version": 1
+            },
+            {
+              "id": "airQualitySensor",
+              "version": 1
+            },
+            {
+              "id": "odorSensor",
+              "version": 1
+            },
+            {
+              "id": "dustSensor",
+              "version": 1
+            },
+            {
+              "id": "veryFineDustSensor",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "audioNotification",
+              "version": 1
+            },
+            {
+              "id": "custom.spiMode",
+              "version": 1
+            },
+            {
+              "id": "custom.thermostatSetpointControl",
+              "version": 1
+            },
+            {
+              "id": "custom.airConditionerOptionalMode",
+              "version": 1
+            },
+            {
+              "id": "custom.airConditionerTropicalNightMode",
+              "version": 1
+            },
+            {
+              "id": "custom.autoCleaningMode",
+              "version": 1
+            },
+            {
+              "id": "custom.deviceReportStateConfiguration",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.dustFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.veryFineDustFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.deodorFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.electricHepaFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.doNotDisturbMode",
+              "version": 1
+            },
+            {
+              "id": "custom.periodicSensing",
+              "version": 1
+            },
+            {
+              "id": "custom.airConditionerOdorController",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungce.alwaysOnSensing",
+              "version": 1
+            },
+            {
+              "id": "samsungce.airConditionerBeep",
+              "version": 1
+            },
+            {
+              "id": "samsungce.airConditionerLighting",
+              "version": 1
+            },
+            {
+              "id": "samsungce.airQualityHealthConcern",
+              "version": 1
+            },
+            {
+              "id": "samsungce.buttonDisplayCondition",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dustFilterAlarm",
+              "version": 1
+            },
+            {
+              "id": "samsungce.individualControlLock",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.selfCheck",
+              "version": 1
+            },
+            {
+              "id": "samsungce.silentAction",
+              "version": 1
+            },
+            {
+              "id": "samsungce.quickControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.welcomeCooling",
+              "version": 1
+            },
+            {
+              "id": "samsungce.unavailableCapabilities",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            },
+            {
+              "id": "sec.wifiConfiguration",
+              "version": 1
+            },
+            {
+              "id": "sec.calmConnectionCare",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "AirConditioner",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-01-28T21:37:31.027Z",
+      "profile": {
+        "id": "091a55f4-7054-39fa-b23e-b56deb7580f8"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.airconditioner",
+        "name": "Samsung-Room-Air-Conditioner",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "1.2.1",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "ARA-WW-TP1-23-GLOBAL|10247441|60010535001711F54E00082200910000",
+        "platformVersion": "DAWIT 2.0",
+        "platformOS": "TizenRT 3.1",
+        "hwVersion": "Realtek",
+        "firmwareVersion": "ARA-WW-TP1-23-GLOBAL_11240702",
+        "vendorId": "DA-AC-RAC-01001",
+        "vendorResourceClientServerVersion": "Realtek Release 3.1.240221",
+        "lastSignupTime": "2025-01-28T21:37:25.560252649Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    }
+  ],
+  "_links": {}
+}

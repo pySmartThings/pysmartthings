@@ -1,0 +1,94 @@
+{
+  "components": {
+    "main": {
+      "button": {
+        "button": {
+          "value": "up",
+          "timestamp": "2025-02-08T21:56:09.703Z"
+        },
+        "numberOfButtons": {
+          "value": 1,
+          "timestamp": "2025-02-08T21:56:09.703Z"
+        },
+        "supportedButtonValues": {
+          "value": ["pushed"],
+          "timestamp": "2025-02-08T21:56:09.703Z"
+        }
+      },
+      "videoCapture": {
+        "stream": {
+          "value": null
+        },
+        "clip": {
+          "value": null
+        }
+      },
+      "videoStream": {
+        "supportedFeatures": {
+          "value": null
+        },
+        "stream": {
+          "value": {
+            "InHomeURL": "",
+            "OutHomeURL": ""
+          },
+          "timestamp": "2024-09-08T00:13:57.963Z"
+        }
+      },
+      "healthCheck": {
+        "checkInterval": {
+          "value": 60,
+          "unit": "s",
+          "data": {
+            "deviceScheme": "UNTRACKED",
+            "protocol": "cloud"
+          },
+          "timestamp": "2024-08-29T17:58:33.680Z"
+        },
+        "healthStatus": {
+          "value": null
+        },
+        "DeviceWatch-Enroll": {
+          "value": null
+        },
+        "DeviceWatch-DeviceStatus": {
+          "value": "online",
+          "data": {},
+          "timestamp": "2025-02-09T17:18:32.636Z"
+        }
+      },
+      "alarm": {
+        "alarm": {
+          "value": "off",
+          "timestamp": "2025-02-08T21:56:09.703Z"
+        }
+      },
+      "refresh": {},
+      "soundSensor": {
+        "sound": {
+          "value": "not detected",
+          "timestamp": "2025-02-08T21:56:09.703Z"
+        }
+      },
+      "motionSensor": {
+        "motion": {
+          "value": "inactive",
+          "timestamp": "2025-02-09T16:35:53.452Z"
+        }
+      },
+      "battery": {
+        "quantity": {
+          "value": null
+        },
+        "battery": {
+          "value": 50,
+          "unit": "%",
+          "timestamp": "2025-02-08T21:56:04.891Z"
+        },
+        "type": {
+          "value": null
+        }
+      }
+    }
+  }
+}

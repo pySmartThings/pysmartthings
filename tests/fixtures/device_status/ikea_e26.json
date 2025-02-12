@@ -1,0 +1,73 @@
+{
+  "components": {
+    "main": {
+      "switchLevel": {
+        "levelRange": {
+          "value": null
+        },
+        "level": {
+          "value": 20,
+          "unit": "%",
+          "timestamp": "2025-02-09T16:42:27.457Z"
+        }
+      },
+      "refresh": {},
+      "synthetic.lightingEffectFade": {
+        "fade": {
+          "value": null
+        }
+      },
+      "firmwareUpdate": {
+        "lastUpdateStatusReason": {
+          "value": null
+        },
+        "availableVersion": {
+          "value": "11115720",
+          "timestamp": "2025-02-09T17:09:37.773Z"
+        },
+        "lastUpdateStatus": {
+          "value": null
+        },
+        "supportedCommands": {
+          "value": null
+        },
+        "state": {
+          "value": "normalOperation",
+          "timestamp": "2025-02-09T17:09:37.766Z"
+        },
+        "updateAvailable": {
+          "value": false,
+          "timestamp": "2025-02-09T17:09:37.767Z"
+        },
+        "currentVersion": {
+          "value": "11115720",
+          "timestamp": "2025-02-09T17:09:37.760Z"
+        },
+        "lastUpdateTime": {
+          "value": null
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-02-09T17:50:29.195Z"
+        }
+      },
+      "colorTemperature": {
+        "colorTemperatureRange": {
+          "value": null
+        },
+        "colorTemperature": {
+          "value": 3395,
+          "unit": "K",
+          "timestamp": "2025-02-09T16:42:27.494Z"
+        }
+      },
+      "synthetic.lightingEffectCircadian": {
+        "circadian": {
+          "value": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# serializer version: 1
+# name: test_fetching_all_locations
+  list([
+    dict({
+      'location_id': '397678e5-9995-4a39-9d9f-ae6ba310236b',
+      'name': 'Home',
+    }),
+    dict({
+      'location_id': '5c03e518-118a-44cb-85ad-7877d0b302e4',
+      'name': 'Test Home',
+    }),
+  ])
+# ---
+# name: test_fetching_single_location
+  dict({
+    'country_code': 'USA',
+    'latitude': 45.00708112,
+    'location_id': '397678e5-9995-4a39-9d9f-ae6ba310236b',
+    'longitude': -93.11223629,
+    'name': 'Test Home',
+    'region_radius': 150,
+    'temperature_scale': 'F',
+  })
+# ---

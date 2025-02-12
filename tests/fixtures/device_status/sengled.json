@@ -1,0 +1,58 @@
+{
+  "components": {
+    "main": {
+      "switchLevel": {
+        "levelRange": {
+          "value": null
+        },
+        "level": {
+          "value": 100,
+          "unit": "%",
+          "timestamp": "2025-02-09T17:40:49.826Z"
+        }
+      },
+      "refresh": {},
+      "synthetic.lightingEffectFade": {
+        "fade": {
+          "value": null
+        }
+      },
+      "firmwareUpdate": {
+        "lastUpdateStatusReason": {
+          "value": null
+        },
+        "availableVersion": {
+          "value": "00000009",
+          "timestamp": "2025-02-09T14:56:17.080Z"
+        },
+        "lastUpdateStatus": {
+          "value": null
+        },
+        "supportedCommands": {
+          "value": null
+        },
+        "state": {
+          "value": "normalOperation",
+          "timestamp": "2025-02-09T14:56:17.080Z"
+        },
+        "updateAvailable": {
+          "value": false,
+          "timestamp": "2025-02-09T14:56:17.078Z"
+        },
+        "currentVersion": {
+          "value": "00000009",
+          "timestamp": "2025-02-09T14:56:17.081Z"
+        },
+        "lastUpdateTime": {
+          "value": null
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-02-09T17:09:35.224Z"
+        }
+      }
+    }
+  }
+}

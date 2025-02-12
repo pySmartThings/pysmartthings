@@ -1,0 +1,48 @@
+{
+  "components": {
+    "main": {
+      "healthCheck": {
+        "checkInterval": {
+          "value": 60,
+          "unit": "s",
+          "data": {
+            "deviceScheme": "UNTRACKED",
+            "protocol": "cloud"
+          },
+          "timestamp": "2023-12-17T18:11:41.578Z"
+        },
+        "healthStatus": {
+          "value": null
+        },
+        "DeviceWatch-Enroll": {
+          "value": null
+        },
+        "DeviceWatch-DeviceStatus": {
+          "value": "online",
+          "data": {},
+          "timestamp": "2025-02-07T15:14:53.765Z"
+        }
+      },
+      "refresh": {},
+      "motionSensor": {
+        "motion": {
+          "value": "inactive",
+          "timestamp": "2025-02-08T07:46:49.463Z"
+        }
+      },
+      "battery": {
+        "quantity": {
+          "value": null
+        },
+        "battery": {
+          "value": 64,
+          "unit": "%",
+          "timestamp": "2025-02-08T03:31:03.047Z"
+        },
+        "type": {
+          "value": null
+        }
+      }
+    }
+  }
+}

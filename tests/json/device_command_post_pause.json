@@ -1,9 +1,0 @@
-{
-  "commands": [
-    {
-      "component": "main",
-      "capability": "mediaPlayback",
-      "command": "pause"
-    }
-  ]
-}

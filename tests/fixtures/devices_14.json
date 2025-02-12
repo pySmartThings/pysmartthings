@@ -1,0 +1,1993 @@
+{
+  "items": [
+    {
+      "deviceId": "bc5c7ce0-b54d-2797-062b-b0da64c0ead5",
+      "name": "[washer] Samsung",
+      "label": "Tv\u00e4ttmaskin",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-WM-WM-000001",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "a0d57919-07c0-4385-abbd-0c61dee01e67",
+      "deviceTypeName": "Samsung OCF Washer",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "remoteControlStatus",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "washerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.dryerDryLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.jobBeginningStatus",
+              "version": 1
+            },
+            {
+              "id": "custom.supportedOptions",
+              "version": 1
+            },
+            {
+              "id": "custom.washerAutoDetergent",
+              "version": 1
+            },
+            {
+              "id": "custom.washerAutoSoftener",
+              "version": 1
+            },
+            {
+              "id": "custom.washerRinseCycles",
+              "version": 1
+            },
+            {
+              "id": "custom.washerSoilLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.washerSpinLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.washerWaterTemperature",
+              "version": 1
+            },
+            {
+              "id": "samsungce.autoDispenseDetergent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.autoDispenseSoftener",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentOrder",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dongleSoftwareInstallation",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentAutoReplenishment",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerAutoReplenishment",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kidsLock",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerOrder",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerBubbleSoak",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerCycle",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerCyclePreset",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerDelayEnd",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerFreezePrevent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWashingTime",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWaterLevel",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWaterValve",
+              "version": 1
+            },
+            {
+              "id": "samsungce.welcomeMessage",
+              "version": 1
+            },
+            {
+              "id": "samsungce.waterConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "samsungce.quickControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.energyPlanner",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            },
+            {
+              "id": "sec.wifiConfiguration",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Washer",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "hca.main",
+          "label": "hca.main",
+          "capabilities": [
+            {
+              "id": "hca.washerMode",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2021-07-18T15:40:03.045Z",
+      "profile": {
+        "id": "3f221c79-d81c-315f-8e8b-b5742802a1e3"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.washer",
+        "name": "[washer] Samsung",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "DA_WM_TP2_20_COMMON|20260041|20010102001411F702A3020700000000",
+        "platformVersion": "DAWIT 2.0",
+        "platformOS": "TizenRT 2.0 + IPv6",
+        "hwVersion": "MediaTek",
+        "firmwareVersion": "DA_WM_TP2_20_COMMON_30230804",
+        "vendorId": "DA-WM-WM-000001",
+        "vendorResourceClientServerVersion": "MediaTek Release 2.211214.1",
+        "lastSignupTime": "2021-07-18T15:39:59.543550Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "70650a5c-3e57-c66b-8c43-d48d06852948",
+      "name": "Samsung QN95AA 75 TV",
+      "label": "Samsung QN95AA 75 TV",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-STV-2021",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "4ee72ee8-5475-4a64-81eb-4225995aa4bc",
+      "deviceTypeName": "Samsung OCF TV",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "tvChannel",
+              "version": 1
+            },
+            {
+              "id": "mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "mediaTrackControl",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "custom.error",
+              "version": 1
+            },
+            {
+              "id": "custom.picturemode",
+              "version": 1
+            },
+            {
+              "id": "custom.soundmode",
+              "version": 1
+            },
+            {
+              "id": "custom.accessibility",
+              "version": 1
+            },
+            {
+              "id": "custom.launchapp",
+              "version": 1
+            },
+            {
+              "id": "custom.recording",
+              "version": 1
+            },
+            {
+              "id": "custom.tvsearch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.remoteControl",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambient",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambientContent",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsFeatures",
+              "version": 1
+            },
+            {
+              "id": "samsungim.fixedFindNode",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.firmwareVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsPowerOnByOcf",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.deviceCategory",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Television",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-11-21T19:38:25.832Z",
+      "profile": {
+        "id": "9ee182bd-f0a3-32c6-b0ee-661d6cab794b"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.tv",
+        "name": "Samsung QN95AA 75 TV",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "QE75QN95AATXXC",
+        "platformVersion": "6.0",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "T-NKM2DEUC-2220.9",
+        "vendorId": "VD-STV-2021",
+        "vendorResourceClientServerVersion": "4.0.26",
+        "locale": "sv_SE",
+        "lastSignupTime": "2023-11-21T19:38:22.417421Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "afcecd0b-a633-baf2-c6b7-da74bf675a7d",
+      "name": "Samsung Soundbar Q950T",
+      "label": "Samsung Soundbar Q950T",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-NetworkAudio-002S",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "4ee72ee8-5475-4a64-81eb-4225995aa4bc",
+      "deviceTypeName": "Samsung OCF Network Audio Player",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "audioTrackData",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.audioInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "audioNotification",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.soundFrom",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.audioGroupInfo",
+              "version": 1,
+              "ephemeral": true
+            }
+          ],
+          "categories": [
+            {
+              "name": "NetworkAudio",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2021-03-16T17:03:55.650Z",
+      "profile": {
+        "id": "3a714028-20ea-3feb-9891-46092132c737"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.networkaudio",
+        "name": "Samsung Soundbar Q950T",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "HW-Q950T",
+        "platformVersion": "5.5",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "HW-Q950TWWB-1022.0",
+        "vendorId": "VD-NetworkAudio-002S",
+        "vendorResourceClientServerVersion": "1.6.36",
+        "lastSignupTime": "2021-03-16T17:03:48.301555Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "5aeee631-b8f1-ba8d-5d11-58177181b32a",
+      "name": "Samsung The Frame 55",
+      "label": "Samsung The Frame 55",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-STV-2022",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "bd362890-6541-49a0-a164-455f8883a5f3",
+      "deviceTypeName": "Samsung OCF TV",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "tvChannel",
+              "version": 1
+            },
+            {
+              "id": "mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "mediaTrackControl",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "custom.error",
+              "version": 1
+            },
+            {
+              "id": "custom.picturemode",
+              "version": 1
+            },
+            {
+              "id": "custom.soundmode",
+              "version": 1
+            },
+            {
+              "id": "custom.accessibility",
+              "version": 1
+            },
+            {
+              "id": "custom.launchapp",
+              "version": 1
+            },
+            {
+              "id": "custom.recording",
+              "version": 1
+            },
+            {
+              "id": "custom.tvsearch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.remoteControl",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambient",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambientContent",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsFeatures",
+              "version": 1
+            },
+            {
+              "id": "samsungim.fixedFindNode",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "sec.deviceConnectionState",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.firmwareVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsPowerOnByOcf",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.deviceCategory",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Television",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-11-16T17:07:34.092Z",
+      "profile": {
+        "id": "aaf124c9-bde8-3d08-a869-d528d310101a"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.tv",
+        "name": "Samsung The Frame 55",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "TQ55LS03BGUXXC",
+        "platformVersion": "6.5",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "T-PTMDEUC-1651.7|ST_ENERGY",
+        "vendorId": "VD-STV-2022",
+        "vendorResourceClientServerVersion": "4.0.26",
+        "locale": "en_GB",
+        "lastSignupTime": "2024-05-07T20:33:44.141230Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "2f7f7d2b-e683-48ae-86f7-e57df6a0bce2",
+      "name": "SmartThings v3 Hub",
+      "label": "Hubb",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "63f1469e-dc4a-3689-8cc5-69e293c1eb21",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "105e6d1a-52a4-4797-a235-5a48d7d433c8",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "bridge",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Hub",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2021-07-30T12:23:02.902Z",
+      "childDevices": [
+        {
+          "deviceId": "c85fced9-c474-4a47-93c2-037cc7829536",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        }
+      ],
+      "profile": {
+        "id": "d77ba2f6-c377-36f5-bb68-15db9d1aa0e1"
+      },
+      "hub": {
+        "hubEui": "D052A8B582DD0001",
+        "firmwareVersion": "000.055.00005",
+        "hubDrivers": [
+          {
+            "driverVersion": "2024-12-17T18:00:36.611958104",
+            "driverId": "01976eca-e7ff-4d1b-91db-9c980ce668d7",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-11-04T22:39:21.535445007",
+            "driverId": "46b8bada-1a55-4f84-8915-47ce2cad3621",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:35.032104982",
+            "driverId": "4eb5b19a-7bbc-452f-859b-c6d7d857b2da",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2025-02-03T22:38:47.582952919",
+            "driverId": "7beb8bc2-8dfa-45c2-8fdb-7373d4597b12",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-21T19:06:49.949052991",
+            "driverId": "9050ac53-358c-47a1-a927-9a70f5f28cee",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-11-04T22:39:18.253781754",
+            "driverId": "c21a6c77-872c-474e-be5b-5f6f11a240ef",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-01-30T21:36:15.547412569",
+            "driverId": "c856a3fd-69ee-4478-a224-d7279b6d978f",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2025-01-13T18:55:57.509807915",
+            "driverId": "cd898d81-6c27-4d27-a529-dfadc8caae5a",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2023-07-11T18:43:49.169154271",
+            "driverId": "d9c3f8b8-c3c3-4b77-9ddd-01d08102c84b",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:54.195543653",
+            "driverId": "dbe192cb-f6a1-4369-a843-d1c42e5c91ba",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          }
+        ],
+        "hubData": {
+          "zwaveStaticDsk": "41366-53789-58881-46221-32763-54341-00742-59336",
+          "zwaveS2": true,
+          "hardwareType": "V3_HUB",
+          "hardwareId": "0036",
+          "zigbeeFirmware": "6.1.6",
+          "zigbee3": true,
+          "zigbeeOta": "ENABLED_WITH_LIGHTS",
+          "otaEnable": "true",
+          "zigbeeUnsecureRejoin": true,
+          "zigbeeRequiresExternalHardware": false,
+          "threadRequiresExternalHardware": false,
+          "failoverAvailability": "Available",
+          "primarySupportAvailability": "Available",
+          "secondarySupportAvailability": "Available",
+          "zigbeeAvailability": "Available",
+          "zwaveAvailability": "Available",
+          "threadAvailability": "Available",
+          "lanAvailability": "Available",
+          "matterAvailability": "Available",
+          "localVirtualDeviceAvailability": "Available",
+          "childDeviceAvailability": "Unsupported",
+          "edgeDriversAvailability": "Available",
+          "hubReplaceAvailability": "Available",
+          "hubLocalApiAvailability": "Available",
+          "zigbeeManualFirmwareUpdateSupported": true,
+          "matterRendezvousHedgeSupported": true,
+          "matterSoftwareComponentVersion": "1.3-0",
+          "matterDeviceDiagnosticsAvailability": "Available",
+          "zigbeeDeviceDiagnosticsAvailability": "Available",
+          "hedgeTlsCertificate": "",
+          "zigbeeChannel": "25",
+          "zigbeePanId": "9114",
+          "zigbeeEui": "286D970002073AC8",
+          "zigbeeNodeID": "0000",
+          "zwaveNodeID": "01",
+          "zwaveHomeID": "E1FBE466",
+          "zwaveSucID": "01",
+          "zwaveVersion": "6.10",
+          "zwaveRegion": "EU",
+          "macAddress": "28:6D:97:CF:CE:88",
+          "localIP": "192.168.1.120",
+          "zigbeeRadioFunctional": true,
+          "zwaveRadioFunctional": true,
+          "zigbeeRadioEnabled": true,
+          "zwaveRadioEnabled": true,
+          "zigbeeRadioDetected": true,
+          "zwaveRadioDetected": true
+        }
+      },
+      "type": "HUB",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "a106da6d-2981-4c39-84c4-5d5b75b4784c",
+      "name": "[TV] Samsung Q70 Series (65)",
+      "label": "Samsung Q70 Series",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-STV_2018_K",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "24c83614-3f5d-4cb2-a1d5-beaf30144ec5",
+      "deviceTypeName": "Samsung OCF TV",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "tvChannel",
+              "version": 1
+            },
+            {
+              "id": "mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "mediaTrackControl",
+              "version": 1
+            },
+            {
+              "id": "custom.error",
+              "version": 1
+            },
+            {
+              "id": "custom.picturemode",
+              "version": 1
+            },
+            {
+              "id": "custom.soundmode",
+              "version": 1
+            },
+            {
+              "id": "custom.accessibility",
+              "version": 1
+            },
+            {
+              "id": "custom.launchapp",
+              "version": 1
+            },
+            {
+              "id": "custom.recording",
+              "version": 1
+            },
+            {
+              "id": "custom.tvsearch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.remoteControl",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambient",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambientContent",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambient18",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.deviceCategory",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.firmwareVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsPowerOnByOcf",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Television",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2020-08-28T18:07:41Z",
+      "profile": {
+        "id": "09d696cc-ce55-3591-8574-b5e3dec1d5a1"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.tv",
+        "name": "[TV] Samsung Q70 Series (65)",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "QE65Q70RATXXC",
+        "platformVersion": "Tizen 5.0",
+        "platformOS": "4.1.10",
+        "hwVersion": "0-0",
+        "firmwareVersion": "T-MSMDEUC-1420.0",
+        "vendorId": "VD-STV_2018_K",
+        "locale": "sv_SE",
+        "lastSignupTime": "2020-08-28T18:07:38.502Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "e3ffcb5a-294b-c68a-438d-9e27bb7660a0",
+      "name": "[oven] Samsung",
+      "label": "Ugn",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-KS-WALLOVEN-000003",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "38e04dda-c5bb-4471-9357-e003bedc0173",
+      "deviceTypeName": "Samsung OCF Oven",
+      "components": [
+        {
+          "id": "main",
+          "label": "Oven",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "ovenMode",
+              "version": 1
+            },
+            {
+              "id": "ovenOperatingState",
+              "version": 1
+            },
+            {
+              "id": "remoteControlStatus",
+              "version": 1
+            },
+            {
+              "id": "ovenSetpoint",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.ovenMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.ovenOperatingState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.doorState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.meatProbe",
+              "version": 1
+            },
+            {
+              "id": "samsungce.lamp",
+              "version": 1
+            },
+            {
+              "id": "samsungce.definedRecipe",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kitchenDeviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kitchenModeSpecification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kitchenDeviceDefaults",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kidsLock",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Oven",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "cavity-01",
+          "label": "1",
+          "capabilities": [
+            {
+              "id": "ovenMode",
+              "version": 1
+            },
+            {
+              "id": "ovenOperatingState",
+              "version": 1
+            },
+            {
+              "id": "ovenSetpoint",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "samsungce.ovenMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.definedRecipe",
+              "version": 1
+            },
+            {
+              "id": "samsungce.ovenOperatingState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kitchenDeviceDefaults",
+              "version": 1
+            },
+            {
+              "id": "custom.ovenCavityStatus",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2019-03-08T15:44:14Z",
+      "profile": {
+        "id": "4186cd8e-7090-3aa2-8e3c-efb48f5d79bf"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.oven",
+        "name": "[oven] Samsung",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "1.2.1",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "ARTIK051_GB_WO_003|40423141|50030018001211510200000000000000",
+        "platformVersion": "0.1.0",
+        "platformOS": "TizenRT2.0",
+        "hwVersion": "1.0",
+        "firmwareVersion": "ARTIK051_GB_WO_003_40200913",
+        "vendorId": "DA-KS-WALLOVEN-000003",
+        "lastSignupTime": "2023-05-05T15:28:35.130155Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "c85fced9-c474-4a47-93c2-037cc7829536",
+      "name": "sonos-player",
+      "label": "Elliots Rum",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "ef0a871d-9ed1-377d-8746-0da1dfd50598",
+      "deviceManufacturerCode": "Sonos",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "105e6d1a-52a4-4797-a235-5a48d7d433c8",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "mediaGroup",
+              "version": 1
+            },
+            {
+              "id": "mediaPresets",
+              "version": 1
+            },
+            {
+              "id": "mediaTrackControl",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "audioNotification",
+              "version": 1
+            },
+            {
+              "id": "audioTrackData",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Speaker",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-02-02T13:18:28.570Z",
+      "parentDeviceId": "2f7f7d2b-e683-48ae-86f7-e57df6a0bce2",
+      "profile": {
+        "id": "0443d359-3f76-383f-82a4-6fc4a879ef1d"
+      },
+      "lan": {
+        "networkId": "38420B9108F6",
+        "driverId": "c21a6c77-872c-474e-be5b-5f6f11a240ef",
+        "executingLocally": true,
+        "hubId": "2f7f7d2b-e683-48ae-86f7-e57df6a0bce2",
+        "provisioningState": "TYPED"
+      },
+      "type": "LAN",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "aafdee8c-4ede-2ed7-9d29-d596b84d65aa",
+      "name": "Samsung-Refrigerator",
+      "label": "Kylsk\u00e5p",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-REF-NORMAL-01011",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "38e04dda-c5bb-4471-9357-e003bedc0173",
+      "deviceTypeName": "Samsung OCF Refrigerator",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "refrigeration",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "custom.deodorFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.dustFilter",
+              "version": 1
+            },
+            {
+              "id": "custom.deviceReportStateConfiguration",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.fridgeMode",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledComponents",
+              "version": 1
+            },
+            {
+              "id": "custom.waterFilter",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.fridgeVacationMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.powerCool",
+              "version": 1
+            },
+            {
+              "id": "samsungce.powerFreeze",
+              "version": 1
+            },
+            {
+              "id": "samsungce.sabbathMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.selfCheck",
+              "version": 1
+            },
+            {
+              "id": "samsungce.viewInside",
+              "version": 1
+            },
+            {
+              "id": "samsungce.fridgeWelcomeLighting",
+              "version": 1
+            },
+            {
+              "id": "samsungce.quickControl",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            },
+            {
+              "id": "sec.wifiConfiguration",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Refrigerator",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "freezer",
+          "label": "freezer",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.fridgeMode",
+              "version": 1
+            },
+            {
+              "id": "custom.thermostatSetpointControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.temperatureSetting",
+              "version": 1
+            },
+            {
+              "id": "samsungce.freezerConvertMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.unavailableCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "cooler",
+          "label": "cooler",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.fridgeMode",
+              "version": 1
+            },
+            {
+              "id": "custom.thermostatSetpointControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.temperatureSetting",
+              "version": 1
+            },
+            {
+              "id": "samsungce.unavailableCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "cvroom",
+          "label": "cvroom",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.fridgeMode",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "onedoor",
+          "label": "onedoor",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "thermostatCoolingSetpoint",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.fridgeMode",
+              "version": 1
+            },
+            {
+              "id": "custom.thermostatSetpointControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.temperatureSetting",
+              "version": 1
+            },
+            {
+              "id": "samsungce.freezerConvertMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.unavailableCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "icemaker",
+          "label": "icemaker",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "icemaker-02",
+          "label": "icemaker-02",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "icemaker-03",
+          "label": "icemaker-03",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "scale-10",
+          "label": "scale-10",
+          "capabilities": [
+            {
+              "id": "samsungce.weightMeasurement",
+              "version": 1
+            },
+            {
+              "id": "samsungce.weightMeasurementCalibration",
+              "version": 1
+            },
+            {
+              "id": "samsungce.connectionState",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "scale-11",
+          "label": "scale-11",
+          "capabilities": [
+            {
+              "id": "samsungce.weightMeasurement",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "pantry-01",
+          "label": "pantry-01",
+          "capabilities": [
+            {
+              "id": "samsungce.fridgePantryInfo",
+              "version": 1
+            },
+            {
+              "id": "samsungce.fridgePantryMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.meatAging",
+              "version": 1
+            },
+            {
+              "id": "samsungce.foodDefrost",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "pantry-02",
+          "label": "pantry-02",
+          "capabilities": [
+            {
+              "id": "samsungce.fridgePantryInfo",
+              "version": 1
+            },
+            {
+              "id": "samsungce.fridgePantryMode",
+              "version": 1
+            },
+            {
+              "id": "samsungce.meatAging",
+              "version": 1
+            },
+            {
+              "id": "samsungce.foodDefrost",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-02-02T13:55:41.267Z",
+      "profile": {
+        "id": "37c7b355-bdaa-371b-b246-dbdf2a7f9c84"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.refrigerator",
+        "name": "Samsung-Refrigerator",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "TP1X_REF_21K|00175041|00040141041811304104000020010000",
+        "platformVersion": "SYSTEM 2.0",
+        "platformOS": "TizenRT 4.0",
+        "hwVersion": "Realtek",
+        "firmwareVersion": "A-RFWW-TP1-24-T4-COM_20240908",
+        "vendorId": "DA-REF-NORMAL-01011",
+        "vendorResourceClientServerVersion": "MediaTek Release 240908",
+        "lastSignupTime": "2025-02-02T13:55:41.197590135Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "eb6afef1-f59a-247f-95e2-7387a58632e1",
+      "name": "[dryer] Samsung",
+      "label": "Torktumlare",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-WM-WD-000001",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "eed0e167-e793-459b-80cb-a0b02e2b86c2",
+      "ownerId": "2c69cc36-85ae-c41a-9981-a4ee96cd9137",
+      "roomId": "a0d57919-07c0-4385-abbd-0c61dee01e67",
+      "deviceTypeName": "Samsung OCF Dryer",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "remoteControlStatus",
+              "version": 1
+            },
+            {
+              "id": "dryerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.dryerDryLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.dryerWrinklePrevent",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.jobBeginningStatus",
+              "version": 1
+            },
+            {
+              "id": "custom.supportedOptions",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentOrder",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dongleSoftwareInstallation",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerAutoCycleLink",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerCycle",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerCyclePreset",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerDelayEnd",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerDryingTemperature",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerDryingTime",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerFreezePrevent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kidsLock",
+              "version": 1
+            },
+            {
+              "id": "samsungce.welcomeMessage",
+              "version": 1
+            },
+            {
+              "id": "samsungce.quickControl",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            },
+            {
+              "id": "sec.wifiConfiguration",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Dryer",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "hca.main",
+          "label": "hca.main",
+          "capabilities": [
+            {
+              "id": "hca.dryerMode",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2021-07-18T15:43:00.701Z",
+      "profile": {
+        "id": "53a1d049-eeda-396c-8324-e33438ef57be"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.dryer",
+        "name": "[dryer] Samsung",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "DA_WM_TP2_20_COMMON|20262941|300101020014110002A3030700000000",
+        "platformVersion": "DAWIT 2.0",
+        "platformOS": "TizenRT 2.0 + IPv6",
+        "hwVersion": "MediaTek",
+        "firmwareVersion": "DA_WM_TP2_20_COMMON_30230804",
+        "vendorId": "DA-WM-WD-000001",
+        "vendorResourceClientServerVersion": "MediaTek Release 2.211214.1",
+        "lastSignupTime": "2021-07-18T15:42:54.398759Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    }
+  ],
+  "_links": {}
+}

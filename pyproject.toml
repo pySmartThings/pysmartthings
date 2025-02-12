@@ -1,0 +1,169 @@
+[tool.poetry]
+name = "pysmartthings"
+version = "0.0.0"
+description = "Asynchronous Python client for SmartThings."
+authors = ["Andrew Sayre <andrew@sayre.net>"]
+maintainers = ["Joost Lekkerkerker <joostlek@outlook.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/pySmartThings/pysmartthings"
+repository = "https://github.com/pySmartThings/pysmartthings"
+documentation = "https://github.com/pySmartThings/pysmartthings"
+keywords = ["smartthings", "api", "async", "client"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: AsyncIO",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3",
+  "Topic :: Home Automation",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [
+    { include = "pysmartthings", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = ">=3.0.0"
+yarl = ">=1.6.0"
+mashumaro = "^3.11"
+orjson = "^3.9.10"
+
+[tool.poetry.group.dev.dependencies]
+codespell = "2.4.1"
+covdefaults = "2.3.0"
+coverage = {version = "7.6.12", extras = ["toml"]}
+pylint = "3.3.4"
+pytest = "8.3.4"
+pytest-asyncio = "0.25.3"
+pytest-cov = "6.0.0"
+pytest-timeout = "2.3.1"
+pre-commit = "4.1.0"
+pre-commit-hooks = "5.0.0"
+yamllint = "1.35.1"
+ruff = "0.9.6"
+syrupy = "4.8.1"
+aioresponses = "0.7.8"
+treelib = "1.7.0"
+pyperclip = "1.9.0"
+mypy = "1.15.0"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/pySmartThings/pysmartthings/issues"
+Changelog = "https://github.com/pySmartThings/pysmartthings/releases"
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 80
+
+[tool.coverage.run]
+plugins = ["covdefaults"]
+source = ["pysmartthings"]
+
+[tool.mypy]
+# Specify the target platform details in config, so your developers are
+# free to run mypy on Windows, Linux, or macOS and get consistent
+# results.
+platform = "linux"
+python_version = "3.11"
+
+# show error messages from unrelated files
+follow_imports = "normal"
+
+# suppress errors about unsatisfied imports
+ignore_missing_imports = true
+
+# be strict
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_optional = true
+warn_incomplete_stub = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.pylint.MASTER]
+ignore = [
+  "tests",
+]
+
+[tool.pylint.BASIC]
+good-names = [
+  "_",
+  "ex",
+  "fp",
+  "i",
+  "id",
+  "j",
+  "k",
+  "on",
+  "Run",
+  "T",
+]
+
+[tool.pylint.DESIGN]
+max-attributes = 8
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = [
+  "duplicate-code",
+  "format",
+  "unsubscriptable-object",
+  "too-many-instance-attributes",
+  "too-many-arguments",
+  "too-many-public-methods",
+  "wrong-import-order",
+  "too-many-positional-arguments",
+  "too-many-branches",
+]
+
+[tool.pylint.SIMILARITIES]
+ignore-imports = true
+
+[tool.pylint.FORMAT]
+max-line-length = 88
+
+[tool.pytest.ini_options]
+addopts = "--cov"
+asyncio_mode = "auto"
+
+[tool.ruff.lint]
+ignore = [
+  "ANN401", # Opinioated warning on disallowing dynamically typed expressions
+  "COM812", # Conflicts with other rules
+  "D203", # Conflicts with other rules
+  "D213", # Conflicts with other rules
+  "D417", # False positives in some occasions
+  "ISC001", # Conflicts with other rules
+  "PLR2004", # Just annoying, not really useful
+]
+select = ["ALL"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.isort]
+known-first-party = ["python_overseerr"]
+force-sort-within-sections = true
+split-on-trailing-comma = false
+combine-as-imports = true
+
+[tool.ruff.lint.mccabe]
+max-complexity = 25
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]

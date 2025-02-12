@@ -1,0 +1,165 @@
+{
+  "components": {
+    "main": {
+      "ocf": {
+        "st": {
+          "value": "2021-01-01T00:01:01Z",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mndt": {
+          "value": "",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnfv": {
+          "value": "20240611.1",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnhw": {
+          "value": "",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "di": {
+          "value": "0e168539-061a-5f02-2beb-cc5cb6bb3b7b",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnsl": {
+          "value": "",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "dmv": {
+          "value": "res.1.1.0,sh.1.1.0",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "n": {
+          "value": "[system a/c] Samsung",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnmo": {
+          "value": "MIM-H04N|240611|61FFFF00001411000000000000000000",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "vid": {
+          "value": "DA-SAC-WIFIKIT-000001",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnmn": {
+          "value": "Samsung Electronics",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnml": {
+          "value": "",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnpv": {
+          "value": "4.0",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "mnos": {
+          "value": "Tizen",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "pi": {
+          "value": "0e168539-061a-5f02-2beb-cc5cb6bb3b7b",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        },
+        "icv": {
+          "value": "core.1.1.0",
+          "timestamp": "2025-01-29T22:00:56.209Z"
+        }
+      },
+      "custom.disabledCapabilities": {
+        "disabledCapabilities": {
+          "value": [],
+          "timestamp": "2025-02-09T15:42:12.955Z"
+        }
+      },
+      "samsungce.softwareUpdate": {
+        "targetModule": {
+          "value": null
+        },
+        "otnDUID": {
+          "value": null
+        },
+        "lastUpdatedDate": {
+          "value": null
+        },
+        "availableModules": {
+          "value": [],
+          "timestamp": "2025-02-09T15:42:12.955Z"
+        },
+        "newVersionAvailable": {
+          "value": false,
+          "timestamp": "2025-02-09T15:42:12.955Z"
+        },
+        "operatingState": {
+          "value": null
+        },
+        "progress": {
+          "value": null
+        }
+      },
+      "samsungce.driverVersion": {
+        "versionNumber": {
+          "value": 22100101,
+          "timestamp": "2025-01-29T22:00:56.311Z"
+        }
+      },
+      "refresh": {},
+      "execute": {
+        "data": {
+          "value": null
+        }
+      },
+      "samsungce.deviceIdentification": {
+        "micomAssayCode": {
+          "value": null
+        },
+        "modelName": {
+          "value": null
+        },
+        "serialNumber": {
+          "value": null
+        },
+        "serialNumberExtra": {
+          "value": null
+        },
+        "modelClassificationCode": {
+          "value": null
+        },
+        "description": {
+          "value": null
+        },
+        "releaseYear": {
+          "value": null
+        },
+        "binaryId": {
+          "value": "MIM-H04N",
+          "timestamp": "2025-02-09T15:42:12.955Z"
+        }
+      },
+      "samsungce.wifiKitSubDevices": {
+        "numberOfConnectedDevices": {
+          "value": 1,
+          "timestamp": "2025-02-09T15:42:12.955Z"
+        },
+        "subDevices": {
+          "value": [
+            {
+              "deviceId": "0e168539-061a-5f02-2beb-000001200000",
+              "connected": true,
+              "name": "Air Conditioner",
+              "description": "RAC"
+            }
+          ],
+          "timestamp": "2025-02-09T15:42:12.955Z"
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-02-09T15:42:12.955Z"
+        }
+      }
+    }
+  }
+}

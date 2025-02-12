@@ -1,0 +1,61 @@
+{
+  "components": {
+    "main": {
+      "relativeHumidityMeasurement": {
+        "humidity": {
+          "value": 26,
+          "unit": "%",
+          "timestamp": "2025-02-08T09:04:47.696Z"
+        }
+      },
+      "healthCheck": {
+        "checkInterval": {
+          "value": 60,
+          "unit": "s",
+          "data": {
+            "deviceScheme": "UNTRACKED",
+            "protocol": "cloud"
+          },
+          "timestamp": "2025-02-07T23:01:15.973Z"
+        },
+        "healthStatus": {
+          "value": null
+        },
+        "DeviceWatch-Enroll": {
+          "value": null
+        },
+        "DeviceWatch-DeviceStatus": {
+          "value": "offline",
+          "data": {
+            "reason": "DEVICE-OFFLINE"
+          },
+          "timestamp": "2025-02-08T09:04:47.696Z"
+        }
+      },
+      "temperatureMeasurement": {
+        "temperatureRange": {
+          "value": null
+        },
+        "temperature": {
+          "value": 26,
+          "unit": "C",
+          "timestamp": "2025-02-08T09:04:47.696Z"
+        }
+      },
+      "refresh": {},
+      "battery": {
+        "quantity": {
+          "value": null
+        },
+        "battery": {
+          "value": 100,
+          "unit": "%",
+          "timestamp": "2025-02-08T09:04:47.696Z"
+        },
+        "type": {
+          "value": null
+        }
+      }
+    }
+  }
+}

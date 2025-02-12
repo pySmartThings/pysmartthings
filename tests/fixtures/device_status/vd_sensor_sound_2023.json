@@ -1,0 +1,109 @@
+{
+  "components": {
+    "main": {
+      "ocf": {
+        "st": {
+          "value": "2024-12-18T00:04:21Z",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mndt": {
+          "value": "2023-01-01",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnfv": {
+          "value": "latest",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnhw": {
+          "value": "",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "di": {
+          "value": "930eced7-366d-4e6d-b2f2-e3a80f3d5a0c",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnsl": {
+          "value": "",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "dmv": {
+          "value": "res.1.1.0,sh.1.1.0",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "n": {
+          "value": "Sound Sensor - 55 The Frame",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnmo": {
+          "value": "QE55LS03DAUXXN",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "vid": {
+          "value": "VD-Sensor.Sound-2023",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnmn": {
+          "value": "Samsung Electronics",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnml": {
+          "value": "",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnpv": {
+          "value": "8.0",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "mnos": {
+          "value": "Tizen",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "pi": {
+          "value": "930eced7-366d-4e6d-b2f2-e3a80f3d5a0c",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        },
+        "icv": {
+          "value": "core.1.1.0",
+          "timestamp": "2024-12-18T00:04:22.237Z"
+        }
+      },
+      "samsungvd.soundDetection": {
+        "soundDetected": {
+          "value": "off",
+          "timestamp": "2025-02-11T18:33:12.594Z"
+        }
+      },
+      "samsungvd.deviceCategory": {
+        "category": {
+          "value": null
+        }
+      },
+      "soundDetection": {
+        "soundDetectionState": {
+          "value": "disabled",
+          "timestamp": "2025-02-09T00:23:59.329Z"
+        },
+        "supportedSoundTypes": {
+          "value": ["noSound", "dogBarking"],
+          "timestamp": "2025-02-09T00:23:59.329Z"
+        },
+        "soundDetected": {
+          "value": "noSound",
+          "timestamp": "2025-02-09T00:23:59.329Z"
+        }
+      },
+      "refresh": {},
+      "execute": {
+        "data": {
+          "value": null
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-02-11T18:33:12.594Z"
+        }
+      }
+    }
+  }
+}

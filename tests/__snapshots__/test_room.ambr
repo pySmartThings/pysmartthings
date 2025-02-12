@@ -1,0 +1,17 @@
+# serializer version: 1
+# name: test_fetching_all_rooms
+  list([
+    dict({
+      'location_id': '397678e5-9995-4a39-9d9f-ae6ba310236b',
+      'name': 'Theater',
+      'room_id': '7715151d-0314-457a-a82c-5ce48900e065',
+    }),
+  ])
+# ---
+# name: test_fetching_single_room
+  dict({
+    'location_id': '397678e5-9995-4a39-9d9f-ae6ba310236b',
+    'name': 'Theater',
+    'room_id': '7715151d-0314-457a-a82c-5ce48900e065',
+  })
+# ---

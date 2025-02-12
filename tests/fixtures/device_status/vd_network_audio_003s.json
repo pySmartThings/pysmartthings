@@ -1,0 +1,225 @@
+{
+  "components": {
+    "main": {
+      "samsungvd.soundFrom": {
+        "mode": {
+          "value": 10,
+          "timestamp": "2025-02-11T17:41:57.454Z"
+        },
+        "detailName": {
+          "value": "TV",
+          "timestamp": "2025-02-11T17:41:57.454Z"
+        }
+      },
+      "audioVolume": {
+        "volume": {
+          "value": 18,
+          "unit": "%",
+          "timestamp": "2025-02-11T19:02:52.690Z"
+        }
+      },
+      "samsungvd.audioGroupInfo": {
+        "role": {
+          "value": null
+        },
+        "status": {
+          "value": null
+        }
+      },
+      "refresh": {},
+      "audioNotification": {},
+      "execute": {
+        "data": {
+          "value": null
+        }
+      },
+      "samsungvd.audioInputSource": {
+        "supportedInputSources": {
+          "value": ["BT", "WIFI"],
+          "timestamp": "2025-02-11T08:21:18.201Z"
+        },
+        "inputSource": {
+          "value": "D.IN",
+          "timestamp": "2025-02-11T08:21:18.201Z"
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "on",
+          "timestamp": "2025-02-11T19:02:51.925Z"
+        }
+      },
+      "sec.wifiConfiguration": {
+        "autoReconnection": {
+          "value": true,
+          "timestamp": "2025-02-11T08:21:17.849Z"
+        },
+        "minVersion": {
+          "value": "1.0",
+          "timestamp": "2025-02-11T08:21:17.849Z"
+        },
+        "supportedWiFiFreq": {
+          "value": ["2.4G", "5G"],
+          "timestamp": "2025-02-11T08:21:17.849Z"
+        },
+        "supportedAuthType": {
+          "value": [
+            "OPEN",
+            "WEP",
+            "WPA-PSK",
+            "WPA2-PSK",
+            "EAP",
+            "SAE",
+            "OWE",
+            "FT-PSK"
+          ],
+          "timestamp": "2025-02-11T08:21:17.849Z"
+        },
+        "protocolType": {
+          "value": ["ble_ocf"],
+          "timestamp": "2025-02-11T08:21:17.849Z"
+        }
+      },
+      "ocf": {
+        "st": {
+          "value": "2025-01-17T01:52:47Z",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mndt": {
+          "value": "2024-01-01",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnfv": {
+          "value": "SAT-MT8532D24WWC-1016.0",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnhw": {
+          "value": "",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "di": {
+          "value": "9985fbfa-777a-4fae-a637-6148f41b3c63",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnsl": {
+          "value": "",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "dmv": {
+          "value": "res.1.1.0,sh.1.1.0",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "n": {
+          "value": "Ultra Slim Soundbar",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnmo": {
+          "value": "HW-S701D",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "vid": {
+          "value": "VD-NetworkAudio-003S",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnmn": {
+          "value": "Samsung Electronics",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnml": {
+          "value": "",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnpv": {
+          "value": "8.0",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "mnos": {
+          "value": "Tizen",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "pi": {
+          "value": "9985fbfa-777a-4fae-a637-6148f41b3c63",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        },
+        "icv": {
+          "value": "core.1.1.0",
+          "timestamp": "2025-01-17T08:58:48.549Z"
+        }
+      },
+      "samsungvd.supportsFeatures": {
+        "mediaOutputSupported": {
+          "value": null
+        },
+        "imeAdvSupported": {
+          "value": null
+        },
+        "wifiUpdateSupport": {
+          "value": true,
+          "timestamp": "2025-02-11T08:21:18.103Z"
+        },
+        "executableServiceList": {
+          "value": null
+        },
+        "remotelessSupported": {
+          "value": null
+        },
+        "mobileCamSupported": {
+          "value": null
+        }
+      },
+      "sec.diagnosticsInformation": {
+        "logType": {
+          "value": ["errCode", "dump"],
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        },
+        "endpoint": {
+          "value": "PIPER",
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        },
+        "minVersion": {
+          "value": "3.0",
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        },
+        "signinPermission": {
+          "value": null
+        },
+        "setupId": {
+          "value": "301",
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        },
+        "protocolType": {
+          "value": "ble_ocf",
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        },
+        "tsId": {
+          "value": "VD02",
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        },
+        "mnId": {
+          "value": "0AJK",
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        },
+        "dumpType": {
+          "value": "file",
+          "timestamp": "2025-02-11T08:21:18.057Z"
+        }
+      },
+      "audioMute": {
+        "mute": {
+          "value": "unmuted",
+          "timestamp": "2025-02-11T19:02:51.841Z"
+        }
+      },
+      "samsungvd.thingStatus": {
+        "updatedTime": {
+          "value": 1739262078,
+          "timestamp": "2025-02-11T08:21:17.905Z"
+        },
+        "status": {
+          "value": "Idle",
+          "timestamp": "2025-02-11T08:21:17.905Z"
+        }
+      }
+    }
+  }
+}

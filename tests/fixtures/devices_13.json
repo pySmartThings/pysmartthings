@@ -1,0 +1,506 @@
+{
+  "items": [
+    {
+      "deviceId": "d7c54320-6d75-4543-ab1f-9bd105336aae",
+      "name": "SmartThings v2 Hub",
+      "label": "Home",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "63f1469e-dc4a-3689-8cc5-69e293c1eb21",
+      "locationId": "c4904031-30e5-4920-9ea7-0a768e355b2a",
+      "ownerId": "bad8318e-e67b-c050-0709-6c3f594384ce",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "bridge",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Hub",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2018-03-15T14:30:12Z",
+      "childDevices": [
+        {
+          "deviceId": "42410e99-63cb-49d0-8f2f-d036f1b3ce66",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        }
+      ],
+      "profile": {
+        "id": "d77ba2f6-c377-36f5-bb68-15db9d1aa0e1"
+      },
+      "hub": {
+        "hubEui": "D052A8540CAF0001",
+        "firmwareVersion": "000.055.00005",
+        "hubDrivers": [
+          {
+            "driverVersion": "2024-12-17T18:00:36.611958104",
+            "driverId": "01976eca-e7ff-4d1b-91db-9c980ce668d7",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-12-17T18:00:48.572636846",
+            "driverId": "0f206d13-508e-4342-9cbb-937e02489141",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-12-17T18:00:44.518908102",
+            "driverId": "2cbf55e3-dbc2-48a2-8be5-4c3ce756b692",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:51.437710641",
+            "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:35.032104982",
+            "driverId": "4eb5b19a-7bbc-452f-859b-c6d7d857b2da",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2025-02-03T22:38:47.582952919",
+            "driverId": "7beb8bc2-8dfa-45c2-8fdb-7373d4597b12",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-21T19:06:49.949052991",
+            "driverId": "9050ac53-358c-47a1-a927-9a70f5f28cee",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-11-04T22:39:18.253781754",
+            "driverId": "c21a6c77-872c-474e-be5b-5f6f11a240ef",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-01-30T21:36:15.547412569",
+            "driverId": "c856a3fd-69ee-4478-a224-d7279b6d978f",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2025-01-13T18:55:57.509807915",
+            "driverId": "cd898d81-6c27-4d27-a529-dfadc8caae5a",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2023-07-11T18:43:49.169154271",
+            "driverId": "d9c3f8b8-c3c3-4b77-9ddd-01d08102c84b",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:54.195543653",
+            "driverId": "dbe192cb-f6a1-4369-a843-d1c42e5c91ba",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          }
+        ],
+        "hubData": {
+          "zwaveStaticDsk": "07842-01077-50282-50157-16964-07764-47073-47847",
+          "zwaveS2": true,
+          "hardwareType": "V2_HUB",
+          "hardwareId": "000E",
+          "zigbeeFirmware": "5.7.10",
+          "zigbee3": true,
+          "zigbeeOta": "DISABLED",
+          "otaEnable": "false",
+          "zigbeeUnsecureRejoin": false,
+          "zigbeeRequiresExternalHardware": false,
+          "threadRequiresExternalHardware": false,
+          "failoverAvailability": "Unsupported",
+          "primarySupportAvailability": "Unsupported",
+          "secondarySupportAvailability": "Unsupported",
+          "zigbeeAvailability": "Available",
+          "zwaveAvailability": "Available",
+          "lanAvailability": "Available",
+          "matterAvailability": "Available",
+          "localVirtualDeviceAvailability": "Available",
+          "childDeviceAvailability": "Unsupported",
+          "edgeDriversAvailability": "Available",
+          "hubReplaceAvailability": "Available",
+          "hubLocalApiAvailability": "Available",
+          "zigbeeManualFirmwareUpdateSupported": true,
+          "matterRendezvousHedgeSupported": true,
+          "matterSoftwareComponentVersion": "1.3-0",
+          "matterDeviceDiagnosticsAvailability": "Available",
+          "zigbeeDeviceDiagnosticsAvailability": "Available",
+          "hedgeTlsCertificate": "",
+          "zigbeeChannel": "15",
+          "zigbeePanId": "FA0C",
+          "zigbeeEui": "D052A8540CAF0001",
+          "zigbeeNodeID": "0000",
+          "zwaveNodeID": "01",
+          "zwaveHomeID": "FA0E40DE",
+          "zwaveSucID": "01",
+          "zwaveVersion": "6.10",
+          "zwaveRegion": "EU",
+          "macAddress": "D0:52:A8:54:09:EC",
+          "localIP": "192.168.1.17",
+          "zigbeeRadioFunctional": true,
+          "zwaveRadioFunctional": true,
+          "zigbeeRadioEnabled": true,
+          "zwaveRadioEnabled": true,
+          "zigbeeRadioDetected": true,
+          "zwaveRadioDetected": true
+        }
+      },
+      "type": "HUB",
+      "restrictionTier": 0,
+      "allowed": [],
+      "indoorMap": {
+        "coordinates": [0.0, 0.0, 0.0],
+        "rotation": [0.0, 0.0, 0.0],
+        "visible": false,
+        "data": null
+      },
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "42410e99-63cb-49d0-8f2f-d036f1b3ce66",
+      "name": "base-lock",
+      "label": "Front Door Lock",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "7a15b375-294d-37fc-9ebe-000aea7436c8",
+      "deviceManufacturerCode": "0129-6600-0002",
+      "locationId": "c4904031-30e5-4920-9ea7-0a768e355b2a",
+      "ownerId": "bad8318e-e67b-c050-0709-6c3f594384ce",
+      "roomId": "5cfe905f-0afb-4042-9c00-9889ba1d96d5",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "lock",
+              "version": 1
+            },
+            {
+              "id": "lockCodes",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "SmartLock",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-01-14T20:14:15.641Z",
+      "parentDeviceId": "d7c54320-6d75-4543-ab1f-9bd105336aae",
+      "profile": {
+        "id": "8d99f687-b7d8-3650-b3be-57e13e17883b"
+      },
+      "zwave": {
+        "networkId": "0A",
+        "driverId": "0f206d13-508e-4342-9cbb-937e02489141",
+        "executingLocally": true,
+        "hubId": "d7c54320-6d75-4543-ab1f-9bd105336aae",
+        "networkSecurityLevel": "ZWAVE_S2_ACCESS_CONTROL",
+        "provisioningState": "PROVISIONED",
+        "manufacturerId": 297,
+        "productType": 26112,
+        "productId": 2
+      },
+      "type": "ZWAVE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "6486e104-e046-f923-9645-5887ed4375dd",
+      "name": "[washer] Samsung",
+      "label": "Washing machine",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-WM-WM-01011",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "c4904031-30e5-4920-9ea7-0a768e355b2a",
+      "ownerId": "bad8318e-e67b-c050-0709-6c3f594384ce",
+      "roomId": "33e79495-441b-456e-baab-f3962f2b786d",
+      "deviceTypeName": "Samsung OCF Washer",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "remoteControlStatus",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "washerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.dryerDryLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.dryerWrinklePrevent",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.jobBeginningStatus",
+              "version": 1
+            },
+            {
+              "id": "custom.supportedOptions",
+              "version": 1
+            },
+            {
+              "id": "custom.washerAutoDetergent",
+              "version": 1
+            },
+            {
+              "id": "custom.washerAutoSoftener",
+              "version": 1
+            },
+            {
+              "id": "custom.washerRinseCycles",
+              "version": 1
+            },
+            {
+              "id": "custom.washerSoilLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.washerSpinLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.washerWaterTemperature",
+              "version": 1
+            },
+            {
+              "id": "samsungce.autoDispenseDetergent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.autoDispenseSoftener",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentOrder",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerDryingTime",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentAutoReplenishment",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerAutoReplenishment",
+              "version": 1
+            },
+            {
+              "id": "samsungce.flexibleAutoDispenseDetergent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kidsLock",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerOrder",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerBubbleSoak",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerCycle",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerCyclePreset",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerDelayEnd",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerFreezePrevent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerLabelScanCyclePreset",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWashingTime",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWaterLevel",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWaterValve",
+              "version": 1
+            },
+            {
+              "id": "samsungce.welcomeMessage",
+              "version": 1
+            },
+            {
+              "id": "samsungce.waterConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "samsungce.clothingExtraCare",
+              "version": 1
+            },
+            {
+              "id": "samsungce.quickControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.energyPlanner",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            },
+            {
+              "id": "sec.wifiConfiguration",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Washer",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "hca.main",
+          "label": "hca.main",
+          "capabilities": [
+            {
+              "id": "hca.washerMode",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2024-07-02T16:00:12.936Z",
+      "profile": {
+        "id": "94f0c5f4-9d04-39fe-a149-b3de24484ae1"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.washer",
+        "name": "[washer] Samsung",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "DA_WM_TP1_21_COMMON|20348141|20010002001711024ACB020200080000",
+        "platformVersion": "DAWIT 2.0",
+        "platformOS": "TizenRT 3.1",
+        "hwVersion": "Realtek",
+        "firmwareVersion": "DA_WM_TP1_21_COMMON_30240927",
+        "vendorId": "DA-WM-WM-01011",
+        "vendorResourceClientServerVersion": "Realtek Release 3.1.240801",
+        "lastSignupTime": "2024-07-02T16:00:12.877393Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "indoorMap": {
+        "coordinates": [0.0, 0.0, 0.0],
+        "rotation": [0.0, 0.0, 0.0],
+        "visible": false,
+        "data": null
+      },
+      "executionContext": "CLOUD"
+    }
+  ],
+  "_links": {}
+}

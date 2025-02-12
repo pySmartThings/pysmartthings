@@ -1,0 +1,1334 @@
+{
+  "items": [
+    {
+      "deviceId": "440063de-a200-40b5-8a6b-f3399eaa0370",
+      "name": "hue-color-temperature-bulb",
+      "label": "Bathroom spot",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_b93bec0e-1a81-4471-83fc-4dddca504acd",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.453Z",
+      "profile": {
+        "id": "a79e4507-ecaa-3c7e-b660-a3a71f30eafb"
+      },
+      "viper": {
+        "uniqueIdentifier": "ea409b82a6184ad9b49bd6318692cc1c",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue ambiance spot",
+        "swVersion": "1.122.2",
+        "hwVersion": "LTG002",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "cb958955-b015-498c-9e62-fc0c51abd054",
+      "name": "hue-rgbw-color-bulb",
+      "label": "Standing light",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_2733b8dc-4b0f-4593-8e49-2432202abd52",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "colorControl",
+              "version": 1
+            },
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "samsungim.hueSyncMode",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.454Z",
+      "profile": {
+        "id": "71be1b96-c5b5-38f7-a22c-65f5392ce7ed"
+      },
+      "viper": {
+        "uniqueIdentifier": "f5f891a57b9d45408230b4228bdc2111",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue color lamp",
+        "swVersion": "1.122.2",
+        "hwVersion": "LCA001",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "0b2ed6c7-dc39-42fd-ab64-8f1c75c1fad0",
+      "name": "hue-color-temperature-bulb",
+      "label": "Hue ambiance spot 3",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_b93bec0e-1a81-4471-83fc-4dddca504acd",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.456Z",
+      "profile": {
+        "id": "a79e4507-ecaa-3c7e-b660-a3a71f30eafb"
+      },
+      "viper": {
+        "uniqueIdentifier": "89283499df684c8f8da08cf87c8372ec",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue ambiance spot",
+        "swVersion": "1.122.2",
+        "hwVersion": "LTG002",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "571af102-15db-4030-b76b-245a691f74a5",
+      "name": "c2c-shade",
+      "label": "Curtain 1A",
+      "manufacturerName": "SmartThings",
+      "presentationId": "SmartThings-smartthings-c2c-shade",
+      "deviceManufacturerCode": "WonderLabs Company",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "windowShade",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Blind",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-02-07T23:01:15.883Z",
+      "profile": {
+        "id": "0ceffb3e-10d3-4123-bb42-2a92c93c6e25"
+      },
+      "viper": {
+        "manufacturerName": "WonderLabs Company",
+        "modelName": "WoCurtain3",
+        "hwVersion": "WoCurtain3-WoCurtain3",
+        "endpointAppId": "viper_f18eb770-077d-11ea-bb72-9922e3ed0d38"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "42efbc29-b283-4d01-a343-f0963ae7dba4",
+      "name": "c2c-shade",
+      "label": "Curtain 1E",
+      "manufacturerName": "SmartThings",
+      "presentationId": "SmartThings-smartthings-c2c-shade",
+      "deviceManufacturerCode": "WonderLabs Company",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "windowShade",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Blind",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-02-07T23:01:15.891Z",
+      "profile": {
+        "id": "0ceffb3e-10d3-4123-bb42-2a92c93c6e25"
+      },
+      "viper": {
+        "manufacturerName": "WonderLabs Company",
+        "modelName": "WoCurtain3",
+        "hwVersion": "WoCurtain3-WoCurtain3",
+        "endpointAppId": "viper_f18eb770-077d-11ea-bb72-9922e3ed0d38"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "a456cbd5-0503-46be-acc4-54e189dc6ff4",
+      "name": "hue-color-temperature-bulb",
+      "label": "Sink",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_b93bec0e-1a81-4471-83fc-4dddca504acd",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.462Z",
+      "profile": {
+        "id": "a79e4507-ecaa-3c7e-b660-a3a71f30eafb"
+      },
+      "viper": {
+        "uniqueIdentifier": "0636e1e0990b48bb8ba04c9ee904184e",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue ambiance spot",
+        "swVersion": "1.122.2",
+        "hwVersion": "LTG002",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "08da6244-b3ad-4c45-b005-d8572bd9138f",
+      "name": "c2c-motion-2",
+      "label": "Hue motion sensor 1",
+      "manufacturerName": "SmartThings",
+      "presentationId": "SmartThings-smartthings-c2c-motion-2",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "motionSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MotionSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.453Z",
+      "profile": {
+        "id": "17d73e3b-fad1-4a50-974c-65fb0eaf8918"
+      },
+      "viper": {
+        "uniqueIdentifier": "1398c8080e444111963badc4f450b7b4",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue motion sensor",
+        "swVersion": "67.115.5",
+        "hwVersion": "SML001",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "297b909c-ca9a-4517-ba42-7412269cd00e",
+      "name": "hue-color-temperature-bulb",
+      "label": "Hue ambiance spot 2",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_b93bec0e-1a81-4471-83fc-4dddca504acd",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.464Z",
+      "profile": {
+        "id": "a79e4507-ecaa-3c7e-b660-a3a71f30eafb"
+      },
+      "viper": {
+        "uniqueIdentifier": "eec668a702d7460f9626429886c1c8f0",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue ambiance spot",
+        "swVersion": "1.122.2",
+        "hwVersion": "LTG002",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "4d4f5261-dc3a-4e31-b8f4-15699c934f62",
+      "name": "hue-color-temperature-bulb",
+      "label": "Hue ambiance spot 4",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_b93bec0e-1a81-4471-83fc-4dddca504acd",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.452Z",
+      "profile": {
+        "id": "a79e4507-ecaa-3c7e-b660-a3a71f30eafb"
+      },
+      "viper": {
+        "uniqueIdentifier": "28dea05a87b34fdea576d15373e37246",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue ambiance spot",
+        "swVersion": "1.122.2",
+        "hwVersion": "LTG002",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "9eaad965-638d-48c2-8aab-e97aa031226e",
+      "name": "hue-rgbw-color-bulb",
+      "label": "Night light",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_2733b8dc-4b0f-4593-8e49-2432202abd52",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "colorControl",
+              "version": 1
+            },
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "samsungim.hueSyncMode",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.457Z",
+      "profile": {
+        "id": "71be1b96-c5b5-38f7-a22c-65f5392ce7ed"
+      },
+      "viper": {
+        "uniqueIdentifier": "4d0fa9fab55546b69f76f2ec10018d1e",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue color candle",
+        "swVersion": "1.116.3",
+        "hwVersion": "LCT012",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "f1e182eb-1e21-43ed-a32d-f3c2796b9865",
+      "name": "c2c-thermostat-bridge-1",
+      "label": "Netatmo NAPlug",
+      "manufacturerName": "SmartThings",
+      "presentationId": "SmartThings-smartthings-c2c-thermostat-bridge-1",
+      "deviceManufacturerCode": "Netatmo",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "thermostatMode",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Thermostat",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-02-07T23:03:33.756Z",
+      "profile": {
+        "id": "1e9d6662-ffa9-4568-ab89-01b0f78b9b18"
+      },
+      "viper": {
+        "manufacturerName": "Netatmo",
+        "modelName": "NAPlug",
+        "endpointAppId": "viper_a381e1e0-677a-11e9-af1c-cfc001b5fc46"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "4f43eaf7-b3d1-4d26-be8e-807b37dfe8e0",
+      "name": "hue-rgbw-color-bulb",
+      "label": "Kitchen",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_2733b8dc-4b0f-4593-8e49-2432202abd52",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "colorControl",
+              "version": 1
+            },
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "samsungim.hueSyncMode",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.457Z",
+      "profile": {
+        "id": "71be1b96-c5b5-38f7-a22c-65f5392ce7ed"
+      },
+      "viper": {
+        "uniqueIdentifier": "f200685c9f4a4218b2ac29c874d98028",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue Play",
+        "swVersion": "1.122.2",
+        "hwVersion": "440400982842",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "5ca2281d-fb11-4835-8990-0ea287556fe5",
+      "name": "c2c-humidity",
+      "label": "Hub 2 08",
+      "manufacturerName": "SmartThings",
+      "presentationId": "SmartThings-smartthings-c2c-humidity",
+      "deviceManufacturerCode": "WonderLabs Company",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "relativeHumidityMeasurement",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "TempHumiditySensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-02-07T23:01:15.891Z",
+      "profile": {
+        "id": "06ee4e4f-945e-4486-9060-9f261bb4a0c9"
+      },
+      "viper": {
+        "manufacturerName": "WonderLabs Company",
+        "modelName": "WoHub2",
+        "hwVersion": "WoHub2-WoHub2",
+        "endpointAppId": "viper_f18eb770-077d-11ea-bb72-9922e3ed0d38"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "3cd2ce09-6e19-48a9-b296-558d8cc55726",
+      "name": "hue-rgbw-color-bulb",
+      "label": "Tv",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_2733b8dc-4b0f-4593-8e49-2432202abd52",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "colorControl",
+              "version": 1
+            },
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "samsungim.hueSyncMode",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.489Z",
+      "profile": {
+        "id": "71be1b96-c5b5-38f7-a22c-65f5392ce7ed"
+      },
+      "viper": {
+        "uniqueIdentifier": "bfe9aa875ea64296b49d82ca7a952395",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue Play",
+        "swVersion": "1.122.2",
+        "hwVersion": "440400982842",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "e25e6818-efab-4f45-97f8-867ab2c1c33d",
+      "name": "c2c-switch",
+      "label": "TV",
+      "manufacturerName": "SmartThings",
+      "presentationId": "SmartThings-smartthings-c2c-switch",
+      "deviceManufacturerCode": "WonderLabs Company",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Switch",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2025-02-07T23:01:15.882Z",
+      "profile": {
+        "id": "7eaca7e4-dd01-4711-8e20-1a869bb44b1b"
+      },
+      "viper": {
+        "manufacturerName": "WonderLabs Company",
+        "modelName": "remote",
+        "hwVersion": "remote-16",
+        "endpointAppId": "viper_f18eb770-077d-11ea-bb72-9922e3ed0d38"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "5ed8ef33-96dc-4d53-8ad1-4a15e6361c1e",
+      "name": "hue-rgbw-color-bulb",
+      "label": "Bureau",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_2733b8dc-4b0f-4593-8e49-2432202abd52",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "colorControl",
+              "version": 1
+            },
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "samsungim.hueSyncMode",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.452Z",
+      "profile": {
+        "id": "71be1b96-c5b5-38f7-a22c-65f5392ce7ed"
+      },
+      "viper": {
+        "uniqueIdentifier": "59ac85e49ccb40079ac4883e9961141c",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue lightstrip plus",
+        "swVersion": "1.122.2",
+        "hwVersion": "LCL001",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "f15b3d69-7452-4b21-a27c-d3db3c84e2d4",
+      "name": "hue-color-temperature-bulb",
+      "label": "Hue ambiance spot 5",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_b93bec0e-1a81-4471-83fc-4dddca504acd",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.456Z",
+      "profile": {
+        "id": "a79e4507-ecaa-3c7e-b660-a3a71f30eafb"
+      },
+      "viper": {
+        "uniqueIdentifier": "a7d9b57e9bf44cc1a5a9b12f90ede6d8",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue ambiance spot",
+        "swVersion": "1.122.2",
+        "hwVersion": "LTG002",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "be1152d6-cad0-4859-b4a6-5770e63dd0b5",
+      "name": "hue-rgbw-color-bulb",
+      "label": "Bed",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_2733b8dc-4b0f-4593-8e49-2432202abd52",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "colorControl",
+              "version": 1
+            },
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "samsungim.hueSyncMode",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.460Z",
+      "profile": {
+        "id": "71be1b96-c5b5-38f7-a22c-65f5392ce7ed"
+      },
+      "viper": {
+        "uniqueIdentifier": "e2d97799b67a42a5801f5130665a8e6c",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue Play",
+        "swVersion": "1.122.2",
+        "hwVersion": "440400982842",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "53fa938e-7586-41ca-84e7-ccc6bcba94df",
+      "name": "hue-color-temperature-bulb",
+      "label": "Hue ambiance spot 1",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_b93bec0e-1a81-4471-83fc-4dddca504acd",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.457Z",
+      "profile": {
+        "id": "a79e4507-ecaa-3c7e-b660-a3a71f30eafb"
+      },
+      "viper": {
+        "uniqueIdentifier": "cd875e9624684cc6840235b8df842077",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue ambiance spot",
+        "swVersion": "1.122.2",
+        "hwVersion": "LTG002",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "d472222b-0e19-4d33-8375-b2abf6c9df08",
+      "name": "hue-rgbw-color-bulb",
+      "label": "Bed",
+      "manufacturerName": "0A2r",
+      "presentationId": "ST_2733b8dc-4b0f-4593-8e49-2432202abd52",
+      "deviceManufacturerCode": "Signify Netherlands B.V.",
+      "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+      "ownerId": "12d4af93-cb68-b108-87f5-625437d7371f",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "colorControl",
+              "version": 1
+            },
+            {
+              "id": "colorTemperature",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "healthCheck",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "samsungim.hueSyncMode",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectCircadian",
+              "version": 1
+            },
+            {
+              "id": "synthetic.lightingEffectFade",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Light",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-17T18:11:41.466Z",
+      "profile": {
+        "id": "71be1b96-c5b5-38f7-a22c-65f5392ce7ed"
+      },
+      "viper": {
+        "uniqueIdentifier": "14c04c27e1f64eb9b23e0301c2d3d255",
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelName": "Hue Play",
+        "swVersion": "1.122.2",
+        "hwVersion": "440400982842",
+        "endpointAppId": "viper_71ee45b0-a794-11e9-86b2-fdd6b9f75ce6"
+      },
+      "type": "VIPER",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    }
+  ],
+  "_links": {}
+}
