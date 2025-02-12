@@ -201,10 +201,10 @@ class SmartThings:
         capability: Capability,
         command: Command,
         component: str = "main",
-        argument: int | str | list | dict | None = None,
+        argument: int | str | list[Any] | dict[str, Any] | None = None,
     ) -> None:
         """Execute a command on a device."""
-        command_payload = {
+        command_payload: dict[str, Any] = {
             "component": component,
             "capability": capability,
             "command": command,
