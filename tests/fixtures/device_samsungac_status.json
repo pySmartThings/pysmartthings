@@ -93,14 +93,9 @@
           "value": {
             "payload": {
               "speed": 2,
-              "if": [
-                "oic.if.baseline",
-                "oic.if.a"
-              ],
+              "if": ["oic.if.baseline", "oic.if.a"],
               "direction": "Fix",
-              "rt": [
-                "oic.r.airflow"
-              ]
+              "rt": ["oic.r.airflow"]
             }
           }
         }

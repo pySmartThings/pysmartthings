@@ -1,0 +1,19 @@
+# serializer version: 1
+# name: test_fetching_all_scenes
+  list([
+    dict({
+      'color': None,
+      'icon': '203',
+      'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
+      'name': 'Away',
+      'scene_id': '743b0f37-89b8-476c-aedf-eea8ad8cd29d',
+    }),
+    dict({
+      'color': None,
+      'icon': '204',
+      'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
+      'name': 'Home',
+      'scene_id': 'f3341e8b-9b32-4509-af2e-4f7c952e98ba',
+    }),
+  ])
+# ---

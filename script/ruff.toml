@@ -1,0 +1,6 @@
+# This extend our general Ruff rules specifically for the scripts
+extend = "../pyproject.toml"
+
+lint.extend-ignore = [
+  "T201",
+]

@@ -1,0 +1,120 @@
+{
+  "components": {
+    "main": {
+      "legendabsolute60149.randomNextStep": {
+        "randomNext": {
+          "value": "Inactive",
+          "timestamp": "2024-09-08T20:28:14.452Z"
+        }
+      },
+      "legendabsolute60149.randomOnOff1": {
+        "randomOnOff": {
+          "value": "Inactive",
+          "timestamp": "2024-09-08T20:28:14.454Z"
+        }
+      },
+      "legendabsolute60149.getGroups": {
+        "getGroups": {
+          "value": "All Deleted",
+          "timestamp": "2023-10-02T12:05:15.321Z"
+        }
+      },
+      "legendabsolute60149.levelSteps": {
+        "levelSteps": {
+          "value": 0,
+          "unit": "%",
+          "timestamp": "2024-03-19T12:20:57.785Z"
+        }
+      },
+      "switchLevel": {
+        "levelRange": {
+          "value": null
+        },
+        "level": {
+          "value": 100,
+          "unit": "%",
+          "timestamp": "2025-02-09T17:05:04.951Z"
+        }
+      },
+      "legendabsolute60149.forcedOnLevel": {
+        "forcedOnLevel": {
+          "value": 0,
+          "unit": "%",
+          "timestamp": "2023-10-02T12:05:15.136Z"
+        }
+      },
+      "refresh": {},
+      "legendabsolute60149.progressiveOn1": {
+        "progOn": {
+          "value": "Inactive",
+          "timestamp": "2023-10-02T12:05:15.116Z"
+        }
+      },
+      "legendabsolute60149.mirrorGroupFunction": {
+        "mirrorGroupFunction": {
+          "value": "Inactive",
+          "timestamp": "2023-10-02T12:05:15.137Z"
+        }
+      },
+      "firmwareUpdate": {
+        "lastUpdateStatusReason": {
+          "value": null
+        },
+        "availableVersion": {
+          "value": "0000000C",
+          "timestamp": "2025-02-09T16:57:40.214Z"
+        },
+        "lastUpdateStatus": {
+          "value": null
+        },
+        "supportedCommands": {
+          "value": null
+        },
+        "state": {
+          "value": "normalOperation",
+          "timestamp": "2025-02-09T16:57:40.212Z"
+        },
+        "updateAvailable": {
+          "value": false,
+          "timestamp": "2025-02-09T16:57:40.210Z"
+        },
+        "currentVersion": {
+          "value": "0000000C",
+          "timestamp": "2025-02-09T16:57:40.212Z"
+        },
+        "lastUpdateTime": {
+          "value": null
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-02-09T17:39:48.986Z"
+        }
+      },
+      "legendabsolute60149.driverVersion1": {
+        "driverVersion": {
+          "value": null
+        }
+      },
+      "legendabsolute60149.effectsSetCommand": {
+        "effectsSetCommand": {
+          "value": "Inactive",
+          "timestamp": "2023-10-02T12:05:15.168Z"
+        }
+      },
+      "legendabsolute60149.progressiveOff1": {
+        "progOff": {
+          "value": "Inactive",
+          "timestamp": "2023-10-02T12:05:15.143Z"
+        }
+      },
+      "legendabsolute60149.signalMetrics": {
+        "signalMetrics": {
+          "value": "2025/02/09 Time: 17:54, LQI: 254 ... rssi: -64",
+          "timestamp": "2025-02-09T17:54:48.996Z"
+        }
+      }
+    }
+  }
+}

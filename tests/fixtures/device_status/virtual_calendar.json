@@ -1,0 +1,156 @@
+{
+  "components": {
+    "main": {
+      "legendabsolute60149.sunAzimuthAngle": {
+        "sunAzimuthAngle": {
+          "value": 190.7,
+          "unit": "\u00ba",
+          "timestamp": "2025-02-09T17:58:54.376Z"
+        }
+      },
+      "legendabsolute60149.evenOddDay": {
+        "evenOddDay": {
+          "value": "Odd",
+          "timestamp": "2025-02-09T17:30:54.220Z"
+        }
+      },
+      "legendabsolute60149.localHourTwo": {
+        "localHourTwo": {
+          "value": 1358,
+          "timestamp": "2025-02-09T17:58:54.367Z"
+        }
+      },
+      "legendabsolute60149.currentTimePeriod": {
+        "currentTimePeriod": {
+          "value": "Day",
+          "timestamp": "2025-02-09T12:11:51.499Z"
+        }
+      },
+      "legendabsolute60149.localMonth": {
+        "localMonth": {
+          "value": 2,
+          "timestamp": "2025-02-09T17:30:54.304Z"
+        }
+      },
+      "legendabsolute60149.localHourOffset": {
+        "localHourOffset": {
+          "value": -4,
+          "unit": "hr",
+          "timestamp": "2025-02-09T17:30:54.351Z"
+        }
+      },
+      "legendabsolute60149.localHour": {
+        "localHour": {
+          "value": 1358,
+          "timestamp": "2025-02-09T17:58:54.347Z"
+        }
+      },
+      "legendabsolute60149.sunRiseOffset1": {
+        "sunRiseOffset": {
+          "value": 351,
+          "unit": "min",
+          "timestamp": "2025-02-09T17:58:54.320Z"
+        }
+      },
+      "legendabsolute60149.localDayTwo": {
+        "localDayTwo": {
+          "value": 9,
+          "timestamp": "2025-02-09T17:30:54.218Z"
+        }
+      },
+      "legendabsolute60149.localDate": {
+        "localDate": {
+          "value": "2025/02/09  13:58",
+          "timestamp": "2025-02-09T17:58:54.337Z"
+        }
+      },
+      "legendabsolute60149.localMonthDayOne": {
+        "localMonthDayOne": {
+          "value": 209,
+          "timestamp": "2025-02-09T17:30:54.226Z"
+        }
+      },
+      "legendabsolute60149.localDateTwo1": {
+        "localDateTwo": {
+          "value": 20250209,
+          "timestamp": "2025-02-09T17:30:54.265Z"
+        }
+      },
+      "legendabsolute60149.sunRise": {
+        "sunRise": {
+          "value": "08:07:00",
+          "timestamp": "2025-02-09T17:00:53.872Z"
+        }
+      },
+      "legendabsolute60149.dayLength": {
+        "dayLength": {
+          "value": "10 hrs 31 min",
+          "timestamp": "2025-02-09T17:00:53.933Z"
+        }
+      },
+      "legendabsolute60149.sunElevationAngle": {
+        "sunElevationAngle": {
+          "value": 35.8,
+          "unit": "\u00ba",
+          "timestamp": "2025-02-09T17:56:54.376Z"
+        }
+      },
+      "refresh": {},
+      "legendabsolute60149.localDateOne": {
+        "localDateOne": {
+          "value": 20250209,
+          "timestamp": "2025-02-09T17:30:54.262Z"
+        }
+      },
+      "legendabsolute60149.currentTwilight": {
+        "currentTwilight": {
+          "value": "None",
+          "timestamp": "2025-02-09T12:11:51.502Z"
+        }
+      },
+      "legendabsolute60149.localMonthDayTwo": {
+        "localMonthDayTwo": {
+          "value": 209,
+          "timestamp": "2025-02-09T17:30:54.230Z"
+        }
+      },
+      "legendabsolute60149.sunSetOffset1": {
+        "sunSetOffset": {
+          "value": -280,
+          "unit": "min",
+          "timestamp": "2025-02-09T17:58:54.321Z"
+        }
+      },
+      "legendabsolute60149.sunSet": {
+        "sunSet": {
+          "value": "18:38:00",
+          "timestamp": "2025-02-09T17:00:53.871Z"
+        }
+      },
+      "legendabsolute60149.localMonthTwo": {
+        "localMonthTwo": {
+          "value": 2,
+          "timestamp": "2025-02-09T17:30:54.306Z"
+        }
+      },
+      "legendabsolute60149.localYear": {
+        "localYear": {
+          "value": 2025,
+          "timestamp": "2025-02-09T17:30:54.306Z"
+        }
+      },
+      "legendabsolute60149.localWeekDay": {
+        "localWeekDay": {
+          "value": 0,
+          "timestamp": "2025-02-09T17:30:54.347Z"
+        }
+      },
+      "legendabsolute60149.localDay": {
+        "localDay": {
+          "value": 9,
+          "timestamp": "2025-02-09T17:30:54.184Z"
+        }
+      }
+    }
+  }
+}

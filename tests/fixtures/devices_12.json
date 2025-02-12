@@ -1,0 +1,443 @@
+{
+  "items": [
+    {
+      "deviceId": "62ad169f-f270-b219-a521-1608dea8bf76",
+      "name": "[washer] Samsung",
+      "label": "Washing machine",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-WM-WM-01011",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "6a446433-a83d-4ede-9c47-f22a0f80b574",
+      "ownerId": "081768d2-bad6-9100-6600-c880480eb0a9",
+      "roomId": "24f7842f-5424-4024-95e0-a4409e3f9d95",
+      "deviceTypeName": "Samsung OCF Washer",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "remoteControlStatus",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "washerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "custom.dryerDryLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.dryerWrinklePrevent",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "custom.jobBeginningStatus",
+              "version": 1
+            },
+            {
+              "id": "custom.supportedOptions",
+              "version": 1
+            },
+            {
+              "id": "custom.washerAutoDetergent",
+              "version": 1
+            },
+            {
+              "id": "custom.washerAutoSoftener",
+              "version": 1
+            },
+            {
+              "id": "custom.washerRinseCycles",
+              "version": 1
+            },
+            {
+              "id": "custom.washerSoilLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.washerSpinLevel",
+              "version": 1
+            },
+            {
+              "id": "custom.washerWaterTemperature",
+              "version": 1
+            },
+            {
+              "id": "samsungce.autoDispenseDetergent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.autoDispenseSoftener",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentOrder",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.deviceIdentification",
+              "version": 1
+            },
+            {
+              "id": "samsungce.driverVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungce.dryerDryingTime",
+              "version": 1
+            },
+            {
+              "id": "samsungce.detergentAutoReplenishment",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerAutoReplenishment",
+              "version": 1
+            },
+            {
+              "id": "samsungce.flexibleAutoDispenseDetergent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "samsungce.kidsLock",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerOrder",
+              "version": 1
+            },
+            {
+              "id": "samsungce.softenerState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerBubbleSoak",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerCycle",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerCyclePreset",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerDelayEnd",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerFreezePrevent",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerLabelScanCyclePreset",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerOperatingState",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWashingTime",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWaterLevel",
+              "version": 1
+            },
+            {
+              "id": "samsungce.washerWaterValve",
+              "version": 1
+            },
+            {
+              "id": "samsungce.welcomeMessage",
+              "version": 1
+            },
+            {
+              "id": "samsungce.waterConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "samsungce.clothingExtraCare",
+              "version": 1
+            },
+            {
+              "id": "samsungce.quickControl",
+              "version": 1
+            },
+            {
+              "id": "samsungce.energyPlanner",
+              "version": 1
+            },
+            {
+              "id": "sec.diagnosticsInformation",
+              "version": 1
+            },
+            {
+              "id": "sec.wifiConfiguration",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Washer",
+              "categoryType": "manufacturer"
+            }
+          ]
+        },
+        {
+          "id": "hca.main",
+          "label": "hca.main",
+          "capabilities": [
+            {
+              "id": "hca.washerMode",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Other",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-01-30T23:59:37.142Z",
+      "profile": {
+        "id": "94f0c5f4-9d04-39fe-a149-b3de24484ae1"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.washer",
+        "name": "[washer] Samsung",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "DA_WM_TP1_21_COMMON|20314341|20010002001611664AA3025700000000",
+        "platformVersion": "DAWIT 2.0",
+        "platformOS": "TizenRT 3.1",
+        "hwVersion": "Realtek",
+        "firmwareVersion": "DA_WM_TP1_21_COMMON_30240927",
+        "vendorId": "DA-WM-WM-01011",
+        "vendorResourceClientServerVersion": "Realtek Release 3.1.240801",
+        "lastSignupTime": "2023-01-30T23:59:32.300072Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "035a8805-e552-ce47-cf04-411e4644eeb8",
+      "name": "49\" Odyssey OLED G9",
+      "label": "49\" Odyssey OLED G9",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-SMONITOR-2023",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "6a446433-a83d-4ede-9c47-f22a0f80b574",
+      "ownerId": "081768d2-bad6-9100-6600-c880480eb0a9",
+      "roomId": "21af8dce-8b94-4ec1-bbbf-7412c31175f7",
+      "deviceTypeName": "x.com.st.d.monitor",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "tvChannel",
+              "version": 1
+            },
+            {
+              "id": "mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "mediaTrackControl",
+              "version": 1
+            },
+            {
+              "id": "custom.error",
+              "version": 1
+            },
+            {
+              "id": "custom.picturemode",
+              "version": 1
+            },
+            {
+              "id": "custom.soundmode",
+              "version": 1
+            },
+            {
+              "id": "custom.accessibility",
+              "version": 1
+            },
+            {
+              "id": "custom.launchapp",
+              "version": 1
+            },
+            {
+              "id": "custom.recording",
+              "version": 1
+            },
+            {
+              "id": "custom.tvsearch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.remoteControl",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambient",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambientContent",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsFeatures",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsPowerOnByOcf",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "sec.deviceConnectionState",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.firmwareVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.deviceCategory",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.lightControl",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "SmartMonitor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2024-11-27T14:49:40.456Z",
+      "profile": {
+        "id": "057707e8-9a4e-3d0b-ba10-d5fb6ff8fa00"
+      },
+      "ocf": {
+        "ocfDeviceType": "x.com.st.d.monitor",
+        "name": "49\" Odyssey OLED G9",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "LS49CG954SUXXU",
+        "platformVersion": "7.0",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "T-OSCSCWWC-2000.2",
+        "vendorId": "VD-SMONITOR-2023",
+        "vendorResourceClientServerVersion": "3.2.41",
+        "lastSignupTime": "2024-11-27T14:49:37.112881149Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    }
+  ],
+  "_links": {}
+}

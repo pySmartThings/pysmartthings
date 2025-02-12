@@ -1,14 +1,14 @@
 {
-    "id": "7bdf5909-57c4-41f3-9089-e520513bd92a",
-    "installedAppId": "4514eb36-f5fd-4ab2-9520-0597acd1d212",
-    "sourceType": "CAPABILITY",
-    "capability": {
-        "locationId": "397678e5-9995-4a39-9d9f-ae6ba310236b",
-        "capability": "switchLevel",
-        "attribute": "*",
-        "value": "*",
-        "stateChangeOnly": true,
-        "subscriptionName": "switchLevel_sub",
-        "modes": []
-    }
+  "id": "7bdf5909-57c4-41f3-9089-e520513bd92a",
+  "installedAppId": "4514eb36-f5fd-4ab2-9520-0597acd1d212",
+  "sourceType": "CAPABILITY",
+  "capability": {
+    "locationId": "397678e5-9995-4a39-9d9f-ae6ba310236b",
+    "capability": "switchLevel",
+    "attribute": "*",
+    "value": "*",
+    "stateChangeOnly": true,
+    "subscriptionName": "switchLevel_sub",
+    "modes": []
+  }
 }

@@ -30,11 +30,13 @@ packages = [
 python = "^3.11"
 aiohttp = ">=3.0.0"
 yarl = ">=1.6.0"
+mashumaro = "^3.11"
+orjson = "^3.9.10"
 
 [tool.poetry.group.dev.dependencies]
 codespell = "2.4.1"
 covdefaults = "2.3.0"
-coverage = {version = "7.6.10", extras = ["toml"]}
+coverage = {version = "7.6.11", extras = ["toml"]}
 pylint = "3.3.4"
 pytest = "8.3.4"
 pytest-asyncio = "0.25.3"
@@ -43,7 +45,11 @@ pytest-timeout = "2.3.1"
 pre-commit = "4.1.0"
 pre-commit-hooks = "5.0.0"
 yamllint = "1.35.1"
-ruff = "0.9.5"
+ruff = "0.9.6"
+syrupy = "^4.8.1"
+aioresponses = "^0.7.8"
+treelib = "^1.7.0"
+pyperclip = "^1.9.0"
 mypy = "^1.15.0"
 
 [tool.poetry.urls]
@@ -150,17 +156,6 @@ asyncio_mode = "auto"
 [tool.ruff.lint]
 ignore = [
   "ANN401", # Opinioated warning on disallowing dynamically typed expressions
-  "DTZ005",
-  "PLR0913",
-  "TRY003",
-  "FBT002",
-  "ARG002",
-  "FBT001",
-  "BLE001",
-  "S110",
-  "S105",
-  "EXE001",
-  "T201",
   "COM812", # Conflicts with other rules
   "D203", # Conflicts with other rules
   "D213", # Conflicts with other rules

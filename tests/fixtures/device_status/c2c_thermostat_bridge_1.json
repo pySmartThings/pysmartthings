@@ -1,0 +1,35 @@
+{
+  "components": {
+    "main": {
+      "healthCheck": {
+        "checkInterval": {
+          "value": 60,
+          "unit": "s",
+          "data": {
+            "deviceScheme": "UNTRACKED",
+            "protocol": "cloud"
+          },
+          "timestamp": "2025-02-07T23:03:33.797Z"
+        },
+        "healthStatus": {
+          "value": null
+        },
+        "DeviceWatch-Enroll": {
+          "value": null
+        },
+        "DeviceWatch-DeviceStatus": {
+          "value": null
+        }
+      },
+      "refresh": {},
+      "thermostatMode": {
+        "thermostatMode": {
+          "value": null
+        },
+        "supportedThermostatModes": {
+          "value": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "components": {
+    "main": {
+      "mediaPlayback": {
+        "supportedPlaybackCommands": {
+          "value": ["play", "pause", "stop", "fastForward", "rewind"],
+          "timestamp": "2025-02-02T14:15:04.815Z"
+        },
+        "playbackStatus": {
+          "value": null
+        }
+      },
+      "samsungim.fixedFindNode": {},
+      "samsungvd.supportsPowerOnByOcf": {
+        "supportsPowerOnByOcf": {
+          "value": "true",
+          "timestamp": "2025-02-09T23:00:33.790Z"
+        }
+      },
+      "mediaInputSource": {
+        "supportedInputSources": {
+          "value": [],
+          "timestamp": "2025-02-02T14:15:04.815Z"
+        },
+        "inputSource": {
+          "value": "HDMI4",
+          "timestamp": "2023-12-10T09:32:02.350Z"
+        }
+      },
+      "samsungvd.deviceCategory": {
+        "category": {
+          "value": "tv",
+          "timestamp": "2025-02-02T14:15:06.565Z"
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-02-10T03:14:17.614Z"
+        }
+      },
+      "ocf": {
+        "st": {
+          "value": "2025-02-01T22:03:42Z",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mndt": {
+          "value": "2021-01-01",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnfv": {
+          "value": "T-NKM2DEUC-2220.9",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnhw": {
+          "value": "",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "di": {
+          "value": "70650a5c-3e57-c66b-8c43-d48d06852948",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnsl": {
+          "value": "",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "dmv": {
+          "value": "res.1.1.0,sh.1.1.0",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "n": {
+          "value": "Samsung QN95AA 75 TV",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnmo": {
+          "value": "QE75QN95AATXXC",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "vid": {
+          "value": "VD-STV-2021",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnmn": {
+          "value": "Samsung Electronics",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnml": {
+          "value": "",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnpv": {
+          "value": "6.0",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "mnos": {
+          "value": "Tizen",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "pi": {
+          "value": "70650a5c-3e57-c66b-8c43-d48d06852948",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        },
+        "icv": {
+          "value": "core.1.1.0",
+          "timestamp": "2025-02-02T14:15:05.029Z"
+        }
+      },
+      "samsungvd.supportsFeatures": {
+        "mediaOutputSupported": {
+          "value": null
+        },
+        "imeAdvSupported": {
+          "value": null
+        },
+        "wifiUpdateSupport": {
+          "value": null
+        },
+        "executableServiceList": {
+          "value": null
+        },
+        "remotelessSupported": {
+          "value": null
+        },
+        "mobileCamSupported": {
+          "value": null
+        }
+      },
+      "custom.accessibility": {},
+      "custom.disabledCapabilities": {
+        "disabledCapabilities": {
+          "value": [
+            "samsungim.fixedFindNode",
+            "samsungvd.supportsFeatures",
+            "samsungim.findNodeGeolocation",
+            "powerConsumptionReport"
+          ],
+          "timestamp": "2025-02-02T14:15:06.212Z"
+        }
+      },
+      "samsungvd.remoteControl": {},
+      "custom.launchapp": {},
+      "samsungvd.thingStatus": {
+        "updatedTime": {
+          "value": 1739142033,
+          "timestamp": "2025-02-09T23:00:33.389Z"
+        },
+        "status": {
+          "value": "Idle",
+          "timestamp": "2025-02-09T23:00:33.389Z"
+        }
+      },
+      "samsungvd.firmwareVersion": {
+        "firmwareVersion": {
+          "value": "3.5.0",
+          "timestamp": "2025-02-02T14:15:06.565Z"
+        }
+      },
+      "audioVolume": {
+        "volume": {
+          "value": 11,
+          "unit": "%",
+          "timestamp": "2025-02-02T14:15:05.630Z"
+        }
+      },
+      "powerConsumptionReport": {
+        "powerConsumption": {
+          "value": null
+        }
+      },
+      "samsungvd.mediaInputSource": {
+        "supportedInputSourcesMap": {
+          "value": [
+            {
+              "id": "dtv",
+              "name": "TV"
+            },
+            {
+              "id": "HDMI2",
+              "name": "PC"
+            },
+            {
+              "id": "HDMI3",
+              "name": "HDMI 3"
+            },
+            {
+              "id": "HDMI4",
+              "name": "PlayStation 5"
+            }
+          ],
+          "timestamp": "2025-02-09T23:00:34.025Z"
+        },
+        "inputSource": {
+          "value": "HDMI4",
+          "timestamp": "2025-02-09T23:00:34.025Z"
+        }
+      },
+      "custom.tvsearch": {},
+      "samsungvd.ambient": {},
+      "refresh": {},
+      "custom.error": {
+        "error": {
+          "value": null
+        }
+      },
+      "execute": {
+        "data": {
+          "value": null
+        }
+      },
+      "tvChannel": {
+        "tvChannel": {
+          "value": "",
+          "timestamp": "2025-02-02T14:15:05.693Z"
+        },
+        "tvChannelName": {
+          "value": "",
+          "timestamp": "2025-02-02T14:15:05.693Z"
+        }
+      },
+      "custom.picturemode": {
+        "pictureMode": {
+          "value": "FILMMAKER MODE",
+          "timestamp": "2025-02-02T14:15:05.811Z"
+        },
+        "supportedPictureModes": {
+          "value": [
+            "Dynamisk",
+            "FILMMAKER MODE",
+            "Film",
+            "Naturlig",
+            "Standard"
+          ],
+          "timestamp": "2025-02-02T14:15:05.811Z"
+        },
+        "supportedPictureModesMap": {
+          "value": [
+            {
+              "id": "modeDynamic",
+              "name": "Dynamisk"
+            },
+            {
+              "id": "modeFilmmakerMode",
+              "name": "FILMMAKER MODE"
+            },
+            {
+              "id": "modeMovie",
+              "name": "Film"
+            },
+            {
+              "id": "modeNatural",
+              "name": "Naturlig"
+            },
+            {
+              "id": "modeStandard",
+              "name": "Standard"
+            }
+          ],
+          "timestamp": "2025-02-02T14:15:05.811Z"
+        }
+      },
+      "samsungvd.ambientContent": {
+        "supportedAmbientApps": {
+          "value": ["weather"],
+          "timestamp": "2025-02-02T14:15:05.912Z"
+        }
+      },
+      "custom.recording": {},
+      "custom.soundmode": {
+        "supportedSoundModesMap": {
+          "value": [
+            {
+              "id": "modeExternalAdaptive",
+              "name": "Adaptivt ljud"
+            },
+            {
+              "id": "modeExternalGame",
+              "name": "Spel"
+            },
+            {
+              "id": "modeExternalStandard",
+              "name": "Standard"
+            },
+            {
+              "id": "modeExternal3DSurround",
+              "name": "Surround"
+            }
+          ],
+          "timestamp": "2025-02-02T14:15:05.544Z"
+        },
+        "soundMode": {
+          "value": "Surround",
+          "timestamp": "2025-02-02T14:15:05.544Z"
+        },
+        "supportedSoundModes": {
+          "value": ["Adaptivt ljud", "Spel", "Standard", "Surround"],
+          "timestamp": "2025-02-02T14:15:05.544Z"
+        }
+      },
+      "audioMute": {
+        "mute": {
+          "value": "unmuted",
+          "timestamp": "2025-02-02T14:15:05.630Z"
+        }
+      },
+      "mediaTrackControl": {
+        "supportedTrackControlCommands": {
+          "value": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "components": {
+    "relay3": {
+      "switch": {
+        "switch": {
+          "value": "on",
+          "timestamp": "2025-02-09T17:28:28.349Z"
+        }
+      }
+    },
+    "relay1": {
+      "switch": {
+        "switch": {
+          "value": "on",
+          "timestamp": "2025-02-09T17:28:27.170Z"
+        }
+      }
+    },
+    "main": {
+      "platemusic11009.firmware": {
+        "firmwareVersion": {
+          "value": 3.1,
+          "timestamp": "2025-02-05T18:19:52.460Z"
+        }
+      },
+      "platemusic11009.associationGroupThree": {
+        "associationGroupThree": {
+          "value": "None",
+          "timestamp": "2025-01-19T21:05:22.315Z"
+        }
+      },
+      "refresh": {},
+      "platemusic11009.deviceNetworkId": {
+        "deviceNetworkId": {
+          "value": "[33]",
+          "timestamp": "2024-10-12T00:40:09.555Z"
+        }
+      },
+      "platemusic11009.associationGroupTwo": {
+        "associationGroupTwo": {
+          "value": "None",
+          "timestamp": "2025-01-19T21:05:22.663Z"
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "on",
+          "timestamp": "2025-02-09T17:28:27.723Z"
+        }
+      },
+      "platemusic11009.associationGroupFour": {
+        "associationGroupFour": {
+          "value": "None",
+          "timestamp": "2025-01-19T21:05:22.114Z"
+        }
+      }
+    },
+    "relay2": {
+      "switch": {
+        "switch": {
+          "value": "on",
+          "timestamp": "2025-02-09T17:28:27.852Z"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "requestId": "3051095549439698997",
+  "error": {
+    "code": "ConstraintViolationError",
+    "message": "The request is malformed.",
+    "details": [
+      {
+        "code": "UnprocessableEntityError",
+        "target": "commands[0].arguments[0]",
+        "message": "commands[0].arguments[0]: must have a maximum value of 30000",
+        "details": []
+      }
+    ]
+  }
+}

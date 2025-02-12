@@ -1,0 +1,96 @@
+{
+  "components": {
+    "button2": {
+      "button": {
+        "button": {
+          "value": "pushed",
+          "timestamp": "2024-08-13T14:57:25.059Z"
+        },
+        "numberOfButtons": {
+          "value": 1,
+          "timestamp": "2024-08-13T14:50:16.773Z"
+        },
+        "supportedButtonValues": {
+          "value": ["pushed", "held"],
+          "timestamp": "2024-08-13T14:50:16.736Z"
+        }
+      }
+    },
+    "main": {
+      "button": {
+        "button": {
+          "value": "pushed",
+          "timestamp": "2024-08-13T14:57:25.055Z"
+        },
+        "numberOfButtons": {
+          "value": 2,
+          "timestamp": "2024-08-13T14:50:16.730Z"
+        },
+        "supportedButtonValues": {
+          "value": ["pushed", "held"],
+          "timestamp": "2024-08-13T14:50:16.731Z"
+        }
+      },
+      "refresh": {},
+      "battery": {
+        "quantity": {
+          "value": null
+        },
+        "battery": {
+          "value": 100,
+          "unit": "%",
+          "timestamp": "2024-08-13T14:50:17.333Z"
+        },
+        "type": {
+          "value": null
+        }
+      },
+      "firmwareUpdate": {
+        "lastUpdateStatusReason": {
+          "value": null
+        },
+        "availableVersion": {
+          "value": "22010631",
+          "timestamp": "2024-08-13T14:51:33.136Z"
+        },
+        "lastUpdateStatus": {
+          "value": null
+        },
+        "supportedCommands": {
+          "value": null
+        },
+        "state": {
+          "value": "normalOperation",
+          "timestamp": "2024-08-13T14:51:33.133Z"
+        },
+        "updateAvailable": {
+          "value": false,
+          "timestamp": "2024-08-13T14:51:33.134Z"
+        },
+        "currentVersion": {
+          "value": "22010631",
+          "timestamp": "2024-08-13T14:51:32.892Z"
+        },
+        "lastUpdateTime": {
+          "value": null
+        }
+      }
+    },
+    "button1": {
+      "button": {
+        "button": {
+          "value": "pushed",
+          "timestamp": "2024-08-13T14:57:24.797Z"
+        },
+        "numberOfButtons": {
+          "value": 1,
+          "timestamp": "2024-08-13T14:50:16.776Z"
+        },
+        "supportedButtonValues": {
+          "value": ["pushed", "held"],
+          "timestamp": "2024-08-13T14:50:16.772Z"
+        }
+      }
+    }
+  }
+}

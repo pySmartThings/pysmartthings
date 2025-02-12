@@ -1,0 +1,35 @@
+{
+  "components": {
+    "main": {
+      "healthCheck": {
+        "checkInterval": {
+          "value": 60,
+          "unit": "s",
+          "data": {
+            "deviceScheme": "UNTRACKED",
+            "protocol": "cloud"
+          },
+          "timestamp": "2024-08-29T17:58:33.901Z"
+        },
+        "healthStatus": {
+          "value": null
+        },
+        "DeviceWatch-Enroll": {
+          "value": null
+        },
+        "DeviceWatch-DeviceStatus": {
+          "value": "online",
+          "data": {},
+          "timestamp": "2025-02-08T21:56:09.756Z"
+        }
+      },
+      "alarm": {
+        "alarm": {
+          "value": "off",
+          "timestamp": "2025-02-08T21:56:09.756Z"
+        }
+      },
+      "refresh": {}
+    }
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "components": {
+    "main": {
+      "mediaPlayback": {
+        "supportedPlaybackCommands": {
+          "value": ["play", "pause", "stop", "fastForward", "rewind"],
+          "timestamp": "2024-12-31T09:18:21.859Z"
+        },
+        "playbackStatus": {
+          "value": null
+        }
+      },
+      "samsungvd.supportsPowerOnByOcf": {
+        "supportsPowerOnByOcf": {
+          "value": "true",
+          "timestamp": "2024-12-31T23:46:45.548Z"
+        }
+      },
+      "sec.deviceConnectionState": {
+        "deviceConnectionState": {
+          "value": null
+        }
+      },
+      "mediaInputSource": {
+        "supportedInputSources": {
+          "value": [],
+          "timestamp": "2024-12-31T09:18:21.859Z"
+        },
+        "inputSource": {
+          "value": "HDMI1",
+          "timestamp": "2023-04-29T15:33:43.606Z"
+        }
+      },
+      "samsungvd.deviceCategory": {
+        "category": {
+          "value": "monitor",
+          "timestamp": "2024-12-31T13:55:01.350Z"
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-01-01T01:29:26.300Z"
+        }
+      },
+      "ocf": {
+        "st": {
+          "value": "2024-12-21T16:13:44Z",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mndt": {
+          "value": "2022-01-01",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnfv": {
+          "value": "T-NKLBWWC-1651.10",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnhw": {
+          "value": "",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "di": {
+          "value": "3f01bf2b-e9a3-3543-1047-42320283a5c1",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnsl": {
+          "value": "",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "dmv": {
+          "value": "res.1.1.0,sh.1.1.0",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "n": {
+          "value": "27\" Smart Monitor M5",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnmo": {
+          "value": "LS27BM501ENXZA",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "vid": {
+          "value": "VD-SMONITOR-2022",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnmn": {
+          "value": "Samsung Electronics",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnml": {
+          "value": "",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnpv": {
+          "value": "6.5",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "mnos": {
+          "value": "Tizen",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "pi": {
+          "value": "3f01bf2b-e9a3-3543-1047-42320283a5c1",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        },
+        "icv": {
+          "value": "core.1.1.0",
+          "timestamp": "2024-12-31T09:18:22.478Z"
+        }
+      },
+      "samsungvd.supportsFeatures": {
+        "mediaOutputSupported": {
+          "value": true,
+          "timestamp": "2024-12-31T09:18:23.100Z"
+        },
+        "imeAdvSupported": {
+          "value": true,
+          "timestamp": "2024-12-31T09:18:23.100Z"
+        },
+        "wifiUpdateSupport": {
+          "value": null
+        },
+        "executableServiceList": {
+          "value": null
+        },
+        "remotelessSupported": {
+          "value": null
+        },
+        "mobileCamSupported": {
+          "value": true,
+          "timestamp": "2024-12-31T09:18:23.100Z"
+        }
+      },
+      "custom.accessibility": {},
+      "custom.disabledCapabilities": {
+        "disabledCapabilities": {
+          "value": ["samsungvd.ambient", "samsungvd.ambientContent"],
+          "timestamp": "2025-01-07T15:42:44.749Z"
+        }
+      },
+      "samsungvd.remoteControl": {},
+      "custom.launchapp": {},
+      "samsungvd.firmwareVersion": {
+        "firmwareVersion": {
+          "value": "3.5.1",
+          "timestamp": "2024-12-31T13:55:01.350Z"
+        }
+      },
+      "samsungvd.thingStatus": {
+        "updatedTime": {
+          "value": 1735688805,
+          "timestamp": "2024-12-31T23:46:45.445Z"
+        },
+        "status": {
+          "value": "Idle",
+          "timestamp": "2024-12-31T23:46:45.445Z"
+        }
+      },
+      "audioVolume": {
+        "volume": {
+          "value": 15,
+          "unit": "%",
+          "timestamp": "2024-12-31T13:55:00.858Z"
+        }
+      },
+      "samsungvd.mediaInputSource": {
+        "supportedInputSourcesMap": {
+          "value": [
+            {
+              "id": "HDMI2",
+              "name": "PC"
+            }
+          ],
+          "timestamp": "2024-12-31T23:46:45.670Z"
+        },
+        "inputSource": {
+          "value": "HDMI2",
+          "timestamp": "2024-12-31T23:46:45.670Z"
+        }
+      },
+      "custom.tvsearch": {},
+      "samsungvd.ambient": {},
+      "refresh": {},
+      "custom.error": {
+        "error": {
+          "value": null
+        }
+      },
+      "execute": {
+        "data": {
+          "value": null
+        }
+      },
+      "tvChannel": {
+        "tvChannel": {
+          "value": "",
+          "timestamp": "2024-12-25T20:25:47.018Z"
+        },
+        "tvChannelName": {
+          "value": "",
+          "timestamp": "2024-12-25T20:25:47.018Z"
+        }
+      },
+      "custom.picturemode": {
+        "pictureMode": {
+          "value": "Eye Saver Low",
+          "timestamp": "2024-12-31T13:55:01.293Z"
+        },
+        "supportedPictureModes": {
+          "value": ["Eye Saver Low"],
+          "timestamp": "2024-12-31T13:55:01.293Z"
+        },
+        "supportedPictureModesMap": {
+          "value": [
+            {
+              "id": "modeGen_327699",
+              "name": "Eye Saver Low"
+            }
+          ],
+          "timestamp": "2024-12-31T13:55:01.293Z"
+        }
+      },
+      "samsungvd.ambientContent": {
+        "supportedAmbientApps": {
+          "value": [],
+          "timestamp": "2024-12-31T09:18:21.859Z"
+        }
+      },
+      "custom.recording": {},
+      "custom.soundmode": {
+        "supportedSoundModesMap": {
+          "value": [
+            {
+              "id": "modeAdaptive",
+              "name": "Adaptive Sound"
+            },
+            {
+              "id": "modeAmplify",
+              "name": "Amplify"
+            },
+            {
+              "id": "modeStandard",
+              "name": "Standard"
+            }
+          ],
+          "timestamp": "2024-12-31T13:55:00.792Z"
+        },
+        "soundMode": {
+          "value": "Adaptive Sound",
+          "timestamp": "2024-12-31T13:55:00.792Z"
+        },
+        "supportedSoundModes": {
+          "value": ["Adaptive Sound", "Amplify", "Standard"],
+          "timestamp": "2024-12-31T13:55:00.792Z"
+        }
+      },
+      "audioMute": {
+        "mute": {
+          "value": "muted",
+          "timestamp": "2024-12-31T13:55:00.858Z"
+        }
+      },
+      "mediaTrackControl": {
+        "supportedTrackControlCommands": {
+          "value": null
+        }
+      }
+    }
+  }
+}

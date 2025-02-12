@@ -1,0 +1,72 @@
+{
+  "components": {
+    "main": {
+      "lock": {
+        "supportedUnlockDirections": {
+          "value": null
+        },
+        "supportedLockValues": {
+          "value": null
+        },
+        "lock": {
+          "value": "locked",
+          "data": {},
+          "timestamp": "2025-02-09T17:38:32.002Z"
+        },
+        "supportedLockCommands": {
+          "value": null
+        }
+      },
+      "refresh": {},
+      "battery": {
+        "quantity": {
+          "value": null
+        },
+        "battery": {
+          "value": 68,
+          "unit": "%",
+          "timestamp": "2025-02-09T16:38:27.262Z"
+        },
+        "type": {
+          "value": null
+        }
+      },
+      "lockCodes": {
+        "codeLength": {
+          "value": null
+        },
+        "maxCodes": {
+          "value": 244,
+          "timestamp": "2024-07-23T16:15:09.860Z"
+        },
+        "maxCodeLength": {
+          "value": null
+        },
+        "codeChanged": {
+          "value": "2 set",
+          "data": {
+            "codeName": "Salim"
+          },
+          "timestamp": "2024-08-08T18:20:27.537Z"
+        },
+        "lock": {
+          "value": null
+        },
+        "minCodeLength": {
+          "value": null
+        },
+        "codeReport": {
+          "value": null
+        },
+        "scanCodes": {
+          "value": "Complete",
+          "timestamp": "2024-07-23T16:15:15.274Z"
+        },
+        "lockCodes": {
+          "value": "{\"1\":\"Saima\",\"2\":\"Salim\"}",
+          "timestamp": "2024-08-08T18:20:27.532Z"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1606 @@
+{
+  "items": [
+    {
+      "deviceId": "6a6954ee-5784-4cce-aac6-fbe010adca07",
+      "name": "Samsung Soundbar S801B",
+      "label": "Samsung Soundbar S801B",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-NetworkAudio-002S",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "bce1d0a8-cd33-4896-a5ad-05f50467c8db",
+      "deviceTypeName": "Samsung OCF Network Audio Player",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "audioTrackData",
+              "version": 1
+            },
+            {
+              "id": "mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.audioInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "audioNotification",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.soundFrom",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.audioGroupInfo",
+              "version": 1,
+              "ephemeral": true
+            }
+          ],
+          "categories": [
+            {
+              "name": "NetworkAudio",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-06-11T21:54:52.681Z",
+      "profile": {
+        "id": "0e40ae6f-ea47-38fc-8b27-7f82c467f5c1"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.networkaudio",
+        "name": "Samsung Soundbar S801B",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "HW-S801B",
+        "platformVersion": "6.5",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "HW-S801BWWB-1010.0",
+        "vendorId": "VD-NetworkAudio-002S",
+        "vendorResourceClientServerVersion": "2.3.16",
+        "locale": "",
+        "lastSignupTime": "2023-06-11T21:54:49.635578Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "16d58af1-86a0-46cd-bf14-d3742119e27c",
+      "name": "multi-sensor",
+      "label": "Main Bedroom Window Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "d855b759-f7d5-4369-b5a2-a154de4b1e14",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            },
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "user"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-03-21T19:23:10.236Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700011415D1",
+        "networkId": "FCC5",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "59513635-baa2-463f-bb6a-443f662f3f2a",
+      "name": "motion-battery",
+      "label": "Garage Motion Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "4ce5cd02-b568-3bed-b6d5-2ba2205fb525",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "cdf080f0-0542-41d7-a606-aff69683e04c",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "motionSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MotionSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-05-18T17:32:21.866Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "bcb52cd4-0c84-39e2-9893-39872290b0a4"
+      },
+      "zigbee": {
+        "eui": "0015BC001A028E5C",
+        "networkId": "664E",
+        "driverId": "d620900d-f7bc-4ab5-a171-6dd159872f7d",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "ab7557f0-281d-49e9-a0d7-d838229a49d8",
+      "name": "multi-sensor",
+      "label": "Charlie's Bedroom Window Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "7641a6ce-bb42-4d37-8c94-e8a20a1f8d2c",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            },
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "user"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-03-21T19:19:34.119Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700011419D7",
+        "networkId": "5DC3",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "name": "SmartThings v3 Hub",
+      "label": "SmartThings v3 Hub",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "63f1469e-dc4a-3689-8cc5-69e293c1eb21",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "40dca7a1-3ba7-4e31-be11-2c05292d8605",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "bridge",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Hub",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2020-08-11T19:06:15Z",
+      "childDevices": [
+        {
+          "deviceId": "16d58af1-86a0-46cd-bf14-d3742119e27c",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "25bd5c0e-23bf-402c-a2f3-a8c34bf656b1",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "333b4955-5f0d-4a87-8ad8-9fe32607e1fb",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "3358b4cc-4a35-49ad-8bf9-95803d044408",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "493837dc-c9a0-4ab2-9610-1b46e3c668c3",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "59513635-baa2-463f-bb6a-443f662f3f2a",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "7faaac2e-d889-4141-99f5-493c991ec508",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "994ad929-3308-45a1-9ed0-e1cc26021131",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "ab7557f0-281d-49e9-a0d7-d838229a49d8",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "c93373db-ffec-49ad-80b8-6880ecad5eb8",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "eeaa8872-18b2-4626-8f45-cbf8396e7a8f",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "f0af21a2-d5a1-437c-b10a-b34a87394b71",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        },
+        {
+          "deviceId": "fec5fefc-187a-4b07-ac8d-244aa8c448df",
+          "profile": {},
+          "allowed": null,
+          "executionContext": "CLOUD"
+        }
+      ],
+      "profile": {
+        "id": "d77ba2f6-c377-36f5-bb68-15db9d1aa0e1"
+      },
+      "hub": {
+        "hubEui": "D052A8B6033F0001",
+        "firmwareVersion": "000.055.00005",
+        "hubDrivers": [
+          {
+            "driverVersion": "2024-12-17T18:00:36.611958104",
+            "driverId": "01976eca-e7ff-4d1b-91db-9c980ce668d7",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:51.437710641",
+            "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:35.032104982",
+            "driverId": "4eb5b19a-7bbc-452f-859b-c6d7d857b2da",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-01-30T21:36:05.703753938",
+            "driverId": "4fb7ec02-2697-4d73-977d-2b1c65c4484f",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2025-02-03T22:38:47.582952919",
+            "driverId": "7beb8bc2-8dfa-45c2-8fdb-7373d4597b12",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-21T19:06:49.949052991",
+            "driverId": "9050ac53-358c-47a1-a927-9a70f5f28cee",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-09-12T20:02:11.251500419",
+            "driverId": "b98b34ce-1d1d-480c-bb17-41307a90cde0",
+            "channelId": "2423da55-101c-4b21-af58-0903656b85ca"
+          },
+          {
+            "driverVersion": "2024-11-04T22:39:18.253781754",
+            "driverId": "c21a6c77-872c-474e-be5b-5f6f11a240ef",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-01-30T21:36:15.547412569",
+            "driverId": "c856a3fd-69ee-4478-a224-d7279b6d978f",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2025-01-13T18:55:57.509807915",
+            "driverId": "cd898d81-6c27-4d27-a529-dfadc8caae5a",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:50.444920985",
+            "driverId": "d620900d-f7bc-4ab5-a171-6dd159872f7d",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2023-07-11T18:43:49.169154271",
+            "driverId": "d9c3f8b8-c3c3-4b77-9ddd-01d08102c84b",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          },
+          {
+            "driverVersion": "2024-10-10T18:17:54.195543653",
+            "driverId": "dbe192cb-f6a1-4369-a843-d1c42e5c91ba",
+            "channelId": "15ea8adc-8be7-4ea6-8b51-4155f56dc6cf"
+          }
+        ],
+        "hubData": {
+          "zwaveStaticDsk": "64454-59291-25499-09979-62836-31117-32218-08719",
+          "zwaveS2": true,
+          "hardwareType": "V3_HUB",
+          "hardwareId": "0036",
+          "zigbeeFirmware": "6.1.6",
+          "zigbee3": true,
+          "zigbeeOta": "ENABLED_WITH_LIGHTS",
+          "otaEnable": "true",
+          "zigbeeUnsecureRejoin": true,
+          "zigbeeRequiresExternalHardware": false,
+          "threadRequiresExternalHardware": false,
+          "failoverAvailability": "Available",
+          "primarySupportAvailability": "Available",
+          "secondarySupportAvailability": "Available",
+          "zigbeeAvailability": "Available",
+          "zwaveAvailability": "Available",
+          "threadAvailability": "Available",
+          "lanAvailability": "Available",
+          "matterAvailability": "Available",
+          "localVirtualDeviceAvailability": "Available",
+          "childDeviceAvailability": "Unsupported",
+          "edgeDriversAvailability": "Available",
+          "hubReplaceAvailability": "Available",
+          "hubLocalApiAvailability": "Available",
+          "zigbeeManualFirmwareUpdateSupported": true,
+          "matterRendezvousHedgeSupported": true,
+          "matterSoftwareComponentVersion": "1.3-0",
+          "matterDeviceDiagnosticsAvailability": "Available",
+          "zigbeeDeviceDiagnosticsAvailability": "Available",
+          "hedgeTlsCertificate": "",
+          "zigbeeChannel": "14",
+          "zigbeePanId": "4F42",
+          "zigbeeEui": "286D970002054628",
+          "zigbeeNodeID": "0000",
+          "zwaveNodeID": "01",
+          "zwaveHomeID": "E0CA1E36",
+          "zwaveSucID": "01",
+          "zwaveVersion": "6.10",
+          "zwaveRegion": "EU",
+          "macAddress": "28:6D:97:AF:94:78",
+          "localIP": "192.168.1.51",
+          "zigbeeRadioFunctional": true,
+          "zwaveRadioFunctional": true,
+          "zigbeeRadioEnabled": true,
+          "zwaveRadioEnabled": true,
+          "zigbeeRadioDetected": true,
+          "zwaveRadioDetected": true
+        }
+      },
+      "type": "HUB",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "994ad929-3308-45a1-9ed0-e1cc26021131",
+      "name": "Multipurpose Sensor",
+      "label": "Kitchen Door Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "2464cde2-4420-4f2b-9af8-95d1f08653a5",
+      "components": [
+        {
+          "id": "main",
+          "label": "Kitchen Door Sensor",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2020-08-12T14:58:54Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700010D3F80",
+        "networkId": "9367",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "333b4955-5f0d-4a87-8ad8-9fe32607e1fb",
+      "name": "Multipurpose Sensor",
+      "label": "Back Door Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "bce1d0a8-cd33-4896-a5ad-05f50467c8db",
+      "components": [
+        {
+          "id": "main",
+          "label": "Back Door Sensor",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2020-08-11T19:40:53Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700010A41E1",
+        "networkId": "2374",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "7faaac2e-d889-4141-99f5-493c991ec508",
+      "name": "Multipurpose Sensor",
+      "label": "Garage Back Door Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "cdf080f0-0542-41d7-a606-aff69683e04c",
+      "components": [
+        {
+          "id": "main",
+          "label": "Garage Back Door Sensor",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2020-08-12T15:04:27Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700010D90EE",
+        "networkId": "275C",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "c93373db-ffec-49ad-80b8-6880ecad5eb8",
+      "name": "Multipurpose Sensor",
+      "label": "Front Door Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "52bdaef4-ac6b-4ccf-9e59-fe304bcc72fc",
+      "components": [
+        {
+          "id": "main",
+          "label": "Front Door Sensor",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2021-09-19T18:53:25.262Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D970001127FD6",
+        "networkId": "D199",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "eeaa8872-18b2-4626-8f45-cbf8396e7a8f",
+      "name": "Multipurpose Sensor",
+      "label": "Front Left Window Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "0f611f5c-5164-4a56-9cab-433907debeee",
+      "components": [
+        {
+          "id": "main",
+          "label": "Front Left Window Sensor",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2020-08-20T21:48:19Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700010A4009",
+        "networkId": "7A09",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "fec5fefc-187a-4b07-ac8d-244aa8c448df",
+      "name": "multi-sensor",
+      "label": "Landing Window Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "f7667cb2-aeca-414e-8ea6-a7bee7ccdbb6",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-09-05T17:57:40.658Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700011417DB",
+        "networkId": "1BA9",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "3358b4cc-4a35-49ad-8bf9-95803d044408",
+      "name": "motion-temp-battery",
+      "label": "Rabbit House Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "9bfc2d33-4dff-3ea8-949c-ae9bf31f612a",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "ea75d25c-881b-4e39-967e-c0a3101cfa5e",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "motionSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MotionSensor",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-12-01T00:36:29.076Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "8273b331-6efb-3adf-87e3-906329f99257"
+      },
+      "zigbee": {
+        "eui": "286D9700010C9EAF",
+        "networkId": "B5D4",
+        "driverId": "d620900d-f7bc-4ab5-a171-6dd159872f7d",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "25bd5c0e-23bf-402c-a2f3-a8c34bf656b1",
+      "name": "multi-sensor",
+      "label": "Kitchen Window Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "2464cde2-4420-4f2b-9af8-95d1f08653a5",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            },
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "user"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-04-09T19:23:04.065Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D97000112ABD2",
+        "networkId": "1ECC",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "493837dc-c9a0-4ab2-9610-1b46e3c668c3",
+      "name": "multi-sensor",
+      "label": "Girl's Bedroom Window Sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "c385e2bc-acb8-317b-be2a-6efd1f879720",
+      "deviceManufacturerCode": "Samjin",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "ebd35c19-c180-4d7d-9bcb-95279f74d7ad",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "contactSensor",
+              "version": 1
+            },
+            {
+              "id": "temperatureMeasurement",
+              "version": 1
+            },
+            {
+              "id": "threeAxis",
+              "version": 1
+            },
+            {
+              "id": "accelerationSensor",
+              "version": 1
+            },
+            {
+              "id": "battery",
+              "version": 1
+            },
+            {
+              "id": "firmwareUpdate",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "manufacturer"
+            },
+            {
+              "name": "MultiFunctionalSensor",
+              "categoryType": "user"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-03-21T19:13:46.786Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "4471213f-121b-38fd-b022-51df37ac1d4c"
+      },
+      "zigbee": {
+        "eui": "286D9700011415C1",
+        "networkId": "7C6D",
+        "driverId": "408981c2-91d4-4dfc-bbfb-84ca0205d993",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZIGBEE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    },
+    {
+      "deviceId": "b4d20b8f-ae23-8a6d-9db2-4c9d8db2c615",
+      "name": "Samsung QN95CA 55",
+      "label": "Samsung QN95CA 55",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-STV-2023",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "0f611f5c-5164-4a56-9cab-433907debeee",
+      "deviceTypeName": "Samsung OCF TV",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "tvChannel",
+              "version": 1
+            },
+            {
+              "id": "mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "mediaTrackControl",
+              "version": 1
+            },
+            {
+              "id": "custom.error",
+              "version": 1
+            },
+            {
+              "id": "custom.picturemode",
+              "version": 1
+            },
+            {
+              "id": "custom.soundmode",
+              "version": 1
+            },
+            {
+              "id": "custom.accessibility",
+              "version": 1
+            },
+            {
+              "id": "custom.launchapp",
+              "version": 1
+            },
+            {
+              "id": "custom.recording",
+              "version": 1
+            },
+            {
+              "id": "custom.tvsearch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.remoteControl",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambient",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambientContent",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsFeatures",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.firmwareVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsPowerOnByOcf",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.deviceCategory",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "sec.deviceConnectionState",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "demandResponseLoadControl",
+              "version": 1
+            },
+            {
+              "id": "custom.energyType",
+              "version": 1
+            },
+            {
+              "id": "samsungim.fixedFindNode",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.lightControl",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Television",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-06-16T10:53:58.305Z",
+      "profile": {
+        "id": "7b320619-876f-3fac-8709-e24ea2b09524"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.tv",
+        "name": "Samsung QN95CA 55",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "QE55QN95CATXXU",
+        "platformVersion": "8.0",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "T-PTMCDEUC-0080-2013.1|ST_ENERGY",
+        "vendorId": "VD-STV-2023",
+        "vendorResourceClientServerVersion": "4.0.26",
+        "locale": "en_GB",
+        "lastSignupTime": "2023-06-16T10:53:52.162548Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "01751e21-3609-ec2f-41af-1c8bc8d96c15",
+      "name": "Samsung The Frame 55",
+      "label": "Samsung The Frame 55",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "VD-STV-2022",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "bce1d0a8-cd33-4896-a5ad-05f50467c8db",
+      "deviceTypeName": "Samsung OCF TV",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "ocf",
+              "version": 1
+            },
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "audioVolume",
+              "version": 1
+            },
+            {
+              "id": "audioMute",
+              "version": 1
+            },
+            {
+              "id": "tvChannel",
+              "version": 1
+            },
+            {
+              "id": "mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "mediaPlayback",
+              "version": 1
+            },
+            {
+              "id": "mediaTrackControl",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "custom.error",
+              "version": 1
+            },
+            {
+              "id": "custom.picturemode",
+              "version": 1
+            },
+            {
+              "id": "custom.soundmode",
+              "version": 1
+            },
+            {
+              "id": "custom.accessibility",
+              "version": 1
+            },
+            {
+              "id": "custom.launchapp",
+              "version": 1
+            },
+            {
+              "id": "custom.recording",
+              "version": 1
+            },
+            {
+              "id": "custom.tvsearch",
+              "version": 1
+            },
+            {
+              "id": "custom.disabledCapabilities",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.remoteControl",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambient",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.ambientContent",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.mediaInputSource",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsFeatures",
+              "version": 1
+            },
+            {
+              "id": "samsungim.fixedFindNode",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.thingStatus",
+              "version": 1
+            },
+            {
+              "id": "sec.deviceConnectionState",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            },
+            {
+              "id": "execute",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.firmwareVersion",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.supportsPowerOnByOcf",
+              "version": 1
+            },
+            {
+              "id": "samsungvd.deviceCategory",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Television",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-06-10T23:08:13.202Z",
+      "profile": {
+        "id": "d02ed45d-5abe-3932-a625-f98226bf6691"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.tv",
+        "name": "Samsung The Frame 55",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "QE55LS03BGUXXU",
+        "platformVersion": "6.5",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "T-PTMDEUC-1651.7|ST_ENERGY",
+        "vendorId": "VD-STV-2022",
+        "vendorResourceClientServerVersion": "4.0.26",
+        "locale": "en_GB",
+        "lastSignupTime": "2023-06-10T23:08:07.878281Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    },
+    {
+      "deviceId": "f0af21a2-d5a1-437c-b10a-b34a87394b71",
+      "name": "aeotec-home-energy-meter-gen5",
+      "label": "Aeotec Energy Monitor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "3e0921d3-0a66-3d49-b458-752e596838e9",
+      "deviceManufacturerCode": "0086-0002-005F",
+      "locationId": "6911ddf5-f0cb-4516-a06a-3a2a6ec22bca",
+      "ownerId": "93257fc4-6471-2566-b06e-2fe72dd979fa",
+      "roomId": "cdf080f0-0542-41d7-a606-aff69683e04c",
+      "components": [
+        {
+          "id": "main",
+          "label": "Meter",
+          "capabilities": [
+            {
+              "id": "powerMeter",
+              "version": 1
+            },
+            {
+              "id": "energyMeter",
+              "version": 1
+            },
+            {
+              "id": "voltageMeasurement",
+              "version": 1
+            },
+            {
+              "id": "powerConsumptionReport",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "CurbPowerMeter",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2023-01-12T23:02:44.917Z",
+      "parentDeviceId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+      "profile": {
+        "id": "6372c227-93c7-32ef-9be5-aef2221adff1"
+      },
+      "zwave": {
+        "networkId": "0A",
+        "driverId": "b98b34ce-1d1d-480c-bb17-41307a90cde0",
+        "executingLocally": true,
+        "hubId": "6a2d07a4-dd77-48bc-9acf-017029aaf099",
+        "networkSecurityLevel": "ZWAVE_S0_LEGACY",
+        "provisioningState": "PROVISIONED",
+        "manufacturerId": 134,
+        "productType": 2,
+        "productId": 95
+      },
+      "type": "ZWAVE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    }
+  ],
+  "_links": {}
+}

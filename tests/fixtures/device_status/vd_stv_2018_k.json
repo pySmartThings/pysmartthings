@@ -1,0 +1,275 @@
+{
+  "components": {
+    "main": {
+      "mediaPlayback": {
+        "supportedPlaybackCommands": {
+          "value": ["play", "pause", "stop", "fastForward", "rewind"],
+          "timestamp": "2020-08-28T18:07:41.571Z"
+        },
+        "playbackStatus": {
+          "value": null,
+          "timestamp": "2021-01-18T18:56:40.681Z"
+        }
+      },
+      "samsungvd.supportsPowerOnByOcf": {
+        "supportsPowerOnByOcf": {
+          "value": "true",
+          "timestamp": "2025-01-19T10:00:36.812Z"
+        }
+      },
+      "mediaInputSource": {
+        "supportedInputSources": {
+          "value": ["digitalTv"],
+          "timestamp": "2023-07-08T11:32:59.982Z"
+        },
+        "inputSource": {
+          "value": "digitalTv",
+          "timestamp": "2023-07-08T09:50:26.107Z"
+        }
+      },
+      "samsungvd.deviceCategory": {
+        "category": {
+          "value": null
+        }
+      },
+      "switch": {
+        "switch": {
+          "value": "off",
+          "timestamp": "2025-01-19T20:28:01.990Z"
+        }
+      },
+      "ocf": {
+        "st": {
+          "value": "2023-07-08T13:32:52Z",
+          "timestamp": "2023-07-08T11:33:02.416Z"
+        },
+        "mndt": {
+          "value": "2019-01-01",
+          "timestamp": "2019-10-07T15:07:53.523Z"
+        },
+        "mnfv": {
+          "value": "T-MSMDEUC-1420.0",
+          "timestamp": "2024-03-24T18:12:31.891Z"
+        },
+        "mnhw": {
+          "value": "0-0",
+          "timestamp": "2019-10-07T15:07:53.682Z"
+        },
+        "di": {
+          "value": "a106da6d-2981-4c39-84c4-5d5b75b4784c",
+          "timestamp": "2019-10-07T15:07:54.432Z"
+        },
+        "mnsl": {
+          "value": "http://www.samsung.com/sec/tv/overview/",
+          "timestamp": "2019-10-07T15:07:53.536Z"
+        },
+        "dmv": {
+          "value": "res.1.1.0,sh.1.1.0",
+          "timestamp": "2019-10-07T15:07:54.460Z"
+        },
+        "n": {
+          "value": "[TV] Samsung Q70 Series (65)",
+          "timestamp": "2020-08-28T18:07:41.559Z"
+        },
+        "mnmo": {
+          "value": "QE65Q70RATXXC",
+          "timestamp": "2020-08-28T18:07:41.559Z"
+        },
+        "vid": {
+          "value": "VD-STV_2018_K",
+          "timestamp": "2020-08-28T18:07:41.559Z"
+        },
+        "mnmn": {
+          "value": "Samsung Electronics",
+          "timestamp": "2020-08-28T18:07:41.559Z"
+        },
+        "mnml": {
+          "value": "http://www.samsung.com",
+          "timestamp": "2019-10-07T15:07:53.642Z"
+        },
+        "mnpv": {
+          "value": "Tizen 5.0",
+          "timestamp": "2020-08-28T18:07:41.559Z"
+        },
+        "mnos": {
+          "value": "4.1.10",
+          "timestamp": "2019-10-07T15:07:53.577Z"
+        },
+        "pi": {
+          "value": "a106da6d-2981-4c39-84c4-5d5b75b4784c",
+          "timestamp": "2019-10-07T15:07:53.655Z"
+        },
+        "icv": {
+          "value": "core.1.1.0",
+          "timestamp": "2019-10-07T15:07:54.416Z"
+        }
+      },
+      "custom.accessibility": {},
+      "custom.disabledCapabilities": {
+        "disabledCapabilities": {
+          "value": ["samsungvd.ambient18", "sec.diagnosticsInformation"],
+          "timestamp": "2023-07-08T11:33:00.033Z"
+        }
+      },
+      "samsungvd.remoteControl": {},
+      "sec.diagnosticsInformation": {
+        "logType": {
+          "value": null
+        },
+        "endpoint": {
+          "value": null
+        },
+        "minVersion": {
+          "value": null
+        },
+        "signinPermission": {
+          "value": null
+        },
+        "setupId": {
+          "value": null
+        },
+        "protocolType": {
+          "value": null
+        },
+        "tsId": {
+          "value": null
+        },
+        "mnId": {
+          "value": null
+        },
+        "dumpType": {
+          "value": null
+        }
+      },
+      "custom.launchapp": {},
+      "samsungvd.firmwareVersion": {
+        "firmwareVersion": {
+          "value": "2.4.0",
+          "timestamp": "2025-01-19T10:00:36.812Z"
+        }
+      },
+      "audioVolume": {
+        "volume": {
+          "value": 9,
+          "unit": "%",
+          "timestamp": "2023-07-08T11:32:59.897Z"
+        }
+      },
+      "samsungvd.mediaInputSource": {
+        "supportedInputSourcesMap": {
+          "value": [
+            {
+              "id": "dtv",
+              "name": "TV"
+            }
+          ],
+          "timestamp": "2025-01-19T19:17:40.851Z"
+        },
+        "inputSource": {
+          "value": "dtv",
+          "timestamp": "2025-01-19T19:17:40.851Z"
+        }
+      },
+      "custom.tvsearch": {},
+      "samsungvd.ambient": {},
+      "refresh": {},
+      "custom.error": {
+        "error": {
+          "value": null,
+          "timestamp": "2021-01-18T18:54:38.431Z"
+        }
+      },
+      "execute": {
+        "data": {
+          "value": null,
+          "data": {},
+          "timestamp": "2021-01-18T18:54:42.846Z"
+        }
+      },
+      "tvChannel": {
+        "tvChannel": {
+          "value": "",
+          "timestamp": "2024-10-27T09:14:38.510Z"
+        },
+        "tvChannelName": {
+          "value": "9Ur5IzDKqV.TizenYouTube",
+          "timestamp": "2024-10-27T09:14:38.510Z"
+        }
+      },
+      "custom.picturemode": {
+        "pictureMode": {
+          "value": "Film",
+          "timestamp": "2021-08-15T13:43:23.214Z"
+        },
+        "supportedPictureModes": {
+          "value": ["Dynamisk", "Standard", "Naturlig", "Film"],
+          "timestamp": "2021-08-15T13:43:23.214Z"
+        },
+        "supportedPictureModesMap": {
+          "value": [
+            {
+              "id": "modeDynamic",
+              "name": "Dynamisk"
+            },
+            {
+              "id": "modeStandard",
+              "name": "Standard"
+            },
+            {
+              "id": "modeNatural",
+              "name": "Naturlig"
+            },
+            {
+              "id": "modeMovie",
+              "name": "Film"
+            }
+          ],
+          "timestamp": "2021-08-15T13:43:23.214Z"
+        }
+      },
+      "samsungvd.ambientContent": {
+        "supportedAmbientApps": {
+          "value": ["weather"],
+          "timestamp": "2023-07-08T11:33:00.033Z"
+        }
+      },
+      "custom.recording": {},
+      "samsungvd.ambient18": {},
+      "custom.soundmode": {
+        "supportedSoundModesMap": {
+          "value": [
+            {
+              "id": "modeStandard",
+              "name": "Standard"
+            },
+            {
+              "id": "modeAmplify",
+              "name": "F\u00f6rst\u00e4rk"
+            }
+          ],
+          "timestamp": "2021-08-15T17:22:13.242Z"
+        },
+        "soundMode": {
+          "value": "F\u00f6rst\u00e4rk",
+          "timestamp": "2021-08-15T13:43:23.231Z"
+        },
+        "supportedSoundModes": {
+          "value": ["Standard", "F\u00f6rst\u00e4rk"],
+          "timestamp": "2021-08-15T17:22:13.242Z"
+        }
+      },
+      "audioMute": {
+        "mute": {
+          "value": "unmuted",
+          "timestamp": "2021-08-15T19:27:08.441Z"
+        }
+      },
+      "mediaTrackControl": {
+        "supportedTrackControlCommands": {
+          "value": null,
+          "timestamp": "2021-01-14T11:05:21.430Z"
+        }
+      }
+    }
+  }
+}

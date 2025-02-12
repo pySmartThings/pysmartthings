@@ -4,7 +4,7 @@
       "component": "main",
       "capability": "execute",
       "command": "execute",
-      "arguments": ["Test", {"data": "Test"}]
+      "arguments": ["Test", { "data": "Test" }]
     }
   ]
 }
