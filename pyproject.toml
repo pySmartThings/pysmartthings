@@ -125,18 +125,6 @@ asyncio_mode = "auto"
 [tool.ruff.lint]
 ignore = [
   "ANN401", # Opinioated warning on disallowing dynamically typed expressions
-  "DTZ005",
-  "ERA001",
-  "PLR0913",
-  "TRY003",
-  "FBT002",
-  "ARG002",
-  "FBT001",
-  "BLE001",
-  "S110",
-  "S105",
-  "EXE001",
-  "T201",
   "COM812", # Conflicts with other rules
   "D203", # Conflicts with other rules
   "D213", # Conflicts with other rules

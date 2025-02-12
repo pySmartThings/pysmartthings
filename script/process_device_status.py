@@ -5,9 +5,8 @@ from pathlib import Path
 import re
 import sys
 
-from treelib import Tree
-
 from pysmartthings.models import CAPABILITY_ATTRIBUTES, Attribute, Capability
+from treelib import Tree
 
 
 def main() -> int:  # noqa: PLR0912

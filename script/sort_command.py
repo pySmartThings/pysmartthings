@@ -1,7 +1,6 @@
 """Sort the Command enum."""
 
 import pyperclip
-
 from pysmartthings.models import Command
 
 
