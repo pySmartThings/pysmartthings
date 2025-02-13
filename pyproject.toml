@@ -32,6 +32,7 @@ aiohttp = ">=3.0.0"
 yarl = ">=1.6.0"
 mashumaro = "^3.11"
 orjson = "^3.9.10"
+aiohttp-sse-client = ">=0.2.1"
 
 [tool.poetry.group.dev.dependencies]
 codespell = "2.4.1"

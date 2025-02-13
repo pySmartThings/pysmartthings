@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import asyncio
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import logging
 from typing import TYPE_CHECKING, Any, Callable, Self
 
 from aiohttp import ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
+from aiohttp_sse_client.client import EventSource
 from yarl import URL
 
 from .const import API_BASE
@@ -22,6 +23,8 @@ from .models import (
     DeviceResponse,
     DeviceStatus,
     ErrorResponse,
+    Event,
+    EventType,
     Location,
     LocationResponse,
     Room,
@@ -29,6 +32,7 @@ from .models import (
     Scene,
     SceneResponse,
     Status,
+    Subscription,
 )
 
 if TYPE_CHECKING:
@@ -46,6 +50,18 @@ class SmartThings:
     _token: str | None = None
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
+    __device_event_listeners: dict[
+        tuple[str, str, Capability, Attribute],
+        list[
+            Callable[
+                [
+                    str | int | float | dict[str, Any] | list[Any] | None,
+                    dict[str, Any] | None,
+                ],
+                None,
+            ]
+        ],
+    ] = field(default_factory=dict)
 
     async def refresh_token(self) -> None:
         """Refresh token with provided function."""
@@ -55,6 +71,13 @@ class SmartThings:
     def authenticate(self, token: str) -> None:
         """Authenticate the user with a token."""
         self._token = token
+
+    def _get_headers(self) -> dict[str, str]:
+        """Get headers for requests."""
+        return {
+            "Authorization": f"Bearer {self._token}",
+            "version": "application/vnd.smartthings+json;v=20250122",
+        }
 
     async def _request(
         self,
@@ -75,7 +98,7 @@ class SmartThings:
 
         headers = {
             "Accept": "application/json, text/plain, */*",
-            "Authorization": f"Bearer {self._token}",
+            **self._get_headers(),
         }
 
         if self.session is None:
@@ -219,6 +242,70 @@ class SmartThings:
             data={"commands": [command_payload]},
         )
         _LOGGER.debug("Command response: %s", response)
+
+    def add_device_event_listener(
+        self,
+        device_id: str,
+        component_id: str,
+        capability: Capability,
+        attribute: Attribute,
+        callback: Callable[
+            [
+                str | int | float | dict[str, Any] | list[Any] | None,
+                dict[str, Any] | None,
+            ],
+            None,
+        ],
+    ) -> Callable[[], None]:
+        """Add a listener for device events."""
+        key = (device_id, component_id, capability, attribute)
+        if key not in self.__device_event_listeners:
+            self.__device_event_listeners[key] = []
+        self.__device_event_listeners[key].append(callback)
+        return lambda: self.__device_event_listeners[key].remove(callback)
+
+    async def _create_subscription(
+        self, location_id: str, installed_app_id: str
+    ) -> Subscription:
+        """Create a subscription."""
+        resp = await self._post(
+            "subscriptions",
+            data={
+                "name": "My Home Assistant sub",
+                "version": 20250122,
+                "clientDeviceId": f"iapp_{installed_app_id}",
+                "subscriptionFilters": [
+                    {
+                        "type": "LOCATIONIDS",
+                        "value": [location_id],
+                        "eventType": [EventType.DEVICE_EVENT],
+                    }
+                ],
+            },
+        )
+        return Subscription.from_json(resp)
+
+    async def subscribe(self, location_id: str, installed_app_id: str) -> None:
+        """Create a subscription."""
+        subscription = await self._create_subscription(location_id, installed_app_id)
+        async with EventSource(
+            subscription.registration_url,
+            session=self.session,
+            headers=self._get_headers(),
+        ) as event_source:
+            async for event in event_source:
+                if event.type == EventType.DEVICE_EVENT:
+                    event_type = Event.from_json(event.data)
+                    device_event = event_type.device_event
+                    key = (
+                        device_event.device_id,
+                        device_event.component_id,
+                        device_event.capability,
+                        device_event.attribute,
+                    )
+                    if key in self.__device_event_listeners:
+                        for callback in self.__device_event_listeners[key]:
+                            callback(device_event.value, device_event.data)
 
     async def close(self) -> None:
         """Close open client session."""

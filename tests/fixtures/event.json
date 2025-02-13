@@ -1,0 +1,21 @@
+{
+  "eventTime": 1739480496560,
+  "eventType": "DEVICE_EVENT",
+  "deviceEvent": {
+    "eventId": "b66aab69-ea4d-11ef-ad0f-bb2d43a06ec6",
+    "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerType": "LOCATION",
+    "deviceId": "440063de-a200-40b5-8a6b-f3399eaa0370",
+    "componentId": "main",
+    "capability": "switch",
+    "attribute": "switch",
+    "value": "on",
+    "valueType": "string",
+    "stateChange": true,
+    "data": {},
+    "subscriptionName": "My Home Assistant sub",
+    "commandId": "",
+    "sensitive": false
+  }
+}

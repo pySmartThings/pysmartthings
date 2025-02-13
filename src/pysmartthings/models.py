@@ -2715,3 +2715,42 @@ class ErrorDetails:
     message: str
     details: list[ErrorDetails]
     target: str | None = field(default=None)
+
+
+@dataclass
+class Subscription(DataClassORJSONMixin):
+    """Subscription model."""
+
+    subscription_id: str = field(metadata=field_options(alias="subscriptionId"))
+    registration_url: str = field(metadata=field_options(alias="registrationUrl"))
+    name: str
+
+
+@dataclass
+class DeviceEvent(DataClassORJSONMixin):
+    """Device event model."""
+
+    event_id: str = field(metadata=field_options(alias="eventId"))
+    location_id: str = field(metadata=field_options(alias="locationId"))
+    owner_id: str = field(metadata=field_options(alias="ownerId"))
+    device_id: str = field(metadata=field_options(alias="deviceId"))
+    component_id: str = field(metadata=field_options(alias="componentId"))
+    capability: Capability
+    attribute: Attribute
+    value: str | int | float | dict[str, Any] | list[Any] | None
+    data: dict[str, Any] | None = None
+
+
+@dataclass
+class Event(DataClassORJSONMixin):
+    """Event model."""
+
+    event_time: int = field(metadata=field_options(alias="eventTime"))
+    event_type: str = field(metadata=field_options(alias="eventType"))
+    device_event: DeviceEvent = field(metadata=field_options(alias="deviceEvent"))
+
+
+class EventType(StrEnum):
+    """Event type."""
+
+    DEVICE_EVENT = "DEVICE_EVENT"
