@@ -50,11 +50,13 @@ class SmartThings:
     _token: str | None = None
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
-    __device_event_listeners: dict[
-        tuple[str, str, Capability, Attribute],
+    __capability_event_listeners: dict[
+        tuple[str, str, Capability],
         list[
             Callable[
                 [
+                    Capability,
+                    Attribute,
                     str | int | float | dict[str, Any] | list[Any] | None,
                     dict[str, Any] | None,
                 ],
@@ -248,9 +250,10 @@ class SmartThings:
         device_id: str,
         component_id: str,
         capability: Capability,
-        attribute: Attribute,
         callback: Callable[
             [
+                Capability,
+                Attribute,
                 str | int | float | dict[str, Any] | list[Any] | None,
                 dict[str, Any] | None,
             ],
@@ -258,11 +261,11 @@ class SmartThings:
         ],
     ) -> Callable[[], None]:
         """Add a listener for device events."""
-        key = (device_id, component_id, capability, attribute)
-        if key not in self.__device_event_listeners:
-            self.__device_event_listeners[key] = []
-        self.__device_event_listeners[key].append(callback)
-        return lambda: self.__device_event_listeners[key].remove(callback)
+        key = (device_id, component_id, capability)
+        if key not in self.__capability_event_listeners:
+            self.__capability_event_listeners[key] = []
+        self.__capability_event_listeners[key].append(callback)
+        return lambda: self.__capability_event_listeners[key].remove(callback)
 
     async def _create_subscription(
         self, location_id: str, installed_app_id: str
@@ -301,11 +304,15 @@ class SmartThings:
                         device_event.device_id,
                         device_event.component_id,
                         device_event.capability,
-                        device_event.attribute,
                     )
-                    if key in self.__device_event_listeners:
-                        for callback in self.__device_event_listeners[key]:
-                            callback(device_event.value, device_event.data)
+                    if key in self.__capability_event_listeners:
+                        for callback in self.__capability_event_listeners[key]:
+                            callback(
+                                device_event.capability,
+                                device_event.attribute,
+                                device_event.value,
+                                device_event.data,
+                            )
 
     async def close(self) -> None:
         """Close open client session."""
