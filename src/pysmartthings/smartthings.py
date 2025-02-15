@@ -11,6 +11,7 @@ from aiohttp import ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from yarl import URL
 
+from . import SmartThingsAuthenticationFailedError
 from .const import API_BASE
 from .exceptions import SmartThingsCommandError, SmartThingsConnectionError
 from .models import (
@@ -96,6 +97,10 @@ class SmartThings:
             raise SmartThingsConnectionError(msg) from exception
 
         text = await response.text()
+
+        if response.status == 401:
+            msg = "Authentication failed with SmartThings"
+            raise SmartThingsAuthenticationFailedError(msg)
 
         if response.status == 422:
             raise SmartThingsCommandError(ErrorResponse.from_json(text))
@@ -194,6 +199,10 @@ class SmartThings:
         """Retrieve the status of a device."""
         resp = await self._get(f"devices/{device_id}/status")
         return DeviceStatus.from_json(resp).components
+
+    async def get_capability(self, capability: Capability | str) -> str:
+        """Retrieve the capability schema."""
+        return await self._get(f"capabilities/{capability}/1")
 
     async def execute_device_command(
         self,
