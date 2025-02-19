@@ -11,14 +11,14 @@ from aiohttp import ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from yarl import URL
 
-from . import SmartThingsAuthenticationFailedError
 from .const import API_BASE
-from .exceptions import SmartThingsCommandError, SmartThingsConnectionError
+from .exceptions import (
+    SmartThingsAuthenticationFailedError,
+    SmartThingsCommandError,
+    SmartThingsConnectionError,
+)
 from .models import (
-    Attribute,
     BaseLocation,
-    Capability,
-    Command,
     Device,
     DeviceResponse,
     DeviceStatus,
@@ -34,6 +34,10 @@ from .models import (
 
 if TYPE_CHECKING:
     from collections.abc import Awaitable
+
+    from .attribute import Attribute
+    from .capability import Capability
+    from .command import Command
 
 _LOGGER = logging.getLogger(__name__)
 
