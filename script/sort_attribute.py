@@ -1,7 +1,7 @@
 """Sort the Attribute enum."""
 
 import pyperclip
-from pysmartthings.models import Attribute
+from pysmartthings import Attribute
 
 
 def main() -> int:
