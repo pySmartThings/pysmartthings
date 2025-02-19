@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 import sys
 
-from pysmartthings.models import CAPABILITY_ATTRIBUTES, Attribute, Capability
+from pysmartthings import CAPABILITY_ATTRIBUTES, Attribute, Capability
 from treelib import Tree
 
 
@@ -22,7 +22,7 @@ def main() -> int:  # noqa: PLR0912
     tree = Tree()
     found_capabilities = {}
     found_attributes = {}
-    missing_attribute_mapping = {}
+    missing_attribute_mapping: dict[str, list[str]] = {}
     tree.create_node(filename, "root")
     for component_name, capabilities in components.items():  # pylint: disable=too-many-nested-blocks
         tree.create_node(component_name, component_name, parent="root")

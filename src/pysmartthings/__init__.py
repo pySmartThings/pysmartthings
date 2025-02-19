@@ -1,5 +1,8 @@
 """A python library for interacting with the SmartThings cloud API."""
 
+from .attribute import CAPABILITY_ATTRIBUTES, Attribute
+from .capability import Capability
+from .command import CAPABILITY_COMMANDS, Command
 from .exceptions import (
     SmartThingsAuthenticationFailedError,
     SmartThingsCommandError,
@@ -9,13 +12,8 @@ from .exceptions import (
     SmartThingsRateLimitError,
 )
 from .models import (
-    CAPABILITY_ATTRIBUTES,
-    CAPABILITY_COMMANDS,
-    Attribute,
     BaseLocation,
-    Capability,
     Category,
-    Command,
     Component,
     Device,
     DeviceNetworkType,

@@ -1,13 +1,13 @@
 """Script to sort the capability constants."""
 
 import pyperclip
-from pysmartthings.models import Capability
+from pysmartthings import Capability
 
 
 def main() -> int:
     """Run the script."""
     capabilities = {}
-    dot_capabilities = {}
+    dot_capabilities: dict[str, dict[str, Capability]] = {}
     for capability in Capability:
         if "." in capability.value:
             category = capability.value.split(".")[0]
