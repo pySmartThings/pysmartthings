@@ -21,6 +21,7 @@ from .models import (
     Capability,
     Command,
     Device,
+    DeviceEvent,
     DeviceResponse,
     DeviceStatus,
     ErrorResponse,
@@ -53,17 +54,7 @@ class SmartThings:
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
     __capability_event_listeners: dict[
         tuple[str, str, Capability],
-        list[
-            Callable[
-                [
-                    Capability,
-                    Attribute,
-                    str | int | float | dict[str, Any] | list[Any] | None,
-                    dict[str, Any] | None,
-                ],
-                None,
-            ]
-        ],
+        list[Callable[[DeviceEvent], None]],
     ] = field(default_factory=dict)
 
     async def refresh_token(self) -> None:
@@ -259,15 +250,7 @@ class SmartThings:
         device_id: str,
         component_id: str,
         capability: Capability,
-        callback: Callable[
-            [
-                Capability,
-                Attribute,
-                str | int | float | dict[str, Any] | list[Any] | None,
-                dict[str, Any] | None,
-            ],
-            None,
-        ],
+        callback: Callable[[DeviceEvent], None],
     ) -> Callable[[], None]:
         """Add a listener for device events."""
         key = (device_id, component_id, capability)
@@ -316,12 +299,7 @@ class SmartThings:
                     )
                     if key in self.__capability_event_listeners:
                         for callback in self.__capability_event_listeners[key]:
-                            callback(
-                                device_event.capability,
-                                device_event.attribute,
-                                device_event.value,
-                                device_event.data,
-                            )
+                            callback(device_event)
 
     async def close(self) -> None:
         """Close open client session."""
