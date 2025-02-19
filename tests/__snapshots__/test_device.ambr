@@ -28204,6 +28204,2491 @@
     }),
   })
 # ---
+# name: test_fetching_status_of_single_device[da_wm_wm_000001_3]
+  dict({
+    'hca.main': dict({
+      <Capability.HCA_WASHER_MODE: 'hca.washerMode'>: dict({
+        <Attribute.MODE: 'mode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 375000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'others',
+        }),
+        <Attribute.SUPPORTED_MODES: 'supportedModes'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'normal',
+            'quickWash',
+            'mix',
+            'eco',
+            'spinOnly',
+          ]),
+        }),
+      }),
+    }),
+    'main': dict({
+      <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>: dict({
+        <Attribute.DISABLED_CAPABILITIES: 'disabledCapabilities'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 7, 9, 13, 48, 14, 959000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'samsungce.waterConsumptionReport',
+            'samsungce.washerCyclePreset',
+            'samsungce.welcomeMessage',
+            'samsungce.dongleSoftwareInstallation',
+            'sec.wifiConfiguration',
+            'samsungce.quickControl',
+            'samsungce.deviceInfoPrivate',
+            'samsungce.energyPlanner',
+            'demandResponseLoadControl',
+            'samsungce.washerFreezePrevent',
+            'custom.washerSoilLevel',
+            'samsungce.washerWaterLevel',
+            'samsungce.washerWaterValve',
+            'samsungce.washerWashingTime',
+            'custom.washerAutoDetergent',
+            'custom.washerAutoSoftener',
+          ]),
+        }),
+      }),
+      <Capability.CUSTOM_DRYER_DRY_LEVEL: 'custom.dryerDryLevel'>: dict({
+        <Attribute.DRYER_DRY_LEVEL: 'dryerDryLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 754000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+        <Attribute.SUPPORTED_DRYER_DRY_LEVEL: 'supportedDryerDryLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 10, 591000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'none',
+            'cupboard',
+            '30',
+            '60',
+            '90',
+            '120',
+            '180',
+            '240',
+          ]),
+        }),
+      }),
+      <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>: dict({
+        <Attribute.DR_MAX_DURATION: 'drMaxDuration'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_INFO: 'energySavingInfo'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_LEVEL: 'energySavingLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_OPERATION: 'energySavingOperation'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_OPERATION_SUPPORT: 'energySavingOperationSupport'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.ENERGY_SAVING_SUPPORT: 'energySavingSupport'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 6, 7, 8, 45, 56, 20000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ENERGY_TYPE: 'energyType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 6, 7, 8, 43, 28, 951000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2.0',
+        }),
+        <Attribute.NOTIFICATION_TEMPLATE_I_D: 'notificationTemplateID'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_ENERGY_SAVING_LEVELS: 'supportedEnergySavingLevels'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_JOB_BEGINNING_STATUS: 'custom.jobBeginningStatus'>: dict({
+        <Attribute.JOB_BEGINNING_STATUS: 'jobBeginningStatus'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 827000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'None',
+        }),
+      }),
+      <Capability.CUSTOM_SUPPORTED_OPTIONS: 'custom.supportedOptions'>: dict({
+        <Attribute.COURSE: 'course'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REFERENCE_TABLE: 'referenceTable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 820000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'id': 'Table_02',
+          }),
+        }),
+        <Attribute.SUPPORTED_COURSES: 'supportedCourses'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            '1C',
+            '1B',
+            '1E',
+            '1D',
+            '1F',
+            '25',
+            '26',
+            '33',
+            '24',
+            '32',
+            '20',
+            '22',
+            '23',
+            '2F',
+            '21',
+            '2D',
+            '30',
+            '27',
+            '28',
+            '36',
+            '38',
+            '39',
+            '37',
+            '29',
+          ]),
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_AUTO_DETERGENT: 'custom.washerAutoDetergent'>: dict({
+        <Attribute.WASHER_AUTO_DETERGENT: 'washerAutoDetergent'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_AUTO_SOFTENER: 'custom.washerAutoSoftener'>: dict({
+        <Attribute.WASHER_AUTO_SOFTENER: 'washerAutoSoftener'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_RINSE_CYCLES: 'custom.washerRinseCycles'>: dict({
+        <Attribute.SUPPORTED_WASHER_RINSE_CYCLES: 'supportedWasherRinseCycles'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 10, 591000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            '0',
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+          ]),
+        }),
+        <Attribute.WASHER_RINSE_CYCLES: 'washerRinseCycles'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 24, 266000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2',
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_SOIL_LEVEL: 'custom.washerSoilLevel'>: dict({
+        <Attribute.SUPPORTED_WASHER_SOIL_LEVEL: 'supportedWasherSoilLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WASHER_SOIL_LEVEL: 'washerSoilLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_SPIN_LEVEL: 'custom.washerSpinLevel'>: dict({
+        <Attribute.SUPPORTED_WASHER_SPIN_LEVEL: 'supportedWasherSpinLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 10, 591000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'rinseHold',
+            'noSpin',
+            '400',
+            '800',
+            '1000',
+            '1200',
+            '1400',
+          ]),
+        }),
+        <Attribute.WASHER_SPIN_LEVEL: 'washerSpinLevel'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 547000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1400',
+        }),
+      }),
+      <Capability.CUSTOM_WASHER_WATER_TEMPERATURE: 'custom.washerWaterTemperature'>: dict({
+        <Attribute.SUPPORTED_WASHER_WATER_TEMPERATURE: 'supportedWasherWaterTemperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 10, 591000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'none',
+            'cold',
+            '20',
+            '30',
+            '40',
+            '60',
+            '90',
+          ]),
+        }),
+        <Attribute.WASHER_WATER_TEMPERATURE: 'washerWaterTemperature'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 375000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+      }),
+      <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>: dict({
+        <Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS: 'drlcStatus'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.EXECUTE: 'execute'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.OCF: 'ocf'>: dict({
+        <Attribute.DEVICE_ID: 'di'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '5f595079-fe6c-f441-49eb-008324a7acde',
+        }),
+        <Attribute.DATA_MODEL_VERSION: 'dmv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'res.1.1.0,sh.1.1.0',
+        }),
+        <Attribute.SPEC_VERSION: 'icv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'core.1.1.0',
+        }),
+        <Attribute.MANUFACTURE_DATE: 'mndt'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OCF_FIRMWARE_VERSION: 'mnfv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON_30230804',
+        }),
+        <Attribute.HARDWARE_VERSION: 'mnhw'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'MediaTek',
+        }),
+        <Attribute.MANUFACTURER_DETAILS_LINK: 'mnml'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.MANUFACTURER_NAME: 'mnmn'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Samsung Electronics',
+        }),
+        <Attribute.MODEL_NUMBER: 'mnmo'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON|20260041|20010002011411A702A3020700000000',
+        }),
+        <Attribute.OS_VERSION: 'mnos'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'TizenRT 2.0 + IPv6',
+        }),
+        <Attribute.PLATFORM_VERSION: 'mnpv'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DAWIT 2.0',
+        }),
+        <Attribute.SUPPORT_LINK: 'mnsl'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'http://www.samsung.com',
+        }),
+        <Attribute.DEVICE_NAME: 'n'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '[washer] Samsung',
+        }),
+        <Attribute.PLATFORM_ID: 'pi'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '5f595079-fe6c-f441-49eb-008324a7acde',
+        }),
+        <Attribute.SYSTEM_TIME: 'st'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.VENDOR_ID: 'vid'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 3, 22, 5, 8, 468000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA-WM-WM-000001',
+        }),
+      }),
+      <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>: dict({
+        <Attribute.POWER_CONSUMPTION: 'powerConsumption'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 649000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'deltaEnergy': 0,
+            'end': '2025-02-07T13:06:23Z',
+            'energy': 61900,
+            'energySaved': 0,
+            'persistedEnergy': 0,
+            'power': 0,
+            'powerEnergy': 0.0,
+            'start': '2025-02-07T13:05:28Z',
+          }),
+        }),
+      }),
+      <Capability.REFRESH: 'refresh'>: dict({
+      }),
+      <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>: dict({
+        <Attribute.REMOTE_CONTROL_ENABLED: 'remoteControlEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 323000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'false',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: 'samsungce.autoDispenseDetergent'>: dict({
+        <Attribute.AMOUNT: 'amount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'standard',
+        }),
+        <Attribute.AVAILABLE_TYPES: 'availableTypes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.DENSITY: 'density'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'high',
+        }),
+        <Attribute.RECOMMENDED_AMOUNT: 'recommendedAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 754000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'unknown',
+        }),
+        <Attribute.SUPPORTED_AMOUNT: 'supportedAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'none',
+            'less',
+            'standard',
+            'extra',
+          ]),
+        }),
+        <Attribute.SUPPORTED_DENSITY: 'supportedDensity'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'normal',
+            'high',
+            'extraHigh',
+          ]),
+        }),
+        <Attribute.TYPE: 'type'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_AUTO_DISPENSE_SOFTENER: 'samsungce.autoDispenseSoftener'>: dict({
+        <Attribute.AMOUNT: 'amount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 24, 362000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'standard',
+        }),
+        <Attribute.DENSITY: 'density'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'normal',
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 754000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'unknown',
+        }),
+        <Attribute.SUPPORTED_AMOUNT: 'supportedAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'none',
+            'less',
+            'standard',
+            'extra',
+          ]),
+        }),
+        <Attribute.SUPPORTED_DENSITY: 'supportedDensity'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'normal',
+            'high',
+            'extraHigh',
+          ]),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: 'samsungce.detergentAutoReplenishment'>: dict({
+        <Attribute.BABY_DETERGENT_ALARM_ENABLED: 'babyDetergentAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_DOSAGE: 'babyDetergentDosage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_INITIAL_AMOUNT: 'babyDetergentInitialAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_ORDER_THRESHOLD: 'babyDetergentOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_REMAINING_AMOUNT: 'babyDetergentRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.BABY_DETERGENT_TYPE: 'babyDetergentType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_ALARM_ENABLED: 'neutralDetergentAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_DOSAGE: 'neutralDetergentDosage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_INITIAL_AMOUNT: 'neutralDetergentInitialAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_ORDER_THRESHOLD: 'neutralDetergentOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_REMAINING_AMOUNT: 'neutralDetergentRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEUTRAL_DETERGENT_TYPE: 'neutralDetergentType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.REGULAR_DETERGENT_ALARM_ENABLED: 'regularDetergentAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.REGULAR_DETERGENT_DOSAGE: 'regularDetergentDosage'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_DETERGENT_INITIAL_AMOUNT: 'regularDetergentInitialAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 500,
+        }),
+        <Attribute.REGULAR_DETERGENT_ORDER_THRESHOLD: 'regularDetergentOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 350,
+        }),
+        <Attribute.REGULAR_DETERGENT_REMAINING_AMOUNT: 'regularDetergentRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_DETERGENT_TYPE: 'regularDetergentType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'liquid',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DETERGENT_ORDER: 'samsungce.detergentOrder'>: dict({
+        <Attribute.ALARM_ENABLED: 'alarmEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ORDER_THRESHOLD: 'orderThreshold'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 350,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DETERGENT_STATE: 'samsungce.detergentState'>: dict({
+        <Attribute.DETERGENT_TYPE: 'detergentType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 8, 10, 6, 44, 34, 124000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'liquid',
+        }),
+        <Attribute.DOSAGE: 'dosage'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.INITIAL_AMOUNT: 'initialAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 500,
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: 'samsungce.deviceIdentification'>: dict({
+        <Attribute.BINARY_ID: 'binaryId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 12, 56, 12, 18000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON',
+        }),
+        <Attribute.DESCRIPTION: 'description'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'DA_WM_TP2_20_COMMON_WW6600R/DC92-02617A_B04C',
+        }),
+        <Attribute.MICOM_ASSAY_CODE: 'micomAssayCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '20260041',
+        }),
+        <Attribute.MODEL_CLASSIFICATION_CODE: 'modelClassificationCode'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '20010002011411A702A3020700000000',
+        }),
+        <Attribute.MODEL_NAME: 'modelName'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.RELEASE_YEAR: 'releaseYear'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER: 'serialNumber'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SERIAL_NUMBER_EXTRA: 'serialNumberExtra'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: 'samsungce.dongleSoftwareInstallation'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 6, 7, 8, 43, 28, 951000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'completed',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_DRIVER_VERSION: 'samsungce.driverVersion'>: dict({
+        <Attribute.VERSION_NUMBER: 'versionNumber'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 2, 12, 56, 5, 393000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 24110101,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_ENERGY_PLANNER: 'samsungce.energyPlanner'>: dict({
+        <Attribute.DATA: 'data'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PLAN: 'plan'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_KIDS_LOCK: 'samsungce.kidsLock'>: dict({
+        <Attribute.LOCK_STATE: 'lockState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 687000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'unlocked',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_QUICK_CONTROL: 'samsungce.quickControl'>: dict({
+        <Attribute.VERSION: 'version'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: 'samsungce.softenerAutoReplenishment'>: dict({
+        <Attribute.REGULAR_SOFTENER_ALARM_ENABLED: 'regularSoftenerAlarmEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.REGULAR_SOFTENER_DOSAGE: 'regularSoftenerDosage'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_SOFTENER_INITIAL_AMOUNT: 'regularSoftenerInitialAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_SOFTENER_ORDER_THRESHOLD: 'regularSoftenerOrderThreshold'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 350,
+        }),
+        <Attribute.REGULAR_SOFTENER_REMAINING_AMOUNT: 'regularSoftenerRemainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REGULAR_SOFTENER_TYPE: 'regularSoftenerType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'liquid',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTENER_ORDER: 'samsungce.softenerOrder'>: dict({
+        <Attribute.ALARM_ENABLED: 'alarmEnabled'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.ORDER_THRESHOLD: 'orderThreshold'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 350,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTENER_STATE: 'samsungce.softenerState'>: dict({
+        <Attribute.DOSAGE: 'dosage'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.INITIAL_AMOUNT: 'initialAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.REMAINING_AMOUNT: 'remainingAmount'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': 'cc',
+          'value': 0,
+        }),
+        <Attribute.SOFTENER_TYPE: 'softenerType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 8, 10, 6, 44, 34, 312000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'liquid',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_SOFTWARE_UPDATE: 'samsungce.softwareUpdate'>: dict({
+        <Attribute.AVAILABLE_MODULES: 'availableModules'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 11, 29, 16, 21, 43, 702000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+          ]),
+        }),
+        <Attribute.LAST_UPDATED_DATE: 'lastUpdatedDate'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.NEW_VERSION_AVAILABLE: 'newVersionAvailable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 586000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'False',
+        }),
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.OTN_D_U_I_D: 'otnDUID'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'XTCGCEMPMAXYO',
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TARGET_MODULE: 'targetModule'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 586000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+          }),
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: 'samsungce.washerBubbleSoak'>: dict({
+        <Attribute.STATUS: 'status'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_CYCLE: 'samsungce.washerCycle'>: dict({
+        <Attribute.REFERENCE_TABLE: 'referenceTable'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 6, 7, 8, 43, 30, 83000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': dict({
+            'id': 'Table_02',
+          }),
+        }),
+        <Attribute.SPECIALIZED_FUNCTION_CLASSIFICATION: 'specializedFunctionClassification'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 708000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 4,
+        }),
+        <Attribute.SUPPORTED_CYCLES: 'supportedCycles'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 10, 591000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            dict({
+              'cycle': '1C',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': '8000',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '1B',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': '847E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '1E',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1200',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                  ]),
+                  'raw': 'A53F',
+                }),
+                'waterTemperature': dict({
+                  'default': '30',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '831E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '1D',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '841E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '1F',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1200',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A57F',
+                }),
+                'waterTemperature': dict({
+                  'default': 'cold',
+                  'options': list([
+                    'cold',
+                  ]),
+                  'raw': '8102',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '25',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1200',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A57F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                    '60',
+                  ]),
+                  'raw': '843E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '26',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                  ]),
+                  'raw': '920F',
+                }),
+                'spinLevel': dict({
+                  'default': '400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                  ]),
+                  'raw': 'A207',
+                }),
+                'waterTemperature': dict({
+                  'default': '30',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '831E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '33',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '3',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '933F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': '60',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': '857E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '24',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '3',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                  ]),
+                  'raw': '930F',
+                }),
+                'spinLevel': dict({
+                  'default': '800',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                  ]),
+                  'raw': 'A30F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '841E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '32',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '800',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A37F',
+                }),
+                'waterTemperature': dict({
+                  'default': '30',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                    '60',
+                  ]),
+                  'raw': '833E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '20',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '4',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '943F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': '60',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': '857E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '22',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                  ]),
+                  'raw': '920F',
+                }),
+                'spinLevel': dict({
+                  'default': '800',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                  ]),
+                  'raw': 'A30F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '841E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '23',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '3',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                  ]),
+                  'raw': '930F',
+                }),
+                'spinLevel': dict({
+                  'default': '1200',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A57F',
+                }),
+                'waterTemperature': dict({
+                  'default': '30',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '831E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '2F',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '3',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '933F',
+                }),
+                'spinLevel': dict({
+                  'default': '800',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                  ]),
+                  'raw': 'A30F',
+                }),
+                'waterTemperature': dict({
+                  'default': '30',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '831E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '21',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '4',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '943F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '841E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '2D',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '800',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                  ]),
+                  'raw': 'A30F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                  ]),
+                  'raw': '841E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '30',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': '40',
+                  'options': list([
+                    'cold',
+                    '20',
+                    '30',
+                    '40',
+                    '60',
+                  ]),
+                  'raw': '843E',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '27',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '1',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '913F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'rinseHold',
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67F',
+                }),
+                'waterTemperature': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': '8000',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '28',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                    'none',
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B01F',
+                }),
+                'rinseCycle': dict({
+                  'default': '0',
+                  'options': list([
+                  ]),
+                  'raw': '9000',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    'noSpin',
+                    '400',
+                    '800',
+                    '1000',
+                    '1200',
+                    '1400',
+                  ]),
+                  'raw': 'A67E',
+                }),
+                'waterTemperature': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': '8000',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '36',
+              'cycleType': 'allInOne',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                    'on',
+                    'off',
+                  ]),
+                  'raw': '35F0',
+                }),
+                'dryingLevel': dict({
+                  'default': 'cupboard',
+                  'options': list([
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B11E',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                  ]),
+                  'raw': '923F',
+                }),
+                'spinLevel': dict({
+                  'default': '1400',
+                  'options': list([
+                    '1400',
+                  ]),
+                  'raw': 'A640',
+                }),
+                'waterTemperature': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': '8000',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '38',
+              'cycleType': 'dryingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'cupboard',
+                  'options': list([
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B11E',
+                }),
+                'rinseCycle': dict({
+                  'default': '0',
+                  'options': list([
+                  ]),
+                  'raw': '9000',
+                }),
+                'spinLevel': dict({
+                  'default': 'rinseHold',
+                  'options': list([
+                  ]),
+                  'raw': 'A000',
+                }),
+                'waterTemperature': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': '8000',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '39',
+              'cycleType': 'dryingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'cupboard',
+                  'options': list([
+                    'cupboard',
+                    '30',
+                    '60',
+                    '90',
+                  ]),
+                  'raw': 'B11E',
+                }),
+                'rinseCycle': dict({
+                  'default': '0',
+                  'options': list([
+                  ]),
+                  'raw': '9000',
+                }),
+                'spinLevel': dict({
+                  'default': 'rinseHold',
+                  'options': list([
+                  ]),
+                  'raw': 'A000',
+                }),
+                'waterTemperature': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': '8000',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '37',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '0',
+                  'options': list([
+                  ]),
+                  'raw': '9000',
+                }),
+                'spinLevel': dict({
+                  'default': 'rinseHold',
+                  'options': list([
+                  ]),
+                  'raw': 'A000',
+                }),
+                'waterTemperature': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': '8000',
+                }),
+              }),
+            }),
+            dict({
+              'cycle': '29',
+              'cycleType': 'washingOnly',
+              'supportedOptions': dict({
+                'bubbleSoak': dict({
+                  'default': 'off',
+                  'options': list([
+                  ]),
+                  'raw': '3500',
+                }),
+                'dryingLevel': dict({
+                  'default': 'none',
+                  'options': list([
+                  ]),
+                  'raw': 'B000',
+                }),
+                'rinseCycle': dict({
+                  'default': '2',
+                  'options': list([
+                    '2',
+                  ]),
+                  'raw': '9204',
+                }),
+                'spinLevel': dict({
+                  'default': '1200',
+                  'options': list([
+                    '1200',
+                  ]),
+                  'raw': 'A520',
+                }),
+                'waterTemperature': dict({
+                  'default': '70',
+                  'options': list([
+                    '70',
+                  ]),
+                  'raw': '8520',
+                }),
+              }),
+            }),
+          ]),
+        }),
+        <Attribute.WASHER_CYCLE: 'washerCycle'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 375000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'Table_02_Course_1C',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_CYCLE_PRESET: 'samsungce.washerCyclePreset'>: dict({
+        <Attribute.MAX_NUMBER_OF_PRESETS: 'maxNumberOfPresets'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 812000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 10,
+        }),
+        <Attribute.PRESETS: 'presets'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_DELAY_END: 'samsungce.washerDelayEnd'>: dict({
+        <Attribute.MINIMUM_RESERVABLE_TIME: 'minimumReservableTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 441000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 159,
+        }),
+        <Attribute.REMAINING_TIME: 'remainingTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 676000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 0,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_FREEZE_PREVENT: 'samsungce.washerFreezePrevent'>: dict({
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: 'samsungce.washerOperatingState'>: dict({
+        <Attribute.OPERATING_STATE: 'operatingState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 24, 190000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'ready',
+        }),
+        <Attribute.OPERATION_TIME: 'operationTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 441000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 159,
+        }),
+        <Attribute.PROGRESS: 'progress'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 26, 9, 44, 38, 648000, tzinfo=datetime.timezone.utc),
+          'unit': '%',
+          'value': 1,
+        }),
+        <Attribute.REMAINING_TIME: 'remainingTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 490000, tzinfo=datetime.timezone.utc),
+          'unit': 'min',
+          'value': 159,
+        }),
+        <Attribute.REMAINING_TIME_STR: 'remainingTimeStr'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 490000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '02:39',
+        }),
+        <Attribute.SCHEDULED_JOBS: 'scheduledJobs'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 17, 179000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            dict({
+              'jobName': 'wash',
+              'timeInMin': 4,
+            }),
+            dict({
+              'jobName': 'spin',
+              'timeInMin': 6,
+            }),
+          ]),
+        }),
+        <Attribute.SCHEDULED_PHASES: 'scheduledPhases'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 17, 179000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            dict({
+              'phaseName': 'wash',
+              'timeInMin': 4,
+            }),
+            dict({
+              'phaseName': 'spin',
+              'timeInMin': 6,
+            }),
+          ]),
+        }),
+        <Attribute.SUPPORTED_OPERATING_STATES: 'supportedOperatingStates'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 6, 7, 8, 43, 30, 238000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'ready',
+            'running',
+            'paused',
+          ]),
+        }),
+        <Attribute.WASHER_JOB_PHASE: 'washerJobPhase'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 676000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+        <Attribute.WASHER_JOB_STATE: 'washerJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 1, 26, 9, 44, 38, 648000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_WASHING_TIME: 'samsungce.washerWashingTime'>: dict({
+        <Attribute.SUPPORTED_WASHING_TIMES: 'supportedWashingTimes'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WASHING_TIME: 'washingTime'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_WATER_LEVEL: 'samsungce.washerWaterLevel'>: dict({
+        <Attribute.SUPPORTED_WATER_LEVEL: 'supportedWaterLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WATER_LEVEL: 'waterLevel'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WASHER_WATER_VALVE: 'samsungce.washerWaterValve'>: dict({
+        <Attribute.SUPPORTED_WATER_VALVE: 'supportedWaterValve'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.WATER_VALVE: 'waterValve'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WATER_CONSUMPTION_REPORT: 'samsungce.waterConsumptionReport'>: dict({
+        <Attribute.WATER_CONSUMPTION: 'waterConsumption'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SAMSUNG_CE_WELCOME_MESSAGE: 'samsungce.welcomeMessage'>: dict({
+        <Attribute.WELCOME_MESSAGE: 'welcomeMessage'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SEC_DIAGNOSTICS_INFORMATION: 'sec.diagnosticsInformation'>: dict({
+        <Attribute.DUMP_TYPE: 'dumpType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'file',
+        }),
+        <Attribute.ENDPOINT: 'endpoint'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'SSM',
+        }),
+        <Attribute.LOG_TYPE: 'logType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'errCode',
+            'dump',
+          ]),
+        }),
+        <Attribute.MIN_VERSION: 'minVersion'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '1.0',
+        }),
+        <Attribute.MN_ID: 'mnId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '0AJT',
+        }),
+        <Attribute.PROTOCOL_TYPE: 'protocolType'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'wifi_https',
+        }),
+        <Attribute.SETUP_ID: 'setupId'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 14, 641000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '210',
+        }),
+        <Attribute.SIGNIN_PERMISSION: 'signinPermission'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.TS_ID: 'tsId'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SEC_WIFI_CONFIGURATION: 'sec.wifiConfiguration'>: dict({
+        <Attribute.AUTO_RECONNECTION: 'autoReconnection'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.MIN_VERSION: 'minVersion'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.PROTOCOL_TYPE: 'protocolType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_AUTH_TYPE: 'supportedAuthType'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+        <Attribute.SUPPORTED_WI_FI_FREQ: 'supportedWiFiFreq'>: dict({
+          'data': None,
+          'timestamp': None,
+          'unit': None,
+          'value': None,
+        }),
+      }),
+      <Capability.SWITCH: 'switch'>: dict({
+        <Attribute.SWITCH: 'switch'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 271000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'off',
+        }),
+      }),
+      <Capability.WASHER_OPERATING_STATE: 'washerOperatingState'>: dict({
+        <Attribute.COMPLETION_TIME: 'completionTime'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 7, 13, 6, 23, 490000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': '2025-02-07T15:45:23Z',
+        }),
+        <Attribute.MACHINE_STATE: 'machineState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 56, 24, 190000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'stop',
+        }),
+        <Attribute.SUPPORTED_MACHINE_STATES: 'supportedMachineStates'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 676000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': list([
+            'stop',
+            'run',
+            'pause',
+          ]),
+        }),
+        <Attribute.WASHER_JOB_STATE: 'washerJobState'>: dict({
+          'data': None,
+          'timestamp': datetime.datetime(2025, 2, 6, 12, 55, 13, 676000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'none',
+        }),
+      }),
+    }),
+  })
+# ---
 # name: test_fetching_status_of_single_device[ecobee_sensor]
   dict({
     'main': dict({

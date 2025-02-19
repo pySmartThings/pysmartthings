@@ -140,6 +140,7 @@ async def test_fetching_single_device(
         "da_rvc_normal_000001",
         "da_wm_wm_000001",
         "da_wm_wm_000001_2",
+        "da_wm_wm_000001_3",
         "da_wm_sc_000001",
         "hub",
         "im_smarttag_ble_uwb",
@@ -234,7 +235,7 @@ async def test_executing_command(
     responses: aioresponses,
     capability: Capability,
     command: Command,
-    argument: int | str | list | dict | None,
+    argument: int | str | list[Any] | dict[str, Any] | None,
     fixture: str,
 ) -> None:
     """Test executing a command."""

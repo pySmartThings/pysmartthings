@@ -6,9 +6,10 @@ Contributions welcome!
 
 ## Style
 
-This repository follows [PEP8](https://www.python.org/dev/peps/pep-0008/) and [PEP 257 (Docstring Conventions)](https://www.python.org/dev/peps/pep-0257/).  Imports should be sorted with `isort`.  Commits and pull requests are automatically linted with Coveralls, Travis CI, and Hound.
+This repository follows [PEP8](https://www.python.org/dev/peps/pep-0008/) and [PEP 257 (Docstring Conventions)](https://www.python.org/dev/peps/pep-0257/). Imports should be sorted with `isort`. Commits and pull requests are automatically linted with Coveralls, Travis CI, and Hound.
 
-*Save time by checking for style/lint issues **before** committing.*  Run `lint.bat` to automatically install the test dependencies and run the linters.  Alternatively, you can run the linters manually from the root of the project:
+_Save time by checking for style/lint issues **before** committing._ Run `lint.bat` to automatically install the test dependencies and run the linters. Alternatively, you can run the linters manually from the root of the project:
+
 ```bash
 pip install isort
 pip install -r test-requirements.txt
@@ -22,21 +23,25 @@ pydocstyle tests pysmartthings
 ## Testing
 
 All code is checked to verify:
+
 - All the unit tests pass
 - All code passes the checks from the linting tools
 - Code coverage is maintained or improved without adding exclusions to `.coveragerc`
 
 You can run all the tests with Tox in a virtual environment by simply running:
+
 ```bash
 tox
 ```
 
 Unit tests can be ran outside of Tox by running:
+
 ```bash
 pytest tests
 ```
 
 To check the code coverage and determine which statements are not covered, run:
+
 ```bash
 pytest tests --cov --cov-report=term-missing
 ```
@@ -44,6 +49,7 @@ pytest tests --cov --cov-report=term-missing
 ### Rules
 
 There are a few basic ground-rules for contributors:
+
 1. Follow the style and testing guidelines above
 2. Fill out the pull request template and complete check-list activities
 3. Submit a pull request and be responsive to questions and feedback
