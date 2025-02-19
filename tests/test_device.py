@@ -10,9 +10,7 @@ from aiohttp.hdrs import METH_GET, METH_POST
 from aioresponses import aioresponses
 from yarl import URL
 
-from pysmartthings import SmartThings
-from pysmartthings.exceptions import SmartThingsCommandError
-from pysmartthings.models import Capability, Command
+from pysmartthings import SmartThings, Capability, Command, SmartThingsCommandError
 from . import load_fixture, load_json_fixture
 
 from .const import MOCK_URL, HEADERS
