@@ -49,6 +49,7 @@ class Capability(StrEnum):
     DEW_POINT = "dewPoint"
     DISHWASHER_OPERATING_STATE = "dishwasherOperatingState"
     DOOR_CONTROL = "doorControl"
+    DRYER_MODE = "dryerMode"
     DRYER_OPERATING_STATE = "dryerOperatingState"
     DUST_HEALTH_CONCERN = "dustHealthConcern"
     DUST_SENSOR = "dustSensor"
@@ -83,6 +84,8 @@ class Capability(StrEnum):
     MEDIA_GROUP = "mediaGroup"
     MEDIA_INPUT_SOURCE = "mediaInputSource"
     MEDIA_PLAYBACK = "mediaPlayback"
+    MEDIA_PLAYBACK_REPEAT = "mediaPlaybackRepeat"
+    MEDIA_PLAYBACK_SHUFFLE = "mediaPlaybackShuffle"
     MEDIA_PRESETS = "mediaPresets"
     MEDIA_TRACK_CONTROL = "mediaTrackControl"
     MODE = "mode"
@@ -113,6 +116,7 @@ class Capability(StrEnum):
     RADON_MEASUREMENT = "radonMeasurement"
     REFRESH = "refresh"
     REFRIGERATION = "refrigeration"
+    REFRIGERATION_SETPOINT = "refrigerationSetpoint"
     RELATIVE_BRIGHTNESS = "relativeBrightness"
     RELATIVE_HUMIDITY_MEASUREMENT = "relativeHumidityMeasurement"
     REMOTE_CONTROL_STATUS = "remoteControlStatus"
@@ -140,6 +144,7 @@ class Capability(StrEnum):
     THERMOSTAT_HEATING_SETPOINT = "thermostatHeatingSetpoint"
     THERMOSTAT_MODE = "thermostatMode"
     THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
+    THERMOSTAT_SETPOINT = "thermostatSetpoint"
     THREE_AXIS = "threeAxis"
     TONE = "tone"
     TV_CHANNEL = "tvChannel"
@@ -152,6 +157,7 @@ class Capability(StrEnum):
     VIDEO_CAPTURE = "videoCapture"
     VIDEO_STREAM = "videoStream"
     VOLTAGE_MEASUREMENT = "voltageMeasurement"
+    WASHER_MODE = "washerMode"
     WASHER_OPERATING_STATE = "washerOperatingState"
     WATER_SENSOR = "waterSensor"
     WEBRTC = "webrtc"
@@ -532,6 +538,7 @@ class Attribute(StrEnum):
     DRYER_CYCLE = "dryerCycle"
     DRYER_DRY_LEVEL = "dryerDryLevel"
     DRYER_JOB_STATE = "dryerJobState"
+    DRYER_MODE = "dryerMode"
     DRYER_WRINKLE_PREVENT = "dryerWrinklePrevent"
     DRYING_TEMPERATURE = "dryingTemperature"
     DRYING_TIME = "dryingTime"
@@ -741,6 +748,8 @@ class Attribute(StrEnum):
     PLAN = "plan"
     PLATFORM_ID = "pi"
     PLATFORM_VERSION = "mnpv"
+    PLAYBACK_REPEAT_MODE = "playbackRepeatMode"
+    PLAYBACK_SHUFFLE = "playbackShuffle"
     PLAYBACK_STATUS = "playbackStatus"
     POWER = "power"
     POWER_CONSUMPTION = "powerConsumption"
@@ -765,6 +774,7 @@ class Attribute(StrEnum):
     RECOMMENDED_AMOUNT = "recommendedAmount"
     REFERENCE_TABLE = "referenceTable"
     REFRESH_RESULT = "refreshResult"
+    REFRIGERATION_SETPOINT = "refrigerationSetpoint"
     REGION_CODE = "regionCode"
     REGULAR_DETERGENT_ALARM_ENABLED = "regularDetergentAlarmEnabled"
     REGULAR_DETERGENT_DOSAGE = "regularDetergentDosage"
@@ -964,6 +974,7 @@ class Attribute(StrEnum):
     THERMOSTAT_FAN_MODE = "thermostatFanMode"
     THERMOSTAT_MODE = "thermostatMode"
     THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
+    THERMOSTAT_SETPOINT = "thermostatSetpoint"
     THREE_AXIS = "threeAxis"
     TIMED_CLEAN_DURATION = "timedCleanDuration"
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
@@ -1003,6 +1014,7 @@ class Attribute(StrEnum):
     WASHER_CYCLE = "washerCycle"
     WASHER_JOB_PHASE = "washerJobPhase"
     WASHER_JOB_STATE = "washerJobState"
+    WASHER_MODE = "washerMode"
     WASHER_RINSE_CYCLES = "washerRinseCycles"
     WASHER_SOIL_LEVEL = "washerSoilLevel"
     WASHER_SPIN_LEVEL = "washerSpinLevel"
@@ -1100,6 +1112,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_MACHINE_STATES,
         Attribute.DRYER_JOB_STATE,
     ],
+    Capability.DRYER_MODE: [Attribute.DRYER_MODE],
     Capability.DUST_SENSOR: [Attribute.DUST_LEVEL, Attribute.FINE_DUST_LEVEL],
     Capability.DUST_HEALTH_CONCERN: [Attribute.DUST_HEALTH_CONCERN],
     Capability.ELEVATOR_CALL: [Attribute.CALL_STATUS],
@@ -1200,6 +1213,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_PLAYBACK_COMMANDS,
         Attribute.PLAYBACK_STATUS,
     ],
+    Capability.MEDIA_PLAYBACK_REPEAT: [Attribute.PLAYBACK_REPEAT_MODE],
+    Capability.MEDIA_PLAYBACK_SHUFFLE: [Attribute.PLAYBACK_SHUFFLE],
     Capability.MEDIA_PRESETS: [Attribute.PRESETS],
     Capability.MEDIA_INPUT_SOURCE: [
         Attribute.SUPPORTED_INPUT_SOURCES,
@@ -1269,6 +1284,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.RAPID_COOLING,
         Attribute.RAPID_FREEZING,
     ],
+    Capability.REFRIGERATION_SETPOINT: [Attribute.REFRIGERATION_SETPOINT],
     Capability.RELATIVE_BRIGHTNESS: [Attribute.BRIGHTNESS_INTENSITY],
     Capability.RELATIVE_HUMIDITY_MEASUREMENT: [Attribute.HUMIDITY],
     Capability.REMOTE_CONTROL_STATUS: [Attribute.REMOTE_CONTROL_ENABLED],
@@ -1343,6 +1359,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_THERMOSTAT_MODES,
     ],
     Capability.THERMOSTAT_OPERATING_STATE: [Attribute.THERMOSTAT_OPERATING_STATE],
+    Capability.THERMOSTAT_SETPOINT: [Attribute.THERMOSTAT_SETPOINT],
     Capability.THREE_AXIS: [Attribute.THREE_AXIS],
     Capability.TV_CHANNEL: [Attribute.TV_CHANNEL, Attribute.TV_CHANNEL_NAME],
     Capability.TVOC_MEASUREMENT: [Attribute.TVOC_LEVEL],
@@ -1359,6 +1376,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.VIDEO_CAPTURE: [Attribute.STREAM, Attribute.CLIP],
     Capability.VIDEO_STREAM: [Attribute.SUPPORTED_FEATURES, Attribute.STREAM],
     Capability.VOLTAGE_MEASUREMENT: [Attribute.VOLTAGE],
+    Capability.WASHER_MODE: [Attribute.WASHER_MODE],
     Capability.WASHER_OPERATING_STATE: [
         Attribute.COMPLETION_TIME,
         Attribute.MACHINE_STATE,
@@ -2208,6 +2226,7 @@ class Command(StrEnum):
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_DEFROST = "setDefrost"
+    SET_DRYER_MODE = "setDryerMode"
     SET_FAN_MODE = "setFanMode"
     SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
     SET_FAN_SPEED = "setFanSpeed"
@@ -2223,9 +2242,12 @@ class Command(StrEnum):
     SET_MUTE = "setMute"
     SET_OVEN_MODE = "setOvenMode"
     SET_OVEN_SETPOINT = "setOvenSetpoint"
+    SET_PLAYBACK_REPEAT_MODE = "setPlaybackRepeatMode"
+    SET_PLAYBACK_SHUFFLE = "setPlaybackShuffle"
     SET_PLAYBACK_STATUS = "setPlaybackStatus"
     SET_RAPID_COOLING = "setRapidCooling"
     SET_RAPID_FREEZING = "setRapidFreezing"
+    SET_REFRIGERATION_SETPOINT = "setRefrigerationSetpoint"
     SET_RINSE_MODE = "setRinseMode"
     SET_ROBOT_CLEANER_CLEANING_MODE = "setRobotCleanerCleaningMode"
     SET_ROBOT_CLEANER_MOVEMENT = "setRobotCleanerMovement"
@@ -2240,6 +2262,7 @@ class Command(StrEnum):
     SET_TV_CHANNEL = "setTvChannel"
     SET_TV_CHANNEL_NAME = "setTvChannelName"
     SET_VOLUME = "setVolume"
+    SET_WASHER_MODE = "setWasherMode"
     SET_WIND_MODE = "setWindMode"
     SIREN = "siren"
     START = "start"
@@ -2296,6 +2319,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.DISHWASHER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
     Capability.DOOR_CONTROL: [Command.OPEN, Command.CLOSE],
+    Capability.DRYER_MODE: [Command.SET_DRYER_MODE],
     Capability.DRYER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
     Capability.ELEVATOR_CALL: [Command.CALL],
     Capability.ENERGY_METER: [Command.RESET_ENERGY_METER],
@@ -2336,6 +2360,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_PLAYBACK_STATUS,
         Command.STOP,
     ],
+    Capability.MEDIA_PLAYBACK_REPEAT: [Command.SET_PLAYBACK_REPEAT_MODE],
+    Capability.MEDIA_PLAYBACK_SHUFFLE: [Command.SET_PLAYBACK_SHUFFLE],
     Capability.MEDIA_TRACK_CONTROL: [Command.NEXT_TRACK, Command.PREVIOUS_TRACK],
     Capability.MODE: [Command.SET_MODE],
     Capability.MOMENTARY: [Command.PUSH],
@@ -2353,6 +2379,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_RAPID_COOLING,
         Command.SET_RAPID_FREEZING,
     ],
+    Capability.REFRIGERATION_SETPOINT: [Command.SET_REFRIGERATION_SETPOINT],
     Capability.RICE_COOKER: [
         Command.SCHEDULE_COOKING,
         Command.SET_MODE,
@@ -2404,6 +2431,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.VIDEO_CAPTURE: [Command.CAPTURE],
     Capability.VIDEO_STREAM: [Command.START_STREAM, Command.STOP_STREAM],
+    Capability.WASHER_MODE: [Command.SET_WASHER_MODE],
     Capability.WASHER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
     Capability.WEBRTC: [
         Command.CLIENT_ICE,
