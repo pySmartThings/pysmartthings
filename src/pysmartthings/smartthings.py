@@ -287,6 +287,7 @@ class SmartThings:
     async def subscribe(self, location_id: str, installed_app_id: str) -> None:
         """Create a subscription."""
         subscription = await self._create_subscription(location_id, installed_app_id)
+        _LOGGER.debug("Subscription created: %s", subscription)
         async with EventSource(
             subscription.registration_url,
             session=self.session,
