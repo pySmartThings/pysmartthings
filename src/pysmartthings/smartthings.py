@@ -306,6 +306,8 @@ class SmartThings:
                     if key in self.__capability_event_listeners:
                         for callback in self.__capability_event_listeners[key]:
                             callback(device_event)
+                else:
+                    _LOGGER.debug("Received event: %s", event.data)
 
     async def close(self) -> None:
         """Close open client session."""
