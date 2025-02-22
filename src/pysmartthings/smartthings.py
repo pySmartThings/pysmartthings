@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING, Any, Callable, Self
 
 from aiohttp import ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
-from aiohttp_sse_client.client import EventSource
+from aiosseclient import aiosseclient
 from yarl import URL
 
 from .const import API_BASE
@@ -44,7 +44,7 @@ if TYPE_CHECKING:
     from .capability import Capability
     from .command import Command
 
-_LOGGER = logging.getLogger(__name__)
+_LOGGER = logging.getLogger(__package__)
 
 
 @dataclass
@@ -288,26 +288,24 @@ class SmartThings:
         """Create a subscription."""
         subscription = await self._create_subscription(location_id, installed_app_id)
         _LOGGER.debug("Subscription created: %s", subscription)
-        async with EventSource(
+        async for event in aiosseclient(
             subscription.registration_url,
-            session=self.session,
             headers=self._get_headers(),
-        ) as event_source:
-            async for event in event_source:
-                if event.type == EventType.DEVICE_EVENT:
-                    _LOGGER.debug("Received event: %s", event.data)
-                    event_type = Event.from_json(event.data)
-                    device_event = event_type.device_event
-                    key = (
-                        device_event.device_id,
-                        device_event.component_id,
-                        device_event.capability,
-                    )
-                    if key in self.__capability_event_listeners:
-                        for callback in self.__capability_event_listeners[key]:
-                            callback(device_event)
-                else:
-                    _LOGGER.debug("Received event: %s", event.data)
+        ):
+            if event.event == EventType.DEVICE_EVENT:
+                _LOGGER.debug("Received event: %s", event.data)
+                event_type = Event.from_json(event.data)
+                device_event = event_type.device_event
+                key = (
+                    device_event.device_id,
+                    device_event.component_id,
+                    device_event.capability,
+                )
+                if key in self.__capability_event_listeners:
+                    for callback in self.__capability_event_listeners[key]:
+                        callback(device_event)
+            else:
+                _LOGGER.debug("Received event: %s", event.data)
 
     async def close(self) -> None:
         """Close open client session."""
