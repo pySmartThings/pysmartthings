@@ -294,6 +294,7 @@ class SmartThings:
         ) as event_source:
             async for event in event_source:
                 if event.type == EventType.DEVICE_EVENT:
+                    _LOGGER.debug("Received event: %s", event.data)
                     event_type = Event.from_json(event.data)
                     device_event = event_type.device_event
                     key = (
