@@ -286,26 +286,37 @@ class SmartThings:
 
     async def subscribe(self, location_id: str, installed_app_id: str) -> None:
         """Create a subscription."""
-        subscription = await self._create_subscription(location_id, installed_app_id)
-        _LOGGER.debug("Subscription created: %s", subscription)
-        async for event in aiosseclient(
-            subscription.registration_url,
-            headers=self._get_headers(),
-        ):
-            if event.event == EventType.DEVICE_EVENT:
-                _LOGGER.debug("Received event: %s", event.data)
-                event_type = Event.from_json(event.data)
-                device_event = event_type.device_event
-                key = (
-                    device_event.device_id,
-                    device_event.component_id,
-                    device_event.capability,
+        retry_count = 0
+        while True:
+            try:
+                subscription = await self._create_subscription(
+                    location_id, installed_app_id
                 )
-                if key in self.__capability_event_listeners:
-                    for callback in self.__capability_event_listeners[key]:
-                        callback(device_event)
-            else:
-                _LOGGER.debug("Received event: %s", event.data)
+                _LOGGER.debug("Subscription created: %s", subscription)
+                retry_count = 0
+                async for event in aiosseclient(
+                    subscription.registration_url,
+                    headers=self._get_headers(),
+                ):
+                    if event.event == EventType.DEVICE_EVENT:
+                        _LOGGER.debug("Received event: %s", event.data)
+                        event_type = Event.from_json(event.data)
+                        device_event = event_type.device_event
+                        key = (
+                            device_event.device_id,
+                            device_event.component_id,
+                            device_event.capability,
+                        )
+                        if key in self.__capability_event_listeners:
+                            for callback in self.__capability_event_listeners[key]:
+                                callback(device_event)
+                    else:
+                        _LOGGER.debug("Received event: %s", event.data)
+            except Exception:  # pylint: disable=broad-except  # noqa: PERF203
+                msg = "Error occurred while subscribing to events"
+                _LOGGER.exception(msg)
+                await asyncio.sleep(2**retry_count)
+                retry_count += 1
 
     async def close(self) -> None:
         """Close open client session."""
