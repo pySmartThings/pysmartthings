@@ -114,23 +114,6 @@ yarl = ">=1.17.0,<2.0"
 speedups = ["Brotli", "aiodns (>=3.2.0)", "brotlicffi"]
 
 [[package]]
-name = "aiohttp-sse-client"
-version = "0.2.1"
-description = "A Server-Sent Event python client base on aiohttp"
-optional = false
-python-versions = "*"
-files = [
-    {file = "aiohttp-sse-client-0.2.1.tar.gz", hash = "sha256:5004e29271624af586158dc7166cb0687a7a5997aab5b808f4b53400e1b72e3b"},
-    {file = "aiohttp_sse_client-0.2.1-py2.py3-none-any.whl", hash = "sha256:42c81ee9213e9fc8bc412b063bac3a813e02e75250c4c8049222234d41c9b024"},
-]
-
-[package.dependencies]
-aiohttp = ">=3"
-attrs = "*"
-multidict = "*"
-yarl = "*"
-
-[[package]]
 name = "aioresponses"
 version = "0.7.8"
 description = "Mock out requests made by ClientSession from aiohttp package"
@@ -1476,4 +1459,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "6e2dcf918e4a9e32ea32f83212fc032a53d3b78ef104605d36de6cab3af557eb"
+content-hash = "0363501c9b2a19238c3e374bd69f157f897dc0e379f00a09bc5b7ae38ddc6fc0"
