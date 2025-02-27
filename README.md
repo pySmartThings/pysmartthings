@@ -52,7 +52,7 @@ This Python project is fully managed using the [Poetry][poetry] dependency manag
 
 You need at least:
 
-- Python 3.11+
+- Python 3.12+
 - [Poetry][poetry-install]
 - NodeJS 12+ (including NPM)
 
