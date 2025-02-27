@@ -347,7 +347,7 @@ class DeviceEvent(DataClassORJSONMixin):
     device_id: str = field(metadata=field_options(alias="deviceId"))
     component_id: str = field(metadata=field_options(alias="componentId"))
     capability: Capability | str
-    attribute: Attribute
+    attribute: Attribute | str
     value: str | int | float | dict[str, Any] | list[Any] | None
     data: dict[str, Any] | None = None
 
