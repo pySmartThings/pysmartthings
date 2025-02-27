@@ -34,12 +34,13 @@ class SmartThingsCommandError(SmartThingsError):
         """Get the string representation of the error."""
         res = self.__class__.__name__
         res += f" ({error.error.code}, {error.error.message})"
-
-        def serial(res2: str, error2: ErrorDetails) -> str:
-            for detail in error2.details:
-                res2 += f" -> {detail.code}: {detail.message}"
-                if detail.details:
-                    res2 = serial(res2, detail)
-            return res2
-
         return serial(res, error.error)
+
+
+def serial(res2: str, error2: ErrorDetails) -> str:
+    """Serialize error details."""
+    for detail in error2.details:
+        res2 += f" -> {detail.code}: {detail.message}"
+        if detail.details:
+            res2 = serial(res2, detail)
+    return res2
