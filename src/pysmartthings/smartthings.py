@@ -12,7 +12,7 @@ from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from aiosseclient import aiosseclient
 from yarl import URL
 
-from .const import API_BASE
+from .const import API_BASE, API_VERSION
 from .exceptions import (
     SmartThingsAuthenticationFailedError,
     SmartThingsCommandError,
@@ -74,7 +74,7 @@ class SmartThings:
         """Get headers for requests."""
         return {
             "Authorization": f"Bearer {self._token}",
-            "version": "application/vnd.smartthings+json;v=20250122",
+            "version": f"application/vnd.smartthings+json;v={API_VERSION}",
         }
 
     async def _request(
@@ -271,7 +271,7 @@ class SmartThings:
             "subscriptions",
             data={
                 "name": "My Home Assistant sub",
-                "version": 20250122,
+                "version": API_VERSION,
                 "clientDeviceId": f"iapp_{installed_app_id}",
                 "subscriptionFilters": [
                     {
