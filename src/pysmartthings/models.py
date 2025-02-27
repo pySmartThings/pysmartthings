@@ -11,7 +11,8 @@ from mashumaro import field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
 
 from .attribute import Attribute  # noqa: TC001
-from .capability import Capability  # noqa: TC001
+from .capability import Capability
+from .const import LOGGER
 
 
 @dataclass
@@ -260,7 +261,19 @@ class Status(DataClassORJSONMixin):
 class DeviceStatus(DataClassORJSONMixin):
     """Device status model."""
 
-    components: dict[str, dict[Capability, dict[Attribute, Status]]]
+    components: dict[str, dict[Capability | str, dict[Attribute | str, Status]]]
+
+    @classmethod
+    def __post_serialize__(cls, d: dict[str, Any]) -> dict[str, Any]:  # pylint: disable=arguments-differ
+        """Make sure we let the user know about unknown capabilities."""
+        for component in d["components"].values():
+            for capability in component.values():
+                if capability not in Capability:
+                    LOGGER.warning(
+                        "Unknown capability %s. Please raise an issue at https://github.com/pySmartThings/pysmartthings.",
+                        capability,
+                    )
+        return d
 
 
 @dataclass
@@ -327,7 +340,7 @@ class DeviceEvent(DataClassORJSONMixin):
     owner_id: str = field(metadata=field_options(alias="ownerId"))
     device_id: str = field(metadata=field_options(alias="deviceId"))
     component_id: str = field(metadata=field_options(alias="componentId"))
-    capability: Capability
+    capability: Capability | str
     attribute: Attribute
     value: str | int | float | dict[str, Any] | list[Any] | None
     data: dict[str, Any] | None = None

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass, field
-import logging
 from typing import TYPE_CHECKING, Any, Callable, Self
 
 from aiohttp import ClientSession
@@ -12,7 +11,7 @@ from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from aiosseclient import aiosseclient
 from yarl import URL
 
-from .const import API_BASE, API_VERSION
+from .const import API_BASE, API_VERSION, LOGGER
 from .exceptions import (
     SmartThingsAuthenticationFailedError,
     SmartThingsCommandError,
@@ -44,8 +43,6 @@ if TYPE_CHECKING:
     from .capability import Capability
     from .command import Command
 
-_LOGGER = logging.getLogger(__package__)
-
 
 @dataclass
 class SmartThings:
@@ -57,7 +54,7 @@ class SmartThings:
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
     __capability_event_listeners: dict[
-        tuple[str, str, Capability],
+        tuple[str, str, Capability | str],
         list[Callable[[DeviceEvent], None]],
     ] = field(default_factory=dict)
 
@@ -215,7 +212,7 @@ class SmartThings:
 
     async def get_device_status(
         self, device_id: str
-    ) -> dict[str, dict[Capability, dict[Attribute, Status]]]:
+    ) -> dict[str, dict[Capability | str, dict[Attribute | str, Status]]]:
         """Retrieve the status of a device."""
         resp = await self._get(f"devices/{device_id}/status")
         return DeviceStatus.from_json(resp).components
@@ -242,18 +239,18 @@ class SmartThings:
             command_payload["arguments"] = (
                 argument if isinstance(argument, list) else [argument]
             )
-        _LOGGER.debug("Executing command for device %s: %s", device_id, command_payload)
+        LOGGER.debug("Executing command for device %s: %s", device_id, command_payload)
         response = await self._post(
             f"devices/{device_id}/commands",
             data={"commands": [command_payload]},
         )
-        _LOGGER.debug("Command response: %s", response)
+        LOGGER.debug("Command response: %s", response)
 
     def add_device_event_listener(
         self,
         device_id: str,
         component_id: str,
-        capability: Capability,
+        capability: Capability | str,
         callback: Callable[[DeviceEvent], None],
     ) -> Callable[[], None]:
         """Add a listener for device events."""
@@ -292,14 +289,14 @@ class SmartThings:
                 subscription = await self._create_subscription(
                     location_id, installed_app_id
                 )
-                _LOGGER.debug("Subscription created: %s", subscription)
+                LOGGER.debug("Subscription created: %s", subscription)
                 retry_count = 0
                 async for event in aiosseclient(
                     subscription.registration_url,
                     headers=self._get_headers(),
                 ):
                     if event.event == EventType.DEVICE_EVENT:
-                        _LOGGER.debug("Received event: %s", event.data)
+                        LOGGER.debug("Received event: %s", event.data)
                         event_type = Event.from_json(event.data)
                         device_event = event_type.device_event
                         key = (
@@ -311,10 +308,10 @@ class SmartThings:
                             for callback in self.__capability_event_listeners[key]:
                                 callback(device_event)
                     else:
-                        _LOGGER.debug("Received event: %s", event.data)
-            except Exception:  # pylint: disable=broad-except  # noqa: PERF203
+                        LOGGER.debug("Received event: %s", event.data)
+            except Exception:  # pylint: disable=broad-except  # noqa: PERF203,BLE001
                 msg = "Error occurred while subscribing to events"
-                _LOGGER.exception(msg)
+                LOGGER.exception(msg)
                 await asyncio.sleep(2**retry_count)
                 retry_count += 1
 

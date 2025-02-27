@@ -1,0 +1,12 @@
+{
+  "components": {
+    "main": {
+      "fakeCapability": {
+        "fakeAttribute": {
+          "value": "BOOOOOOOM",
+          "timestamp": "2024-12-31T09:18:21.859Z"
+        }
+      }
+    }
+  }
+}

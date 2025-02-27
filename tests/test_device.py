@@ -276,3 +276,22 @@ async def test_executing_command_error(
             Command.SET_COLOR_TEMPERATURE,
             argument=300000,
         )
+
+
+async def test_fetching_unknown_capability(
+    client: SmartThings,
+    responses: aioresponses,
+    snapshot: SnapshotAssertion,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """Test getting a single device."""
+    responses.get(
+        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
+        status=200,
+        body=load_fixture("device_status/fake.json"),
+    )
+    assert (
+        await client.get_device_status("440063de-a200-40b5-8a6b-f3399eaa0370")
+        == snapshot
+    )
+    assert "boop" in caplog.text

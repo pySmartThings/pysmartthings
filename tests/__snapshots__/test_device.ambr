@@ -37346,3 +37346,17 @@
     }),
   })
 # ---
+# name: test_fetching_unknown_capability
+  dict({
+    'main': dict({
+      'fakeCapability': dict({
+        'fakeAttribute': dict({
+          'data': None,
+          'timestamp': datetime.datetime(2024, 12, 31, 9, 18, 21, 859000, tzinfo=datetime.timezone.utc),
+          'unit': None,
+          'value': 'BOOOOOOOM',
+        }),
+      }),
+    }),
+  })
+# ---
