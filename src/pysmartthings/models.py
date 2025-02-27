@@ -139,6 +139,7 @@ class Category(StrEnum):
     OTHER = "Other"
     OVEN = "Oven"
     PRESENCE_SENSOR = "PresenceSensor"
+    PRESENCE_SENSOR_2 = "Presence Sensor"
     PRINTER = "Printer"
     PRINTER_MULTI_FUNCTION = "PrinterMultiFunction"
     PROJECTOR = "Projector"
@@ -196,19 +197,24 @@ class Component(DataClassORJSONMixin):
 
     id: str
     capabilities: list[Capability | str]
-    manufacturer_category: Category
+    manufacturer_category: Category | str
     label: str | None = None
-    user_category: Category | None = None
+    user_category: Category | str | None = None
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
         """Pre deserialize hook."""
         d["capabilities"] = [c["id"] for c in d["capabilities"]]
         for cat in d["categories"]:
+            if (category := cat["name"]) not in Category:
+                LOGGER.error(
+                    "Unknown category `%s`. Please raise an issue at https://github.com/pySmartThings/pysmartthings.",
+                    category,
+                )
             if cat["categoryType"] == "manufacturer":
-                d["manufacturer_category"] = cat["name"]
+                d["manufacturer_category"] = category
             else:
-                d["user_category"] = cat["name"]
+                d["user_category"] = category
         return d
 
 

@@ -301,3 +301,22 @@ async def test_fetching_unknown_capability(
         "Unknown capability fakeCapability. Please raise an issue at https://github.com/pySmartThings/pysmartthings."
         in caplog.text
     )
+
+
+async def test_fetching_unknown_category(
+    client: SmartThings,
+    responses: aioresponses,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """Test getting a single device."""
+    caplog.set_level(logging.DEBUG)
+    responses.get(
+        f"{MOCK_URL}/devices",
+        status=200,
+        body=load_fixture("devices_fake.json"),
+    )
+    await client.get_devices()
+    assert (
+        "Unknown category `fakeCategory`. Please raise an issue at https://github.com/pySmartThings/pysmartthings"
+        in caplog.text
+    )

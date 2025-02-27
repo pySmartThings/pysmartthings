@@ -23,7 +23,7 @@
           ],
           "categories": [
             {
-              "name": "Refrigerator",
+              "name": "fakeCategory",
               "categoryType": "manufacturer"
             }
           ]

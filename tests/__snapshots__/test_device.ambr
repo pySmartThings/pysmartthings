@@ -6653,7 +6653,7 @@
           ]),
           'id': 'main',
           'label': 'main',
-          'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
+          'manufacturer_category': 'fakeCategory',
           'user_category': None,
         }),
       ]),
