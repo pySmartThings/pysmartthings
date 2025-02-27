@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "deviceId": "7d3feb98-8a36-4351-c362-5e21ad3a78dd",
+      "name": "Family Hub",
+      "label": "Refrigerator",
+      "manufacturerName": "Samsung Electronics",
+      "presentationId": "DA-REF-NORMAL-01001",
+      "deviceManufacturerCode": "Samsung Electronics",
+      "locationId": "2487472a-06c4-4bce-8f4c-700c5f8644f8",
+      "ownerId": "b603d7e8-6066-4e10-8102-afa752a63816",
+      "roomId": "acaa060a-7c19-4579-8a4a-5ad891a2f0c1",
+      "deviceTypeName": "Samsung OCF Refrigerator",
+      "components": [
+        {
+          "id": "main",
+          "label": "main",
+          "capabilities": [
+            {
+              "id": "fakeCapability",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Refrigerator",
+              "categoryType": "manufacturer"
+            }
+          ]
+        }
+      ],
+      "createTime": "2021-07-27T01:19:42.051Z",
+      "profile": {
+        "id": "4c654f1b-8ef4-35b0-920e-c12568554213"
+      },
+      "ocf": {
+        "ocfDeviceType": "oic.d.refrigerator",
+        "name": "Family Hub",
+        "specVersion": "core.1.1.0",
+        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "manufacturerName": "Samsung Electronics",
+        "modelNumber": "24K_REF_LCD_FHUB9.0|00113141|0002034e051324200103000000000000",
+        "platformVersion": "7.0",
+        "platformOS": "Tizen",
+        "hwVersion": "",
+        "firmwareVersion": "20240616.213423",
+        "vendorId": "DA-REF-NORMAL-01001",
+        "vendorResourceClientServerVersion": "4.0.22",
+        "locale": "",
+        "lastSignupTime": "2021-07-27T01:19:40.244392Z",
+        "transferCandidate": false,
+        "additionalAuthCodeRequired": false
+      },
+      "type": "OCF",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "CLOUD"
+    }
+  ],
+  "_links": {}
+}

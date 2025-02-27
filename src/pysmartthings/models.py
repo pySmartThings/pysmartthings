@@ -195,7 +195,7 @@ class Component(DataClassORJSONMixin):
     """Component model."""
 
     id: str
-    capabilities: list[Capability]
+    capabilities: list[Capability | str]
     manufacturer_category: Category
     label: str | None = None
     user_category: Category | None = None

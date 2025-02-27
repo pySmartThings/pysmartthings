@@ -6643,6 +6643,32 @@
     }),
   ])
 # ---
+# name: test_fetching_devices[devices_fake]
+  list([
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            'fakeCapability',
+          ]),
+          'id': 'main',
+          'label': 'main',
+          'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
+          'user_category': None,
+        }),
+      ]),
+      'device_id': '7d3feb98-8a36-4351-c362-5e21ad3a78dd',
+      'device_manufacturer_code': 'Samsung Electronics',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': 'Samsung OCF Refrigerator',
+      'label': 'Refrigerator',
+      'location_id': '2487472a-06c4-4bce-8f4c-700c5f8644f8',
+      'name': 'Family Hub',
+      'type': <DeviceType.OCF: 'OCF'>,
+    }),
+  ])
+# ---
 # name: test_fetching_single_device
   dict({
     'components': list([
