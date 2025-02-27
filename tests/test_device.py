@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import re
 from typing import Any, TYPE_CHECKING
 
@@ -285,6 +286,7 @@ async def test_fetching_unknown_capability(
     caplog: pytest.LogCaptureFixture,
 ) -> None:
     """Test getting a single device."""
+    caplog.set_level(logging.DEBUG)
     responses.get(
         f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
         status=200,
@@ -294,4 +296,7 @@ async def test_fetching_unknown_capability(
         await client.get_device_status("440063de-a200-40b5-8a6b-f3399eaa0370")
         == snapshot
     )
-    assert "boop" in caplog.text
+    assert (
+        "Unknown capability fakeCapability. Please raise an issue at https://github.com/pySmartThings/pysmartthings."
+        in caplog.text
+    )

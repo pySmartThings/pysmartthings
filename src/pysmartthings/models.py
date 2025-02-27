@@ -264,16 +264,16 @@ class DeviceStatus(DataClassORJSONMixin):
     components: dict[str, dict[Capability | str, dict[Attribute | str, Status]]]
 
     @classmethod
-    def __post_serialize__(cls, d: dict[str, Any]) -> dict[str, Any]:  # pylint: disable=arguments-differ
+    def __post_deserialize__(cls, obj: DeviceStatus) -> DeviceStatus:
         """Make sure we let the user know about unknown capabilities."""
-        for component in d["components"].values():
-            for capability in component.values():
+        for component in obj.components.values():
+            for capability in component:
                 if capability not in Capability:
                     LOGGER.warning(
                         "Unknown capability %s. Please raise an issue at https://github.com/pySmartThings/pysmartthings.",
                         capability,
                     )
-        return d
+        return obj
 
 
 @dataclass
