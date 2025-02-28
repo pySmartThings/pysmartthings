@@ -228,6 +228,9 @@ class Device(DataClassORJSONMixin):
     location_id: str = field(metadata=field_options(alias="locationId"))
     type: DeviceType
     components: list[Component]
+    parent_device_id: str | None = field(
+        metadata=field_options(alias="parentDeviceId"), default=None
+    )
     device_network_type: DeviceNetworkType | None = field(
         metadata=field_options(alias="deviceNetworkType"), default=None
     )
