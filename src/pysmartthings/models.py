@@ -291,6 +291,7 @@ class Device(DataClassORJSONMixin):
     device_manufacturer_code: str | None = field(
         metadata=field_options(alias="deviceManufacturerCode"), default=None
     )
+    room_id: str | None = field(metadata=field_options(alias="roomId"), default=None)
     ocf: OCF | None = None
     viper: Viper | None = None
     hub: Hub | None = None
