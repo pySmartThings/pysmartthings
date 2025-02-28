@@ -219,6 +219,22 @@ class Component(DataClassORJSONMixin):
 
 
 @dataclass
+class OCF(DataClassORJSONMixin):
+    """OCF model."""
+
+    device_type: str = field(metadata=field_options(alias="ocfDeviceType"))
+    name: str
+    spec_version: str = field(metadata=field_options(alias="specVersion"))
+    manufacturer_name: str = field(metadata=field_options(alias="manufacturerName"))
+    model_number: str = field(metadata=field_options(alias="modelNumber"))
+    platform_version: str = field(metadata=field_options(alias="platformVersion"))
+    platform_os: str = field(metadata=field_options(alias="platformOS"))
+    hardware_version: str = field(metadata=field_options(alias="hwVersion"))
+    firmware_version: str = field(metadata=field_options(alias="firmwareVersion"))
+    vendor_id: str = field(metadata=field_options(alias="vendorId"))
+
+
+@dataclass
 class Device(DataClassORJSONMixin):
     """Device model."""
 
@@ -240,6 +256,7 @@ class Device(DataClassORJSONMixin):
     device_manufacturer_code: str | None = field(
         metadata=field_options(alias="deviceManufacturerCode"), default=None
     )
+    ocf: OCF | None = None
 
 
 @dataclass

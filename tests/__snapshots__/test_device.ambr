@@ -34,6 +34,18 @@
       'label': 'Samsung Soundbar S801B',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Samsung Soundbar S801B',
+      'ocf': dict({
+        'device_type': 'oic.d.networkaudio',
+        'firmware_version': 'HW-S801BWWB-1010.0',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'HW-S801B',
+        'name': 'Samsung Soundbar S801B',
+        'platform_os': 'Tizen',
+        'platform_version': '6.5',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-NetworkAudio-002S',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -62,6 +74,7 @@
       'label': 'Main Bedroom Window Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'multi-sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -87,6 +100,7 @@
       'label': 'Garage Motion Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'motion-battery',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -115,6 +129,7 @@
       'label': "Charlie's Bedroom Window Sensor",
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'multi-sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -137,6 +152,7 @@
       'label': 'SmartThings v3 Hub',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'SmartThings v3 Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -165,6 +181,7 @@
       'label': 'Kitchen Door Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -193,6 +210,7 @@
       'label': 'Back Door Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -221,6 +239,7 @@
       'label': 'Garage Back Door Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -249,6 +268,7 @@
       'label': 'Front Door Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -277,6 +297,7 @@
       'label': 'Front Left Window Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -305,6 +326,7 @@
       'label': 'Landing Window Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'multi-sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -331,6 +353,7 @@
       'label': 'Rabbit House Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'motion-temp-battery',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -359,6 +382,7 @@
       'label': 'Kitchen Window Sensor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'multi-sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -387,6 +411,7 @@
       'label': "Girl's Bedroom Window Sensor",
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'multi-sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -441,6 +466,18 @@
       'label': 'Samsung QN95CA 55',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Samsung QN95CA 55',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-PTMCDEUC-0080-2013.1|ST_ENERGY',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'QE55QN95CATXXU',
+        'name': 'Samsung QN95CA 55',
+        'platform_os': 'Tizen',
+        'platform_version': '8.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-STV-2023',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -492,6 +529,18 @@
       'label': 'Samsung The Frame 55',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'Samsung The Frame 55',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-PTMDEUC-1651.7|ST_ENERGY',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'QE55LS03BGUXXU',
+        'name': 'Samsung The Frame 55',
+        'platform_os': 'Tizen',
+        'platform_version': '6.5',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-STV-2022',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -518,6 +567,7 @@
       'label': 'Aeotec Energy Monitor',
       'location_id': '6911ddf5-f0cb-4516-a06a-3a2a6ec22bca',
       'name': 'aeotec-home-energy-meter-gen5',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
   ])
@@ -548,6 +598,7 @@
       'label': 'Office',
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': 'sensibo-airconditioner-1',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -629,6 +680,18 @@
       'label': 'Washer',
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': '[washer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.washer',
+        'firmware_version': 'DA_WM_TP1_21_COMMON_30240927',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP1_21_COMMON|20334241|20010002001711664AA3025700000000',
+        'name': '[washer] Samsung',
+        'platform_os': 'TizenRT 3.1',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WM-01011',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -651,6 +714,7 @@
       'label': 'Garage Hub',
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': 'SmartThings v3 Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -673,6 +737,7 @@
       'label': 'Upstairs Hub',
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': 'SmartThings v3 Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -698,6 +763,7 @@
       'label': 'Geyser',
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': 'Aeotec Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -724,6 +790,7 @@
       'label': 'Main Bedroom',
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': 'sensibo-airconditioner-1',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -749,6 +816,7 @@
       'label': 'Geyser',
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': 'Aeotec Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -775,6 +843,7 @@
       'label': "Harry's room",
       'location_id': 'fe14085e-bacb-4997-bc0c-df08204eaea2',
       'name': 'sensibo-airconditioner-1',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
   ])
@@ -860,6 +929,18 @@
       'label': 'Washing machine',
       'location_id': '6a446433-a83d-4ede-9c47-f22a0f80b574',
       'name': '[washer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.washer',
+        'firmware_version': 'DA_WM_TP1_21_COMMON_30240927',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP1_21_COMMON|20314341|20010002001611664AA3025700000000',
+        'name': '[washer] Samsung',
+        'platform_os': 'TizenRT 3.1',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WM-01011',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -910,6 +991,18 @@
       'label': '49" Odyssey OLED G9',
       'location_id': '6a446433-a83d-4ede-9c47-f22a0f80b574',
       'name': '49" Odyssey OLED G9',
+      'ocf': dict({
+        'device_type': 'x.com.st.d.monitor',
+        'firmware_version': 'T-OSCSCWWC-2000.2',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'LS49CG954SUXXU',
+        'name': '49" Odyssey OLED G9',
+        'platform_os': 'Tizen',
+        'platform_version': '7.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-SMONITOR-2023',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -936,6 +1029,7 @@
       'label': 'Home',
       'location_id': 'c4904031-30e5-4920-9ea7-0a768e355b2a',
       'name': 'SmartThings v2 Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -961,6 +1055,7 @@
       'label': 'Front Door Lock',
       'location_id': 'c4904031-30e5-4920-9ea7-0a768e355b2a',
       'name': 'base-lock',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -1042,6 +1137,18 @@
       'label': 'Washing machine',
       'location_id': 'c4904031-30e5-4920-9ea7-0a768e355b2a',
       'name': '[washer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.washer',
+        'firmware_version': 'DA_WM_TP1_21_COMMON_30240927',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP1_21_COMMON|20348141|20010002001711024ACB020200080000',
+        'name': '[washer] Samsung',
+        'platform_os': 'TizenRT 3.1',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WM-01011',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -1123,6 +1230,18 @@
       'label': 'Tvättmaskin',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': '[washer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.washer',
+        'firmware_version': 'DA_WM_TP2_20_COMMON_30230804',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP2_20_COMMON|20260041|20010102001411F702A3020700000000',
+        'name': '[washer] Samsung',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WM-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1173,6 +1292,18 @@
       'label': 'Samsung QN95AA 75 TV',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': 'Samsung QN95AA 75 TV',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-NKM2DEUC-2220.9',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'QE75QN95AATXXC',
+        'name': 'Samsung QN95AA 75 TV',
+        'platform_os': 'Tizen',
+        'platform_version': '6.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-STV-2021',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1207,6 +1338,18 @@
       'label': 'Samsung Soundbar Q950T',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': 'Samsung Soundbar Q950T',
+      'ocf': dict({
+        'device_type': 'oic.d.networkaudio',
+        'firmware_version': 'HW-Q950TWWB-1022.0',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'HW-Q950T',
+        'name': 'Samsung Soundbar Q950T',
+        'platform_os': 'Tizen',
+        'platform_version': '5.5',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-NetworkAudio-002S',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1258,6 +1401,18 @@
       'label': 'Samsung The Frame 55',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': 'Samsung The Frame 55',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-PTMDEUC-1651.7|ST_ENERGY',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TQ55LS03BGUXXC',
+        'name': 'Samsung The Frame 55',
+        'platform_os': 'Tizen',
+        'platform_version': '6.5',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-STV-2022',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1280,6 +1435,7 @@
       'label': 'Hubb',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': 'SmartThings v3 Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -1328,6 +1484,18 @@
       'label': 'Samsung Q70 Series',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': '[TV] Samsung Q70 Series (65)',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-MSMDEUC-1420.0',
+        'hardware_version': '0-0',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'QE65Q70RATXXC',
+        'name': '[TV] Samsung Q70 Series (65)',
+        'platform_os': '4.1.10',
+        'platform_version': 'Tizen 5.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-STV_2018_K',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1389,6 +1557,18 @@
       'label': 'Ugn',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': '[oven] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.oven',
+        'firmware_version': 'ARTIK051_GB_WO_003_40200913',
+        'hardware_version': '1.0',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'ARTIK051_GB_WO_003|40423141|50030018001211510200000000000000',
+        'name': '[oven] Samsung',
+        'platform_os': 'TizenRT2.0',
+        'platform_version': '0.1.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-KS-WALLOVEN-000003',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1419,6 +1599,7 @@
       'label': 'Elliots Rum',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': 'sonos-player',
+      'ocf': None,
       'type': <DeviceType.LAN: 'LAN'>,
     }),
     dict({
@@ -1611,6 +1792,18 @@
       'label': 'Kylskåp',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': 'Samsung-Refrigerator',
+      'ocf': dict({
+        'device_type': 'oic.d.refrigerator',
+        'firmware_version': 'A-RFWW-TP1-24-T4-COM_20240908',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP1X_REF_21K|00175041|00040141041811304104000020010000',
+        'name': 'Samsung-Refrigerator',
+        'platform_os': 'TizenRT 4.0',
+        'platform_version': 'SYSTEM 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-REF-NORMAL-01011',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1674,6 +1867,18 @@
       'label': 'Torktumlare',
       'location_id': 'eed0e167-e793-459b-80cb-a0b02e2b86c2',
       'name': '[dryer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.dryer',
+        'firmware_version': 'DA_WM_TP2_20_COMMON_30230804',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP2_20_COMMON|20262941|300101020014110002A3030700000000',
+        'name': '[dryer] Samsung',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WD-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -1870,6 +2075,18 @@
       'label': 'Refrigerator',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': 'Samsung-Refrigerator',
+      'ocf': dict({
+        'device_type': 'oic.d.refrigerator',
+        'firmware_version': 'A-RFWW-TP1-22-REV1_20240912',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP1X_REF_21K|00156941|00050126001611304100000030010000',
+        'name': 'Samsung-Refrigerator',
+        'platform_os': 'TizenRT 3.1',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-REF-NORMAL-01011',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1947,6 +2164,18 @@
       'label': 'Washer',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': '[washer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.washer',
+        'firmware_version': 'DA_WM_TP2_20_COMMON_30230804',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP2_20_COMMON|20260041|20010002011411A302A3020700000000',
+        'name': '[washer] Samsung',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WM-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -1970,6 +2199,7 @@
       'label': 'Sleeping State',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': 'Sleeping State',
+      'ocf': None,
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
     }),
     dict({
@@ -2020,6 +2250,18 @@
       'label': 'AirDresser',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': '[airdresser] Samsung',
+      'ocf': dict({
+        'device_type': 'x.com.st.d.steamcloset',
+        'firmware_version': 'DA_DF_TP2_20_COMMON_30230807',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_DF_TP2_20_COMMON|20299141|3801010200151107020100FF00000000',
+        'name': '[airdresser] Samsung',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-SC-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -2048,6 +2290,18 @@
       'label': 'Sound Sensor - 55" The Frame',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': 'VD-Sensor.Sound-2023',
+      'ocf': dict({
+        'device_type': 'x.com.st.d.sensor.sound',
+        'firmware_version': 'latest',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'QE55LS03DAUXXN',
+        'name': 'Sound Sensor - 55 The Frame',
+        'platform_os': 'Tizen',
+        'platform_version': '8.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-Sensor.Sound-2023',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -2102,6 +2356,18 @@
       'label': '55 The Frame',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': '55" The Frame',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-PTMDDEUC-1201.8|ST_ENERGY',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'QE55LS03DAUXXN',
+        'name': '55 The Frame',
+        'platform_os': 'Tizen',
+        'platform_version': '8.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-FRAME-2024',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -2129,6 +2395,18 @@
       'label': 'Light Sensor - 55" The Frame',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': 'VD-Sensor.Light-2023',
+      'ocf': dict({
+        'device_type': 'x.com.st.d.sensor.light',
+        'firmware_version': 'latest',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'QE55LS03DAUXXN',
+        'name': 'Light Sensor - 55 The Frame',
+        'platform_os': 'Tizen',
+        'platform_version': '8.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-Sensor.Light-2023',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -2164,6 +2442,18 @@
       'label': 'Ultra Slim Soundbar',
       'location_id': 'df59873c-4e2c-43ba-bcd4-ade4efb0504a',
       'name': 'Ultra Slim Soundbar',
+      'ocf': dict({
+        'device_type': 'oic.d.networkaudio',
+        'firmware_version': 'SAT-MT8532D24WWC-1016.0',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'HW-S701D',
+        'name': 'Ultra Slim Soundbar',
+        'platform_os': 'Tizen',
+        'platform_version': '8.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-NetworkAudio-003S',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -2196,6 +2486,7 @@
       'label': 'Bathroom spot',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-color-temperature-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2226,6 +2517,7 @@
       'label': 'Standing light',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2254,6 +2546,7 @@
       'label': 'Hue ambiance spot 3',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-color-temperature-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2279,6 +2572,7 @@
       'label': 'Curtain 1A',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'c2c-shade',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2304,6 +2598,7 @@
       'label': 'Curtain 1E',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'c2c-shade',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2332,6 +2627,7 @@
       'label': 'Sink',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-color-temperature-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2357,6 +2653,7 @@
       'label': 'Hue motion sensor 1',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'c2c-motion-2',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2385,6 +2682,7 @@
       'label': 'Hue ambiance spot 2',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-color-temperature-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2413,6 +2711,7 @@
       'label': 'Hue ambiance spot 4',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-color-temperature-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2443,6 +2742,7 @@
       'label': 'Night light',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2467,6 +2767,7 @@
       'label': 'Netatmo NAPlug',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'c2c-thermostat-bridge-1',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2497,6 +2798,7 @@
       'label': 'Kitchen',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2523,6 +2825,7 @@
       'label': 'Hub 2 08',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'c2c-humidity',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2553,6 +2856,7 @@
       'label': 'Tv',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2577,6 +2881,7 @@
       'label': 'TV',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'c2c-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2607,6 +2912,7 @@
       'label': 'Bureau',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2635,6 +2941,7 @@
       'label': 'Hue ambiance spot 5',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-color-temperature-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2665,6 +2972,7 @@
       'label': 'Bed',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2693,6 +3001,7 @@
       'label': 'Hue ambiance spot 1',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-color-temperature-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -2723,6 +3032,7 @@
       'label': 'Bed',
       'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
       'name': 'hue-rgbw-color-bulb',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
   ])
@@ -2788,6 +3098,18 @@
       'label': 'Vulcan',
       'location_id': '597a4912-13c9-47ab-5916-3cbe28b61abd',
       'name': 'Samsung Range',
+      'ocf': dict({
+        'device_type': 'oic.d.range',
+        'firmware_version': 'AKS-WW-TP1-20-OVEN-3-CR_40240205',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP1X_DA-KS-RANGE-0101X|40445041|5001011E031511010200000000000000',
+        'name': 'Samsung Range',
+        'platform_os': 'TizenRT 3.1',
+        'platform_version': 'DAWIT 3.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-KS-RANGE-0101X',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -2855,6 +3177,18 @@
       'label': 'Dryer',
       'location_id': '781d5f1e-c87e-455e-87f7-8e954879e91d',
       'name': '[dryer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.dryer',
+        'firmware_version': 'DA_WM_A51_20_COMMON_30230708',
+        'hardware_version': 'ARTIK051',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_A51_20_COMMON|20233741|3000000100111100020B000000000000',
+        'name': '[dryer] Samsung',
+        'platform_os': 'TizenRT 1.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WD-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -2904,6 +3238,18 @@
       'label': 'Dishwasher',
       'location_id': '586e4602-34ab-4a22-993e-5f616b04604f',
       'name': '[dishwasher] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.dishwasher',
+        'firmware_version': 'DA_DW_A51_20_COMMON_30230714',
+        'hardware_version': 'ARTIK051',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_DW_A51_20_COMMON|30007242|40010201001311000101000000000000',
+        'name': '[dishwasher] Samsung',
+        'platform_os': 'TizenRT 1.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-DW-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -2960,6 +3306,18 @@
       'label': 'Microwave',
       'location_id': '586e4602-34ab-4a22-993e-5f616b04604f',
       'name': 'Samsung Microwave',
+      'ocf': dict({
+        'device_type': 'oic.d.microwave',
+        'firmware_version': 'AKS-WW-TP2-20-MICROWAVE-OTR_40230125',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP2X_DA-KS-MICROWAVE-0101X|40436241|50040100011411000200000000000000',
+        'name': 'Samsung Microwave',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 3.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-KS-MICROWAVE-0101X',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3125,6 +3483,18 @@
       'label': 'Refrigerator',
       'location_id': '2487472a-06c4-4bce-8f4c-700c5f8644f8',
       'name': 'Family Hub',
+      'ocf': dict({
+        'device_type': 'oic.d.refrigerator',
+        'firmware_version': '20240616.213423',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': '24K_REF_LCD_FHUB9.0|00113141|0002034e051324200103000000000000',
+        'name': 'Family Hub',
+        'platform_os': 'Tizen',
+        'platform_version': '7.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-REF-NORMAL-01001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3147,6 +3517,7 @@
       'label': 'SmartThings Hub - FamilyHub',
       'location_id': '2487472a-06c4-4bce-8f4c-700c5f8644f8',
       'name': 'SmartThings Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -3184,6 +3555,18 @@
       'label': 'Robot vacuum',
       'location_id': '586e4602-34ab-4a22-993e-5f616b04604f',
       'name': '[robot vacuum] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.robotcleaner',
+        'firmware_version': '1.0',
+        'hardware_version': '1.0',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'powerbot_7000_17M|50016055|80010404011141000100000000000000',
+        'name': '[robot vacuum] Samsung',
+        'platform_os': 'Tizen(3/0)',
+        'platform_version': '00',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-RVC-NORMAL-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3261,6 +3644,18 @@
       'label': 'Washer',
       'location_id': '781d5f1e-c87e-455e-87f7-8e954879e91d',
       'name': '[washer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.washer',
+        'firmware_version': 'DA_WM_TP2_20_COMMON_30230804',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP2_20_COMMON|20233741|2001000100131100022B010000000000',
+        'name': '[washer] Samsung',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WM-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -3299,6 +3694,7 @@
       'label': 'SmartTag+ black',
       'location_id': 'redacted_locid',
       'name': 'Tag(UWB)',
+      'ocf': None,
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
     }),
     dict({
@@ -3376,6 +3772,18 @@
       'label': 'Wasmachine',
       'location_id': 'redacted_locid',
       'name': '[washer] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.washer',
+        'firmware_version': 'DA_WM_TP2_20_COMMON_30230804',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'DA_WM_TP2_20_COMMON|20260041|200100020014112302A3020700000000',
+        'name': '[washer] Samsung',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-WM-WM-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3410,6 +3818,7 @@
       'label': 'tas',
       'location_id': 'redacted_locid',
       'name': 'Tag2(UWB)',
+      'ocf': None,
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
     }),
     dict({
@@ -3444,6 +3853,7 @@
       'label': 'koffer',
       'location_id': 'redacted_locid',
       'name': 'Tag2(UWB)',
+      'ocf': None,
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
     }),
     dict({
@@ -3478,6 +3888,7 @@
       'label': 'SmartTag+ black 2',
       'location_id': 'redacted_locid',
       'name': 'Tag(UWB)',
+      'ocf': None,
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
     }),
     dict({
@@ -3512,6 +3923,7 @@
       'label': 'SmartTag+ blue 2',
       'location_id': 'redacted_locid',
       'name': 'Tag(UWB)',
+      'ocf': None,
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
     }),
     dict({
@@ -3546,6 +3958,7 @@
       'label': 'SmartTag+ blue',
       'location_id': 'redacted_locid',
       'name': 'Tag(UWB)',
+      'ocf': None,
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
     }),
   ])
@@ -3623,6 +4036,18 @@
       'label': 'Aire Dormitorio Principal',
       'location_id': 'c4189ac1-208f-461a-8ab6-ea67937b3743',
       'name': 'Samsung-Room-Air-Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': 'ARA-WW-TP1-22-COMMON_11240702',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'ARA-WW-TP1-22-COMMON|10229641|60010523001511014600083200800000',
+        'name': 'Samsung-Room-Air-Conditioner',
+        'platform_os': 'TizenRT 3.1',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-01001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3657,6 +4082,18 @@
       'label': 'Soundbar Living',
       'location_id': 'c4189ac1-208f-461a-8ab6-ea67937b3743',
       'name': 'Soundbar',
+      'ocf': dict({
+        'device_type': 'oic.d.networkaudio',
+        'firmware_version': 'SAT-iMX8M23WWC-1010.5',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'HW-Q990C',
+        'name': 'Soundbar Living',
+        'platform_os': 'Tizen',
+        'platform_version': '7.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-NetworkAudio-002S',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3687,6 +4124,18 @@
       'label': 'Kit AC Wifi',
       'location_id': 'c4189ac1-208f-461a-8ab6-ea67937b3743',
       'name': '[system a/c] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': '20240611.1',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'MIM-H04N|240611|61FFFF00001411000000000000000000',
+        'name': '[system a/c] Samsung',
+        'platform_os': 'Tizen',
+        'platform_version': '4.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-SAC-WIFIKIT-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3739,6 +4188,18 @@
       'label': 'Aire Oficina',
       'location_id': 'c4189ac1-208f-461a-8ab6-ea67937b3743',
       'name': 'Air Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': '20240611.1',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'SAC_RAC|230127|610C0A00001700890400010000000000',
+        'name': 'Air Conditioner',
+        'platform_os': 'Tizen',
+        'platform_version': '4.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-SAC-INDOOR-000001-SUB',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -3812,6 +4273,18 @@
       'label': 'Aire Estar Segundo Piso',
       'location_id': 'c4189ac1-208f-461a-8ab6-ea67937b3743',
       'name': 'Samsung-Room-Air-Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': 'ARA-WW-TP1-23-GLOBAL_11240702',
+        'hardware_version': 'Realtek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'ARA-WW-TP1-23-GLOBAL|10247441|60010535001711F54E00082200910000',
+        'name': 'Samsung-Room-Air-Conditioner',
+        'platform_os': 'TizenRT 3.1',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-01001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -3906,6 +4379,18 @@
       'label': 'AC Office Granit',
       'location_id': '58d3fd7c-c512-4da3-b500-ef269382756c',
       'name': '[room a/c] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': '0.1.0',
+        'hardware_version': '1.0',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'ARTIK051_KRAC_18K|10193441|60010132001111110200000000000000',
+        'name': '[room a/c] Samsung',
+        'platform_os': 'TizenRT2.0',
+        'platform_version': '0G3MPDCKA00010E',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -3940,6 +4425,7 @@
       'label': 'Basement Door',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-pro-3-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -3976,6 +4462,7 @@
       'label': 'Den Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'switch-level',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4001,6 +4488,7 @@
       'label': 'Entryway Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Outlet',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4027,6 +4515,7 @@
       'label': 'Table Den Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Sengled Light',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4055,6 +4544,7 @@
       'label': 'Floor Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'ZigBee White Color Temperature Bulb',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4079,6 +4569,7 @@
       'label': 'Masterbed room lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE In-Wall Smart Dimmer',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4134,6 +4625,7 @@
       'label': 'Fireplace',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'zooz-zen16-multirelay',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4158,6 +4650,7 @@
       'label': 'Basement Hall',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE In-Wall Smart Dimmer',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4187,6 +4680,7 @@
       'label': 'Garage Cam',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-go-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -4215,6 +4709,7 @@
       'label': 'Deck Door',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4241,6 +4736,7 @@
       'label': 'Basement Door Lock',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Yale Push Button Deadbolt Lock',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4290,6 +4786,18 @@
       'label': '27" Smart Monitor M5',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': '27" Smart Monitor M5',
+      'ocf': dict({
+        'device_type': 'x.com.st.d.monitor',
+        'firmware_version': 'T-NKLBWWC-1651.10',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'LS27BM501ENXZA',
+        'name': '27" Smart Monitor M5',
+        'platform_os': 'Tizen',
+        'platform_version': '6.5',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-SMONITOR-2022',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -4314,6 +4822,7 @@
       'label': 'Basement Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Virtual Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
     }),
     dict({
@@ -4338,6 +4847,7 @@
       'label': 'Kitchen Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'ge-dimmer-assoc',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4363,6 +4873,7 @@
       'label': 'Entryway Tree',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Outlet',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4389,6 +4900,7 @@
       'label': '.Front Door Open/Closed Sensor',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'contact-profile',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4411,6 +4923,7 @@
       'label': 'Hub - 27" Smart Monitor M5',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'SmartThings Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -4560,6 +5073,18 @@
       'label': 'Refrigerator',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': '[refrigerator] Samsung',
+      'ocf': dict({
+        'device_type': 'oic.d.refrigerator',
+        'firmware_version': 'A-RFWW-TP2-21-COMMON_20220110',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP2X_REF_20K|00115641|0004014D011411200103000020000000',
+        'name': '[refrigerator] Samsung',
+        'platform_os': 'TizenRT 1.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-REF-NORMAL-000001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -4586,6 +5111,7 @@
       'label': 'Car Garage Door',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Visonic Door/Window Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4609,6 +5135,7 @@
       'label': 'Mail Announce',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Virtual Contact1',
+      'ocf': None,
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
     }),
     dict({
@@ -4634,6 +5161,7 @@
       'label': 'Radon Fan',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Outlet',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4659,6 +5187,7 @@
       'label': 'Heater Outlet',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Outlet',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4687,6 +5216,7 @@
       'label': 'Saimas Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'TRÅDFRI bulb E26 WS opal 980lm',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4711,6 +5241,7 @@
       'label': 'Fireplace Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Virtual Switch',
+      'ocf': None,
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
     }),
     dict({
@@ -4734,6 +5265,7 @@
       'label': 'Garage Tubelight',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'switch-binary-indicator',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4758,6 +5290,7 @@
       'label': 'Fireplace Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'basic-switch',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4782,6 +5315,7 @@
       'label': 'Aeon Energy Monitor',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'base-electric-meter',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4812,6 +5346,7 @@
       'label': 'Freezer Room',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-pro-3-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -4836,6 +5371,7 @@
       'label': 'Masterbed Room Fan',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'ge-switch-assoc',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4866,6 +5402,7 @@
       'label': 'Backyard Floodlight',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-pro-3-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -4891,6 +5428,7 @@
       'label': 'Guest Fan',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'switch-level-indicator',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -4917,6 +5455,7 @@
       'label': 'Garage Door - Side',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Visonic Door/Window Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -4947,6 +5486,7 @@
       'label': 'Sump Pump Room',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-pro-3-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -4969,6 +5509,7 @@
       'label': 'iPhone',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'iPhone',
+      'ocf': None,
       'type': <DeviceType.MOBILE: 'MOBILE'>,
     }),
     dict({
@@ -5013,6 +5554,18 @@
       'label': '[TV] Samsung 8 Series (49)',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': '[TV] Samsung 8 Series (49)',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-KTMAKUC-1290.3',
+        'hardware_version': '0-0',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'UN49MU8000',
+        'name': '[TV] Samsung 8 Series (49)',
+        'platform_os': '4.1.10',
+        'platform_version': 'Tizen 3.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-STV_2017_K',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -5059,6 +5612,7 @@
       'label': 'Virtual Calendar Device (1685810860)',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'virtual-calendar',
+      'ocf': None,
       'type': <DeviceType.LAN: 'LAN'>,
     }),
     dict({
@@ -5083,6 +5637,7 @@
       'label': 'Breakfast Table Lamps',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5109,6 +5664,7 @@
       'label': 'Dimmer Debian',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'plug-level-power',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5135,6 +5691,7 @@
       'label': 'Van Garage Door',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Visonic Door/Window Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5158,6 +5715,7 @@
       'label': 'Water is heating',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Water Heater Announce',
+      'ocf': None,
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
     }),
     dict({
@@ -5182,6 +5740,7 @@
       'label': 'Arlo Production',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -5206,6 +5765,7 @@
       'label': 'Formal Dining Table Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5230,6 +5790,7 @@
       'label': 'Arlo Beta Basestation',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'SYLVANIA SMART+ Smart Plug',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5254,6 +5815,7 @@
       'label': 'Base Station',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-siren',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -5279,6 +5841,7 @@
       'label': 'Driveway Light',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5303,6 +5866,7 @@
       'label': 'Girls Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5331,6 +5895,7 @@
       'label': 'Temp Sensor',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'st-multipurpose',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5356,6 +5921,7 @@
       'label': 'Door Lock',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'base-lock',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5384,6 +5950,7 @@
       'label': 'Sump Pump Room',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5410,6 +5977,7 @@
       'label': 'Study Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-dimmer',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -5436,6 +6004,7 @@
       'label': 'Study Room Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'switch-level',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5461,6 +6030,7 @@
       'label': 'Floor Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Outlet',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5497,6 +6067,7 @@
       'label': 'Dresser Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'switch-level',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5522,6 +6093,7 @@
       'label': 'String Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Outlet',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5548,6 +6120,7 @@
       'label': 'Door Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Light',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5572,6 +6145,7 @@
       'label': 'Guest Light',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'ge-dimmer-assoc',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5598,6 +6172,7 @@
       'label': 'Kitchen Basin Light',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Light',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5628,6 +6203,7 @@
       'label': 'Front Doorbell',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-wired-video-doorbell-battery-no-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -5652,6 +6228,7 @@
       'label': 'Formal Living Room',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5677,6 +6254,7 @@
       'label': 'Water Boiler',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Outlet',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5701,6 +6279,7 @@
       'label': 'TV Room',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE In-Wall Smart Dimmer',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -5729,6 +6308,7 @@
       'label': 'Guest Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'TRÅDFRI bulb E26 WS opal 980lm',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5751,6 +6331,7 @@
       'label': 'iPhone',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'iPhone',
+      'ocf': None,
       'type': <DeviceType.MOBILE: 'MOBILE'>,
     }),
     dict({
@@ -5773,6 +6354,7 @@
       'label': 'Home Hub',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'SmartThings v2 Hub',
+      'ocf': None,
       'type': <DeviceType.HUB: 'HUB'>,
     }),
     dict({
@@ -5801,6 +6383,7 @@
       'label': 'Mail Box',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5831,6 +6414,7 @@
       'label': 'Driveway Floodlight',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-pro-3-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -5855,6 +6439,7 @@
       'label': 'Sump Pump',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -5883,6 +6468,7 @@
       'label': 'Basement Exit Door',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Multipurpose Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5926,6 +6512,7 @@
       'label': 'IKEA Remote Control',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'two-buttons-battery',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5949,6 +6536,7 @@
       'label': 'MAIN Virtual Devices',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'main-virtual-device',
+      'ocf': None,
       'type': <DeviceType.LAN: 'LAN'>,
     }),
     dict({
@@ -5975,6 +6563,7 @@
       'label': 'Sump Pump Room Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'on-off-level',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -5999,6 +6588,7 @@
       'label': 'Boys Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -6023,6 +6613,7 @@
       'label': 'Basement Exit Light',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -6052,6 +6643,7 @@
       'label': 'Basement Exit Cam',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-go-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -6081,6 +6673,7 @@
       'label': 'Driveway Cam',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-go-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -6117,6 +6710,7 @@
       'label': 'Salim’s Lamp',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'switch-level',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -6145,6 +6739,7 @@
       'label': 'Basement Door',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'multi-sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -6175,6 +6770,7 @@
       'label': '2nd Floor Hallway',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'c2c-arlo-pro-3-switch',
+      'ocf': None,
       'type': <DeviceType.VIPER: 'VIPER'>,
     }),
     dict({
@@ -6200,6 +6796,7 @@
       'label': 'Front Door Lights',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE Dimmer Switch',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -6225,6 +6822,7 @@
       'label': 'Toy Room',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'GE In-Wall Smart Dimmer',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
     dict({
@@ -6252,6 +6850,7 @@
       'label': 'Motion Sensor',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'Motion Sensor',
+      'ocf': None,
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
     }),
     dict({
@@ -6276,6 +6875,7 @@
       'label': 'Girls Fan',
       'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
       'name': 'switch-level-indicator',
+      'ocf': None,
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
     }),
   ])
@@ -6341,6 +6941,18 @@
       'label': 'Climatiseur Quentin',
       'location_id': 'd507e237-896e-4352-8f0f-0664c91234bd',
       'name': 'Samsung-Room-Air-Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': 'TP2X_RAC_20K_11240702',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP2X_RAC_20K|10256941|60010519001411014600003200800000',
+        'name': 'Samsung-Room-Air-Conditioner',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-000003',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -6402,6 +7014,18 @@
       'label': 'Climatiseur Parents',
       'location_id': 'd507e237-896e-4352-8f0f-0664c91234bd',
       'name': 'Samsung-Room-Air-Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': 'TP2X_RAC_20K_11240702',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP2X_RAC_20K|10256941|60010519001411014600003200800000',
+        'name': 'Samsung-Room-Air-Conditioner',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-000003',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -6456,6 +7080,18 @@
       'label': 'TV',
       'location_id': 'd507e237-896e-4352-8f0f-0664c91234bd',
       'name': 'TV',
+      'ocf': dict({
+        'device_type': 'oic.d.tv',
+        'firmware_version': 'T-PTMCDEUC-0080-2020.2|ST_ENERGY',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TQ65S90CATXXC',
+        'name': 'TV',
+        'platform_os': 'Tizen',
+        'platform_version': '8.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'VD-STV-2023',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -6517,6 +7153,18 @@
       'label': 'Climatiseur Salon',
       'location_id': 'd507e237-896e-4352-8f0f-0664c91234bd',
       'name': 'Samsung-Room-Air-Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': 'TP2X_RAC_20K_11240702',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP2X_RAC_20K|10217841|60010523001411014200003000000000',
+        'name': 'Samsung-Room-Air-Conditioner',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-000003',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -6578,6 +7226,18 @@
       'label': 'Climatiseur Lisa',
       'location_id': 'd507e237-896e-4352-8f0f-0664c91234bd',
       'name': 'Samsung-Room-Air-Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': 'TP2X_RAC_20K_11240702',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP2X_RAC_20K|10256941|60010519001411014600003200800000',
+        'name': 'Samsung-Room-Air-Conditioner',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-000003',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
     dict({
@@ -6639,6 +7299,18 @@
       'label': 'Climatiseur Bureau',
       'location_id': 'd507e237-896e-4352-8f0f-0664c91234bd',
       'name': 'Samsung-Room-Air-Conditioner',
+      'ocf': dict({
+        'device_type': 'oic.d.airconditioner',
+        'firmware_version': 'TP2X_RAC_20K_11240702',
+        'hardware_version': 'MediaTek',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': 'TP2X_RAC_20K|10217841|60010519001411014200003000000000',
+        'name': 'Samsung-Room-Air-Conditioner',
+        'platform_os': 'TizenRT 2.0 + IPv6',
+        'platform_version': 'DAWIT 2.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-AC-RAC-000003',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -6665,6 +7337,18 @@
       'label': 'Refrigerator',
       'location_id': '2487472a-06c4-4bce-8f4c-700c5f8644f8',
       'name': 'Family Hub',
+      'ocf': dict({
+        'device_type': 'oic.d.refrigerator',
+        'firmware_version': '20240616.213423',
+        'hardware_version': '',
+        'manufacturer_name': 'Samsung Electronics',
+        'model_number': '24K_REF_LCD_FHUB9.0|00113141|0002034e051324200103000000000000',
+        'name': 'Family Hub',
+        'platform_os': 'Tizen',
+        'platform_version': '7.0',
+        'spec_version': 'core.1.1.0',
+        'vendor_id': 'DA-REF-NORMAL-01001',
+      }),
       'type': <DeviceType.OCF: 'OCF'>,
     }),
   ])
@@ -6696,6 +7380,7 @@
     'label': 'Bathroom spot',
     'location_id': '88a3a314-f0c8-40b4-bb44-44ba06c9c42f',
     'name': 'hue-color-temperature-bulb',
+    'ocf': None,
     'type': <DeviceType.VIPER: 'VIPER'>,
   })
 # ---
