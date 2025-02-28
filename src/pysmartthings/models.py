@@ -235,6 +235,20 @@ class OCF(DataClassORJSONMixin):
 
 
 @dataclass
+class Viper(DataClassORJSONMixin):
+    """Viper model."""
+
+    manufacturer_name: str = field(metadata=field_options(alias="manufacturerName"))
+    model_name: str = field(metadata=field_options(alias="modelName"))
+    hardware_version: str | None = field(
+        metadata=field_options(alias="hwVersion"), default=None
+    )
+    software_version: str | None = field(
+        metadata=field_options(alias="swVersion"), default=None
+    )
+
+
+@dataclass
 class Device(DataClassORJSONMixin):
     """Device model."""
 
@@ -257,6 +271,7 @@ class Device(DataClassORJSONMixin):
         metadata=field_options(alias="deviceManufacturerCode"), default=None
     )
     ocf: OCF | None = None
+    viper: Viper | None = None
 
 
 @dataclass
