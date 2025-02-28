@@ -249,6 +249,24 @@ class Viper(DataClassORJSONMixin):
 
 
 @dataclass
+class Hub(DataClassORJSONMixin):
+    """Hub model."""
+
+    firmware_version: str = field(metadata=field_options(alias="firmwareVersion"))
+    hardware_type: str = field(metadata=field_options(alias="hardwareType"))
+    mac_address: str = field(metadata=field_options(alias="macAddress"))
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
+        """Pre deserialize hook."""
+        return {
+            **d,
+            "hardwareType": d["hubData"]["hardwareType"],
+            "macAddress": d["hubData"]["macAddress"],
+        }
+
+
+@dataclass
 class Device(DataClassORJSONMixin):
     """Device model."""
 
@@ -275,6 +293,7 @@ class Device(DataClassORJSONMixin):
     )
     ocf: OCF | None = None
     viper: Viper | None = None
+    hub: Hub | None = None
 
 
 @dataclass
