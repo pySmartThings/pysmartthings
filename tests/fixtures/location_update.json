@@ -1,0 +1,10 @@
+{
+  "eventTime": 1740765012185,
+  "eventType": "LOCATION_LIFECYCLE_EVENT",
+  "locationLifecycleEvent": {
+    "eventId": "75645c9b-f5fc-11ef-9e6f-29646dd608b9",
+    "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "lifecycle": "UPDATE",
+    "update": {}
+  }
+}

@@ -358,10 +358,43 @@ class Event(DataClassORJSONMixin):
 
     event_time: int = field(metadata=field_options(alias="eventTime"))
     event_type: str = field(metadata=field_options(alias="eventType"))
+
+
+class Lifecycle(StrEnum):
+    """Lifecycle model."""
+
+    CREATE = "CREATE"
+    UPDATE = "UPDATE"
+    DELETE = "DELETE"
+
+
+@dataclass
+class DeviceLifecycleEvent(DataClassORJSONMixin):
+    """Device lifecycle event model."""
+
+    lifecycle: Lifecycle
+    device_id: str = field(metadata=field_options(alias="deviceId"))
+    location_id: str = field(metadata=field_options(alias="locationId"))
+
+
+@dataclass
+class DeviceEventRoot(Event):
+    """Device event root model."""
+
     device_event: DeviceEvent = field(metadata=field_options(alias="deviceEvent"))
+
+
+@dataclass
+class DeviceLifecycleEventRoot(Event):
+    """Device lifecycle event root model."""
+
+    device_lifecycle_event: DeviceLifecycleEvent = field(
+        metadata=field_options(alias="deviceLifecycleEvent")
+    )
 
 
 class EventType(StrEnum):
     """Event type."""
 
     DEVICE_EVENT = "DEVICE_EVENT"
+    DEVICE_LIFECYCLE_EVENT = "DEVICE_LIFECYCLE_EVENT"

@@ -1,0 +1,19 @@
+{
+  "eventTime": 1740762112368,
+  "eventType": "DEVICE_LIFECYCLE_EVENT",
+  "deviceLifecycleEvent": {
+    "lifecycle": "DELETE",
+    "eventId": "b4f767e4-f5f5-11ef-ba82-ad0e27284da8",
+    "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerType": "LOCATION",
+    "deviceId": "46b0958e-4a92-40f3-b531-eb60c5d1aa7a",
+    "deviceName": "",
+    "principal": "12d4af93-cb68-b108-87f5-625437d7371f",
+    "delete": {
+      "roomId": "",
+      "parentDeviceId": "",
+      "hubId": ""
+    }
+  }
+}

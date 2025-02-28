@@ -1,0 +1,21 @@
+{
+  "eventTime": 1740761861429,
+  "eventType": "DEVICE_LIFECYCLE_EVENT",
+  "deviceLifecycleEvent": {
+    "lifecycle": "CREATE",
+    "eventId": "1f6526dd-f5f5-11ef-88df-075751570aa6",
+    "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerType": "LOCATION",
+    "deviceId": "46b0958e-4a92-40f3-b531-eb60c5d1aa7a",
+    "deviceName": "",
+    "principal": "",
+    "create": {
+      "presentationId": "238c483a-10e8-359b-b032-1be2b2fcdee7",
+      "manufacturerName": "SmartThingsCommunity",
+      "categories": [],
+      "parentDeviceId": "",
+      "hubId": ""
+    }
+  }
+}
