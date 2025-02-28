@@ -219,6 +219,22 @@ class Component(DataClassORJSONMixin):
 
 
 @dataclass
+class OCF(DataClassORJSONMixin):
+    """OCF model."""
+
+    device_type: str = field(metadata=field_options(alias="ocfDeviceType"))
+    name: str
+    spec_version: str = field(metadata=field_options(alias="specVersion"))
+    manufacturer_name: str = field(metadata=field_options(alias="manufacturerName"))
+    model_number: str = field(metadata=field_options(alias="modelNumber"))
+    platform_version: str = field(metadata=field_options(alias="platformVersion"))
+    platform_os: str = field(metadata=field_options(alias="platformOS"))
+    hardware_version: str = field(metadata=field_options(alias="hwVersion"))
+    firmware_version: str = field(metadata=field_options(alias="firmwareVersion"))
+    vendor_id: str = field(metadata=field_options(alias="vendorId"))
+
+
+@dataclass
 class Device(DataClassORJSONMixin):
     """Device model."""
 
@@ -243,6 +259,7 @@ class Device(DataClassORJSONMixin):
     device_manufacturer_code: str | None = field(
         metadata=field_options(alias="deviceManufacturerCode"), default=None
     )
+    ocf: OCF | None = None
 
 
 @dataclass
@@ -361,10 +378,43 @@ class Event(DataClassORJSONMixin):
 
     event_time: int = field(metadata=field_options(alias="eventTime"))
     event_type: str = field(metadata=field_options(alias="eventType"))
+
+
+class Lifecycle(StrEnum):
+    """Lifecycle model."""
+
+    CREATE = "CREATE"
+    UPDATE = "UPDATE"
+    DELETE = "DELETE"
+
+
+@dataclass
+class DeviceLifecycleEvent(DataClassORJSONMixin):
+    """Device lifecycle event model."""
+
+    lifecycle: Lifecycle
+    device_id: str = field(metadata=field_options(alias="deviceId"))
+    location_id: str = field(metadata=field_options(alias="locationId"))
+
+
+@dataclass
+class DeviceEventRoot(Event):
+    """Device event root model."""
+
     device_event: DeviceEvent = field(metadata=field_options(alias="deviceEvent"))
+
+
+@dataclass
+class DeviceLifecycleEventRoot(Event):
+    """Device lifecycle event root model."""
+
+    device_lifecycle_event: DeviceLifecycleEvent = field(
+        metadata=field_options(alias="deviceLifecycleEvent")
+    )
 
 
 class EventType(StrEnum):
     """Event type."""
 
     DEVICE_EVENT = "DEVICE_EVENT"
+    DEVICE_LIFECYCLE_EVENT = "DEVICE_LIFECYCLE_EVENT"

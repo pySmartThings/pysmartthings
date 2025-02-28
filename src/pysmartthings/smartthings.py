@@ -21,11 +21,13 @@ from .models import (
     BaseLocation,
     Device,
     DeviceEvent,
+    DeviceEventRoot,
+    DeviceLifecycleEventRoot,
     DeviceResponse,
     DeviceStatus,
     ErrorResponse,
-    Event,
     EventType,
+    Lifecycle,
     Location,
     LocationResponse,
     Room,
@@ -59,6 +61,9 @@ class SmartThings:
     ] = field(default_factory=dict)
     __device_event_listeners: dict[str, list[Callable[[DeviceEvent], None]]] = field(
         default_factory=dict
+    )
+    __device_lifecycle_event_listeners: dict[Lifecycle, list[Callable[[str], None]]] = (
+        field(default_factory=dict)
     )
 
     async def refresh_token(self) -> None:
@@ -249,6 +254,17 @@ class SmartThings:
         )
         LOGGER.debug("Command response: %s", response)
 
+    def add_device_lifecycle_event_listener(
+        self, lifecycle_event: Lifecycle, callback: Callable[[str], None]
+    ) -> Callable[[], None]:
+        """Add a listener for device lifecycle events."""
+        if lifecycle_event not in self.__device_lifecycle_event_listeners:
+            self.__device_lifecycle_event_listeners[lifecycle_event] = []
+        self.__device_lifecycle_event_listeners[lifecycle_event].append(callback)
+        return lambda: self.__device_lifecycle_event_listeners[lifecycle_event].remove(
+            callback
+        )
+
     def add_device_capability_event_listener(
         self,
         device_id: str,
@@ -286,7 +302,10 @@ class SmartThings:
                     {
                         "type": "LOCATIONIDS",
                         "value": [location_id],
-                        "eventType": [EventType.DEVICE_EVENT],
+                        "eventType": [
+                            EventType.DEVICE_EVENT,
+                            EventType.DEVICE_LIFECYCLE_EVENT,
+                        ],
                     }
                 ],
             },
@@ -307,9 +326,9 @@ class SmartThings:
                     subscription.registration_url,
                     headers=self._get_headers(),
                 ):
+                    LOGGER.debug("Received event: %s", event.data)
                     if event.event == EventType.DEVICE_EVENT:
-                        LOGGER.debug("Received event: %s", event.data)
-                        event_type = Event.from_json(event.data)
+                        event_type = DeviceEventRoot.from_json(event.data)
                         device_event = event_type.device_event
                         if device_event.device_id in self.__device_event_listeners:
                             for callback in self.__device_event_listeners[
@@ -324,8 +343,17 @@ class SmartThings:
                         if key in self.__capability_event_listeners:
                             for callback in self.__capability_event_listeners[key]:
                                 callback(device_event)
-                    else:
-                        LOGGER.debug("Received event: %s", event.data)
+                    elif event.event == EventType.DEVICE_LIFECYCLE_EVENT:
+                        lifecycle_event = DeviceLifecycleEventRoot.from_json(event.data)
+                        device_lifecycle_event = lifecycle_event.device_lifecycle_event
+                        if (
+                            device_lifecycle_event.lifecycle
+                            in self.__device_lifecycle_event_listeners
+                        ):
+                            for dle_callback in self.__device_lifecycle_event_listeners[
+                                device_lifecycle_event.lifecycle
+                            ]:
+                                dle_callback(device_lifecycle_event.device_id)
             except Exception:  # pylint: disable=broad-except  # noqa: PERF203,BLE001
                 msg = "Error occurred while subscribing to events"
                 LOGGER.exception(msg)
