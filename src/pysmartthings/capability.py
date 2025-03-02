@@ -231,6 +231,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_DISHWASHER_WASHING_OPTIONS = "samsungce.dishwasherWashingOptions"
     SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION = "samsungce.dongleSoftwareInstallation"
     SAMSUNG_CE_DOOR_STATE = "samsungce.doorState"
+    SAMSUNG_CE_DRIVER_STATE = "samsungce.driverState"
     SAMSUNG_CE_DRIVER_VERSION = "samsungce.driverVersion"
     SAMSUNG_CE_DRYER_AUTO_CYCLE_LINK = "samsungce.dryerAutoCycleLink"
     SAMSUNG_CE_DRYER_CYCLE = "samsungce.dryerCycle"

@@ -228,8 +228,13 @@ class OCF(DataClassORJSONMixin):
     model_number: str = field(metadata=field_options(alias="modelNumber"))
     vendor_id: str = field(metadata=field_options(alias="vendorId"))
     spec_version: str = field(metadata=field_options(alias="specVersion"))
-    spec_version_vertical: str | None = field(
-        metadata=field_options(alias="verticalDomainSpecVersion"), default=None
+    spec_version_vertical: str = field(
+        metadata=field_options(alias="verticalDomainSpecVersion")
+    )
+    last_signup: str = field(metadata=field_options(alias="lastSignupTime"))
+    transfer_candidate: bool = field(metadata=field_options(alias="transferCandidate"))
+    additional_auth_code_required: bool = field(
+        metadata=field_options(alias="additionalAuthCodeRequired")
     )
     platform_version: str | None = field(
         metadata=field_options(alias="platformVersion"), default=None
@@ -242,15 +247,6 @@ class OCF(DataClassORJSONMixin):
     )
     firmware_version: str | None = field(
         metadata=field_options(alias="firmwareVersion"), default=None
-    )
-    last_signup: str | None = field(
-        metadata=field_options(alias="lastSignupTime"), default=None
-    )
-    transfer_candidate: bool | None = field(
-        metadata=field_options(alias="transferCandidate"), default=False
-    )
-    additional_auth_code_required: bool | None = field(
-        metadata=field_options(alias="additionalAuthCodeRequired"), default=False
     )
 
 
