@@ -1301,13 +1301,13 @@ files = [
 
 [[package]]
 name = "treelib"
-version = "1.7.0"
+version = "1.7.1"
 description = "A Python implementation of tree structure."
 optional = false
 python-versions = "*"
 files = [
-    {file = "treelib-1.7.0-py3-none-any.whl", hash = "sha256:c37795eaba19f73f3e1a905ef3f4f0cab660dc7617126e8ae99391e25c755416"},
-    {file = "treelib-1.7.0.tar.gz", hash = "sha256:9bff1af416b9e642a6cd0e0431d15edf26a24b8d0c8ae68afbd3801b5e30fb61"},
+    {file = "treelib-1.7.1-py3-none-any.whl", hash = "sha256:69aa12559c603273c77580cc86089021756654a754a7c674038de20f9daeafde"},
+    {file = "treelib-1.7.1.tar.gz", hash = "sha256:a2b57ba38290f7da6af97b41de8ff7be98e7a8c00815f95d0782241f77503952"},
 ]
 
 [package.dependencies]
@@ -1461,4 +1461,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "851b1395b04d7bd33eeccd98c5fdd560d1efc8b393e70e9e3b332d1592101592"
+content-hash = "d3f0f055b4fcac40482f5f0b79f2f2396f93bde4bec44deaac646d5c2688a067"
