@@ -139,6 +139,7 @@ class Attribute(StrEnum):
     DOSAGE = "dosage"
     DOWNLINK_SPEED = "downlinkSpeed"
     DO_NOT_DISTURB = "doNotDisturb"
+    DRIVER_STATE = "driverState"
     DRIVER_VERSION = "driverVersion"
     DRYER_AUTO_CYCLE_LINK = "dryerAutoCycleLink"
     DRYER_CYCLE = "dryerCycle"
@@ -295,6 +296,7 @@ class Attribute(StrEnum):
     MEDIA_OUTPUT_SUPPORTED = "mediaOutputSupported"
     MENU = "menu"
     METHOD = "method"
+    MESSAGE = "message"
     MICOM_ASSAY_CODE = "micomAssayCode"
     MINIMUM_RESERVABLE_TIME = "minimumReservableTime"
     MINIMUM_SETPOINT = "minimumSetpoint"
@@ -441,6 +443,7 @@ class Attribute(StrEnum):
     SIGNAL_METRICS = "signalMetrics"
     SIGNIN_PERMISSION = "signinPermission"
     SLEEPING = "sleeping"
+    SLOT_STATE = "slotState"
     SMOKE = "smoke"
     SOFTENER_TYPE = "softenerType"
     SOUND = "sound"
@@ -1087,6 +1090,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MAX_NUMBER_OF_PRESETS,
         Attribute.PRESETS,
     ],
+    Capability.SAMSUNG_CE_DRYER_LABEL_SCAN_CYCLE_PRESET: [Attribute.PRESETS],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [Attribute.VERSION],
     Capability.SAMSUNG_CE_DRYER_FREEZE_PREVENT: [Attribute.OPERATING_STATE],
     Capability.SAMSUNG_CE_DRYER_AUTO_CYCLE_LINK: [Attribute.DRYER_AUTO_CYCLE_LINK],
@@ -1416,6 +1420,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_STEAM_CLOSET_AUTO_CYCLE_LINK: [
         Attribute.STEAM_CLOSET_AUTO_CYCLE_LINK
     ],
+    Capability.SAMSUNG_CE_DRIVER_STATE: [Attribute.DRIVER_STATE],
+    Capability.SAMSUNG_CE_WATER_RESERVOIR: [Attribute.SLOT_STATE],
     # Samsung VD capabilities
     Capability.SAMSUNG_VD_SOUND_FROM: [Attribute.MODE, Attribute.DETAIL_NAME],
     Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [Attribute.ROLE, Attribute.STATUS],
@@ -1662,6 +1668,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STEAM_CLOSET_DELAY_END_TIME,
         Attribute.REMAINING_TIME,
     ],
+    Capability.CUSTOM_USER_NOTIFICATION: [Attribute.MESSAGE],
     # Sec capabilities
     Capability.SEC_DIAGNOSTICS_INFORMATION: [
         Attribute.LOG_TYPE,

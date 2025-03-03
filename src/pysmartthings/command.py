@@ -23,6 +23,7 @@ class Command(StrEnum):
     CLOSE = "close"
     CONFIGURE = "configure"
     COOL = "cool"
+    DELETE = "delete"
     DELETE_CODE = "deleteCode"
     DEVICE_NOTIFICATION = "deviceNotification"
     DISABLE_SOUND_DETECTION = "disableSoundDetection"
@@ -75,6 +76,7 @@ class Command(StrEnum):
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_DEFROST = "setDefrost"
+    SET_DRYER_LABEL_SCAN_CYCLE_PRESET = "setDryerLabelScanCyclePreset"
     SET_DRYER_MODE = "setDryerMode"
     SET_FAN_MODE = "setFanMode"
     SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
@@ -296,4 +298,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.WINDOW_SHADE: [Command.CLOSE, Command.OPEN, Command.PAUSE],
     Capability.ZWAVE_MULTICHANNEL: [Command.ENABLE_EP_EVENTS, Command.EP_CMD],
     Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: [Command.SET_AC_OPTIONAL_MODE],
+    Capability.SAMSUNG_CE_DRYER_LABEL_SCAN_CYCLE_PRESET: [
+        Command.SET_DRYER_LABEL_SCAN_CYCLE_PRESET,
+        Command.DELETE,
+    ],
 }
