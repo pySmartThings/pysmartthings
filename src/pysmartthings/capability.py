@@ -240,6 +240,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_DRYER_DRYING_TEMPERATURE = "samsungce.dryerDryingTemperature"
     SAMSUNG_CE_DRYER_DRYING_TIME = "samsungce.dryerDryingTime"
     SAMSUNG_CE_DRYER_FREEZE_PREVENT = "samsungce.dryerFreezePrevent"
+    SAMSUNG_CE_DRYER_LABEL_SCAN_CYCLE_PRESET = "samsungce.dryerLabelScanCyclePreset"
     SAMSUNG_CE_DRYER_OPERATING_STATE = "samsungce.dryerOperatingState"
     SAMSUNG_CE_DUST_FILTER_ALARM = "samsungce.dustFilterAlarm"
     SAMSUNG_CE_ENERGY_PLANNER = "samsungce.energyPlanner"
