@@ -264,6 +264,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_MEAT_AGING = "samsungce.meatAging"
     SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
     SAMSUNG_CE_MICROWAVE_POWER = "samsungce.microwavePower"
+    SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT = "samsungce.ovenDrainageRequirement"
     SAMSUNG_CE_OVEN_MODE = "samsungce.ovenMode"
     SAMSUNG_CE_OVEN_OPERATING_STATE = "samsungce.ovenOperatingState"
     SAMSUNG_CE_POWER_COOL = "samsungce.powerCool"
