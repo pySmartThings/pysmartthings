@@ -2882,6 +2882,41 @@
     }),
   ])
 # ---
+# name: test_fetching_devices[devices_17]
+  list([
+    dict({
+      'components': list([
+        dict({
+          'capabilities': list([
+            <Capability.BRIDGE: 'bridge'>,
+          ]),
+          'id': 'main',
+          'label': 'main',
+          'manufacturer_category': <Category.HUB: 'Hub'>,
+          'user_category': None,
+        }),
+      ]),
+      'device_id': '9d686e56-4907-4359-a131-6a3f3f51e521',
+      'device_manufacturer_code': None,
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'hub': dict({
+        'firmware_version': '',
+        'hardware_type': 'OTHER',
+        'mac_address': None,
+      }),
+      'label': 'Hub - 27" Smart Monitor M5',
+      'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
+      'name': 'SmartThings Hub',
+      'ocf': None,
+      'parent_device_id': None,
+      'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
+      'type': <DeviceType.HUB: 'HUB'>,
+      'viper': None,
+    }),
+  ])
+# ---
 # name: test_fetching_devices[devices_2]
   list([
     dict({
