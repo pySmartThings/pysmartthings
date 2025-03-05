@@ -14,6 +14,7 @@ class Command(StrEnum):
     BEEP = "beep"
     BOTH = "both"
     CALL = "call"
+    CANCEL = "cancel"
     CAPTURE = "capture"
     CHANNEL_DOWN = "channelDown"
     CHANNEL_UP = "channelUp"
@@ -33,6 +34,7 @@ class Command(StrEnum):
     ENABLE_SOUND_DETECTION = "enableSoundDetection"
     END = "end"
     EP_CMD = "epCmd"
+    ESTIMATE_OPERATION_TINE = "estimateOperationTime"
     FAN_AUTO = "fanAuto"
     FAN_CIRCULATE = "fanCirculate"
     FAN_ON = "fanOn"
@@ -63,6 +65,7 @@ class Command(StrEnum):
     REQUEST_TURN_INTO = "requestTurnInto"
     RESET_ENERGY_METER = "resetEnergyMeter"
     RESET_FILTER = "resetFilter"
+    RESUME = "resume"
     REWIND = "rewind"
     SCHEDULE_COOKING = "scheduleCooking"
     SDP_OFFER = "sdpOffer"
@@ -76,6 +79,7 @@ class Command(StrEnum):
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_DEFROST = "setDefrost"
+    SET_DELAY_END = "setDelayEnd"
     SET_DRYER_LABEL_SCAN_CYCLE_PRESET = "setDryerLabelScanCyclePreset"
     SET_DRYER_MODE = "setDryerMode"
     SET_FAN_MODE = "setFanMode"
@@ -240,6 +244,15 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.ROBOT_CLEANER_CLEANING_MODE: [Command.SET_ROBOT_CLEANER_CLEANING_MODE],
     Capability.ROBOT_CLEANER_MOVEMENT: [Command.SET_ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_TURBO_MODE: [Command.SET_ROBOT_CLEANER_TURBO_MODE],
+    Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Command.ON, Command.OFF],
+    Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: [
+        Command.START,
+        Command.CANCEL,
+        Command.PAUSE,
+        Command.RESUME,
+        Command.ESTIMATE_OPERATION_TINE,
+        Command.SET_DELAY_END,
+    ],
     Capability.SECURITY_SYSTEM: [Command.ARM_AWAY, Command.ARM_STAY, Command.DISARM],
     Capability.SOUND_DETECTION: [
         Command.ENABLE_SOUND_DETECTION,
