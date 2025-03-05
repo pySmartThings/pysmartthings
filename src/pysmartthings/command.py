@@ -80,6 +80,7 @@ class Command(StrEnum):
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_DEFROST = "setDefrost"
     SET_DELAY_END = "setDelayEnd"
+    SET_DRYER_DRY_LEVEL = "setDryerDryLevel"
     SET_DRYER_LABEL_SCAN_CYCLE_PRESET = "setDryerLabelScanCyclePreset"
     SET_DRYER_MODE = "setDryerMode"
     SET_FAN_MODE = "setFanMode"
@@ -118,6 +119,10 @@ class Command(StrEnum):
     SET_TV_CHANNEL_NAME = "setTvChannelName"
     SET_VOLUME = "setVolume"
     SET_WASHER_MODE = "setWasherMode"
+    SET_WASHER_RINSE_CYCLES = "setWasherRinseCycles"
+    SET_WASHER_SOIL_LEVEL = "setWasherSoilLevel"
+    SET_WASHER_SPIN_LEVEL = "setWasherSpinLevel"
+    SET_WASHER_WATER_TEMPERATURE = "setWasherWaterTemperature"
     SET_WIND_MODE = "setWindMode"
     SIREN = "siren"
     START = "start"
@@ -168,6 +173,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
     Capability.CONFIGURATION: [Command.CONFIGURE],
+    Capability.CUSTOM_DRYER_DRY_LEVEL: [Command.SET_DRYER_DRY_LEVEL],
+    Capability.CUSTOM_WASHER_RINSE_CYCLES: [Command.SET_WASHER_RINSE_CYCLES],
+    Capability.CUSTOM_WASHER_SOIL_LEVEL: [Command.SET_WASHER_SOIL_LEVEL],
+    Capability.CUSTOM_WASHER_SPIN_LEVEL: [Command.SET_WASHER_SPIN_LEVEL],
+    Capability.CUSTOM_WASHER_WATER_TEMPERATURE: [Command.SET_WASHER_WATER_TEMPERATURE],
     Capability.DEMAND_RESPONSE_LOAD_CONTROL: [
         Command.OVERRIDE_DEMAND_RESPONSE_LOAD_CONTROL_ACTION,
         Command.REQUEST_DEMAND_RESPONSE_LOAD_CONTROL_ACTION,
