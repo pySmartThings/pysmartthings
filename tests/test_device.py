@@ -38,6 +38,7 @@ if TYPE_CHECKING:
         "devices_14",
         "devices_15",
         "devices_16",
+        "devices_17",
         "devices_fake",
     ],
 )

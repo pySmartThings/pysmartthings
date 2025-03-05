@@ -270,7 +270,7 @@ class Hub(DataClassORJSONMixin):
 
     firmware_version: str = field(metadata=field_options(alias="firmwareVersion"))
     hardware_type: str = field(metadata=field_options(alias="hardwareType"))
-    mac_address: str = field(metadata=field_options(alias="macAddress"))
+    mac_address: str | None = field(metadata=field_options(alias="macAddress"))
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
@@ -278,7 +278,7 @@ class Hub(DataClassORJSONMixin):
         return {
             **d,
             "hardwareType": d["hubData"]["hardwareType"],
-            "macAddress": d["hubData"]["macAddress"],
+            "macAddress": d["hubData"].get("macAddress"),
         }
 
 
