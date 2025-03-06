@@ -90,14 +90,10 @@
         "id": "9e3e03b1-7f8c-3ea2-8568-6902b79b99dd"
       },
       "ocf": {
-        "ocfDeviceType": "oic.d.airconditioner",
-        "name": "Room A/C",
-        "specVersion": "core.1.1.0",
-        "verticalDomainSpecVersion": "res.1.1.0,sh.1.1.0",
+        "ocfDeviceType": "x.com.st.d.sensor.light",
         "manufacturerName": "Samsung Electronics",
-        "modelNumber": "TP6X_RAC_15K",
-        "vendorId": "DA-AC-RAC-100001",
-        "lastSignupTime": "2024-11-25T22:17:37.928118320Z",
+        "vendorId": "VD-Sensor.Light-2023",
+        "lastSignupTime": "2025-01-08T02:32:04.631093137Z",
         "transferCandidate": false,
         "additionalAuthCodeRequired": false
       },

@@ -223,18 +223,22 @@ class OCF(DataClassORJSONMixin):
     """OCF model."""
 
     device_type: str = field(metadata=field_options(alias="ocfDeviceType"))
-    name: str
     manufacturer_name: str = field(metadata=field_options(alias="manufacturerName"))
-    model_number: str = field(metadata=field_options(alias="modelNumber"))
     vendor_id: str = field(metadata=field_options(alias="vendorId"))
-    spec_version: str = field(metadata=field_options(alias="specVersion"))
-    spec_version_vertical: str = field(
-        metadata=field_options(alias="verticalDomainSpecVersion")
-    )
     last_signup: str = field(metadata=field_options(alias="lastSignupTime"))
     transfer_candidate: bool = field(metadata=field_options(alias="transferCandidate"))
     additional_auth_code_required: bool = field(
         metadata=field_options(alias="additionalAuthCodeRequired")
+    )
+    spec_version: str | None = field(
+        metadata=field_options(alias="specVersion"), default=None
+    )
+    spec_version_vertical: str | None = field(
+        metadata=field_options(alias="verticalDomainSpecVersion"), default=None
+    )
+    name: str | None = None
+    model_number: str | None = field(
+        metadata=field_options(alias="modelNumber"), default=None
     )
     platform_version: str | None = field(
         metadata=field_options(alias="platformVersion"), default=None
