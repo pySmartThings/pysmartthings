@@ -22,6 +22,7 @@ class Capability(StrEnum):
     AUDIO_TRACK_DATA = "audioTrackData"
     AUDIO_VOLUME = "audioVolume"
     BATTERY = "battery"
+    BATTERY_LEVEL = "batteryLevel"
     BODY_MASS_INDEX_MEASUREMENT = "bodyMassIndexMeasurement"
     BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
     BRIDGE = "bridge"
@@ -350,6 +351,7 @@ class Capability(StrEnum):
     SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF = "samsungvd.supportsPowerOnByOcf"
     SAMSUNG_VD_THING_STATUS = "samsungvd.thingStatus"
 
+    LEGENDABSOLUTE60149_ATMOS_PRESSURE = "legendabsolute60149.atmosPressure"
     LEGENDABSOLUTE60149_CREATE_DEVICE2 = "legendabsolute60149.createDevice2"
     LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD = "legendabsolute60149.currentTimePeriod"
     LEGENDABSOLUTE60149_CURRENT_TWILIGHT = "legendabsolute60149.currentTwilight"
