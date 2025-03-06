@@ -4,11 +4,12 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass, field
-from typing import TYPE_CHECKING, Any, Callable, Self
+from typing import TYPE_CHECKING, Any, Callable, Self, cast
 
 from aiohttp import ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from aiosseclient import aiosseclient
+import orjson
 from yarl import URL
 
 from .const import API_BASE, API_VERSION, LOGGER
@@ -183,13 +184,13 @@ class SmartThings:
         resp = await self._get(f"locations/{location_id}/rooms/{room_id}")
         return Room.from_json(resp)
 
-    async def get_devices(
+    async def _get_devices(
         self,
         *,
         capabilities: list[Capability] | None = None,
         location_ids: list[str] | None = None,
         device_ids: list[str] | None = None,
-    ) -> list[Device]:
+    ) -> str:
         """Retrieve SmartThings devices."""
         params = {}
         if capabilities:
@@ -198,13 +199,39 @@ class SmartThings:
             params["locationId"] = ",".join(location_ids)
         if device_ids:
             params["deviceId"] = ",".join(device_ids)
-        resp = await self._get("devices", params=params)
+        return await self._get("devices", params=params)
+
+    async def get_devices(
+        self,
+        *,
+        capabilities: list[Capability] | None = None,
+        location_ids: list[str] | None = None,
+        device_ids: list[str] | None = None,
+    ) -> list[Device]:
+        """Retrieve SmartThings devices."""
+        resp = await self._get_devices(
+            capabilities=capabilities,
+            location_ids=location_ids,
+            device_ids=device_ids,
+        )
         return DeviceResponse.from_json(resp).items
+
+    async def get_raw_devices(self) -> dict[str, Any]:
+        """Retrieve SmartThings devices."""
+        return cast(dict[str, Any], orjson.loads(await self._get_devices()))  # pylint: disable=no-member
+
+    async def _get_device(self, device_id: str) -> str:
+        """Retrieve a device with the specified ID."""
+        return await self._get(f"devices/{device_id}")
 
     async def get_device(self, device_id: str) -> Device:
         """Retrieve a device with the specified ID."""
-        resp = await self._get(f"devices/{device_id}")
+        resp = await self._get_device(device_id)
         return Device.from_json(resp)
+
+    async def get_raw_device(self, device_id: str) -> dict[str, Any]:
+        """Retrieve a device with the specified ID."""
+        return cast(dict[str, Any], orjson.loads(await self._get_device(device_id)))  # pylint: disable=no-member
 
     async def get_scenes(self, location_id: str | None = None) -> list[Scene]:
         """Retrieve SmartThings scenes."""
@@ -218,12 +245,21 @@ class SmartThings:
         """Execute the scene with the specified ID."""
         await self._post(f"scenes/{scene_id}/execute")
 
+    async def _get_device_status(self, device_id: str) -> str:
+        """Retrieve the status of a device."""
+        return await self._get(f"devices/{device_id}/status")
+
     async def get_device_status(
         self, device_id: str
     ) -> dict[str, dict[Capability | str, dict[Attribute | str, Status]]]:
         """Retrieve the status of a device."""
-        resp = await self._get(f"devices/{device_id}/status")
+        resp = await self._get_device_status(device_id)
         return DeviceStatus.from_json(resp).components
+
+    async def get_raw_device_status(self, device_id: str) -> dict[str, Any]:
+        """Retrieve the status of a device."""
+        resp = await self._get_device_status(device_id)
+        return cast(dict[str, Any], orjson.loads(resp))  # pylint: disable=no-member
 
     async def get_capability(self, capability: Capability | str) -> str:
         """Retrieve the capability schema."""
