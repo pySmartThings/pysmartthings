@@ -19,6 +19,7 @@ class Capability(StrEnum):
     AUDIO_MUTE = "audioMute"
     AUDIO_NOTIFICATION = "audioNotification"
     AUDIO_STREAM = "audioStream"
+    AUDIO_TRACK_ADDRESSING = "audioTrackAddressing"
     AUDIO_TRACK_DATA = "audioTrackData"
     AUDIO_VOLUME = "audioVolume"
     BATTERY = "battery"
@@ -273,7 +274,12 @@ class Capability(StrEnum):
     SAMSUNG_CE_POWER_COOL = "samsungce.powerCool"
     SAMSUNG_CE_POWER_FREEZE = "samsungce.powerFreeze"
     SAMSUNG_CE_QUICK_CONTROL = "samsungce.quickControl"
+    SAMSUNG_CE_ROBOT_CLEANER_AVP_REGISTRATION = "samsungce.robotCleanerAvpRegistration"
     SAMSUNG_CE_ROBOT_CLEANER_CLEANING_MODE = "samsungce.robotCleanerCleaningMode"
+    SAMSUNG_CE_ROBOT_CLEANER_DRIVING_MODE = "samsungce.robotCleanerDrivingMode"
+    SAMSUNG_CE_ROBOT_CLEANER_MONITORING_AUTOMATION = (
+        "samsungce.robotCleanerMonitoringAutomation"
+    )
     SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE = "samsungce.robotCleanerOperatingState"
     SAMSUNG_CE_RUNESTONE_HOME_CONTEXT = "samsungce.runestoneHomeContext"
     SAMSUNG_CE_SABBATH_MODE = "samsungce.sabbathMode"
@@ -285,6 +291,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
     SAMSUNG_CE_SOFTENER_STATE = "samsungce.softenerState"
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
+    SAMSUNG_CE_SOUND_DETECTION_SENSITIVITY = "samsungce.soundDetectionSensitivity"
     SAMSUNG_CE_STEAM_CLOSET_AUTO_CYCLE_LINK = "samsungce.steamClosetAutoCycleLink"
     SAMSUNG_CE_STEAM_CLOSET_CYCLE = "samsungce.steamClosetCycle"
     SAMSUNG_CE_STEAM_CLOSET_CYCLE_PRESET = "samsungce.steamClosetCyclePreset"
