@@ -78,6 +78,7 @@ class Command(StrEnum):
     SET_COLOR = "setColor"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
+    SET_COURSE = "setCourse"
     SET_DEFROST = "setDefrost"
     SET_DELAY_END = "setDelayEnd"
     SET_DRYER_DRY_LEVEL = "setDryerDryLevel"
@@ -118,6 +119,7 @@ class Command(StrEnum):
     SET_TV_CHANNEL = "setTvChannel"
     SET_TV_CHANNEL_NAME = "setTvChannelName"
     SET_VOLUME = "setVolume"
+    SET_WASHER_CYCLE = "setWasherCycle"
     SET_WASHER_MODE = "setWasherMode"
     SET_WASHER_RINSE_CYCLES = "setWasherRinseCycles"
     SET_WASHER_SOIL_LEVEL = "setWasherSoilLevel"
@@ -174,6 +176,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
     Capability.CONFIGURATION: [Command.CONFIGURE],
     Capability.CUSTOM_DRYER_DRY_LEVEL: [Command.SET_DRYER_DRY_LEVEL],
+    Capability.CUSTOM_SUPPORTED_OPTIONS: [Command.SET_COURSE],
     Capability.CUSTOM_WASHER_RINSE_CYCLES: [Command.SET_WASHER_RINSE_CYCLES],
     Capability.CUSTOM_WASHER_SOIL_LEVEL: [Command.SET_WASHER_SOIL_LEVEL],
     Capability.CUSTOM_WASHER_SPIN_LEVEL: [Command.SET_WASHER_SPIN_LEVEL],
@@ -255,12 +258,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.ROBOT_CLEANER_MOVEMENT: [Command.SET_ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_TURBO_MODE: [Command.SET_ROBOT_CLEANER_TURBO_MODE],
     Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Command.ON, Command.OFF],
+    Capability.SAMSUNG_CE_WASHER_CYCLE: [Command.SET_WASHER_CYCLE],
     Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: [
         Command.START,
         Command.CANCEL,
         Command.PAUSE,
         Command.RESUME,
-        Command.ESTIMATE_OPERATION_TINE,
+        Command.ESTIMATE_OPERATION_TIME,
         Command.SET_DELAY_END,
     ],
     Capability.SECURITY_SYSTEM: [Command.ARM_AWAY, Command.ARM_STAY, Command.DISARM],
