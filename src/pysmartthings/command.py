@@ -34,7 +34,7 @@ class Command(StrEnum):
     ENABLE_SOUND_DETECTION = "enableSoundDetection"
     END = "end"
     EP_CMD = "epCmd"
-    ESTIMATE_OPERATION_TINE = "estimateOperationTime"
+    ESTIMATE_OPERATION_TIME = "estimateOperationTime"
     FAN_AUTO = "fanAuto"
     FAN_CIRCULATE = "fanCirculate"
     FAN_ON = "fanOn"
