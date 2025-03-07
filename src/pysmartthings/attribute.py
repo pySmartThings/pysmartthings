@@ -12,6 +12,7 @@ class Attribute(StrEnum):
     AC_TROPICAL_NIGHT_MODE_LEVEL = "acTropicalNightModeLevel"
     ACCELERATION = "acceleration"
     ACCURACY = "accuracy"
+    ACM_MODE = "acmMode"
     ACTIVATED = "activated"
     ACTIVITY = "activity"
     ADD_RINSE = "addRinse"
@@ -27,7 +28,11 @@ class Attribute(StrEnum):
     ALTITUDE_ACCURACY = "altitudeAccuracy"
     ALWAYS_ON = "alwaysOn"
     AMOUNT = "amount"
+    APP_NAME = "appName"
     APP_VERSION = "appVersion"
+    AREA = "area"
+    AREA_IDS = "areaIds"
+    AREA_INFO = "areaInfo"
     ASSOCIATION_GROUP_FOUR = "associationGroupFour"
     ASSOCIATION_GROUP_THREE = "associationGroupThree"
     ASSOCIATION_GROUP_TWO = "associationGroupTwo"
@@ -42,8 +47,11 @@ class Attribute(StrEnum):
     AUTOMATIC_EXECUTION_SETTING = "automaticExecutionSetting"
     AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
     AVAILABLE_AC_MODES = "availableAcModes"
+    AVAILABLE_CUSTOM_BUTTONS = "availableCustomButtons"
     AVAILABLE_FAN_OSCILLATION_MODES = "availableFanOscillationModes"
+    AVAILABLE_FANSPEED_BUTTONS = "availableFanspeedButtons"
     AVAILABLE_MODULES = "availableModules"
+    AVAILABLE_POWER_TOGGLE_BUTTONS = "availablePowerToggleButtons"
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
     BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
@@ -54,9 +62,11 @@ class Attribute(StrEnum):
     BABY_DETERGENT_TYPE = "babyDetergentType"
     BASIC_HTML = "basicHtml"
     BASIC_HTML_DISABLE = "basicHtmlDisable"
+    BATON_TOUCH = "batonTouch"
     BATTERY = "battery"
     BEEP = "beep"
     BINARY_ID = "binaryId"
+    BLOCKING_STATUS = "blockingStatus"
     BMI_MEASUREMENT = "bmiMeasurement"
     BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
     BRIGHTNESS_INTENSITY = "brightnessIntensity"
@@ -72,9 +82,11 @@ class Attribute(StrEnum):
     CARBON_MONOXIDE_LEVEL = "carbonMonoxideLevel"
     CATEGORY = "category"
     CHANNEL = "channel"
+    CHARGING_STATUS = "chargingStatus"
     CHECK_INTERVAL = "checkInterval"
     CHIME = "chime"
     CIRCADIAN = "circadian"
+    CLEANED_EXTENT = "cleanedExtent"
     CLEANING_MODE = "cleaningMode"
     CLEANING_STEP = "cleaningStep"
     CLIP = "clip"
@@ -100,10 +112,12 @@ class Attribute(StrEnum):
     COOKTOP_OPERATING_STATE = "cooktopOperatingState"
     COOLING_SETPOINT = "coolingSetpoint"
     COOLING_SETPOINT_RANGE = "coolingSetpointRange"
+    COORDINATES = "coordinates"
     COURSE = "course"
     CREATE_DEVICE = "createDevice"
     CURRENT = "current"
     CURRENT_TIME_PERIOD = "currentTimePeriod"
+    CURRENT_TRACK = "currentTrack"
     CURRENT_TWILIGHT = "currentTwilight"
     CURRENT_VALUE = "currentValue"
     CURRENT_VERSION = "currentVersion"
@@ -111,6 +125,7 @@ class Attribute(StrEnum):
     DASH_BOARD_VALUE = "dashBoardValue"
     DATA = "data"
     DAY_LENGTH = "dayLength"
+    DAY_OF_WEEK = "dayOfWeek"
     DEFAULT_OPERATION_TIME = "defaultOperationTime"
     DEFAULT_OVEN_MODE = "defaultOvenMode"
     DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
@@ -236,6 +251,7 @@ class Attribute(StrEnum):
     GET_GROUPS = "getGroups"
     GROUP_ID = "groupId"
     GROUP_MUTE = "groupMute"
+    GROUP_NAME = "groupName"
     GROUP_PRIMARY_DEVICE_ID = "groupPrimaryDeviceId"
     GROUP_ROLE = "groupRole"
     GROUP_VOLUME = "groupVolume"
@@ -269,6 +285,8 @@ class Attribute(StrEnum):
     INFRARED_LEVEL = "infraredLevel"
     INITIAL_AMOUNT = "initialAmount"
     INPUT_SOURCE = "inputSource"
+    INTERVAL = "interval"
+    INVISIBLE_FEATURES = "invisibleFeatures"
     IS_MAP_BASED_OPERATION_AVAILABLE = "isMapBasedOperationAvailable"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     LAST_SENSING_LEVEL = "lastSensingLevel"
@@ -306,10 +324,14 @@ class Attribute(StrEnum):
     LONGITUDE = "longitude"
     LQI = "lqi"
     MACHINE_STATE = "machineState"
+    MAP_ID = "mapId"
+    MAPS = "maps"
+    MASTER_DI = "masterDi"
     MASTER_NAME = "masterName"
     MAX_CODE_LENGTH = "maxCodeLength"
     MAX_CODES = "maxCodes"
     MAX_NUMBER_OF_PRESETS = "maxNumberOfPresets"
+    MAX_NUMBER_OF_RESERVATIONS = "maxNumberOfReservations"
     MAXIMUM_SETPOINT = "maximumSetpoint"
     MAXTEMP = "maxtemp"
     MEDIA_OUTPUT_SUPPORTED = "mediaOutputSupported"
@@ -339,11 +361,15 @@ class Attribute(StrEnum):
     MODEL_CODE = "modelCode"
     MODEL_NAME = "modelName"
     MOLD_HEALTH_CONCERN = "moldHealthConcern"
+    MONITORING_STATUS = "monitoringStatus"
     MONTHLY_USAGE = "monthlyUsage"
     MOTION = "motion"
+    MOTOR_FILTER_RESET_TYPE = "motorFilterResetType"
+    MOTOR_FILTER_STATUS = "motorFilterStatus"
     MUTE = "mute"
     DEVICE_NAME = "n"
     NAME = "name"
+    NEAR_OBJECT = "nearObject"
     NEUTRAL_DETERGENT_ALARM_ENABLED = "neutralDetergentAlarmEnabled"
     NEUTRAL_DETERGENT_DOSAGE = "neutralDetergentDosage"
     NEUTRAL_DETERGENT_INITIAL_AMOUNT = "neutralDetergentInitialAmount"
@@ -356,6 +382,7 @@ class Attribute(StrEnum):
     NOTIFICATION_TEMPLATE_I_D = "notificationTemplateID"
     NUMBER_OF_BUTTONS = "numberOfButtons"
     NUMBER_OF_CONNECTED_DEVICES = "numberOfConnectedDevices"
+    OBSOLETED = "obsoleted"
     OCCUPANCY = "occupancy"
     OCF_RESOURCE_UPDATED_TIME = "ocfResourceUpdatedTime"
     OCF_RESOURCE_VERSION = "ocfResourceVersion"
@@ -364,6 +391,7 @@ class Attribute(StrEnum):
     OPERATION_MODE = "operationMode"
     OPERATION_TIME = "operationTime"
     ORDER_THRESHOLD = "orderThreshold"
+    ORIGINATOR = "originator"
     ORIGINS = "origins"
     OTN_D_U_I_D = "otnDUID"
     OUT_OF_SYNC_CHANGES = "outOfSyncChanges"
@@ -376,6 +404,9 @@ class Attribute(StrEnum):
     OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
     PH = "pH"
     PANIC_ALARM = "panicAlarm"
+    PATROL_STATUS = "patrolStatus"
+    PAYLOAD = "payload"
+    PERCENT = "percent"
     PERIODIC_SENSING = "periodicSensing"
     PERIODIC_SENSING_INTERVAL = "periodicSensingInterval"
     PERIODIC_SENSING_STATUS = "periodicSensingStatus"
@@ -386,6 +417,7 @@ class Attribute(StrEnum):
     PLAYBACK_REPEAT_MODE = "playbackRepeatMode"
     PLAYBACK_SHUFFLE = "playbackShuffle"
     PLAYBACK_STATUS = "playbackStatus"
+    PLAYLIST = "playlist"
     POWER = "power"
     POWER_CONSUMPTION = "powerConsumption"
     POWER_LEVEL = "powerLevel"
@@ -433,7 +465,9 @@ class Attribute(StrEnum):
     REMAINING_TIME_STR = "remainingTimeStr"
     REMOTE_CONTROL_ENABLED = "remoteControlEnabled"
     REMOTELESS_SUPPORTED = "remotelessSupported"
+    REPEAT_MODE = "repeatMode"
     REPEAT_MODE_ENABLED = "repeatModeEnabled"
+    REPORT = "report"
     REPORT_RAW_DATA = "reportRawData"
     REPORT_STATE_PERIOD = "reportStatePeriod"
     REPORT_STATE_REALTIME = "reportStateRealtime"
@@ -441,6 +475,8 @@ class Attribute(StrEnum):
     REPRESENTATIVE_COMPONENT = "representativeComponent"
     REQUEST_ID = "requestId"
     RESERVABLE = "reservable"
+    RESERVATIONS = "reservations"
+    RESOLUTION = "resolution"
     RESULT = "result"
     RINSE_MODE = "rinseMode"
     RINSE_PLUS = "rinsePlus"
@@ -468,6 +504,7 @@ class Attribute(StrEnum):
     SENSOR_STATUS = "sensorStatus"
     SERIAL_NUMBER = "serialNumber"
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
+    SETTABLE = "settable"
     SETTABLE_MAX_FAN_SPEED = "settableMaxFanSpeed"
     SETTABLE_MIN_FAN_SPEED = "settableMinFanSpeed"
     SETTINGS = "settings"
@@ -484,6 +521,7 @@ class Attribute(StrEnum):
     SOUND_DETECTION_STATE = "soundDetectionState"
     SOUND_MODE = "soundMode"
     SOUND_PRESSURE_LEVEL = "soundPressureLevel"
+    SOURCE = "source"
     SPECIALIZED_FUNCTION_CLASSIFICATION = "specializedFunctionClassification"
     SPECIFICATION = "specification"
     SPEED = "speed"
@@ -503,6 +541,7 @@ class Attribute(StrEnum):
     STEAM_CLOSET_MACHINE_STATE = "steamClosetMachineState"
     STEAM_CLOSET_WRINKLE_PREVENT = "steamClosetWrinklePrevent"
     STEAM_SOAK = "steamSoak"
+    STEREO_TYPE = "stereoType"
     STORM_WASH = "stormWash"
     STREAM = "stream"
     STREAM_CONTROL = "streamControl"
@@ -534,6 +573,7 @@ class Attribute(StrEnum):
     SUPPORTED_AUTOMATIC_EXECUTION_SETTING = "supportedAutomaticExecutionSetting"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
     SUPPORTED_BUTTON_VALUES = "supportedButtonValues"
+    SUPPORTED_CATEGORIES = "supportedCategories"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
     SUPPORTED_COMMANDS = "supportedCommands"
     SUPPORTED_CONTEXTS = "supportedContexts"
@@ -568,6 +608,7 @@ class Attribute(StrEnum):
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
     SUPPORTED_MEAT_TYPES = "supportedMeatTypes"
     SUPPORTED_MENUS = "supportedMenus"
+    SUPPORTED_MIMES = "supportedMimes"
     SUPPORTED_MODE_MAP = "supportedModeMap"
     SUPPORTED_MODES = "supportedModes"
     SUPPORTED_OPERATING_STATE = "supportedOperatingState"
@@ -585,6 +626,7 @@ class Attribute(StrEnum):
     SUPPORTED_SOUND_MODES_MAP = "supportedSoundModesMap"
     SUPPORTED_SOUND_TYPES = "supportedSoundTypes"
     SUPPORTED_SPIN_SPEEDS = "supportedSpinSpeeds"
+    SUPPORTED_STATUS = "supportedStatus"
     SUPPORTED_STEAM_CLOSET_JOB_STATE = "supportedSteamClosetJobState"
     SUPPORTED_STEAM_CLOSET_MACHINE_STATE = "supportedSteamClosetMachineState"
     SUPPORTED_TEMPERATURE_LEVELS = "supportedTemperatureLevels"
@@ -628,6 +670,8 @@ class Attribute(StrEnum):
     TIMED_CLEAN_DURATION = "timedCleanDuration"
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
     TOTAL_TIME = "totalTime"
+    TRACK_DATA = "trackData"
+    TRACK_DESCRIPTION = "trackDescription"
     TS_ID = "tsId"
     TURN_INFO = "turnInfo"
     TV_CHANNEL = "tvChannel"
@@ -656,6 +700,7 @@ class Attribute(StrEnum):
     VERY_FINE_DUST_HEALTH_CONCERN = "veryFineDustHealthConcern"
     VERY_FINE_DUST_LEVEL = "veryFineDustLevel"
     VENDOR_ID = "vid"
+    VISIBLE_FEATURES = "visibleFeatures"
     VOLTAGE = "voltage"
     VOLUME = "volume"
     W_SPEED = "wSpeed"
@@ -683,6 +728,7 @@ class Attribute(StrEnum):
     WATER_LEVEL = "waterLevel"
     WATER_USAGE_MAX = "waterUsageMax"
     WATER_VALVE = "waterValve"
+    WAYPOINTS = "waypoints"
     WEIGHT = "weight"
     WELCOME_MESSAGE = "welcomeMessage"
     WIFI_UPDATE_SUPPORT = "wifiUpdateSupport"
@@ -784,6 +830,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_FAN_OSCILLATION_MODES,
     ],
     Capability.FAN_SPEED: [Attribute.FAN_SPEED],
+    Capability.FAN_SPEED_PERCENT: [Attribute.PERCENT],
     Capability.FILTER_STATE: [
         Attribute.FILTER_LIFE_REMAINING,
         Attribute.SUPPORTED_FILTER_COMMANDS,
@@ -891,6 +938,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.MOLD_HEALTH_CONCERN: [Attribute.MOLD_HEALTH_CONCERN],
     Capability.MOMENTARY: [],
     Capability.MOTION_SENSOR: [Attribute.MOTION],
+    Capability.MUSIC_PLAYER: [
+        Attribute.LEVEL,
+        Attribute.MUTE,
+        Attribute.STATUS,
+        Attribute.TRACK_DATA,
+        Attribute.TRACK_DESCRIPTION,
+    ],
     Capability.NETWORK_METER: [Attribute.DOWNLINK_SPEED, Attribute.UPLINK_SPEED],
     Capability.NITROGEN_DIOXIDE_HEALTH_CONCERN: [
         Attribute.NITROGEN_DIOXIDE_HEALTH_CONCERN
@@ -987,6 +1041,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SOUND_PRESSURE_LEVEL: [Attribute.SOUND_PRESSURE_LEVEL],
     Capability.SOUND_SENSOR: [Attribute.SOUND],
+    Capability.SPEECH_SYNTHESIS: [],
+    Capability.STATELESS_CUSTOM_BUTTON: [Attribute.AVAILABLE_CUSTOM_BUTTONS],
+    Capability.STATELESS_FANSPEED_BUTTON: [Attribute.AVAILABLE_FANSPEED_BUTTONS],
+    Capability.STATELESS_POWER_TOGGLE_BUTTON: [
+        Attribute.AVAILABLE_POWER_TOGGLE_BUTTONS
+    ],
     Capability.SWITCH: [Attribute.SWITCH],
     Capability.SWITCH_LEVEL: [Attribute.LEVEL, Attribute.LEVEL_RANGE],
     Capability.TAMPER_ALERT: [Attribute.TAMPER],
@@ -1380,6 +1440,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_LIST,
         Attribute.ZONE_BOOSTER,
     ],
+    Capability.SAMSUNG_CE_DO_NOT_DISTURB: [
+        Attribute.ACTIVATED,
+        Attribute.DAY_OF_WEEK,
+        Attribute.END_TIME,
+        Attribute.REPEAT_MODE,
+        Attribute.SETTABLE,
+        Attribute.START_TIME,
+    ],
     Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: [Attribute.STATUS],
     Capability.SAMSUNG_CE_DOOR_STATE: [Attribute.DOOR_STATE],
     Capability.SAMSUNG_CE_DRIVER_STATE: [Attribute.DRIVER_STATE],
@@ -1503,6 +1571,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.POWER_LEVEL,
         Attribute.SUPPORTED_POWER_LEVELS,
     ],
+    Capability.SAMSUNG_CE_MUSIC_PLAYLIST: [Attribute.CURRENT_TRACK, Attribute.PLAYLIST],
     Capability.SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT: [Attribute.DRAINAGE_REQUIREMENT],
     Capability.SAMSUNG_CE_OVEN_MODE: [
         Attribute.OVEN_MODE,
@@ -1515,13 +1584,20 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OVEN_JOB_STATE,
         Attribute.PROGRESS,
     ],
+    Capability.SAMSUNG_CE_POWER_CONSUMPTION_RECORD: [Attribute.PAYLOAD],
     Capability.SAMSUNG_CE_POWER_COOL: [Attribute.ACTIVATED],
     Capability.SAMSUNG_CE_POWER_FREEZE: [Attribute.ACTIVATED],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [Attribute.VERSION],
+    Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [
+        Attribute.BATTERY,
+        Attribute.CHARGING_STATUS,
+        Attribute.RESOLUTION,
+    ],
     Capability.SAMSUNG_CE_REMOTE_MANAGEMENT_DATA: [
         Attribute.REPORT_RAW_DATA,
         Attribute.VERSION,
     ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_AUDIO_CLIP: [Attribute.ENABLED],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_AVP_REGISTRATION: [
         Attribute.REGISTRATION_STATUS
     ],
@@ -1535,7 +1611,27 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DRIVING_MODE,
         Attribute.SUPPORTED_DRIVING_MODES,
     ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_DUST_BAG: [
+        Attribute.STATUS,
+        Attribute.SUPPORTED_STATUS,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_FEATURE_VISIBILITY: [
+        Attribute.INVISIBLE_FEATURES,
+        Attribute.VISIBLE_FEATURES,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_AREA_INFO: [Attribute.AREA_INFO],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_CLEANING_INFO: [
+        Attribute.AREA,
+        Attribute.CLEANED_EXTENT,
+        Attribute.NEAR_OBJECT,
+        Attribute.REMAINING_TIME,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST: [Attribute.MAPS],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MONITORING_AUTOMATION: [],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_MOTOR_FILTER: [
+        Attribute.MOTOR_FILTER_RESET_TYPE,
+        Attribute.MOTOR_FILTER_STATUS,
+    ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE: [
         Attribute.CLEANING_STEP,
         Attribute.HOMING_REASON,
@@ -1543,6 +1639,48 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OPERATING_STATE,
         Attribute.SUPPORTED_OPERATING_STATE,
     ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_PATROL: [
+        Attribute.AREA_IDS,
+        Attribute.BLOCKING_STATUS,
+        Attribute.DAY_OF_WEEK,
+        Attribute.ENABLED,
+        Attribute.END_TIME,
+        Attribute.INTERVAL,
+        Attribute.OBSOLETED,
+        Attribute.PATROL_STATUS,
+        Attribute.START_TIME,
+        Attribute.WAYPOINTS,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_PET_CLEANING_SCHEDULE: [
+        Attribute.AREA_IDS,
+        Attribute.DAY_OF_WEEK,
+        Attribute.ENABLED,
+        Attribute.MAP_ID,
+        Attribute.OBSOLETED,
+        Attribute.ORIGINATOR,
+        Attribute.START_TIME,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_PET_MONITOR: [
+        Attribute.AREA_IDS,
+        Attribute.BLOCKING_STATUS,
+        Attribute.DAY_OF_WEEK,
+        Attribute.ENABLED,
+        Attribute.END_TIME,
+        Attribute.INTERVAL,
+        Attribute.MAP_ID,
+        Attribute.MONITORING_STATUS,
+        Attribute.OBSOLETED,
+        Attribute.ORIGINATOR,
+        Attribute.START_TIME,
+        Attribute.WAYPOINTS,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_PET_MONITOR_REPORT: [Attribute.REPORT],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_RELAY_CLEANING: [Attribute.BATON_TOUCH],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_RESERVATION: [
+        Attribute.MAX_NUMBER_OF_RESERVATIONS,
+        Attribute.RESERVATIONS,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_WELCOME: [Attribute.COORDINATES],
     Capability.SAMSUNG_CE_RUNESTONE_HOME_CONTEXT: [Attribute.SUPPORTED_CONTEXTS],
     Capability.SAMSUNG_CE_SABBATH_MODE: [Attribute.STATUS, Attribute.SUPPORTED_ACTIONS],
     Capability.SAMSUNG_CE_SAC_DISPLAY_CONDITION: [Attribute.SWITCH],
@@ -1727,8 +1865,30 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTS_POWER_ON_BY_OCF
     ],
     Capability.SAMSUNG_VD_THING_STATUS: [Attribute.STATUS, Attribute.UPDATED_TIME],
+    Capability.SAMSUNG_IM_ANNOUNCEMENT: [
+        Attribute.ENABLE_STATE,
+        Attribute.SUPPORTED_CATEGORIES,
+        Attribute.SUPPORTED_MIMES,
+        Attribute.SUPPORTED_TYPES,
+    ],
+    Capability.SAMSUNG_IM_BIXBY_CONTENT: [Attribute.SUPPORTED_MODES],
     Capability.SAMSUNG_IM_FIXED_FIND_NODE: [],
     Capability.SAMSUNG_IM_HUE_SYNC_MODE: [Attribute.MODE],
+    Capability.SAMSUNG_IM_NETWORK_AUDIO_GROUP_INFO: [
+        Attribute.ACM_MODE,
+        Attribute.CHANNEL,
+        Attribute.GROUP_NAME,
+        Attribute.MASTER_DI,
+        Attribute.MASTER_NAME,
+        Attribute.ROLE,
+        Attribute.STATUS,
+        Attribute.STEREO_TYPE,
+    ],
+    Capability.SAMSUNG_IM_NETWORK_AUDIO_MODE: [Attribute.MODE],
+    Capability.SAMSUNG_IM_NETWORK_AUDIO_TRACK_DATA: [
+        Attribute.APP_NAME,
+        Attribute.SOURCE,
+    ],
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
     Capability.HCA_WASHER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
     Capability.ABATEACHIEVE62503_STATELESS_AUDIO_MUTE: [],
