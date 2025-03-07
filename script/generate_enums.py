@@ -9,6 +9,27 @@ from typing import Any
 ORDER = ["standard", "custom", "samsungce", "samsungvd", "samsungim"]
 
 
+def prepare_capability_name(capability_name: str) -> str:
+    """Prepare capability name."""
+    name = re.sub(r"(?<!^)(?=[A-Z])", "_", capability_name).upper()
+    for k, v in {
+        ".": "_",
+        "SAMSUNGCE": "SAMSUNG_CE",
+        "SAMSUNGVD": "SAMSUNG_VD",
+        "SAMSUNGIM": "SAMSUNG_IM",
+        "P_H_": "PH_",
+        "ZW_MULTI": "ZWAVE_MULTI",
+        "CUSTOM_SOUNDMODE": "CUSTOM_SOUND_MODE",
+        "CUSTOM_TVSEARCH": "CUSTOM_TV_SEARCH",
+        "CUSTOM_PICTUREMODE": "CUSTOM_PICTURE_MODE",
+        "CUSTOM_LAUNCHAPP": "CUSTOM_LAUNCH_APP",
+        "SYNTHETIC_LIGHTING_EFFECT_CIRCADIAN": "SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT",
+        "SYNTHETIC_LIGHTING_EFFECT_FADE": "SYNTHETIC_FADE_LIGHTNING_EFFECT",
+    }.items():
+        name = name.replace(k, v)
+    return name
+
+
 def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
     """Run the script."""
     attributes = set()
@@ -54,20 +75,7 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
     for ns in ORDER:
         for capability in sorted(capability_attributes[ns]):
             attributes = capability_attributes[ns][capability]
-            capability_name = (
-                re.sub(r"(?<!^)(?=[A-Z])", "_", capability)
-                .upper()
-                .replace(".", "_")
-                .replace("SAMSUNGCE", "SAMSUNG_CE")
-                .replace("SAMSUNGVD", "SAMSUNG_VD")
-                .replace("SAMSUNGIM", "SAMSUNG_IM")
-                .replace("P_H_", "PH_")
-                .replace("ZW_MULTI", "ZWAVE_MULTI")
-                .replace("CUSTOM_SOUNDMODE", "CUSTOM_SOUND_MODE")
-                .replace("CUSTOM_TVSEARCH", "CUSTOM_TV_SEARCH")
-                .replace("CUSTOM_PICTUREMODE", "CUSTOM_PICTURE_MODE")
-                .replace("CUSTOM_LAUNCHAPP", "CUSTOM_LAUNCH_APP")
-            )
+            capability_name = prepare_capability_name(capability)
             file += f"    Capability.{capability_name}: ["
             first = True
             for attribute in sorted(attributes):
@@ -86,20 +94,7 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
         if ns in ORDER:
             continue
         for cap, attributes in capability.items():
-            capability_name = (
-                re.sub(r"(?<!^)(?=[A-Z])", "_", cap)
-                .upper()
-                .replace(".", "_")
-                .replace("SAMSUNGCE", "SAMSUNG_CE")
-                .replace("SAMSUNGVD", "SAMSUNG_VD")
-                .replace(
-                    "SYNTHETIC_LIGHTING_EFFECT_CIRCADIAN",
-                    "SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT",
-                )
-                .replace(
-                    "SYNTHETIC_LIGHTING_EFFECT_FADE", "SYNTHETIC_FADE_LIGHTNING_EFFECT"
-                )
-            )
+            capability_name = prepare_capability_name(cap)
             file += f"    Capability.{capability_name}: ["
             first = True
             for attribute in sorted(attributes):
