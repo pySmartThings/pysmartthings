@@ -1,0 +1,298 @@
+{
+      "components": {
+        "main": {
+          "samsungce.unavailableCapabilities": {
+            "unavailableCommands": {
+              "value": null
+            }
+          },
+          "samsungce.alwaysOnSensing": {
+            "origins": {
+              "value": [],
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            },
+            "alwaysOn": {
+              "value": "off",
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            }
+          },
+          "refresh": {},
+          "custom.thermostatSetpointControl": {
+            "minimumSetpoint": {
+              "value": 8,
+              "unit": "C",
+              "timestamp": "2025-03-07T05:06:27.498Z"
+            },
+            "maximumSetpoint": {
+              "value": 30,
+              "unit": "C",
+              "timestamp": "2025-03-07T05:06:27.498Z"
+            }
+          },
+          "airConditionerMode": {
+            "availableAcModes": {
+              "value": null
+            },
+            "supportedAcModes": {
+              "value": [
+                "auto",
+                "cool",
+                "dry",
+                "wind",
+                "heat"
+              ],
+              "timestamp": "2025-03-07T07:40:57.236Z"
+            },
+            "airConditionerMode": {
+              "value": "heat",
+              "timestamp": "2025-03-07T07:40:57.236Z"
+            }
+          },
+          "execute": {
+            "data": {
+              "value": {
+                "payload": {
+                  "rt": [
+                    "oic.r.temperature"
+                  ],
+                  "if": [
+                    "oic.if.baseline",
+                    "oic.if.s"
+                  ],
+                  "range": [
+                    8,
+                    30
+                  ],
+                  "units": "C",
+                  "temperature": 20.0
+                }
+              },
+              "data": {
+                "href": "/temperature/current/0"
+              },
+              "timestamp": "2025-02-03T06:05:54.925Z"
+            }
+          },
+          "samsungce.deviceIdentification": {
+            "micomAssayCode": {
+              "value": null
+            },
+            "modelName": {
+              "value": null
+            },
+            "serialNumber": {
+              "value": null
+            },
+            "serialNumberExtra": {
+              "value": null
+            },
+            "modelClassificationCode": {
+              "value": null
+            },
+            "description": {
+              "value": null
+            },
+            "releaseYear": {
+              "value": 21,
+              "timestamp": "2024-10-24T07:46:24.038Z"
+            },
+            "binaryId": {
+              "value": "ARA-WW-TP2-21-OT9700",
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            }
+          },
+          "custom.airConditionerOptionalMode": {
+            "supportedAcOptionalMode": {
+              "value": [
+                "off",
+                "sleep",
+                "quiet",
+                "smart",
+                "speed"
+              ],
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            },
+            "acOptionalMode": {
+              "value": "off",
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            }
+          },
+          "samsungce.welcomeCooling": {
+            "latestRequestId": {
+              "value": null
+            },
+            "operatingState": {
+              "value": null
+            }
+          },
+          "switch": {
+            "switch": {
+              "value": "on",
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            }
+          },
+          "ocf": {
+            "st": {
+              "value": null
+            },
+            "mndt": {
+              "value": null
+            },
+            "mnfv": {
+              "value": "ARA-WW-TP2-21-OT9700_11210729",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "mnhw": {
+              "value": "MediaTek",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "di": {
+              "value": "d424e86b-15cf-79e2-48d5-480a6c0d18f9",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "mnsl": {
+              "value": "http://www.samsung.com",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "dmv": {
+              "value": "res.1.1.0,sh.1.1.0",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "n": {
+              "value": "[room a/c] Samsung",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "mnmo": {
+              "value": "ARA-WW-TP2-21-OT9700|10236341|60010523001511000600001200800000",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "vid": {
+              "value": "DA-AC-THERAC-01011",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "mnmn": {
+              "value": "Samsung Electronics",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "mnml": {
+              "value": "http://www.samsung.com",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "mnpv": {
+              "value": "DAWIT 2.0",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "mnos": {
+              "value": "TizenRT 1.0 + IPv6",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "pi": {
+              "value": "d424e86b-15cf-79e2-48d5-480a6c0d18f9",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            },
+            "icv": {
+              "value": "core.1.1.0",
+              "timestamp": "2024-11-07T23:06:27.538Z"
+            }
+          },
+          "airConditionerFanMode": {
+            "fanMode": {
+              "value": "auto",
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            },
+            "supportedAcFanModes": {
+              "value": [
+                "auto",
+                "low",
+                "medium",
+                "high",
+                "turbo"
+              ],
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            },
+            "availableAcFanModes": {
+              "value": null
+            }
+          },
+          "custom.disabledCapabilities": {
+            "disabledCapabilities": {
+              "value": [
+                "samsungce.welcomeCooling",
+                "samsungce.alwaysOnSensing"
+              ],
+              "timestamp": "2024-10-24T23:31:03.376Z"
+            }
+          },
+          "samsungce.softwareUpdate": {
+            "targetModule": {
+              "value": null
+            },
+            "otnDUID": {
+              "value": "BDCPH4AIXBPHY",
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            },
+            "lastUpdatedDate": {
+              "value": null
+            },
+            "availableModules": {
+              "value": [],
+              "timestamp": "2024-10-23T23:31:04.385Z"
+            },
+            "newVersionAvailable": {
+              "value": false,
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            },
+            "operatingState": {
+              "value": null
+            },
+            "progress": {
+              "value": null
+            }
+          },
+          "samsungce.driverVersion": {
+            "versionNumber": {
+              "value": 24090101,
+              "timestamp": "2024-10-24T07:46:24.038Z"
+            }
+          },
+          "fanOscillationMode": {
+            "supportedFanOscillationModes": {
+              "value": [
+                "fixed",
+                "all",
+                "vertical",
+                "horizontal"
+              ],
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            },
+            "availableFanOscillationModes": {
+              "value": null
+            },
+            "fanOscillationMode": {
+              "value": "vertical",
+              "timestamp": "2025-03-06T23:31:05.535Z"
+            }
+          },
+          "temperatureMeasurement": {
+            "temperatureRange": {
+              "value": null
+            },
+            "temperature": {
+              "value": 23,
+              "unit": "C",
+              "timestamp": "2025-03-07T08:01:04.926Z"
+            }
+          },
+          "thermostatCoolingSetpoint": {
+            "coolingSetpointRange": {
+              "value": null
+            },
+            "coolingSetpoint": {
+              "value": 22,
+              "unit": "C",
+              "timestamp": "2025-03-07T05:06:27.498Z"
+            }
+          }
+        }
+      }
+    }

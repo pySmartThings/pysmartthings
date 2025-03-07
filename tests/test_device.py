@@ -39,6 +39,7 @@ if TYPE_CHECKING:
         "devices_15",
         "devices_16",
         "devices_17",
+        "devices_18",
         "devices_fake",
     ],
 )
@@ -147,6 +148,7 @@ async def test_fetching_single_device(
         "hub",
         "im_smarttag_ble_uwb",
         "im_smarttag2_ble_uwb",
+        "da_ac_therac_01011",
         "da_ac_rac_01001",
         "da_ac_rac_000001",
         "da_ac_rac_000003",
