@@ -480,7 +480,7 @@ class Capability(StrEnum):
     PARTYVOICE23922_BAROMETER2 = "partyvoice23922.barometer2"
     PARTYVOICE23922_CLOUDCOVER = "partyvoice23922.cloudcover"
     PARTYVOICE23922_CREATEANOTHER = "partyvoice23922.createanother"
-    PARTYVOICE23922_PRECIBPROB = "partyvoice23922.precipprob"
+    PARTYVOICE23922_PRECIPPROB = "partyvoice23922.precipprob"
     PARTYVOICE23922_PRECIPRATE = "partyvoice23922.preciprate"
     PARTYVOICE23922_SUMMARY = "partyvoice23922.summary"
     PARTYVOICE23922_TEMPMAX = "partyvoice23922.tempmax"
