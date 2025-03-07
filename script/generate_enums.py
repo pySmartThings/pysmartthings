@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import re
 import sys
-from typing import Any
+from typing import Any, Callable
 
 ORDER = ["standard", "custom", "samsungce", "samsungvd", "samsungim"]
 
@@ -56,7 +56,16 @@ def prepare_attribute_name(attribute: str) -> str:
     )
 
 
-def main() -> int:
+def prepare_command_name(command: str) -> str:
+    """Prepare command name."""
+    return (
+        re.sub(r"(?<!^)(?=[A-Z])", "_", command)
+        .upper()
+        .replace("DRLC", "DEMAND_RESPONSE_LOAD_CONTROL")
+    )
+
+
+def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # noqa: PLR0912 PLR0915
     """Run the script."""
     attributes = set()
     commands = set()
@@ -101,7 +110,9 @@ def main() -> int:
     for ns in ORDER:
         for cap in sorted(capability_attributes[ns]):
             attr2 = capability_attributes[ns][cap]
-            file = render_capability(file, cap, attr2)
+            file = render_capability(
+                file, cap, attr2, "Attribute", prepare_attribute_name
+            )
         file += "\n"
 
     for ns, attr in capability_attributes.items():
@@ -109,14 +120,65 @@ def main() -> int:
             continue
         for cap in sorted(attr):
             attr2 = attr[cap]
-            file = render_capability(file, cap, attr2)
+            file = render_capability(
+                file, cap, attr2, "Attribute", prepare_attribute_name
+            )
         file += "\n"
     file += "}\n"
-    Path("src/pysmartthings/attribute.py").write_text(file)
+    Path("src/pysmartthings/attribute.py").write_text(file, encoding="utf-8")
+    command_file = '"""Command model."""\n'
+    command_file += "from enum import StrEnum\n"
+    command_file += "from pysmartthings.capability import Capability\n"
+    command_file += "class Command(StrEnum):\n"
+    command_file += '    """Command model."""\n'
+    for command in sorted(
+        commands,
+        key=lambda x: re.sub(r"(?<!^)(?=[A-Z])", "_", x)
+        .upper()
+        .replace("-", "")
+        .lower(),
+    ):
+        name = re.sub(r"(?<!^)(?=[A-Z])", "_", command).upper()
+        command_file += f'    {name} = "{command}"\n'
+    command_file += "\n"
+    command_file += "CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {\n"
+
+    for ns in ORDER:
+        for cap in sorted(capability_commands[ns]):
+            attr2 = capability_commands[ns][cap]
+            command_file = render_capability(
+                command_file,
+                cap,
+                attr2,
+                "Command",
+                lambda x: re.sub(r"(?<!^)(?=[A-Z])", "_", x).upper(),
+            )
+        command_file += "\n"
+
+    for ns, attr in capability_commands.items():
+        if ns in ORDER:
+            continue
+        for cap in sorted(attr):
+            attr2 = attr[cap]
+            command_file = render_capability(
+                command_file,
+                cap,
+                attr2,
+                "Command",
+                lambda x: re.sub(r"(?<!^)(?=[A-Z])", "_", x).upper(),
+            )
+    command_file += "}\n"
+    Path("src/pysmartthings/command.py").write_text(command_file, encoding="utf-8")
     return 0
 
 
-def render_capability(file: str, capability: str, attributes: list[str]) -> str:
+def render_capability(
+    file: str,
+    capability: str,
+    attributes: list[str],
+    class_name: str,
+    name_fn: Callable[[str], str],
+) -> str:
     """Render capability."""
     capability_name = prepare_capability_name(capability)
     file += f"    Capability.{capability_name}: ["
@@ -127,8 +189,8 @@ def render_capability(file: str, capability: str, attributes: list[str]) -> str:
             first = False
         else:
             file += ", "
-        name = prepare_attribute_name(attribute)
-        file += f"Attribute.{name}"
+        name = name_fn(attribute)
+        file += f"{class_name}.{name}"
     file += "],\n"
     return file
 
