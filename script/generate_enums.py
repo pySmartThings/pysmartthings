@@ -56,7 +56,7 @@ def prepare_attribute_name(attribute: str) -> str:
     )
 
 
-def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
+def main() -> int:
     """Run the script."""
     attributes = set()
     commands = set()
@@ -99,40 +99,38 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
     file += "CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {\n"
 
     for ns in ORDER:
-        for capability in sorted(capability_attributes[ns]):
-            attributes = capability_attributes[ns][capability]
-            capability_name = prepare_capability_name(capability)
-            file += f"    Capability.{capability_name}: ["
-            first = True
-            for attribute in sorted(attributes, key=prepare_attribute_name):
-                if first:
-                    first = False
-                else:
-                    file += ", "
-                name = prepare_attribute_name(attribute)
-                file += f"Attribute.{name}"
-            file += "],\n"
+        for cap in sorted(capability_attributes[ns]):
+            attr2 = capability_attributes[ns][cap]
+            file = render_capability(file, cap, attr2)
         file += "\n"
 
-    for ns, capability in capability_attributes.items():
+    for ns, attr in capability_attributes.items():
         if ns in ORDER:
             continue
-        for cap, attributes in capability.items():
-            capability_name = prepare_capability_name(cap)
-            file += f"    Capability.{capability_name}: ["
-            first = True
-            for attribute in sorted(attributes, key=prepare_attribute_name):
-                if first:
-                    first = False
-                else:
-                    file += ", "
-                name = prepare_attribute_name(attribute)
-                file += f"Attribute.{name}"
-            file += "],\n"
+        for cap in sorted(attr):
+            attr2 = attr[cap]
+            file = render_capability(file, cap, attr2)
         file += "\n"
     file += "}\n"
     Path("src/pysmartthings/attribute.py").write_text(file)
     return 0
+
+
+def render_capability(file: str, capability: str, attributes: list[str]) -> str:
+    """Render capability."""
+    capability_name = prepare_capability_name(capability)
+    file += f"    Capability.{capability_name}: ["
+    first = True
+    for attribute in sorted(attributes, key=prepare_attribute_name):
+        print(attribute)
+        if first:
+            first = False
+        else:
+            file += ", "
+        name = prepare_attribute_name(attribute)
+        file += f"Attribute.{name}"
+    file += "],\n"
+    return file
 
 
 if __name__ == "__main__":
