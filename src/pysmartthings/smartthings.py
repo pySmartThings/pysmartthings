@@ -376,6 +376,8 @@ class SmartThings:
                     if event.event == EventType.DEVICE_EVENT:
                         event_type = DeviceEventRoot.from_json(event.data)
                         device_event = event_type.device_event
+                        for callback in self.__unspecified_device_event_listeners:
+                            callback(device_event)
                         if device_event.device_id in self.__device_event_listeners:
                             for callback in self.__device_event_listeners[
                                 device_event.device_id
