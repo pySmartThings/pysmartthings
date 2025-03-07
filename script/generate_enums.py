@@ -30,6 +30,32 @@ def prepare_capability_name(capability_name: str) -> str:
     return name
 
 
+def prepare_attribute_name(attribute: str) -> str:
+    """Prepare attribute name."""
+    return {
+        "dmv": "DATA_MODEL_VERSION",
+        "drlcStatus": "DEMAND_RESPONSE_LOAD_CONTROL_STATUS",
+        "di": "DEVICE_ID",
+        "n": "DEVICE_NAME",
+        "mnhw": "HARDWARE_VERSION",
+        "mnml": "MANUFACTURER_DETAILS_LINK",
+        "mnmn": "MANUFACTURER_NAME",
+        "mndt": "MANUFACTURE_DATE",
+        "mnmo": "MODEL_NUMBER",
+        "mnfv": "OCF_FIRMWARE_VERSION",
+        "mnos": "OS_VERSION",
+        "pH": "PH",
+        "pi": "PLATFORM_ID",
+        "mnpv": "PLATFORM_VERSION",
+        "icv": "SPEC_VERSION",
+        "mnsl": "SUPPORT_LINK",
+        "st": "SYSTEM_TIME",
+        "vid": "VENDOR_ID",
+    }.get(
+        attribute, re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
+    )
+
+
 def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
     """Run the script."""
     attributes = set()
@@ -66,7 +92,7 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
         .replace("-", "")
         .lower(),
     ):
-        name = re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
+        name = prepare_attribute_name(attribute)
         file += f'    {name} = "{attribute}"\n'
 
     file += "\n"
@@ -78,14 +104,12 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
             capability_name = prepare_capability_name(capability)
             file += f"    Capability.{capability_name}: ["
             first = True
-            for attribute in sorted(attributes):
+            for attribute in sorted(attributes, key=prepare_attribute_name):
                 if first:
                     first = False
                 else:
                     file += ", "
-                name = (
-                    re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
-                )
+                name = prepare_attribute_name(attribute)
                 file += f"Attribute.{name}"
             file += "],\n"
         file += "\n"
@@ -97,14 +121,12 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
             capability_name = prepare_capability_name(cap)
             file += f"    Capability.{capability_name}: ["
             first = True
-            for attribute in sorted(attributes):
+            for attribute in sorted(attributes, key=prepare_attribute_name):
                 if first:
                     first = False
                 else:
                     file += ", "
-                name = (
-                    re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
-                )
+                name = prepare_attribute_name(attribute)
                 file += f"Attribute.{name}"
             file += "],\n"
         file += "\n"

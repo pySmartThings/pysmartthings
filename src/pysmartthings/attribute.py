@@ -124,14 +124,14 @@ class Attribute(StrEnum):
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
     DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
     DEWPOINT = "dewpoint"
-    DI = "di"
+    DEVICE_ID = "di"
     DISABLED_CAPABILITIES = "disabledCapabilities"
     DISABLED_COMPONENTS = "disabledComponents"
     DISHWASHER_DELAY_START_TIME = "dishwasherDelayStartTime"
     DISHWASHER_JOB_STATE = "dishwasherJobState"
     DISHWASHER_OPERATING_PERCENTAGE = "dishwasherOperatingPercentage"
     DISHWASHER_OPERATING_PROGRESS = "dishwasherOperatingProgress"
-    DMV = "dmv"
+    DATA_MODEL_VERSION = "dmv"
     DO_NOT_DISTURB = "doNotDisturb"
     DOOR = "door"
     DOOR_STATE = "doorState"
@@ -139,7 +139,7 @@ class Attribute(StrEnum):
     DOWNLINK_SPEED = "downlinkSpeed"
     DR_MAX_DURATION = "drMaxDuration"
     DRIVER_VERSION = "driverVersion"
-    DRLC_STATUS = "drlcStatus"
+    DEMAND_RESPONSE_LOAD_CONTROL_STATUS = "drlcStatus"
     DRY_PLUS = "dryPlus"
     DRYER_AUTO_CYCLE_LINK = "dryerAutoCycleLink"
     DRYER_CYCLE = "dryerCycle"
@@ -239,7 +239,7 @@ class Attribute(StrEnum):
     HUE = "hue"
     HUMIDIFIER_MODE = "humidifierMode"
     HUMIDITY = "humidity"
-    ICV = "icv"
+    SPEC_VERSION = "icv"
     ILLUMINANCE = "illuminance"
     IMAGE = "image"
     IME_ADV_SUPPORTED = "imeAdvSupported"
@@ -298,15 +298,15 @@ class Attribute(StrEnum):
     MINIMUM_SETPOINT = "minimumSetpoint"
     MIRROR_GROUP_FUNCTION = "mirrorGroupFunction"
     MN_ID = "mnId"
-    MNDT = "mndt"
-    MNFV = "mnfv"
-    MNHW = "mnhw"
-    MNML = "mnml"
-    MNMN = "mnmn"
-    MNMO = "mnmo"
-    MNOS = "mnos"
-    MNPV = "mnpv"
-    MNSL = "mnsl"
+    MANUFACTURE_DATE = "mndt"
+    OCF_FIRMWARE_VERSION = "mnfv"
+    HARDWARE_VERSION = "mnhw"
+    MANUFACTURER_DETAILS_LINK = "mnml"
+    MANUFACTURER_NAME = "mnmn"
+    MODEL_NUMBER = "mnmo"
+    OS_VERSION = "mnos"
+    PLATFORM_VERSION = "mnpv"
+    SUPPORT_LINK = "mnsl"
     MOBILE_CAM_SUPPORTED = "mobileCamSupported"
     MODE = "mode"
     MODEL_CLASSIFICATION_CODE = "modelClassificationCode"
@@ -315,7 +315,7 @@ class Attribute(StrEnum):
     MOLD_HEALTH_CONCERN = "moldHealthConcern"
     MOTION = "motion"
     MUTE = "mute"
-    N = "n"
+    DEVICE_NAME = "n"
     NAME = "name"
     NEUTRAL_DETERGENT_ALARM_ENABLED = "neutralDetergentAlarmEnabled"
     NEUTRAL_DETERGENT_DOSAGE = "neutralDetergentDosage"
@@ -347,13 +347,13 @@ class Attribute(StrEnum):
     OVEN_SETPOINT_RANGE = "ovenSetpointRange"
     OZONE = "ozone"
     OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
-    P_H = "pH"
+    PH = "pH"
     PANIC_ALARM = "panicAlarm"
     PERIODIC_SENSING = "periodicSensing"
     PERIODIC_SENSING_INTERVAL = "periodicSensingInterval"
     PERIODIC_SENSING_STATUS = "periodicSensingStatus"
     PEST_CONTROL = "pestControl"
-    PI = "pi"
+    PLATFORM_ID = "pi"
     PICTURE_MODE = "pictureMode"
     PLAN = "plan"
     PLAYBACK_REPEAT_MODE = "playbackRepeatMode"
@@ -456,7 +456,7 @@ class Attribute(StrEnum):
     SPEED_BOOSTER = "speedBooster"
     SPI_MODE = "spiMode"
     SPIN_SPEED = "spinSpeed"
-    ST = "st"
+    SYSTEM_TIME = "st"
     START_TIME = "startTime"
     STATE = "state"
     STATUS = "status"
@@ -612,7 +612,7 @@ class Attribute(StrEnum):
     VERY_FINE_DUST_FILTER_USAGE_STEP = "veryFineDustFilterUsageStep"
     VERY_FINE_DUST_HEALTH_CONCERN = "veryFineDustHealthConcern"
     VERY_FINE_DUST_LEVEL = "veryFineDustLevel"
-    VID = "vid"
+    VENDOR_ID = "vid"
     VOLTAGE = "voltage"
     VOLUME = "volume"
     WASHER_AUTO_DETERGENT = "washerAutoDetergent"
@@ -701,7 +701,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.CONFIGURATION: [],
     Capability.CONTACT_SENSOR: [Attribute.CONTACT],
     Capability.CURRENT_MEASUREMENT: [Attribute.CURRENT],
-    Capability.DEMAND_RESPONSE_LOAD_CONTROL: [Attribute.DRLC_STATUS],
+    Capability.DEMAND_RESPONSE_LOAD_CONTROL: [
+        Attribute.DEMAND_RESPONSE_LOAD_CONTROL_STATUS
+    ],
     Capability.DEW_POINT: [Attribute.DEWPOINT],
     Capability.DISHWASHER_OPERATING_STATE: [
         Attribute.COMPLETION_TIME,
@@ -773,9 +775,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.HARDWARE_FAULT: [Attribute.HARDWARE_FAULT],
     Capability.HEALTH_CHECK: [
+        Attribute.CHECK_INTERVAL,
         Attribute.DEVICE_WATCH_DEVICE_STATUS,
         Attribute.DEVICE_WATCH_ENROLL,
-        Attribute.CHECK_INTERVAL,
         Attribute.HEALTH_STATUS,
     ],
     Capability.HUMIDIFIER_MODE: [Attribute.HUMIDIFIER_MODE],
@@ -807,8 +809,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.CODE_REPORT,
         Attribute.LOCK,
         Attribute.LOCK_CODES,
-        Attribute.MAX_CODE_LENGTH,
         Attribute.MAX_CODES,
+        Attribute.MAX_CODE_LENGTH,
         Attribute.MIN_CODE_LENGTH,
         Attribute.SCAN_CODES,
     ],
@@ -848,22 +850,22 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.OBJECT_DETECTION: [Attribute.DETECTED, Attribute.SUPPORTED_VALUES],
     Capability.OCCUPANCY_SENSOR: [Attribute.OCCUPANCY],
     Capability.OCF: [
-        Attribute.DI,
-        Attribute.DMV,
-        Attribute.ICV,
-        Attribute.MNDT,
-        Attribute.MNFV,
-        Attribute.MNHW,
-        Attribute.MNML,
-        Attribute.MNMN,
-        Attribute.MNMO,
-        Attribute.MNOS,
-        Attribute.MNPV,
-        Attribute.MNSL,
-        Attribute.N,
-        Attribute.PI,
-        Attribute.ST,
-        Attribute.VID,
+        Attribute.DATA_MODEL_VERSION,
+        Attribute.DEVICE_ID,
+        Attribute.DEVICE_NAME,
+        Attribute.HARDWARE_VERSION,
+        Attribute.MANUFACTURER_DETAILS_LINK,
+        Attribute.MANUFACTURER_NAME,
+        Attribute.MANUFACTURE_DATE,
+        Attribute.MODEL_NUMBER,
+        Attribute.OCF_FIRMWARE_VERSION,
+        Attribute.OS_VERSION,
+        Attribute.PLATFORM_ID,
+        Attribute.PLATFORM_VERSION,
+        Attribute.SPEC_VERSION,
+        Attribute.SUPPORT_LINK,
+        Attribute.SYSTEM_TIME,
+        Attribute.VENDOR_ID,
     ],
     Capability.ODOR_SENSOR: [Attribute.ODOR_LEVEL],
     Capability.OVEN_MODE: [Attribute.OVEN_MODE, Attribute.SUPPORTED_OVEN_MODES],
@@ -878,7 +880,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.OVEN_SETPOINT: [Attribute.OVEN_SETPOINT, Attribute.OVEN_SETPOINT_RANGE],
     Capability.OZONE_HEALTH_CONCERN: [Attribute.OZONE_HEALTH_CONCERN],
     Capability.OZONE_MEASUREMENT: [Attribute.OZONE],
-    Capability.PH_MEASUREMENT: [Attribute.P_H],
+    Capability.PH_MEASUREMENT: [Attribute.PH],
     Capability.PANIC_ALARM: [Attribute.PANIC_ALARM],
     Capability.PEST_CONTROL: [Attribute.PEST_CONTROL],
     Capability.POWER_CONSUMPTION_REPORT: [Attribute.POWER_CONSUMPTION],
@@ -1448,8 +1450,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_ROBOT_CLEANER_CLEANING_MODE: [
         Attribute.CLEANING_MODE,
         Attribute.REPEAT_MODE_ENABLED,
-        Attribute.SUPPORT_REPEAT_MODE,
         Attribute.SUPPORTED_CLEANING_MODE,
+        Attribute.SUPPORT_REPEAT_MODE,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE: [
         Attribute.CLEANING_STEP,
@@ -1604,8 +1606,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SELECTED_APP_ID,
         Attribute.SELECTED_MODE,
         Attribute.STREAM_CONTROL,
-        Attribute.SUPPORTED_MODE_MAP,
         Attribute.SUPPORTED_MODES,
+        Attribute.SUPPORTED_MODE_MAP,
     ],
     Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: [
         Attribute.INPUT_SOURCE,
