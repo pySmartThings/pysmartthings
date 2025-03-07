@@ -27,6 +27,10 @@ jobs:
         with:
           repository: "pysmartthings/capabilities"
           path: "capabilities"
+      - name: Generate
+        run: python script/generate.py
+      - name: Run ruff
+        run: ruff check . --fix && ruff format .
       - name: Remove capabilities
         run: rm -rf capabilities
       - name: Create Pull Request
