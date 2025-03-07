@@ -60,6 +60,9 @@ class SmartThings:
         tuple[str, str, Capability | str],
         list[Callable[[DeviceEvent], None]],
     ] = field(default_factory=dict)
+    __unspecified_device_event_listeners: list[Callable[[DeviceEvent], None]] = field(
+        default_factory=list
+    )
     __device_event_listeners: dict[str, list[Callable[[DeviceEvent], None]]] = field(
         default_factory=dict
     )
@@ -289,6 +292,13 @@ class SmartThings:
             data={"commands": [command_payload]},
         )
         LOGGER.debug("Command response: %s", response)
+
+    def add_unspecified_device_event_listener(
+        self, callback: Callable[[DeviceEvent], None]
+    ) -> Callable[[], None]:
+        """Add a listener for unspecified device events."""
+        self.__unspecified_device_event_listeners.append(callback)
+        return lambda: self.__unspecified_device_event_listeners.remove(callback)
 
     def add_device_lifecycle_event_listener(
         self, lifecycle_event: Lifecycle, callback: Callable[[str], None]
