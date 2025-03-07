@@ -360,6 +360,16 @@ class Capability(StrEnum):
     SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF = "samsungvd.supportsPowerOnByOcf"
     SAMSUNG_VD_THING_STATUS = "samsungvd.thingStatus"
 
+    ABATEACHIEVE62503_STATELESS_AUDIO_MUTE = "abateachieve62503.statelessAudioMute"
+    ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_DOWN = (
+        "abateachieve62503.statelessAudioVolumeDown"
+    )
+    ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_UP = (
+        "abateachieve62503.statelessAudioVolumeUp"
+    )
+    ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN = "abateachieve62503.statelessChannelDown"
+    ABATEACHIEVE62503_STATELESS_CHANNEL_UP = "abateachieve62503.statelessChannelUp"
+
     AMBERPIANO10217_BINDING_INFO = "amberpiano10217.bindingInfo"
     AMBERPIANO10217_CLUSTER = "amberpiano10217.cluster"
     AMBERPIANO10217_CONTROLLER_STATUS = "amberpiano10217.controllerStatus"
