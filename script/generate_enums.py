@@ -38,7 +38,13 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
     file += "from pysmartthings.capability import Capability\n"
     file += "class Attribute(StrEnum):\n"
     file += '    """Attribute model."""\n'
-    for attribute in sorted(attributes):
+    for attribute in sorted(
+        attributes,
+        key=lambda x: re.sub(r"(?<!^)(?=[A-Z])", "_", x)
+        .upper()
+        .replace("-", "")
+        .lower(),
+    ):
         name = re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
         file += f'    {name} = "{attribute}"\n'
 
@@ -46,7 +52,8 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
     file += "CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {\n"
 
     for ns in ORDER:
-        for capability, attributes in capability_attributes[ns].items():
+        for capability in sorted(capability_attributes[ns]):
+            attributes = capability_attributes[ns][capability]
             capability_name = (
                 re.sub(r"(?<!^)(?=[A-Z])", "_", capability)
                 .upper()
@@ -62,11 +69,16 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
                 .replace("CUSTOM_LAUNCHAPP", "CUSTOM_LAUNCH_APP")
             )
             file += f"    Capability.{capability_name}: ["
-            for attribute in attributes:
+            first = True
+            for attribute in sorted(attributes):
+                if first:
+                    first = False
+                else:
+                    file += ", "
                 name = (
                     re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
                 )
-                file += f"Attribute.{name}, "
+                file += f"Attribute.{name}"
             file += "],\n"
         file += "\n"
 
@@ -90,7 +102,7 @@ def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
             )
             file += f"    Capability.{capability_name}: ["
             first = True
-            for attribute in attributes:
+            for attribute in sorted(attributes):
                 if first:
                     first = False
                 else:
