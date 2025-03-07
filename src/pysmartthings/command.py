@@ -73,6 +73,7 @@ class Command(StrEnum):
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
     SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
     SET_AIR_PURIFIER_FAN_MODE = "setAirPurifierFanMode"
+    SET_AMOUNT = "setAmount"
     SET_CODE = "setCode"
     SET_CODE_LENGTH = "setCodeLength"
     SET_COLOR = "setColor"
@@ -81,6 +82,7 @@ class Command(StrEnum):
     SET_COURSE = "setCourse"
     SET_DEFROST = "setDefrost"
     SET_DELAY_END = "setDelayEnd"
+    SET_DENSITY = "setDensity"
     SET_DRYER_DRY_LEVEL = "setDryerDryLevel"
     SET_DRYER_LABEL_SCAN_CYCLE_PRESET = "setDryerLabelScanCyclePreset"
     SET_DRYER_MODE = "setDryerMode"
@@ -104,6 +106,7 @@ class Command(StrEnum):
     SET_PLAYBACK_STATUS = "setPlaybackStatus"
     SET_RAPID_COOLING = "setRapidCooling"
     SET_RAPID_FREEZING = "setRapidFreezing"
+    SET_RECOMMENDED_AMOUNT = "setRecommendedAmount"
     SET_REFRIGERATION_SETPOINT = "setRefrigerationSetpoint"
     SET_RINSE_MODE = "setRinseMode"
     SET_ROBOT_CLEANER_CLEANING_MODE = "setRobotCleanerCleaningMode"
@@ -118,6 +121,7 @@ class Command(StrEnum):
     SET_THERMOSTAT_MODE = "setThermostatMode"
     SET_TV_CHANNEL = "setTvChannel"
     SET_TV_CHANNEL_NAME = "setTvChannelName"
+    SET_TYPE = "setType"
     SET_VOLUME = "setVolume"
     SET_WASHER_CYCLE = "setWasherCycle"
     SET_WASHER_MODE = "setWasherMode"
@@ -141,6 +145,7 @@ class Command(StrEnum):
     UNLATCH = "unlatch"
     UNLOCK = "unlock"
     UNMUTE = "unmute"
+    UNSET_RECOMMENDED_AMOUNT = "unsetRecommendedAmount"
     UPDATE_CODES = "updateCodes"
     UPDATE_FIRMWARE = "updateFirmware"
     UPLOAD_COMPLETE = "uploadComplete"
@@ -257,6 +262,17 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.ROBOT_CLEANER_CLEANING_MODE: [Command.SET_ROBOT_CLEANER_CLEANING_MODE],
     Capability.ROBOT_CLEANER_MOVEMENT: [Command.SET_ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_TURBO_MODE: [Command.SET_ROBOT_CLEANER_TURBO_MODE],
+    Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: [
+        Command.SET_AMOUNT,
+        Command.SET_DENSITY,
+        Command.SET_RECOMMENDED_AMOUNT,
+        Command.SET_TYPE,
+        Command.UNSET_RECOMMENDED_AMOUNT,
+    ],
+    Capability.SAMSUNG_CE_AUTO_DISPENSE_SOFTENER: [
+        Command.SET_AMOUNT,
+        Command.SET_DENSITY,
+    ],
     Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Command.ON, Command.OFF],
     Capability.SAMSUNG_CE_WASHER_CYCLE: [Command.SET_WASHER_CYCLE],
     Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: [
