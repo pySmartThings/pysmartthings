@@ -1,0 +1,110 @@
+"""Process the device status JSON file to generate a tree of a device status."""
+
+import json
+from pathlib import Path
+import re
+import sys
+from typing import Any
+
+ORDER = ["standard", "custom", "samsungce", "samsungvd", "samsungim"]
+
+
+def main() -> int:  # noqa: PLR0912  # noqa: PLR0915
+    """Run the script."""
+    attributes = set()
+    commands = set()
+    capability_attributes: dict[str, Any] = {}
+    capability_commands: dict[str, Any] = {}
+    root = Path("capabilities/json")
+    for namespace in root.iterdir():
+        for js in namespace.iterdir():
+            with js.open(encoding="utf-8") as f:
+                data = json.load(f)
+            ns = data["id"].split(".")[0] if "." in data["id"] else "standard"
+            if ns not in capability_attributes:
+                capability_attributes[ns] = {}
+                capability_commands[ns] = {}
+            capability_attributes[ns][data["id"]] = []
+            capability_commands[ns][data["id"]] = []
+            for attribute in data["attributes"]:
+                attributes.add(attribute)
+                capability_attributes[ns][data["id"]].append(attribute)
+            capability_commands[data["id"]] = []
+            for command in data["commands"]:
+                commands.add(command)
+                capability_commands[ns][data["id"]].append(command)
+    file = '"""Attribute model."""\n'
+    file += "from enum import StrEnum\n"
+    file += "from pysmartthings.capability import Capability\n"
+    file += "class Attribute(StrEnum):\n"
+    file += '    """Attribute model."""\n'
+    for attribute in sorted(attributes):
+        name = re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
+        file += f'    {name} = "{attribute}"\n'
+
+    file += "\n"
+    file += "CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {\n"
+
+    for ns in ORDER:
+        for capability, attributes in capability_attributes[ns].items():
+            capability_name = (
+                re.sub(r"(?<!^)(?=[A-Z])", "_", capability)
+                .upper()
+                .replace(".", "_")
+                .replace("SAMSUNGCE", "SAMSUNG_CE")
+                .replace("SAMSUNGVD", "SAMSUNG_VD")
+                .replace("SAMSUNGIM", "SAMSUNG_IM")
+                .replace("P_H_", "PH_")
+                .replace("ZW_MULTI", "ZWAVE_MULTI")
+                .replace("CUSTOM_SOUNDMODE", "CUSTOM_SOUND_MODE")
+                .replace("CUSTOM_TVSEARCH", "CUSTOM_TV_SEARCH")
+                .replace("CUSTOM_PICTUREMODE", "CUSTOM_PICTURE_MODE")
+                .replace("CUSTOM_LAUNCHAPP", "CUSTOM_LAUNCH_APP")
+            )
+            file += f"    Capability.{capability_name}: ["
+            for attribute in attributes:
+                name = (
+                    re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
+                )
+                file += f"Attribute.{name}, "
+            file += "],\n"
+        file += "\n"
+
+    for ns, capability in capability_attributes.items():
+        if ns in ORDER:
+            continue
+        for cap, attributes in capability.items():
+            capability_name = (
+                re.sub(r"(?<!^)(?=[A-Z])", "_", cap)
+                .upper()
+                .replace(".", "_")
+                .replace("SAMSUNGCE", "SAMSUNG_CE")
+                .replace("SAMSUNGVD", "SAMSUNG_VD")
+                .replace(
+                    "SYNTHETIC_LIGHTING_EFFECT_CIRCADIAN",
+                    "SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT",
+                )
+                .replace(
+                    "SYNTHETIC_LIGHTING_EFFECT_FADE", "SYNTHETIC_FADE_LIGHTNING_EFFECT"
+                )
+            )
+            file += f"    Capability.{capability_name}: ["
+            first = True
+            for attribute in attributes:
+                if first:
+                    first = False
+                else:
+                    file += ", "
+                name = (
+                    re.sub(r"(?<!^)(?=[A-Z])", "_", attribute).upper().replace("-", "")
+                )
+                file += f"Attribute.{name}"
+            file += "],\n"
+        file += "\n"
+    file += "}\n"
+    Path("src/pysmartthings/attribute.py").write_text(file)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

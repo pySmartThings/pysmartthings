@@ -1,0 +1,37 @@
+---
+name: Generate enums
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+
+env:
+  DEFAULT_PYTHON: "3.13"
+
+jobs:
+  generate:
+    name: Generate enums
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v4.2.2
+      - name: 🏗 Set up uv
+        uses: astral-sh/setup-uv@v5.2.2
+        with:
+          enable-cache: true
+          python-version: ${{ env.DEFAULT_PYTHON }}
+      - name: 🏗 Install dependencies
+        run: uv sync --frozen --dev
+      - name: ⤵️ Check out capabilities from GitHub
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: "pysmartthings/capabilities"
+          path: "capabilities"
+      - name: Remove capabilities
+        run: rm -rf capabilities
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          base: ${{ github.head_ref }}
+          title: Update capabilities
+          body: Sync the capabilities with the SmartThings API
