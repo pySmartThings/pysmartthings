@@ -137,6 +137,7 @@ class Category(StrEnum):
     NETWORK_AUDIO = "NetworkAudio"
     NETWORKING = "Networking"
     OTHER = "Other"
+    OTHERS = "Others"
     OVEN = "Oven"
     PRESENCE_SENSOR = "PresenceSensor"
     PRESENCE_SENSOR_2 = "Presence Sensor"
