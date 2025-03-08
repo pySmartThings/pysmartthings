@@ -473,5 +473,6 @@ class DeviceLifecycleEventRoot(Event):
 class EventType(StrEnum):
     """Event type."""
 
+    CONTROL_EVENT = "CONTROL_EVENT"
     DEVICE_EVENT = "DEVICE_EVENT"
     DEVICE_LIFECYCLE_EVENT = "DEVICE_LIFECYCLE_EVENT"
