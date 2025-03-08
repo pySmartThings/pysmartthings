@@ -58,7 +58,7 @@ class SmartThings:
     _token: str | None = None
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
-    refresh_subscription_url_function: Callable[[str], Awaitable[None]] | None = None
+    refresh_subscription_url_function: Callable[[str], None] | None = None
     __capability_event_listeners: dict[
         tuple[str, str, Capability | str],
         list[Callable[[DeviceEvent], None]],
@@ -440,9 +440,7 @@ class SmartThings:
                         new_subscription_required = False
                         using_old_sub = False
                         if self.refresh_subscription_url_function:
-                            await self.refresh_subscription_url_function(
-                                subscription_url
-                            )
+                            self.refresh_subscription_url_function(subscription_url)
                     else:
                         LOGGER.debug("Using old subscription URL: %s", subscription_url)
                     assert subscription_url is not None  # noqa: S101
