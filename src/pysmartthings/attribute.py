@@ -148,6 +148,7 @@ class Attribute(StrEnum):
     DEVICE_CONNECTION_STATE = "deviceConnectionState"
     DEVICE_ICE = "deviceIce"
     DEVICE_NETWORK_ID = "deviceNetworkId"
+    DEVICE_TYPE = "deviceType"
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
     DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
     DEWPOINT = "dewpoint"
@@ -239,6 +240,7 @@ class Attribute(StrEnum):
     FREEZER_CONVERT_MODE = "freezerConvertMode"
     FRIDGE_MODE = "fridgeMode"
     FRIDGE_MODE_VALUE = "fridgeModeValue"
+    FSV_SETTINGS = "fsvSettings"
     FUEL = "fuel"
     GAS = "gas"
     GAS_METER = "gasMeter"
@@ -272,6 +274,7 @@ class Attribute(StrEnum):
     HOMING_REASON = "homingReason"
     HOOD_FAN_SPEED = "hoodFanSpeed"
     HOT_AIR_DRY = "hotAirDry"
+    HTTPCODE = "httpcode"
     HUE = "hue"
     HUMIDIFIER_MODE = "humidifierMode"
     HUMIDITY = "humidity"
@@ -395,6 +398,7 @@ class Attribute(StrEnum):
     ORIGINS = "origins"
     OTN_D_U_I_D = "otnDUID"
     OUT_OF_SYNC_CHANGES = "outOfSyncChanges"
+    OUTING_MODE = "outingMode"
     OVEN_CAVITY_STATUS = "ovenCavityStatus"
     OVEN_JOB_STATE = "ovenJobState"
     OVEN_MODE = "ovenMode"
@@ -477,6 +481,7 @@ class Attribute(StrEnum):
     RESERVABLE = "reservable"
     RESERVATIONS = "reservations"
     RESOLUTION = "resolution"
+    RESPONSE = "response"
     RESULT = "result"
     RINSE_MODE = "rinseMode"
     RINSE_PLUS = "rinsePlus"
@@ -658,6 +663,7 @@ class Attribute(StrEnum):
     TEMPERATURE_ALARM = "temperatureAlarm"
     TEMPERATURE_LEVEL = "temperatureLevel"
     TEMPERATURE_RANGE = "temperatureRange"
+    TEMPERATURE_REFERENCE = "temperatureReference"
     TEMPERATURE_SETPOINT = "temperatureSetpoint"
     TEMPERATURE_SETPOINT_RANGE = "temperatureSetpointRange"
     THERMOSTAT_FAN_MODE = "thermostatFanMode"
@@ -669,6 +675,7 @@ class Attribute(StrEnum):
     TIME_OFFSET = "timeOffset"
     TIMED_CLEAN_DURATION = "timedCleanDuration"
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
+    TOPICLIST = "topiclist"
     TOTAL_TIME = "totalTime"
     TRACK_DATA = "trackData"
     TRACK_DESCRIPTION = "trackDescription"
@@ -687,6 +694,7 @@ class Attribute(StrEnum):
     USER_LOCATION = "userLocation"
     UWB_ACTIVATION = "uwbActivation"
     VACATION_MODE = "vacationMode"
+    VALUE = "value"
     VALVE = "valve"
     VERSION = "version"
     VERSION_NUMBER = "versionNumber"
@@ -699,10 +707,12 @@ class Attribute(StrEnum):
     VERY_FINE_DUST_FILTER_USAGE_STEP = "veryFineDustFilterUsageStep"
     VERY_FINE_DUST_HEALTH_CONCERN = "veryFineDustHealthConcern"
     VERY_FINE_DUST_LEVEL = "veryFineDustLevel"
+    VHUMIDITY = "vhumidity"
     VENDOR_ID = "vid"
     VISIBLE_FEATURES = "visibleFeatures"
     VOLTAGE = "voltage"
     VOLUME = "volume"
+    VTEMP = "vtemp"
     W_SPEED = "wSpeed"
     WASHER_AUTO_DETERGENT = "washerAutoDetergent"
     WASHER_AUTO_SOFTENER = "washerAutoSoftener"
@@ -1232,6 +1242,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OCF_RESOURCE_UPDATED_TIME,
         Attribute.OCF_RESOURCE_VERSION,
     ],
+    Capability.CUSTOM_OUTING_MODE: [Attribute.OUTING_MODE],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [Attribute.OVEN_CAVITY_STATUS],
     Capability.CUSTOM_PERIODIC_SENSING: [
         Attribute.AUTOMATIC_EXECUTION_MODE,
@@ -1492,6 +1503,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ALARM_THRESHOLD,
         Attribute.SUPPORTED_ALARM_THRESHOLDS,
     ],
+    Capability.SAMSUNG_CE_EHS_FSV_SETTINGS: [Attribute.FSV_SETTINGS],
+    Capability.SAMSUNG_CE_EHS_TEMPERATURE_REFERENCE: [Attribute.TEMPERATURE_REFERENCE],
+    Capability.SAMSUNG_CE_EHS_THERMOSTAT: [Attribute.CONNECTION_STATE],
     Capability.SAMSUNG_CE_ENERGY_PLANNER: [Attribute.DATA, Attribute.PLAN],
     Capability.SAMSUNG_CE_ERROR_AND_ALARM_STATE: [Attribute.EVENTS],
     Capability.SAMSUNG_CE_FLEXIBLE_AUTO_DISPENSE_DETERGENT: [
@@ -1572,6 +1586,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_POWER_LEVELS,
     ],
     Capability.SAMSUNG_CE_MUSIC_PLAYLIST: [Attribute.CURRENT_TRACK, Attribute.PLAYLIST],
+    Capability.SAMSUNG_CE_OPERATION_ORIGIN: [],
     Capability.SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT: [Attribute.DRAINAGE_REQUIREMENT],
     Capability.SAMSUNG_CE_OVEN_MODE: [
         Attribute.OVEN_MODE,
@@ -1747,6 +1762,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DESIRED_TEMPERATURE,
         Attribute.SUPPORTED_DESIRED_TEMPERATURES,
     ],
+    Capability.SAMSUNG_CE_TOGGLE_SWITCH: [Attribute.SWITCH],
     Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [Attribute.UNAVAILABLE_COMMANDS],
     Capability.SAMSUNG_CE_VIEW_INSIDE: [
         Attribute.CONTENTS,
@@ -1977,15 +1993,28 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_BAROMETER2: [Attribute.PRESSURE],
     Capability.PARTYVOICE23922_CLOUDCOVER: [Attribute.CLOUDCOVER],
     Capability.PARTYVOICE23922_CREATEANOTHER: [],
+    Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Attribute.DEVICE_TYPE],
+    Capability.PARTYVOICE23922_CREATEMQTTDEV9: [Attribute.DEVICE_TYPE],
+    Capability.PARTYVOICE23922_HTTPCODE: [Attribute.HTTPCODE],
+    Capability.PARTYVOICE23922_HTTPRESPONSE: [Attribute.RESPONSE],
+    Capability.PARTYVOICE23922_MQTTPUBLISH: [],
+    Capability.PARTYVOICE23922_ONVIFINFO: [Attribute.INFO],
+    Capability.PARTYVOICE23922_ONVIFSTATUS: [Attribute.STATUS],
     Capability.PARTYVOICE23922_PRECIPPROB: [Attribute.PROBABILITY],
     Capability.PARTYVOICE23922_PRECIPRATE: [Attribute.PRECIP],
+    Capability.PARTYVOICE23922_REFRESH: [],
+    Capability.PARTYVOICE23922_STATUS: [Attribute.STATUS],
     Capability.PARTYVOICE23922_SUMMARY: [Attribute.SUMMARY],
     Capability.PARTYVOICE23922_TEMPMAX: [Attribute.MAXTEMP],
     Capability.PARTYVOICE23922_TEMPMIN: [Attribute.MINTEMP],
+    Capability.PARTYVOICE23922_TOPICLIST: [Attribute.TOPICLIST],
+    Capability.PARTYVOICE23922_VHUMIDITYSET: [Attribute.VHUMIDITY],
+    Capability.PARTYVOICE23922_VTEMPSET: [Attribute.VTEMP],
     Capability.PARTYVOICE23922_WINDDIRDEG: [Attribute.WINDDEG],
     Capability.PARTYVOICE23922_WINDDIRECTION2: [Attribute.DIRECTION],
     Capability.PARTYVOICE23922_WINDGUST: [Attribute.WINDGUST],
     Capability.PARTYVOICE23922_WINDSPEED5: [Attribute.W_SPEED],
+    Capability.VALLEYBOARD16460_DEBUG: [Attribute.VALUE],
     Capability.TAG_E2E_ENCRYPTION: [Attribute.ENCRYPTION],
     Capability.TAG_FACTORY_RESET: [],
     Capability.TAG_SEARCHING_STATUS: [Attribute.SEARCHING_STATUS],

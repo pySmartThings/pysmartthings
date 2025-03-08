@@ -31,6 +31,7 @@ class Command(StrEnum):
     CHANNEL_UP = "channelUp"
     CHECK_FOR_FIRMWARE_UPDATE = "checkForFirmwareUpdate"
     CHIME = "chime"
+    CLEAR = "clear"
     CLIENT_ICE = "clientIce"
     CLOSE = "close"
     CONFIGURE = "configure"
@@ -98,6 +99,7 @@ class Command(StrEnum):
     POST_OCF_COMMAND = "postOcfCommand"
     PRESET_POSITION = "presetPosition"
     PREVIOUS_TRACK = "previousTrack"
+    PUBLISH = "publish"
     PUSH = "push"
     RAISE_SETPOINT = "raiseSetpoint"
     RECORD_START = "recordStart"
@@ -187,6 +189,7 @@ class Command(StrEnum):
     SET_DETECTION_PROXIMITY = "setDetectionProximity"
     SET_DETERGENT_TYPE = "setDetergentType"
     SET_DEVICE_EUI = "setDeviceEui"
+    SET_DEVICE_TYPE = "setDeviceType"
     SET_DISHWASHER_DELAY_START_TIME = "setDishwasherDelayStartTime"
     SET_DO_NOT_DISTURB_MODE = "setDoNotDisturbMode"
     SET_DOSAGE = "setDosage"
@@ -261,9 +264,11 @@ class Command(StrEnum):
     SET_NAME = "setName"
     SET_OPERATING_STATE = "setOperatingState"
     SET_OPERATION_MODE = "setOperationMode"
+    SET_OPERATION_ORIGIN = "setOperationOrigin"
     SET_OPERATION_TIME = "setOperationTime"
     SET_OPTIONS = "setOptions"
     SET_ORDER_THRESHOLD = "setOrderThreshold"
+    SET_OUTING_MODE = "setOutingMode"
     SET_OVEN_MODE = "setOvenMode"
     SET_OVEN_SETPOINT = "setOvenSetpoint"
     SET_PATROL = "setPatrol"
@@ -340,6 +345,7 @@ class Command(StrEnum):
     SET_TV_CHANNEL_NAME = "setTvChannelName"
     SET_TYPE = "setType"
     SET_USER_LOCATION = "setUserLocation"
+    SET_VALUE = "setValue"
     SET_VOLUME = "setVolume"
     SET_WASHER_AUTO_DETERGENT = "setWasherAutoDetergent"
     SET_WASHER_AUTO_SOFTENER = "setWasherAutoSoftener"
@@ -358,6 +364,8 @@ class Command(StrEnum):
     SET_WELCOME_MESSAGE = "setWelcomeMessage"
     SET_WIND_MODE = "setWindMode"
     SET_ZONE_BOOSTER = "setZoneBooster"
+    SETV_HUMIDITY = "setvHumidity"
+    SETV_TEMP = "setvTemp"
     SIREN = "siren"
     SPEAK = "speak"
     START = "start"
@@ -375,6 +383,7 @@ class Command(StrEnum):
     STOP_TALKBACK = "stopTalkback"
     STROBE = "strobe"
     TAKE = "take"
+    TOGGLE = "toggle"
     TRIGGER_MANUAL_SENSING = "triggerManualSensing"
     UNLATCH = "unlatch"
     UNLOCK = "unlock"
@@ -709,6 +718,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_JOB_BEGINNING_STATUS: [],
     Capability.CUSTOM_LAUNCH_APP: [Command.LAUNCH_APP],
     Capability.CUSTOM_OCF_RESOURCE_VERSION: [],
+    Capability.CUSTOM_OUTING_MODE: [Command.SET_OUTING_MODE],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [],
     Capability.CUSTOM_PERIODIC_SENSING: [
         Command.PERIODIC_SENSING_OFF,
@@ -873,6 +883,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.START,
     ],
     Capability.SAMSUNG_CE_DUST_FILTER_ALARM: [Command.SET_ALARM_THRESHOLD],
+    Capability.SAMSUNG_CE_EHS_FSV_SETTINGS: [Command.REFRESH, Command.SET_VALUE],
+    Capability.SAMSUNG_CE_EHS_TEMPERATURE_REFERENCE: [],
+    Capability.SAMSUNG_CE_EHS_THERMOSTAT: [],
     Capability.SAMSUNG_CE_ENERGY_PLANNER: [Command.SET_DATA, Command.SET_PLAN],
     Capability.SAMSUNG_CE_ERROR_AND_ALARM_STATE: [],
     Capability.SAMSUNG_CE_FLEXIBLE_AUTO_DISPENSE_DETERGENT: [
@@ -909,6 +922,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_MEAT_PROBE: [Command.SET_TEMPERATURE_SETPOINT],
     Capability.SAMSUNG_CE_MICROWAVE_POWER: [Command.SET_POWER_LEVEL],
     Capability.SAMSUNG_CE_MUSIC_PLAYLIST: [Command.SET_PLAYLIST],
+    Capability.SAMSUNG_CE_OPERATION_ORIGIN: [Command.SET_OPERATION_ORIGIN],
     Capability.SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT: [],
     Capability.SAMSUNG_CE_OVEN_MODE: [Command.SET_OVEN_MODE],
     Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: [
@@ -1028,6 +1042,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_STEAM_CLOSET_KEEP_FRESH_MODE: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_TEMPERATURE_SETTING: [Command.SET_DESIRED_TEMPERATURE],
+    Capability.SAMSUNG_CE_TOGGLE_SWITCH: [Command.OFF, Command.ON, Command.TOGGLE],
     Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [],
     Capability.SAMSUNG_CE_VIEW_INSIDE: [
         Command.REFRESH,
@@ -1181,15 +1196,28 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_BAROMETER2: [],
     Capability.PARTYVOICE23922_CLOUDCOVER: [],
     Capability.PARTYVOICE23922_CREATEANOTHER: [Command.PUSH],
+    Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Command.SET_DEVICE_TYPE],
+    Capability.PARTYVOICE23922_CREATEMQTTDEV9: [Command.SET_DEVICE_TYPE],
+    Capability.PARTYVOICE23922_HTTPCODE: [],
+    Capability.PARTYVOICE23922_HTTPRESPONSE: [],
+    Capability.PARTYVOICE23922_MQTTPUBLISH: [Command.PUBLISH],
+    Capability.PARTYVOICE23922_ONVIFINFO: [],
+    Capability.PARTYVOICE23922_ONVIFSTATUS: [],
     Capability.PARTYVOICE23922_PRECIPPROB: [],
     Capability.PARTYVOICE23922_PRECIPRATE: [],
+    Capability.PARTYVOICE23922_REFRESH: [Command.PUSH],
+    Capability.PARTYVOICE23922_STATUS: [],
     Capability.PARTYVOICE23922_SUMMARY: [],
     Capability.PARTYVOICE23922_TEMPMAX: [],
     Capability.PARTYVOICE23922_TEMPMIN: [],
+    Capability.PARTYVOICE23922_TOPICLIST: [],
+    Capability.PARTYVOICE23922_VHUMIDITYSET: [Command.SETV_HUMIDITY],
+    Capability.PARTYVOICE23922_VTEMPSET: [Command.SETV_TEMP],
     Capability.PARTYVOICE23922_WINDDIRDEG: [],
     Capability.PARTYVOICE23922_WINDDIRECTION2: [],
     Capability.PARTYVOICE23922_WINDGUST: [],
     Capability.PARTYVOICE23922_WINDSPEED5: [],
+    Capability.VALLEYBOARD16460_DEBUG: [Command.CLEAR, Command.SET_VALUE],
     Capability.TAG_E2E_ENCRYPTION: [Command.OFF, Command.ON],
     Capability.TAG_FACTORY_RESET: [Command.RESET],
     Capability.TAG_SEARCHING_STATUS: [],
