@@ -1,0 +1,18 @@
+{
+  "eventTime": 1740761861429,
+  "eventType": "DEVICE_LIFECYCLE_EVENT",
+  "deviceLifecycleEvent": {
+    "lifecycle": "ROOM_MOVE",
+    "eventId": "aa020c2b-fada-11ef-a691-d74084aaa858",
+    "locationId": "fb5dd659-35ac-4a53-a3cb-3093db7a04ad",
+    "ownerId": "fb5dd659-35ac-4a53-a3cb-3093db7a04ad",
+    "ownerType": "LOCATION",
+    "deviceId": "9aa42eba-7c98-6d33-6b9a-b3cd40276383",
+    "deviceName": "G6",
+    "principal": "09714f26-6c5e-2785-67ce-e43517507228",
+    "roomMove": {
+      "roomIdFrom": "4a8b4abd-3f1b-4c93-9585-8a3fc9958bba",
+      "roomIdTo": "83ca5360-1938-4e7d-9eac-bec26b283e82"
+    }
+  }
+}
