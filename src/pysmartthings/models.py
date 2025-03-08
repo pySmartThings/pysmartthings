@@ -441,6 +441,7 @@ class Lifecycle(StrEnum):
     CREATE = "CREATE"
     UPDATE = "UPDATE"
     DELETE = "DELETE"
+    ROOM_MOVE = "ROOM_MOVE"
 
 
 @dataclass
