@@ -23,6 +23,14 @@ class SmartThingsRateLimitError(SmartThingsError):
     """SmartThings rate limit exception."""
 
 
+class SmartThingsSinkError(SmartThingsError):
+    """SmartThings sink exception."""
+
+
+class SmartThingsForbiddenError(SmartThingsError):
+    """SmartThings forbidden exception."""
+
+
 class SmartThingsCommandError(SmartThingsError):
     """SmartThings command exception."""
 
