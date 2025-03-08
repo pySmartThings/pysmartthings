@@ -180,22 +180,22 @@ class SmartThings:
 
     async def get_locations(self) -> list[BaseLocation]:
         """Retrieve SmartThings locations."""
-        resp = await self._get("locations")
+        resp = await self._get("v1/locations")
         return LocationResponse.from_json(resp).items
 
     async def get_location(self, location_id: str) -> Location:
         """Retrieve a location with the specified ID."""
-        resp = await self._get(f"locations/{location_id}")
+        resp = await self._get(f"v1/locations/{location_id}")
         return Location.from_json(resp)
 
     async def get_rooms(self, location_id: str) -> list[Room]:
         """Retrieve a list of rooms for a location."""
-        resp = await self._get(f"locations/{location_id}/rooms")
+        resp = await self._get(f"v1/locations/{location_id}/rooms")
         return RoomResponse.from_json(resp).items
 
     async def get_room(self, location_id: str, room_id: str) -> Room:
         """Retrieve a specific room."""
-        resp = await self._get(f"locations/{location_id}/rooms/{room_id}")
+        resp = await self._get(f"v1/locations/{location_id}/rooms/{room_id}")
         return Room.from_json(resp)
 
     async def _get_devices(
@@ -213,7 +213,7 @@ class SmartThings:
             params["locationId"] = ",".join(location_ids)
         if device_ids:
             params["deviceId"] = ",".join(device_ids)
-        return await self._get("devices", params=params)
+        return await self._get("v1/devices", params=params)
 
     async def get_devices(
         self,
@@ -236,7 +236,7 @@ class SmartThings:
 
     async def _get_device(self, device_id: str) -> str:
         """Retrieve a device with the specified ID."""
-        return await self._get(f"devices/{device_id}")
+        return await self._get(f"v1/devices/{device_id}")
 
     async def get_device(self, device_id: str) -> Device:
         """Retrieve a device with the specified ID."""
@@ -252,16 +252,16 @@ class SmartThings:
         params = {}
         if location_id:
             params["locationId"] = location_id
-        resp = await self._get("scenes", params=params)
+        resp = await self._get("v1/scenes", params=params)
         return SceneResponse.from_json(resp).items
 
     async def execute_scene(self, scene_id: str) -> None:
         """Execute the scene with the specified ID."""
-        await self._post(f"scenes/{scene_id}/execute")
+        await self._post(f"v1/scenes/{scene_id}/execute")
 
     async def _get_device_status(self, device_id: str) -> str:
         """Retrieve the status of a device."""
-        return await self._get(f"devices/{device_id}/status")
+        return await self._get(f"v1/devices/{device_id}/status")
 
     async def get_device_status(
         self, device_id: str
@@ -277,7 +277,7 @@ class SmartThings:
 
     async def get_capability(self, capability: Capability | str) -> str:
         """Retrieve the capability schema."""
-        return await self._get(f"capabilities/{capability}/1")
+        return await self._get(f"v1/capabilities/{capability}/1")
 
     async def execute_device_command(
         self,
@@ -299,7 +299,7 @@ class SmartThings:
             )
         LOGGER.debug("Executing command for device %s: %s", device_id, command_payload)
         response = await self._post(
-            f"devices/{device_id}/commands",
+            f"v1/devices/{device_id}/commands",
             data={"commands": [command_payload]},
         )
         LOGGER.debug("Command response: %s", response)
