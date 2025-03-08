@@ -83,7 +83,6 @@ class SmartThings:
         """Get headers for requests."""
         return {
             "Authorization": f"Bearer {self._token}",
-            "version": f"application/vnd.smartthings+json;v={API_VERSION}",
         }
 
     async def _request(
@@ -99,12 +98,12 @@ class SmartThings:
             scheme="https",
             host=API_BASE,
             port=443,
-        ).joinpath(f"v1/{uri}")
+        ).joinpath(uri)
 
         await self.refresh_token()
 
         headers = {
-            "Accept": "application/json, text/plain, */*",
+            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
             **self._get_headers(),
         }
 
