@@ -51,13 +51,13 @@ async def test_fetching_devices(
 ) -> None:
     """Test getting devices."""
     responses.get(
-        f"{MOCK_URL}/devices",
+        f"{MOCK_URL}/v1/devices",
         status=200,
         body=load_fixture(f"{fixture}.json"),
     )
     assert await client.get_devices() == snapshot
     responses.assert_called_once_with(
-        f"{MOCK_URL}/devices",
+        f"{MOCK_URL}/v1/devices",
         METH_GET,
         headers=HEADERS,
         params={},
@@ -84,7 +84,7 @@ async def test_fetching_specific_devices(
     params: dict[str, Any],
 ) -> None:
     """Test getting devices."""
-    url = str(URL(f"{MOCK_URL}/devices").with_query(params))
+    url = str(URL(f"{MOCK_URL}/v1/devices").with_query(params))
     responses.get(
         url,
         status=200,
@@ -92,7 +92,7 @@ async def test_fetching_specific_devices(
     )
     assert await client.get_devices(**kwargs)
     responses.assert_called_once_with(
-        f"{MOCK_URL}/devices",
+        f"{MOCK_URL}/v1/devices",
         METH_GET,
         headers=HEADERS,
         params=params,
@@ -107,13 +107,13 @@ async def test_fetching_single_device(
 ) -> None:
     """Test getting a single device."""
     responses.get(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370",
         status=200,
         body=load_fixture("device.json"),
     )
     assert await client.get_device("440063de-a200-40b5-8a6b-f3399eaa0370") == snapshot
     responses.assert_called_once_with(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370",
         METH_GET,
         headers=HEADERS,
         params=None,
@@ -206,7 +206,7 @@ async def test_fetching_status_of_single_device(
 ) -> None:
     """Test getting a single device."""
     responses.get(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
         status=200,
         body=load_fixture(f"device_status/{fixture}.json"),
     )
@@ -215,7 +215,7 @@ async def test_fetching_status_of_single_device(
         == snapshot
     )
     responses.assert_called_once_with(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
         METH_GET,
         headers=HEADERS,
         params=None,
@@ -244,7 +244,7 @@ async def test_executing_command(
 ) -> None:
     """Test executing a command."""
     responses.post(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
         status=200,
         body=load_fixture("executed_command.json"),
     )
@@ -252,7 +252,7 @@ async def test_executing_command(
         "440063de-a200-40b5-8a6b-f3399eaa0370", capability, command, argument=argument
     )
     responses.assert_called_once_with(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
         METH_POST,
         headers=HEADERS,
         params=None,
@@ -266,7 +266,7 @@ async def test_executing_command_error(
 ) -> None:
     """Test executing a command."""
     responses.post(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
         status=422,
         body=load_fixture("device_command_error.json"),
     )
@@ -293,7 +293,7 @@ async def test_fetching_unknown_capability(
     """Test getting a single device."""
     caplog.set_level(logging.DEBUG)
     responses.get(
-        f"{MOCK_URL}/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
         status=200,
         body=load_fixture("device_status/fake.json"),
     )
@@ -315,7 +315,7 @@ async def test_fetching_unknown_category(
     """Test getting a single device."""
     caplog.set_level(logging.DEBUG)
     responses.get(
-        f"{MOCK_URL}/devices",
+        f"{MOCK_URL}/v1/devices",
         status=200,
         body=load_fixture("devices_fake.json"),
     )

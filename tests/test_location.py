@@ -17,11 +17,11 @@ async def test_fetching_all_locations(
 ) -> None:
     """Test getting all locations."""
     responses.get(
-        f"{MOCK_URL}/locations", status=200, body=load_fixture("locations.json")
+        f"{MOCK_URL}/v1/locations", status=200, body=load_fixture("locations.json")
     )
     assert await client.get_locations() == snapshot
     responses.assert_called_once_with(
-        f"{MOCK_URL}/locations",
+        f"{MOCK_URL}/v1/locations",
         METH_GET,
         headers=HEADERS,
         params=None,
@@ -36,13 +36,13 @@ async def test_fetching_single_location(
 ) -> None:
     """Test getting a single location."""
     responses.get(
-        f"{MOCK_URL}/locations/397678e5-9995-4a39-9d9f-ae6ba310236b",
+        f"{MOCK_URL}/v1/locations/397678e5-9995-4a39-9d9f-ae6ba310236b",
         status=200,
         body=load_fixture("location.json"),
     )
     assert await client.get_location("397678e5-9995-4a39-9d9f-ae6ba310236b") == snapshot
     responses.assert_called_once_with(
-        f"{MOCK_URL}/locations/397678e5-9995-4a39-9d9f-ae6ba310236b",
+        f"{MOCK_URL}/v1/locations/397678e5-9995-4a39-9d9f-ae6ba310236b",
         METH_GET,
         headers=HEADERS,
         params=None,
