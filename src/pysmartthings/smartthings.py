@@ -58,7 +58,7 @@ class SmartThings:
     _token: str | None = None
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
-    refresh_subscription_url_function: Callable[[str], None] | None = None
+    refresh_subscription_url_function: Callable[[str | None], None] | None = None
     __capability_event_listeners: dict[
         tuple[str, str, Capability | str],
         list[Callable[[DeviceEvent], None]],
@@ -346,7 +346,7 @@ class SmartThings:
         self.__device_event_listeners[device_id].append(callback)
         return lambda: self.__device_event_listeners[device_id].remove(callback)
 
-    async def _create_subscription(
+    async def create_subscription(
         self, location_id: str, installed_app_id: str
     ) -> Subscription:
         """Create a subscription."""
@@ -420,37 +420,37 @@ class SmartThings:
         self,
         location_id: str,
         installed_app_id: str,
-        subscription_url: str | None = None,
+        subscription_url: str,
     ) -> None:
         """Create a subscription."""
         self.__retry_count = 0
-        new_subscription_required = subscription_url is None
-        using_old_sub = subscription_url is not None
+        using_existing_sub = True
+        should_create_sub = False
         timeout = ClientTimeout(
             total=None, connect=None, sock_connect=None, sock_read=None
         )
         async with ClientSession(timeout=timeout) as session:
             while True:
                 try:
-                    if new_subscription_required:
-                        subscription = await self._create_subscription(
+                    if should_create_sub:
+                        subscription = await self.create_subscription(
                             location_id, installed_app_id
                         )
                         subscription_url = subscription.registration_url
                         LOGGER.debug("Subscription created: %s", subscription)
-                        new_subscription_required = False
-                        using_old_sub = False
+                        should_create_sub = False
+                        using_existing_sub = False
                         if self.refresh_subscription_url_function:
                             self.refresh_subscription_url_function(subscription_url)
                     else:
-                        LOGGER.debug("Using old subscription URL: %s", subscription_url)
-                    assert subscription_url is not None  # noqa: S101
+                        LOGGER.debug("Using subscription URL: %s", subscription_url)
                     await self._internal_subscribe(session, subscription_url)
-                    new_subscription_required = True
+                    should_create_sub = True
                 except SmartThingsSinkError:  # noqa: PERF203
-                    raise
+                    if self.refresh_subscription_url_function:
+                        self.refresh_subscription_url_function(None)
                 except ConnectionError:
-                    if not using_old_sub:
+                    if not using_existing_sub:
                         msg = "Connection error occurred while subscribing to events"
                         LOGGER.exception(msg)
                         await asyncio.sleep(2**self.__retry_count)
@@ -459,7 +459,7 @@ class SmartThings:
                         "Connection error occurred while subscribing to events, "
                         "will request a new subscription"
                     )
-                    new_subscription_required = True
+                    should_create_sub = True
                 except Exception:  # pylint: disable=broad-except  # noqa: BLE001
                     msg = "Error occurred while subscribing to events"
                     LOGGER.exception(msg)
