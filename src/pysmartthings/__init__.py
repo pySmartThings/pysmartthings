@@ -8,8 +8,10 @@ from .exceptions import (
     SmartThingsCommandError,
     SmartThingsConnectionError,
     SmartThingsError,
+    SmartThingsForbiddenError,
     SmartThingsNotFoundError,
     SmartThingsRateLimitError,
+    SmartThingsSinkError,
 )
 from .models import (
     BaseLocation,
@@ -61,7 +63,9 @@ __all__ = [
     "SmartThingsCommandError",
     "SmartThingsConnectionError",
     "SmartThingsError",
+    "SmartThingsForbiddenError",
     "SmartThingsNotFoundError",
     "SmartThingsRateLimitError",
+    "SmartThingsSinkError",
     "Status",
 ]
