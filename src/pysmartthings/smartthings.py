@@ -181,7 +181,6 @@ class SmartThings:
     async def get_locations(self) -> list[BaseLocation]:
         """Retrieve SmartThings locations."""
         resp = await self._get("v1/locations")
-        LOGGER.warning("Locations: %s", resp)
         return LocationResponse.from_json(resp).items
 
     async def get_location(self, location_id: str) -> Location:
