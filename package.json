@@ -9,6 +9,6 @@
   "author": "Andrew Sayre <andrew@sayre.net>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "prettier": "3.5.2"
+    "prettier": "3.5.3"
   }
 }
