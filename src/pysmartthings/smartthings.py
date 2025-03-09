@@ -449,6 +449,7 @@ class SmartThings:
                 except SmartThingsSinkError:  # noqa: PERF203
                     if self.refresh_subscription_url_function:
                         self.refresh_subscription_url_function(None)
+                        break
                 except ConnectionError:
                     if not using_existing_sub:
                         msg = "Connection error occurred while subscribing to events"
