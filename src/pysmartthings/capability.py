@@ -509,3 +509,8 @@ class Capability(StrEnum):
     PARTYVOICE23922_WINDDIRECTION2 = "partyvoice23922.winddirection2"
     PARTYVOICE23922_WINDGUST = "partyvoice23922.windgust"
     PARTYVOICE23922_WINDSPEED5 = "partyvoice23922.windspeed5"
+
+    RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE = (
+        "rivertalent14263.adaptiveEnergyUsageState"
+    )
+    RIVERTALENT14263_ENERGY_METER_PROPERTIES = "rivertalent14263.energyMeterProperties"
