@@ -371,6 +371,7 @@ class SmartThings:
 
     async def _internal_subscribe(self, session: ClientSession, url: str) -> None:
         """Subscribe to events."""
+        await self.refresh_token()
         async with EventSource(
             url, session=session, headers=self._get_headers(), on_open=self.__on_open
         ) as event_source:
