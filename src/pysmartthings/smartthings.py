@@ -58,7 +58,7 @@ class SmartThings:
     _token: str | None = None
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
-    refresh_subscription_url_function: Callable[[str | None], None] | None = None
+    refresh_subscription: Callable[[str | None, str | None], None] | None = None
     __capability_event_listeners: dict[
         tuple[str, str, Capability | str],
         list[Callable[[DeviceEvent], None]],
@@ -421,6 +421,7 @@ class SmartThings:
         location_id: str,
         installed_app_id: str,
         subscription_url: str,
+        subscription_id: str,
     ) -> None:
         """Create a subscription."""
         self.__retry_count = 0
@@ -437,18 +438,20 @@ class SmartThings:
                             location_id, installed_app_id
                         )
                         subscription_url = subscription.registration_url
+                        subscription_id = subscription.subscription_id
                         LOGGER.debug("Subscription created: %s", subscription)
                         should_create_sub = False
                         using_existing_sub = False
-                        if self.refresh_subscription_url_function:
-                            self.refresh_subscription_url_function(subscription_url)
+                        if self.refresh_subscription:
+                            self.refresh_subscription(subscription_url, subscription_id)
                     else:
                         LOGGER.debug("Using subscription URL: %s", subscription_url)
                     await self._internal_subscribe(session, subscription_url)
+                    await self.delete_subscription(subscription_id)
                     should_create_sub = True
                 except SmartThingsSinkError:  # noqa: PERF203
-                    if self.refresh_subscription_url_function:
-                        self.refresh_subscription_url_function(None)
+                    if self.refresh_subscription:
+                        self.refresh_subscription(None, None)
                         break
                 except ConnectionError:
                     if not using_existing_sub:
@@ -466,6 +469,10 @@ class SmartThings:
                     LOGGER.exception(msg)
                     await asyncio.sleep(2**self.__retry_count)
                     self.__retry_count += 1
+
+    async def delete_subscription(self, subscription_id: str) -> None:
+        """Delete a subscription."""
+        await self._delete(f"subscriptions/{subscription_id}")
 
     async def close(self) -> None:
         """Close open client session."""
