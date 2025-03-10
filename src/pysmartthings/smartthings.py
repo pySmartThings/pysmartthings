@@ -58,7 +58,8 @@ class SmartThings:
     _token: str | None = None
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
-    refresh_subscription: Callable[[str | None, str | None], None] | None = None
+    new_subscription_id_callback: Callable[[str | None], None] | None = None
+    max_connections_reached_callback: Callable[[], None] | None = None
     __capability_event_listeners: dict[
         tuple[str, str, Capability | str],
         list[Callable[[DeviceEvent], None]],
@@ -369,7 +370,7 @@ class SmartThings:
         )
         return Subscription.from_json(resp)
 
-    async def _internal_subscribe(self, session: ClientSession, url: str) -> None:
+    async def _internal_subscribe(self, session: ClientSession, url: str) -> None:  # noqa: PLR0912
         """Subscribe to events."""
         await self.refresh_token()
         async with EventSource(
@@ -380,21 +381,27 @@ class SmartThings:
                 if event.type == EventType.DEVICE_EVENT:
                     event_type = DeviceEventRoot.from_json(event.data)
                     device_event = event_type.device_event
-                    for callback in self.__unspecified_device_event_listeners:
-                        callback(device_event)
-                    if device_event.device_id in self.__device_event_listeners:
-                        for callback in self.__device_event_listeners[
-                            device_event.device_id
-                        ]:
+                    try:
+                        for callback in self.__unspecified_device_event_listeners:
                             callback(device_event)
-                    key = (
-                        device_event.device_id,
-                        device_event.component_id,
-                        device_event.capability,
-                    )
-                    if key in self.__capability_event_listeners:
-                        for callback in self.__capability_event_listeners[key]:
-                            callback(device_event)
+                        if device_event.device_id in self.__device_event_listeners:
+                            for callback in self.__device_event_listeners[
+                                device_event.device_id
+                            ]:
+                                callback(device_event)
+                        key = (
+                            device_event.device_id,
+                            device_event.component_id,
+                            device_event.capability,
+                        )
+                        if key in self.__capability_event_listeners:
+                            for callback in self.__capability_event_listeners[key]:
+                                callback(device_event)
+                    except Exception:  # pylint: disable=broad-except  # noqa: BLE001
+                        LOGGER.exception(
+                            "Error occurred while processing device event: %s",
+                            device_event,
+                        )
                 elif event.type == EventType.DEVICE_LIFECYCLE_EVENT:
                     lifecycle_event = DeviceLifecycleEventRoot.from_json(event.data)
                     device_lifecycle_event = lifecycle_event.device_lifecycle_event
@@ -420,62 +427,63 @@ class SmartThings:
         self,
         location_id: str,
         installed_app_id: str,
-        subscription_url: str,
-        subscription_id: str,
+        initial_subscription: Subscription | None = None,
     ) -> None:
         """Create a subscription."""
         self.__retry_count = 0
-        using_existing_sub = True
-        should_create_sub = False
+        using_initial = initial_subscription is not None
         timeout = ClientTimeout(
             total=None, connect=None, sock_connect=None, sock_read=None
         )
         async with ClientSession(timeout=timeout) as session:
             while True:
                 try:
-                    if should_create_sub:
+                    if using_initial:
+                        assert initial_subscription is not None  # noqa: S101
+                        LOGGER.debug(
+                            "Using initial subscription: %s", initial_subscription
+                        )
+                        subscription_id = initial_subscription.subscription_id
+                        subscription_url = initial_subscription.registration_url
+                    else:
                         subscription = await self.create_subscription(
                             location_id, installed_app_id
                         )
-                        subscription_url = subscription.registration_url
                         subscription_id = subscription.subscription_id
+                        subscription_url = subscription.registration_url
                         LOGGER.debug("Subscription created: %s", subscription)
-                        should_create_sub = False
-                        using_existing_sub = False
-                        if self.refresh_subscription:
-                            self.refresh_subscription(subscription_url, subscription_id)
-                    else:
-                        LOGGER.debug("Using subscription URL: %s", subscription_url)
+                        if self.new_subscription_id_callback:
+                            self.new_subscription_id_callback(subscription_id)
                     await self._internal_subscribe(session, subscription_url)
-                    LOGGER.debug("Deleting subscription: %s", subscription_id)
+                    using_initial = False
                     await self.delete_subscription(subscription_id)
-                    should_create_sub = True
                 except SmartThingsSinkError:  # noqa: PERF203
-                    if self.refresh_subscription:
-                        self.refresh_subscription(None, None)
+                    # This is only triggered by creating a new one
+                    # So we don't have an active one and thus don't have to delete one
+                    if self.max_connections_reached_callback:
+                        self.max_connections_reached_callback()
                         break
                 except ConnectionError:
-                    if not using_existing_sub:
-                        msg = "Connection error occurred while subscribing to events"
-                        LOGGER.exception(msg)
-                        await asyncio.sleep(2**self.__retry_count)
-                        self.__retry_count += 1
-                    LOGGER.debug(
-                        "Connection error occurred while subscribing to events, "
-                        "will request a new subscription"
-                    )
-                    LOGGER.debug("Deleting subscription: %s", subscription_id)
+                    msg = "Connection error occurred while subscribing to events"
+                    LOGGER.exception(msg)
+                    await asyncio.sleep(2**self.__retry_count)
+                    self.__retry_count += 1
                     await self.delete_subscription(subscription_id)
-                    should_create_sub = True
+                    using_initial = False
                 except Exception:  # pylint: disable=broad-except  # noqa: BLE001
                     msg = "Error occurred while subscribing to events"
                     LOGGER.exception(msg)
                     await asyncio.sleep(2**self.__retry_count)
                     self.__retry_count += 1
+                    await self.delete_subscription(subscription_id)
+                    using_initial = False
 
     async def delete_subscription(self, subscription_id: str) -> None:
         """Delete a subscription."""
+        LOGGER.debug("Deleting subscription: %s", subscription_id)
         await self._delete(f"subscriptions/{subscription_id}")
+        if self.new_subscription_id_callback:
+            self.new_subscription_id_callback(None)
 
     async def close(self) -> None:
         """Close open client session."""
