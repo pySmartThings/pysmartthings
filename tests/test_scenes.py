@@ -16,13 +16,13 @@ async def test_fetching_all_scenes(
 ) -> None:
     """Test getting all scenes."""
     responses.get(
-        f"{MOCK_URL}/scenes",
+        f"{MOCK_URL}/v1/scenes",
         status=200,
         body=load_fixture("scenes.json"),
     )
     assert await client.get_scenes() == snapshot
     responses.assert_called_once_with(
-        f"{MOCK_URL}/scenes",
+        f"{MOCK_URL}/v1/scenes",
         METH_GET,
         headers=HEADERS,
         params={},
@@ -36,13 +36,13 @@ async def test_fetch_scenes_for_location(
 ) -> None:
     """Test getting all scenes."""
     responses.get(
-        f"{MOCK_URL}/scenes?locationId=397678e5-9995-4a39-9d9f-ae6ba310236b",
+        f"{MOCK_URL}/v1/scenes?locationId=397678e5-9995-4a39-9d9f-ae6ba310236b",
         status=200,
         body=load_fixture("scenes.json"),
     )
     assert await client.get_scenes("397678e5-9995-4a39-9d9f-ae6ba310236b")
     responses.assert_called_once_with(
-        f"{MOCK_URL}/scenes",
+        f"{MOCK_URL}/v1/scenes",
         METH_GET,
         headers=HEADERS,
         params={"locationId": "397678e5-9995-4a39-9d9f-ae6ba310236b"},
@@ -56,13 +56,13 @@ async def test_executing_scene(
 ) -> None:
     """Test executing a scene."""
     responses.post(
-        f"{MOCK_URL}/scenes/3a570170-7c10-4e5a-bef8-0d02175798f2/execute",
+        f"{MOCK_URL}/v1/scenes/3a570170-7c10-4e5a-bef8-0d02175798f2/execute",
         status=200,
         body=load_fixture("scene_execute.json"),
     )
     await client.execute_scene("3a570170-7c10-4e5a-bef8-0d02175798f2")
     responses.assert_called_once_with(
-        f"{MOCK_URL}/scenes/3a570170-7c10-4e5a-bef8-0d02175798f2/execute",
+        f"{MOCK_URL}/v1/scenes/3a570170-7c10-4e5a-bef8-0d02175798f2/execute",
         METH_POST,
         headers=HEADERS,
         params=None,

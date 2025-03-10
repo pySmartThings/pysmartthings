@@ -6,9 +6,9 @@ import asyncio
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, Callable, Self, cast
 
-from aiohttp import ClientSession
+from aiohttp import ClientSession, ClientTimeout
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
-from aiosseclient import aiosseclient
+from aiohttp_sse_client2.client import EventSource
 import orjson
 from yarl import URL
 
@@ -17,6 +17,8 @@ from .exceptions import (
     SmartThingsAuthenticationFailedError,
     SmartThingsCommandError,
     SmartThingsConnectionError,
+    SmartThingsForbiddenError,
+    SmartThingsSinkError,
 )
 from .models import (
     BaseLocation,
@@ -56,6 +58,7 @@ class SmartThings:
     _token: str | None = None
     session: ClientSession | None = None
     refresh_token_function: Callable[[], Awaitable[str]] | None = None
+    refresh_subscription_url_function: Callable[[str | None], None] | None = None
     __capability_event_listeners: dict[
         tuple[str, str, Capability | str],
         list[Callable[[DeviceEvent], None]],
@@ -69,6 +72,7 @@ class SmartThings:
     __device_lifecycle_event_listeners: dict[Lifecycle, list[Callable[[str], None]]] = (
         field(default_factory=dict)
     )
+    __retry_count: int = 0
 
     async def refresh_token(self) -> None:
         """Refresh token with provided function."""
@@ -130,6 +134,14 @@ class SmartThings:
             msg = "Authentication failed with SmartThings"
             raise SmartThingsAuthenticationFailedError(msg)
 
+        if response.status == 409:
+            msg = "Reached limit of subscriptions"
+            raise SmartThingsSinkError(msg)
+
+        if response.status == 403:
+            msg = "Forbidden"
+            raise SmartThingsForbiddenError(msg)
+
         if response.status == 422:
             raise SmartThingsCommandError(ErrorResponse.from_json(text))
 
@@ -168,22 +180,22 @@ class SmartThings:
 
     async def get_locations(self) -> list[BaseLocation]:
         """Retrieve SmartThings locations."""
-        resp = await self._get("locations")
+        resp = await self._get("v1/locations")
         return LocationResponse.from_json(resp).items
 
     async def get_location(self, location_id: str) -> Location:
         """Retrieve a location with the specified ID."""
-        resp = await self._get(f"locations/{location_id}")
+        resp = await self._get(f"v1/locations/{location_id}")
         return Location.from_json(resp)
 
     async def get_rooms(self, location_id: str) -> list[Room]:
         """Retrieve a list of rooms for a location."""
-        resp = await self._get(f"locations/{location_id}/rooms")
+        resp = await self._get(f"v1/locations/{location_id}/rooms")
         return RoomResponse.from_json(resp).items
 
     async def get_room(self, location_id: str, room_id: str) -> Room:
         """Retrieve a specific room."""
-        resp = await self._get(f"locations/{location_id}/rooms/{room_id}")
+        resp = await self._get(f"v1/locations/{location_id}/rooms/{room_id}")
         return Room.from_json(resp)
 
     async def _get_devices(
@@ -201,7 +213,7 @@ class SmartThings:
             params["locationId"] = ",".join(location_ids)
         if device_ids:
             params["deviceId"] = ",".join(device_ids)
-        return await self._get("devices", params=params)
+        return await self._get("v1/devices", params=params)
 
     async def get_devices(
         self,
@@ -224,7 +236,7 @@ class SmartThings:
 
     async def _get_device(self, device_id: str) -> str:
         """Retrieve a device with the specified ID."""
-        return await self._get(f"devices/{device_id}")
+        return await self._get(f"v1/devices/{device_id}")
 
     async def get_device(self, device_id: str) -> Device:
         """Retrieve a device with the specified ID."""
@@ -240,16 +252,16 @@ class SmartThings:
         params = {}
         if location_id:
             params["locationId"] = location_id
-        resp = await self._get("scenes", params=params)
+        resp = await self._get("v1/scenes", params=params)
         return SceneResponse.from_json(resp).items
 
     async def execute_scene(self, scene_id: str) -> None:
         """Execute the scene with the specified ID."""
-        await self._post(f"scenes/{scene_id}/execute")
+        await self._post(f"v1/scenes/{scene_id}/execute")
 
     async def _get_device_status(self, device_id: str) -> str:
         """Retrieve the status of a device."""
-        return await self._get(f"devices/{device_id}/status")
+        return await self._get(f"v1/devices/{device_id}/status")
 
     async def get_device_status(
         self, device_id: str
@@ -265,7 +277,7 @@ class SmartThings:
 
     async def get_capability(self, capability: Capability | str) -> str:
         """Retrieve the capability schema."""
-        return await self._get(f"capabilities/{capability}/1")
+        return await self._get(f"v1/capabilities/{capability}/1")
 
     async def execute_device_command(
         self,
@@ -287,7 +299,7 @@ class SmartThings:
             )
         LOGGER.debug("Executing command for device %s: %s", device_id, command_payload)
         response = await self._post(
-            f"devices/{device_id}/commands",
+            f"v1/devices/{device_id}/commands",
             data={"commands": [command_payload]},
         )
         LOGGER.debug("Command response: %s", response)
@@ -333,7 +345,7 @@ class SmartThings:
         self.__device_event_listeners[device_id].append(callback)
         return lambda: self.__device_event_listeners[device_id].remove(callback)
 
-    async def _create_subscription(
+    async def create_subscription(
         self, location_id: str, installed_app_id: str
     ) -> Subscription:
         """Create a subscription."""
@@ -357,55 +369,103 @@ class SmartThings:
         )
         return Subscription.from_json(resp)
 
-    async def subscribe(self, location_id: str, installed_app_id: str) -> None:
-        """Create a subscription."""
-        retry_count = 0
-        while True:
-            try:
-                subscription = await self._create_subscription(
-                    location_id, installed_app_id
-                )
-                LOGGER.debug("Subscription created: %s", subscription)
-                retry_count = 0
-                async for event in aiosseclient(
-                    subscription.registration_url,
-                    headers=self._get_headers(),
-                ):
-                    LOGGER.debug("Received event: %s", event.data)
-                    if event.event == EventType.DEVICE_EVENT:
-                        event_type = DeviceEventRoot.from_json(event.data)
-                        device_event = event_type.device_event
-                        for callback in self.__unspecified_device_event_listeners:
+    async def _internal_subscribe(self, session: ClientSession, url: str) -> None:
+        """Subscribe to events."""
+        await self.refresh_token()
+        async with EventSource(
+            url, session=session, headers=self._get_headers(), on_open=self.__on_open
+        ) as event_source:
+            async for event in event_source:
+                LOGGER.debug("Received event: %s", event.data)
+                if event.type == EventType.DEVICE_EVENT:
+                    event_type = DeviceEventRoot.from_json(event.data)
+                    device_event = event_type.device_event
+                    for callback in self.__unspecified_device_event_listeners:
+                        callback(device_event)
+                    if device_event.device_id in self.__device_event_listeners:
+                        for callback in self.__device_event_listeners[
+                            device_event.device_id
+                        ]:
                             callback(device_event)
-                        if device_event.device_id in self.__device_event_listeners:
-                            for callback in self.__device_event_listeners[
-                                device_event.device_id
-                            ]:
-                                callback(device_event)
-                        key = (
-                            device_event.device_id,
-                            device_event.component_id,
-                            device_event.capability,
-                        )
-                        if key in self.__capability_event_listeners:
-                            for callback in self.__capability_event_listeners[key]:
-                                callback(device_event)
-                    elif event.event == EventType.DEVICE_LIFECYCLE_EVENT:
-                        lifecycle_event = DeviceLifecycleEventRoot.from_json(event.data)
-                        device_lifecycle_event = lifecycle_event.device_lifecycle_event
-                        if (
+                    key = (
+                        device_event.device_id,
+                        device_event.component_id,
+                        device_event.capability,
+                    )
+                    if key in self.__capability_event_listeners:
+                        for callback in self.__capability_event_listeners[key]:
+                            callback(device_event)
+                elif event.type == EventType.DEVICE_LIFECYCLE_EVENT:
+                    lifecycle_event = DeviceLifecycleEventRoot.from_json(event.data)
+                    device_lifecycle_event = lifecycle_event.device_lifecycle_event
+                    if (
+                        device_lifecycle_event.lifecycle
+                        in self.__device_lifecycle_event_listeners
+                    ):
+                        for dle_callback in self.__device_lifecycle_event_listeners[
                             device_lifecycle_event.lifecycle
-                            in self.__device_lifecycle_event_listeners
-                        ):
-                            for dle_callback in self.__device_lifecycle_event_listeners[
-                                device_lifecycle_event.lifecycle
-                            ]:
-                                dle_callback(device_lifecycle_event.device_id)
-            except Exception:  # pylint: disable=broad-except  # noqa: PERF203,BLE001
-                msg = "Error occurred while subscribing to events"
-                LOGGER.exception(msg)
-                await asyncio.sleep(2**retry_count)
-                retry_count += 1
+                        ]:
+                            dle_callback(device_lifecycle_event.device_id)
+                elif event.type == EventType.CONTROL_EVENT:
+                    if event.data in {"goodbye", "goobye"}:
+                        LOGGER.debug("Received goodbye event, closing connection")
+                        break
+
+    def __on_open(self) -> None:
+        """Handle the opening of the connection."""
+        LOGGER.debug("Connection opened")
+        self.__retry_count = 0
+
+    async def subscribe(
+        self,
+        location_id: str,
+        installed_app_id: str,
+        subscription_url: str,
+    ) -> None:
+        """Create a subscription."""
+        self.__retry_count = 0
+        using_existing_sub = True
+        should_create_sub = False
+        timeout = ClientTimeout(
+            total=None, connect=None, sock_connect=None, sock_read=None
+        )
+        async with ClientSession(timeout=timeout) as session:
+            while True:
+                try:
+                    if should_create_sub:
+                        subscription = await self.create_subscription(
+                            location_id, installed_app_id
+                        )
+                        subscription_url = subscription.registration_url
+                        LOGGER.debug("Subscription created: %s", subscription)
+                        should_create_sub = False
+                        using_existing_sub = False
+                        if self.refresh_subscription_url_function:
+                            self.refresh_subscription_url_function(subscription_url)
+                    else:
+                        LOGGER.debug("Using subscription URL: %s", subscription_url)
+                    await self._internal_subscribe(session, subscription_url)
+                    should_create_sub = True
+                except SmartThingsSinkError:  # noqa: PERF203
+                    if self.refresh_subscription_url_function:
+                        self.refresh_subscription_url_function(None)
+                        break
+                except ConnectionError:
+                    if not using_existing_sub:
+                        msg = "Connection error occurred while subscribing to events"
+                        LOGGER.exception(msg)
+                        await asyncio.sleep(2**self.__retry_count)
+                        self.__retry_count += 1
+                    LOGGER.debug(
+                        "Connection error occurred while subscribing to events, "
+                        "will request a new subscription"
+                    )
+                    should_create_sub = True
+                except Exception:  # pylint: disable=broad-except  # noqa: BLE001
+                    msg = "Error occurred while subscribing to events"
+                    LOGGER.exception(msg)
+                    await asyncio.sleep(2**self.__retry_count)
+                    self.__retry_count += 1
 
     async def close(self) -> None:
         """Close open client session."""
