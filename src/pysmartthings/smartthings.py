@@ -447,6 +447,7 @@ class SmartThings:
                     else:
                         LOGGER.debug("Using subscription URL: %s", subscription_url)
                     await self._internal_subscribe(session, subscription_url)
+                    LOGGER.debug("Deleting subscription: %s", subscription_id)
                     await self.delete_subscription(subscription_id)
                     should_create_sub = True
                 except SmartThingsSinkError:  # noqa: PERF203
@@ -463,6 +464,8 @@ class SmartThings:
                         "Connection error occurred while subscribing to events, "
                         "will request a new subscription"
                     )
+                    LOGGER.debug("Deleting subscription: %s", subscription_id)
+                    await self.delete_subscription(subscription_id)
                     should_create_sub = True
                 except Exception:  # pylint: disable=broad-except  # noqa: BLE001
                     msg = "Error occurred while subscribing to events"
