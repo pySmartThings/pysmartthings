@@ -178,6 +178,9 @@ class Capability(StrEnum):
     SAMSUNG_CE_CLOTHING_EXTRA_CARE = "samsungce.clothingExtraCare"
     SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CONSUMED_ENERGY = "samsungce.consumedEnergy"
+    SAMSUNG_CE_COOKTOP_BURNER_MODE = "samsungce.cooktopBurnerMode"
+    SAMSUNG_CE_COOKTOP_HEATING_POWER = "samsungce.cooktopHeatingPower"
+    SAMSUNG_CE_COOKTOP_PAN_DETECTION = "samsungce.cooktopPanDetection"
     SAMSUNG_CE_COUNT_DOWN_TIMER = "samsungce.countDownTimer"
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
     SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
@@ -290,6 +293,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_STEAM_CLOSET_DELAY_END = "samsungce.steamClosetDelayEnd"
     SAMSUNG_CE_STEAM_CLOSET_KEEP_FRESH_MODE = "samsungce.steamClosetKeepFreshMode"
     SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE = "samsungce.steamClosetSanitizeMode"
+    SAMSUNG_CE_SURFACE_RESIDUAL_HEAT = "samsungce.surfaceResidualHeat"
     SAMSUNG_CE_TEMPERATURE_SETTING = "samsungce.temperatureSetting"
     SAMSUNG_CE_TOGGLE_SWITCH = "samsungce.toggleSwitch"
     SAMSUNG_CE_UNAVAILABLE_CAPABILITIES = "samsungce.unavailableCapabilities"
@@ -523,3 +527,5 @@ class Capability(StrEnum):
         "rivertalent14263.adaptiveEnergyUsageState"
     )
     RIVERTALENT14263_ENERGY_METER_PROPERTIES = "rivertalent14263.energyMeterProperties"
+
+    WATCHPANEL55613_LCCTHERMOSTAT = "watchpanel55613.lccthermostat"
