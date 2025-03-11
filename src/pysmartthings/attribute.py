@@ -22,6 +22,7 @@ class Attribute(StrEnum):
     AIR_PURIFIER_FAN_MODE = "airPurifierFanMode"
     AIR_QUALITY = "airQuality"
     AIR_QUALITY_HEALTH_CONCERN = "airQualityHealthConcern"
+    AIR_QUALITY_MAX_LEVEL = "airQualityMaxLevel"
     ALARM = "alarm"
     ALARM_ENABLED = "alarmEnabled"
     ALARM_THRESHOLD = "alarmThreshold"
@@ -109,12 +110,14 @@ class Attribute(StrEnum):
     CONTENTS = "contents"
     COOKER_MODE = "cookerMode"
     COOKER_STATE = "cookerState"
+    COOKTOP_BURNER_MODE = "cooktopBurnerMode"
     COOKTOP_OPERATING_STATE = "cooktopOperatingState"
     COOLING_SETPOINT = "coolingSetpoint"
     COOLING_SETPOINT_RANGE = "coolingSetpointRange"
     COORDINATES = "coordinates"
     COURSE = "course"
     CREATE_DEVICE = "createDevice"
+    CREATE_QTY = "createQty"
     CURRENT = "current"
     CURRENT_TIME_PERIOD = "currentTimePeriod"
     CURRENT_TRACK = "currentTrack"
@@ -124,6 +127,7 @@ class Attribute(StrEnum):
     CUSTOM_COURSE_CANDIDATES = "customCourseCandidates"
     DASH_BOARD_VALUE = "dashBoardValue"
     DATA = "data"
+    DATE_STARTED = "dateStarted"
     DAY_LENGTH = "dayLength"
     DAY_OF_WEEK = "dayOfWeek"
     DEFAULT_OPERATION_TIME = "defaultOperationTime"
@@ -138,6 +142,7 @@ class Attribute(StrEnum):
     DEODOR_FILTER_STATUS = "deodorFilterStatus"
     DEODOR_FILTER_USAGE = "deodorFilterUsage"
     DEODOR_FILTER_USAGE_STEP = "deodorFilterUsageStep"
+    DEPENDENCY_STATUS = "dependencyStatus"
     DESCRIPTION = "description"
     DESIRED_TEMPERATURE = "desiredTemperature"
     DETAIL_NAME = "detailName"
@@ -168,6 +173,7 @@ class Attribute(StrEnum):
     DOWNLINK_SPEED = "downlinkSpeed"
     DR_MAX_DURATION = "drMaxDuration"
     DRAINAGE_REQUIREMENT = "drainageRequirement"
+    DRCAPABLE = "drcapable"
     DRIVER_STATE = "driverState"
     DRIVER_VERSION = "driverVersion"
     DRIVING_MODE = "drivingMode"
@@ -213,6 +219,7 @@ class Attribute(StrEnum):
     ENERGY_SAVING_SUPPORT = "energySavingSupport"
     ENERGY_TYPE = "energyType"
     ENERGY_USAGE_MAX = "energyUsageMax"
+    ENERGY_USAGE_STATE = "energyUsageState"
     EP_EVENT = "epEvent"
     EP_INFO = "epInfo"
     EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT = "equivalentCarbonDioxideMeasurement"
@@ -251,6 +258,8 @@ class Attribute(StrEnum):
     GAS_METER_VOLUME = "gasMeterVolume"
     GEOFENCE = "geofence"
     GET_GROUPS = "getGroups"
+    GRID_STATUS_STATUS = "gridStatusStatus"
+    GRID_STATUS_SUPPORT = "gridStatusSupport"
     GROUP_ID = "groupId"
     GROUP_MUTE = "groupMute"
     GROUP_NAME = "groupName"
@@ -258,9 +267,15 @@ class Attribute(StrEnum):
     GROUP_ROLE = "groupRole"
     GROUP_VOLUME = "groupVolume"
     HARDWARE_FAULT = "hardwareFault"
+    HAS_COST = "hasCost"
+    HAS_FROM_GRID = "hasFromGrid"
+    HAS_TO_GRID = "hasToGrid"
+    HAS_TODAY_USAGE = "hasTodayUsage"
+    HAS_TOTAL_USAGE = "hasTotalUsage"
     HEADING = "heading"
     HEALTH_STATUS = "healthStatus"
     HEATED_DRY = "heatedDry"
+    HEATING_MODE = "heatingMode"
     HEATING_SETPOINT = "heatingSetpoint"
     HEATING_SETPOINT_RANGE = "heatingSetpointRange"
     HEPA_FILTER_CAPACITY = "hepaFilterCapacity"
@@ -280,6 +295,7 @@ class Attribute(StrEnum):
     HUMIDITY = "humidity"
     SPEC_VERSION = "icv"
     ILLUMINANCE = "illuminance"
+    ILLUMVALUE = "illumvalue"
     IMAGE = "image"
     IME_ADV_SUPPORTED = "imeAdvSupported"
     INFO = "info"
@@ -289,6 +305,7 @@ class Attribute(StrEnum):
     INITIAL_AMOUNT = "initialAmount"
     INPUT_SOURCE = "inputSource"
     INTERVAL = "interval"
+    INVENTORY = "inventory"
     INVISIBLE_FEATURES = "invisibleFeatures"
     IS_MAP_BASED_OPERATION_AVAILABLE = "isMapBasedOperationAvailable"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
@@ -327,6 +344,9 @@ class Attribute(StrEnum):
     LONGITUDE = "longitude"
     LQI = "lqi"
     MACHINE_STATE = "machineState"
+    MANUAL_LEVEL = "manualLevel"
+    MANUAL_LEVEL_MAX = "manualLevelMax"
+    MANUAL_LEVEL_MIN = "manualLevelMin"
     MAP_ID = "mapId"
     MAPS = "maps"
     MASTER_DI = "masterDi"
@@ -337,9 +357,11 @@ class Attribute(StrEnum):
     MAX_NUMBER_OF_RESERVATIONS = "maxNumberOfReservations"
     MAXIMUM_SETPOINT = "maximumSetpoint"
     MAXTEMP = "maxtemp"
+    MEASURE_INTERVAL = "measureInterval"
     MEDIA_OUTPUT_SUPPORTED = "mediaOutputSupported"
     MENU = "menu"
     MESSAGE = "message"
+    METERING_DATE = "meteringDate"
     METHOD = "method"
     MICOM_ASSAY_CODE = "micomAssayCode"
     MIN_CODE_LENGTH = "minCodeLength"
@@ -385,6 +407,7 @@ class Attribute(StrEnum):
     NOTIFICATION_TEMPLATE_I_D = "notificationTemplateID"
     NUMBER_OF_BUTTONS = "numberOfButtons"
     NUMBER_OF_CONNECTED_DEVICES = "numberOfConnectedDevices"
+    NUMBER_OF_SUB_DEVICES = "numberOfSubDevices"
     OBSOLETED = "obsoleted"
     OCCUPANCY = "occupancy"
     OCF_RESOURCE_UPDATED_TIME = "ocfResourceUpdatedTime"
@@ -426,6 +449,7 @@ class Attribute(StrEnum):
     POWER_CONSUMPTION = "powerConsumption"
     POWER_LEVEL = "powerLevel"
     POWER_SOURCE = "powerSource"
+    POWER_STATE = "powerState"
     PRECIP = "precip"
     PRECIPITATION_INTENSITY = "precipitationIntensity"
     PREDEFINED_COURSES = "predefinedCourses"
@@ -445,6 +469,7 @@ class Attribute(StrEnum):
     RANDOM_ON_OFF = "randomOnOff"
     RAPID_COOLING = "rapidCooling"
     RAPID_FREEZING = "rapidFreezing"
+    RATE_TYPE = "rateType"
     RECOMMENDED_AMOUNT = "recommendedAmount"
     REFERENCE_TABLE = "referenceTable"
     REFRESH_RESULT = "refreshResult"
@@ -509,6 +534,7 @@ class Attribute(StrEnum):
     SENSOR_STATUS = "sensorStatus"
     SERIAL_NUMBER = "serialNumber"
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
+    SERVICE_MESSAGE = "serviceMessage"
     SETTABLE = "settable"
     SETTABLE_MAX_FAN_SPEED = "settableMaxFanSpeed"
     SETTABLE_MIN_FAN_SPEED = "settableMinFanSpeed"
@@ -548,9 +574,13 @@ class Attribute(StrEnum):
     STEAM_SOAK = "steamSoak"
     STEREO_TYPE = "stereoType"
     STORM_WASH = "stormWash"
+    STORM_WATCH_ACTIVE = "stormWatchActive"
+    STORM_WATCH_ENABLED = "stormWatchEnabled"
+    STORM_WATCH_SUPPORT = "stormWatchSupport"
     STREAM = "stream"
     STREAM_CONTROL = "streamControl"
     STUN_URL = "stunUrl"
+    SUB_DEVICE_ACTIVE = "subDeviceActive"
     SUB_DEVICES = "subDevices"
     SUGGESTION_THRESHOLD = "suggestionThreshold"
     SUMMARY = "summary"
@@ -561,6 +591,8 @@ class Attribute(StrEnum):
     SUN_SET = "sunSet"
     SUN_SET_OFFSET = "sunSetOffset"
     SUPPORT_REPEAT_MODE = "supportRepeatMode"
+    SUPPORT_TOU_EVENT_NOTIFICATION = "supportTouEventNotification"
+    SUPPORT_TOU_INFO = "supportTouInfo"
     SUPPORTED_AC_FAN_MODES = "supportedAcFanModes"
     SUPPORTED_AC_MODES = "supportedAcModes"
     SUPPORTED_AC_OPTIONAL_MODE = "supportedAcOptionalMode"
@@ -601,6 +633,7 @@ class Attribute(StrEnum):
     SUPPORTED_FOCUS_AREAS = "supportedFocusAreas"
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
+    SUPPORTED_HEATING_MODES = "supportedHeatingModes"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
     SUPPORTED_INPUT_SOURCES = "supportedInputSources"
     SUPPORTED_INPUT_SOURCES_MAP = "supportedInputSourcesMap"
@@ -652,6 +685,7 @@ class Attribute(StrEnum):
     SUPPORTED_WIND_MODES = "supportedWindModes"
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
     SUPPORTS_POWER_ON_BY_OCF = "supportsPowerOnByOcf"
+    SURFACE_RESIDUAL_HEAT = "surfaceResidualHeat"
     SWITCH = "switch"
     SWITCH_ALL_ON_OFF = "switchAllOnOff"
     TAG_BUTTON = "tagButton"
@@ -659,6 +693,8 @@ class Attribute(StrEnum):
     TALKBACK = "talkback"
     TAMPER = "tamper"
     TARGET_MODULE = "targetModule"
+    TARIFF_NAME = "tariffName"
+    TARIFF_PROVIDER = "tariffProvider"
     TEMPERATURE = "temperature"
     TEMPERATURE_ALARM = "temperatureAlarm"
     TEMPERATURE_LEVEL = "temperatureLevel"
@@ -677,6 +713,8 @@ class Attribute(StrEnum):
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
     TOPICLIST = "topiclist"
     TOTAL_TIME = "totalTime"
+    TOU_EVENT_NOTIFICATION = "touEventNotification"
+    TOU_INFO = "touInfo"
     TRACK_DATA = "trackData"
     TRACK_DESCRIPTION = "trackDescription"
     TS_ID = "tsId"
@@ -691,6 +729,7 @@ class Attribute(StrEnum):
     UPDATED_TIME = "updatedTime"
     UPLINK_SPEED = "uplinkSpeed"
     URI = "uri"
+    USAGE_TIME = "usageTime"
     USER_LOCATION = "userLocation"
     UWB_ACTIVATION = "uwbActivation"
     VACATION_MODE = "vacationMode"
@@ -740,6 +779,7 @@ class Attribute(StrEnum):
     WATER_VALVE = "waterValve"
     WAYPOINTS = "waypoints"
     WEIGHT = "weight"
+    WELCOME_CARE_MODE = "welcomeCareMode"
     WELCOME_MESSAGE = "welcomeMessage"
     WIFI_UPDATE_SUPPORT = "wifiUpdateSupport"
     WIND_MODE = "windMode"
@@ -1145,6 +1185,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: [
         Attribute.AC_TROPICAL_NIGHT_MODE_LEVEL
     ],
+    Capability.CUSTOM_AIR_QUALITY_MAX_LEVEL: [Attribute.AIR_QUALITY_MAX_LEVEL],
     Capability.CUSTOM_AUTO_CLEANING_MODE: [
         Attribute.AUTO_CLEANING_MODE,
         Attribute.OPERATING_STATE,
@@ -1165,6 +1206,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DEODOR_FILTER_STATUS,
         Attribute.DEODOR_FILTER_USAGE,
         Attribute.DEODOR_FILTER_USAGE_STEP,
+    ],
+    Capability.CUSTOM_DEVICE_DEPENDENCY_STATUS: [
+        Attribute.DEPENDENCY_STATUS,
+        Attribute.NUMBER_OF_SUB_DEVICES,
+        Attribute.SUB_DEVICE_ACTIVE,
     ],
     Capability.CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION: [
         Attribute.REPORT_STATE_PERIOD,
@@ -1223,6 +1269,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_ENERGY_SAVING_LEVELS,
     ],
     Capability.CUSTOM_ERROR: [Attribute.ERROR],
+    Capability.CUSTOM_FILTER_USAGE_TIME: [Attribute.USAGE_TIME],
     Capability.CUSTOM_FRIDGE_MODE: [
         Attribute.FRIDGE_MODE,
         Attribute.FRIDGE_MODE_VALUE,
@@ -1238,6 +1285,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.CUSTOM_JOB_BEGINNING_STATUS: [Attribute.JOB_BEGINNING_STATUS],
     Capability.CUSTOM_LAUNCH_APP: [],
+    Capability.CUSTOM_LOWER_DEVICE_POWER: [Attribute.POWER_STATE],
     Capability.CUSTOM_OCF_RESOURCE_VERSION: [
         Attribute.OCF_RESOURCE_UPDATED_TIME,
         Attribute.OCF_RESOURCE_VERSION,
@@ -1326,6 +1374,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WATER_FILTER_USAGE,
         Attribute.WATER_FILTER_USAGE_STEP,
     ],
+    Capability.CUSTOM_WELCOME_CARE_MODE: [Attribute.WELCOME_CARE_MODE],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Attribute.BEEP],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_LIGHTING: [
         Attribute.LIGHTING,
@@ -1364,6 +1413,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MONTHLY_USAGE,
         Attribute.TIME_OFFSET,
     ],
+    Capability.SAMSUNG_CE_COOKTOP_BURNER_MODE: [Attribute.COOKTOP_BURNER_MODE],
+    Capability.SAMSUNG_CE_COOKTOP_HEATING_POWER: [
+        Attribute.HEATING_MODE,
+        Attribute.MANUAL_LEVEL,
+        Attribute.MANUAL_LEVEL_MAX,
+        Attribute.MANUAL_LEVEL_MIN,
+        Attribute.SUPPORTED_HEATING_MODES,
+    ],
+    Capability.SAMSUNG_CE_COOKTOP_PAN_DETECTION: [Attribute.DETECTED],
     Capability.SAMSUNG_CE_COUNT_DOWN_TIMER: [
         Attribute.CURRENT_VALUE,
         Attribute.START_VALUE,
@@ -1758,6 +1816,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
     ],
     Capability.SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE: [Attribute.STATUS],
+    Capability.SAMSUNG_CE_SURFACE_RESIDUAL_HEAT: [Attribute.SURFACE_RESIDUAL_HEAT],
     Capability.SAMSUNG_CE_TEMPERATURE_SETTING: [
         Attribute.DESIRED_TEMPERATURE,
         Attribute.SUPPORTED_DESIRED_TEMPERATURES,
@@ -1923,6 +1982,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PLATEMUSIC11009_FIRMWARE: [Attribute.FIRMWARE_VERSION],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
+    Capability.WATCHPANEL55613_LCCTHERMOSTAT: [Attribute.DRCAPABLE],
     Capability.LEGENDABSOLUTE60149_ATMOS_PRESSURE: [Attribute.ATMOS_PRESSURE],
     Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: [Attribute.CREATE_DEVICE],
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [Attribute.CURRENT_TIME_PERIOD],
@@ -1993,16 +2053,20 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_BAROMETER2: [Attribute.PRESSURE],
     Capability.PARTYVOICE23922_CLOUDCOVER: [Attribute.CLOUDCOVER],
     Capability.PARTYVOICE23922_CREATEANOTHER: [],
+    Capability.PARTYVOICE23922_CREATEDEV8: [Attribute.DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Attribute.DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEMQTTDEV9: [Attribute.DEVICE_TYPE],
+    Capability.PARTYVOICE23922_CREATEQTY: [Attribute.CREATE_QTY],
     Capability.PARTYVOICE23922_HTTPCODE: [Attribute.HTTPCODE],
     Capability.PARTYVOICE23922_HTTPRESPONSE: [Attribute.RESPONSE],
+    Capability.PARTYVOICE23922_INVENTORY8: [Attribute.INVENTORY],
     Capability.PARTYVOICE23922_MQTTPUBLISH: [],
     Capability.PARTYVOICE23922_ONVIFINFO: [Attribute.INFO],
     Capability.PARTYVOICE23922_ONVIFSTATUS: [Attribute.STATUS],
     Capability.PARTYVOICE23922_PRECIPPROB: [Attribute.PROBABILITY],
     Capability.PARTYVOICE23922_PRECIPRATE: [Attribute.PRECIP],
     Capability.PARTYVOICE23922_REFRESH: [],
+    Capability.PARTYVOICE23922_SETILLUMINANCE: [Attribute.ILLUMVALUE],
     Capability.PARTYVOICE23922_STATUS: [Attribute.STATUS],
     Capability.PARTYVOICE23922_SUMMARY: [Attribute.SUMMARY],
     Capability.PARTYVOICE23922_TEMPMAX: [Attribute.MAXTEMP],
@@ -2015,6 +2079,32 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_WINDGUST: [Attribute.WINDGUST],
     Capability.PARTYVOICE23922_WINDSPEED5: [Attribute.W_SPEED],
     Capability.VALLEYBOARD16460_DEBUG: [Attribute.VALUE],
+    Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [
+        Attribute.ENERGY_USAGE_STATE,
+        Attribute.GRID_STATUS_STATUS,
+        Attribute.GRID_STATUS_SUPPORT,
+        Attribute.STORM_WATCH_ACTIVE,
+        Attribute.STORM_WATCH_ENABLED,
+        Attribute.STORM_WATCH_SUPPORT,
+    ],
+    Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
+        Attribute.DATE_STARTED,
+        Attribute.HAS_COST,
+        Attribute.HAS_FROM_GRID,
+        Attribute.HAS_TODAY_USAGE,
+        Attribute.HAS_TOTAL_USAGE,
+        Attribute.HAS_TO_GRID,
+        Attribute.MEASURE_INTERVAL,
+        Attribute.METERING_DATE,
+        Attribute.RATE_TYPE,
+        Attribute.SERVICE_MESSAGE,
+        Attribute.SUPPORT_TOU_EVENT_NOTIFICATION,
+        Attribute.SUPPORT_TOU_INFO,
+        Attribute.TARIFF_NAME,
+        Attribute.TARIFF_PROVIDER,
+        Attribute.TOU_EVENT_NOTIFICATION,
+        Attribute.TOU_INFO,
+    ],
     Capability.TAG_E2E_ENCRYPTION: [Attribute.ENCRYPTION],
     Capability.TAG_FACTORY_RESET: [],
     Capability.TAG_SEARCHING_STATUS: [Attribute.SEARCHING_STATUS],

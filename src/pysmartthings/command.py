@@ -121,6 +121,7 @@ class Command(StrEnum):
     RESET_ELECTRIC_HEPA_FILTER = "resetElectricHepaFilter"
     RESET_ENERGY_METER = "resetEnergyMeter"
     RESET_FILTER = "resetFilter"
+    RESET_FILTER_USAGE_TIME = "resetFilterUsageTime"
     RESET_HEPA_FILTER = "resetHepaFilter"
     RESET_VERY_FINE_DUST_FILTER = "resetVeryFineDustFilter"
     RESET_WATER_FILTER = "resetWaterFilter"
@@ -174,6 +175,7 @@ class Command(StrEnum):
     SET_COORDINATES = "setCoordinates"
     SET_COURSE = "setCourse"
     SET_CREATE_DEVICE = "setCreateDevice"
+    SET_CREATE_QTY = "setCreateQty"
     SET_CURRENT_TIME_PERIOD = "setCurrentTimePeriod"
     SET_CURRENT_TWILIGHT = "setCurrentTwilight"
     SET_CUSTOM_COURSE = "setCustomCourse"
@@ -232,9 +234,11 @@ class Command(StrEnum):
     SET_HOT_AIR_DRY = "setHotAirDry"
     SET_HUE = "setHue"
     SET_HUMIDIFIER_MODE = "setHumidifierMode"
+    SET_ILLUM = "setIllum"
     SET_INFRARED_LEVEL = "setInfraredLevel"
     SET_INITIAL_AMOUNT = "setInitialAmount"
     SET_INPUT_SOURCE = "setInputSource"
+    SET_INVENTORY = "setInventory"
     SET_LEVEL = "setLevel"
     SET_LEVEL_STEPS = "setLevelSteps"
     SET_LIGHT_CONTROL_MODE = "setLightControlMode"
@@ -257,6 +261,7 @@ class Command(StrEnum):
     SET_MACHINE_STATE = "setMachineState"
     SET_MASTER_DI = "setMasterDi"
     SET_MASTER_NAME = "setMasterName"
+    SET_METERING_DATE = "setMeteringDate"
     SET_MIRROR_GROUP_FUNCTION = "setMirrorGroupFunction"
     SET_MODE = "setMode"
     SET_MONITOR = "setMonitor"
@@ -282,6 +287,7 @@ class Command(StrEnum):
     SET_PLAYBACK_STATUS = "setPlaybackStatus"
     SET_PLAYLIST = "setPlaylist"
     SET_POWER_LEVEL = "setPowerLevel"
+    SET_POWER_STATE = "setPowerState"
     SET_PROG_OFF = "setProgOff"
     SET_PROG_ON = "setProgOn"
     SET_RANDOM_NEXT = "setRandomNext"
@@ -306,6 +312,7 @@ class Command(StrEnum):
     SET_SATURATION = "setSaturation"
     SET_SCHEDULE = "setSchedule"
     SET_SELECTED_ZONE = "setSelectedZone"
+    SET_SERVICE_MESSAGE = "setServiceMessage"
     SET_SHADE_LEVEL = "setShadeLevel"
     SET_SIGNAL_METRICS = "setSignalMetrics"
     SET_SOFTENER_TYPE = "setSoftenerType"
@@ -385,6 +392,7 @@ class Command(StrEnum):
     TAKE = "take"
     TOGGLE = "toggle"
     TRIGGER_MANUAL_SENSING = "triggerManualSensing"
+    TURN_WELCOME_CARE_ON = "turnWelcomeCareOn"
     UNLATCH = "unlatch"
     UNLOCK = "unlock"
     UNLOCK_WITH_TIMEOUT = "unlockWithTimeout"
@@ -681,6 +689,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: [
         Command.SET_AC_TROPICAL_NIGHT_MODE_LEVEL
     ],
+    Capability.CUSTOM_AIR_QUALITY_MAX_LEVEL: [],
     Capability.CUSTOM_AUTO_CLEANING_MODE: [
         Command.SET_AUTO_CLEANING_MODE,
         Command.SET_OPERATING_STATE,
@@ -690,6 +699,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.CUSTOM_COOKTOP_OPERATING_STATE: [],
     Capability.CUSTOM_DEODOR_FILTER: [Command.RESET_DEODOR_FILTER],
+    Capability.CUSTOM_DEVICE_DEPENDENCY_STATUS: [],
     Capability.CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION: [
         Command.SET_REPORT_STATE_PERIOD,
         Command.SET_REPORT_STATE_REALTIME,
@@ -713,10 +723,12 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_ELECTRIC_HEPA_FILTER: [Command.RESET_ELECTRIC_HEPA_FILTER],
     Capability.CUSTOM_ENERGY_TYPE: [Command.SET_ENERGY_SAVING_LEVEL],
     Capability.CUSTOM_ERROR: [Command.SET_ERROR],
+    Capability.CUSTOM_FILTER_USAGE_TIME: [Command.RESET_FILTER_USAGE_TIME],
     Capability.CUSTOM_FRIDGE_MODE: [Command.SET_FRIDGE_MODE],
     Capability.CUSTOM_HEPA_FILTER: [Command.RESET_HEPA_FILTER],
     Capability.CUSTOM_JOB_BEGINNING_STATUS: [],
     Capability.CUSTOM_LAUNCH_APP: [Command.LAUNCH_APP],
+    Capability.CUSTOM_LOWER_DEVICE_POWER: [Command.SET_POWER_STATE],
     Capability.CUSTOM_OCF_RESOURCE_VERSION: [],
     Capability.CUSTOM_OUTING_MODE: [Command.SET_OUTING_MODE],
     Capability.CUSTOM_OVEN_CAVITY_STATUS: [],
@@ -755,6 +767,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_WASHER_SPIN_LEVEL: [Command.SET_WASHER_SPIN_LEVEL],
     Capability.CUSTOM_WASHER_WATER_TEMPERATURE: [Command.SET_WASHER_WATER_TEMPERATURE],
     Capability.CUSTOM_WATER_FILTER: [Command.RESET_WATER_FILTER],
+    Capability.CUSTOM_WELCOME_CARE_MODE: [Command.TURN_WELCOME_CARE_ON],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_LIGHTING: [
         Command.OFF,
@@ -782,6 +795,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [Command.SET_TIME_OFFSET],
+    Capability.SAMSUNG_CE_COOKTOP_BURNER_MODE: [],
+    Capability.SAMSUNG_CE_COOKTOP_HEATING_POWER: [],
+    Capability.SAMSUNG_CE_COOKTOP_PAN_DETECTION: [],
     Capability.SAMSUNG_CE_COUNT_DOWN_TIMER: [
         Command.CANCEL,
         Command.PAUSE,
@@ -1041,6 +1057,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_STEAM_CLOSET_DELAY_END: [Command.SET_DELAY_TIME],
     Capability.SAMSUNG_CE_STEAM_CLOSET_KEEP_FRESH_MODE: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE: [Command.OFF, Command.ON],
+    Capability.SAMSUNG_CE_SURFACE_RESIDUAL_HEAT: [],
     Capability.SAMSUNG_CE_TEMPERATURE_SETTING: [Command.SET_DESIRED_TEMPERATURE],
     Capability.SAMSUNG_CE_TOGGLE_SWITCH: [Command.OFF, Command.ON, Command.TOGGLE],
     Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [],
@@ -1136,6 +1153,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PLATEMUSIC11009_FIRMWARE: [],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Command.SET_CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Command.SET_FADE],
+    Capability.WATCHPANEL55613_LCCTHERMOSTAT: [],
     Capability.LEGENDABSOLUTE60149_ATMOS_PRESSURE: [Command.SET_ATMOS_PRESSURE],
     Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: [Command.SET_CREATE_DEVICE],
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [
@@ -1196,16 +1214,20 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_BAROMETER2: [],
     Capability.PARTYVOICE23922_CLOUDCOVER: [],
     Capability.PARTYVOICE23922_CREATEANOTHER: [Command.PUSH],
+    Capability.PARTYVOICE23922_CREATEDEV8: [Command.SET_DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Command.SET_DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEMQTTDEV9: [Command.SET_DEVICE_TYPE],
+    Capability.PARTYVOICE23922_CREATEQTY: [Command.SET_CREATE_QTY],
     Capability.PARTYVOICE23922_HTTPCODE: [],
     Capability.PARTYVOICE23922_HTTPRESPONSE: [],
+    Capability.PARTYVOICE23922_INVENTORY8: [Command.SET_INVENTORY],
     Capability.PARTYVOICE23922_MQTTPUBLISH: [Command.PUBLISH],
     Capability.PARTYVOICE23922_ONVIFINFO: [],
     Capability.PARTYVOICE23922_ONVIFSTATUS: [],
     Capability.PARTYVOICE23922_PRECIPPROB: [],
     Capability.PARTYVOICE23922_PRECIPRATE: [],
     Capability.PARTYVOICE23922_REFRESH: [Command.PUSH],
+    Capability.PARTYVOICE23922_SETILLUMINANCE: [Command.SET_ILLUM],
     Capability.PARTYVOICE23922_STATUS: [],
     Capability.PARTYVOICE23922_SUMMARY: [],
     Capability.PARTYVOICE23922_TEMPMAX: [],
@@ -1218,6 +1240,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_WINDGUST: [],
     Capability.PARTYVOICE23922_WINDSPEED5: [],
     Capability.VALLEYBOARD16460_DEBUG: [Command.CLEAR, Command.SET_VALUE],
+    Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [],
+    Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
+        Command.SET_METERING_DATE,
+        Command.SET_SERVICE_MESSAGE,
+    ],
     Capability.TAG_E2E_ENCRYPTION: [Command.OFF, Command.ON],
     Capability.TAG_FACTORY_RESET: [Command.RESET],
     Capability.TAG_SEARCHING_STATUS: [],
