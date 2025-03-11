@@ -160,20 +160,6 @@ files = [
 frozenlist = ">=1.1.0"
 
 [[package]]
-name = "aiosseclient"
-version = "0.1.8"
-description = "Asynchronous Server Sent Event streams client."
-optional = false
-python-versions = "*"
-files = [
-    {file = "aiosseclient-0.1.8-py3-none-any.whl", hash = "sha256:6ad51c49f79dc974f78a1aaa57eca5f6db5f224d6614c17f3724b28afde37454"},
-    {file = "aiosseclient-0.1.8.tar.gz", hash = "sha256:7180d4c6e5d514f3e036bd7c658ef1b9acd6b296f97d2d1c237e9ed6795c36e4"},
-]
-
-[package.dependencies]
-aiohttp = "*"
-
-[[package]]
 name = "astroid"
 version = "3.3.9"
 description = "An abstract syntax tree for Python with inference support."
@@ -1473,4 +1459,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "4ea4ab7441364f8564fa692c9452ed489790038cbbf6ab6722b85381a1abacaf"
+content-hash = "b7b03d1b8b7aff8a9236c0a145964190632d10f1b2820664b9eb87a3617a554e"
