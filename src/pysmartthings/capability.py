@@ -474,7 +474,7 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_EVEN_ODD_DAY = "legendabsolute60149.evenOddDay"
     LEGENDABSOLUTE60149_FORCED_ON_LEVEL = "legendabsolute60149.forcedOnLevel"
     LEGENDABSOLUTE60149_GET_GROUPS = "legendabsolute60149.getGroups"
-    LEGENDABSOLUTE60149_HUMIDITY_CONDITION7 = "legendabsolute60149.humidityCondition7"
+    LEGENDABSOLUTE60149_HUMIDITY_CONDITION = "legendabsolute60149.humidityCondition"
     LEGENDABSOLUTE60149_HUMIDITY_TARGET = "legendabsolute60149.humidityTarget"
     LEGENDABSOLUTE60149_LEVEL_STEPS = "legendabsolute60149.levelSteps"
     LEGENDABSOLUTE60149_LOCAL_DATE = "legendabsolute60149.localDate"
