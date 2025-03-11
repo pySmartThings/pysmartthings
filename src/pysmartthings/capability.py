@@ -369,6 +369,7 @@ class Capability(StrEnum):
     CUSTOM_TV_SEARCH = "custom.tvsearch"
     CUSTOM_USER_NOTIFICATION = "custom.userNotification"
     CUSTOM_VERY_FINE_DUST_FILTER = "custom.veryFineDustFilter"
+    CUSTOM_VIRUS_DOCTOR_MODE = "custom.virusDoctorMode"
     CUSTOM_WASHER_AUTO_DETERGENT = "custom.washerAutoDetergent"
     CUSTOM_WASHER_AUTO_SOFTENER = "custom.washerAutoSoftener"
     CUSTOM_WASHER_RINSE_CYCLES = "custom.washerRinseCycles"
