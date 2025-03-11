@@ -139,6 +139,7 @@ class Category(StrEnum):
     OTHER = "Other"
     OTHERS = "Others"
     OVEN = "Oven"
+    POWER_METER = "PowerMeter"
     PRESENCE_SENSOR = "PresenceSensor"
     PRESENCE_SENSOR_2 = "Presence Sensor"
     PRINTER = "Printer"
