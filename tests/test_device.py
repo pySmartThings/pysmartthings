@@ -305,6 +305,17 @@ async def test_fetching_unknown_capability(
         "Unknown capability fakeCapability. Please raise an issue at https://github.com/pySmartThings/pysmartthings."
         in caplog.text
     )
+    caplog.clear()
+    responses.get(
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/status",
+        status=200,
+        body=load_fixture("device_status/fake.json"),
+    )
+    await client.get_device_status("440063de-a200-40b5-8a6b-f3399eaa0370")
+    assert (
+        "Unknown capability fakeCapability. Please raise an issue at https://github.com/pySmartThings/pysmartthings."
+        not in caplog.text
+    )
 
 
 async def test_fetching_unknown_category(

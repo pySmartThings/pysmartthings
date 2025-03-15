@@ -14,6 +14,8 @@ from .attribute import Attribute  # noqa: TC001
 from .capability import Capability
 from .const import LOGGER
 
+ALREADY_LOGGED_CAPABILITIES = set()
+
 
 @dataclass
 class BaseLocation(DataClassORJSONMixin):
@@ -351,7 +353,11 @@ class DeviceStatus(DataClassORJSONMixin):
         """Make sure we let the user know about unknown capabilities."""
         for component in obj.components.values():
             for capability in component:
-                if capability not in Capability:
+                if (
+                    capability not in Capability
+                    and capability not in ALREADY_LOGGED_CAPABILITIES
+                ):
+                    ALREADY_LOGGED_CAPABILITIES.add(capability)
                     LOGGER.warning(
                         "Unknown capability %s. Please raise an issue at https://github.com/pySmartThings/pysmartthings.",
                         capability,
