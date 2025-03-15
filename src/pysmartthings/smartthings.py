@@ -233,7 +233,7 @@ class SmartThings:
 
     async def get_raw_devices(self) -> dict[str, Any]:
         """Retrieve SmartThings devices."""
-        return cast(dict[str, Any], orjson.loads(await self._get_devices()))  # pylint: disable=no-member
+        return cast("dict[str, Any]", orjson.loads(await self._get_devices()))  # pylint: disable=no-member
 
     async def _get_device(self, device_id: str) -> str:
         """Retrieve a device with the specified ID."""
@@ -246,7 +246,7 @@ class SmartThings:
 
     async def get_raw_device(self, device_id: str) -> dict[str, Any]:
         """Retrieve a device with the specified ID."""
-        return cast(dict[str, Any], orjson.loads(await self._get_device(device_id)))  # pylint: disable=no-member
+        return cast("dict[str, Any]", orjson.loads(await self._get_device(device_id)))  # pylint: disable=no-member
 
     async def get_scenes(self, location_id: str | None = None) -> list[Scene]:
         """Retrieve SmartThings scenes."""
@@ -274,7 +274,7 @@ class SmartThings:
     async def get_raw_device_status(self, device_id: str) -> dict[str, Any]:
         """Retrieve the status of a device."""
         resp = await self._get_device_status(device_id)
-        return cast(dict[str, Any], orjson.loads(resp))  # pylint: disable=no-member
+        return cast("dict[str, Any]", orjson.loads(resp))  # pylint: disable=no-member
 
     async def get_capability(self, capability: Capability | str) -> str:
         """Retrieve the capability schema."""
