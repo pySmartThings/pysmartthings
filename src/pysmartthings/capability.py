@@ -173,6 +173,7 @@ class Capability(StrEnum):
     CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE = (
         "custom.airConditionerTropicalNightMode"
     )
+    CUSTOM_AIR_PURIFIER_OPERATION_MODE = "custom.airPurifierOperationMode"
     CUSTOM_AIR_QUALITY_MAX_LEVEL = "custom.airQualityMaxLevel"
     CUSTOM_AUTO_CLEANING_MODE = "custom.autoCleaningMode"
     CUSTOM_COOKTOP_OPERATING_STATE = "custom.cooktopOperatingState"
@@ -440,11 +441,23 @@ class Capability(StrEnum):
     )
     AMBERPIANO10217_VIRTUAL_THING_TYPE = "amberpiano10217.virtualThingType"
 
+    EVENTFLUTE36860_DEFAULT_LEVEL_LOCAL = "eventflute36860.defaultLevelLocal"
+    EVENTFLUTE36860_LED_BAR_SWITCH_OFF = "eventflute36860.ledBarSwitchOff"
+    EVENTFLUTE36860_LED_BAR_SWITCH_ON = "eventflute36860.ledBarSwitchOn"
+    EVENTFLUTE36860_LOCAL_CONTROL = "eventflute36860.localControl"
+    EVENTFLUTE36860_LOG = "eventflute36860.log"
+    EVENTFLUTE36860_NOTIFICATION_ALL = "eventflute36860.notificationAll"
+    EVENTFLUTE36860_NOTIFICATION_SINGLE = "eventflute36860.notificationSingle"
+    EVENTFLUTE36860_REMOTE_CONTROL = "eventflute36860.remoteControl"
+
     HCA_DRYER_MODE = "hca.dryerMode"
     HCA_WASHER_MODE = "hca.washerMode"
 
     LEGENDABSOLUTE60149_ATMOS_PRESSURE = "legendabsolute60149.atmosPressure"
     LEGENDABSOLUTE60149_CIRCADIAN = "legendabsolute60149.circadian"
+    LEGENDABSOLUTE60149_COLOR_CHANGE_MODE1 = "legendabsolute60149.colorChangeMode1"
+    LEGENDABSOLUTE60149_COLOR_CHANGE_TIMER = "legendabsolute60149.colorChangeTimer"
+    LEGENDABSOLUTE60149_COLOR_CHANGING = "legendabsolute60149.colorChanging"
     LEGENDABSOLUTE60149_COLOR_TEMPERATURE_STEPS = (
         "legendabsolute60149.colorTemperatureSteps"
     )
@@ -458,6 +471,7 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_EVEN_ODD_DAY = "legendabsolute60149.evenOddDay"
     LEGENDABSOLUTE60149_FORCED_ON_LEVEL = "legendabsolute60149.forcedOnLevel"
     LEGENDABSOLUTE60149_GET_GROUPS = "legendabsolute60149.getGroups"
+    LEGENDABSOLUTE60149_HUE_STEPS = "legendabsolute60149.hueSteps"
     LEGENDABSOLUTE60149_HUMIDITY_CONDITION = "legendabsolute60149.humidityCondition"
     LEGENDABSOLUTE60149_HUMIDITY_TARGET = "legendabsolute60149.humidityTarget"
     LEGENDABSOLUTE60149_LEVEL_STEPS = "legendabsolute60149.levelSteps"
@@ -546,6 +560,14 @@ class Capability(StrEnum):
     PLATEMUSIC11009_ASSOCIATION_GROUP_TWO = "platemusic11009.associationGroupTwo"
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
+
+    RBOYAPPS_LOCK_AUDIO = "rboyapps.lockAudio"
+    RBOYAPPS_LOCK_AUTOLOCK = "rboyapps.lockAutolock"
+    RBOYAPPS_LOCK_EXTENDED = "rboyapps.lockExtended"
+    RBOYAPPS_LOCK_KEYPAD = "rboyapps.lockKeypad"
+    RBOYAPPS_LOCK_ONE_TOUCH_LOCK = "rboyapps.lockOneTouchLock"
+    RBOYAPPS_LOCK_TAMPER = "rboyapps.lockTamper"
+    RBOYAPPS_LOCK_TAMPER_SENSITIVITY = "rboyapps.lockTamperSensitivity"
 
     RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE = (
         "rivertalent14263.adaptiveEnergyUsageState"

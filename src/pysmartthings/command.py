@@ -14,6 +14,7 @@ class Command(StrEnum):
     ADD_AGING = "addAging"
     ADD_RESERVATION = "addReservation"
     AGREE_UPDATE = "agreeUpdate"
+    ALARM_TOGGLE = "alarmToggle"
     ANNOUNCE = "announce"
     ARM_AWAY = "armAway"
     ARM_STAY = "armStay"
@@ -47,8 +48,12 @@ class Command(StrEnum):
     DEVICE_NOTIFICATION = "deviceNotification"
     DISABLE = "disable"
     DISABLE_ALARM = "disableAlarm"
+    DISABLE_AUDIO = "disableAudio"
     DISABLE_AUTO_UPDATE = "disableAutoUpdate"
+    DISABLE_AUTOLOCK = "disableAutolock"
+    DISABLE_KEYPAD = "disableKeypad"
     DISABLE_LED_NOTIFICATION = "disableLedNotification"
+    DISABLE_ONE_TOUCH_LOCK = "disableOneTouchLock"
     DISABLE_REPEAT_MODE = "disableRepeatMode"
     DISABLE_SOUND_DETECTION = "disableSoundDetection"
     DISAGREE_UPDATE = "disagreeUpdate"
@@ -59,10 +64,14 @@ class Command(StrEnum):
     EMERGENCY_HEAT = "emergencyHeat"
     ENABLE = "enable"
     ENABLE_ALARM = "enableAlarm"
+    ENABLE_AUDIO = "enableAudio"
     ENABLE_AUTO_UPDATE = "enableAutoUpdate"
+    ENABLE_AUTOLOCK = "enableAutolock"
     ENABLE_EP_EVENTS = "enableEpEvents"
+    ENABLE_KEYPAD = "enableKeypad"
     ENABLE_LED_NOTIFICATION = "enableLedNotification"
     ENABLE_MONITORING_AUTOMATION = "enableMonitoringAutomation"
+    ENABLE_ONE_TOUCH_LOCK = "enableOneTouchLock"
     ENABLE_REPEAT_MODE = "enableRepeatMode"
     ENABLE_SOUND_DETECTION = "enableSoundDetection"
     END = "end"
@@ -145,6 +154,7 @@ class Command(StrEnum):
     SEARCH = "search"
     SEND = "send"
     SEND_KEY = "sendKey"
+    SENSITIVE_TOGGLE = "sensitiveToggle"
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
     SET_AC_TROPICAL_NIGHT_MODE_LEVEL = "setAcTropicalNightModeLevel"
     SET_ACCESSIBILITY = "setAccessibility"
@@ -153,15 +163,19 @@ class Command(StrEnum):
     SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
     SET_AIR_CONDITIONER_ODOR_CONTROLLER_STATE = "setAirConditionerOdorControllerState"
     SET_AIR_PURIFIER_FAN_MODE = "setAirPurifierFanMode"
+    SET_ALARM = "setAlarm"
     SET_ALARM_THRESHOLD = "setAlarmThreshold"
     SET_AMBIENT_CONTENT = "setAmbientContent"
     SET_AMBIENT_ON = "setAmbientOn"
     SET_AMOUNT = "setAmount"
+    SET_AP_OPERATION_MODE = "setApOperationMode"
     SET_APP_NAME = "setAppName"
     SET_ATMOS_PRESSURE = "setAtmosPressure"
+    SET_AUDIO = "setAudio"
     SET_AUDIO_TRACK = "setAudioTrack"
     SET_AUTO_CLEANING_MODE = "setAutoCleaningMode"
     SET_AUTO_REPLENISHMENT = "setAutoReplenishment"
+    SET_AUTOLOCK = "setAutolock"
     SET_AUTOMATIC_EXECUTION_MODE = "setAutomaticExecutionMode"
     SET_AUTOMATIC_EXECUTION_SETTING = "setAutomaticExecutionSetting"
     SET_BRIGHTNESS_LEVEL = "setBrightnessLevel"
@@ -178,6 +192,9 @@ class Command(StrEnum):
     SET_CODE = "setCode"
     SET_CODE_LENGTH = "setCodeLength"
     SET_COLOR = "setColor"
+    SET_COLOR_CHANGE_MODE = "setColorChangeMode"
+    SET_COLOR_CHANGE_TIMER = "setColorChangeTimer"
+    SET_COLOR_CHANGING = "setColorChanging"
     SET_COLOR_TEMP_STEPS = "setColorTempSteps"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_CONTEXT = "setContext"
@@ -245,6 +262,7 @@ class Command(StrEnum):
     SET_HOOD_FAN_SPEED = "setHoodFanSpeed"
     SET_HOT_AIR_DRY = "setHotAirDry"
     SET_HUE = "setHue"
+    SET_HUE_STEPS = "setHueSteps"
     SET_HUMIDIFIER_MODE = "setHumidifierMode"
     SET_HUMIDITY_CONDITION = "setHumidityCondition"
     SET_HUMIDITY_TARGET = "setHumidityTarget"
@@ -254,11 +272,18 @@ class Command(StrEnum):
     SET_INPUT = "setInput"
     SET_INPUT_SOURCE = "setInputSource"
     SET_INVENTORY = "setInventory"
+    SET_KEYPAD = "setKeypad"
+    SET_LED_BAR_OFF_COLOR = "setLedBarOffColor"
+    SET_LED_BAR_OFF_LEVEL = "setLedBarOffLevel"
+    SET_LED_BAR_ON_COLOR = "setLedBarOnColor"
+    SET_LED_BAR_ON_LEVEL = "setLedBarOnLevel"
     SET_LEVEL = "setLevel"
+    SET_LEVEL_LOCAL = "setLevelLocal"
     SET_LEVEL_STEPS = "setLevelSteps"
     SET_LIGHT_CONTROL_MODE = "setLightControlMode"
     SET_LIGHTING_LEVEL = "setLightingLevel"
     SET_LIGHTING_MODE = "setLightingMode"
+    SET_LOCAL_CONTROL = "setLocalControl"
     SET_LOCAL_DATE = "setLocalDate"
     SET_LOCAL_DATE_ONE = "setLocalDateOne"
     SET_LOCAL_DATE_TWO = "setLocalDateTwo"
@@ -282,6 +307,12 @@ class Command(StrEnum):
     SET_MONITOR = "setMonitor"
     SET_MUTE = "setMute"
     SET_NAME = "setName"
+    SET_NOTIFICATION_COLOR = "setNotificationColor"
+    SET_NOTIFICATION_DURATION = "setNotificationDuration"
+    SET_NOTIFICATION_EFFECT = "setNotificationEffect"
+    SET_NOTIFICATION_LEVEL = "setNotificationLevel"
+    SET_NOTIFICATION_NUMBER = "setNotificationNumber"
+    SET_ONE_TOUCH_LOCK = "setOneTouchLock"
     SET_OPERATING_STATE = "setOperatingState"
     SET_OPERATION_MODE = "setOperationMode"
     SET_OPERATION_ORIGIN = "setOperationOrigin"
@@ -313,6 +344,7 @@ class Command(StrEnum):
     SET_RECOMMENDED_AMOUNT = "setRecommendedAmount"
     SET_REFRIGERATION_SETPOINT = "setRefrigerationSetpoint"
     SET_REMAINING_AMOUNT = "setRemainingAmount"
+    SET_REMOTE_CONTROL = "setRemoteControl"
     SET_REPORT_STATE_PERIOD = "setReportStatePeriod"
     SET_REPORT_STATE_REALTIME = "setReportStateRealtime"
     SET_REPORT_STATE_REALTIME_PERIOD = "setReportStateRealtimePeriod"
@@ -329,6 +361,7 @@ class Command(StrEnum):
     SET_SELECT = "setSelect"
     SET_SELECTED_ZONE = "setSelectedZone"
     SET_SELECTION = "setSelection"
+    SET_SENSITIVITY = "setSensitivity"
     SET_SERVER = "setServer"
     SET_SERVICE_MESSAGE = "setServiceMessage"
     SET_SHADE_LEVEL = "setShadeLevel"
@@ -714,6 +747,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: [
         Command.SET_AC_TROPICAL_NIGHT_MODE_LEVEL
     ],
+    Capability.CUSTOM_AIR_PURIFIER_OPERATION_MODE: [Command.SET_AP_OPERATION_MODE],
     Capability.CUSTOM_AIR_QUALITY_MAX_LEVEL: [],
     Capability.CUSTOM_AUTO_CLEANING_MODE: [
         Command.SET_AUTO_CLEANING_MODE,
@@ -1191,21 +1225,56 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_IM_SELF_TEST: [Command.RUN],
     Capability.SAMSUNG_IM_STHUBEUI: [],
     Capability.SAMSUNG_IM_WIFI: [Command.GET_SCAN_RESULTS, Command.UPDATE],
-    Capability.VALLEYBOARD16460_DEBUG: [Command.CLEAR, Command.SET_VALUE],
-    Capability.VALLEYBOARD16460_INFO: [Command.CLEAR, Command.SET_VALUE],
-    Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [],
-    Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
-        Command.SET_METERING_DATE,
-        Command.SET_SERVICE_MESSAGE,
+    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_MUTE: [Command.MUTED],
+    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_DOWN: [Command.VOLUME_DOWN],
+    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_UP: [Command.VOLUME_UP],
+    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN: [Command.CHANNEL_DOWN],
+    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_UP: [Command.CHANNEL_UP],
+    Capability.AMBERPIANO10217_BINDING_INFO: [],
+    Capability.AMBERPIANO10217_CLUSTER: [Command.SET_CLUSTER_ID],
+    Capability.AMBERPIANO10217_CONTROLLER_STATUS: [],
+    Capability.AMBERPIANO10217_DETECTION_INTERVAL: [Command.SET_DETECTION_INTERVAL],
+    Capability.AMBERPIANO10217_DEVICE_EUI: [Command.SET_DEVICE_EUI],
+    Capability.AMBERPIANO10217_DEVICEINFO: [],
+    Capability.AMBERPIANO10217_GROUP_ADD: [Command.ADD, Command.PUSH],
+    Capability.AMBERPIANO10217_GROUP_INFO: [],
+    Capability.AMBERPIANO10217_GROUP_REMOVE: [Command.PUSH, Command.REMOVE],
+    Capability.AMBERPIANO10217_GROUP_REMOVE_ALL: [Command.PUSH],
+    Capability.AMBERPIANO10217_OBJECT: [],
+    Capability.AMBERPIANO10217_SENSOR_DETECTION_SENSITIVITY: [Command.SET_MODE],
+    Capability.AMBERPIANO10217_VIRTUAL_THING_TYPE: [Command.SET_THING_TYPE],
+    Capability.EVENTFLUTE36860_DEFAULT_LEVEL_LOCAL: [Command.SET_LEVEL_LOCAL],
+    Capability.EVENTFLUTE36860_LED_BAR_SWITCH_OFF: [
+        Command.SET_LED_BAR_OFF_COLOR,
+        Command.SET_LED_BAR_OFF_LEVEL,
     ],
+    Capability.EVENTFLUTE36860_LED_BAR_SWITCH_ON: [
+        Command.SET_LED_BAR_ON_COLOR,
+        Command.SET_LED_BAR_ON_LEVEL,
+    ],
+    Capability.EVENTFLUTE36860_LOCAL_CONTROL: [Command.SET_LOCAL_CONTROL],
+    Capability.EVENTFLUTE36860_LOG: [],
+    Capability.EVENTFLUTE36860_NOTIFICATION_ALL: [
+        Command.SET_NOTIFICATION_COLOR,
+        Command.SET_NOTIFICATION_DURATION,
+        Command.SET_NOTIFICATION_EFFECT,
+        Command.SET_NOTIFICATION_LEVEL,
+    ],
+    Capability.EVENTFLUTE36860_NOTIFICATION_SINGLE: [
+        Command.SET_NOTIFICATION_COLOR,
+        Command.SET_NOTIFICATION_DURATION,
+        Command.SET_NOTIFICATION_EFFECT,
+        Command.SET_NOTIFICATION_LEVEL,
+        Command.SET_NOTIFICATION_NUMBER,
+    ],
+    Capability.EVENTFLUTE36860_REMOTE_CONTROL: [Command.SET_REMOTE_CONTROL],
     Capability.HCA_DRYER_MODE: [Command.SET_MODE],
     Capability.HCA_WASHER_MODE: [Command.SET_MODE],
-    Capability.SEC_CALM_CONNECTION_CARE: [],
-    Capability.SEC_DEVICE_CONNECTION_STATE: [Command.REFRESH_CONNECTION],
-    Capability.SEC_DIAGNOSTICS_INFORMATION: [],
-    Capability.SEC_WIFI_CONFIGURATION: [],
     Capability.LEGENDABSOLUTE60149_ATMOS_PRESSURE: [Command.SET_ATMOS_PRESSURE],
     Capability.LEGENDABSOLUTE60149_CIRCADIAN: [Command.SET_CIRCADIAN],
+    Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_MODE1: [Command.SET_COLOR_CHANGE_MODE],
+    Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_TIMER: [Command.SET_COLOR_CHANGE_TIMER],
+    Capability.LEGENDABSOLUTE60149_COLOR_CHANGING: [Command.SET_COLOR_CHANGING],
     Capability.LEGENDABSOLUTE60149_COLOR_TEMPERATURE_STEPS: [
         Command.SET_COLOR_TEMP_STEPS
     ],
@@ -1223,6 +1292,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Command.SET_EVEN_ODD_DAY],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Command.SET_FORCED_ON_LEVEL],
     Capability.LEGENDABSOLUTE60149_GET_GROUPS: [Command.SET_GET_GROUPS],
+    Capability.LEGENDABSOLUTE60149_HUE_STEPS: [Command.SET_HUE_STEPS],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_CONDITION: [Command.SET_HUMIDITY_CONDITION],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_TARGET: [Command.SET_HUMIDITY_TARGET],
     Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: [Command.SET_LEVEL_STEPS],
@@ -1315,14 +1385,43 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: [],
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [],
     Capability.PLATEMUSIC11009_FIRMWARE: [],
-    Capability.WATCHPANEL55613_LCCTHERMOSTAT: [],
+    Capability.RBOYAPPS_LOCK_AUDIO: [
+        Command.DISABLE_AUDIO,
+        Command.ENABLE_AUDIO,
+        Command.SET_AUDIO,
+    ],
+    Capability.RBOYAPPS_LOCK_AUTOLOCK: [
+        Command.DISABLE_AUTOLOCK,
+        Command.ENABLE_AUTOLOCK,
+        Command.SET_AUTOLOCK,
+    ],
+    Capability.RBOYAPPS_LOCK_EXTENDED: [],
+    Capability.RBOYAPPS_LOCK_KEYPAD: [
+        Command.DISABLE_KEYPAD,
+        Command.ENABLE_KEYPAD,
+        Command.SET_KEYPAD,
+    ],
+    Capability.RBOYAPPS_LOCK_ONE_TOUCH_LOCK: [
+        Command.DISABLE_ONE_TOUCH_LOCK,
+        Command.ENABLE_ONE_TOUCH_LOCK,
+        Command.SET_ONE_TOUCH_LOCK,
+    ],
+    Capability.RBOYAPPS_LOCK_TAMPER: [Command.ALARM_TOGGLE, Command.SET_ALARM],
+    Capability.RBOYAPPS_LOCK_TAMPER_SENSITIVITY: [
+        Command.SENSITIVE_TOGGLE,
+        Command.SET_SENSITIVITY,
+    ],
+    Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [],
+    Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
+        Command.SET_METERING_DATE,
+        Command.SET_SERVICE_MESSAGE,
+    ],
+    Capability.SEC_CALM_CONNECTION_CARE: [],
+    Capability.SEC_DEVICE_CONNECTION_STATE: [Command.REFRESH_CONNECTION],
+    Capability.SEC_DIAGNOSTICS_INFORMATION: [],
+    Capability.SEC_WIFI_CONFIGURATION: [],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Command.SET_CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Command.SET_FADE],
-    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_MUTE: [Command.MUTED],
-    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_DOWN: [Command.VOLUME_DOWN],
-    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_UP: [Command.VOLUME_UP],
-    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN: [Command.CHANNEL_DOWN],
-    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_UP: [Command.CHANNEL_UP],
     Capability.TAG_E2E_ENCRYPTION: [Command.OFF, Command.ON],
     Capability.TAG_FACTORY_RESET: [Command.RESET],
     Capability.TAG_SEARCHING_STATUS: [],
@@ -1335,17 +1434,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.TAG_TAG_STATUS: [],
     Capability.TAG_UPDATED_INFO: [Command.UPDATE],
     Capability.TAG_UWB_ACTIVATION: [Command.OFF, Command.ON],
-    Capability.AMBERPIANO10217_BINDING_INFO: [],
-    Capability.AMBERPIANO10217_CLUSTER: [Command.SET_CLUSTER_ID],
-    Capability.AMBERPIANO10217_CONTROLLER_STATUS: [],
-    Capability.AMBERPIANO10217_DETECTION_INTERVAL: [Command.SET_DETECTION_INTERVAL],
-    Capability.AMBERPIANO10217_DEVICE_EUI: [Command.SET_DEVICE_EUI],
-    Capability.AMBERPIANO10217_DEVICEINFO: [],
-    Capability.AMBERPIANO10217_GROUP_ADD: [Command.ADD, Command.PUSH],
-    Capability.AMBERPIANO10217_GROUP_INFO: [],
-    Capability.AMBERPIANO10217_GROUP_REMOVE: [Command.PUSH, Command.REMOVE],
-    Capability.AMBERPIANO10217_GROUP_REMOVE_ALL: [Command.PUSH],
-    Capability.AMBERPIANO10217_OBJECT: [],
-    Capability.AMBERPIANO10217_SENSOR_DETECTION_SENSITIVITY: [Command.SET_MODE],
-    Capability.AMBERPIANO10217_VIRTUAL_THING_TYPE: [Command.SET_THING_TYPE],
+    Capability.VALLEYBOARD16460_DEBUG: [Command.CLEAR, Command.SET_VALUE],
+    Capability.VALLEYBOARD16460_INFO: [Command.CLEAR, Command.SET_VALUE],
+    Capability.WATCHPANEL55613_LCCTHERMOSTAT: [],
 }

@@ -30,6 +30,7 @@ class Attribute(StrEnum):
     ALWAYS_ON = "alwaysOn"
     AMOUNT = "amount"
     AMPERAGE = "amperage"
+    AP_OPERATION_MODE = "apOperationMode"
     APP_NAME = "appName"
     APP_VERSION = "appVersion"
     AREA = "area"
@@ -40,12 +41,14 @@ class Attribute(StrEnum):
     ASSOCIATION_GROUP_TWO = "associationGroupTwo"
     ATMOS_PRESSURE = "atmosPressure"
     ATMOSPHERIC_PRESSURE = "atmosphericPressure"
+    AUDIO = "audio"
     AUDIO_ONLY = "audioOnly"
     AUDIO_TRACK_DATA = "audioTrackData"
     AUTO_CLEANING_MODE = "autoCleaningMode"
     AUTO_DOOR_RELEASE_ENABLED = "autoDoorReleaseEnabled"
     AUTO_RECONNECTION = "autoReconnection"
     AUTO_UPDATE_ENABLED = "autoUpdateEnabled"
+    AUTOLOCK = "autolock"
     AUTOMATIC_EXECUTION_MODE = "automaticExecutionMode"
     AUTOMATIC_EXECUTION_SETTING = "automaticExecutionSetting"
     AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
@@ -103,6 +106,9 @@ class Attribute(StrEnum):
     CODE_LENGTH = "codeLength"
     CODE_REPORT = "codeReport"
     COLOR = "color"
+    COLOR_CHANGE_MODE = "colorChangeMode"
+    COLOR_CHANGE_TIMER = "colorChangeTimer"
+    COLOR_CHANGING = "colorChanging"
     COLOR_TEMP_STEPS = "colorTempSteps"
     COLOR_TEMPERATURE = "colorTemperature"
     COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
@@ -304,6 +310,7 @@ class Attribute(StrEnum):
     HUB_EUI = "hubEui"
     HUB_ONBOARDING_STATUS = "hubOnboardingStatus"
     HUE = "hue"
+    HUE_STEPS = "hueSteps"
     HUMIDIFIER_MODE = "humidifierMode"
     HUMIDITY = "humidity"
     HUMIDITY_CONDITION = "humidityCondition"
@@ -320,11 +327,13 @@ class Attribute(StrEnum):
     INITIAL_AMOUNT = "initialAmount"
     INPUT_SOURCE = "inputSource"
     INTERVAL = "interval"
+    INVALID_CODE = "invalidCode"
     INVENTORY = "inventory"
     INVISIBLE_FEATURES = "invisibleFeatures"
     IS_MAP_BASED_OPERATION_AVAILABLE = "isMapBasedOperationAvailable"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     KEYNUMVALUE = "keynumvalue"
+    KEYPAD = "keypad"
     KEYVALUE = "keyvalue"
     LAST_SENSING_LEVEL = "lastSensingLevel"
     LAST_SENSING_TIME = "lastSensingTime"
@@ -335,12 +344,18 @@ class Attribute(StrEnum):
     LAST_UPDATED_TIME = "lastUpdatedTime"
     LATEST_REQUEST_ID = "latestRequestId"
     LATITUDE = "latitude"
+    LED_BAR_OFF_COLOR = "ledBarOffColor"
+    LED_BAR_OFF_LEVEL = "ledBarOffLevel"
+    LED_BAR_ON_COLOR = "ledBarOnColor"
+    LED_BAR_ON_LEVEL = "ledBarOnLevel"
     LED_NOTIFICATION = "ledNotification"
     LEVEL = "level"
+    LEVEL_LOCAL = "levelLocal"
     LEVEL_RANGE = "levelRange"
     LEVEL_STEPS = "levelSteps"
     LIGHTING = "lighting"
     LIGHTING_MODE = "lightingMode"
+    LOCAL_CONTROL = "localControl"
     LOCAL_DATE = "localDate"
     LOCAL_DATE_ONE = "localDateOne"
     LOCAL_DATE_TWO = "localDateTwo"
@@ -358,6 +373,9 @@ class Attribute(StrEnum):
     LOCK = "lock"
     LOCK_CODES = "lockCodes"
     LOCK_STATE = "lockState"
+    LOCK_STATUS = "lockStatus"
+    LOCK_TYPE = "lockType"
+    LOG = "log"
     LOG_TYPE = "logType"
     LONGITUDE = "longitude"
     LQI = "lqi"
@@ -424,6 +442,11 @@ class Attribute(StrEnum):
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
     NITROGEN_DIOXIDE = "nitrogenDioxide"
     NITROGEN_DIOXIDE_HEALTH_CONCERN = "nitrogenDioxideHealthConcern"
+    NOTIFICATION_COLOR = "notificationColor"
+    NOTIFICATION_DURATION = "notificationDuration"
+    NOTIFICATION_EFFECT = "notificationEffect"
+    NOTIFICATION_LEVEL = "notificationLevel"
+    NOTIFICATION_NUMBER = "notificationNumber"
     NOTIFICATION_TEMPLATE_I_D = "notificationTemplateID"
     NUMBER_OF_BUTTONS = "numberOfButtons"
     NUMBER_OF_CONNECTED_DEVICES = "numberOfConnectedDevices"
@@ -434,6 +457,7 @@ class Attribute(StrEnum):
     OCF_RESOURCE_VERSION = "ocfResourceVersion"
     ODOR_LEVEL = "odorLevel"
     ONBOARDING = "onboarding"
+    ONETOUCHLOCK = "onetouchlock"
     OPERATING_STATE = "operatingState"
     OPERATION_MODE = "operationMode"
     OPERATION_TIME = "operationTime"
@@ -516,6 +540,7 @@ class Attribute(StrEnum):
     REMAINING_AMOUNT = "remainingAmount"
     REMAINING_TIME = "remainingTime"
     REMAINING_TIME_STR = "remainingTimeStr"
+    REMOTE_CONTROL = "remoteControl"
     REMOTE_CONTROL_ENABLED = "remoteControlEnabled"
     REMOTELESS_SUPPORTED = "remotelessSupported"
     REPEAT_MODE = "repeatMode"
@@ -558,6 +583,7 @@ class Attribute(StrEnum):
     SELECTED_MODE = "selectedMode"
     SELECTED_ZONE = "selectedZone"
     SELECTION = "selection"
+    SENSITIVE = "sensitive"
     SENSITIVITY_MODE = "sensitivityMode"
     SENSOR_STATUS = "sensorStatus"
     SERIAL_NUMBER = "serialNumber"
@@ -634,6 +660,7 @@ class Attribute(StrEnum):
     SUPPORTED_ALARM_THRESHOLDS = "supportedAlarmThresholds"
     SUPPORTED_AMBIENT_APPS = "supportedAmbientApps"
     SUPPORTED_AMOUNT = "supportedAmount"
+    SUPPORTED_AP_OPERATION_MODE = "supportedApOperationMode"
     SUPPORTED_ARGUMENTS = "supportedArguments"
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
     SUPPORTED_AUTO_CLEANING_MODES = "supportedAutoCleaningModes"
@@ -765,7 +792,10 @@ class Attribute(StrEnum):
     UPLINK_SPEED = "uplinkSpeed"
     URI = "uri"
     USAGE_TIME = "usageTime"
+    USER_CODE = "userCode"
+    USER_ID = "userId"
     USER_LOCATION = "userLocation"
+    USER_NAME = "userName"
     UWB_ACTIVATION = "uwbActivation"
     VACATION_MODE = "vacationMode"
     VALUE = "value"
@@ -1220,6 +1250,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: [
         Attribute.AC_TROPICAL_NIGHT_MODE_LEVEL
+    ],
+    Capability.CUSTOM_AIR_PURIFIER_OPERATION_MODE: [
+        Attribute.AP_OPERATION_MODE,
+        Attribute.SUPPORTED_AP_OPERATION_MODE,
     ],
     Capability.CUSTOM_AIR_QUALITY_MAX_LEVEL: [Attribute.AIR_QUALITY_MAX_LEVEL],
     Capability.CUSTOM_AUTO_CLEANING_MODE: [
@@ -2044,62 +2078,72 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.HUB_ONBOARDING_STATUS,
     ],
     Capability.SAMSUNG_IM_WIFI: [Attribute.CONNECTION_INFO, Attribute.SCAN_RESULTS],
-    Capability.VALLEYBOARD16460_DEBUG: [Attribute.VALUE],
-    Capability.VALLEYBOARD16460_INFO: [Attribute.VALUE],
-    Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [
-        Attribute.ENERGY_USAGE_STATE,
-        Attribute.GRID_STATUS_STATUS,
-        Attribute.GRID_STATUS_SUPPORT,
-        Attribute.STORM_WATCH_ACTIVE,
-        Attribute.STORM_WATCH_ENABLED,
-        Attribute.STORM_WATCH_SUPPORT,
+    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_MUTE: [],
+    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_DOWN: [],
+    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_UP: [],
+    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN: [],
+    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_UP: [],
+    Capability.AMBERPIANO10217_BINDING_INFO: [Attribute.INFO_HTML, Attribute.INFO_TEXT],
+    Capability.AMBERPIANO10217_CLUSTER: [
+        Attribute.CLUSTER_ID,
+        Attribute.CLUSTER_ID_DEC,
+        Attribute.CLUSTER_NAME,
     ],
-    Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
-        Attribute.DATE_STARTED,
-        Attribute.HAS_COST,
-        Attribute.HAS_FROM_GRID,
-        Attribute.HAS_TODAY_USAGE,
-        Attribute.HAS_TOTAL_USAGE,
-        Attribute.HAS_TO_GRID,
-        Attribute.MEASURE_INTERVAL,
-        Attribute.METERING_DATE,
-        Attribute.RATE_TYPE,
-        Attribute.SERVICE_MESSAGE,
-        Attribute.SUPPORT_TOU_EVENT_NOTIFICATION,
-        Attribute.SUPPORT_TOU_INFO,
-        Attribute.TARIFF_NAME,
-        Attribute.TARIFF_PROVIDER,
-        Attribute.TOU_EVENT_NOTIFICATION,
-        Attribute.TOU_INFO,
+    Capability.AMBERPIANO10217_CONTROLLER_STATUS: [Attribute.INFO, Attribute.STATUS],
+    Capability.AMBERPIANO10217_DETECTION_INTERVAL: [Attribute.DETECTION_INTERVAL],
+    Capability.AMBERPIANO10217_DEVICE_EUI: [Attribute.EUI],
+    Capability.AMBERPIANO10217_DEVICEINFO: [
+        Attribute.APP_VERSION,
+        Attribute.BASIC_HTML,
+        Attribute.BASIC_HTML_DISABLE,
+        Attribute.DASH_BOARD_VALUE,
+        Attribute.ZCL_VERSION,
     ],
+    Capability.AMBERPIANO10217_GROUP_ADD: [Attribute.STATUS],
+    Capability.AMBERPIANO10217_GROUP_INFO: [Attribute.INFO_HTML, Attribute.INFO_TEXT],
+    Capability.AMBERPIANO10217_GROUP_REMOVE: [Attribute.GROUP_ID],
+    Capability.AMBERPIANO10217_GROUP_REMOVE_ALL: [],
+    Capability.AMBERPIANO10217_OBJECT: [Attribute.DATA],
+    Capability.AMBERPIANO10217_SENSOR_DETECTION_SENSITIVITY: [
+        Attribute.SENSITIVITY_MODE,
+        Attribute.SUPPORTED_MODES,
+    ],
+    Capability.AMBERPIANO10217_VIRTUAL_THING_TYPE: [
+        Attribute.SUPPORTED_TYPES,
+        Attribute.TYPE,
+    ],
+    Capability.EVENTFLUTE36860_DEFAULT_LEVEL_LOCAL: [Attribute.LEVEL_LOCAL],
+    Capability.EVENTFLUTE36860_LED_BAR_SWITCH_OFF: [
+        Attribute.LED_BAR_OFF_COLOR,
+        Attribute.LED_BAR_OFF_LEVEL,
+    ],
+    Capability.EVENTFLUTE36860_LED_BAR_SWITCH_ON: [
+        Attribute.LED_BAR_ON_COLOR,
+        Attribute.LED_BAR_ON_LEVEL,
+    ],
+    Capability.EVENTFLUTE36860_LOCAL_CONTROL: [Attribute.LOCAL_CONTROL],
+    Capability.EVENTFLUTE36860_LOG: [Attribute.LOG],
+    Capability.EVENTFLUTE36860_NOTIFICATION_ALL: [
+        Attribute.NOTIFICATION_COLOR,
+        Attribute.NOTIFICATION_DURATION,
+        Attribute.NOTIFICATION_EFFECT,
+        Attribute.NOTIFICATION_LEVEL,
+    ],
+    Capability.EVENTFLUTE36860_NOTIFICATION_SINGLE: [
+        Attribute.NOTIFICATION_COLOR,
+        Attribute.NOTIFICATION_DURATION,
+        Attribute.NOTIFICATION_EFFECT,
+        Attribute.NOTIFICATION_LEVEL,
+        Attribute.NOTIFICATION_NUMBER,
+    ],
+    Capability.EVENTFLUTE36860_REMOTE_CONTROL: [Attribute.REMOTE_CONTROL],
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
     Capability.HCA_WASHER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
-    Capability.SEC_CALM_CONNECTION_CARE: [
-        Attribute.PROTOCOLS,
-        Attribute.ROLE,
-        Attribute.VERSION,
-    ],
-    Capability.SEC_DEVICE_CONNECTION_STATE: [Attribute.DEVICE_CONNECTION_STATE],
-    Capability.SEC_DIAGNOSTICS_INFORMATION: [
-        Attribute.DUMP_TYPE,
-        Attribute.ENDPOINT,
-        Attribute.LOG_TYPE,
-        Attribute.MIN_VERSION,
-        Attribute.MN_ID,
-        Attribute.PROTOCOL_TYPE,
-        Attribute.SETUP_ID,
-        Attribute.SIGNIN_PERMISSION,
-        Attribute.TS_ID,
-    ],
-    Capability.SEC_WIFI_CONFIGURATION: [
-        Attribute.AUTO_RECONNECTION,
-        Attribute.MIN_VERSION,
-        Attribute.PROTOCOL_TYPE,
-        Attribute.SUPPORTED_AUTH_TYPE,
-        Attribute.SUPPORTED_WI_FI_FREQ,
-    ],
     Capability.LEGENDABSOLUTE60149_ATMOS_PRESSURE: [Attribute.ATMOS_PRESSURE],
     Capability.LEGENDABSOLUTE60149_CIRCADIAN: [Attribute.CIRCADIAN],
+    Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_MODE1: [Attribute.COLOR_CHANGE_MODE],
+    Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_TIMER: [Attribute.COLOR_CHANGE_TIMER],
+    Capability.LEGENDABSOLUTE60149_COLOR_CHANGING: [Attribute.COLOR_CHANGING],
     Capability.LEGENDABSOLUTE60149_COLOR_TEMPERATURE_STEPS: [
         Attribute.COLOR_TEMP_STEPS
     ],
@@ -2113,6 +2157,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Attribute.EVEN_ODD_DAY],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Attribute.FORCED_ON_LEVEL],
     Capability.LEGENDABSOLUTE60149_GET_GROUPS: [Attribute.GET_GROUPS],
+    Capability.LEGENDABSOLUTE60149_HUE_STEPS: [Attribute.HUE_STEPS],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_CONDITION: [Attribute.HUMIDITY_CONDITION],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_TARGET: [Attribute.HUMIDITY_TARGET],
     Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: [Attribute.LEVEL_STEPS],
@@ -2203,14 +2248,72 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: [Attribute.ASSOCIATION_GROUP_TWO],
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [Attribute.DEVICE_NETWORK_ID],
     Capability.PLATEMUSIC11009_FIRMWARE: [Attribute.FIRMWARE_VERSION],
-    Capability.WATCHPANEL55613_LCCTHERMOSTAT: [Attribute.DRCAPABLE],
+    Capability.RBOYAPPS_LOCK_AUDIO: [Attribute.AUDIO],
+    Capability.RBOYAPPS_LOCK_AUTOLOCK: [Attribute.AUTOLOCK],
+    Capability.RBOYAPPS_LOCK_EXTENDED: [
+        Attribute.INVALID_CODE,
+        Attribute.LOCK_STATUS,
+        Attribute.LOCK_TYPE,
+        Attribute.USER_CODE,
+        Attribute.USER_ID,
+        Attribute.USER_NAME,
+    ],
+    Capability.RBOYAPPS_LOCK_KEYPAD: [Attribute.KEYPAD],
+    Capability.RBOYAPPS_LOCK_ONE_TOUCH_LOCK: [Attribute.ONETOUCHLOCK],
+    Capability.RBOYAPPS_LOCK_TAMPER: [Attribute.ALARM],
+    Capability.RBOYAPPS_LOCK_TAMPER_SENSITIVITY: [Attribute.SENSITIVE],
+    Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [
+        Attribute.ENERGY_USAGE_STATE,
+        Attribute.GRID_STATUS_STATUS,
+        Attribute.GRID_STATUS_SUPPORT,
+        Attribute.STORM_WATCH_ACTIVE,
+        Attribute.STORM_WATCH_ENABLED,
+        Attribute.STORM_WATCH_SUPPORT,
+    ],
+    Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
+        Attribute.DATE_STARTED,
+        Attribute.HAS_COST,
+        Attribute.HAS_FROM_GRID,
+        Attribute.HAS_TODAY_USAGE,
+        Attribute.HAS_TOTAL_USAGE,
+        Attribute.HAS_TO_GRID,
+        Attribute.MEASURE_INTERVAL,
+        Attribute.METERING_DATE,
+        Attribute.RATE_TYPE,
+        Attribute.SERVICE_MESSAGE,
+        Attribute.SUPPORT_TOU_EVENT_NOTIFICATION,
+        Attribute.SUPPORT_TOU_INFO,
+        Attribute.TARIFF_NAME,
+        Attribute.TARIFF_PROVIDER,
+        Attribute.TOU_EVENT_NOTIFICATION,
+        Attribute.TOU_INFO,
+    ],
+    Capability.SEC_CALM_CONNECTION_CARE: [
+        Attribute.PROTOCOLS,
+        Attribute.ROLE,
+        Attribute.VERSION,
+    ],
+    Capability.SEC_DEVICE_CONNECTION_STATE: [Attribute.DEVICE_CONNECTION_STATE],
+    Capability.SEC_DIAGNOSTICS_INFORMATION: [
+        Attribute.DUMP_TYPE,
+        Attribute.ENDPOINT,
+        Attribute.LOG_TYPE,
+        Attribute.MIN_VERSION,
+        Attribute.MN_ID,
+        Attribute.PROTOCOL_TYPE,
+        Attribute.SETUP_ID,
+        Attribute.SIGNIN_PERMISSION,
+        Attribute.TS_ID,
+    ],
+    Capability.SEC_WIFI_CONFIGURATION: [
+        Attribute.AUTO_RECONNECTION,
+        Attribute.MIN_VERSION,
+        Attribute.PROTOCOL_TYPE,
+        Attribute.SUPPORTED_AUTH_TYPE,
+        Attribute.SUPPORTED_WI_FI_FREQ,
+    ],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
-    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_MUTE: [],
-    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_DOWN: [],
-    Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_UP: [],
-    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN: [],
-    Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_UP: [],
     Capability.TAG_E2E_ENCRYPTION: [Attribute.ENCRYPTION],
     Capability.TAG_FACTORY_RESET: [],
     Capability.TAG_SEARCHING_STATUS: [Attribute.SEARCHING_STATUS],
@@ -2222,33 +2325,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.TAG_UPDATED_INFO: [Attribute.CONNECTION],
     Capability.TAG_UWB_ACTIVATION: [Attribute.UWB_ACTIVATION],
-    Capability.AMBERPIANO10217_BINDING_INFO: [Attribute.INFO_HTML, Attribute.INFO_TEXT],
-    Capability.AMBERPIANO10217_CLUSTER: [
-        Attribute.CLUSTER_ID,
-        Attribute.CLUSTER_ID_DEC,
-        Attribute.CLUSTER_NAME,
-    ],
-    Capability.AMBERPIANO10217_CONTROLLER_STATUS: [Attribute.INFO, Attribute.STATUS],
-    Capability.AMBERPIANO10217_DETECTION_INTERVAL: [Attribute.DETECTION_INTERVAL],
-    Capability.AMBERPIANO10217_DEVICE_EUI: [Attribute.EUI],
-    Capability.AMBERPIANO10217_DEVICEINFO: [
-        Attribute.APP_VERSION,
-        Attribute.BASIC_HTML,
-        Attribute.BASIC_HTML_DISABLE,
-        Attribute.DASH_BOARD_VALUE,
-        Attribute.ZCL_VERSION,
-    ],
-    Capability.AMBERPIANO10217_GROUP_ADD: [Attribute.STATUS],
-    Capability.AMBERPIANO10217_GROUP_INFO: [Attribute.INFO_HTML, Attribute.INFO_TEXT],
-    Capability.AMBERPIANO10217_GROUP_REMOVE: [Attribute.GROUP_ID],
-    Capability.AMBERPIANO10217_GROUP_REMOVE_ALL: [],
-    Capability.AMBERPIANO10217_OBJECT: [Attribute.DATA],
-    Capability.AMBERPIANO10217_SENSOR_DETECTION_SENSITIVITY: [
-        Attribute.SENSITIVITY_MODE,
-        Attribute.SUPPORTED_MODES,
-    ],
-    Capability.AMBERPIANO10217_VIRTUAL_THING_TYPE: [
-        Attribute.SUPPORTED_TYPES,
-        Attribute.TYPE,
-    ],
+    Capability.VALLEYBOARD16460_DEBUG: [Attribute.VALUE],
+    Capability.VALLEYBOARD16460_INFO: [Attribute.VALUE],
+    Capability.WATCHPANEL55613_LCCTHERMOSTAT: [Attribute.DRCAPABLE],
 }

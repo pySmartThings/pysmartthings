@@ -139,11 +139,11 @@ def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # no
             )
         file += "\n"
 
-    for ns, attr in capability_attributes.items():
+    for ns in sorted(capability_attributes):
         if ns in ORDER:
             continue
-        for cap in sorted(attr):
-            attr2 = attr[cap]
+        for cap in sorted(capability_attributes[ns]):
+            attr2 = capability_attributes[ns][cap]
             file = render_capability(
                 file, cap, attr2, "Attribute", prepare_attribute_name
             )
@@ -179,11 +179,11 @@ def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # no
             )
         command_file += "\n"
 
-    for ns, attr in capability_commands.items():
+    for ns in sorted(capability_commands):
         if ns in ORDER:
             continue
-        for cap in sorted(attr):
-            attr2 = attr[cap]
+        for cap in sorted(capability_commands[ns]):
+            attr2 = capability_commands[ns][cap]
             command_file = render_capability(
                 command_file,
                 cap,
