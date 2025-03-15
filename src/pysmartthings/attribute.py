@@ -51,6 +51,7 @@ class Attribute(StrEnum):
     AUTOLOCK = "autolock"
     AUTOMATIC_EXECUTION_MODE = "automaticExecutionMode"
     AUTOMATIC_EXECUTION_SETTING = "automaticExecutionSetting"
+    AVAILABLE = "available"
     AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
     AVAILABLE_AC_MODES = "availableAcModes"
     AVAILABLE_CUSTOM_BUTTONS = "availableCustomButtons"
@@ -178,6 +179,7 @@ class Attribute(StrEnum):
     DISHWASHER_JOB_STATE = "dishwasherJobState"
     DISHWASHER_OPERATING_PERCENTAGE = "dishwasherOperatingPercentage"
     DISHWASHER_OPERATING_PROGRESS = "dishwasherOperatingProgress"
+    DISPLAY = "display"
     DATA_MODEL_VERSION = "dmv"
     DO_NOT_DISTURB = "doNotDisturb"
     DOOR = "door"
@@ -320,6 +322,7 @@ class Attribute(StrEnum):
     ILLUMVALUE = "illumvalue"
     IMAGE = "image"
     IME_ADV_SUPPORTED = "imeAdvSupported"
+    INDOOR = "indoor"
     INFO = "info"
     INFO_HTML = "infoHtml"
     INFO_TEXT = "infoText"
@@ -376,6 +379,9 @@ class Attribute(StrEnum):
     LOCK_STATUS = "lockStatus"
     LOCK_TYPE = "lockType"
     LOG = "log"
+    LOG_INFO = "logInfo"
+    LOG_REQUEST_STATE = "logRequestState"
+    LOG_STATE = "logState"
     LOG_TYPE = "logType"
     LONGITUDE = "longitude"
     LQI = "lqi"
@@ -466,6 +472,7 @@ class Attribute(StrEnum):
     ORIGINS = "origins"
     OTN_D_U_I_D = "otnDUID"
     OUT_OF_SYNC_CHANGES = "outOfSyncChanges"
+    OUTDOOR = "outdoor"
     OUTING_MODE = "outingMode"
     OVEN_CAVITY_STATUS = "ovenCavityStatus"
     OVEN_JOB_STATE = "ovenJobState"
@@ -732,6 +739,7 @@ class Attribute(StrEnum):
     SUPPORTED_TYPES = "supportedTypes"
     SUPPORTED_UNLOCK_DIRECTIONS = "supportedUnlockDirections"
     SUPPORTED_VALUES = "supportedValues"
+    SUPPORTED_VOLUME_LEVELS = "supportedVolumeLevels"
     SUPPORTED_WASHER_RINSE_CYCLES = "supportedWasherRinseCycles"
     SUPPORTED_WASHER_SOIL_LEVEL = "supportedWasherSoilLevel"
     SUPPORTED_WASHER_SPIN_LEVEL = "supportedWasherSpinLevel"
@@ -817,6 +825,7 @@ class Attribute(StrEnum):
     VISIBLE_FEATURES = "visibleFeatures"
     VOLTAGE = "voltage"
     VOLUME = "volume"
+    VOLUME_LEVEL = "volumeLevel"
     VTEMP = "vtemp"
     W_SPEED = "wSpeed"
     WASHER_AUTO_DETERGENT = "washerAutoDetergent"
@@ -1026,6 +1035,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MAX_CODE_LENGTH,
         Attribute.MIN_CODE_LENGTH,
         Attribute.SCAN_CODES,
+    ],
+    Capability.LOG_TRIGGER: [
+        Attribute.LOG_INFO,
+        Attribute.LOG_REQUEST_STATE,
+        Attribute.LOG_STATE,
     ],
     Capability.MEDIA_GROUP: [
         Attribute.GROUP_ID,
@@ -1446,7 +1460,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WATER_FILTER_USAGE_STEP,
     ],
     Capability.CUSTOM_WELCOME_CARE_MODE: [Attribute.WELCOME_CARE_MODE],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [
+        Attribute.SUPPORTED_VOLUME_LEVELS,
+        Attribute.VOLUME_LEVEL,
+    ],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Attribute.BEEP],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_DISPLAY: [Attribute.DISPLAY],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_LIGHTING: [
         Attribute.LIGHTING,
         Attribute.SUPPORTED_LIGHTING_LEVELS,
@@ -1475,6 +1494,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Attribute.AUTO_DOOR_RELEASE_ENABLED],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [Attribute.SWITCH],
+    Capability.SAMSUNG_CE_CAMERA_STREAMING: [
+        Attribute.AVAILABLE,
+        Attribute.REGISTRATION_STATUS,
+    ],
     Capability.SAMSUNG_CE_CLOTHING_EXTRA_CARE: [
         Attribute.OPERATION_MODE,
         Attribute.USER_LOCATION,
@@ -1632,6 +1655,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ALARM_THRESHOLD,
         Attribute.SUPPORTED_ALARM_THRESHOLDS,
     ],
+    Capability.SAMSUNG_CE_EHS_CYCLE_DATA: [Attribute.INDOOR, Attribute.OUTDOOR],
     Capability.SAMSUNG_CE_EHS_FSV_SETTINGS: [Attribute.FSV_SETTINGS],
     Capability.SAMSUNG_CE_EHS_TEMPERATURE_REFERENCE: [Attribute.TEMPERATURE_REFERENCE],
     Capability.SAMSUNG_CE_EHS_THERMOSTAT: [Attribute.CONNECTION_STATE],

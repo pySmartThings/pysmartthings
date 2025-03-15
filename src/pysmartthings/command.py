@@ -25,6 +25,7 @@ class Command(StrEnum):
     CALL = "call"
     CANCEL = "cancel"
     CANCEL_AGING = "cancelAging"
+    CANCEL_ONBOARDING = "cancelOnboarding"
     CANCEL_REMAINING_JOB = "cancelRemainingJob"
     CANCEL_SELF_CHECK = "cancelSelfCheck"
     CAPTURE = "capture"
@@ -408,6 +409,7 @@ class Command(StrEnum):
     SET_VALUE = "setValue"
     SET_VIRUS_DOCTOR_MODE = "setVirusDoctorMode"
     SET_VOLUME = "setVolume"
+    SET_VOLUME_LEVEL = "setVolumeLevel"
     SET_WASHER_AUTO_DETERGENT = "setWasherAutoDetergent"
     SET_WASHER_AUTO_SOFTENER = "setWasherAutoSoftener"
     SET_WASHER_CYCLE = "setWasherCycle"
@@ -449,6 +451,9 @@ class Command(StrEnum):
     STROBE = "strobe"
     TAKE = "take"
     TOGGLE = "toggle"
+    TRIGGER_LOG = "triggerLog"
+    TRIGGER_LOG_WITH_LOG_INFO = "triggerLogWithLogInfo"
+    TRIGGER_LOG_WITH_URL = "triggerLogWithUrl"
     TRIGGER_MANUAL_SENSING = "triggerManualSensing"
     TURN_WELCOME_CARE_ON = "turnWelcomeCareOn"
     UNLATCH = "unlatch"
@@ -575,6 +580,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.UNLOCK,
         Command.UNLOCK_WITH_TIMEOUT,
         Command.UPDATE_CODES,
+    ],
+    Capability.LOG_TRIGGER: [
+        Command.TRIGGER_LOG,
+        Command.TRIGGER_LOG_WITH_LOG_INFO,
+        Command.TRIGGER_LOG_WITH_URL,
     ],
     Capability.MEDIA_GROUP: [
         Command.GROUP_VOLUME_DOWN,
@@ -828,7 +838,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_WASHER_WATER_TEMPERATURE: [Command.SET_WASHER_WATER_TEMPERATURE],
     Capability.CUSTOM_WATER_FILTER: [Command.RESET_WATER_FILTER],
     Capability.CUSTOM_WELCOME_CARE_MODE: [Command.TURN_WELCOME_CARE_ON],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [Command.SET_VOLUME_LEVEL],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Command.OFF, Command.ON],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_DISPLAY: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_LIGHTING: [
         Command.OFF,
         Command.ON,
@@ -849,6 +861,10 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Command.DISABLE, Command.ENABLE],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [],
+    Capability.SAMSUNG_CE_CAMERA_STREAMING: [
+        Command.CANCEL_ONBOARDING,
+        Command.REGISTER,
+    ],
     Capability.SAMSUNG_CE_CLOTHING_EXTRA_CARE: [
         Command.SET_OPERATION_MODE,
         Command.SET_USER_LOCATION,
@@ -959,6 +975,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.START,
     ],
     Capability.SAMSUNG_CE_DUST_FILTER_ALARM: [Command.SET_ALARM_THRESHOLD],
+    Capability.SAMSUNG_CE_EHS_CYCLE_DATA: [],
     Capability.SAMSUNG_CE_EHS_FSV_SETTINGS: [Command.REFRESH, Command.SET_VALUE],
     Capability.SAMSUNG_CE_EHS_TEMPERATURE_REFERENCE: [],
     Capability.SAMSUNG_CE_EHS_THERMOSTAT: [],
