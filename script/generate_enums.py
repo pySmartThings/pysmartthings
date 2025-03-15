@@ -71,6 +71,7 @@ def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # no
     commands = set()
     capability_attributes: dict[str, Any] = {}
     capability_commands: dict[str, Any] = {}
+    capabilities: dict[str, list[str]] = {}
     root = Path("capabilities/json")
     for namespace in root.iterdir():
         for js in namespace.iterdir():
@@ -80,8 +81,10 @@ def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # no
             if ns not in capability_attributes:
                 capability_attributes[ns] = {}
                 capability_commands[ns] = {}
+                capabilities[ns] = []
             capability_attributes[ns][data["id"]] = []
             capability_commands[ns][data["id"]] = []
+            capabilities[ns].append(data["id"])
             for attribute in data["attributes"]:
                 attributes.add(attribute)
                 capability_attributes[ns][data["id"]].append(attribute)
@@ -89,6 +92,27 @@ def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # no
             for command in data["commands"]:
                 commands.add(command)
                 capability_commands[ns][data["id"]].append(command)
+    cap_file = '"""Capability model."""\n'
+    cap_file += "from enum import StrEnum\n"
+    cap_file += "class Capability(StrEnum):\n"
+    cap_file += '    """Capability model."""\n'
+
+    for namesp in ORDER:
+        for capability in sorted(capabilities[namesp]):
+            name = prepare_capability_name(capability)
+            cap_file += f'    {name} = "{capability}"\n'
+        cap_file += "\n"
+
+    for namesp in sorted(capabilities):
+        if namesp in ORDER:
+            continue
+        for capability in sorted(capabilities[namesp]):
+            name = prepare_capability_name(capability)
+            cap_file += f'    {name} = "{capability}"\n'
+        cap_file += "\n"
+
+    Path("src/pysmartthings/capability.py").write_text(cap_file, encoding="utf-8")
+
     file = '"""Attribute model."""\n'
     file += "from enum import StrEnum\n"
     file += "from pysmartthings.capability import Capability\n"
