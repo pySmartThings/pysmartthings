@@ -384,6 +384,15 @@ class DeviceResponse(DataClassORJSONMixin):
     """Device response model."""
 
     items: list[Device]
+    next_link: str | None
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
+        """Pre deserialize hook."""
+        return {
+            **d,
+            "next_link": d.get("_links", {}).get("next", {}).get("href"),
+        }
 
 
 @dataclass

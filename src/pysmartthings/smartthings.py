@@ -205,15 +205,21 @@ class SmartThings:
         capabilities: list[Capability] | None = None,
         location_ids: list[str] | None = None,
         device_ids: list[str] | None = None,
+        max_results: int | None = None,
+        page: int | None = None,
     ) -> str:
         """Retrieve SmartThings devices."""
-        params = {}
+        params: dict[str, Any] = {}
         if capabilities:
             params["capability"] = ",".join(capabilities)
         if location_ids:
             params["locationId"] = ",".join(location_ids)
         if device_ids:
             params["deviceId"] = ",".join(device_ids)
+        if max_results:
+            params["max"] = max_results
+        if page:
+            params["page"] = page
         return await self._get("v1/devices", params=params)
 
     async def get_devices(
@@ -224,16 +230,44 @@ class SmartThings:
         device_ids: list[str] | None = None,
     ) -> list[Device]:
         """Retrieve SmartThings devices."""
-        resp = await self._get_devices(
-            capabilities=capabilities,
-            location_ids=location_ids,
-            device_ids=device_ids,
+        devices = []
+        resp = DeviceResponse.from_json(
+            await self._get_devices(
+                capabilities=capabilities,
+                location_ids=location_ids,
+                device_ids=device_ids,
+            )
         )
-        return DeviceResponse.from_json(resp).items
+        devices.extend(resp.items)
+        while resp.next_link:
+            url = URL(resp.next_link)
+            resp = DeviceResponse.from_json(
+                await self._get_devices(
+                    capabilities=capabilities,
+                    location_ids=location_ids,
+                    device_ids=device_ids,
+                    max_results=int(url.query["max"]),
+                    page=int(url.query["page"]),
+                )
+            )
+            devices.extend(resp.items)
+        return devices
 
-    async def get_raw_devices(self) -> dict[str, Any]:
+    async def get_raw_devices(self) -> list[dict[str, Any]]:
         """Retrieve SmartThings devices."""
-        return cast("dict[str, Any]", orjson.loads(await self._get_devices()))  # pylint: disable=no-member
+        resp = orjson.loads(await self._get_devices())  # pylint: disable=no-member
+        response = [resp]
+        next_page_url = resp.get("_links", {}).get("next", {}).get("href")
+        while next_page_url:
+            url = URL(next_page_url)
+            resp = orjson.loads(  # pylint: disable=no-member
+                await self._get_devices(
+                    max_results=int(url.query["max"]), page=int(url.query["page"])
+                )
+            )
+            response.append(resp)
+            next_page_url = resp.get("_links", {}).get("next", {}).get("href")
+        return response
 
     async def _get_device(self, device_id: str) -> str:
         """Retrieve a device with the specified ID."""

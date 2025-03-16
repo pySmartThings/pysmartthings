@@ -335,3 +335,72 @@ async def test_fetching_unknown_category(
         "Unknown category `fakeCategory`. Please raise an issue at https://github.com/pySmartThings/pysmartthings"
         in caplog.text
     )
+
+
+async def test_fetching_multiple_pages(
+    client: SmartThings,
+    responses: aioresponses,
+) -> None:
+    """Test getting multiple device pages."""
+    responses.get(
+        f"{MOCK_URL}/v1/devices",
+        status=200,
+        body=load_fixture("devices_continued.json"),
+    )
+    responses.get(
+        f"{MOCK_URL}/v1/devices?max=200&page=1",
+        status=200,
+        body=load_fixture("devices_18.json"),
+    )
+    assert len(await client.get_devices()) == 6
+    responses.assert_called_with(
+        f"{MOCK_URL}/v1/devices",
+        METH_GET,
+        headers=HEADERS,
+        params={},
+        json=None,
+    )
+    responses.assert_called_with(
+        f"{MOCK_URL}/v1/devices",
+        METH_GET,
+        headers=HEADERS,
+        params={
+            "max": 200,
+            "page": 1,
+        },
+        json=None,
+    )
+
+
+async def test_fetching_multiple_pages_raw(
+    client: SmartThings, responses: aioresponses, snapshot: SnapshotAssertion
+) -> None:
+    """Test getting multiple device pages."""
+    responses.get(
+        f"{MOCK_URL}/v1/devices",
+        status=200,
+        body=load_fixture("devices_continued.json"),
+    )
+    responses.get(
+        f"{MOCK_URL}/v1/devices?max=200&page=1",
+        status=200,
+        body=load_fixture("devices_18.json"),
+    )
+    assert await client.get_raw_devices() == snapshot
+    responses.assert_called_with(
+        f"{MOCK_URL}/v1/devices",
+        METH_GET,
+        headers=HEADERS,
+        params={},
+        json=None,
+    )
+    responses.assert_called_with(
+        f"{MOCK_URL}/v1/devices",
+        METH_GET,
+        headers=HEADERS,
+        params={
+            "max": 200,
+            "page": 1,
+        },
+        json=None,
+    )

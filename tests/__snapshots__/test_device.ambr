@@ -9097,6 +9097,2349 @@
     }),
   ])
 # ---
+# name: test_fetching_multiple_pages_raw
+  list([
+    dict({
+      '_links': dict({
+        'next': dict({
+          'href': 'https://api.smartthings.com/devices?max=200&page=1',
+        }),
+      }),
+      'items': list([
+        dict({
+          'allowed': list([
+          ]),
+          'components': list([
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'ocf',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refresh',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'execute',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'airConditionerMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'airConditionerFanMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'fanOscillationMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.airConditionerOptionalMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.alwaysOnSensing',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.deviceIdentification',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.softwareUpdate',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.driverVersion',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.welcomeCooling',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'AirConditioner',
+                }),
+              ]),
+              'id': 'main',
+              'label': 'main',
+            }),
+          ]),
+          'createTime': '2024-10-17T16:31:53.794Z',
+          'deviceId': 'd424e86b-15cf-79e2-48d5-480a6c0d18f9',
+          'deviceManufacturerCode': 'Samsung Electronics',
+          'deviceTypeName': 'Samsung OCF Air Conditioner',
+          'executionContext': 'CLOUD',
+          'label': 'Rumsluftkonditionering',
+          'locationId': 'f84d1ae8-bce8-48c5-9b49-3ac9dbe72d19',
+          'manufacturerName': 'Samsung Electronics',
+          'name': '[room a/c] Samsung',
+          'ocf': dict({
+            'additionalAuthCodeRequired': False,
+            'firmwareVersion': 'ARA-WW-TP2-21-OT9700_11210729',
+            'hwVersion': 'MediaTek',
+            'lastSignupTime': '2024-10-17T16:31:50.161629012Z',
+            'manufacturerName': 'Samsung Electronics',
+            'modelNumber': 'ARA-WW-TP2-21-OT9700|10236341|60010523001511000600001200800000',
+            'name': '[room a/c] Samsung',
+            'ocfDeviceType': 'oic.d.airconditioner',
+            'platformOS': 'TizenRT 1.0 + IPv6',
+            'platformVersion': 'DAWIT 2.0',
+            'specVersion': 'core.1.1.0',
+            'transferCandidate': False,
+            'vendorId': 'DA-AC-THERAC-01011',
+            'vendorResourceClientServerVersion': 'MediaTek Release 2.210630.1',
+            'verticalDomainSpecVersion': 'res.1.1.0,sh.1.1.0',
+          }),
+          'ownerId': '83ed1d6b-2a05-c0b6-cfb1-2c60bb8a160a',
+          'presentationId': 'DA-AC-THERAC-01011',
+          'profile': dict({
+            'id': '81d37656-87e9-3f45-b649-5cfd382830b7',
+          }),
+          'relationships': list([
+          ]),
+          'restrictionTier': 0,
+          'roomId': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
+          'type': 'OCF',
+        }),
+        dict({
+          'allowed': list([
+          ]),
+          'components': list([
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'execute',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'ocf',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'powerConsumptionReport',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'demandResponseLoadControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refresh',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refrigeration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deodorFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.dustFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deviceReportStateConfiguration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.energyType',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledComponents',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.waterFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.softwareUpdate',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.deviceIdentification',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.driverVersion',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeVacationMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerCool',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerFreeze',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.sabbathMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.selfCheck',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.viewInside',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeWelcomeLighting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.quickControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.diagnosticsInformation',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.wifiConfiguration',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Refrigerator',
+                }),
+              ]),
+              'id': 'main',
+              'label': 'main',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'freezer',
+              'label': 'freezer',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cooler',
+              'label': 'cooler',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cvroom',
+              'label': 'cvroom',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'onedoor',
+              'label': 'onedoor',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker',
+              'label': 'icemaker',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-02',
+              'label': 'icemaker-02',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-03',
+              'label': 'icemaker-03',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.weightMeasurementCalibration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.connectionState',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-10',
+              'label': 'scale-10',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-11',
+              'label': 'scale-11',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-01',
+              'label': 'pantry-01',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-02',
+              'label': 'pantry-02',
+            }),
+          ]),
+          'createTime': '2024-12-01T06:45:53.319Z',
+          'deviceId': 'a4b78a08-11e6-6d41-2abc-dcbfddcfea65',
+          'deviceManufacturerCode': 'Samsung Electronics',
+          'deviceTypeName': 'Samsung OCF Refrigerator',
+          'executionContext': 'CLOUD',
+          'label': 'Kylskåp',
+          'locationId': 'f84d1ae8-bce8-48c5-9b49-3ac9dbe72d19',
+          'manufacturerName': 'Samsung Electronics',
+          'name': 'Samsung-Refrigerator',
+          'ocf': dict({
+            'additionalAuthCodeRequired': False,
+            'firmwareVersion': 'A-RFWW-TP1-22-REV1_20241030',
+            'hwVersion': 'Realtek',
+            'lastSignupTime': '2024-12-01T06:45:53.249899752Z',
+            'manufacturerName': 'Samsung Electronics',
+            'modelNumber': 'TP1X_REF_21K|00130443|00090026001610304100000021010000',
+            'name': 'Samsung-Refrigerator',
+            'ocfDeviceType': 'oic.d.refrigerator',
+            'platformOS': 'TizenRT 3.1',
+            'platformVersion': 'DAWIT 2.0',
+            'specVersion': 'core.1.1.0',
+            'transferCandidate': False,
+            'vendorId': 'DA-REF-NORMAL-01011',
+            'vendorResourceClientServerVersion': 'Realtek Release 3.1.240221',
+            'verticalDomainSpecVersion': '1.2.1',
+          }),
+          'ownerId': '83ed1d6b-2a05-c0b6-cfb1-2c60bb8a160a',
+          'presentationId': 'DA-REF-NORMAL-01011',
+          'profile': dict({
+            'id': '37c7b355-bdaa-371b-b246-dbdf2a7f9c84',
+          }),
+          'relationships': list([
+          ]),
+          'restrictionTier': 0,
+          'roomId': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
+          'type': 'OCF',
+        }),
+        dict({
+          'allowed': list([
+          ]),
+          'components': list([
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'execute',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'ocf',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'powerConsumptionReport',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'demandResponseLoadControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refresh',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refrigeration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deodorFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.dustFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deviceReportStateConfiguration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.energyType',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledComponents',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.waterFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.softwareUpdate',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.deviceIdentification',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.driverVersion',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeVacationMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerCool',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerFreeze',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.sabbathMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.selfCheck',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.viewInside',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeWelcomeLighting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.quickControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.diagnosticsInformation',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.wifiConfiguration',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Refrigerator',
+                }),
+              ]),
+              'id': 'main',
+              'label': 'main',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'freezer',
+              'label': 'freezer',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cooler',
+              'label': 'cooler',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cvroom',
+              'label': 'cvroom',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'onedoor',
+              'label': 'onedoor',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker',
+              'label': 'icemaker',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-02',
+              'label': 'icemaker-02',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-03',
+              'label': 'icemaker-03',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.weightMeasurementCalibration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.connectionState',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-10',
+              'label': 'scale-10',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-11',
+              'label': 'scale-11',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-01',
+              'label': 'pantry-01',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-02',
+              'label': 'pantry-02',
+            }),
+          ]),
+          'createTime': '2024-06-18T15:47:42.985Z',
+          'deviceId': 'b851a083-4b2c-9e68-e344-0312024e9fa0',
+          'deviceManufacturerCode': 'Samsung Electronics',
+          'deviceTypeName': 'Samsung OCF Refrigerator',
+          'executionContext': 'CLOUD',
+          'label': 'Freezer',
+          'locationId': 'f84d1ae8-bce8-48c5-9b49-3ac9dbe72d19',
+          'manufacturerName': 'Samsung Electronics',
+          'name': 'Samsung-Refrigerator',
+          'ocf': dict({
+            'additionalAuthCodeRequired': False,
+            'firmwareVersion': 'A-RFWW-TP1-22-REV1_20241030',
+            'hwVersion': 'Realtek',
+            'lastSignupTime': '2024-11-27T07:08:32.745636184Z',
+            'manufacturerName': 'Samsung Electronics',
+            'modelNumber': 'TP1X_REF_21K|00127643|00080020001610304100000020010000',
+            'name': 'Samsung-Refrigerator',
+            'ocfDeviceType': 'oic.d.refrigerator',
+            'platformOS': 'TizenRT 3.1',
+            'platformVersion': 'DAWIT 2.0',
+            'specVersion': 'core.1.1.0',
+            'transferCandidate': False,
+            'vendorId': 'DA-REF-NORMAL-01011',
+            'vendorResourceClientServerVersion': 'Realtek Release 3.1.240221',
+            'verticalDomainSpecVersion': '1.2.1',
+          }),
+          'ownerId': '83ed1d6b-2a05-c0b6-cfb1-2c60bb8a160a',
+          'presentationId': 'DA-REF-NORMAL-01011',
+          'profile': dict({
+            'id': '37c7b355-bdaa-371b-b246-dbdf2a7f9c84',
+          }),
+          'relationships': list([
+          ]),
+          'restrictionTier': 0,
+          'roomId': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
+          'type': 'OCF',
+        }),
+      ]),
+    }),
+    dict({
+      '_links': dict({
+      }),
+      'items': list([
+        dict({
+          'allowed': list([
+          ]),
+          'components': list([
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'ocf',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refresh',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'execute',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'airConditionerMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'airConditionerFanMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'fanOscillationMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.airConditionerOptionalMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.alwaysOnSensing',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.deviceIdentification',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.softwareUpdate',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.driverVersion',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.welcomeCooling',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'AirConditioner',
+                }),
+              ]),
+              'id': 'main',
+              'label': 'main',
+            }),
+          ]),
+          'createTime': '2024-10-17T16:31:53.794Z',
+          'deviceId': 'd424e86b-15cf-79e2-48d5-480a6c0d18f9',
+          'deviceManufacturerCode': 'Samsung Electronics',
+          'deviceTypeName': 'Samsung OCF Air Conditioner',
+          'executionContext': 'CLOUD',
+          'label': 'Rumsluftkonditionering',
+          'locationId': 'f84d1ae8-bce8-48c5-9b49-3ac9dbe72d19',
+          'manufacturerName': 'Samsung Electronics',
+          'name': '[room a/c] Samsung',
+          'ocf': dict({
+            'additionalAuthCodeRequired': False,
+            'firmwareVersion': 'ARA-WW-TP2-21-OT9700_11210729',
+            'hwVersion': 'MediaTek',
+            'lastSignupTime': '2024-10-17T16:31:50.161629012Z',
+            'manufacturerName': 'Samsung Electronics',
+            'modelNumber': 'ARA-WW-TP2-21-OT9700|10236341|60010523001511000600001200800000',
+            'name': '[room a/c] Samsung',
+            'ocfDeviceType': 'oic.d.airconditioner',
+            'platformOS': 'TizenRT 1.0 + IPv6',
+            'platformVersion': 'DAWIT 2.0',
+            'specVersion': 'core.1.1.0',
+            'transferCandidate': False,
+            'vendorId': 'DA-AC-THERAC-01011',
+            'vendorResourceClientServerVersion': 'MediaTek Release 2.210630.1',
+            'verticalDomainSpecVersion': 'res.1.1.0,sh.1.1.0',
+          }),
+          'ownerId': '83ed1d6b-2a05-c0b6-cfb1-2c60bb8a160a',
+          'presentationId': 'DA-AC-THERAC-01011',
+          'profile': dict({
+            'id': '81d37656-87e9-3f45-b649-5cfd382830b7',
+          }),
+          'relationships': list([
+          ]),
+          'restrictionTier': 0,
+          'roomId': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
+          'type': 'OCF',
+        }),
+        dict({
+          'allowed': list([
+          ]),
+          'components': list([
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'execute',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'ocf',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'powerConsumptionReport',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'demandResponseLoadControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refresh',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refrigeration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deodorFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.dustFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deviceReportStateConfiguration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.energyType',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledComponents',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.waterFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.softwareUpdate',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.deviceIdentification',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.driverVersion',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeVacationMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerCool',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerFreeze',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.sabbathMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.selfCheck',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.viewInside',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeWelcomeLighting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.quickControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.diagnosticsInformation',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.wifiConfiguration',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Refrigerator',
+                }),
+              ]),
+              'id': 'main',
+              'label': 'main',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'freezer',
+              'label': 'freezer',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cooler',
+              'label': 'cooler',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cvroom',
+              'label': 'cvroom',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'onedoor',
+              'label': 'onedoor',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker',
+              'label': 'icemaker',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-02',
+              'label': 'icemaker-02',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-03',
+              'label': 'icemaker-03',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.weightMeasurementCalibration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.connectionState',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-10',
+              'label': 'scale-10',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-11',
+              'label': 'scale-11',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-01',
+              'label': 'pantry-01',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-02',
+              'label': 'pantry-02',
+            }),
+          ]),
+          'createTime': '2024-12-01T06:45:53.319Z',
+          'deviceId': 'a4b78a08-11e6-6d41-2abc-dcbfddcfea65',
+          'deviceManufacturerCode': 'Samsung Electronics',
+          'deviceTypeName': 'Samsung OCF Refrigerator',
+          'executionContext': 'CLOUD',
+          'label': 'Kylskåp',
+          'locationId': 'f84d1ae8-bce8-48c5-9b49-3ac9dbe72d19',
+          'manufacturerName': 'Samsung Electronics',
+          'name': 'Samsung-Refrigerator',
+          'ocf': dict({
+            'additionalAuthCodeRequired': False,
+            'firmwareVersion': 'A-RFWW-TP1-22-REV1_20241030',
+            'hwVersion': 'Realtek',
+            'lastSignupTime': '2024-12-01T06:45:53.249899752Z',
+            'manufacturerName': 'Samsung Electronics',
+            'modelNumber': 'TP1X_REF_21K|00130443|00090026001610304100000021010000',
+            'name': 'Samsung-Refrigerator',
+            'ocfDeviceType': 'oic.d.refrigerator',
+            'platformOS': 'TizenRT 3.1',
+            'platformVersion': 'DAWIT 2.0',
+            'specVersion': 'core.1.1.0',
+            'transferCandidate': False,
+            'vendorId': 'DA-REF-NORMAL-01011',
+            'vendorResourceClientServerVersion': 'Realtek Release 3.1.240221',
+            'verticalDomainSpecVersion': '1.2.1',
+          }),
+          'ownerId': '83ed1d6b-2a05-c0b6-cfb1-2c60bb8a160a',
+          'presentationId': 'DA-REF-NORMAL-01011',
+          'profile': dict({
+            'id': '37c7b355-bdaa-371b-b246-dbdf2a7f9c84',
+          }),
+          'relationships': list([
+          ]),
+          'restrictionTier': 0,
+          'roomId': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
+          'type': 'OCF',
+        }),
+        dict({
+          'allowed': list([
+          ]),
+          'components': list([
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'execute',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'ocf',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'powerConsumptionReport',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'demandResponseLoadControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refresh',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'refrigeration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deodorFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.dustFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.deviceReportStateConfiguration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.energyType',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledComponents',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.waterFilter',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.softwareUpdate',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.deviceIdentification',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.driverVersion',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeVacationMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerCool',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.powerFreeze',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.sabbathMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.selfCheck',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.viewInside',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgeWelcomeLighting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.quickControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.diagnosticsInformation',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'sec.wifiConfiguration',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Refrigerator',
+                }),
+              ]),
+              'id': 'main',
+              'label': 'main',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'freezer',
+              'label': 'freezer',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cooler',
+              'label': 'cooler',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'cvroom',
+              'label': 'cvroom',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'contactSensor',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'temperatureMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'thermostatCoolingSetpoint',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.fridgeMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.thermostatSetpointControl',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.temperatureSetting',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.freezerConvertMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.unavailableCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'onedoor',
+              'label': 'onedoor',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker',
+              'label': 'icemaker',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-02',
+              'label': 'icemaker-02',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'switch',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'icemaker-03',
+              'label': 'icemaker-03',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.weightMeasurementCalibration',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.connectionState',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-10',
+              'label': 'scale-10',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.weightMeasurement',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'scale-11',
+              'label': 'scale-11',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-01',
+              'label': 'pantry-01',
+            }),
+            dict({
+              'capabilities': list([
+                dict({
+                  'id': 'samsungce.fridgePantryInfo',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.fridgePantryMode',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.meatAging',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'samsungce.foodDefrost',
+                  'version': 1,
+                }),
+                dict({
+                  'id': 'custom.disabledCapabilities',
+                  'version': 1,
+                }),
+              ]),
+              'categories': list([
+                dict({
+                  'categoryType': 'manufacturer',
+                  'name': 'Other',
+                }),
+              ]),
+              'id': 'pantry-02',
+              'label': 'pantry-02',
+            }),
+          ]),
+          'createTime': '2024-06-18T15:47:42.985Z',
+          'deviceId': 'b851a083-4b2c-9e68-e344-0312024e9fa0',
+          'deviceManufacturerCode': 'Samsung Electronics',
+          'deviceTypeName': 'Samsung OCF Refrigerator',
+          'executionContext': 'CLOUD',
+          'label': 'Freezer',
+          'locationId': 'f84d1ae8-bce8-48c5-9b49-3ac9dbe72d19',
+          'manufacturerName': 'Samsung Electronics',
+          'name': 'Samsung-Refrigerator',
+          'ocf': dict({
+            'additionalAuthCodeRequired': False,
+            'firmwareVersion': 'A-RFWW-TP1-22-REV1_20241030',
+            'hwVersion': 'Realtek',
+            'lastSignupTime': '2024-11-27T07:08:32.745636184Z',
+            'manufacturerName': 'Samsung Electronics',
+            'modelNumber': 'TP1X_REF_21K|00127643|00080020001610304100000020010000',
+            'name': 'Samsung-Refrigerator',
+            'ocfDeviceType': 'oic.d.refrigerator',
+            'platformOS': 'TizenRT 3.1',
+            'platformVersion': 'DAWIT 2.0',
+            'specVersion': 'core.1.1.0',
+            'transferCandidate': False,
+            'vendorId': 'DA-REF-NORMAL-01011',
+            'vendorResourceClientServerVersion': 'Realtek Release 3.1.240221',
+            'verticalDomainSpecVersion': '1.2.1',
+          }),
+          'ownerId': '83ed1d6b-2a05-c0b6-cfb1-2c60bb8a160a',
+          'presentationId': 'DA-REF-NORMAL-01011',
+          'profile': dict({
+            'id': '37c7b355-bdaa-371b-b246-dbdf2a7f9c84',
+          }),
+          'relationships': list([
+          ]),
+          'restrictionTier': 0,
+          'roomId': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
+          'type': 'OCF',
+        }),
+      ]),
+    }),
+  ])
+# ---
 # name: test_fetching_single_device
   dict({
     'components': list([
