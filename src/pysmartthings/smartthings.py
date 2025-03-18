@@ -135,15 +135,11 @@ class SmartThings:
             msg = "Authentication failed with SmartThings"
             raise SmartThingsAuthenticationFailedError(msg)
 
-        if response.status == 409:
-            msg = "Reached limit of subscriptions"
-            raise SmartThingsSinkError(msg)
-
         if response.status == 403:
             msg = "Forbidden"
             raise SmartThingsForbiddenError(msg)
 
-        if response.status == 422:
+        if response.status in {409, 422}:
             raise SmartThingsCommandError(ErrorResponse.from_json(text))
 
         return text
@@ -384,24 +380,28 @@ class SmartThings:
         self, location_id: str, installed_app_id: str
     ) -> Subscription:
         """Create a subscription."""
-        resp = await self._post(
-            "subscriptions",
-            data={
-                "name": "My Home Assistant sub",
-                "version": API_VERSION,
-                "clientDeviceId": f"iapp_{installed_app_id}",
-                "subscriptionFilters": [
-                    {
-                        "type": "LOCATIONIDS",
-                        "value": [location_id],
-                        "eventType": [
-                            EventType.DEVICE_EVENT,
-                            EventType.DEVICE_LIFECYCLE_EVENT,
-                        ],
-                    }
-                ],
-            },
-        )
+        try:
+            resp = await self._post(
+                "subscriptions",
+                data={
+                    "name": "My Home Assistant sub",
+                    "version": API_VERSION,
+                    "clientDeviceId": f"iapp_{installed_app_id}",
+                    "subscriptionFilters": [
+                        {
+                            "type": "LOCATIONIDS",
+                            "value": [location_id],
+                            "eventType": [
+                                EventType.DEVICE_EVENT,
+                                EventType.DEVICE_LIFECYCLE_EVENT,
+                            ],
+                        }
+                    ],
+                },
+            )
+        except SmartThingsCommandError as err:
+            msg = "Reached limit of subscriptions"
+            raise SmartThingsSinkError(msg) from err
         return Subscription.from_json(resp)
 
     async def _internal_subscribe(self, session: ClientSession, url: str) -> None:  # noqa: PLR0912
