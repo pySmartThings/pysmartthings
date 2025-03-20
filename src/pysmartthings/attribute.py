@@ -114,6 +114,7 @@ class Attribute(StrEnum):
     COLOR_TEMPERATURE = "colorTemperature"
     COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
     COMPLETION_TIME = "completionTime"
+    CONDITION = "condition"
     CONNECTED_DEVICE_ID = "connectedDeviceId"
     CONNECTED_USER_ID = "connectedUserId"
     CONNECTION = "connection"
@@ -121,6 +122,7 @@ class Attribute(StrEnum):
     CONNECTION_STATE = "connectionState"
     CONTACT = "contact"
     CONTENTS = "contents"
+    COOK_RECIPE = "cookRecipe"
     COOKER_MODE = "cookerMode"
     COOKER_STATE = "cookerState"
     COOKTOP_BURNER_MODE = "cooktopBurnerMode"
@@ -128,10 +130,12 @@ class Attribute(StrEnum):
     COOLING_SETPOINT = "coolingSetpoint"
     COOLING_SETPOINT_RANGE = "coolingSetpointRange"
     COORDINATES = "coordinates"
+    COUNT = "count"
     COURSE = "course"
     CREATE_DEVICE = "createDevice"
     CREATE_QTY = "createQty"
     CURRENT = "current"
+    CURRENT_APP = "currentApp"
     CURRENT_TIME_PERIOD = "currentTimePeriod"
     CURRENT_TRACK = "currentTrack"
     CURRENT_TWILIGHT = "currentTwilight"
@@ -306,6 +310,12 @@ class Attribute(StrEnum):
     HISTORY = "history"
     HOMING_REASON = "homingReason"
     HOOD_FAN_SPEED = "hoodFanSpeed"
+    HOOD_FILTER_CAPACITY = "hoodFilterCapacity"
+    HOOD_FILTER_LAST_RESET_DATE = "hoodFilterLastResetDate"
+    HOOD_FILTER_RESET_TYPE = "hoodFilterResetType"
+    HOOD_FILTER_STATUS = "hoodFilterStatus"
+    HOOD_FILTER_USAGE = "hoodFilterUsage"
+    HOOD_FILTER_USAGE_STEP = "hoodFilterUsageStep"
     HOT_AIR_DRY = "hotAirDry"
     HTTPCODE = "httpcode"
     HUB_DEVICE_ID = "hubDeviceId"
@@ -373,6 +383,7 @@ class Attribute(StrEnum):
     LOCAL_MONTH_TWO = "localMonthTwo"
     LOCAL_WEEK_DAY = "localWeekDay"
     LOCAL_YEAR = "localYear"
+    LOCATION = "location"
     LOCK = "lock"
     LOCK_CODES = "lockCodes"
     LOCK_STATE = "lockState"
@@ -402,6 +413,7 @@ class Attribute(StrEnum):
     MCU_DEVICE_FW_VER = "mcuDeviceFwVer"
     MEASURE_INTERVAL = "measureInterval"
     MEDIA_OUTPUT_SUPPORTED = "mediaOutputSupported"
+    MEDIA_STATUS = "mediaStatus"
     MENU = "menu"
     MESSAGE = "message"
     METERING_DATE = "meteringDate"
@@ -464,6 +476,7 @@ class Attribute(StrEnum):
     ODOR_LEVEL = "odorLevel"
     ONBOARDING = "onboarding"
     ONETOUCHLOCK = "onetouchlock"
+    OPENDURATION = "openduration"
     OPERATING_STATE = "operatingState"
     OPERATION_MODE = "operationMode"
     OPERATION_TIME = "operationTime"
@@ -623,6 +636,7 @@ class Attribute(StrEnum):
     SPI_MODE = "spiMode"
     SPIN_SPEED = "spinSpeed"
     SYSTEM_TIME = "st"
+    STAGE_STATUS = "stageStatus"
     START_TIME = "startTime"
     START_VALUE = "startValue"
     STATE = "state"
@@ -646,6 +660,7 @@ class Attribute(StrEnum):
     STUN_URL = "stunUrl"
     SUB_DEVICE_ACTIVE = "subDeviceActive"
     SUB_DEVICES = "subDevices"
+    SUBTITLE = "subtitle"
     SUGGESTION_THRESHOLD = "suggestionThreshold"
     SUMMARY = "summary"
     SUN_AZIMUTH_ANGLE = "sunAzimuthAngle"
@@ -678,6 +693,7 @@ class Attribute(StrEnum):
     SUPPORTED_CATEGORIES = "supportedCategories"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
     SUPPORTED_COMMANDS = "supportedCommands"
+    SUPPORTED_CONDITIONS = "supportedConditions"
     SUPPORTED_CONTEXTS = "supportedContexts"
     SUPPORTED_COOKER_MODES = "supportedCookerModes"
     SUPPORTED_COOKTOP_OPERATING_STATE = "supportedCooktopOperatingState"
@@ -780,6 +796,7 @@ class Attribute(StrEnum):
     TIME_OFFSET = "timeOffset"
     TIMED_CLEAN_DURATION = "timedCleanDuration"
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
+    TITLE = "title"
     TOPICLIST = "topiclist"
     TOTAL_TIME = "totalTime"
     TOU_EVENT_NOTIFICATION = "touEventNotification"
@@ -1493,6 +1510,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_DENSITY,
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Attribute.AUTO_DOOR_RELEASE_ENABLED],
+    Capability.SAMSUNG_CE_AUTO_VENTILATION: [Attribute.SUPPORTED_ACTIONS],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [Attribute.SWITCH],
     Capability.SAMSUNG_CE_CAMERA_STREAMING: [
         Attribute.AVAILABLE,
@@ -1507,6 +1525,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MONTHLY_USAGE,
         Attribute.TIME_OFFSET,
     ],
+    Capability.SAMSUNG_CE_COOK_RECIPE: [Attribute.COOK_RECIPE, Attribute.STAGE_STATUS],
     Capability.SAMSUNG_CE_COOKTOP_BURNER_MODE: [Attribute.COOKTOP_BURNER_MODE],
     Capability.SAMSUNG_CE_COOKTOP_HEATING_POWER: [
         Attribute.HEATING_MODE,
@@ -1702,6 +1721,20 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SETTABLE_MAX_FAN_SPEED,
         Attribute.SETTABLE_MIN_FAN_SPEED,
         Attribute.SUPPORTED_HOOD_FAN_SPEED,
+    ],
+    Capability.SAMSUNG_CE_HOOD_FILTER: [
+        Attribute.HOOD_FILTER_CAPACITY,
+        Attribute.HOOD_FILTER_LAST_RESET_DATE,
+        Attribute.HOOD_FILTER_RESET_TYPE,
+        Attribute.HOOD_FILTER_STATUS,
+        Attribute.HOOD_FILTER_USAGE,
+        Attribute.HOOD_FILTER_USAGE_STEP,
+    ],
+    Capability.SAMSUNG_CE_HOOD_LAMP_AUTOMATION: [
+        Attribute.CONDITION,
+        Attribute.END_TIME,
+        Attribute.START_TIME,
+        Attribute.SUPPORTED_CONDITIONS,
     ],
     Capability.SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK: [Attribute.LOCK_STATE],
     Capability.SAMSUNG_CE_KIDS_LOCK: [Attribute.LOCK_STATE],
@@ -2223,6 +2256,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_BAROMETER2: [Attribute.PRESSURE],
     Capability.PARTYVOICE23922_CLOSEDURATION: [Attribute.CLOSEDURATION],
     Capability.PARTYVOICE23922_CLOUDCOVER: [Attribute.CLOUDCOVER],
+    Capability.PARTYVOICE23922_COUNT: [Attribute.COUNT],
     Capability.PARTYVOICE23922_CREATEANOTHER: [],
     Capability.PARTYVOICE23922_CREATEDEV8: [Attribute.DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Attribute.DEVICE_TYPE],
@@ -2230,6 +2264,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_CREATEQTY: [Attribute.CREATE_QTY],
     Capability.PARTYVOICE23922_ERRORSENSOR: [Attribute.ERRORSTATUS],
     Capability.PARTYVOICE23922_ERRORSTATUS: [Attribute.ERRORSTATUS],
+    Capability.PARTYVOICE23922_ERRORSTATUSCV: [Attribute.ERRORSTATUS],
     Capability.PARTYVOICE23922_HTTPCODE: [Attribute.HTTPCODE],
     Capability.PARTYVOICE23922_HTTPRESPONSE: [Attribute.RESPONSE],
     Capability.PARTYVOICE23922_INFOTABLE: [Attribute.INFO],
@@ -2238,17 +2273,24 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_INVENTORY8: [Attribute.INVENTORY],
     Capability.PARTYVOICE23922_KEYNUMVALUE: [Attribute.KEYNUMVALUE],
     Capability.PARTYVOICE23922_KEYVALUE2: [Attribute.KEYVALUE],
+    Capability.PARTYVOICE23922_LOCATION: [Attribute.LOCATION],
+    Capability.PARTYVOICE23922_MEDIASUBTITLE: [Attribute.SUBTITLE],
+    Capability.PARTYVOICE23922_MEDIATITLE: [Attribute.TITLE],
     Capability.PARTYVOICE23922_MQTTPUBLISH: [],
     Capability.PARTYVOICE23922_NAMEINPUT: [Attribute.NAME_TEXT],
     Capability.PARTYVOICE23922_ONVIFINFO: [Attribute.INFO],
     Capability.PARTYVOICE23922_ONVIFSTATUS: [Attribute.STATUS],
+    Capability.PARTYVOICE23922_OPENDURATION: [Attribute.OPENDURATION],
     Capability.PARTYVOICE23922_POWERFACTOR2: [Attribute.POWERFACTOR],
     Capability.PARTYVOICE23922_PRECIPPROB: [Attribute.PROBABILITY],
     Capability.PARTYVOICE23922_PRECIPRATE: [Attribute.PRECIP],
     Capability.PARTYVOICE23922_REACTIVEPOWER: [Attribute.REACTIVE],
     Capability.PARTYVOICE23922_REFRESH: [],
     Capability.PARTYVOICE23922_RESETSELECT: [Attribute.CMD_SELECT],
+    Capability.PARTYVOICE23922_ROKUCURRENTAPP: [Attribute.CURRENT_APP],
+    Capability.PARTYVOICE23922_ROKUMEDIASTATUS: [Attribute.MEDIA_STATUS],
     Capability.PARTYVOICE23922_SETILLUMINANCE: [Attribute.ILLUMVALUE],
+    Capability.PARTYVOICE23922_SHELLYDEVS4: [Attribute.DEVICE_TYPE],
     Capability.PARTYVOICE23922_STATEFIELD2: [Attribute.TEXT],
     Capability.PARTYVOICE23922_STATUS: [Attribute.STATUS],
     Capability.PARTYVOICE23922_SUMMARY: [Attribute.SUMMARY],
@@ -2256,6 +2298,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_TEMPMIN: [Attribute.MINTEMP],
     Capability.PARTYVOICE23922_TOPICLIST: [Attribute.TOPICLIST],
     Capability.PARTYVOICE23922_VHUMIDITYSET: [Attribute.VHUMIDITY],
+    Capability.PARTYVOICE23922_VOLUMEUP: [],
     Capability.PARTYVOICE23922_VTEMPSET: [Attribute.VTEMP],
     Capability.PARTYVOICE23922_WEBREQUEST: [],
     Capability.PARTYVOICE23922_WEBREQUESTSELECT: [Attribute.SELECTION],

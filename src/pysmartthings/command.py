@@ -9,6 +9,7 @@ class Command(StrEnum):
     """Command model."""
 
     ACT_SILENTLY = "actSilently"
+    ACTION = "action"
     ACTIVATE = "activate"
     ADD = "add"
     ADD_AGING = "addAging"
@@ -141,6 +142,7 @@ class Command(StrEnum):
     RESET_FILTER = "resetFilter"
     RESET_FILTER_USAGE_TIME = "resetFilterUsageTime"
     RESET_HEPA_FILTER = "resetHepaFilter"
+    RESET_HOOD_FILTER = "resetHoodFilter"
     RESET_VERY_FINE_DUST_FILTER = "resetVeryFineDustFilter"
     RESET_WATER_FILTER = "resetWaterFilter"
     RESTORE_TRACK = "restoreTrack"
@@ -198,8 +200,10 @@ class Command(StrEnum):
     SET_COLOR_CHANGING = "setColorChanging"
     SET_COLOR_TEMP_STEPS = "setColorTempSteps"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
+    SET_CONDITION = "setCondition"
     SET_CONTEXT = "setContext"
     SET_CONTEXT_SNAPSHOT = "setContextSnapshot"
+    SET_COOK_RECIPE = "setCookRecipe"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_COORDINATES = "setCoordinates"
     SET_COURSE = "setCourse"
@@ -284,6 +288,7 @@ class Command(StrEnum):
     SET_LIGHT_CONTROL_MODE = "setLightControlMode"
     SET_LIGHTING_LEVEL = "setLightingLevel"
     SET_LIGHTING_MODE = "setLightingMode"
+    SET_LOC = "setLoc"
     SET_LOCAL_CONTROL = "setLocalControl"
     SET_LOCAL_DATE = "setLocalDate"
     SET_LOCAL_DATE_ONE = "setLocalDateOne"
@@ -314,6 +319,7 @@ class Command(StrEnum):
     SET_NOTIFICATION_LEVEL = "setNotificationLevel"
     SET_NOTIFICATION_NUMBER = "setNotificationNumber"
     SET_ONE_TOUCH_LOCK = "setOneTouchLock"
+    SET_OPEN = "setOpen"
     SET_OPERATING_STATE = "setOperatingState"
     SET_OPERATION_MODE = "setOperationMode"
     SET_OPERATION_ORIGIN = "setOperationOrigin"
@@ -860,6 +866,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_DENSITY,
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Command.DISABLE, Command.ENABLE],
+    Capability.SAMSUNG_CE_AUTO_VENTILATION: [Command.ACTION],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [],
     Capability.SAMSUNG_CE_CAMERA_STREAMING: [
         Command.CANCEL_ONBOARDING,
@@ -871,6 +878,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [Command.SET_TIME_OFFSET],
+    Capability.SAMSUNG_CE_COOK_RECIPE: [Command.SET_COOK_RECIPE],
     Capability.SAMSUNG_CE_COOKTOP_BURNER_MODE: [],
     Capability.SAMSUNG_CE_COOKTOP_HEATING_POWER: [],
     Capability.SAMSUNG_CE_COOKTOP_PAN_DETECTION: [],
@@ -1000,6 +1008,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_DETECTION_PROXIMITY,
     ],
     Capability.SAMSUNG_CE_HOOD_FAN_SPEED: [Command.SET_HOOD_FAN_SPEED],
+    Capability.SAMSUNG_CE_HOOD_FILTER: [Command.RESET_HOOD_FILTER],
+    Capability.SAMSUNG_CE_HOOD_LAMP_AUTOMATION: [
+        Command.SET_CONDITION,
+        Command.SET_SCHEDULE,
+    ],
     Capability.SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK: [],
     Capability.SAMSUNG_CE_KIDS_LOCK: [],
     Capability.SAMSUNG_CE_KIDS_LOCK_CONTROL: [Command.LOCK, Command.UNLOCK],
@@ -1357,6 +1370,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_BAROMETER2: [],
     Capability.PARTYVOICE23922_CLOSEDURATION: [Command.SET_CLOSE],
     Capability.PARTYVOICE23922_CLOUDCOVER: [],
+    Capability.PARTYVOICE23922_COUNT: [],
     Capability.PARTYVOICE23922_CREATEANOTHER: [Command.PUSH],
     Capability.PARTYVOICE23922_CREATEDEV8: [Command.SET_DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Command.SET_DEVICE_TYPE],
@@ -1364,6 +1378,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_CREATEQTY: [Command.SET_CREATE_QTY],
     Capability.PARTYVOICE23922_ERRORSENSOR: [],
     Capability.PARTYVOICE23922_ERRORSTATUS: [],
+    Capability.PARTYVOICE23922_ERRORSTATUSCV: [],
     Capability.PARTYVOICE23922_HTTPCODE: [],
     Capability.PARTYVOICE23922_HTTPRESPONSE: [],
     Capability.PARTYVOICE23922_INFOTABLE: [],
@@ -1372,17 +1387,24 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_INVENTORY8: [Command.SET_INVENTORY],
     Capability.PARTYVOICE23922_KEYNUMVALUE: [],
     Capability.PARTYVOICE23922_KEYVALUE2: [],
+    Capability.PARTYVOICE23922_LOCATION: [Command.SET_LOC],
+    Capability.PARTYVOICE23922_MEDIASUBTITLE: [],
+    Capability.PARTYVOICE23922_MEDIATITLE: [],
     Capability.PARTYVOICE23922_MQTTPUBLISH: [Command.PUBLISH],
     Capability.PARTYVOICE23922_NAMEINPUT: [Command.SET_INPUT],
     Capability.PARTYVOICE23922_ONVIFINFO: [],
     Capability.PARTYVOICE23922_ONVIFSTATUS: [],
+    Capability.PARTYVOICE23922_OPENDURATION: [Command.SET_OPEN],
     Capability.PARTYVOICE23922_POWERFACTOR2: [],
     Capability.PARTYVOICE23922_PRECIPPROB: [],
     Capability.PARTYVOICE23922_PRECIPRATE: [],
     Capability.PARTYVOICE23922_REACTIVEPOWER: [],
     Capability.PARTYVOICE23922_REFRESH: [Command.PUSH],
     Capability.PARTYVOICE23922_RESETSELECT: [Command.SET_SELECT],
+    Capability.PARTYVOICE23922_ROKUCURRENTAPP: [],
+    Capability.PARTYVOICE23922_ROKUMEDIASTATUS: [],
     Capability.PARTYVOICE23922_SETILLUMINANCE: [Command.SET_ILLUM],
+    Capability.PARTYVOICE23922_SHELLYDEVS4: [Command.SET_DEVICE_TYPE],
     Capability.PARTYVOICE23922_STATEFIELD2: [],
     Capability.PARTYVOICE23922_STATUS: [],
     Capability.PARTYVOICE23922_SUMMARY: [],
@@ -1390,6 +1412,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_TEMPMIN: [],
     Capability.PARTYVOICE23922_TOPICLIST: [],
     Capability.PARTYVOICE23922_VHUMIDITYSET: [Command.SETV_HUMIDITY],
+    Capability.PARTYVOICE23922_VOLUMEUP: [Command.PUSH],
     Capability.PARTYVOICE23922_VTEMPSET: [Command.SETV_TEMP],
     Capability.PARTYVOICE23922_WEBREQUEST: [Command.G_E_T, Command.P_O_S_T],
     Capability.PARTYVOICE23922_WEBREQUESTSELECT: [Command.SET_SELECTION],
