@@ -128,6 +128,9 @@ class SmartThings:
         except asyncio.TimeoutError as exception:
             msg = "Timeout occurred while connecting to SmartThings"
             raise SmartThingsConnectionError(msg) from exception
+        except ClientConnectionError as exception:
+            msg = "Error occurred while connecting to SmartThings"
+            raise SmartThingsConnectionError(msg) from exception
 
         text = await response.text()
 
@@ -457,7 +460,7 @@ class SmartThings:
         LOGGER.debug("Connection opened")
         self.__retry_count = 0
 
-    async def subscribe(
+    async def subscribe(  # noqa: PLR0915  # pylint: disable=too-many-statements
         self,
         location_id: str,
         installed_app_id: str,
@@ -467,7 +470,7 @@ class SmartThings:
         self.__retry_count = 0
         using_initial = initial_subscription is not None
         timeout = ClientTimeout(
-            total=None, connect=None, sock_connect=None, sock_read=None
+            total=None, connect=None, sock_connect=None, sock_read=120
         )
         async with ClientSession(timeout=timeout) as session:
             while True:
@@ -502,14 +505,24 @@ class SmartThings:
                     LOGGER.exception(msg)
                     await asyncio.sleep(2**self.__retry_count)
                     self.__retry_count += 1
-                    await self.delete_subscription(subscription_id)
+                    try:
+                        await self.delete_subscription(subscription_id)
+                    except SmartThingsConnectionError:
+                        LOGGER.debug("Connection error while deleting subscription")
+                        if self.max_connections_reached_callback:
+                            self.max_connections_reached_callback()
                     using_initial = False
                 except Exception:  # pylint: disable=broad-except  # noqa: BLE001
                     msg = "Error occurred while subscribing to events"
                     LOGGER.exception(msg)
                     await asyncio.sleep(2**self.__retry_count)
                     self.__retry_count += 1
-                    await self.delete_subscription(subscription_id)
+                    try:
+                        await self.delete_subscription(subscription_id)
+                    except SmartThingsConnectionError:
+                        LOGGER.debug("Unknown error while deleting subscription")
+                        if self.max_connections_reached_callback:
+                            self.max_connections_reached_callback()
                     using_initial = False
 
     async def delete_subscription(self, subscription_id: str) -> None:
