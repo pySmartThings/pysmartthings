@@ -303,6 +303,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
     SAMSUNG_CE_MICROWAVE_POWER = "samsungce.microwavePower"
     SAMSUNG_CE_MUSIC_PLAYLIST = "samsungce.musicPlaylist"
+    SAMSUNG_CE_NOTIFICATION = "samsungce.notification"
     SAMSUNG_CE_OPERATION_ORIGIN = "samsungce.operationOrigin"
     SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT = "samsungce.ovenDrainageRequirement"
     SAMSUNG_CE_OVEN_MODE = "samsungce.ovenMode"
@@ -358,6 +359,10 @@ class Capability(StrEnum):
     SAMSUNG_CE_STEAM_CLOSET_DELAY_END = "samsungce.steamClosetDelayEnd"
     SAMSUNG_CE_STEAM_CLOSET_KEEP_FRESH_MODE = "samsungce.steamClosetKeepFreshMode"
     SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE = "samsungce.steamClosetSanitizeMode"
+    SAMSUNG_CE_STICK_CLEANER_DUST_BAG = "samsungce.stickCleanerDustBag"
+    SAMSUNG_CE_STICK_CLEANER_DUSTBIN_STATUS = "samsungce.stickCleanerDustbinStatus"
+    SAMSUNG_CE_STICK_CLEANER_STATUS = "samsungce.stickCleanerStatus"
+    SAMSUNG_CE_STICK_CLEANER_STICK_STATUS = "samsungce.stickCleanerStickStatus"
     SAMSUNG_CE_SURFACE_RESIDUAL_HEAT = "samsungce.surfaceResidualHeat"
     SAMSUNG_CE_TEMPERATURE_SETTING = "samsungce.temperatureSetting"
     SAMSUNG_CE_TOGGLE_SWITCH = "samsungce.toggleSwitch"
@@ -433,6 +438,10 @@ class Capability(StrEnum):
     )
     ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN = "abateachieve62503.statelessChannelDown"
     ABATEACHIEVE62503_STATELESS_CHANNEL_UP = "abateachieve62503.statelessChannelUp"
+
+    ABSOLUTEWEATHER46907_LANGUAGE_SUPPORT = "absoluteweather46907.languageSupport"
+    ABSOLUTEWEATHER46907_LOCK = "absoluteweather46907.lock"
+    ABSOLUTEWEATHER46907_LOCKSTATERELEASE = "absoluteweather46907.lockstaterelease"
 
     AMBERPIANO10217_BINDING_INFO = "amberpiano10217.bindingInfo"
     AMBERPIANO10217_CLUSTER = "amberpiano10217.cluster"
@@ -517,6 +526,10 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_SWITCH_ALL_ON_OFF1 = "legendabsolute60149.switchAllOnOff1"
     LEGENDABSOLUTE60149_TEMP_CONDITION2 = "legendabsolute60149.tempCondition2"
     LEGENDABSOLUTE60149_TEMP_TARGET = "legendabsolute60149.tempTarget"
+
+    MUSICAHEAD43206_POWERMODE = "musicahead43206.powermode"
+    MUSICAHEAD43206_SNOOZE = "musicahead43206.snooze"
+    MUSICAHEAD43206_STAGE = "musicahead43206.stage"
 
     PARTYVOICE23922_AMPERAGE = "partyvoice23922.amperage"
     PARTYVOICE23922_APIWEBREQUEST = "partyvoice23922.apiwebrequest"

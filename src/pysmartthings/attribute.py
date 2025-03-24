@@ -13,6 +13,7 @@ class Attribute(StrEnum):
     ACCELERATION = "acceleration"
     ACCURACY = "accuracy"
     ACM_MODE = "acmMode"
+    ACTION_SETTING = "actionSetting"
     ACTIVATED = "activated"
     ACTIVITY = "activity"
     ADD_RINSE = "addRinse"
@@ -73,6 +74,7 @@ class Attribute(StrEnum):
     BATTERY = "battery"
     BEEP = "beep"
     BINARY_ID = "binaryId"
+    BLE_CONNECTION_STATE = "bleConnectionState"
     BLOCKING_STATUS = "blockingStatus"
     BMI_MEASUREMENT = "bmiMeasurement"
     BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
@@ -142,6 +144,7 @@ class Attribute(StrEnum):
     CURRENT_VALUE = "currentValue"
     CURRENT_VERSION = "currentVersion"
     CUSTOM_COURSE_CANDIDATES = "customCourseCandidates"
+    CYCLE_TYPE = "cycleType"
     DASH_BOARD_VALUE = "dashBoardValue"
     DATA = "data"
     DATE_STARTED = "dateStarted"
@@ -348,6 +351,8 @@ class Attribute(StrEnum):
     KEYNUMVALUE = "keynumvalue"
     KEYPAD = "keypad"
     KEYVALUE = "keyvalue"
+    LANGUAGE = "language"
+    LAST_EMPTIED_TIME = "lastEmptiedTime"
     LAST_SENSING_LEVEL = "lastSensingLevel"
     LAST_SENSING_TIME = "lastSensingTime"
     LAST_UPDATE_STATUS = "lastUpdateStatus"
@@ -510,6 +515,7 @@ class Attribute(StrEnum):
     PLAYBACK_SHUFFLE = "playbackShuffle"
     PLAYBACK_STATUS = "playbackStatus"
     PLAYLIST = "playlist"
+    PMODE = "pmode"
     POWER = "power"
     POWER_CONSUMPTION = "powerConsumption"
     POWER_LEVEL = "powerLevel"
@@ -622,6 +628,7 @@ class Attribute(StrEnum):
     SLEEPING = "sleeping"
     SLOT_STATE = "slotState"
     SMOKE = "smoke"
+    SNOOZE = "snooze"
     SOFTENER_TYPE = "softenerType"
     SOUND = "sound"
     SOUND_DETECTED = "soundDetected"
@@ -636,6 +643,7 @@ class Attribute(StrEnum):
     SPI_MODE = "spiMode"
     SPIN_SPEED = "spinSpeed"
     SYSTEM_TIME = "st"
+    STAGE = "stage"
     STAGE_STATUS = "stageStatus"
     START_TIME = "startTime"
     START_VALUE = "startValue"
@@ -669,12 +677,14 @@ class Attribute(StrEnum):
     SUN_RISE_OFFSET = "sunRiseOffset"
     SUN_SET = "sunSet"
     SUN_SET_OFFSET = "sunSetOffset"
+    SUPPORT_CUSTOM_CONTENT = "supportCustomContent"
     SUPPORT_REPEAT_MODE = "supportRepeatMode"
     SUPPORT_TOU_EVENT_NOTIFICATION = "supportTouEventNotification"
     SUPPORT_TOU_INFO = "supportTouInfo"
     SUPPORTED_AC_FAN_MODES = "supportedAcFanModes"
     SUPPORTED_AC_MODES = "supportedAcModes"
     SUPPORTED_AC_OPTIONAL_MODE = "supportedAcOptionalMode"
+    SUPPORTED_ACTION_SETTINGS = "supportedActionSettings"
     SUPPORTED_ACTIONS = "supportedActions"
     SUPPORTED_AGING_METHODS = "supportedAgingMethods"
     SUPPORTED_AIR_PURIFIER_FAN_MODES = "supportedAirPurifierFanModes"
@@ -796,6 +806,7 @@ class Attribute(StrEnum):
     TIME_OFFSET = "timeOffset"
     TIMED_CLEAN_DURATION = "timedCleanDuration"
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
+    TIMEZONE = "timezone"
     TITLE = "title"
     TOPICLIST = "topiclist"
     TOTAL_TIME = "totalTime"
@@ -816,6 +827,7 @@ class Attribute(StrEnum):
     UPDATED_TIME = "updatedTime"
     UPLINK_SPEED = "uplinkSpeed"
     URI = "uri"
+    USAGE = "usage"
     USAGE_TIME = "usageTime"
     USER_CODE = "userCode"
     USER_ID = "userId"
@@ -1500,6 +1512,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.REMAINING_AMOUNT,
         Attribute.SUPPORTED_AMOUNT,
         Attribute.SUPPORTED_DENSITY,
+        Attribute.SUPPORTED_TYPES,
         Attribute.TYPE,
     ],
     Capability.SAMSUNG_CE_AUTO_DISPENSE_SOFTENER: [
@@ -1688,6 +1701,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.REMAINING_AMOUNT,
         Attribute.SUPPORTED_AMOUNT,
         Attribute.SUPPORTED_DENSITY,
+        Attribute.SUPPORTED_TYPES,
         Attribute.TYPE,
     ],
     Capability.SAMSUNG_CE_FOOD_DEFROST: [
@@ -1772,6 +1786,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_POWER_LEVELS,
     ],
     Capability.SAMSUNG_CE_MUSIC_PLAYLIST: [Attribute.CURRENT_TRACK, Attribute.PLAYLIST],
+    Capability.SAMSUNG_CE_NOTIFICATION: [
+        Attribute.ACTION_SETTING,
+        Attribute.SUPPORTED_ACTION_SETTINGS,
+        Attribute.SUPPORTED_CONTEXTS,
+        Attribute.SUPPORT_CUSTOM_CONTENT,
+    ],
     Capability.SAMSUNG_CE_OPERATION_ORIGIN: [],
     Capability.SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT: [Attribute.DRAINAGE_REQUIREMENT],
     Capability.SAMSUNG_CE_OVEN_MODE: [
@@ -1847,9 +1867,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ENABLED,
         Attribute.END_TIME,
         Attribute.INTERVAL,
+        Attribute.MAP_ID,
         Attribute.OBSOLETED,
         Attribute.PATROL_STATUS,
         Attribute.START_TIME,
+        Attribute.TIMEZONE,
+        Attribute.TIME_OFFSET,
         Attribute.WAYPOINTS,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_PET_CLEANING_SCHEDULE: [
@@ -1944,6 +1967,21 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
     ],
     Capability.SAMSUNG_CE_STEAM_CLOSET_SANITIZE_MODE: [Attribute.STATUS],
+    Capability.SAMSUNG_CE_STICK_CLEANER_DUST_BAG: [
+        Attribute.STATUS,
+        Attribute.SUPPORTED_STATUS,
+        Attribute.USAGE,
+    ],
+    Capability.SAMSUNG_CE_STICK_CLEANER_DUSTBIN_STATUS: [
+        Attribute.LAST_EMPTIED_TIME,
+        Attribute.OPERATING_STATE,
+    ],
+    Capability.SAMSUNG_CE_STICK_CLEANER_STATUS: [Attribute.OPERATING_STATE],
+    Capability.SAMSUNG_CE_STICK_CLEANER_STICK_STATUS: [
+        Attribute.BLE_CONNECTION_STATE,
+        Attribute.MODE,
+        Attribute.STATUS,
+    ],
     Capability.SAMSUNG_CE_SURFACE_RESIDUAL_HEAT: [Attribute.SURFACE_RESIDUAL_HEAT],
     Capability.SAMSUNG_CE_TEMPERATURE_SETTING: [
         Attribute.DESIRED_TEMPERATURE,
@@ -1958,6 +1996,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Attribute.STATUS],
     Capability.SAMSUNG_CE_WASHER_CYCLE: [
+        Attribute.CYCLE_TYPE,
         Attribute.REFERENCE_TABLE,
         Attribute.SPECIALIZED_FUNCTION_CLASSIFICATION,
         Attribute.SUPPORTED_CYCLES,
@@ -2140,6 +2179,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_UP: [],
     Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN: [],
     Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_UP: [],
+    Capability.ABSOLUTEWEATHER46907_LANGUAGE_SUPPORT: [Attribute.LANGUAGE],
+    Capability.ABSOLUTEWEATHER46907_LOCK: [Attribute.LOCK],
+    Capability.ABSOLUTEWEATHER46907_LOCKSTATERELEASE: [Attribute.LOCK],
     Capability.AMBERPIANO10217_BINDING_INFO: [Attribute.INFO_HTML, Attribute.INFO_TEXT],
     Capability.AMBERPIANO10217_CLUSTER: [
         Attribute.CLUSTER_ID,
@@ -2251,6 +2293,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_SWITCH_ALL_ON_OFF1: [Attribute.SWITCH_ALL_ON_OFF],
     Capability.LEGENDABSOLUTE60149_TEMP_CONDITION2: [Attribute.TEMP_CONDITION],
     Capability.LEGENDABSOLUTE60149_TEMP_TARGET: [Attribute.TEMP_TARGET],
+    Capability.MUSICAHEAD43206_POWERMODE: [Attribute.PMODE],
+    Capability.MUSICAHEAD43206_SNOOZE: [Attribute.SNOOZE],
+    Capability.MUSICAHEAD43206_STAGE: [Attribute.STAGE],
     Capability.PARTYVOICE23922_AMPERAGE: [Attribute.AMPERAGE],
     Capability.PARTYVOICE23922_APIWEBREQUEST: [],
     Capability.PARTYVOICE23922_BAROMETER2: [Attribute.PRESSURE],
