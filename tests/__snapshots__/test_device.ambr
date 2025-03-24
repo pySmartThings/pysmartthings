@@ -2,8 +2,8 @@
 # name: test_fetching_devices[devices_10]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -25,7 +25,7 @@
           'manufacturer_category': <Category.NETWORK_AUDIO: 'NetworkAudio'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '6a6954ee-5784-4cce-aac6-fbe010adca07',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -57,8 +57,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -73,7 +73,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
         }),
-      ]),
+      }),
       'device_id': '16d58af1-86a0-46cd-bf14-d3742119e27c',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -90,8 +90,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.MOTION_SENSOR: 'motionSensor'>,
             <Capability.BATTERY: 'battery'>,
@@ -103,7 +103,7 @@
           'manufacturer_category': <Category.MOTION_SENSOR: 'MotionSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '59513635-baa2-463f-bb6a-443f662f3f2a',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -120,8 +120,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -136,7 +136,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
         }),
-      ]),
+      }),
       'device_id': 'ab7557f0-281d-49e9-a0d7-d838229a49d8',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -153,8 +153,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -163,7 +163,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '6a2d07a4-dd77-48bc-9acf-017029aaf099',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -184,8 +184,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -200,7 +200,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '994ad929-3308-45a1-9ed0-e1cc26021131',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -217,8 +217,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -233,7 +233,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '333b4955-5f0d-4a87-8ad8-9fe32607e1fb',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -250,8 +250,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -266,7 +266,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '7faaac2e-d889-4141-99f5-493c991ec508',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -283,8 +283,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -299,7 +299,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'c93373db-ffec-49ad-80b8-6880ecad5eb8',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -316,8 +316,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -332,7 +332,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'eeaa8872-18b2-4626-8f45-cbf8396e7a8f',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -349,8 +349,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -365,7 +365,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'fec5fefc-187a-4b07-ac8d-244aa8c448df',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -382,8 +382,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.MOTION_SENSOR: 'motionSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -396,7 +396,7 @@
           'manufacturer_category': <Category.MOTION_SENSOR: 'MotionSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '3358b4cc-4a35-49ad-8bf9-95803d044408',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -413,8 +413,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -429,7 +429,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
         }),
-      ]),
+      }),
       'device_id': '25bd5c0e-23bf-402c-a2f3-a8c34bf656b1',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -446,8 +446,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -462,7 +462,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
         }),
-      ]),
+      }),
       'device_id': '493837dc-c9a0-4ab2-9610-1b46e3c668c3',
       'device_manufacturer_code': 'Samjin',
       'device_network_type': None,
@@ -479,8 +479,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -521,7 +521,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'b4d20b8f-ae23-8a6d-9db2-4c9d8db2c615',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -553,8 +553,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -592,7 +592,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '01751e21-3609-ec2f-41af-1c8bc8d96c15',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -624,8 +624,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.POWER_METER: 'powerMeter'>,
             <Capability.ENERGY_METER: 'energyMeter'>,
@@ -638,7 +638,7 @@
           'manufacturer_category': <Category.CURB_POWER_METER: 'CurbPowerMeter'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'f0af21a2-d5a1-437c-b10a-b34a87394b71',
       'device_manufacturer_code': '0086-0002-005F',
       'device_network_type': None,
@@ -659,8 +659,8 @@
 # name: test_fetching_devices[devices_11]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
@@ -673,7 +673,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'bf4b1167-48a3-4af7-9186-0900a678ffa5',
       'device_manufacturer_code': 'Sensibo',
       'device_network_type': None,
@@ -695,8 +695,17 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -755,16 +764,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': 'b905ade6-4f96-b00e-3292-0703f5866809',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -796,8 +796,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -806,7 +806,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '71526aa9-6457-417a-9bae-b83c87761e6a',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -827,8 +827,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -837,7 +837,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '148606b0-9c62-417c-8c0a-c6e4ef7ce269',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -858,8 +858,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -871,7 +871,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'dd7ab462-c277-4aed-a9fb-ec66f9c6cc59',
       'device_manufacturer_code': '0086-0003-004E',
       'device_network_type': None,
@@ -888,8 +888,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
@@ -902,7 +902,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '80d3956d-b94d-4a43-9bad-d3cdc8a9cb1d',
       'device_manufacturer_code': 'Sensibo',
       'device_network_type': None,
@@ -924,8 +924,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -937,7 +937,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '23a4c0a4-2dae-47d0-b987-cba764414672',
       'device_manufacturer_code': '0086-0003-004E',
       'device_network_type': None,
@@ -954,8 +954,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
@@ -968,7 +968,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '4c08fbf8-f77b-4236-a18b-0bbe7da61ea8',
       'device_manufacturer_code': 'Sensibo',
       'device_network_type': None,
@@ -994,8 +994,17 @@
 # name: test_fetching_devices[devices_12]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -1054,16 +1063,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '62ad169f-f270-b219-a521-1608dea8bf76',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1095,8 +1095,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -1133,7 +1133,7 @@
           'manufacturer_category': <Category.SMART_MONITOR: 'SmartMonitor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '035a8805-e552-ce47-cf04-411e4644eeb8',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1169,8 +1169,8 @@
 # name: test_fetching_devices[devices_13]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -1179,7 +1179,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'd7c54320-6d75-4543-ab1f-9bd105336aae',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -1200,8 +1200,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.LOCK: 'lock'>,
             <Capability.LOCK_CODES: 'lockCodes'>,
@@ -1213,7 +1213,7 @@
           'manufacturer_category': <Category.SMART_LOCK: 'SmartLock'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '42410e99-63cb-49d0-8f2f-d036f1b3ce66',
       'device_manufacturer_code': '0129-6600-0002',
       'device_network_type': None,
@@ -1230,8 +1230,17 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -1290,16 +1299,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '6486e104-e046-f923-9645-5887ed4375dd',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1335,8 +1335,17 @@
 # name: test_fetching_devices[devices_14]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -1391,16 +1400,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': 'bc5c7ce0-b54d-2797-062b-b0da64c0ead5',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1432,8 +1432,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -1470,7 +1470,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '70650a5c-3e57-c66b-8c43-d48d06852948',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1502,8 +1502,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -1524,7 +1524,7 @@
           'manufacturer_category': <Category.NETWORK_AUDIO: 'NetworkAudio'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'afcecd0b-a633-baf2-c6b7-da74bf675a7d',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1556,8 +1556,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -1595,7 +1595,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '5aeee631-b8f1-ba8d-5d11-58177181b32a',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1627,8 +1627,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -1637,7 +1637,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '2f7f7d2b-e683-48ae-86f7-e57df6a0bce2',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -1658,8 +1658,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -1694,7 +1694,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'a106da6d-2981-4c39-84c4-5d5b75b4784c',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1726,8 +1726,26 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'cavity-01': dict({
+          'capabilities': list([
+            <Capability.OVEN_MODE: 'ovenMode'>,
+            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
+            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
+            <Capability.SAMSUNG_CE_DEFINED_RECIPE: 'samsungce.definedRecipe'>,
+            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
+            <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'cavity-01',
+          'label': '1',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -1757,25 +1775,7 @@
           'manufacturer_category': <Category.OVEN: 'Oven'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.OVEN_MODE: 'ovenMode'>,
-            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
-            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
-            <Capability.SAMSUNG_CE_DEFINED_RECIPE: 'samsungce.definedRecipe'>,
-            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
-            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
-            <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'cavity-01',
-          'label': '1',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': 'e3ffcb5a-294b-c68a-438d-9e27bb7660a0',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -1807,8 +1807,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.MEDIA_PLAYBACK: 'mediaPlayback'>,
             <Capability.MEDIA_GROUP: 'mediaGroup'>,
@@ -1825,7 +1825,7 @@
           'manufacturer_category': <Category.SPEAKER: 'Speaker'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'c85fced9-c474-4a47-93c2-037cc7829536',
       'device_manufacturer_code': 'Sonos',
       'device_network_type': None,
@@ -1842,8 +1842,84 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'cooler': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'cooler',
+          'label': 'cooler',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'cvroom': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+          ]),
+          'id': 'cvroom',
+          'label': 'cvroom',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'freezer': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'freezer',
+          'label': 'freezer',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker',
+          'label': 'icemaker',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-02': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-02',
+          'label': 'icemaker-02',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-03': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-03',
+          'label': 'icemaker-03',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.EXECUTE: 'execute'>,
@@ -1881,53 +1957,7 @@
           'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'freezer',
-          'label': 'freezer',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'cooler',
-          'label': 'cooler',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-          ]),
-          'id': 'cvroom',
-          'label': 'cvroom',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'onedoor': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -1944,59 +1974,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker',
-          'label': 'icemaker',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-02',
-          'label': 'icemaker-02',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-03',
-          'label': 'icemaker-03',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
-            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-10',
-          'label': 'scale-10',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-11',
-          'label': 'scale-11',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'pantry-01': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -2009,7 +1987,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
+        'pantry-02': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -2022,7 +2000,29 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-      ]),
+        'scale-10': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
+            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-10',
+          'label': 'scale-10',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'scale-11': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-11',
+          'label': 'scale-11',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+      }),
       'device_id': 'aafdee8c-4ede-2ed7-9d29-d596b84d65aa',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2054,8 +2054,17 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_DRYER_MODE: 'hca.dryerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -2096,16 +2105,7 @@
           'manufacturer_category': <Category.DRYER: 'Dryer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_DRYER_MODE: 'hca.dryerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': 'eb6afef1-f59a-247f-95e2-7387a58632e1',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2141,8 +2141,84 @@
 # name: test_fetching_devices[devices_15]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'cooler': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'cooler',
+          'label': 'cooler',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'cvroom': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+          ]),
+          'id': 'cvroom',
+          'label': 'cvroom',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'freezer': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'freezer',
+          'label': 'freezer',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker',
+          'label': 'icemaker',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-02': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-02',
+          'label': 'icemaker-02',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-03': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-03',
+          'label': 'icemaker-03',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.EXECUTE: 'execute'>,
@@ -2180,53 +2256,7 @@
           'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'freezer',
-          'label': 'freezer',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'cooler',
-          'label': 'cooler',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-          ]),
-          'id': 'cvroom',
-          'label': 'cvroom',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'onedoor': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -2243,59 +2273,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker',
-          'label': 'icemaker',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-02',
-          'label': 'icemaker-02',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-03',
-          'label': 'icemaker-03',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
-            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-10',
-          'label': 'scale-10',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-11',
-          'label': 'scale-11',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'pantry-01': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -2308,7 +2286,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
+        'pantry-02': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -2321,7 +2299,29 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-      ]),
+        'scale-10': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
+            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-10',
+          'label': 'scale-10',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'scale-11': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-11',
+          'label': 'scale-11',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+      }),
       'device_id': '8d2d636b-8e36-e97b-5628-5f2fa27bc344',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2353,8 +2353,17 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -2409,16 +2418,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '21718ac8-8a17-e7cf-2f7e-8aa439f203dd',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2450,8 +2450,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -2461,7 +2461,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '6838e637-4abf-4df2-85ad-67af96e549fb',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -2478,8 +2478,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -2516,7 +2516,7 @@
           'manufacturer_category': <Category.CLOTHING_CARE_MACHINE: 'ClothingCareMachine'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'b93211bf-9d96-bd21-3b2f-964fcc87f5cc',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2548,8 +2548,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -2564,7 +2564,7 @@
           'manufacturer_category': <Category.SOUND_SENSOR: 'SoundSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '930eced7-366d-4e6d-b2f2-e3a80f3d5a0c',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2596,8 +2596,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -2638,7 +2638,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '425ac77a-f7c9-a62d-ff12-cdad144952e3',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2670,8 +2670,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -2685,7 +2685,7 @@
           'manufacturer_category': <Category.LIGHT_SENSOR: 'LightSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '5cc1c096-98b9-460c-8f1c-1045509ec605',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2717,8 +2717,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -2740,7 +2740,7 @@
           'manufacturer_category': <Category.NETWORK_AUDIO: 'NetworkAudio'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '9985fbfa-777a-4fae-a637-6148f41b3c63',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2776,8 +2776,8 @@
 # name: test_fetching_devices[devices_16]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -2800,7 +2800,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'F8042E25-0E53-0000-0000-000000000000',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2832,8 +2832,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -2849,7 +2849,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'C0972777-40F4-0000-0000-000000000000',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2885,8 +2885,8 @@
 # name: test_fetching_devices[devices_17]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -2895,7 +2895,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '9d686e56-4907-4359-a131-6a3f3f51e521',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -2920,8 +2920,8 @@
 # name: test_fetching_devices[devices_18]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -2947,7 +2947,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'd424e86b-15cf-79e2-48d5-480a6c0d18f9',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -2979,8 +2979,84 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'cooler': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'cooler',
+          'label': 'cooler',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'cvroom': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+          ]),
+          'id': 'cvroom',
+          'label': 'cvroom',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'freezer': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'freezer',
+          'label': 'freezer',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker',
+          'label': 'icemaker',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-02': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-02',
+          'label': 'icemaker-02',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-03': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-03',
+          'label': 'icemaker-03',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.EXECUTE: 'execute'>,
@@ -3018,53 +3094,7 @@
           'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'freezer',
-          'label': 'freezer',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'cooler',
-          'label': 'cooler',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-          ]),
-          'id': 'cvroom',
-          'label': 'cvroom',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'onedoor': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -3081,59 +3111,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker',
-          'label': 'icemaker',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-02',
-          'label': 'icemaker-02',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-03',
-          'label': 'icemaker-03',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
-            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-10',
-          'label': 'scale-10',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-11',
-          'label': 'scale-11',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'pantry-01': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -3146,7 +3124,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
+        'pantry-02': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -3159,7 +3137,29 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-      ]),
+        'scale-10': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
+            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-10',
+          'label': 'scale-10',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'scale-11': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-11',
+          'label': 'scale-11',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+      }),
       'device_id': 'a4b78a08-11e6-6d41-2abc-dcbfddcfea65',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -3191,8 +3191,84 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'cooler': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'cooler',
+          'label': 'cooler',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'cvroom': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+          ]),
+          'id': 'cvroom',
+          'label': 'cvroom',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'freezer': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'freezer',
+          'label': 'freezer',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker',
+          'label': 'icemaker',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-02': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-02',
+          'label': 'icemaker-02',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-03': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-03',
+          'label': 'icemaker-03',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.EXECUTE: 'execute'>,
@@ -3230,53 +3306,7 @@
           'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'freezer',
-          'label': 'freezer',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_TEMPERATURE_SETTING: 'samsungce.temperatureSetting'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'cooler',
-          'label': 'cooler',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-          ]),
-          'id': 'cvroom',
-          'label': 'cvroom',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'onedoor': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -3293,59 +3323,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker',
-          'label': 'icemaker',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-02',
-          'label': 'icemaker-02',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-03',
-          'label': 'icemaker-03',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
-            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-10',
-          'label': 'scale-10',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-11',
-          'label': 'scale-11',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'pantry-01': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -3358,7 +3336,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
+        'pantry-02': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -3371,7 +3349,29 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-      ]),
+        'scale-10': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
+            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-10',
+          'label': 'scale-10',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'scale-11': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-11',
+          'label': 'scale-11',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+      }),
       'device_id': 'b851a083-4b2c-9e68-e344-0312024e9fa0',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -3407,8 +3407,8 @@
 # name: test_fetching_devices[devices_2]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
@@ -3423,7 +3423,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '440063de-a200-40b5-8a6b-f3399eaa0370',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3445,8 +3445,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
@@ -3463,7 +3463,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'cb958955-b015-498c-9e62-fc0c51abd054',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3485,8 +3485,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
@@ -3501,7 +3501,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '0b2ed6c7-dc39-42fd-ab64-8f1c75c1fad0',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3523,8 +3523,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.WINDOW_SHADE: 'windowShade'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -3536,7 +3536,7 @@
           'manufacturer_category': <Category.BLIND: 'Blind'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '571af102-15db-4030-b76b-245a691f74a5',
       'device_manufacturer_code': 'WonderLabs Company',
       'device_network_type': None,
@@ -3558,8 +3558,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.WINDOW_SHADE: 'windowShade'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -3571,7 +3571,7 @@
           'manufacturer_category': <Category.BLIND: 'Blind'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '42efbc29-b283-4d01-a343-f0963ae7dba4',
       'device_manufacturer_code': 'WonderLabs Company',
       'device_network_type': None,
@@ -3593,8 +3593,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
@@ -3609,7 +3609,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'a456cbd5-0503-46be-acc4-54e189dc6ff4',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3631,8 +3631,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.MOTION_SENSOR: 'motionSensor'>,
             <Capability.BATTERY: 'battery'>,
@@ -3644,7 +3644,7 @@
           'manufacturer_category': <Category.MOTION_SENSOR: 'MotionSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '08da6244-b3ad-4c45-b005-d8572bd9138f',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3666,8 +3666,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
@@ -3682,7 +3682,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '297b909c-ca9a-4517-ba42-7412269cd00e',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3704,8 +3704,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
@@ -3720,7 +3720,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '4d4f5261-dc3a-4e31-b8f4-15699c934f62',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3742,8 +3742,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
@@ -3760,7 +3760,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '9eaad965-638d-48c2-8aab-e97aa031226e',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3782,8 +3782,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.HEALTH_CHECK: 'healthCheck'>,
             <Capability.REFRESH: 'refresh'>,
@@ -3794,7 +3794,7 @@
           'manufacturer_category': <Category.THERMOSTAT: 'Thermostat'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'f1e182eb-1e21-43ed-a32d-f3c2796b9865',
       'device_manufacturer_code': 'Netatmo',
       'device_network_type': None,
@@ -3816,8 +3816,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
@@ -3834,7 +3834,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '4f43eaf7-b3d1-4d26-be8e-807b37dfe8e0',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3856,8 +3856,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.RELATIVE_HUMIDITY_MEASUREMENT: 'relativeHumidityMeasurement'>,
             <Capability.BATTERY: 'battery'>,
@@ -3870,7 +3870,7 @@
           'manufacturer_category': <Category.TEMP_HUMIDITY_SENSOR: 'TempHumiditySensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '5ca2281d-fb11-4835-8990-0ea287556fe5',
       'device_manufacturer_code': 'WonderLabs Company',
       'device_network_type': None,
@@ -3892,8 +3892,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
@@ -3910,7 +3910,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '3cd2ce09-6e19-48a9-b296-558d8cc55726',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -3932,8 +3932,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -3944,7 +3944,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'e25e6818-efab-4f45-97f8-867ab2c1c33d',
       'device_manufacturer_code': 'WonderLabs Company',
       'device_network_type': None,
@@ -3966,8 +3966,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
@@ -3984,7 +3984,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '5ed8ef33-96dc-4d53-8ad1-4a15e6361c1e',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -4006,8 +4006,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
@@ -4022,7 +4022,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'f15b3d69-7452-4b21-a27c-d3db3c84e2d4',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -4044,8 +4044,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
@@ -4062,7 +4062,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'be1152d6-cad0-4859-b4a6-5770e63dd0b5',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -4084,8 +4084,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
             <Capability.SWITCH: 'switch'>,
@@ -4100,7 +4100,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '53fa938e-7586-41ca-84e7-ccc6bcba94df',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -4122,8 +4122,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.COLOR_CONTROL: 'colorControl'>,
@@ -4140,7 +4140,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'd472222b-0e19-4d33-8375-b2abf6c9df08',
       'device_manufacturer_code': 'Signify Netherlands B.V.',
       'device_network_type': None,
@@ -4166,8 +4166,25 @@
 # name: test_fetching_devices[devices_3]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'cavity-01': dict({
+          'capabilities': list([
+            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
+            <Capability.OVEN_MODE: 'ovenMode'>,
+            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
+            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
+            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
+            <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'cavity-01',
+          'label': 'cavity-01',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -4198,24 +4215,7 @@
           'manufacturer_category': <Category.RANGE: 'Range'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.OVEN_SETPOINT: 'ovenSetpoint'>,
-            <Capability.OVEN_MODE: 'ovenMode'>,
-            <Capability.OVEN_OPERATING_STATE: 'ovenOperatingState'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.SAMSUNG_CE_OVEN_MODE: 'samsungce.ovenMode'>,
-            <Capability.SAMSUNG_CE_OVEN_OPERATING_STATE: 'samsungce.ovenOperatingState'>,
-            <Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: 'samsungce.kitchenDeviceDefaults'>,
-            <Capability.CUSTOM_OVEN_CAVITY_STATUS: 'custom.ovenCavityStatus'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'cavity-01',
-          'label': 'cavity-01',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '2c3cbaa0-1899-5ddc-7b58-9d657bd53d18',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4251,8 +4251,17 @@
 # name: test_fetching_devices[devices_4]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_DRYER_MODE: 'hca.dryerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -4293,16 +4302,7 @@
           'manufacturer_category': <Category.DRYER: 'Dryer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_DRYER_MODE: 'hca.dryerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '02f7256e-8353-5bdd-547f-bd5b1647e01b',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4334,8 +4334,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -4371,7 +4371,7 @@
           'manufacturer_category': <Category.DISHWASHER: 'Dishwasher'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'f36dc7ce-cac0-0667-dc14-a3704eb5e676',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4403,8 +4403,18 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hood': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_LAMP: 'samsungce.lamp'>,
+            <Capability.SAMSUNG_CE_HOOD_FAN_SPEED: 'samsungce.hoodFanSpeed'>,
+          ]),
+          'id': 'hood',
+          'label': 'hood',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -4437,17 +4447,7 @@
           'manufacturer_category': <Category.MICROWAVE: 'Microwave'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_LAMP: 'samsungce.lamp'>,
-            <Capability.SAMSUNG_CE_HOOD_FAN_SPEED: 'samsungce.hoodFanSpeed'>,
-          ]),
-          'id': 'hood',
-          'label': 'hood',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '2bad3237-4886-e699-1b90-4a51a3d55c8a',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4479,8 +4479,88 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'camera-01': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'camera-01',
+          'label': 'camera-01',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'cooler': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'cooler',
+          'label': 'cooler',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'cvroom': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+          ]),
+          'id': 'cvroom',
+          'label': 'cvroom',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'freezer': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'freezer',
+          'label': 'freezer',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker',
+          'label': 'icemaker',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-02': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-02',
+          'label': 'icemaker-02',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-03': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-03',
+          'label': 'icemaker-03',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.EXECUTE: 'execute'>,
@@ -4516,100 +4596,7 @@
           'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'freezer',
-          'label': 'freezer',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'cooler',
-          'label': 'cooler',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-          ]),
-          'id': 'cvroom',
-          'label': 'cvroom',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker',
-          'label': 'icemaker',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-02',
-          'label': 'icemaker-02',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-03',
-          'label': 'icemaker-03',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
-            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
-            <Capability.SAMSUNG_CE_SCALE_SETTINGS: 'samsungce.scaleSettings'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-10',
-          'label': 'scale-10',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'scale-11',
-          'label': 'scale-11',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'pantry-01': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -4622,17 +4609,30 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
+        'scale-10': dict({
           'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: 'samsungce.weightMeasurementCalibration'>,
+            <Capability.SAMSUNG_CE_CONNECTION_STATE: 'samsungce.connectionState'>,
+            <Capability.SAMSUNG_CE_SCALE_SETTINGS: 'samsungce.scaleSettings'>,
             <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
           ]),
-          'id': 'camera-01',
-          'label': 'camera-01',
+          'id': 'scale-10',
+          'label': 'scale-10',
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-      ]),
+        'scale-11': dict({
+          'capabilities': list([
+            <Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: 'samsungce.weightMeasurement'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'scale-11',
+          'label': 'scale-11',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+      }),
       'device_id': '7d3feb98-8a36-4351-c362-5e21ad3a78dd',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4664,8 +4664,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -4674,7 +4674,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'd1bd03c4-61ea-4e3d-9c7e-c2126c9579a2',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -4695,8 +4695,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -4720,7 +4720,7 @@
           'manufacturer_category': <Category.ROBOT_CLEANER: 'RobotCleaner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '3442dfc6-17c0-a65f-dae0-4c6e01786f44',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4752,8 +4752,17 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -4808,16 +4817,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': 'f984b91d-f250-9d42-3436-33f09a422a47',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4853,8 +4853,8 @@
 # name: test_fetching_devices[devices_5]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.ALARM: 'alarm'>,
             <Capability.TAG_TAG_BUTTON: 'tag.tagButton'>,
@@ -4875,7 +4875,7 @@
           'manufacturer_category': <Category.BLUETOOTH_TRACKER: 'BluetoothTracker'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '83d660e4-b0c8-4881-a674-d9f1730366c1',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4892,8 +4892,17 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'hca.main': dict({
+          'capabilities': list([
+            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
+          ]),
+          'id': 'hca.main',
+          'label': 'hca.main',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.EXECUTE: 'execute'>,
             <Capability.OCF: 'ocf'>,
@@ -4948,16 +4957,7 @@
           'manufacturer_category': <Category.WASHER: 'Washer'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.HCA_WASHER_MODE: 'hca.washerMode'>,
-          ]),
-          'id': 'hca.main',
-          'label': 'hca.main',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': 'c34897ca-c077-e3b9-adba-d52a96e47343',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -4989,8 +4989,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.ALARM: 'alarm'>,
             <Capability.TAG_TAG_BUTTON: 'tag.tagButton'>,
@@ -5011,7 +5011,7 @@
           'manufacturer_category': <Category.BLUETOOTH_TRACKER: 'BluetoothTracker'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '709343ae-2262-45bf-8852-5263e34fd1f2',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5028,8 +5028,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.ALARM: 'alarm'>,
             <Capability.TAG_TAG_BUTTON: 'tag.tagButton'>,
@@ -5050,7 +5050,7 @@
           'manufacturer_category': <Category.BLUETOOTH_TRACKER: 'BluetoothTracker'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '0d3a49e8-6d4b-4870-b1ec-538d1c36f047',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5067,8 +5067,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.ALARM: 'alarm'>,
             <Capability.TAG_TAG_BUTTON: 'tag.tagButton'>,
@@ -5089,7 +5089,7 @@
           'manufacturer_category': <Category.BLUETOOTH_TRACKER: 'BluetoothTracker'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '9d5086e5-d74c-402c-8336-06c79966ab5f',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5106,8 +5106,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.ALARM: 'alarm'>,
             <Capability.TAG_TAG_BUTTON: 'tag.tagButton'>,
@@ -5128,7 +5128,7 @@
           'manufacturer_category': <Category.BLUETOOTH_TRACKER: 'BluetoothTracker'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'bb6db6ba-a4e6-436c-ae04-c559b87b2976',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5145,8 +5145,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.ALARM: 'alarm'>,
             <Capability.TAG_TAG_BUTTON: 'tag.tagButton'>,
@@ -5167,7 +5167,7 @@
           'manufacturer_category': <Category.BLUETOOTH_TRACKER: 'BluetoothTracker'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'cee35ca2-8d55-458c-baae-d8d01255cd51',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5188,8 +5188,8 @@
 # name: test_fetching_devices[devices_6]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -5249,7 +5249,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '4ece486b-89db-f06a-d54d-748b676b4d8e',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5281,8 +5281,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.EXECUTE: 'execute'>,
@@ -5303,7 +5303,7 @@
           'manufacturer_category': <Category.NETWORK_AUDIO: 'NetworkAudio'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '0d94e5db-8501-2355-eb4f-214163702cac',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5335,8 +5335,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -5353,7 +5353,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '0e168539-061a-5f02-2beb-cc5cb6bb3b7b',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5385,8 +5385,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -5425,7 +5425,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '0e168539-061a-5f02-2beb-000001200000',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5457,8 +5457,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -5518,7 +5518,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'bcedebe0-b3e9-4536-2b7c-dbc74dc29fce',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5554,8 +5554,43 @@
 # name: test_fetching_devices[devices_7]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        '1': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.AIR_CONDITIONER_MODE: 'airConditionerMode'>,
+            <Capability.AIR_CONDITIONER_FAN_MODE: 'airConditionerFanMode'>,
+            <Capability.FAN_OSCILLATION_MODE: 'fanOscillationMode'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.RELATIVE_HUMIDITY_MEASUREMENT: 'relativeHumidityMeasurement'>,
+            <Capability.AIR_QUALITY_SENSOR: 'airQualitySensor'>,
+            <Capability.DUST_SENSOR: 'dustSensor'>,
+            <Capability.VERY_FINE_DUST_SENSOR: 'veryFineDustSensor'>,
+            <Capability.ODOR_SENSOR: 'odorSensor'>,
+            <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>,
+            <Capability.AUDIO_VOLUME: 'audioVolume'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.CUSTOM_AUTO_CLEANING_MODE: 'custom.autoCleaningMode'>,
+            <Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: 'custom.airConditionerTropicalNightMode'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.OCF: 'ocf'>,
+            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
+            <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>,
+            <Capability.CUSTOM_SPI_MODE: 'custom.spiMode'>,
+            <Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: 'custom.airConditionerOptionalMode'>,
+            <Capability.CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION: 'custom.deviceReportStateConfiguration'>,
+            <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>,
+            <Capability.CUSTOM_DUST_FILTER: 'custom.dustFilter'>,
+            <Capability.CUSTOM_AIR_CONDITIONER_ODOR_CONTROLLER: 'custom.airConditionerOdorController'>,
+            <Capability.CUSTOM_DEODOR_FILTER: 'custom.deodorFilter'>,
+          ]),
+          'id': '1',
+          'label': '1',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -5597,42 +5632,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.AIR_CONDITIONER_MODE: 'airConditionerMode'>,
-            <Capability.AIR_CONDITIONER_FAN_MODE: 'airConditionerFanMode'>,
-            <Capability.FAN_OSCILLATION_MODE: 'fanOscillationMode'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.RELATIVE_HUMIDITY_MEASUREMENT: 'relativeHumidityMeasurement'>,
-            <Capability.AIR_QUALITY_SENSOR: 'airQualitySensor'>,
-            <Capability.DUST_SENSOR: 'dustSensor'>,
-            <Capability.VERY_FINE_DUST_SENSOR: 'veryFineDustSensor'>,
-            <Capability.ODOR_SENSOR: 'odorSensor'>,
-            <Capability.REMOTE_CONTROL_STATUS: 'remoteControlStatus'>,
-            <Capability.AUDIO_VOLUME: 'audioVolume'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.CUSTOM_AUTO_CLEANING_MODE: 'custom.autoCleaningMode'>,
-            <Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: 'custom.airConditionerTropicalNightMode'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.OCF: 'ocf'>,
-            <Capability.POWER_CONSUMPTION_REPORT: 'powerConsumptionReport'>,
-            <Capability.DEMAND_RESPONSE_LOAD_CONTROL: 'demandResponseLoadControl'>,
-            <Capability.CUSTOM_SPI_MODE: 'custom.spiMode'>,
-            <Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: 'custom.airConditionerOptionalMode'>,
-            <Capability.CUSTOM_DEVICE_REPORT_STATE_CONFIGURATION: 'custom.deviceReportStateConfiguration'>,
-            <Capability.CUSTOM_ENERGY_TYPE: 'custom.energyType'>,
-            <Capability.CUSTOM_DUST_FILTER: 'custom.dustFilter'>,
-            <Capability.CUSTOM_AIR_CONDITIONER_ODOR_CONTROLLER: 'custom.airConditionerOdorController'>,
-            <Capability.CUSTOM_DEODOR_FILTER: 'custom.deodorFilter'>,
-          ]),
-          'id': '1',
-          'label': '1',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '96a5ef74-5832-a84b-f1f7-ca799957065d',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -5668,8 +5668,8 @@
 # name: test_fetching_devices[devices_8]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -5686,7 +5686,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'e5bba37c-fc5d-4c1c-9644-750e80d94841',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -5708,8 +5708,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -5732,7 +5732,7 @@
           'manufacturer_category': <Category.SMART_PLUG: 'SmartPlug'>,
           'user_category': <Category.SMART_PLUG: 'SmartPlug'>,
         }),
-      ]),
+      }),
       'device_id': '0b5577db-5074-4b70-a2c5-efec286d264d',
       'device_manufacturer_code': 'TCPi',
       'device_network_type': None,
@@ -5749,8 +5749,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -5762,7 +5762,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '4a59f635-9f0a-4a6c-a2f0-ffb7ef182a7c',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -5779,8 +5779,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -5793,7 +5793,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '6ca56087-481f-4e93-9727-fb91049fe396',
       'device_manufacturer_code': 'sengled',
       'device_network_type': None,
@@ -5810,8 +5810,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -5826,7 +5826,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '265e653b-3c0b-4fa6-8e2a-f6a69c7040f0',
       'device_manufacturer_code': 'IKEA of Sweden',
       'device_network_type': None,
@@ -5843,8 +5843,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -5855,7 +5855,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '8f873071-a9aa-4580-a736-8f5f696e044a',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -5872,35 +5872,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-          ]),
-          'id': 'relay1',
-          'label': 'Relay 1',
-          'manufacturer_category': <Category.SWITCH: 'Switch'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-          ]),
-          'id': 'relay2',
-          'label': 'Relay 2',
-          'manufacturer_category': <Category.SWITCH: 'Switch'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-          ]),
-          'id': 'relay3',
-          'label': 'Relay 3',
-          'manufacturer_category': <Category.SWITCH: 'Switch'>,
-          'user_category': None,
-        }),
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.PLATEMUSIC11009_FIRMWARE: 'platemusic11009.firmware'>,
@@ -5915,7 +5888,34 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+        'relay1': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+          ]),
+          'id': 'relay1',
+          'label': 'Relay 1',
+          'manufacturer_category': <Category.SWITCH: 'Switch'>,
+          'user_category': None,
+        }),
+        'relay2': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+          ]),
+          'id': 'relay2',
+          'label': 'Relay 2',
+          'manufacturer_category': <Category.SWITCH: 'Switch'>,
+          'user_category': None,
+        }),
+        'relay3': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+          ]),
+          'id': 'relay3',
+          'label': 'Relay 3',
+          'manufacturer_category': <Category.SWITCH: 'Switch'>,
+          'user_category': None,
+        }),
+      }),
       'device_id': '803cb0d9-addd-4c2d-aaef-d4e20bf88228',
       'device_manufacturer_code': '027A-A000-A00A',
       'device_network_type': None,
@@ -5932,8 +5932,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -5944,7 +5944,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '09076422-62cc-4b2d-8beb-b53bc451c704',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -5961,8 +5961,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -5978,7 +5978,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '6c582006-aae9-47d0-a9ff-6573fed3b809',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -6000,8 +6000,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -6016,7 +6016,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.DOOR: 'Door'>,
         }),
-      ]),
+      }),
       'device_id': '7d246592-93db-4d72-a10d-5a51793ece8c',
       'device_manufacturer_code': 'SmartThings',
       'device_network_type': None,
@@ -6033,8 +6033,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.LOCK: 'lock'>,
             <Capability.LOCK_CODES: 'lockCodes'>,
@@ -6047,7 +6047,7 @@
           'manufacturer_category': <Category.SMART_LOCK: 'SmartLock'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'a9f587c5-5d8b-4273-8907-e7f609af5158',
       'device_manufacturer_code': 'Yale',
       'device_network_type': None,
@@ -6064,8 +6064,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -6101,7 +6101,7 @@
           'manufacturer_category': <Category.SMART_MONITOR: 'SmartMonitor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '3f01bf2b-e9a3-3543-1047-42320283a5c1',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -6133,8 +6133,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -6145,7 +6145,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '9b479ba0-81e1-4877-87c5-c301a87cbdab',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -6162,8 +6162,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -6174,7 +6174,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'c1107a0c-fa71-43c5-8ff9-a128ea6c4f20',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -6191,8 +6191,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -6204,7 +6204,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '8eacf25f-aa33-4d9e-ba90-0e4ac3ceb8e0',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -6221,8 +6221,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -6235,7 +6235,7 @@
           'manufacturer_category': <Category.CONTACT_SENSOR: 'ContactSensor'>,
           'user_category': <Category.CONTACT_SENSOR: 'ContactSensor'>,
         }),
-      ]),
+      }),
       'device_id': '2d9a892b-1c93-45a5-84cb-0e81889498c6',
       'device_manufacturer_code': 'Visonic',
       'device_network_type': None,
@@ -6252,8 +6252,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -6262,7 +6262,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '9d686e56-4907-4359-a131-6a3f3f51e521',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -6283,8 +6283,72 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'cooler': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'cooler',
+          'label': 'cooler',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'cvroom': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+          ]),
+          'id': 'cvroom',
+          'label': 'cvroom',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'freezer': dict({
+          'capabilities': list([
+            <Capability.CONTACT_SENSOR: 'contactSensor'>,
+            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
+            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
+            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
+            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
+            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
+          ]),
+          'id': 'freezer',
+          'label': 'freezer',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker',
+          'label': 'icemaker',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'icemaker-02': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
+          ]),
+          'id': 'icemaker-02',
+          'label': 'icemaker-02',
+          'manufacturer_category': <Category.OTHER: 'Other'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.EXECUTE: 'execute'>,
@@ -6318,51 +6382,7 @@
           'manufacturer_category': <Category.REFRIGERATOR: 'Refrigerator'>,
           'user_category': <Category.REFRIGERATOR: 'Refrigerator'>,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: 'samsungce.freezerConvertMode'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'freezer',
-          'label': 'freezer',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-            <Capability.CUSTOM_THERMOSTAT_SETPOINT_CONTROL: 'custom.thermostatSetpointControl'>,
-            <Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: 'samsungce.unavailableCapabilities'>,
-          ]),
-          'id': 'cooler',
-          'label': 'cooler',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.CONTACT_SENSOR: 'contactSensor'>,
-            <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
-            <Capability.THERMOSTAT_COOLING_SETPOINT: 'thermostatCoolingSetpoint'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-            <Capability.CUSTOM_FRIDGE_MODE: 'custom.fridgeMode'>,
-          ]),
-          'id': 'cvroom',
-          'label': 'cvroom',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'onedoor': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -6378,27 +6398,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker',
-          'label': 'icemaker',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.SWITCH: 'switch'>,
-            <Capability.CUSTOM_DISABLED_CAPABILITIES: 'custom.disabledCapabilities'>,
-          ]),
-          'id': 'icemaker-02',
-          'label': 'icemaker-02',
-          'manufacturer_category': <Category.OTHER: 'Other'>,
-          'user_category': None,
-        }),
-        dict({
+        'pantry-01': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -6409,7 +6409,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-        dict({
+        'pantry-02': dict({
           'capabilities': list([
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: 'samsungce.fridgePantryInfo'>,
             <Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: 'samsungce.fridgePantryMode'>,
@@ -6420,7 +6420,7 @@
           'manufacturer_category': <Category.OTHER: 'Other'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '7db87911-7dce-1cf2-7119-b953432a2f09',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -6452,8 +6452,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -6466,7 +6466,7 @@
           'manufacturer_category': <Category.CONTACT_SENSOR: 'ContactSensor'>,
           'user_category': <Category.GARAGE_DOOR: 'GarageDoor'>,
         }),
-      ]),
+      }),
       'device_id': 'f4e0517a-d94f-4bd6-a464-222c8c413a66',
       'device_manufacturer_code': 'Visonic',
       'device_network_type': None,
@@ -6483,8 +6483,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.REFRESH: 'refresh'>,
@@ -6494,7 +6494,7 @@
           'manufacturer_category': <Category.CONTACT_SENSOR: 'ContactSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '37c0cdda-9158-41ad-9635-4ca32df9fe5b',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -6511,8 +6511,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -6524,7 +6524,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'cfcd9a21-a943-4519-9972-3c7890cd25b1',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -6541,8 +6541,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -6554,7 +6554,7 @@
           'manufacturer_category': <Category.SMART_PLUG: 'SmartPlug'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '1a987293-0962-4447-99d4-aa82655ffb55',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -6571,8 +6571,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -6587,7 +6587,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '6b5535c7-c039-42ee-9970-8af86c6b0775',
       'device_manufacturer_code': 'IKEA of Sweden',
       'device_network_type': None,
@@ -6604,8 +6604,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -6616,7 +6616,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '6a2e5058-36f3-4668-aa43-49a66f8df93d',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -6633,8 +6633,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -6644,7 +6644,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '4339f999-1ad2-46fb-9103-cb628b30a022',
       'device_manufacturer_code': '0063-4952-3137',
       'device_network_type': None,
@@ -6661,8 +6661,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>,
@@ -6673,7 +6673,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '277e0a96-c8ec-41aa-b4cf-0bac57dc1cee',
       'device_manufacturer_code': 'LEDVANCE',
       'device_network_type': None,
@@ -6690,8 +6690,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.POWER_METER: 'powerMeter'>,
             <Capability.ENERGY_METER: 'energyMeter'>,
@@ -6702,7 +6702,7 @@
           'manufacturer_category': <Category.CURB_POWER_METER: 'CurbPowerMeter'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '68e786a6-7f61-4c3a-9e13-70b803cf782b',
       'device_manufacturer_code': '0086-0002-0009',
       'device_network_type': None,
@@ -6719,8 +6719,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -6737,7 +6737,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'e879673b-892c-4a0d-8c54-2dcc38d96ca0',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -6759,8 +6759,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.BUTTON: 'button'>,
@@ -6771,7 +6771,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '1691801c-ae59-438b-89dc-f2c761fe937d',
       'device_manufacturer_code': '0063-4952-3038',
       'device_network_type': None,
@@ -6788,8 +6788,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -6806,7 +6806,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '3c8d8a9d-649d-4edc-9a0b-4e45d0b491d1',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -6828,8 +6828,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -6841,7 +6841,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'c5209cd2-fcb5-46be-b685-5b05f22dcb2c',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -6858,8 +6858,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -6872,7 +6872,7 @@
           'manufacturer_category': <Category.CONTACT_SENSOR: 'ContactSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'bafc5147-2e48-498b-97ff-34c93fae7814',
       'device_manufacturer_code': 'Visonic',
       'device_network_type': None,
@@ -6889,8 +6889,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -6907,7 +6907,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '4be24db2-3125-4112-a8dc-3eb1926c220a',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -6929,8 +6929,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.PRESENCE_SENSOR: 'presenceSensor'>,
           ]),
@@ -6939,7 +6939,7 @@
           'manufacturer_category': <Category.MOBILE_PRESENCE: 'MobilePresence'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '184c67cc-69e2-44b6-8f73-55c963068ad9',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -6956,8 +6956,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -6988,7 +6988,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '4588d2d9-a8cf-40f4-9a0b-ed5dfbaccda1',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -7020,8 +7020,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.LEGENDABSOLUTE60149_LOCAL_DATE: 'legendabsolute60149.localDate'>,
             <Capability.LEGENDABSOLUTE60149_LOCAL_WEEK_DAY: 'legendabsolute60149.localWeekDay'>,
@@ -7054,7 +7054,7 @@
           'manufacturer_category': <Category.ELEVATOR: 'Elevator'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '9a9cb299-5279-4dea-9249-b5c153d22ba1',
       'device_manufacturer_code': 'MColmenarejo',
       'device_network_type': None,
@@ -7071,8 +7071,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7083,7 +7083,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '4fddedf0-2662-476e-b1fd-aceaec17ad3a',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -7100,8 +7100,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7114,7 +7114,7 @@
           'manufacturer_category': <Category.SMART_PLUG: 'SmartPlug'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'd0268a69-abfb-4c92-a646-61cec2e510ad',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -7131,8 +7131,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -7145,7 +7145,7 @@
           'manufacturer_category': <Category.CONTACT_SENSOR: 'ContactSensor'>,
           'user_category': <Category.GARAGE_DOOR: 'GarageDoor'>,
         }),
-      ]),
+      }),
       'device_id': '7111243f-39d6-4ed0-a277-f040e40a806d',
       'device_manufacturer_code': 'Visonic',
       'device_network_type': None,
@@ -7162,8 +7162,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.REFRESH: 'refresh'>,
@@ -7173,7 +7173,7 @@
           'manufacturer_category': <Category.CONTACT_SENSOR: 'ContactSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'ea2aa187-40fd-4140-9742-453e691c4469',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -7190,8 +7190,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -7202,7 +7202,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'aae6a270-7545-470d-940f-568f955129a7',
       'device_manufacturer_code': 'TP-LINK',
       'device_network_type': None,
@@ -7224,8 +7224,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7236,7 +7236,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '2533fdd0-e064-4fa2-b77b-1e17260b58d7',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -7253,8 +7253,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.FIRMWARE_UPDATE: 'firmwareUpdate'>,
@@ -7265,7 +7265,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '550a1c72-65a0-4d55-b97b-75168e055398',
       'device_manufacturer_code': 'LEDVANCE',
       'device_network_type': None,
@@ -7282,8 +7282,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.ALARM: 'alarm'>,
             <Capability.REFRESH: 'refresh'>,
@@ -7294,7 +7294,7 @@
           'manufacturer_category': <Category.SIREN: 'Siren'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'dba5a745-b23d-4bc2-a77d-22d65a5df704',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -7316,8 +7316,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7329,7 +7329,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '3f82e13c-bd39-4043-bb54-7432a4e47113',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -7346,8 +7346,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7358,7 +7358,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '08ee0358-9f40-4afa-b5a0-3a6aba18c267',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -7375,8 +7375,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -7391,7 +7391,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
         }),
-      ]),
+      }),
       'device_id': '9dd17f8f-cf5e-4647-a11c-d8f24cdf9b2a',
       'device_manufacturer_code': 'SmartThings',
       'device_network_type': None,
@@ -7408,8 +7408,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.LOCK: 'lock'>,
             <Capability.LOCK_CODES: 'lockCodes'>,
@@ -7421,7 +7421,7 @@
           'manufacturer_category': <Category.SMART_LOCK: 'SmartLock'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'b3a84295-ac3c-4fb1-95e4-4a4bbb1b0bce',
       'device_manufacturer_code': '0129-8107-09D5',
       'device_network_type': None,
@@ -7438,8 +7438,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -7454,7 +7454,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.DOOR: 'Door'>,
         }),
-      ]),
+      }),
       'device_id': '92138ee5-d3bf-4348-98e8-445dedc319cb',
       'device_manufacturer_code': 'SmartThings',
       'device_network_type': None,
@@ -7471,8 +7471,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7485,7 +7485,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': 'a664fe3f-cd7b-4794-bcdd-1310ecab5483',
       'device_manufacturer_code': 'TP-LINK',
       'device_network_type': None,
@@ -7507,8 +7507,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7521,7 +7521,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.SMART_PLUG: 'SmartPlug'>,
         }),
-      ]),
+      }),
       'device_id': '7b9d924a-de0c-44f9-ac5c-f15869c59411',
       'device_manufacturer_code': 'sengled',
       'device_network_type': None,
@@ -7538,8 +7538,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -7551,7 +7551,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '6f4d2e72-7af4-4c96-97ab-d6b6a0d6bc4b',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -7568,8 +7568,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7592,7 +7592,7 @@
           'manufacturer_category': <Category.SMART_PLUG: 'SmartPlug'>,
           'user_category': <Category.SMART_PLUG: 'SmartPlug'>,
         }),
-      ]),
+      }),
       'device_id': '6c1b7cfa-7429-4f35-9d02-ab1dfd2f1297',
       'device_manufacturer_code': 'TCPi',
       'device_network_type': None,
@@ -7609,8 +7609,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -7622,7 +7622,7 @@
           'manufacturer_category': <Category.SMART_PLUG: 'SmartPlug'>,
           'user_category': <Category.SMART_PLUG: 'SmartPlug'>,
         }),
-      ]),
+      }),
       'device_id': 'c5699ff6-af09-4922-901d-bb81b8345bc3',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -7639,8 +7639,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7653,7 +7653,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': 'd48848b9-25b0-4423-8fcf-96a022ac571e',
       'device_manufacturer_code': 'TCPi',
       'device_network_type': None,
@@ -7670,8 +7670,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7682,7 +7682,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '7bedac4c-5681-4897-a2ef-e9153cb19ba0',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -7699,8 +7699,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7713,7 +7713,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '91172212-e9ff-4ca6-9626-e7af0361c9ad',
       'device_manufacturer_code': 'TCPi',
       'device_network_type': None,
@@ -7730,8 +7730,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.REFRESH: 'refresh'>,
             <Capability.BUTTON: 'button'>,
@@ -7748,7 +7748,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '18c47ea4-f08a-4a70-9e95-23fd23182cc2',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -7770,8 +7770,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7782,7 +7782,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'a9d42ef0-f972-44b0-86bc-efd6569a1aef',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -7799,8 +7799,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.POWER_METER: 'powerMeter'>,
@@ -7812,7 +7812,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '829da938-6e92-4a93-8923-7c67f9663c03',
       'device_manufacturer_code': 'CentraLite',
       'device_network_type': None,
@@ -7829,8 +7829,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7841,7 +7841,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'f3c18803-cbec-48e3-8f15-3c31f302d68b',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -7858,8 +7858,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -7874,7 +7874,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': <Category.LIGHT: 'Light'>,
         }),
-      ]),
+      }),
       'device_id': '0781c9d0-92cb-4c7b-bb5b-2f2dbe0c41f3',
       'device_manufacturer_code': 'IKEA of Sweden',
       'device_network_type': None,
@@ -7891,8 +7891,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.PRESENCE_SENSOR: 'presenceSensor'>,
           ]),
@@ -7901,7 +7901,7 @@
           'manufacturer_category': <Category.MOBILE_PRESENCE: 'MobilePresence'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '16fc526e-dd7d-49a1-bac6-220f664f92ca',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -7918,8 +7918,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.BRIDGE: 'bridge'>,
           ]),
@@ -7928,7 +7928,7 @@
           'manufacturer_category': <Category.HUB: 'Hub'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '074fa784-8be8-4c70-8e22-6f5ed6f81b7e',
       'device_manufacturer_code': None,
       'device_network_type': None,
@@ -7949,8 +7949,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -7965,7 +7965,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
         }),
-      ]),
+      }),
       'device_id': '374ba6fa-5a08-4ea2-969c-1fa43d86e21f',
       'device_manufacturer_code': 'SmartThings',
       'device_network_type': None,
@@ -7982,8 +7982,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -8000,7 +8000,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '165c0b42-64b9-4679-9dfb-0c5eff729fb2',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -8022,8 +8022,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -8034,7 +8034,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'f45bd97b-6edd-41e5-b65d-9dea2eeaff0b',
       'device_manufacturer_code': 'TP-LINK',
       'device_network_type': None,
@@ -8056,8 +8056,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -8072,7 +8072,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.DOOR: 'Door'>,
         }),
-      ]),
+      }),
       'device_id': 'a1e6525c-1e24-403c-b18c-eecb65e22ccf',
       'device_manufacturer_code': 'SmartThings',
       'device_network_type': None,
@@ -8089,8 +8089,26 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'button1': dict({
+          'capabilities': list([
+            <Capability.BUTTON: 'button'>,
+          ]),
+          'id': 'button1',
+          'label': 'button1',
+          'manufacturer_category': <Category.REMOTE_CONTROLLER: 'RemoteController'>,
+          'user_category': None,
+        }),
+        'button2': dict({
+          'capabilities': list([
+            <Capability.BUTTON: 'button'>,
+          ]),
+          'id': 'button2',
+          'label': 'button2',
+          'manufacturer_category': <Category.REMOTE_CONTROLLER: 'RemoteController'>,
+          'user_category': None,
+        }),
+        'main': dict({
           'capabilities': list([
             <Capability.BUTTON: 'button'>,
             <Capability.BATTERY: 'battery'>,
@@ -8102,25 +8120,7 @@
           'manufacturer_category': <Category.REMOTE_CONTROLLER: 'RemoteController'>,
           'user_category': None,
         }),
-        dict({
-          'capabilities': list([
-            <Capability.BUTTON: 'button'>,
-          ]),
-          'id': 'button1',
-          'label': 'button1',
-          'manufacturer_category': <Category.REMOTE_CONTROLLER: 'RemoteController'>,
-          'user_category': None,
-        }),
-        dict({
-          'capabilities': list([
-            <Capability.BUTTON: 'button'>,
-          ]),
-          'id': 'button2',
-          'label': 'button2',
-          'manufacturer_category': <Category.REMOTE_CONTROLLER: 'RemoteController'>,
-          'user_category': None,
-        }),
-      ]),
+      }),
       'device_id': '115236ea-59e5-4cd4-bade-d67c409967bc',
       'device_manufacturer_code': 'IKEA of Sweden',
       'device_network_type': None,
@@ -8137,8 +8137,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: 'legendabsolute60149.createDevice2'>,
             <Capability.REFRESH: 'refresh'>,
@@ -8148,7 +8148,7 @@
           'manufacturer_category': <Category.SMART_PLUG: 'SmartPlug'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'd20891e5-59b4-46ce-9184-b7fdf0c7ae4c',
       'device_manufacturer_code': 'MColmenarejo',
       'device_network_type': None,
@@ -8165,8 +8165,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -8179,7 +8179,7 @@
           'manufacturer_category': <Category.LIGHT: 'Light'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'f3e184b2-631a-47b2-b583-32ac2fec9e3c',
       'device_manufacturer_code': 'sengled',
       'device_network_type': None,
@@ -8196,8 +8196,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -8208,7 +8208,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'f27d0b27-24fd-4d8c-b003-d3d7aaba1e70',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -8225,8 +8225,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -8237,7 +8237,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': 'aaedaf28-2ae0-4c1d-b57e-87f6a420c298',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -8254,8 +8254,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -8271,7 +8271,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '976fc7c3-1f59-444d-bf4b-c215cafc09c2',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -8293,8 +8293,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -8310,7 +8310,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '6743dbb9-3825-48d8-8db7-db4602db7dba',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -8332,8 +8332,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -8356,7 +8356,7 @@
           'manufacturer_category': <Category.SMART_PLUG: 'SmartPlug'>,
           'user_category': <Category.SMART_PLUG: 'SmartPlug'>,
         }),
-      ]),
+      }),
       'device_id': '6e3e44b3-d84a-4efc-a97b-b5e0dae28ddc',
       'device_manufacturer_code': 'TCPi',
       'device_network_type': None,
@@ -8373,8 +8373,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.CONTACT_SENSOR: 'contactSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -8389,7 +8389,7 @@
           'manufacturer_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
           'user_category': <Category.MULTI_FUNCTIONAL_SENSOR: 'MultiFunctionalSensor'>,
         }),
-      ]),
+      }),
       'device_id': '6356b240-c7d8-403c-883e-ae438d432abe',
       'device_manufacturer_code': 'SmartThings',
       'device_network_type': None,
@@ -8406,8 +8406,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.REFRESH: 'refresh'>,
@@ -8424,7 +8424,7 @@
           'manufacturer_category': <Category.CAMERA: 'Camera'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '10e06a70-ee7d-4832-85e9-a0a06a7a05bd',
       'device_manufacturer_code': 'Arlo',
       'device_network_type': None,
@@ -8446,8 +8446,8 @@
       }),
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -8459,7 +8459,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '84f1eaf0-592e-459a-a2b3-4fc43e004dae',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -8476,8 +8476,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -8489,7 +8489,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '971b05df-6ed3-446e-b54f-5092eac01921',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -8506,8 +8506,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.MOTION_SENSOR: 'motionSensor'>,
             <Capability.TEMPERATURE_MEASUREMENT: 'temperatureMeasurement'>,
@@ -8521,7 +8521,7 @@
           'manufacturer_category': <Category.MOTION_SENSOR: 'MotionSensor'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '630cf009-eb3b-409e-a77a-9b298540532f',
       'device_manufacturer_code': 'Bosch',
       'device_network_type': None,
@@ -8538,8 +8538,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.SWITCH: 'switch'>,
             <Capability.SWITCH_LEVEL: 'switchLevel'>,
@@ -8550,7 +8550,7 @@
           'manufacturer_category': <Category.SWITCH: 'Switch'>,
           'user_category': <Category.SWITCH: 'Switch'>,
         }),
-      ]),
+      }),
       'device_id': '4c3469c9-3556-4f19-a2e1-1c0a598341dc',
       'device_manufacturer_code': '0063-4944-3130',
       'device_network_type': None,
@@ -8571,8 +8571,8 @@
 # name: test_fetching_devices[devices_9]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -8620,7 +8620,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '29014d68-d9a8-20da-0b6f-053112978980',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -8652,8 +8652,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -8701,7 +8701,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '1dca2ebe-b3d8-a476-77b9-bb60612c5d26',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -8733,8 +8733,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -8775,7 +8775,7 @@
           'manufacturer_category': <Category.TELEVISION: 'Television'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '8c1b8eff-e8c7-dcf8-58f8-da81669b92eb',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -8807,8 +8807,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -8856,7 +8856,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '79542474-e6dd-597d-f09a-8dd0ad380f89',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -8888,8 +8888,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -8937,7 +8937,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '9b2d0391-ffd6-1ad6-b9e1-247414819dc8',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -8969,8 +8969,8 @@
       'viper': None,
     }),
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             <Capability.OCF: 'ocf'>,
             <Capability.SWITCH: 'switch'>,
@@ -9018,7 +9018,7 @@
           'manufacturer_category': <Category.AIR_CONDITIONER: 'AirConditioner'>,
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': 'bcfb285e-5a5e-f5c6-bfe2-e6af42227df9',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -9054,8 +9054,8 @@
 # name: test_fetching_devices[devices_fake]
   list([
     dict({
-      'components': list([
-        dict({
+      'components': dict({
+        'main': dict({
           'capabilities': list([
             'fakeCapability',
           ]),
@@ -9064,7 +9064,7 @@
           'manufacturer_category': 'fakeCategory',
           'user_category': None,
         }),
-      ]),
+      }),
       'device_id': '7d3feb98-8a36-4351-c362-5e21ad3a78dd',
       'device_manufacturer_code': 'Samsung Electronics',
       'device_network_type': None,
@@ -11442,8 +11442,8 @@
 # ---
 # name: test_fetching_single_device
   dict({
-    'components': list([
-      dict({
+    'components': dict({
+      'main': dict({
         'capabilities': list([
           <Capability.COLOR_TEMPERATURE: 'colorTemperature'>,
           <Capability.SWITCH: 'switch'>,
@@ -11458,7 +11458,7 @@
         'manufacturer_category': <Category.LIGHT: 'Light'>,
         'user_category': None,
       }),
-    ]),
+    }),
     'device_id': '440063de-a200-40b5-8a6b-f3399eaa0370',
     'device_manufacturer_code': 'Signify Netherlands B.V.',
     'device_network_type': None,

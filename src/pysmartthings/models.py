@@ -299,7 +299,7 @@ class Device(DataClassORJSONMixin):
     label: str
     location_id: str = field(metadata=field_options(alias="locationId"))
     type: DeviceType
-    components: list[Component]
+    components: dict[str, Component]
     parent_device_id: str | None = field(
         metadata=field_options(alias="parentDeviceId"), default=None
     )
@@ -319,6 +319,12 @@ class Device(DataClassORJSONMixin):
     ocf: OCF | None = None
     viper: Viper | None = None
     hub: Hub | None = None
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
+        """Pre deserialize hook."""
+        d["components"] = {component["id"]: component for component in d["components"]}
+        return d
 
 
 @dataclass
