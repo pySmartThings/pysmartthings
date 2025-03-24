@@ -15,8 +15,10 @@ from .exceptions import (
 )
 from .models import (
     BaseLocation,
+    CapabilityStatus,
     Category,
     Component,
+    ComponentStatus,
     Device,
     DeviceEvent,
     DeviceNetworkType,
@@ -25,6 +27,7 @@ from .models import (
     DeviceType,
     ErrorDetails,
     ErrorResponse,
+    Lifecycle,
     Location,
     LocationResponse,
     Room,
@@ -32,6 +35,7 @@ from .models import (
     Scene,
     SceneResponse,
     Status,
+    Subscription,
 )
 from .smartthings import SmartThings
 
@@ -41,9 +45,11 @@ __all__ = [
     "Attribute",
     "BaseLocation",
     "Capability",
+    "CapabilityStatus",
     "Category",
     "Command",
     "Component",
+    "ComponentStatus",
     "Device",
     "DeviceEvent",
     "DeviceNetworkType",
@@ -52,6 +58,7 @@ __all__ = [
     "DeviceType",
     "ErrorDetails",
     "ErrorResponse",
+    "Lifecycle",
     "Location",
     "LocationResponse",
     "Room",
@@ -68,4 +75,5 @@ __all__ = [
     "SmartThingsRateLimitError",
     "SmartThingsSinkError",
     "Status",
+    "Subscription",
 ]

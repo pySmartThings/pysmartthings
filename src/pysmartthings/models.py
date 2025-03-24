@@ -10,7 +10,7 @@ from typing import Any
 from mashumaro import field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
 
-from .attribute import Attribute  # noqa: TC001
+from .attribute import Attribute
 from .capability import Capability
 from .const import LOGGER
 
@@ -346,7 +346,7 @@ class Status(DataClassORJSONMixin):
 class DeviceStatus(DataClassORJSONMixin):
     """Device status model."""
 
-    components: dict[str, dict[Capability | str, dict[Attribute | str, Status]]]
+    components: dict[str, ComponentStatus]
 
     @classmethod
     def __post_deserialize__(cls, obj: DeviceStatus) -> DeviceStatus:
@@ -492,3 +492,7 @@ class EventType(StrEnum):
     CONTROL_EVENT = "CONTROL_EVENT"
     DEVICE_EVENT = "DEVICE_EVENT"
     DEVICE_LIFECYCLE_EVENT = "DEVICE_LIFECYCLE_EVENT"
+
+
+type CapabilityStatus = dict[Attribute | str, Status]
+type ComponentStatus = dict[Capability | str, CapabilityStatus]
