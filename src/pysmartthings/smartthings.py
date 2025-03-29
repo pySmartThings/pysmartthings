@@ -6,7 +6,7 @@ import asyncio
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, Callable, Self, cast
 
-from aiohttp import ClientConnectionError, ClientSession, ClientTimeout
+from aiohttp import ClientConnectionError, ClientError, ClientSession, ClientTimeout
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from aiohttp_sse_client2.client import EventSource
 import orjson
@@ -500,7 +500,7 @@ class SmartThings:
                     if self.max_connections_reached_callback:
                         self.max_connections_reached_callback()
                         break
-                except (ClientConnectionError, ConnectionError):
+                except (ClientError, ConnectionError):
                     msg = "Connection error occurred while subscribing to events"
                     LOGGER.exception(msg)
                     await asyncio.sleep(2**self.__retry_count)
