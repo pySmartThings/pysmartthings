@@ -89,6 +89,7 @@ class Attribute(StrEnum):
     CARBON_DIOXIDE_HEALTH_CONCERN = "carbonDioxideHealthConcern"
     CARBON_MONOXIDE = "carbonMonoxide"
     CARBON_MONOXIDE_LEVEL = "carbonMonoxideLevel"
+    CAST_CONTROL = "castControl"
     CATEGORY = "category"
     CHANNEL = "channel"
     CHARGING_STATUS = "chargingStatus"
@@ -138,6 +139,8 @@ class Attribute(StrEnum):
     CREATE_QTY = "createQty"
     CURRENT = "current"
     CURRENT_APP = "currentApp"
+    CURRENT_LOOP = "currentLoop"
+    CURRENT_STATUS = "currentStatus"
     CURRENT_TIME_PERIOD = "currentTimePeriod"
     CURRENT_TRACK = "currentTrack"
     CURRENT_TWILIGHT = "currentTwilight"
@@ -211,6 +214,7 @@ class Attribute(StrEnum):
     DRYING_TEMPERATURE = "dryingTemperature"
     DRYING_TIME = "dryingTime"
     DUMP_TYPE = "dumpType"
+    DURATION = "duration"
     DUST_FILTER_CAPACITY = "dustFilterCapacity"
     DUST_FILTER_LAST_RESET_DATE = "dustFilterLastResetDate"
     DUST_FILTER_RESET_TYPE = "dustFilterResetType"
@@ -243,6 +247,7 @@ class Attribute(StrEnum):
     ENERGY_TYPE = "energyType"
     ENERGY_USAGE_MAX = "energyUsageMax"
     ENERGY_USAGE_STATE = "energyUsageState"
+    ENROLLMENT_STATUS = "enrollmentStatus"
     EP_EVENT = "epEvent"
     EP_INFO = "epInfo"
     EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT = "equivalentCarbonDioxideMeasurement"
@@ -250,6 +255,7 @@ class Attribute(StrEnum):
     ERROR_CODE = "errorCode"
     ERRORS = "errors"
     ERRORSTATUS = "errorstatus"
+    ESTIMATED_TIME_REMAINING = "estimatedTimeRemaining"
     EUI = "eui"
     EVEN_ODD_DAY = "evenOddDay"
     EVENT = "event"
@@ -334,6 +340,7 @@ class Attribute(StrEnum):
     ILLUMINANCE = "illuminance"
     ILLUMVALUE = "illumvalue"
     IMAGE = "image"
+    IMAGE_TRANSFER_PROGRESS = "imageTransferProgress"
     IME_ADV_SUPPORTED = "imeAdvSupported"
     INDOOR = "indoor"
     INFO = "info"
@@ -400,6 +407,7 @@ class Attribute(StrEnum):
     LOG_STATE = "logState"
     LOG_TYPE = "logType"
     LONGITUDE = "longitude"
+    LOOPS_NUMBER = "loopsNumber"
     LQI = "lqi"
     MACHINE_STATE = "machineState"
     MANUAL_LEVEL = "manualLevel"
@@ -430,6 +438,8 @@ class Attribute(StrEnum):
     MINIMUM_SETPOINT = "minimumSetpoint"
     MINTEMP = "mintemp"
     MIRROR_GROUP_FUNCTION = "mirrorGroupFunction"
+    MIRROR_IN = "mirrorIn"
+    MIRROR_OUT = "mirrorOut"
     MN_ID = "mnId"
     MANUFACTURE_DATE = "mndt"
     OCF_FIRMWARE_VERSION = "mnfv"
@@ -451,6 +461,7 @@ class Attribute(StrEnum):
     MOTION = "motion"
     MOTOR_FILTER_RESET_TYPE = "motorFilterResetType"
     MOTOR_FILTER_STATUS = "motorFilterStatus"
+    MOVIE_MODE = "movieMode"
     MUTE = "mute"
     DEVICE_NAME = "n"
     NAME = "name"
@@ -509,6 +520,7 @@ class Attribute(StrEnum):
     PERIODIC_SENSING_STATUS = "periodicSensingStatus"
     PEST_CONTROL = "pestControl"
     PLATFORM_ID = "pi"
+    PICTURE = "picture"
     PICTURE_MODE = "pictureMode"
     PLAN = "plan"
     PLAYBACK_REPEAT_MODE = "playbackRepeatMode"
@@ -518,6 +530,7 @@ class Attribute(StrEnum):
     PMODE = "pmode"
     POWER = "power"
     POWER_CONSUMPTION = "powerConsumption"
+    POWER_CONSUMPTIONS = "powerConsumptions"
     POWER_LEVEL = "powerLevel"
     POWER_SOURCE = "powerSource"
     POWER_STATE = "powerState"
@@ -538,6 +551,8 @@ class Attribute(StrEnum):
     PUSHED = "pushed"
     QUANTITY = "quantity"
     RADON_LEVEL = "radonLevel"
+    RANDOM_MAXIMUM_TIMER = "randomMaximumTimer"
+    RANDOM_MINIMUM_TIMER = "randomMinimumTimer"
     RANDOM_NEXT = "randomNext"
     RANDOM_ON_OFF = "randomOnOff"
     RAPID_COOLING = "rapidCooling"
@@ -777,6 +792,7 @@ class Attribute(StrEnum):
     SUPPORTED_WIND_MODES = "supportedWindModes"
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
     SUPPORTS_POWER_ON_BY_OCF = "supportsPowerOnByOcf"
+    SUPPORTS_PROGRESS_REPORTS = "supportsProgressReports"
     SURFACE_RESIDUAL_HEAT = "surfaceResidualHeat"
     SWITCH = "switch"
     SWITCH_ALL_ON_OFF = "switchAllOnOff"
@@ -806,6 +822,9 @@ class Attribute(StrEnum):
     TIME_OFFSET = "timeOffset"
     TIMED_CLEAN_DURATION = "timedCleanDuration"
     TIMED_CLEAN_DURATION_RANGE = "timedCleanDurationRange"
+    TIMER_NEXT_CHANGE = "timerNextChange"
+    TIMER_SECONDS = "timerSeconds"
+    TIMER_TYPE = "timerType"
     TIMEZONE = "timezone"
     TITLE = "title"
     TOPICLIST = "topiclist"
@@ -818,12 +837,14 @@ class Attribute(StrEnum):
     TURN_INFO = "turnInfo"
     TV_CHANNEL = "tvChannel"
     TV_CHANNEL_NAME = "tvChannelName"
+    TVCHANNEL = "tvchannel"
     TVOC_LEVEL = "tvocLevel"
     TXIC_DEVICE_FW_VER = "txicDeviceFwVer"
     TYPE = "type"
     ULTRAVIOLET_INDEX = "ultravioletIndex"
     UNAVAILABLE_COMMANDS = "unavailableCommands"
     UPDATE_AVAILABLE = "updateAvailable"
+    UPDATE_REQUIRED = "updateRequired"
     UPDATED_TIME = "updatedTime"
     UPLINK_SPEED = "uplinkSpeed"
     URI = "uri"
@@ -995,12 +1016,16 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.FIRMWARE_UPDATE: [
         Attribute.AVAILABLE_VERSION,
         Attribute.CURRENT_VERSION,
+        Attribute.ESTIMATED_TIME_REMAINING,
+        Attribute.IMAGE_TRANSFER_PROGRESS,
         Attribute.LAST_UPDATE_STATUS,
         Attribute.LAST_UPDATE_STATUS_REASON,
         Attribute.LAST_UPDATE_TIME,
         Attribute.STATE,
         Attribute.SUPPORTED_COMMANDS,
+        Attribute.SUPPORTS_PROGRESS_REPORTS,
         Attribute.UPDATE_AVAILABLE,
+        Attribute.UPDATE_REQUIRED,
     ],
     Capability.FORMALDEHYDE_HEALTH_CONCERN: [Attribute.FORMALDEHYDE_HEALTH_CONCERN],
     Capability.FORMALDEHYDE_MEASUREMENT: [Attribute.FORMALDEHYDE_LEVEL],
@@ -1208,6 +1233,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SWITCH: [Attribute.SWITCH],
     Capability.SWITCH_LEVEL: [Attribute.LEVEL, Attribute.LEVEL_RANGE],
+    Capability.T_V: [
+        Attribute.CHANNEL,
+        Attribute.MOVIE_MODE,
+        Attribute.PICTURE,
+        Attribute.POWER,
+        Attribute.SOUND,
+        Attribute.VOLUME,
+    ],
     Capability.TAMPER_ALERT: [Attribute.TAMPER],
     Capability.TEMPERATURE_ALARM: [Attribute.TEMPERATURE_ALARM],
     Capability.TEMPERATURE_LEVEL: [
@@ -2247,6 +2280,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.COLOR_TEMP_STEPS
     ],
     Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: [Attribute.CREATE_DEVICE],
+    Capability.LEGENDABSOLUTE60149_CURRENT_LOOP: [Attribute.CURRENT_LOOP],
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [Attribute.CURRENT_TIME_PERIOD],
     Capability.LEGENDABSOLUTE60149_CURRENT_TWILIGHT: [Attribute.CURRENT_TWILIGHT],
     Capability.LEGENDABSOLUTE60149_DAY_LENGTH: [Attribute.DAY_LENGTH],
@@ -2274,15 +2308,25 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_TWO: [Attribute.LOCAL_MONTH_TWO],
     Capability.LEGENDABSOLUTE60149_LOCAL_WEEK_DAY: [Attribute.LOCAL_WEEK_DAY],
     Capability.LEGENDABSOLUTE60149_LOCAL_YEAR: [Attribute.LOCAL_YEAR],
+    Capability.LEGENDABSOLUTE60149_LOOPS_NUMBER: [Attribute.LOOPS_NUMBER],
     Capability.LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION: [
         Attribute.MIRROR_GROUP_FUNCTION
     ],
+    Capability.LEGENDABSOLUTE60149_MIRROR_IN: [Attribute.MIRROR_IN],
+    Capability.LEGENDABSOLUTE60149_MIRROR_OUT: [Attribute.MIRROR_OUT],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Attribute.PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Attribute.PROG_ON],
+    Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
+        Attribute.RANDOM_MAXIMUM_TIMER
+    ],
+    Capability.LEGENDABSOLUTE60149_RANDOM_MINIMUM_TIMER: [
+        Attribute.RANDOM_MINIMUM_TIMER
+    ],
     Capability.LEGENDABSOLUTE60149_RANDOM_NEXT_STEP: [Attribute.RANDOM_NEXT],
     Capability.LEGENDABSOLUTE60149_RANDOM_NEXT_STEP2: [Attribute.RANDOM_NEXT],
     Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF1: [Attribute.RANDOM_ON_OFF],
     Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF2: [Attribute.RANDOM_ON_OFF],
+    Capability.LEGENDABSOLUTE60149_RESETBUTTON: [],
     Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: [Attribute.SIGNAL_METRICS],
     Capability.LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE: [Attribute.SUN_AZIMUTH_ANGLE],
     Capability.LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE: [Attribute.SUN_ELEVATION_ANGLE],
@@ -2293,12 +2337,17 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_SWITCH_ALL_ON_OFF1: [Attribute.SWITCH_ALL_ON_OFF],
     Capability.LEGENDABSOLUTE60149_TEMP_CONDITION2: [Attribute.TEMP_CONDITION],
     Capability.LEGENDABSOLUTE60149_TEMP_TARGET: [Attribute.TEMP_TARGET],
+    Capability.LEGENDABSOLUTE60149_TIMER_NEXT_CHANGE: [Attribute.TIMER_NEXT_CHANGE],
+    Capability.LEGENDABSOLUTE60149_TIMER_SECONDS: [Attribute.TIMER_SECONDS],
+    Capability.LEGENDABSOLUTE60149_TIMER_TYPE: [Attribute.TIMER_TYPE],
     Capability.MUSICAHEAD43206_POWERMODE: [Attribute.PMODE],
     Capability.MUSICAHEAD43206_SNOOZE: [Attribute.SNOOZE],
     Capability.MUSICAHEAD43206_STAGE: [Attribute.STAGE],
+    Capability.PARTYVOICE23922_ADD2: [],
     Capability.PARTYVOICE23922_AMPERAGE: [Attribute.AMPERAGE],
     Capability.PARTYVOICE23922_APIWEBREQUEST: [],
     Capability.PARTYVOICE23922_BAROMETER2: [Attribute.PRESSURE],
+    Capability.PARTYVOICE23922_CASTMEDIACONTROL: [Attribute.CAST_CONTROL],
     Capability.PARTYVOICE23922_CLOSEDURATION: [Attribute.CLOSEDURATION],
     Capability.PARTYVOICE23922_CLOUDCOVER: [Attribute.CLOUDCOVER],
     Capability.PARTYVOICE23922_COUNT: [Attribute.COUNT],
@@ -2307,6 +2356,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Attribute.DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEMQTTDEV9: [Attribute.DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEQTY: [Attribute.CREATE_QTY],
+    Capability.PARTYVOICE23922_DURATION2: [Attribute.DURATION],
     Capability.PARTYVOICE23922_ERRORSENSOR: [Attribute.ERRORSTATUS],
     Capability.PARTYVOICE23922_ERRORSTATUS: [Attribute.ERRORSTATUS],
     Capability.PARTYVOICE23922_ERRORSTATUSCV: [Attribute.ERRORSTATUS],
@@ -2331,18 +2381,23 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_PRECIPRATE: [Attribute.PRECIP],
     Capability.PARTYVOICE23922_REACTIVEPOWER: [Attribute.REACTIVE],
     Capability.PARTYVOICE23922_REFRESH: [],
+    Capability.PARTYVOICE23922_RESETALT: [],
     Capability.PARTYVOICE23922_RESETSELECT: [Attribute.CMD_SELECT],
     Capability.PARTYVOICE23922_ROKUCURRENTAPP: [Attribute.CURRENT_APP],
     Capability.PARTYVOICE23922_ROKUMEDIASTATUS: [Attribute.MEDIA_STATUS],
     Capability.PARTYVOICE23922_SETILLUMINANCE: [Attribute.ILLUMVALUE],
+    Capability.PARTYVOICE23922_SHADEPAUSE: [],
     Capability.PARTYVOICE23922_SHELLYDEVS4: [Attribute.DEVICE_TYPE],
     Capability.PARTYVOICE23922_STATEFIELD2: [Attribute.TEXT],
     Capability.PARTYVOICE23922_STATUS: [Attribute.STATUS],
+    Capability.PARTYVOICE23922_SUBTRACT2: [],
     Capability.PARTYVOICE23922_SUMMARY: [Attribute.SUMMARY],
     Capability.PARTYVOICE23922_TEMPMAX: [Attribute.MAXTEMP],
     Capability.PARTYVOICE23922_TEMPMIN: [Attribute.MINTEMP],
     Capability.PARTYVOICE23922_TOPICLIST: [Attribute.TOPICLIST],
+    Capability.PARTYVOICE23922_TVCHANNEL: [Attribute.TVCHANNEL],
     Capability.PARTYVOICE23922_VHUMIDITYSET: [Attribute.VHUMIDITY],
+    Capability.PARTYVOICE23922_VOLUMEDOWN: [],
     Capability.PARTYVOICE23922_VOLUMEUP: [],
     Capability.PARTYVOICE23922_VTEMPSET: [Attribute.VTEMP],
     Capability.PARTYVOICE23922_WEBREQUEST: [],
@@ -2381,6 +2436,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STORM_WATCH_ACTIVE,
         Attribute.STORM_WATCH_ENABLED,
         Attribute.STORM_WATCH_SUPPORT,
+    ],
+    Capability.RIVERTALENT14263_BATCH_POWER_CONSUMPTION_REPORT: [
+        Attribute.POWER_CONSUMPTIONS
     ],
     Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
         Attribute.DATE_STARTED,
@@ -2423,6 +2481,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.PROTOCOL_TYPE,
         Attribute.SUPPORTED_AUTH_TYPE,
         Attribute.SUPPORTED_WI_FI_FREQ,
+    ],
+    Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [
+        Attribute.CURRENT_STATUS,
+        Attribute.ENROLLMENT_STATUS,
     ],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],

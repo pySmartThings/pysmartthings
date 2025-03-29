@@ -207,12 +207,14 @@ class Command(StrEnum):
     SET_CONTEXT = "setContext"
     SET_CONTEXT_SNAPSHOT = "setContextSnapshot"
     SET_CONTEXTS = "setContexts"
+    SET_CONTROL = "setControl"
     SET_COOK_RECIPE = "setCookRecipe"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_COORDINATES = "setCoordinates"
     SET_COURSE = "setCourse"
     SET_CREATE_DEVICE = "setCreateDevice"
     SET_CREATE_QTY = "setCreateQty"
+    SET_CURRENT_LOOP = "setCurrentLoop"
     SET_CURRENT_TIME_PERIOD = "setCurrentTimePeriod"
     SET_CURRENT_TWILIGHT = "setCurrentTwilight"
     SET_CUSTOM_COURSE = "setCustomCourse"
@@ -310,11 +312,14 @@ class Command(StrEnum):
     SET_LOCAL_WEEK_DAY = "setLocalWeekDay"
     SET_LOCAL_YEAR = "setLocalYear"
     SET_LOCK = "setLock"
+    SET_LOOPS_NUMBER = "setLoopsNumber"
     SET_MACHINE_STATE = "setMachineState"
     SET_MASTER_DI = "setMasterDi"
     SET_MASTER_NAME = "setMasterName"
     SET_METERING_DATE = "setMeteringDate"
     SET_MIRROR_GROUP_FUNCTION = "setMirrorGroupFunction"
+    SET_MIRROR_IN = "setMirrorIn"
+    SET_MIRROR_OUT = "setMirrorOut"
     SET_MODE = "setMode"
     SET_MONITOR = "setMonitor"
     SET_MUTE = "setMute"
@@ -350,6 +355,8 @@ class Command(StrEnum):
     SET_POWER_STATE = "setPowerState"
     SET_PROG_OFF = "setProgOff"
     SET_PROG_ON = "setProgOn"
+    SET_RANDOM_MAXIMUM_TIMER = "setRandomMaximumTimer"
+    SET_RANDOM_MINIMUM_TIMER = "setRandomMinimumTimer"
     SET_RANDOM_NEXT = "setRandomNext"
     SET_RANDOM_ON_OFF = "setRandomOnOff"
     SET_RAPID_COOLING = "setRapidCooling"
@@ -415,6 +422,9 @@ class Command(StrEnum):
     SET_THING_TYPE = "setThingType"
     SET_TIME_OFFSET = "setTimeOffset"
     SET_TIMED_CLEAN_DURATION = "setTimedCleanDuration"
+    SET_TIMER_NEXT_CHANGE = "setTimerNextChange"
+    SET_TIMER_SECONDS = "setTimerSeconds"
+    SET_TIMER_TYPE = "setTimerType"
     SET_TRACK = "setTrack"
     SET_TV_CHANNEL = "setTvChannel"
     SET_TV_CHANNEL_NAME = "setTvChannelName"
@@ -703,6 +713,12 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.STATELESS_POWER_TOGGLE_BUTTON: [Command.SET_BUTTON],
     Capability.SWITCH: [Command.OFF, Command.ON],
     Capability.SWITCH_LEVEL: [Command.SET_LEVEL],
+    Capability.T_V: [
+        Command.CHANNEL_DOWN,
+        Command.CHANNEL_UP,
+        Command.VOLUME_DOWN,
+        Command.VOLUME_UP,
+    ],
     Capability.TAMPER_ALERT: [],
     Capability.TEMPERATURE_ALARM: [],
     Capability.TEMPERATURE_LEVEL: [Command.SET_TEMPERATURE_LEVEL],
@@ -1335,6 +1351,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_COLOR_TEMP_STEPS
     ],
     Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: [Command.SET_CREATE_DEVICE],
+    Capability.LEGENDABSOLUTE60149_CURRENT_LOOP: [Command.SET_CURRENT_LOOP],
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [
         Command.SET_CURRENT_TIME_PERIOD
     ],
@@ -1370,15 +1387,25 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_LOCAL_MONTH_TWO: [Command.SET_LOCAL_MONTH_TWO],
     Capability.LEGENDABSOLUTE60149_LOCAL_WEEK_DAY: [Command.SET_LOCAL_WEEK_DAY],
     Capability.LEGENDABSOLUTE60149_LOCAL_YEAR: [Command.SET_LOCAL_YEAR],
+    Capability.LEGENDABSOLUTE60149_LOOPS_NUMBER: [Command.SET_LOOPS_NUMBER],
     Capability.LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION: [
         Command.SET_MIRROR_GROUP_FUNCTION
     ],
+    Capability.LEGENDABSOLUTE60149_MIRROR_IN: [Command.SET_MIRROR_IN],
+    Capability.LEGENDABSOLUTE60149_MIRROR_OUT: [Command.SET_MIRROR_OUT],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Command.SET_PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Command.SET_PROG_ON],
+    Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
+        Command.SET_RANDOM_MAXIMUM_TIMER
+    ],
+    Capability.LEGENDABSOLUTE60149_RANDOM_MINIMUM_TIMER: [
+        Command.SET_RANDOM_MINIMUM_TIMER
+    ],
     Capability.LEGENDABSOLUTE60149_RANDOM_NEXT_STEP: [Command.SET_RANDOM_NEXT],
     Capability.LEGENDABSOLUTE60149_RANDOM_NEXT_STEP2: [Command.SET_RANDOM_NEXT],
     Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF1: [Command.SET_RANDOM_ON_OFF],
     Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF2: [Command.SET_RANDOM_ON_OFF],
+    Capability.LEGENDABSOLUTE60149_RESETBUTTON: [Command.PUSH],
     Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: [Command.SET_SIGNAL_METRICS],
     Capability.LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE: [Command.SET_SUN_AZIMUTH_ANGLE],
     Capability.LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE: [
@@ -1391,12 +1418,17 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_SWITCH_ALL_ON_OFF1: [Command.SET_SWITCH_ALL_ON_OFF],
     Capability.LEGENDABSOLUTE60149_TEMP_CONDITION2: [Command.SET_TEMP_CONDITION],
     Capability.LEGENDABSOLUTE60149_TEMP_TARGET: [Command.SET_TEMP_TARGET],
+    Capability.LEGENDABSOLUTE60149_TIMER_NEXT_CHANGE: [Command.SET_TIMER_NEXT_CHANGE],
+    Capability.LEGENDABSOLUTE60149_TIMER_SECONDS: [Command.SET_TIMER_SECONDS],
+    Capability.LEGENDABSOLUTE60149_TIMER_TYPE: [Command.SET_TIMER_TYPE],
     Capability.MUSICAHEAD43206_POWERMODE: [Command.OFF, Command.ON],
     Capability.MUSICAHEAD43206_SNOOZE: [Command.OFF, Command.ON],
     Capability.MUSICAHEAD43206_STAGE: [Command.SET_STAGE],
+    Capability.PARTYVOICE23922_ADD2: [Command.PUSH],
     Capability.PARTYVOICE23922_AMPERAGE: [],
     Capability.PARTYVOICE23922_APIWEBREQUEST: [Command.G_E_T, Command.P_O_S_T],
     Capability.PARTYVOICE23922_BAROMETER2: [],
+    Capability.PARTYVOICE23922_CASTMEDIACONTROL: [Command.SET_CONTROL],
     Capability.PARTYVOICE23922_CLOSEDURATION: [Command.SET_CLOSE],
     Capability.PARTYVOICE23922_CLOUDCOVER: [],
     Capability.PARTYVOICE23922_COUNT: [],
@@ -1405,6 +1437,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_CREATEHTTPDEV2B: [Command.SET_DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEMQTTDEV9: [Command.SET_DEVICE_TYPE],
     Capability.PARTYVOICE23922_CREATEQTY: [Command.SET_CREATE_QTY],
+    Capability.PARTYVOICE23922_DURATION2: [],
     Capability.PARTYVOICE23922_ERRORSENSOR: [],
     Capability.PARTYVOICE23922_ERRORSTATUS: [],
     Capability.PARTYVOICE23922_ERRORSTATUSCV: [],
@@ -1429,18 +1462,23 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_PRECIPRATE: [],
     Capability.PARTYVOICE23922_REACTIVEPOWER: [],
     Capability.PARTYVOICE23922_REFRESH: [Command.PUSH],
+    Capability.PARTYVOICE23922_RESETALT: [Command.PUSH],
     Capability.PARTYVOICE23922_RESETSELECT: [Command.SET_SELECT],
     Capability.PARTYVOICE23922_ROKUCURRENTAPP: [],
     Capability.PARTYVOICE23922_ROKUMEDIASTATUS: [],
     Capability.PARTYVOICE23922_SETILLUMINANCE: [Command.SET_ILLUM],
+    Capability.PARTYVOICE23922_SHADEPAUSE: [Command.PUSH],
     Capability.PARTYVOICE23922_SHELLYDEVS4: [Command.SET_DEVICE_TYPE],
     Capability.PARTYVOICE23922_STATEFIELD2: [],
     Capability.PARTYVOICE23922_STATUS: [],
+    Capability.PARTYVOICE23922_SUBTRACT2: [Command.PUSH],
     Capability.PARTYVOICE23922_SUMMARY: [],
     Capability.PARTYVOICE23922_TEMPMAX: [],
     Capability.PARTYVOICE23922_TEMPMIN: [],
     Capability.PARTYVOICE23922_TOPICLIST: [],
+    Capability.PARTYVOICE23922_TVCHANNEL: [],
     Capability.PARTYVOICE23922_VHUMIDITYSET: [Command.SETV_HUMIDITY],
+    Capability.PARTYVOICE23922_VOLUMEDOWN: [Command.PUSH],
     Capability.PARTYVOICE23922_VOLUMEUP: [Command.PUSH],
     Capability.PARTYVOICE23922_VTEMPSET: [Command.SETV_TEMP],
     Capability.PARTYVOICE23922_WEBREQUEST: [Command.G_E_T, Command.P_O_S_T],
@@ -1481,6 +1519,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_SENSITIVITY,
     ],
     Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [],
+    Capability.RIVERTALENT14263_BATCH_POWER_CONSUMPTION_REPORT: [],
     Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
         Command.SET_METERING_DATE,
         Command.SET_SERVICE_MESSAGE,
@@ -1489,6 +1528,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SEC_DEVICE_CONNECTION_STATE: [Command.REFRESH_CONNECTION],
     Capability.SEC_DIAGNOSTICS_INFORMATION: [],
     Capability.SEC_WIFI_CONFIGURATION: [],
+    Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Command.SET_CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Command.SET_FADE],
     Capability.TAG_E2E_ENCRYPTION: [Command.OFF, Command.ON],
