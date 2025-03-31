@@ -73,7 +73,7 @@ repos:
         exclude: ^poetry\.lock$
         entry: poetry run codespell
         args:
-          - --ignore-words-list=unx
+          - --ignore-words-list=unx,mirrorIn
       - id: detect-private-key
         name: 🕵️  Detect Private Keys
         language: system
