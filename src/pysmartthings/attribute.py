@@ -15,6 +15,7 @@ class Attribute(StrEnum):
     ACM_MODE = "acmMode"
     ACTION_SETTING = "actionSetting"
     ACTIVATED = "activated"
+    ACTIVATION_STATE = "activationState"
     ACTIVITY = "activity"
     ADD_RINSE = "addRinse"
     AIR_CONDITIONER_MODE = "airConditionerMode"
@@ -91,6 +92,7 @@ class Attribute(StrEnum):
     CARBON_MONOXIDE_LEVEL = "carbonMonoxideLevel"
     CAST_CONTROL = "castControl"
     CATEGORY = "category"
+    CELL_SIZE = "cellSize"
     CHANNEL = "channel"
     CHARGING_STATUS = "chargingStatus"
     CHECK_INTERVAL = "checkInterval"
@@ -99,6 +101,7 @@ class Attribute(StrEnum):
     CLEANED_EXTENT = "cleanedExtent"
     CLEANING_MODE = "cleaningMode"
     CLEANING_STEP = "cleaningStep"
+    CLEANING_TYPE = "cleaningType"
     CLIP = "clip"
     CLOSEDURATION = "closeduration"
     CLOUDCOVER = "cloudcover"
@@ -198,6 +201,11 @@ class Attribute(StrEnum):
     DOUBLE = "double"
     DOWNLINK_SPEED = "downlinkSpeed"
     DR_MAX_DURATION = "drMaxDuration"
+    DRAIN_FILTER_LAST_RESET_DATE = "drainFilterLastResetDate"
+    DRAIN_FILTER_RESET_TYPE = "drainFilterResetType"
+    DRAIN_FILTER_STATUS = "drainFilterStatus"
+    DRAIN_FILTER_USAGE = "drainFilterUsage"
+    DRAIN_FILTER_USAGE_STEP = "drainFilterUsageStep"
     DRAINAGE_REQUIREMENT = "drainageRequirement"
     DRCAPABLE = "drcapable"
     DRIVER_STATE = "driverState"
@@ -518,6 +526,7 @@ class Attribute(StrEnum):
     PERIODIC_SENSING = "periodicSensing"
     PERIODIC_SENSING_INTERVAL = "periodicSensingInterval"
     PERIODIC_SENSING_STATUS = "periodicSensingStatus"
+    PERSON_DETECTION = "personDetection"
     PEST_CONTROL = "pestControl"
     PLATFORM_ID = "pi"
     PICTURE = "picture"
@@ -717,6 +726,7 @@ class Attribute(StrEnum):
     SUPPORTED_BUTTON_VALUES = "supportedButtonValues"
     SUPPORTED_CATEGORIES = "supportedCategories"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
+    SUPPORTED_CLEANING_TYPES = "supportedCleaningTypes"
     SUPPORTED_COMMANDS = "supportedCommands"
     SUPPORTED_CONDITIONS = "supportedConditions"
     SUPPORTED_CONTEXTS = "supportedContexts"
@@ -787,6 +797,7 @@ class Attribute(StrEnum):
     SUPPORTED_WASHER_WATER_TEMPERATURE = "supportedWasherWaterTemperature"
     SUPPORTED_WASHING_TIMES = "supportedWashingTimes"
     SUPPORTED_WATER_LEVEL = "supportedWaterLevel"
+    SUPPORTED_WATER_SPRAY_LEVELS = "supportedWaterSprayLevels"
     SUPPORTED_WATER_VALVE = "supportedWaterValve"
     SUPPORTED_WI_FI_FREQ = "supportedWiFiFreq"
     SUPPORTED_WIND_MODES = "supportedWindModes"
@@ -876,6 +887,7 @@ class Attribute(StrEnum):
     VOLTAGE = "voltage"
     VOLUME = "volume"
     VOLUME_LEVEL = "volumeLevel"
+    VOLUME_LEVEL_RANGE = "volumeLevelRange"
     VTEMP = "vtemp"
     W_SPEED = "wSpeed"
     WASHER_AUTO_DETERGENT = "washerAutoDetergent"
@@ -900,6 +912,7 @@ class Attribute(StrEnum):
     WATER_FILTER_USAGE = "waterFilterUsage"
     WATER_FILTER_USAGE_STEP = "waterFilterUsageStep"
     WATER_LEVEL = "waterLevel"
+    WATER_SPRAY_LEVEL = "waterSprayLevel"
     WATER_USAGE_MAX = "waterUsageMax"
     WATER_VALVE = "waterValve"
     WAYPOINTS = "waypoints"
@@ -1522,6 +1535,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WATER_FILTER_USAGE_STEP,
     ],
     Capability.CUSTOM_WELCOME_CARE_MODE: [Attribute.WELCOME_CARE_MODE],
+    Capability.SAMSUNG_CE_ACTIVATION_STATE: [Attribute.ACTIVATION_STATE],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [
         Attribute.SUPPORTED_VOLUME_LEVELS,
         Attribute.VOLUME_LEVEL,
@@ -1537,6 +1551,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_AIR_QUALITY_HEALTH_CONCERNS,
     ],
     Capability.SAMSUNG_CE_ALWAYS_ON_SENSING: [Attribute.ALWAYS_ON, Attribute.ORIGINS],
+    Capability.SAMSUNG_CE_AUDIO_VOLUME_LEVEL: [
+        Attribute.VOLUME_LEVEL,
+        Attribute.VOLUME_LEVEL_RANGE,
+    ],
     Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: [
         Attribute.AMOUNT,
         Attribute.AVAILABLE_TYPES,
@@ -1678,6 +1696,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: [Attribute.STATUS],
     Capability.SAMSUNG_CE_DOOR_STATE: [Attribute.DOOR_STATE],
+    Capability.SAMSUNG_CE_DRAIN_FILTER: [
+        Attribute.DRAIN_FILTER_LAST_RESET_DATE,
+        Attribute.DRAIN_FILTER_RESET_TYPE,
+        Attribute.DRAIN_FILTER_STATUS,
+        Attribute.DRAIN_FILTER_USAGE,
+        Attribute.DRAIN_FILTER_USAGE_STEP,
+    ],
     Capability.SAMSUNG_CE_DRIVER_STATE: [Attribute.DRIVER_STATE],
     Capability.SAMSUNG_CE_DRIVER_VERSION: [Attribute.VERSION_NUMBER],
     Capability.SAMSUNG_CE_DRUM_SELF_CLEANING: [
@@ -1814,6 +1839,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.TEMPERATURE,
         Attribute.TEMPERATURE_SETPOINT,
     ],
+    Capability.SAMSUNG_CE_MICROPHONE_SETTINGS: [Attribute.MUTE],
     Capability.SAMSUNG_CE_MICROWAVE_POWER: [
         Attribute.POWER_LEVEL,
         Attribute.SUPPORTED_POWER_LEVELS,
@@ -1861,6 +1887,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_CLEANING_MODE,
         Attribute.SUPPORT_REPEAT_MODE,
     ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_CLEANING_TYPE: [
+        Attribute.CLEANING_TYPE,
+        Attribute.SUPPORTED_CLEANING_TYPES,
+    ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_DRIVING_MODE: [
         Attribute.DRIVING_MODE,
         Attribute.SUPPORTED_DRIVING_MODES,
@@ -1873,6 +1903,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.INVISIBLE_FEATURES,
         Attribute.VISIBLE_FEATURES,
     ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_GUIDED_PATROL: [
+        Attribute.MAP_ID,
+        Attribute.WAYPOINTS,
+    ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_AREA_INFO: [Attribute.AREA_INFO],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_CLEANING_INFO: [
         Attribute.AREA,
@@ -1881,6 +1915,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.REMAINING_TIME,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST: [Attribute.MAPS],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_METADATA: [Attribute.CELL_SIZE],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MONITORING_AUTOMATION: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MOTOR_FILTER: [
         Attribute.MOTOR_FILTER_RESET_TYPE,
@@ -1936,6 +1971,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_ROBOT_CLEANER_RESERVATION: [
         Attribute.MAX_NUMBER_OF_RESERVATIONS,
         Attribute.RESERVATIONS,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_SAFETY_PATROL: [Attribute.PERSON_DETECTION],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_SYSTEM_SOUND_MODE: [
+        Attribute.SOUND_MODE,
+        Attribute.SUPPORTED_SOUND_MODES,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_WATER_SPRAY_LEVEL: [
+        Attribute.SUPPORTED_WATER_SPRAY_LEVELS,
+        Attribute.WATER_SPRAY_LEVEL,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_WELCOME: [Attribute.COORDINATES],
     Capability.SAMSUNG_CE_RUNESTONE_HOME_CONTEXT: [Attribute.SUPPORTED_CONTEXTS],

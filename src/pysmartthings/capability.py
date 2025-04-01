@@ -225,12 +225,14 @@ class Capability(StrEnum):
     CUSTOM_WATER_FILTER = "custom.waterFilter"
     CUSTOM_WELCOME_CARE_MODE = "custom.welcomeCareMode"
 
+    SAMSUNG_CE_ACTIVATION_STATE = "samsungce.activationState"
     SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK = "samsungce.airConditionerAudioFeedback"
     SAMSUNG_CE_AIR_CONDITIONER_BEEP = "samsungce.airConditionerBeep"
     SAMSUNG_CE_AIR_CONDITIONER_DISPLAY = "samsungce.airConditionerDisplay"
     SAMSUNG_CE_AIR_CONDITIONER_LIGHTING = "samsungce.airConditionerLighting"
     SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN = "samsungce.airQualityHealthConcern"
     SAMSUNG_CE_ALWAYS_ON_SENSING = "samsungce.alwaysOnSensing"
+    SAMSUNG_CE_AUDIO_VOLUME_LEVEL = "samsungce.audioVolumeLevel"
     SAMSUNG_CE_AUTO_DISPENSE_DETERGENT = "samsungce.autoDispenseDetergent"
     SAMSUNG_CE_AUTO_DISPENSE_SOFTENER = "samsungce.autoDispenseSoftener"
     SAMSUNG_CE_AUTO_DOOR_RELEASE = "samsungce.autoDoorRelease"
@@ -261,6 +263,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_DO_NOT_DISTURB = "samsungce.doNotDisturb"
     SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION = "samsungce.dongleSoftwareInstallation"
     SAMSUNG_CE_DOOR_STATE = "samsungce.doorState"
+    SAMSUNG_CE_DRAIN_FILTER = "samsungce.drainFilter"
     SAMSUNG_CE_DRIVER_STATE = "samsungce.driverState"
     SAMSUNG_CE_DRIVER_VERSION = "samsungce.driverVersion"
     SAMSUNG_CE_DRUM_SELF_CLEANING = "samsungce.drumSelfCleaning"
@@ -302,6 +305,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_LAMP = "samsungce.lamp"
     SAMSUNG_CE_MEAT_AGING = "samsungce.meatAging"
     SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
+    SAMSUNG_CE_MICROPHONE_SETTINGS = "samsungce.microphoneSettings"
     SAMSUNG_CE_MICROWAVE_POWER = "samsungce.microwavePower"
     SAMSUNG_CE_MUSIC_PLAYLIST = "samsungce.musicPlaylist"
     SAMSUNG_CE_NOTIFICATION = "samsungce.notification"
@@ -318,14 +322,17 @@ class Capability(StrEnum):
     SAMSUNG_CE_ROBOT_CLEANER_AUDIO_CLIP = "samsungce.robotCleanerAudioClip"
     SAMSUNG_CE_ROBOT_CLEANER_AVP_REGISTRATION = "samsungce.robotCleanerAvpRegistration"
     SAMSUNG_CE_ROBOT_CLEANER_CLEANING_MODE = "samsungce.robotCleanerCleaningMode"
+    SAMSUNG_CE_ROBOT_CLEANER_CLEANING_TYPE = "samsungce.robotCleanerCleaningType"
     SAMSUNG_CE_ROBOT_CLEANER_DRIVING_MODE = "samsungce.robotCleanerDrivingMode"
     SAMSUNG_CE_ROBOT_CLEANER_DUST_BAG = "samsungce.robotCleanerDustBag"
     SAMSUNG_CE_ROBOT_CLEANER_FEATURE_VISIBILITY = (
         "samsungce.robotCleanerFeatureVisibility"
     )
+    SAMSUNG_CE_ROBOT_CLEANER_GUIDED_PATROL = "samsungce.robotCleanerGuidedPatrol"
     SAMSUNG_CE_ROBOT_CLEANER_MAP_AREA_INFO = "samsungce.robotCleanerMapAreaInfo"
     SAMSUNG_CE_ROBOT_CLEANER_MAP_CLEANING_INFO = "samsungce.robotCleanerMapCleaningInfo"
     SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST = "samsungce.robotCleanerMapList"
+    SAMSUNG_CE_ROBOT_CLEANER_MAP_METADATA = "samsungce.robotCleanerMapMetadata"
     SAMSUNG_CE_ROBOT_CLEANER_MONITORING_AUTOMATION = (
         "samsungce.robotCleanerMonitoringAutomation"
     )
@@ -341,6 +348,9 @@ class Capability(StrEnum):
     )
     SAMSUNG_CE_ROBOT_CLEANER_RELAY_CLEANING = "samsungce.robotCleanerRelayCleaning"
     SAMSUNG_CE_ROBOT_CLEANER_RESERVATION = "samsungce.robotCleanerReservation"
+    SAMSUNG_CE_ROBOT_CLEANER_SAFETY_PATROL = "samsungce.robotCleanerSafetyPatrol"
+    SAMSUNG_CE_ROBOT_CLEANER_SYSTEM_SOUND_MODE = "samsungce.robotCleanerSystemSoundMode"
+    SAMSUNG_CE_ROBOT_CLEANER_WATER_SPRAY_LEVEL = "samsungce.robotCleanerWaterSprayLevel"
     SAMSUNG_CE_ROBOT_CLEANER_WELCOME = "samsungce.robotCleanerWelcome"
     SAMSUNG_CE_RUNESTONE_HOME_CONTEXT = "samsungce.runestoneHomeContext"
     SAMSUNG_CE_SABBATH_MODE = "samsungce.sabbathMode"

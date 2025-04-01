@@ -136,6 +136,7 @@ class Command(StrEnum):
     REQUEST_TURN_INFO = "requestTurnInfo"
     RESET = "reset"
     RESET_DEODOR_FILTER = "resetDeodorFilter"
+    RESET_DRAIN_FILTER = "resetDrainFilter"
     RESET_DUST_FILTER = "resetDustFilter"
     RESET_ELECTRIC_HEPA_FILTER = "resetElectricHepaFilter"
     RESET_ENERGY_METER = "resetEnergyMeter"
@@ -191,6 +192,7 @@ class Command(StrEnum):
     SET_CHANNEL = "setChannel"
     SET_CIRCADIAN = "setCircadian"
     SET_CLEANING_MODE = "setCleaningMode"
+    SET_CLEANING_TYPE = "setCleaningType"
     SET_CLOSE = "setClose"
     SET_CLUSTER_ID = "setClusterId"
     SET_CODE = "setCode"
@@ -324,6 +326,7 @@ class Command(StrEnum):
     SET_MONITOR = "setMonitor"
     SET_MUTE = "setMute"
     SET_NAME = "setName"
+    SET_NEXT_INPUT_SOURCE = "setNextInputSource"
     SET_NOTIFICATION_COLOR = "setNotificationColor"
     SET_NOTIFICATION_DURATION = "setNotificationDuration"
     SET_NOTIFICATION_EFFECT = "setNotificationEffect"
@@ -447,6 +450,7 @@ class Command(StrEnum):
     SET_WASHING_COURSE = "setWashingCourse"
     SET_WASHING_TIME = "setWashingTime"
     SET_WATER_LEVEL = "setWaterLevel"
+    SET_WATER_SPRAY_LEVEL = "setWaterSprayLevel"
     SET_WATER_VALVE = "setWaterValve"
     SET_WELCOME_MESSAGE = "setWelcomeMessage"
     SET_WIND_MODE = "setWindMode"
@@ -870,6 +874,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_WASHER_WATER_TEMPERATURE: [Command.SET_WASHER_WATER_TEMPERATURE],
     Capability.CUSTOM_WATER_FILTER: [Command.RESET_WATER_FILTER],
     Capability.CUSTOM_WELCOME_CARE_MODE: [Command.TURN_WELCOME_CARE_ON],
+    Capability.SAMSUNG_CE_ACTIVATION_STATE: [],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [Command.SET_VOLUME_LEVEL],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_DISPLAY: [Command.OFF, Command.ON],
@@ -880,6 +885,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN: [],
     Capability.SAMSUNG_CE_ALWAYS_ON_SENSING: [Command.OFF, Command.ON],
+    Capability.SAMSUNG_CE_AUDIO_VOLUME_LEVEL: [
+        Command.SET_VOLUME_LEVEL,
+        Command.VOLUME_DOWN,
+        Command.VOLUME_UP,
+    ],
     Capability.SAMSUNG_CE_AUTO_DISPENSE_DETERGENT: [
         Command.SET_AMOUNT,
         Command.SET_DENSITY,
@@ -981,6 +991,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: [],
     Capability.SAMSUNG_CE_DOOR_STATE: [],
+    Capability.SAMSUNG_CE_DRAIN_FILTER: [Command.RESET_DRAIN_FILTER],
     Capability.SAMSUNG_CE_DRIVER_STATE: [],
     Capability.SAMSUNG_CE_DRIVER_VERSION: [],
     Capability.SAMSUNG_CE_DRUM_SELF_CLEANING: [],
@@ -1052,6 +1063,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.UPDATE_AGING,
     ],
     Capability.SAMSUNG_CE_MEAT_PROBE: [Command.SET_TEMPERATURE_SETPOINT],
+    Capability.SAMSUNG_CE_MICROPHONE_SETTINGS: [Command.MUTE, Command.UNMUTE],
     Capability.SAMSUNG_CE_MICROWAVE_POWER: [Command.SET_POWER_LEVEL],
     Capability.SAMSUNG_CE_MUSIC_PLAYLIST: [Command.SET_PLAYLIST],
     Capability.SAMSUNG_CE_NOTIFICATION: [
@@ -1082,12 +1094,15 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.ENABLE_REPEAT_MODE,
         Command.SET_CLEANING_MODE,
     ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_CLEANING_TYPE: [Command.SET_CLEANING_TYPE],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_DRIVING_MODE: [Command.SET_DRIVING_MODE],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_DUST_BAG: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_FEATURE_VISIBILITY: [],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_GUIDED_PATROL: [Command.START, Command.STOP],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_AREA_INFO: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_CLEANING_INFO: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST: [],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_METADATA: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MONITORING_AUTOMATION: [
         Command.ENABLE_MONITORING_AUTOMATION
     ],
@@ -1122,6 +1137,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.DELETE_RESERVATION,
         Command.DELETE_RESERVATIONS,
         Command.EDIT_RESERVATION,
+    ],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_SAFETY_PATROL: [Command.START, Command.STOP],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_SYSTEM_SOUND_MODE: [Command.SET_SOUND_MODE],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_WATER_SPRAY_LEVEL: [
+        Command.SET_WATER_SPRAY_LEVEL
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_WELCOME: [
         Command.SET_COORDINATES,
@@ -1235,7 +1255,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_VD_AMBIENT18: [Command.SET_AMBIENT_ON],
     Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Command.SET_AMBIENT_CONTENT],
     Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [],
-    Capability.SAMSUNG_VD_AUDIO_INPUT_SOURCE: [],
+    Capability.SAMSUNG_VD_AUDIO_INPUT_SOURCE: [Command.SET_NEXT_INPUT_SOURCE],
     Capability.SAMSUNG_VD_DEVICE_CATEGORY: [],
     Capability.SAMSUNG_VD_FIRMWARE_VERSION: [Command.SET_FIRMWARE_VERSION],
     Capability.SAMSUNG_VD_GROUP_INFO: [],
