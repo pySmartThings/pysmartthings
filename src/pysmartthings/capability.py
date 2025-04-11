@@ -239,6 +239,8 @@ class Capability(StrEnum):
     SAMSUNG_CE_AUTO_VENTILATION = "samsungce.autoVentilation"
     SAMSUNG_CE_BUTTON_DISPLAY_CONDITION = "samsungce.buttonDisplayCondition"
     SAMSUNG_CE_CAMERA_STREAMING = "samsungce.cameraStreaming"
+    SAMSUNG_CE_CLEAN_STATION_STICK_STATUS = "samsungce.cleanStationStickStatus"
+    SAMSUNG_CE_CLEAN_STATION_UV_CLEANING = "samsungce.cleanStationUvCleaning"
     SAMSUNG_CE_CLOTHING_EXTRA_CARE = "samsungce.clothingExtraCare"
     SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CONSUMED_ENERGY = "samsungce.consumedEnergy"
@@ -357,6 +359,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_SAC_DISPLAY_CONDITION = "samsungce.sacDisplayCondition"
     SAMSUNG_CE_SCALE_SETTINGS = "samsungce.scaleSettings"
     SAMSUNG_CE_SELF_CHECK = "samsungce.selfCheck"
+    SAMSUNG_CE_SENSING_ON_SUSPEND_MODE = "samsungce.sensingOnSuspendMode"
     SAMSUNG_CE_SILENT_ACTION = "samsungce.silentAction"
     SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT = "samsungce.softenerAutoReplenishment"
     SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
@@ -548,6 +551,8 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_TIMER_SECONDS = "legendabsolute60149.timerSeconds"
     LEGENDABSOLUTE60149_TIMER_TYPE = "legendabsolute60149.timerType"
 
+    MIRRORHAPPY40050_COPPER_WATER_METER = "mirrorhappy40050.copperWaterMeter"
+
     MUSICAHEAD43206_POWERMODE = "musicahead43206.powermode"
     MUSICAHEAD43206_SNOOZE = "musicahead43206.snooze"
     MUSICAHEAD43206_STAGE = "musicahead43206.stage"
@@ -641,7 +646,14 @@ class Capability(StrEnum):
     SEC_CALM_CONNECTION_CARE = "sec.calmConnectionCare"
     SEC_DEVICE_CONNECTION_STATE = "sec.deviceConnectionState"
     SEC_DIAGNOSTICS_INFORMATION = "sec.diagnosticsInformation"
+    SEC_SMARTTHINGS_HUB = "sec.smartthingsHub"
     SEC_WIFI_CONFIGURATION = "sec.wifiConfiguration"
+
+    SIGNALAHEAD13665_APPLIANCEOPERATIONSTATESV2 = (
+        "signalahead13665.applianceoperationstatesv2"
+    )
+    SIGNALAHEAD13665_DISHWASHERPROGRAMSV2 = "signalahead13665.dishwasherprogramsv2"
+    SIGNALAHEAD13665_STARTSTOPPROGRAMV2 = "signalahead13665.startstopprogramv2"
 
     STSOLUTIONS_DEMAND_RESPONSE_STATUS = "stsolutions.demandResponseStatus"
 

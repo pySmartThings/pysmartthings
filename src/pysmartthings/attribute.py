@@ -38,6 +38,7 @@ class Attribute(StrEnum):
     AREA = "area"
     AREA_IDS = "areaIds"
     AREA_INFO = "areaInfo"
+    ART_SUPPORTED = "artSupported"
     ASSOCIATION_GROUP_FOUR = "associationGroupFour"
     ASSOCIATION_GROUP_THREE = "associationGroupThree"
     ASSOCIATION_GROUP_TWO = "associationGroupTwo"
@@ -53,6 +54,7 @@ class Attribute(StrEnum):
     AUTOLOCK = "autolock"
     AUTOMATIC_EXECUTION_MODE = "automaticExecutionMode"
     AUTOMATIC_EXECUTION_SETTING = "automaticExecutionSetting"
+    AVAILABILITY = "availability"
     AVAILABLE = "available"
     AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
     AVAILABLE_AC_MODES = "availableAcModes"
@@ -61,6 +63,7 @@ class Attribute(StrEnum):
     AVAILABLE_FANSPEED_BUTTONS = "availableFanspeedButtons"
     AVAILABLE_MODULES = "availableModules"
     AVAILABLE_POWER_TOGGLE_BUTTONS = "availablePowerToggleButtons"
+    AVAILABLE_PROGRAMS = "availablePrograms"
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
     BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
@@ -178,12 +181,13 @@ class Attribute(StrEnum):
     DETERGENT_TYPE = "detergentType"
     DEVICE_CONNECTION_STATE = "deviceConnectionState"
     DEVICE_ICE = "deviceIce"
+    DEVICE_ID = "deviceId"
     DEVICE_NETWORK_ID = "deviceNetworkId"
     DEVICE_TYPE = "deviceType"
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
     DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
     DEWPOINT = "dewpoint"
-    DEVICE_ID = "di"
+    OCF_DEVICE_ID = "di"
     DIRECTION = "direction"
     DISABLED_CAPABILITIES = "disabledCapabilities"
     DISABLED_COMPONENTS = "disabledComponents"
@@ -253,7 +257,9 @@ class Attribute(StrEnum):
     ENERGY_SAVING_OPERATION_SUPPORT = "energySavingOperationSupport"
     ENERGY_SAVING_SUPPORT = "energySavingSupport"
     ENERGY_TYPE = "energyType"
+    ENERGY_USAGE_DAY = "energyUsageDay"
     ENERGY_USAGE_MAX = "energyUsageMax"
+    ENERGY_USAGE_MONTH = "energyUsageMonth"
     ENERGY_USAGE_STATE = "energyUsageState"
     ENROLLMENT_STATUS = "enrollmentStatus"
     EP_EVENT = "epEvent"
@@ -368,6 +374,9 @@ class Attribute(StrEnum):
     KEYVALUE = "keyvalue"
     LANGUAGE = "language"
     LAST_EMPTIED_TIME = "lastEmptiedTime"
+    LAST_FINISHED_TIME = "lastFinishedTime"
+    LAST_ONBOARDING_ERROR_CODE = "lastOnboardingErrorCode"
+    LAST_ONBOARDING_RESULT = "lastOnboardingResult"
     LAST_SENSING_LEVEL = "lastSensingLevel"
     LAST_SENSING_TIME = "lastSensingTime"
     LAST_UPDATE_STATUS = "lastUpdateStatus"
@@ -499,10 +508,12 @@ class Attribute(StrEnum):
     OCF_RESOURCE_VERSION = "ocfResourceVersion"
     ODOR_LEVEL = "odorLevel"
     ONBOARDING = "onboarding"
+    ONBOARDING_PROGRESS = "onboardingProgress"
     ONETOUCHLOCK = "onetouchlock"
     OPENDURATION = "openduration"
     OPERATING_STATE = "operatingState"
     OPERATION_MODE = "operationMode"
+    OPERATION_STATE = "operationState"
     OPERATION_TIME = "operationTime"
     ORDER_THRESHOLD = "orderThreshold"
     ORIGINATOR = "originator"
@@ -540,6 +551,7 @@ class Attribute(StrEnum):
     POWER = "power"
     POWER_CONSUMPTION = "powerConsumption"
     POWER_CONSUMPTIONS = "powerConsumptions"
+    POWER_CURRENT = "powerCurrent"
     POWER_LEVEL = "powerLevel"
     POWER_SOURCE = "powerSource"
     POWER_STATE = "powerState"
@@ -553,6 +565,7 @@ class Attribute(StrEnum):
     PROBABILITY = "probability"
     PROG_OFF = "progOff"
     PROG_ON = "progOn"
+    PROGRAM = "program"
     PROGRESS = "progress"
     PROGRESS_PERCENTAGE = "progressPercentage"
     PROTOCOL_TYPE = "protocolType"
@@ -633,6 +646,7 @@ class Attribute(StrEnum):
     SELECTED_MODE = "selectedMode"
     SELECTED_ZONE = "selectedZone"
     SELECTION = "selection"
+    SENSING_ON_SUSPEND_MODE = "sensingOnSuspendMode"
     SENSITIVE = "sensitive"
     SENSITIVITY_MODE = "sensitivityMode"
     SENSOR_STATUS = "sensorStatus"
@@ -671,6 +685,7 @@ class Attribute(StrEnum):
     STAGE_STATUS = "stageStatus"
     START_TIME = "startTime"
     START_VALUE = "startValue"
+    STARTSTOP = "startstop"
     STATE = "state"
     STATUS = "status"
     STATUS_MESSAGE = "statusMessage"
@@ -828,6 +843,8 @@ class Attribute(StrEnum):
     THERMOSTAT_MODE = "thermostatMode"
     THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
     THERMOSTAT_SETPOINT = "thermostatSetpoint"
+    THREAD_HARDWARE_AVAILABILITY = "threadHardwareAvailability"
+    THREAD_REQUIRES_EXTERNAL_HARDWARE = "threadRequiresExternalHardware"
     THREE_AXIS = "threeAxis"
     TIME_LEFT_TO_START = "timeLeftToStart"
     TIME_OFFSET = "timeOffset"
@@ -855,7 +872,6 @@ class Attribute(StrEnum):
     ULTRAVIOLET_INDEX = "ultravioletIndex"
     UNAVAILABLE_COMMANDS = "unavailableCommands"
     UPDATE_AVAILABLE = "updateAvailable"
-    UPDATE_REQUIRED = "updateRequired"
     UPDATED_TIME = "updatedTime"
     UPLINK_SPEED = "uplinkSpeed"
     URI = "uri"
@@ -865,6 +881,7 @@ class Attribute(StrEnum):
     USER_ID = "userId"
     USER_LOCATION = "userLocation"
     USER_NAME = "userName"
+    UVC_INTENSIVE = "uvcIntensive"
     UWB_ACTIVATION = "uwbActivation"
     VACATION_MODE = "vacationMode"
     VALUE = "value"
@@ -925,8 +942,12 @@ class Attribute(StrEnum):
     WINDGUST = "windgust"
     WINDOW_SHADE = "windowShade"
     ZCL_VERSION = "zclVersion"
+    ZIGBEE_HARDWARE_AVAILABILITY = "zigbeeHardwareAvailability"
+    ZIGBEE_REQUIRES_EXTERNAL_HARDWARE = "zigbeeRequiresExternalHardware"
     ZONE_BOOSTER = "zoneBooster"
     ZONE_INFO = "zoneInfo"
+    ZWAVE_HARDWARE_AVAILABILITY = "zwaveHardwareAvailability"
+    ZWAVE_REQUIRES_EXTERNAL_HARDWARE = "zwaveRequiresExternalHardware"
 
 
 CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
@@ -1038,7 +1059,6 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_COMMANDS,
         Attribute.SUPPORTS_PROGRESS_REPORTS,
         Attribute.UPDATE_AVAILABLE,
-        Attribute.UPDATE_REQUIRED,
     ],
     Capability.FORMALDEHYDE_HEALTH_CONCERN: [Attribute.FORMALDEHYDE_HEALTH_CONCERN],
     Capability.FORMALDEHYDE_MEASUREMENT: [Attribute.FORMALDEHYDE_LEVEL],
@@ -1152,13 +1172,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.OCCUPANCY_SENSOR: [Attribute.OCCUPANCY],
     Capability.OCF: [
         Attribute.DATA_MODEL_VERSION,
-        Attribute.DEVICE_ID,
         Attribute.DEVICE_NAME,
         Attribute.HARDWARE_VERSION,
         Attribute.MANUFACTURER_DETAILS_LINK,
         Attribute.MANUFACTURER_NAME,
         Attribute.MANUFACTURE_DATE,
         Attribute.MODEL_NUMBER,
+        Attribute.OCF_DEVICE_ID,
         Attribute.OCF_FIRMWARE_VERSION,
         Attribute.OS_VERSION,
         Attribute.PLATFORM_ID,
@@ -1580,6 +1600,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AVAILABLE,
         Attribute.REGISTRATION_STATUS,
     ],
+    Capability.SAMSUNG_CE_CLEAN_STATION_STICK_STATUS: [Attribute.STATUS],
+    Capability.SAMSUNG_CE_CLEAN_STATION_UV_CLEANING: [
+        Attribute.LAST_FINISHED_TIME,
+        Attribute.OPERATING_STATE,
+        Attribute.OPERATION_TIME,
+        Attribute.REMAINING_TIME,
+        Attribute.UVC_INTENSIVE,
+    ],
     Capability.SAMSUNG_CE_CLOTHING_EXTRA_CARE: [
         Attribute.OPERATION_MODE,
         Attribute.USER_LOCATION,
@@ -1993,6 +2021,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
         Attribute.SUPPORTED_ACTIONS,
     ],
+    Capability.SAMSUNG_CE_SENSING_ON_SUSPEND_MODE: [Attribute.SENSING_ON_SUSPEND_MODE],
     Capability.SAMSUNG_CE_SILENT_ACTION: [],
     Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: [
         Attribute.REGULAR_SOFTENER_ALARM_ENABLED,
@@ -2126,7 +2155,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.NUMBER_OF_CONNECTED_DEVICES,
         Attribute.SUB_DEVICES,
     ],
-    Capability.SAMSUNG_VD_AMBIENT: [],
+    Capability.SAMSUNG_VD_AMBIENT: [Attribute.INFO],
     Capability.SAMSUNG_VD_AMBIENT18: [],
     Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Attribute.SUPPORTED_AMBIENT_APPS],
     Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [
@@ -2173,6 +2202,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_SOUND_MODES_MAP,
     ],
     Capability.SAMSUNG_VD_SUPPORTS_FEATURES: [
+        Attribute.ART_SUPPORTED,
         Attribute.EXECUTABLE_SERVICE_LIST,
         Attribute.IME_ADV_SUPPORTED,
         Attribute.MEDIA_OUTPUT_SUPPORTED,
@@ -2384,6 +2414,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_TIMER_NEXT_CHANGE: [Attribute.TIMER_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_TIMER_SECONDS: [Attribute.TIMER_SECONDS],
     Capability.LEGENDABSOLUTE60149_TIMER_TYPE: [Attribute.TIMER_TYPE],
+    Capability.MIRRORHAPPY40050_COPPER_WATER_METER: [
+        Attribute.ENERGY_USAGE_DAY,
+        Attribute.ENERGY_USAGE_MONTH,
+        Attribute.POWER_CURRENT,
+    ],
     Capability.MUSICAHEAD43206_POWERMODE: [Attribute.PMODE],
     Capability.MUSICAHEAD43206_SNOOZE: [Attribute.SNOOZE],
     Capability.MUSICAHEAD43206_STAGE: [Attribute.STAGE],
@@ -2519,6 +2554,22 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SIGNIN_PERMISSION,
         Attribute.TS_ID,
     ],
+    Capability.SEC_SMARTTHINGS_HUB: [
+        Attribute.AVAILABILITY,
+        Attribute.DEVICE_ID,
+        Attribute.EUI,
+        Attribute.LAST_ONBOARDING_ERROR_CODE,
+        Attribute.LAST_ONBOARDING_RESULT,
+        Attribute.ONBOARDING_PROGRESS,
+        Attribute.STATE,
+        Attribute.THREAD_HARDWARE_AVAILABILITY,
+        Attribute.THREAD_REQUIRES_EXTERNAL_HARDWARE,
+        Attribute.VERSION,
+        Attribute.ZIGBEE_HARDWARE_AVAILABILITY,
+        Attribute.ZIGBEE_REQUIRES_EXTERNAL_HARDWARE,
+        Attribute.ZWAVE_HARDWARE_AVAILABILITY,
+        Attribute.ZWAVE_REQUIRES_EXTERNAL_HARDWARE,
+    ],
     Capability.SEC_WIFI_CONFIGURATION: [
         Attribute.AUTO_RECONNECTION,
         Attribute.MIN_VERSION,
@@ -2526,6 +2577,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_AUTH_TYPE,
         Attribute.SUPPORTED_WI_FI_FREQ,
     ],
+    Capability.SIGNALAHEAD13665_APPLIANCEOPERATIONSTATESV2: [Attribute.OPERATION_STATE],
+    Capability.SIGNALAHEAD13665_DISHWASHERPROGRAMSV2: [
+        Attribute.AVAILABLE_PROGRAMS,
+        Attribute.PROGRAM,
+    ],
+    Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Attribute.STARTSTOP],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [
         Attribute.CURRENT_STATUS,
         Attribute.ENROLLMENT_STATUS,

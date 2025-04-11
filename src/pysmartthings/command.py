@@ -358,6 +358,7 @@ class Command(StrEnum):
     SET_POWER_STATE = "setPowerState"
     SET_PROG_OFF = "setProgOff"
     SET_PROG_ON = "setProgOn"
+    SET_PROGRAM = "setProgram"
     SET_RANDOM_MAXIMUM_TIMER = "setRandomMaximumTimer"
     SET_RANDOM_MINIMUM_TIMER = "setRandomMinimumTimer"
     SET_RANDOM_NEXT = "setRandomNext"
@@ -399,6 +400,7 @@ class Command(StrEnum):
     SET_SPIN_SPEED = "setSpinSpeed"
     SET_STAGE = "setStage"
     SET_START_VALUE = "setStartValue"
+    SET_STARTSTOP = "setStartstop"
     SET_STATUS = "setStatus"
     SET_STEAM_CLOSET_AUTO_CYCLE_LINK = "setSteamClosetAutoCycleLink"
     SET_STEAM_CLOSET_CYCLE = "setSteamClosetCycle"
@@ -908,6 +910,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.CANCEL_ONBOARDING,
         Command.REGISTER,
     ],
+    Capability.SAMSUNG_CE_CLEAN_STATION_STICK_STATUS: [],
+    Capability.SAMSUNG_CE_CLEAN_STATION_UV_CLEANING: [],
     Capability.SAMSUNG_CE_CLOTHING_EXTRA_CARE: [
         Command.SET_OPERATION_MODE,
         Command.SET_USER_LOCATION,
@@ -1159,6 +1163,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.CANCEL_SELF_CHECK,
         Command.START_SELF_CHECK,
     ],
+    Capability.SAMSUNG_CE_SENSING_ON_SUSPEND_MODE: [],
     Capability.SAMSUNG_CE_SILENT_ACTION: [Command.ACT_SILENTLY],
     Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: [
         Command.DISABLE_ALARM,
@@ -1441,6 +1446,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_TIMER_NEXT_CHANGE: [Command.SET_TIMER_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_TIMER_SECONDS: [Command.SET_TIMER_SECONDS],
     Capability.LEGENDABSOLUTE60149_TIMER_TYPE: [Command.SET_TIMER_TYPE],
+    Capability.MIRRORHAPPY40050_COPPER_WATER_METER: [],
     Capability.MUSICAHEAD43206_POWERMODE: [Command.OFF, Command.ON],
     Capability.MUSICAHEAD43206_SNOOZE: [Command.OFF, Command.ON],
     Capability.MUSICAHEAD43206_STAGE: [Command.SET_STAGE],
@@ -1547,7 +1553,14 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SEC_CALM_CONNECTION_CARE: [],
     Capability.SEC_DEVICE_CONNECTION_STATE: [Command.REFRESH_CONNECTION],
     Capability.SEC_DIAGNOSTICS_INFORMATION: [],
+    Capability.SEC_SMARTTHINGS_HUB: [Command.CANCEL_ONBOARDING, Command.ONBOARDING],
     Capability.SEC_WIFI_CONFIGURATION: [],
+    Capability.SIGNALAHEAD13665_APPLIANCEOPERATIONSTATESV2: [],
+    Capability.SIGNALAHEAD13665_DISHWASHERPROGRAMSV2: [
+        Command.SET_PROGRAM,
+        Command.STOP,
+    ],
+    Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Command.SET_STARTSTOP],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Command.SET_CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Command.SET_FADE],
