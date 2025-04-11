@@ -35,7 +35,7 @@ def prepare_attribute_name(attribute: str) -> str:
     return {
         "dmv": "DATA_MODEL_VERSION",
         "drlcStatus": "DEMAND_RESPONSE_LOAD_CONTROL_STATUS",
-        "di": "DEVICE_ID",
+        "di": "OCF_DEVICE_ID",
         "n": "DEVICE_NAME",
         "mnhw": "HARDWARE_VERSION",
         "mnml": "MANUFACTURER_DETAILS_LINK",
