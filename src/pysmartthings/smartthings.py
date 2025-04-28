@@ -26,6 +26,8 @@ from .models import (
     DeviceEvent,
     DeviceEventRoot,
     DeviceHealth,
+    DeviceHealthEvent,
+    DeviceHealthEventRoot,
     DeviceLifecycleEventRoot,
     DeviceResponse,
     DeviceStatus,
@@ -71,6 +73,9 @@ class SmartThings:
     __device_event_listeners: dict[str, list[Callable[[DeviceEvent], None]]] = field(
         default_factory=dict
     )
+    __device_availability_event_listeners: dict[
+        str, list[Callable[[DeviceHealthEvent], None]]
+    ] = field(default_factory=dict)
     __device_lifecycle_event_listeners: dict[Lifecycle, list[Callable[[str], None]]] = (
         field(default_factory=dict)
     )
@@ -385,6 +390,17 @@ class SmartThings:
         self.__device_event_listeners[device_id].append(callback)
         return lambda: self.__device_event_listeners[device_id].remove(callback)
 
+    def add_device_availability_event_listener(
+        self, device_id: str, callback: Callable[[DeviceHealthEvent], None]
+    ) -> Callable[[], None]:
+        """Add a listener for device availability events."""
+        if device_id not in self.__device_availability_event_listeners:
+            self.__device_availability_event_listeners[device_id] = []
+        self.__device_availability_event_listeners[device_id].append(callback)
+        return lambda: self.__device_availability_event_listeners[device_id].remove(
+            callback
+        )
+
     async def create_subscription(
         self, location_id: str, installed_app_id: str
     ) -> Subscription:
@@ -457,6 +473,16 @@ class SmartThings:
                             device_lifecycle_event.lifecycle
                         ]:
                             dle_callback(device_lifecycle_event.device_id)
+                elif event.type == EventType.DEVICE_HEALTH_EVENT:
+                    device_health_event = DeviceHealthEventRoot.from_json(event.data)
+                    if (
+                        device_health_event.device_health_event.device_id
+                        in self.__device_availability_event_listeners
+                    ):
+                        for dhe_callback in self.__device_availability_event_listeners[
+                            device_health_event.device_health_event.device_id
+                        ]:
+                            dhe_callback(device_health_event.device_health_event)
                 elif event.type == EventType.CONTROL_EVENT:
                     if event.data in {"goodbye", "goobye"}:
                         LOGGER.debug("Received goodbye event, closing connection")

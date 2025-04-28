@@ -1,0 +1,15 @@
+{
+  "eventTime": 1745845246219,
+  "eventType": "DEVICE_HEALTH_EVENT",
+  "deviceHealthEvent": {
+    "eventId": "ccd77e6f-2430-11f0-87b9-010699b89362",
+    "locationId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerId": "88a3a314-f0c8-40b4-bb44-44ba06c9c42f",
+    "ownerType": "LOCATION",
+    "deviceId": "7905bc7a-0633-4d80-a95b-45d59f1393a5",
+    "hubId": "",
+    "status": "ONLINE",
+    "reason": "NONE",
+    "eventSource": "CLOUD"
+  }
+}
