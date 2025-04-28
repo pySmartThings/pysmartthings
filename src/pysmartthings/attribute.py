@@ -19,6 +19,7 @@ class Attribute(StrEnum):
     ACTIVATION_STATE = "activationState"
     ACTIVITIES = "activities"
     ACTIVITY = "activity"
+    ACTIVITY_SENSITIVITY = "activitySensitivity"
     ADD_RINSE = "addRinse"
     AIR_CONDITIONER_MODE = "airConditionerMode"
     AIR_CONDITIONER_ODOR_CONTROLLER_PROGRESS = "airConditionerOdorControllerProgress"
@@ -29,6 +30,7 @@ class Attribute(StrEnum):
     AIR_QUALITY_MAX_LEVEL = "airQualityMaxLevel"
     ALARM = "alarm"
     ALARM_ENABLED = "alarmEnabled"
+    ALARM_MODE = "alarmMode"
     ALARM_SENSOR_STATE = "alarmSensorState"
     ALARM_THRESHOLD = "alarmThreshold"
     ALTITUDE_ACCURACY = "altitudeAccuracy"
@@ -52,6 +54,7 @@ class Attribute(StrEnum):
     AUDIO_TRACK_DATA = "audioTrackData"
     AUTO_CLEANING_MODE = "autoCleaningMode"
     AUTO_DOOR_RELEASE_ENABLED = "autoDoorReleaseEnabled"
+    AUTO_LOCK = "autoLock"
     AUTO_RECONNECTION = "autoReconnection"
     AUTO_UPDATE_ENABLED = "autoUpdateEnabled"
     AUTOLOCK = "autolock"
@@ -291,6 +294,7 @@ class Attribute(StrEnum):
     ENERGY_USAGE_STATE = "energyUsageState"
     ENGINE_STATE = "engineState"
     ENROLLMENT_STATUS = "enrollmentStatus"
+    ENROLLMENT_STATUS_CODE = "enrollmentStatusCode"
     EP_EVENT = "epEvent"
     EP_INFO = "epInfo"
     EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT = "equivalentCarbonDioxideMeasurement"
@@ -323,6 +327,7 @@ class Attribute(StrEnum):
     FLOW = "flow"
     FLOW_RANGE = "flowRange"
     FOOD_TYPE = "foodType"
+    FORCED_ENTRY_SENSITIVITY = "forcedEntrySensitivity"
     FORCED_ON_LEVEL = "forcedOnLevel"
     FORMALDEHYDE_HEALTH_CONCERN = "formaldehydeHealthConcern"
     FORMALDEHYDE_LEVEL = "formaldehydeLevel"
@@ -413,6 +418,7 @@ class Attribute(StrEnum):
     INTENSITY_HEAD = "intensityHead"
     INTENSITY_RANGE = "intensityRange"
     INTENSITY_WHOLE = "intensityWhole"
+    INTERIOR_BUTTON = "interiorButton"
     INTERVAL = "interval"
     INVALID_CODE = "invalidCode"
     INVENTORY = "inventory"
@@ -421,6 +427,7 @@ class Attribute(StrEnum):
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     KEYNUMVALUE = "keynumvalue"
     KEYPAD = "keypad"
+    KEYPAD_BEEP = "keypadBeep"
     KEYVALUE = "keyvalue"
     LANGUAGE = "language"
     LAST_EMPTIED_TIME = "lastEmptiedTime"
@@ -470,6 +477,7 @@ class Attribute(StrEnum):
     LOCAL_YEAR = "localYear"
     LOCATION = "location"
     LOCK = "lock"
+    LOCK_AND_LEAVE = "lockAndLeave"
     LOCK_CODES = "lockCodes"
     LOCK_STATE = "lockState"
     LOCK_STATUS = "lockStatus"
@@ -539,6 +547,7 @@ class Attribute(StrEnum):
     MONTHLY_USAGE = "monthlyUsage"
     MOTION = "motion"
     MOTION_SENSITIVITY = "motionSensitivity"
+    MOTION_SENSOR_ENABLE = "motionSensorEnable"
     MOTOR_FILTER_RESET_TYPE = "motorFilterResetType"
     MOTOR_FILTER_STATUS = "motorFilterStatus"
     MOVEMENT = "movement"
@@ -947,6 +956,7 @@ class Attribute(StrEnum):
     TAG_STATUS = "tagStatus"
     TALKBACK = "talkback"
     TAMPER = "tamper"
+    TAMPER_SENSITIVITY = "tamperSensitivity"
     TARGET_END_TIME = "targetEndTime"
     TARGET_MODULE = "targetModule"
     TARIFF_NAME = "tariffName"
@@ -1000,6 +1010,7 @@ class Attribute(StrEnum):
     TYPE = "type"
     ULTRAVIOLET_INDEX = "ultravioletIndex"
     UNAVAILABLE_COMMANDS = "unavailableCommands"
+    UNLOCK_CODE_NAME = "unlockCodeName"
     UPDATE_AVAILABLE = "updateAvailable"
     UPDATED_TIME = "updatedTime"
     UPLINK_SPEED = "uplinkSpeed"
@@ -2834,6 +2845,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.LEGENDABSOLUTE60149_MIRROR_IN: [Attribute.MIRROR_IN],
     Capability.LEGENDABSOLUTE60149_MIRROR_OUT: [Attribute.MIRROR_OUT],
+    Capability.LEGENDABSOLUTE60149_MOTION_SENSOR_ENABLE: [
+        Attribute.MOTION_SENSOR_ENABLE
+    ],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Attribute.PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Attribute.PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
@@ -2940,6 +2954,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: [Attribute.ASSOCIATION_GROUP_TWO],
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [Attribute.DEVICE_NETWORK_ID],
     Capability.PLATEMUSIC11009_FIRMWARE: [Attribute.FIRMWARE_VERSION],
+    Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Attribute.AUTO_LOCK],
     Capability.PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL: [Attribute.DEFAULT_LEVEL],
     Capability.PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING: [Attribute.LIGHT_SENSING],
     Capability.PLATINUMMASSIVE43262_JASCO_MOTION_SENSITIVITY: [
@@ -2949,6 +2964,19 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PLATINUMMASSIVE43262_JASCO_TIMEOUT_DURATION: [
         Attribute.TIMEOUT_DURATION
     ],
+    Capability.PLATINUMMASSIVE43262_KEYPAD_BEEP: [Attribute.KEYPAD_BEEP],
+    Capability.PLATINUMMASSIVE43262_LOCK_AND_LEAVE: [Attribute.LOCK_AND_LEAVE],
+    Capability.PLATINUMMASSIVE43262_SCHLAGE_INTERIOR_BUTTON: [
+        Attribute.INTERIOR_BUTTON
+    ],
+    Capability.PLATINUMMASSIVE43262_SCHLAGE_LOCK_ALARM: [
+        Attribute.ACTIVITY_SENSITIVITY,
+        Attribute.ALARM_MODE,
+        Attribute.FORCED_ENTRY_SENSITIVITY,
+        Attribute.TAMPER_SENSITIVITY,
+    ],
+    Capability.PLATINUMMASSIVE43262_UNLOCK_CODE_NAME: [Attribute.UNLOCK_CODE_NAME],
+    Capability.PLATINUMMASSIVE43262_VACATION_MODE: [Attribute.VACATION_MODE],
     Capability.RBOYAPPS_LOCK_AUDIO: [Attribute.AUDIO],
     Capability.RBOYAPPS_LOCK_AUTOLOCK: [Attribute.AUTOLOCK],
     Capability.RBOYAPPS_LOCK_EXTENDED: [
@@ -3041,6 +3069,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [
         Attribute.CURRENT_STATUS,
         Attribute.ENROLLMENT_STATUS,
+        Attribute.ENROLLMENT_STATUS_CODE,
     ],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
@@ -3058,4 +3087,5 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.VALLEYBOARD16460_DEBUG: [Attribute.VALUE],
     Capability.VALLEYBOARD16460_INFO: [Attribute.VALUE],
     Capability.WATCHPANEL55613_LCCTHERMOSTAT: [Attribute.DRCAPABLE],
+    Capability.WATCHPANEL55613_TCCTHERMOSTAT: [Attribute.DRCAPABLE],
 }

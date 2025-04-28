@@ -11,6 +11,7 @@ class Command(StrEnum):
     ACT_SILENTLY = "actSilently"
     ACTION = "action"
     ACTIVATE = "activate"
+    ACTIVITY = "activity"
     ADD = "add"
     ADD_AGING = "addAging"
     ADD_CREDENTIAL = "addCredential"
@@ -22,6 +23,7 @@ class Command(StrEnum):
     ARM_AWAY = "armAway"
     ARM_STAY = "armStay"
     AUTO = "auto"
+    AUTOLOCK = "autolock"
     BEEP = "beep"
     BIXBY_COMMAND = "bixbyCommand"
     BOTH = "both"
@@ -104,6 +106,7 @@ class Command(StrEnum):
     FAN_ON = "fanOn"
     FAST_FORWARD = "fastForward"
     FLIP = "flip"
+    FORCEDENTRY = "forcedentry"
     G_E_T = "GET"
     GENERATE_NONCE = "generateNonce"
     GET_SCAN_RESULTS = "getScanResults"
@@ -117,6 +120,7 @@ class Command(StrEnum):
     LINK_DRYER_CYCLE = "linkDryerCycle"
     LINK_STEAM_CLOSET_CYCLE = "linkSteamClosetCycle"
     LOCK = "lock"
+    LOCKANDLEAVE = "lockandleave"
     LOWER_SETPOINT = "lowerSetpoint"
     MUTE = "mute"
     MUTE_GROUP = "muteGroup"
@@ -192,11 +196,13 @@ class Command(StrEnum):
     SET_ACCESSIBILITY = "setAccessibility"
     SET_ACM_MODE = "setAcmMode"
     SET_ACTION_SETTING = "setActionSetting"
+    SET_ACTIVITY_SENSITIVITY = "setActivitySensitivity"
     SET_ADD_RINSE = "setAddRinse"
     SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
     SET_AIR_CONDITIONER_ODOR_CONTROLLER_STATE = "setAirConditionerOdorControllerState"
     SET_AIR_PURIFIER_FAN_MODE = "setAirPurifierFanMode"
     SET_ALARM = "setAlarm"
+    SET_ALARM_MODE = "setAlarmMode"
     SET_ALARM_SENSOR_STATE = "setAlarmSensorState"
     SET_ALARM_THRESHOLD = "setAlarmThreshold"
     SET_AMBIENT_CONTENT = "setAmbientContent"
@@ -297,6 +303,7 @@ class Command(StrEnum):
     SET_FAN_SPEED = "setFanSpeed"
     SET_FIRMWARE_VERSION = "setFirmwareVersion"
     SET_FORCED_ON_LEVEL = "setForcedOnLevel"
+    SET_FORCED_SENSITIVITY = "setForcedSensitivity"
     SET_FREEZER_CONVERT_MODE = "setFreezerConvertMode"
     SET_FRIDGE_MODE = "setFridgeMode"
     SET_GEOFENCE = "setGeofence"
@@ -367,6 +374,7 @@ class Command(StrEnum):
     SET_MODE = "setMode"
     SET_MONITOR = "setMonitor"
     SET_MOTION_SENSITIVITY = "setMotionSensitivity"
+    SET_MOTION_SENSOR_ENABLE = "setMotionSensorEnable"
     SET_MUTE = "setMute"
     SET_NAME = "setName"
     SET_NEXT_INPUT_SOURCE = "setNextInputSource"
@@ -468,6 +476,7 @@ class Command(StrEnum):
     SET_SUN_SET = "setSunSet"
     SET_SUN_SET_OFFSET = "setSunSetOffset"
     SET_SWITCH_ALL_ON_OFF = "setSwitchAllOnOff"
+    SET_TAMPER_SENSITIVITY = "setTamperSensitivity"
     SET_TARGET_END_TIME = "setTargetEndTime"
     SET_TEMP_CONDITION = "setTempCondition"
     SET_TEMP_TARGET = "setTempTarget"
@@ -544,6 +553,7 @@ class Command(StrEnum):
     STOP_TALKBACK = "stopTalkback"
     STROBE = "strobe"
     TAKE = "take"
+    TAMPER = "tamper"
     TOGGLE = "toggle"
     TRIGGER_LOG = "triggerLog"
     TRIGGER_LOG_WITH_LOG_INFO = "triggerLogWithLogInfo"
@@ -565,6 +575,7 @@ class Command(StrEnum):
     UPDATE_ZONE_NAME = "updateZoneName"
     UPLOAD_COMPLETE = "uploadComplete"
     UPLOAD_FAILED = "uploadFailed"
+    VACATION = "vacation"
     VOLUME_DOWN = "volumeDown"
     VOLUME_UP = "volumeUp"
     ZERO_CALIBRATE = "zeroCalibrate"
@@ -1683,6 +1694,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.LEGENDABSOLUTE60149_MIRROR_IN: [Command.SET_MIRROR_IN],
     Capability.LEGENDABSOLUTE60149_MIRROR_OUT: [Command.SET_MIRROR_OUT],
+    Capability.LEGENDABSOLUTE60149_MOTION_SENSOR_ENABLE: [
+        Command.SET_MOTION_SENSOR_ENABLE
+    ],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Command.SET_PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Command.SET_PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
@@ -1783,6 +1797,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: [],
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [],
     Capability.PLATEMUSIC11009_FIRMWARE: [],
+    Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Command.AUTOLOCK, Command.OFF],
     Capability.PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL: [Command.SET_DEFAULT_LEVEL],
     Capability.PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING: [Command.SET_LIGHT_SENSING],
     Capability.PLATINUMMASSIVE43262_JASCO_MOTION_SENSITIVITY: [
@@ -1792,6 +1807,24 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PLATINUMMASSIVE43262_JASCO_TIMEOUT_DURATION: [
         Command.SET_TIMEOUT_DURATION
     ],
+    Capability.PLATINUMMASSIVE43262_KEYPAD_BEEP: [Command.BEEP, Command.OFF],
+    Capability.PLATINUMMASSIVE43262_LOCK_AND_LEAVE: [Command.LOCKANDLEAVE, Command.OFF],
+    Capability.PLATINUMMASSIVE43262_SCHLAGE_INTERIOR_BUTTON: [
+        Command.DISABLE,
+        Command.ENABLE,
+    ],
+    Capability.PLATINUMMASSIVE43262_SCHLAGE_LOCK_ALARM: [
+        Command.ACTIVITY,
+        Command.FORCEDENTRY,
+        Command.OFF,
+        Command.SET_ACTIVITY_SENSITIVITY,
+        Command.SET_ALARM_MODE,
+        Command.SET_FORCED_SENSITIVITY,
+        Command.SET_TAMPER_SENSITIVITY,
+        Command.TAMPER,
+    ],
+    Capability.PLATINUMMASSIVE43262_UNLOCK_CODE_NAME: [],
+    Capability.PLATINUMMASSIVE43262_VACATION_MODE: [Command.OFF, Command.VACATION],
     Capability.RBOYAPPS_LOCK_AUDIO: [
         Command.DISABLE_AUDIO,
         Command.ENABLE_AUDIO,
@@ -1853,4 +1886,5 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.VALLEYBOARD16460_DEBUG: [Command.CLEAR, Command.SET_VALUE],
     Capability.VALLEYBOARD16460_INFO: [Command.CLEAR, Command.SET_VALUE],
     Capability.WATCHPANEL55613_LCCTHERMOSTAT: [],
+    Capability.WATCHPANEL55613_TCCTHERMOSTAT: [],
 }

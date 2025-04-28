@@ -641,6 +641,7 @@ class Capability(StrEnum):
     )
     LEGENDABSOLUTE60149_MIRROR_IN = "legendabsolute60149.mirrorIn"
     LEGENDABSOLUTE60149_MIRROR_OUT = "legendabsolute60149.mirrorOut"
+    LEGENDABSOLUTE60149_MOTION_SENSOR_ENABLE = "legendabsolute60149.motionSensorEnable"
     LEGENDABSOLUTE60149_PROGRESSIVE_OFF1 = "legendabsolute60149.progressiveOff1"
     LEGENDABSOLUTE60149_PROGRESSIVE_ON1 = "legendabsolute60149.progressiveOn1"
     LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER = "legendabsolute60149.randomMaximumTimer"
@@ -740,6 +741,7 @@ class Capability(StrEnum):
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
 
+    PLATINUMMASSIVE43262_AUTO_LOCK = "platinummassive43262.autoLock"
     PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL = "platinummassive43262.jascoDefaultLevel"
     PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING = "platinummassive43262.jascoLightSensing"
     PLATINUMMASSIVE43262_JASCO_MOTION_SENSITIVITY = (
@@ -751,6 +753,14 @@ class Capability(StrEnum):
     PLATINUMMASSIVE43262_JASCO_TIMEOUT_DURATION = (
         "platinummassive43262.jascoTimeoutDuration"
     )
+    PLATINUMMASSIVE43262_KEYPAD_BEEP = "platinummassive43262.keypadBeep"
+    PLATINUMMASSIVE43262_LOCK_AND_LEAVE = "platinummassive43262.lockAndLeave"
+    PLATINUMMASSIVE43262_SCHLAGE_INTERIOR_BUTTON = (
+        "platinummassive43262.schlageInteriorButton"
+    )
+    PLATINUMMASSIVE43262_SCHLAGE_LOCK_ALARM = "platinummassive43262.schlageLockAlarm"
+    PLATINUMMASSIVE43262_UNLOCK_CODE_NAME = "platinummassive43262.unlockCodeName"
+    PLATINUMMASSIVE43262_VACATION_MODE = "platinummassive43262.vacationMode"
 
     RBOYAPPS_LOCK_AUDIO = "rboyapps.lockAudio"
     RBOYAPPS_LOCK_AUTOLOCK = "rboyapps.lockAutolock"
@@ -797,3 +807,4 @@ class Capability(StrEnum):
     VALLEYBOARD16460_INFO = "valleyboard16460.info"
 
     WATCHPANEL55613_LCCTHERMOSTAT = "watchpanel55613.lccthermostat"
+    WATCHPANEL55613_TCCTHERMOSTAT = "watchpanel55613.tccthermostat"
