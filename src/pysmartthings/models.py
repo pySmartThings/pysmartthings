@@ -500,5 +500,21 @@ class EventType(StrEnum):
     DEVICE_LIFECYCLE_EVENT = "DEVICE_LIFECYCLE_EVENT"
 
 
+class HealthStatus(StrEnum):
+    """Health status model."""
+
+    ONLINE = "ONLINE"
+    OFFLINE = "OFFLINE"
+
+
+@dataclass
+class DeviceHealth(DataClassORJSONMixin):
+    """Device health model."""
+
+    device_id: str = field(metadata=field_options(alias="deviceId"))
+    state: HealthStatus
+    last_updated_date: datetime = field(metadata=field_options(alias="lastUpdatedDate"))
+
+
 type CapabilityStatus = dict[Attribute | str, Status]
 type ComponentStatus = dict[Capability | str, CapabilityStatus]

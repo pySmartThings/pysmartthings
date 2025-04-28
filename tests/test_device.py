@@ -223,6 +223,30 @@ async def test_fetching_status_of_single_device(
     )
 
 
+async def test_fetching_health(
+    client: SmartThings,
+    responses: aioresponses,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test getting health state of a device."""
+    responses.get(
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/health",
+        status=200,
+        body=load_fixture("health.json"),
+    )
+    assert (
+        await client.get_device_health("440063de-a200-40b5-8a6b-f3399eaa0370")
+        == snapshot
+    )
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/health",
+        METH_GET,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
 @pytest.mark.parametrize(
     ("capability", "command", "argument", "fixture"),
     [
