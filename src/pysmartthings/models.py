@@ -492,6 +492,32 @@ class DeviceLifecycleEventRoot(Event):
     )
 
 
+class HealthStatus(StrEnum):
+    """Health status model."""
+
+    ONLINE = "ONLINE"
+    OFFLINE = "OFFLINE"
+    UNHEALTHY = "UNHEALTHY"
+
+
+@dataclass
+class DeviceHealthEvent:
+    """Device health event model."""
+
+    device_id: str = field(metadata=field_options(alias="deviceId"))
+    location_id: str = field(metadata=field_options(alias="locationId"))
+    status: HealthStatus
+
+
+@dataclass
+class DeviceHealthEventRoot(Event):
+    """Device health event root model."""
+
+    device_health_event: DeviceHealthEvent = field(
+        metadata=field_options(alias="deviceHealthEvent")
+    )
+
+
 class EventType(StrEnum):
     """Event type."""
 
@@ -499,13 +525,6 @@ class EventType(StrEnum):
     DEVICE_EVENT = "DEVICE_EVENT"
     DEVICE_LIFECYCLE_EVENT = "DEVICE_LIFECYCLE_EVENT"
     DEVICE_HEALTH_EVENT = "DEVICE_HEALTH_EVENT"
-
-
-class HealthStatus(StrEnum):
-    """Health status model."""
-
-    ONLINE = "ONLINE"
-    OFFLINE = "OFFLINE"
 
 
 @dataclass
