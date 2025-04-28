@@ -403,6 +403,7 @@ class SmartThings:
                             "eventType": [
                                 EventType.DEVICE_EVENT,
                                 EventType.DEVICE_LIFECYCLE_EVENT,
+                                EventType.DEVICE_HEALTH_EVENT,
                             ],
                         }
                     ],
