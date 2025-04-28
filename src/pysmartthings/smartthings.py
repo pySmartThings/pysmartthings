@@ -25,6 +25,7 @@ from .models import (
     Device,
     DeviceEvent,
     DeviceEventRoot,
+    DeviceHealth,
     DeviceLifecycleEventRoot,
     DeviceResponse,
     DeviceStatus,
@@ -288,6 +289,11 @@ class SmartThings:
             params["locationId"] = location_id
         resp = await self._get("v1/scenes", params=params)
         return SceneResponse.from_json(resp).items
+
+    async def get_device_health(self, device_id: str) -> DeviceHealth:
+        """Retrieve device health with the specified ID."""
+        resp = await self._get(f"v1/devices/{device_id}/health")
+        return DeviceHealth.from_json(resp)
 
     async def execute_scene(self, scene_id: str) -> None:
         """Execute the scene with the specified ID."""
