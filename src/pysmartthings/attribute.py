@@ -20,6 +20,7 @@ class Attribute(StrEnum):
     ACTIVITIES = "activities"
     ACTIVITY = "activity"
     ACTIVITY_SENSITIVITY = "activitySensitivity"
+    ACTUAL_FAN_SPEED = "actualFanSpeed"
     ADD_RINSE = "addRinse"
     AIR_CONDITIONER_MODE = "airConditionerMode"
     AIR_CONDITIONER_ODOR_CONTROLLER_PROGRESS = "airConditionerOdorControllerProgress"
@@ -55,6 +56,7 @@ class Attribute(StrEnum):
     AUTO_CLEANING_MODE = "autoCleaningMode"
     AUTO_DOOR_RELEASE_ENABLED = "autoDoorReleaseEnabled"
     AUTO_LOCK = "autoLock"
+    AUTO_MODE = "autoMode"
     AUTO_RECONNECTION = "autoReconnection"
     AUTO_UPDATE_ENABLED = "autoUpdateEnabled"
     AUTOLOCK = "autolock"
@@ -80,6 +82,7 @@ class Attribute(StrEnum):
     BABY_DETERGENT_TYPE = "babyDetergentType"
     BASIC_HTML = "basicHtml"
     BASIC_HTML_DISABLE = "basicHtmlDisable"
+    BASIC_SET_ASSOCIATION_GROUP = "basicSetAssociationGroup"
     BATON_TOUCH = "batonTouch"
     BATTERY = "battery"
     BEEP = "beep"
@@ -224,6 +227,7 @@ class Attribute(StrEnum):
     DISHWASHER_OPERATING_PERCENTAGE = "dishwasherOperatingPercentage"
     DISHWASHER_OPERATING_PROGRESS = "dishwasherOperatingProgress"
     DISPLAY = "display"
+    DISTANCE = "distance"
     DATA_MODEL_VERSION = "dmv"
     DO_NOT_DISTURB = "doNotDisturb"
     DOOR = "door"
@@ -264,6 +268,7 @@ class Attribute(StrEnum):
     DUST_FILTER_USAGE_STEP = "dustFilterUsageStep"
     DUST_HEALTH_CONCERN = "dustHealthConcern"
     DUST_LEVEL = "dustLevel"
+    EFFECT_MODE = "effectMode"
     EFFECTS_SET_COMMAND = "effectsSetCommand"
     ELAPSED_TIME = "elapsedTime"
     ELECTRIC_HEPA_FILTER_CAPACITY = "electricHepaFilterCapacity"
@@ -318,6 +323,7 @@ class Attribute(StrEnum):
     FAULT_STATE = "faultState"
     FEED_PORTION = "feedPortion"
     FEEDER_OPERATING_STATE = "feederOperatingState"
+    FILTER_CHANGE_NEEDED = "filterChangeNeeded"
     FILTER_LIFE_REMAINING = "filterLifeRemaining"
     FILTER_STATUS = "filterStatus"
     FINE_DUST_HEALTH_CONCERN = "fineDustHealthConcern"
@@ -398,6 +404,7 @@ class Attribute(StrEnum):
     HUE_STEPS = "hueSteps"
     HUMIDIFIER_MODE = "humidifierMode"
     HUMIDITY = "humidity"
+    HUMIDITY_ALARM = "humidityAlarm"
     HUMIDITY_CONDITION = "humidityCondition"
     HUMIDITY_TARGET = "humidityTarget"
     SPEC_VERSION = "icv"
@@ -450,6 +457,9 @@ class Attribute(StrEnum):
     LED_BAR_OFF_LEVEL = "ledBarOffLevel"
     LED_BAR_ON_COLOR = "ledBarOnColor"
     LED_BAR_ON_LEVEL = "ledBarOnLevel"
+    LED_BRIGHTNESS = "ledBrightness"
+    LED_COLOR = "ledColor"
+    LED_MODE = "ledMode"
     LED_NOTIFICATION = "ledNotification"
     LEVEL = "level"
     LEVEL_LOCAL = "levelLocal"
@@ -543,6 +553,7 @@ class Attribute(StrEnum):
     MODEL_CODE = "modelCode"
     MODEL_NAME = "modelName"
     MOLD_HEALTH_CONCERN = "moldHealthConcern"
+    MONITORING_MODE = "monitoringMode"
     MONITORING_STATUS = "monitoringStatus"
     MONTHLY_USAGE = "monthlyUsage"
     MOTION = "motion"
@@ -597,6 +608,7 @@ class Attribute(StrEnum):
     OTN_D_U_I_D = "otnDUID"
     OUT_OF_SYNC_CHANGES = "outOfSyncChanges"
     OUTDOOR = "outdoor"
+    OUTDOOR_UNIT_DEFROSTING = "outdoorUnitDefrosting"
     OUTING_MODE = "outingMode"
     OVEN_CAVITY_STATUS = "ovenCavityStatus"
     OVEN_JOB_STATE = "ovenJobState"
@@ -607,6 +619,7 @@ class Attribute(StrEnum):
     OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
     PH = "pH"
     PANIC_ALARM = "panicAlarm"
+    PATH = "path"
     PATROL_STATUS = "patrolStatus"
     PAYLOAD = "payload"
     PERCENT = "percent"
@@ -642,6 +655,7 @@ class Attribute(StrEnum):
     PRECIPITATION_RATE = "precipitationRate"
     PREDEFINED_COURSES = "predefinedCourses"
     PRESENCE = "presence"
+    PRESENCE_STATUS = "presenceStatus"
     PRESETS = "presets"
     PRESSURE = "pressure"
     PRESSURE_ALARM = "pressureAlarm"
@@ -782,6 +796,7 @@ class Attribute(StrEnum):
     SYSTEM_TIME = "st"
     STAGE = "stage"
     STAGE_STATUS = "stageStatus"
+    STANDBY_MODE = "standbyMode"
     START_DATE = "startDate"
     START_TIME = "startTime"
     START_VALUE = "startValue"
@@ -847,6 +862,8 @@ class Attribute(StrEnum):
     SUPPORTED_AUTOMATIC_EXECUTION_SETTING = "supportedAutomaticExecutionSetting"
     SUPPORTED_BRIGHTNESS_LEVEL = "supportedBrightnessLevel"
     SUPPORTED_BUTTON_VALUES = "supportedButtonValues"
+    SUPPORTED_CARBON_DIOXIDE_VALUES = "supportedCarbonDioxideValues"
+    SUPPORTED_CARBON_MONOXIDE_VALUES = "supportedCarbonMonoxideValues"
     SUPPORTED_CATEGORIES = "supportedCategories"
     SUPPORTED_CHARGE_POINT_STATES = "supportedChargePointStates"
     SUPPORTED_CHARGING_COMMANDS = "supportedChargingCommands"
@@ -871,13 +888,16 @@ class Attribute(StrEnum):
     SUPPORTED_DRYER_DRY_LEVEL = "supportedDryerDryLevel"
     SUPPORTED_DRYING_TEMPERATURE = "supportedDryingTemperature"
     SUPPORTED_DRYING_TIME = "supportedDryingTime"
+    SUPPORTED_DUST_VALUES = "supportedDustValues"
     SUPPORTED_ENERGY_SAVING_LEVELS = "supportedEnergySavingLevels"
     SUPPORTED_EVENTS = "supportedEvents"
     SUPPORTED_FAN_MODES = "supportedFanModes"
     SUPPORTED_FAN_OSCILLATION_MODES = "supportedFanOscillationModes"
     SUPPORTED_FEATURES = "supportedFeatures"
     SUPPORTED_FILTER_COMMANDS = "supportedFilterCommands"
+    SUPPORTED_FINE_DUST_VALUES = "supportedFineDustValues"
     SUPPORTED_FOCUS_AREAS = "supportedFocusAreas"
+    SUPPORTED_FORMALDEHYDE_VALUES = "supportedFormaldehydeValues"
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
     SUPPORTED_HEATING_MODES = "supportedHeatingModes"
@@ -900,18 +920,22 @@ class Attribute(StrEnum):
     SUPPORTED_MODES = "supportedModes"
     SUPPORTED_MOTION_POSITIONS = "supportedMotionPositions"
     SUPPORTED_MOVEMENTS = "supportedMovements"
+    SUPPORTED_NITROGEN_DIOXIDE_VALUES = "supportedNitrogenDioxideValues"
     SUPPORTED_OPERATING_STATE = "supportedOperatingState"
+    SUPPORTED_OPERATING_STATE_COMMANDS = "supportedOperatingStateCommands"
     SUPPORTED_OPERATING_STATES = "supportedOperatingStates"
     SUPPORTED_OPERATION_MODES = "supportedOperationModes"
     SUPPORTED_OPERATIONAL_STATES = "supportedOperationalStates"
     SUPPORTED_OPTIONS = "supportedOptions"
     SUPPORTED_OVEN_MODES = "supportedOvenModes"
+    SUPPORTED_OZONE_VALUES = "supportedOzoneValues"
     SUPPORTED_PET_ACTIVITIES = "supportedPetActivities"
     SUPPORTED_PICTURE_MODES = "supportedPictureModes"
     SUPPORTED_PICTURE_MODES_MAP = "supportedPictureModesMap"
     SUPPORTED_PLAYBACK_COMMANDS = "supportedPlaybackCommands"
     SUPPORTED_POSITIONS = "supportedPositions"
     SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
+    SUPPORTED_RADON_VALUES = "supportedRadonValues"
     SUPPORTED_RINSE_MODES = "supportedRinseModes"
     SUPPORTED_ROBOT_CLEANER_STATES = "supportedRobotCleanerStates"
     SUPPORTED_ROBOT_COMMANDS = "supportedRobotCommands"
@@ -925,15 +949,19 @@ class Attribute(StrEnum):
     SUPPORTED_SOUND_TYPES = "supportedSoundTypes"
     SUPPORTED_SPIN_SPEEDS = "supportedSpinSpeeds"
     SUPPORTED_STATUS = "supportedStatus"
+    SUPPORTED_STATUSES = "supportedStatuses"
     SUPPORTED_STEAM_CLOSET_JOB_STATE = "supportedSteamClosetJobState"
     SUPPORTED_STEAM_CLOSET_MACHINE_STATE = "supportedSteamClosetMachineState"
     SUPPORTED_TEMPERATURE_LEVELS = "supportedTemperatureLevels"
     SUPPORTED_THERMOSTAT_FAN_MODES = "supportedThermostatFanModes"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
+    SUPPORTED_THERMOSTAT_OPERATING_STATES = "supportedThermostatOperatingStates"
     SUPPORTED_TRACK_CONTROL_COMMANDS = "supportedTrackControlCommands"
+    SUPPORTED_TVOC_VALUES = "supportedTvocValues"
     SUPPORTED_TYPES = "supportedTypes"
     SUPPORTED_UNLOCK_DIRECTIONS = "supportedUnlockDirections"
     SUPPORTED_VALUES = "supportedValues"
+    SUPPORTED_VERY_FINE_DUST_VALUES = "supportedVeryFineDustValues"
     SUPPORTED_VOLUME_LEVELS = "supportedVolumeLevels"
     SUPPORTED_WASHER_RINSE_CYCLES = "supportedWasherRinseCycles"
     SUPPORTED_WASHER_SOIL_LEVEL = "supportedWasherSoilLevel"
@@ -952,6 +980,7 @@ class Attribute(StrEnum):
     SWITCH = "switch"
     SWITCH_ALL_ON_OFF = "switchAllOnOff"
     SWITCH_STATE = "switchState"
+    SYSTEM_PREHEATING = "systemPreheating"
     TAG_BUTTON = "tagButton"
     TAG_STATUS = "tagStatus"
     TALKBACK = "talkback"
@@ -965,6 +994,7 @@ class Attribute(StrEnum):
     TEMP_TARGET = "tempTarget"
     TEMPERATURE = "temperature"
     TEMPERATURE_ALARM = "temperatureAlarm"
+    TEMPERATURE_HUMIDITY = "temperatureHumidity"
     TEMPERATURE_LEVEL = "temperatureLevel"
     TEMPERATURE_RANGE = "temperatureRange"
     TEMPERATURE_REFERENCE = "temperatureReference"
@@ -972,6 +1002,7 @@ class Attribute(StrEnum):
     TEMPERATURE_SETPOINT_RANGE = "temperatureSetpointRange"
     TEXT = "text"
     THERMOSTAT_FAN_MODE = "thermostatFanMode"
+    THERMOSTAT_FAN_SETTING = "thermostatFanSetting"
     THERMOSTAT_MODE = "thermostatMode"
     THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
     THERMOSTAT_SETPOINT = "thermostatSetpoint"
@@ -1086,6 +1117,7 @@ class Attribute(StrEnum):
     WATER_USAGE_MAX = "waterUsageMax"
     WATER_USAGE_MONTH = "waterUsageMonth"
     WATER_VALVE = "waterValve"
+    WATTS = "watts"
     WAYPOINTS = "waypoints"
     WEEK_DAY_SCHEDULES = "weekDaySchedules"
     WEEK_DAY_SCHEDULES_PER_USER = "weekDaySchedulesPerUser"
@@ -1177,11 +1209,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.BYPASSABLE: [Attribute.BYPASS_STATUS],
     Capability.CAMERA_EVENT: [Attribute.EVENT, Attribute.SUPPORTED_EVENTS],
     Capability.CAMERA_PRESET: [Attribute.PRESETS],
-    Capability.CARBON_DIOXIDE_HEALTH_CONCERN: [Attribute.CARBON_DIOXIDE_HEALTH_CONCERN],
+    Capability.CARBON_DIOXIDE_HEALTH_CONCERN: [
+        Attribute.CARBON_DIOXIDE_HEALTH_CONCERN,
+        Attribute.SUPPORTED_CARBON_DIOXIDE_VALUES,
+    ],
     Capability.CARBON_DIOXIDE_MEASUREMENT: [Attribute.CARBON_DIOXIDE],
     Capability.CARBON_MONOXIDE_DETECTOR: [Attribute.CARBON_MONOXIDE],
     Capability.CARBON_MONOXIDE_HEALTH_CONCERN: [
-        Attribute.CARBON_MONOXIDE_HEALTH_CONCERN
+        Attribute.CARBON_MONOXIDE_HEALTH_CONCERN,
+        Attribute.SUPPORTED_CARBON_MONOXIDE_VALUES,
     ],
     Capability.CARBON_MONOXIDE_MEASUREMENT: [Attribute.CARBON_MONOXIDE_LEVEL],
     Capability.CHARGE_POINT_STATE: [
@@ -1250,7 +1286,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MACHINE_STATE,
         Attribute.SUPPORTED_MACHINE_STATES,
     ],
-    Capability.DUST_HEALTH_CONCERN: [Attribute.DUST_HEALTH_CONCERN],
+    Capability.DUST_HEALTH_CONCERN: [
+        Attribute.DUST_HEALTH_CONCERN,
+        Attribute.SUPPORTED_DUST_VALUES,
+    ],
     Capability.DUST_SENSOR: [Attribute.DUST_LEVEL, Attribute.FINE_DUST_LEVEL],
     Capability.ELEVATOR_CALL: [Attribute.CALL_STATUS],
     Capability.END_TO_END_ENCRYPTION: [Attribute.ENCRYPTED_KEK, Attribute.NONCE],
@@ -1290,7 +1329,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_FILTER_COMMANDS,
     ],
     Capability.FILTER_STATUS: [Attribute.FILTER_STATUS],
-    Capability.FINE_DUST_HEALTH_CONCERN: [Attribute.FINE_DUST_HEALTH_CONCERN],
+    Capability.FINE_DUST_HEALTH_CONCERN: [
+        Attribute.FINE_DUST_HEALTH_CONCERN,
+        Attribute.SUPPORTED_FINE_DUST_VALUES,
+    ],
     Capability.FINE_DUST_SENSOR: [Attribute.FINE_DUST_LEVEL],
     Capability.FIRMWARE_UPDATE: [
         Attribute.AVAILABLE_VERSION,
@@ -1306,7 +1348,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.UPDATE_AVAILABLE,
     ],
     Capability.FLOW_MEASUREMENT: [Attribute.FLOW, Attribute.FLOW_RANGE],
-    Capability.FORMALDEHYDE_HEALTH_CONCERN: [Attribute.FORMALDEHYDE_HEALTH_CONCERN],
+    Capability.FORMALDEHYDE_HEALTH_CONCERN: [
+        Attribute.FORMALDEHYDE_HEALTH_CONCERN,
+        Attribute.SUPPORTED_FORMALDEHYDE_VALUES,
+    ],
     Capability.FORMALDEHYDE_MEASUREMENT: [Attribute.FORMALDEHYDE_LEVEL],
     Capability.GARAGE_DOOR_CONTROL: [Attribute.DOOR],
     Capability.GAS_CONSUMPTION_REPORT: [Attribute.GAS_CONSUMPTION],
@@ -1470,7 +1515,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.NETWORK_METER: [Attribute.DOWNLINK_SPEED, Attribute.UPLINK_SPEED],
     Capability.NITROGEN_DIOXIDE_HEALTH_CONCERN: [
-        Attribute.NITROGEN_DIOXIDE_HEALTH_CONCERN
+        Attribute.NITROGEN_DIOXIDE_HEALTH_CONCERN,
+        Attribute.SUPPORTED_NITROGEN_DIOXIDE_VALUES,
     ],
     Capability.NITROGEN_DIOXIDE_MEASUREMENT: [Attribute.NITROGEN_DIOXIDE],
     Capability.NOTIFICATION: [],
@@ -1523,7 +1569,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_MACHINE_STATES,
     ],
     Capability.OVEN_SETPOINT: [Attribute.OVEN_SETPOINT, Attribute.OVEN_SETPOINT_RANGE],
-    Capability.OZONE_HEALTH_CONCERN: [Attribute.OZONE_HEALTH_CONCERN],
+    Capability.OZONE_HEALTH_CONCERN: [
+        Attribute.OZONE_HEALTH_CONCERN,
+        Attribute.SUPPORTED_OZONE_VALUES,
+    ],
     Capability.OZONE_MEASUREMENT: [Attribute.OZONE],
     Capability.PH_MEASUREMENT: [Attribute.PH],
     Capability.PANIC_ALARM: [Attribute.PANIC_ALARM],
@@ -1550,7 +1599,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OPERATION_MODE,
         Attribute.SUPPORTED_OPERATION_MODES,
     ],
-    Capability.RADON_HEALTH_CONCERN: [Attribute.RADON_HEALTH_CONCERN],
+    Capability.RADON_HEALTH_CONCERN: [
+        Attribute.RADON_HEALTH_CONCERN,
+        Attribute.SUPPORTED_RADON_VALUES,
+    ],
     Capability.RADON_MEASUREMENT: [Attribute.RADON_LEVEL],
     Capability.RAIN_SENSOR: [Attribute.RAIN],
     Capability.RAPID_COOLING: [Attribute.RAPID_COOLING],
@@ -1584,6 +1636,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ROBOT_CLEANER_OPERATING_STATE: [
         Attribute.OPERATING_STATE,
         Attribute.SUPPORTED_OPERATING_STATES,
+        Attribute.SUPPORTED_OPERATING_STATE_COMMANDS,
     ],
     Capability.ROBOT_CLEANER_STATE: [
         Attribute.ROBOT_CLEANER_CLEANING_STATE,
@@ -1687,7 +1740,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_THERMOSTAT_MODES,
         Attribute.THERMOSTAT_MODE,
     ],
-    Capability.THERMOSTAT_OPERATING_STATE: [Attribute.THERMOSTAT_OPERATING_STATE],
+    Capability.THERMOSTAT_OPERATING_STATE: [
+        Attribute.SUPPORTED_THERMOSTAT_OPERATING_STATES,
+        Attribute.THERMOSTAT_OPERATING_STATE,
+    ],
     Capability.THERMOSTAT_SCHEDULE: [Attribute.SCHEDULE],
     Capability.THERMOSTAT_SETPOINT: [Attribute.THERMOSTAT_SETPOINT],
     Capability.THERMOSTAT_WATER_HEATING_SETPOINT: [
@@ -1699,7 +1755,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.TONE: [],
     Capability.TOUCH_SENSOR: [Attribute.TOUCH],
     Capability.TV_CHANNEL: [Attribute.TV_CHANNEL, Attribute.TV_CHANNEL_NAME],
-    Capability.TVOC_HEALTH_CONCERN: [Attribute.TVOC_HEALTH_CONCERN],
+    Capability.TVOC_HEALTH_CONCERN: [
+        Attribute.SUPPORTED_TVOC_VALUES,
+        Attribute.TVOC_HEALTH_CONCERN,
+    ],
     Capability.TVOC_MEASUREMENT: [Attribute.TVOC_LEVEL],
     Capability.ULTRAVIOLET_INDEX: [Attribute.ULTRAVIOLET_INDEX],
     Capability.VALVE: [Attribute.VALVE],
@@ -1718,7 +1777,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.VEHICLE_ODOMETER: [Attribute.ODOMETER_READING],
     Capability.VEHICLE_RANGE: [Attribute.ESTIMATED_REMAINING_RANGE],
     Capability.VEHICLE_TIRE_PRESSURE_MONITOR: [Attribute.TIRE_PRESSURE_STATE],
-    Capability.VERY_FINE_DUST_HEALTH_CONCERN: [Attribute.VERY_FINE_DUST_HEALTH_CONCERN],
+    Capability.VERY_FINE_DUST_HEALTH_CONCERN: [
+        Attribute.SUPPORTED_VERY_FINE_DUST_VALUES,
+        Attribute.VERY_FINE_DUST_HEALTH_CONCERN,
+    ],
     Capability.VERY_FINE_DUST_SENSOR: [Attribute.VERY_FINE_DUST_LEVEL],
     Capability.VIDEO_CAMERA: [
         Attribute.CAMERA,
@@ -2766,9 +2828,21 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.AMBERPIANO10217_GROUP_INFO: [Attribute.INFO_HTML, Attribute.INFO_TEXT],
     Capability.AMBERPIANO10217_GROUP_REMOVE: [Attribute.GROUP_ID],
     Capability.AMBERPIANO10217_GROUP_REMOVE_ALL: [],
+    Capability.AMBERPIANO10217_MONITORED_APPROACH_DISTANCE: [
+        Attribute.DISTANCE,
+        Attribute.SUPPORTED_MODES,
+    ],
     Capability.AMBERPIANO10217_OBJECT: [Attribute.DATA],
+    Capability.AMBERPIANO10217_PRESENCE_DETECTION_STATUS: [
+        Attribute.PRESENCE_STATUS,
+        Attribute.SUPPORTED_STATUSES,
+    ],
     Capability.AMBERPIANO10217_SENSOR_DETECTION_SENSITIVITY: [
         Attribute.SENSITIVITY_MODE,
+        Attribute.SUPPORTED_MODES,
+    ],
+    Capability.AMBERPIANO10217_SENSOR_MONITORING_MODE: [
+        Attribute.MONITORING_MODE,
         Attribute.SUPPORTED_MODES,
     ],
     Capability.AMBERPIANO10217_VIRTUAL_THING_TYPE: [
@@ -2939,12 +3013,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_VOLUMEDOWN: [],
     Capability.PARTYVOICE23922_VOLUMEUP: [],
     Capability.PARTYVOICE23922_VTEMPSET: [Attribute.VTEMP],
+    Capability.PARTYVOICE23922_WATTAGE4: [Attribute.WATTS],
     Capability.PARTYVOICE23922_WEBREQUEST: [],
     Capability.PARTYVOICE23922_WEBREQUESTSELECT: [Attribute.SELECTION],
     Capability.PARTYVOICE23922_WINDDIRDEG: [Attribute.WINDDEG],
     Capability.PARTYVOICE23922_WINDDIRECTION2: [Attribute.DIRECTION],
     Capability.PARTYVOICE23922_WINDGUST: [Attribute.WINDGUST],
     Capability.PARTYVOICE23922_WINDSPEED5: [Attribute.W_SPEED],
+    Capability.PARTYVOICE23922_WLEDEFFECTMODE2: [Attribute.EFFECT_MODE],
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR: [
         Attribute.ASSOCIATION_GROUP_FOUR
     ],
@@ -2952,8 +3028,18 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ASSOCIATION_GROUP_THREE
     ],
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: [Attribute.ASSOCIATION_GROUP_TWO],
+    Capability.PLATEMUSIC11009_BASIC_SET_ASSOCIATION_GROUP: [
+        Attribute.BASIC_SET_ASSOCIATION_GROUP
+    ],
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [Attribute.DEVICE_NETWORK_ID],
     Capability.PLATEMUSIC11009_FIRMWARE: [Attribute.FIRMWARE_VERSION],
+    Capability.PLATEMUSIC11009_HUMIDITY_ALARM: [Attribute.HUMIDITY_ALARM],
+    Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [
+        Attribute.TEMPERATURE_HUMIDITY
+    ],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_BRIGHTNESS: [Attribute.LED_BRIGHTNESS],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR: [Attribute.LED_COLOR],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_MODE: [Attribute.LED_MODE],
     Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Attribute.AUTO_LOCK],
     Capability.PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL: [Attribute.DEFAULT_LEVEL],
     Capability.PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING: [Attribute.LIGHT_SENSING],
@@ -3085,7 +3171,18 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.TAG_UPDATED_INFO: [Attribute.CONNECTION],
     Capability.TAG_UWB_ACTIVATION: [Attribute.UWB_ACTIVATION],
     Capability.VALLEYBOARD16460_DEBUG: [Attribute.VALUE],
+    Capability.VALLEYBOARD16460_HTTPREQUESTPATH: [Attribute.PATH],
     Capability.VALLEYBOARD16460_INFO: [Attribute.VALUE],
+    Capability.WATCHDIGIT58804_ACTUALFANSPEED: [Attribute.ACTUAL_FAN_SPEED],
+    Capability.WATCHDIGIT58804_AUTOMODE: [Attribute.AUTO_MODE],
+    Capability.WATCHDIGIT58804_ERRORSTRING: [Attribute.ERROR],
+    Capability.WATCHDIGIT58804_FILTERCHANGENEEDED: [Attribute.FILTER_CHANGE_NEEDED],
+    Capability.WATCHDIGIT58804_OUTDOORUNITDEFROSTING: [
+        Attribute.OUTDOOR_UNIT_DEFROSTING
+    ],
+    Capability.WATCHDIGIT58804_STANDBYMODE: [Attribute.STANDBY_MODE],
+    Capability.WATCHDIGIT58804_SYSTEMPREHEATING: [Attribute.SYSTEM_PREHEATING],
+    Capability.WATCHDIGIT58804_THERMOSTATFANSETTING: [Attribute.THERMOSTAT_FAN_SETTING],
     Capability.WATCHPANEL55613_LCCTHERMOSTAT: [Attribute.DRCAPABLE],
     Capability.WATCHPANEL55613_TCCTHERMOSTAT: [Attribute.DRCAPABLE],
 }

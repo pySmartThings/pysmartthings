@@ -580,10 +580,17 @@ class Capability(StrEnum):
     AMBERPIANO10217_GROUP_INFO = "amberpiano10217.groupInfo"
     AMBERPIANO10217_GROUP_REMOVE = "amberpiano10217.groupRemove"
     AMBERPIANO10217_GROUP_REMOVE_ALL = "amberpiano10217.groupRemoveAll"
+    AMBERPIANO10217_MONITORED_APPROACH_DISTANCE = (
+        "amberpiano10217.monitoredApproachDistance"
+    )
     AMBERPIANO10217_OBJECT = "amberpiano10217.object"
+    AMBERPIANO10217_PRESENCE_DETECTION_STATUS = (
+        "amberpiano10217.presenceDetectionStatus"
+    )
     AMBERPIANO10217_SENSOR_DETECTION_SENSITIVITY = (
         "amberpiano10217.sensorDetectionSensitivity"
     )
+    AMBERPIANO10217_SENSOR_MONITORING_MODE = "amberpiano10217.sensorMonitoringMode"
     AMBERPIANO10217_VIRTUAL_THING_TYPE = "amberpiano10217.virtualThingType"
 
     EVENTFLUTE36860_DEFAULT_LEVEL_LOCAL = "eventflute36860.defaultLevelLocal"
@@ -728,18 +735,30 @@ class Capability(StrEnum):
     PARTYVOICE23922_VOLUMEDOWN = "partyvoice23922.volumedown"
     PARTYVOICE23922_VOLUMEUP = "partyvoice23922.volumeup"
     PARTYVOICE23922_VTEMPSET = "partyvoice23922.vtempset"
+    PARTYVOICE23922_WATTAGE4 = "partyvoice23922.wattage4"
     PARTYVOICE23922_WEBREQUEST = "partyvoice23922.webrequest"
     PARTYVOICE23922_WEBREQUESTSELECT = "partyvoice23922.webrequestselect"
     PARTYVOICE23922_WINDDIRDEG = "partyvoice23922.winddirdeg"
     PARTYVOICE23922_WINDDIRECTION2 = "partyvoice23922.winddirection2"
     PARTYVOICE23922_WINDGUST = "partyvoice23922.windgust"
     PARTYVOICE23922_WINDSPEED5 = "partyvoice23922.windspeed5"
+    PARTYVOICE23922_WLEDEFFECTMODE2 = "partyvoice23922.wledeffectmode2"
 
     PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR = "platemusic11009.associationGroupFour"
     PLATEMUSIC11009_ASSOCIATION_GROUP_THREE = "platemusic11009.associationGroupThree"
     PLATEMUSIC11009_ASSOCIATION_GROUP_TWO = "platemusic11009.associationGroupTwo"
+    PLATEMUSIC11009_BASIC_SET_ASSOCIATION_GROUP = (
+        "platemusic11009.basicSetAssociationGroup"
+    )
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
+    PLATEMUSIC11009_HUMIDITY_ALARM = "platemusic11009.humidityAlarm"
+    PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR = (
+        "platemusic11009.temperatureHumiditySensor"
+    )
+    PLATEMUSIC11009_ZOOZ_LED_BRIGHTNESS = "platemusic11009.zoozLedBrightness"
+    PLATEMUSIC11009_ZOOZ_LED_COLOR = "platemusic11009.zoozLedColor"
+    PLATEMUSIC11009_ZOOZ_LED_MODE = "platemusic11009.zoozLedMode"
 
     PLATINUMMASSIVE43262_AUTO_LOCK = "platinummassive43262.autoLock"
     PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL = "platinummassive43262.jascoDefaultLevel"
@@ -804,7 +823,17 @@ class Capability(StrEnum):
     TAG_UWB_ACTIVATION = "tag.uwbActivation"
 
     VALLEYBOARD16460_DEBUG = "valleyboard16460.debug"
+    VALLEYBOARD16460_HTTPREQUESTPATH = "valleyboard16460.httprequestpath"
     VALLEYBOARD16460_INFO = "valleyboard16460.info"
+
+    WATCHDIGIT58804_ACTUALFANSPEED = "watchdigit58804.actualfanspeed"
+    WATCHDIGIT58804_AUTOMODE = "watchdigit58804.automode"
+    WATCHDIGIT58804_ERRORSTRING = "watchdigit58804.errorstring"
+    WATCHDIGIT58804_FILTERCHANGENEEDED = "watchdigit58804.filterchangeneeded"
+    WATCHDIGIT58804_OUTDOORUNITDEFROSTING = "watchdigit58804.outdoorunitdefrosting"
+    WATCHDIGIT58804_STANDBYMODE = "watchdigit58804.standbymode"
+    WATCHDIGIT58804_SYSTEMPREHEATING = "watchdigit58804.systempreheating"
+    WATCHDIGIT58804_THERMOSTATFANSETTING = "watchdigit58804.thermostatfansetting"
 
     WATCHPANEL55613_LCCTHERMOSTAT = "watchpanel55613.lccthermostat"
     WATCHPANEL55613_TCCTHERMOSTAT = "watchpanel55613.tccthermostat"

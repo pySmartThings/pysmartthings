@@ -110,6 +110,7 @@ class Command(StrEnum):
     G_E_T = "GET"
     GENERATE_NONCE = "generateNonce"
     GET_SCAN_RESULTS = "getScanResults"
+    GO_HOME = "goHome"
     GROUP_VOLUME_DOWN = "groupVolumeDown"
     GROUP_VOLUME_UP = "groupVolumeUp"
     HEAT = "heat"
@@ -197,6 +198,7 @@ class Command(StrEnum):
     SET_ACM_MODE = "setAcmMode"
     SET_ACTION_SETTING = "setActionSetting"
     SET_ACTIVITY_SENSITIVITY = "setActivitySensitivity"
+    SET_ACTUAL_FAN_SPEED = "setActualFanSpeed"
     SET_ADD_RINSE = "setAddRinse"
     SET_AIR_CONDITIONER_MODE = "setAirConditionerMode"
     SET_AIR_CONDITIONER_ODOR_CONTROLLER_STATE = "setAirConditionerOdorControllerState"
@@ -214,6 +216,7 @@ class Command(StrEnum):
     SET_AUDIO = "setAudio"
     SET_AUDIO_TRACK = "setAudioTrack"
     SET_AUTO_CLEANING_MODE = "setAutoCleaningMode"
+    SET_AUTO_MODE = "setAutoMode"
     SET_AUTO_REPLENISHMENT = "setAutoReplenishment"
     SET_AUTOLOCK = "setAutolock"
     SET_AUTOMATIC_EXECUTION_MODE = "setAutomaticExecutionMode"
@@ -275,6 +278,7 @@ class Command(StrEnum):
     SET_DEVICE_TYPE = "setDeviceType"
     SET_DISHWASHER_DELAY_START_TIME = "setDishwasherDelayStartTime"
     SET_DISHWASHER_MODE = "setDishwasherMode"
+    SET_DISTANCE = "setDistance"
     SET_DO_NOT_DISTURB_MODE = "setDoNotDisturbMode"
     SET_DOSAGE = "setDosage"
     SET_DRIVER_VERSION = "setDriverVersion"
@@ -290,6 +294,7 @@ class Command(StrEnum):
     SET_DRYING_TEMPERATURE = "setDryingTemperature"
     SET_DRYING_TIME = "setDryingTime"
     SET_DURATION = "setDuration"
+    SET_EFFECT_MODE = "setEffectMode"
     SET_EFFECTS_SET_COMMAND = "setEffectsSetCommand"
     SET_ENABLE_STATE = "setEnableState"
     SET_ENABLED = "setEnabled"
@@ -301,6 +306,7 @@ class Command(StrEnum):
     SET_FAN_MODE = "setFanMode"
     SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
     SET_FAN_SPEED = "setFanSpeed"
+    SET_FILTER_CHANGE_NEEDED = "setFilterChangeNeeded"
     SET_FIRMWARE_VERSION = "setFirmwareVersion"
     SET_FORCED_ON_LEVEL = "setForcedOnLevel"
     SET_FORCED_SENSITIVITY = "setForcedSensitivity"
@@ -336,6 +342,9 @@ class Command(StrEnum):
     SET_LED_BAR_OFF_LEVEL = "setLedBarOffLevel"
     SET_LED_BAR_ON_COLOR = "setLedBarOnColor"
     SET_LED_BAR_ON_LEVEL = "setLedBarOnLevel"
+    SET_LED_BRIGHTNESS = "setLedBrightness"
+    SET_LED_COLOR = "setLedColor"
+    SET_LED_MODE = "setLedMode"
     SET_LEVEL = "setLevel"
     SET_LEVEL_LOCAL = "setLevelLocal"
     SET_LEVEL_STEPS = "setLevelSteps"
@@ -392,9 +401,11 @@ class Command(StrEnum):
     SET_OPTION = "setOption"
     SET_OPTIONS = "setOptions"
     SET_ORDER_THRESHOLD = "setOrderThreshold"
+    SET_OUTDOOR_UNIT_DEFROSTING = "setOutdoorUnitDefrosting"
     SET_OUTING_MODE = "setOutingMode"
     SET_OVEN_MODE = "setOvenMode"
     SET_OVEN_SETPOINT = "setOvenSetpoint"
+    SET_PATH = "setPath"
     SET_PATROL = "setPatrol"
     SET_PERCENT = "setPercent"
     SET_PERIODIC_SENSING = "setPeriodicSensing"
@@ -457,6 +468,7 @@ class Command(StrEnum):
     SET_SPI_MODE = "setSpiMode"
     SET_SPIN_SPEED = "setSpinSpeed"
     SET_STAGE = "setStage"
+    SET_STANDBY_MODE = "setStandbyMode"
     SET_START_VALUE = "setStartValue"
     SET_STARTSTOP = "setStartstop"
     SET_STATUS = "setStatus"
@@ -476,6 +488,7 @@ class Command(StrEnum):
     SET_SUN_SET = "setSunSet"
     SET_SUN_SET_OFFSET = "setSunSetOffset"
     SET_SWITCH_ALL_ON_OFF = "setSwitchAllOnOff"
+    SET_SYSTEM_PREHEATING = "setSystemPreheating"
     SET_TAMPER_SENSITIVITY = "setTamperSensitivity"
     SET_TARGET_END_TIME = "setTargetEndTime"
     SET_TEMP_CONDITION = "setTempCondition"
@@ -483,6 +496,7 @@ class Command(StrEnum):
     SET_TEMPERATURE_LEVEL = "setTemperatureLevel"
     SET_TEMPERATURE_SETPOINT = "setTemperatureSetpoint"
     SET_THERMOSTAT_FAN_MODE = "setThermostatFanMode"
+    SET_THERMOSTAT_FAN_SETTING = "setThermostatFanSetting"
     SET_THERMOSTAT_MODE = "setThermostatMode"
     SET_THING_TYPE = "setThingType"
     SET_TIME = "setTime"
@@ -516,6 +530,7 @@ class Command(StrEnum):
     SET_WATER_LEVEL = "setWaterLevel"
     SET_WATER_SPRAY_LEVEL = "setWaterSprayLevel"
     SET_WATER_VALVE = "setWaterValve"
+    SET_WATTS = "setWatts"
     SET_WEEK_DAY_SCHEDULE = "setWeekDaySchedule"
     SET_WELCOME_MESSAGE = "setWelcomeMessage"
     SET_WIND_MODE = "setWindMode"
@@ -891,7 +906,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.ROBOT_CLEANER_CLEANING_MODE: [Command.SET_ROBOT_CLEANER_CLEANING_MODE],
     Capability.ROBOT_CLEANER_MOVEMENT: [Command.SET_ROBOT_CLEANER_MOVEMENT],
-    Capability.ROBOT_CLEANER_OPERATING_STATE: [],
+    Capability.ROBOT_CLEANER_OPERATING_STATE: [
+        Command.GO_HOME,
+        Command.PAUSE,
+        Command.START,
+    ],
     Capability.ROBOT_CLEANER_STATE: [
         Command.SET_ROBOT_CLEANER_CLEANING_STATE,
         Command.SET_ROBOT_CLEANER_CONTROL_STATE,
@@ -1613,8 +1632,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.AMBERPIANO10217_GROUP_INFO: [],
     Capability.AMBERPIANO10217_GROUP_REMOVE: [Command.PUSH, Command.REMOVE],
     Capability.AMBERPIANO10217_GROUP_REMOVE_ALL: [Command.PUSH],
+    Capability.AMBERPIANO10217_MONITORED_APPROACH_DISTANCE: [Command.SET_DISTANCE],
     Capability.AMBERPIANO10217_OBJECT: [],
+    Capability.AMBERPIANO10217_PRESENCE_DETECTION_STATUS: [Command.SET_STATUS],
     Capability.AMBERPIANO10217_SENSOR_DETECTION_SENSITIVITY: [Command.SET_MODE],
+    Capability.AMBERPIANO10217_SENSOR_MONITORING_MODE: [Command.SET_MODE],
     Capability.AMBERPIANO10217_VIRTUAL_THING_TYPE: [Command.SET_THING_TYPE],
     Capability.EVENTFLUTE36860_DEFAULT_LEVEL_LOCAL: [Command.SET_LEVEL_LOCAL],
     Capability.EVENTFLUTE36860_LED_BAR_SWITCH_OFF: [
@@ -1786,17 +1808,25 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_VOLUMEDOWN: [Command.PUSH],
     Capability.PARTYVOICE23922_VOLUMEUP: [Command.PUSH],
     Capability.PARTYVOICE23922_VTEMPSET: [Command.SETV_TEMP],
+    Capability.PARTYVOICE23922_WATTAGE4: [Command.SET_WATTS],
     Capability.PARTYVOICE23922_WEBREQUEST: [Command.G_E_T, Command.P_O_S_T],
     Capability.PARTYVOICE23922_WEBREQUESTSELECT: [Command.SET_SELECTION],
     Capability.PARTYVOICE23922_WINDDIRDEG: [],
     Capability.PARTYVOICE23922_WINDDIRECTION2: [],
     Capability.PARTYVOICE23922_WINDGUST: [],
     Capability.PARTYVOICE23922_WINDSPEED5: [],
+    Capability.PARTYVOICE23922_WLEDEFFECTMODE2: [Command.SET_EFFECT_MODE],
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR: [],
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_THREE: [],
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_TWO: [],
+    Capability.PLATEMUSIC11009_BASIC_SET_ASSOCIATION_GROUP: [],
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [],
     Capability.PLATEMUSIC11009_FIRMWARE: [],
+    Capability.PLATEMUSIC11009_HUMIDITY_ALARM: [],
+    Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_BRIGHTNESS: [Command.SET_LED_BRIGHTNESS],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR: [Command.SET_LED_COLOR],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_MODE: [Command.SET_LED_MODE],
     Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Command.AUTOLOCK, Command.OFF],
     Capability.PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL: [Command.SET_DEFAULT_LEVEL],
     Capability.PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING: [Command.SET_LIGHT_SENSING],
@@ -1884,7 +1914,20 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.TAG_UPDATED_INFO: [Command.UPDATE],
     Capability.TAG_UWB_ACTIVATION: [Command.OFF, Command.ON],
     Capability.VALLEYBOARD16460_DEBUG: [Command.CLEAR, Command.SET_VALUE],
+    Capability.VALLEYBOARD16460_HTTPREQUESTPATH: [Command.SET_PATH],
     Capability.VALLEYBOARD16460_INFO: [Command.CLEAR, Command.SET_VALUE],
+    Capability.WATCHDIGIT58804_ACTUALFANSPEED: [Command.SET_ACTUAL_FAN_SPEED],
+    Capability.WATCHDIGIT58804_AUTOMODE: [Command.SET_AUTO_MODE],
+    Capability.WATCHDIGIT58804_ERRORSTRING: [Command.SET_ERROR],
+    Capability.WATCHDIGIT58804_FILTERCHANGENEEDED: [Command.SET_FILTER_CHANGE_NEEDED],
+    Capability.WATCHDIGIT58804_OUTDOORUNITDEFROSTING: [
+        Command.SET_OUTDOOR_UNIT_DEFROSTING
+    ],
+    Capability.WATCHDIGIT58804_STANDBYMODE: [Command.SET_STANDBY_MODE],
+    Capability.WATCHDIGIT58804_SYSTEMPREHEATING: [Command.SET_SYSTEM_PREHEATING],
+    Capability.WATCHDIGIT58804_THERMOSTATFANSETTING: [
+        Command.SET_THERMOSTAT_FAN_SETTING
+    ],
     Capability.WATCHPANEL55613_LCCTHERMOSTAT: [],
     Capability.WATCHPANEL55613_TCCTHERMOSTAT: [],
 }
