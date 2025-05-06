@@ -235,6 +235,7 @@ class Command(StrEnum):
     SET_CLUSTER_ID = "setClusterId"
     SET_CODE = "setCode"
     SET_CODE_LENGTH = "setCodeLength"
+    SET_COFFEE_BREWING_RECIPE = "setCoffeeBrewingRecipe"
     SET_COLOR = "setColor"
     SET_COLOR_CHANGE_MODE = "setColorChangeMode"
     SET_COLOR_CHANGE_TIMER = "setColorChangeTimer"
@@ -322,6 +323,7 @@ class Command(StrEnum):
     SET_HIGH_TEMP_WASH = "setHighTempWash"
     SET_HOOD_FAN_SPEED = "setHoodFanSpeed"
     SET_HOT_AIR_DRY = "setHotAirDry"
+    SET_HOT_TEMPERATURE = "setHotTemperature"
     SET_HUE = "setHue"
     SET_HUE_STEPS = "setHueSteps"
     SET_HUMIDIFIER_MODE = "setHumidifierMode"
@@ -375,6 +377,7 @@ class Command(StrEnum):
     SET_MASTER_DI = "setMasterDi"
     SET_MASTER_NAME = "setMasterName"
     SET_MAX_CURRENT = "setMaxCurrent"
+    SET_MEDICATION_MODE = "setMedicationMode"
     SET_METERING_DATE = "setMeteringDate"
     SET_MIN_CURRENT = "setMinCurrent"
     SET_MIRROR_GROUP_FUNCTION = "setMirrorGroupFunction"
@@ -469,6 +472,7 @@ class Command(StrEnum):
     SET_SPIN_SPEED = "setSpinSpeed"
     SET_STAGE = "setStage"
     SET_STANDBY_MODE = "setStandbyMode"
+    SET_START_TIME = "setStartTime"
     SET_START_VALUE = "setStartValue"
     SET_STARTSTOP = "setStartstop"
     SET_STATUS = "setStatus"
@@ -1206,6 +1210,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_OPERATION_MODE,
         Command.SET_USER_LOCATION,
     ],
+    Capability.SAMSUNG_CE_COFFEE_BREWING_RECIPE: [Command.SET_COFFEE_BREWING_RECIPE],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [Command.SET_TIME_OFFSET],
     Capability.SAMSUNG_CE_COOK_RECIPE: [Command.SET_COOK_RECIPE],
@@ -1542,7 +1547,24 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_WASHER_WATER_LEVEL: [Command.SET_WATER_LEVEL],
     Capability.SAMSUNG_CE_WASHER_WATER_VALVE: [Command.SET_WATER_VALVE],
     Capability.SAMSUNG_CE_WATER_CONSUMPTION_REPORT: [],
+    Capability.SAMSUNG_CE_WATER_DISPENSER: [
+        Command.SET_AMOUNT,
+        Command.SET_HOT_TEMPERATURE,
+        Command.SET_MODE,
+    ],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_COLD_WATER_LOCK: [
+        Command.LOCK,
+        Command.UNLOCK,
+    ],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_HOT_WATER_LOCK: [Command.LOCK, Command.UNLOCK],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_MEDICATION_MODE: [Command.SET_MEDICATION_MODE],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_OPERATING_STATE: [],
     Capability.SAMSUNG_CE_WATER_RESERVOIR: [],
+    Capability.SAMSUNG_CE_WATER_STERILIZATION_OPERATING_STATE: [
+        Command.START,
+        Command.STOP,
+    ],
+    Capability.SAMSUNG_CE_WATER_STERILIZATION_SCHEDULE: [Command.SET_START_TIME],
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: [],
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: [Command.ZERO_CALIBRATE],
     Capability.SAMSUNG_CE_WELCOME_COOLING: [Command.START],
