@@ -37,6 +37,7 @@ class Attribute(StrEnum):
     ALTITUDE_ACCURACY = "altitudeAccuracy"
     ALWAYS_ON = "alwaysOn"
     AMOUNT = "amount"
+    AMOUNT_RESOLUTION = "amountResolution"
     AMPERAGE = "amperage"
     AP_OPERATION_MODE = "apOperationMode"
     APP_NAME = "appName"
@@ -127,6 +128,8 @@ class Attribute(StrEnum):
     CODE_CHANGED = "codeChanged"
     CODE_LENGTH = "codeLength"
     CODE_REPORT = "codeReport"
+    COFFEE_BREWING_RECIPES = "coffeeBrewingRecipes"
+    COFFEE_BREWING_STATUS = "coffeeBrewingStatus"
     COLOR = "color"
     COLOR_CHANGE_MODE = "colorChangeMode"
     COLOR_CHANGE_TIMER = "colorChangeTimer"
@@ -394,6 +397,7 @@ class Attribute(StrEnum):
     HOOD_FILTER_USAGE = "hoodFilterUsage"
     HOOD_FILTER_USAGE_STEP = "hoodFilterUsageStep"
     HOT_AIR_DRY = "hotAirDry"
+    HOT_TEMPERATURE = "hotTemperature"
     HOURLY_GAS_CONSUMPTIONS = "hourlyGasConsumptions"
     HOURLY_USAGE_VIEW_AVAILABLE = "hourlyUsageViewAvailable"
     HTTPCODE = "httpcode"
@@ -445,6 +449,7 @@ class Attribute(StrEnum):
     LAST_SENSING_LEVEL = "lastSensingLevel"
     LAST_SENSING_TIME = "lastSensingTime"
     LAST_SEVEN_DAYS = "lastSevenDays"
+    LAST_STERILIZED_TIME = "lastSterilizedTime"
     LAST_TWENTY_FOUR_HOURS = "lastTwentyFourHours"
     LAST_UPDATE_STATUS = "lastUpdateStatus"
     LAST_UPDATE_STATUS_REASON = "lastUpdateStatusReason"
@@ -513,8 +518,11 @@ class Attribute(StrEnum):
     MAX_CODES = "maxCodes"
     MAX_CURRENT = "maxCurrent"
     MAX_NUMBER_OF_PRESETS = "maxNumberOfPresets"
+    MAX_NUMBER_OF_RECIPES = "maxNumberOfRecipes"
     MAX_NUMBER_OF_RESERVATIONS = "maxNumberOfReservations"
+    MAX_OPERATION_TIME = "maxOperationTime"
     MAX_PIN_CODE_LEN = "maxPinCodeLen"
+    MAX_SUPPORTED_AMOUNT = "maxSupportedAmount"
     MAXIMUM_SETPOINT = "maximumSetpoint"
     MAXTEMP = "maxtemp"
     MCU_DEVICE_FW_VER = "mcuDeviceFwVer"
@@ -530,6 +538,7 @@ class Attribute(StrEnum):
     MIN_CODE_LENGTH = "minCodeLength"
     MIN_CURRENT = "minCurrent"
     MIN_PIN_CODE_LEN = "minPinCodeLen"
+    MIN_SUPPORTED_AMOUNT = "minSupportedAmount"
     MIN_VERSION = "minVersion"
     MINIMUM_RESERVABLE_TIME = "minimumReservableTime"
     MINIMUM_SETPOINT = "minimumSetpoint"
@@ -902,6 +911,7 @@ class Attribute(StrEnum):
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
     SUPPORTED_HEATING_MODES = "supportedHeatingModes"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
+    SUPPORTED_HOT_TEMPERATURES = "supportedHotTemperatures"
     SUPPORTED_INPUT_SOURCES = "supportedInputSources"
     SUPPORTED_INPUT_SOURCES_MAP = "supportedInputSourcesMap"
     SUPPORTED_KEY_CODES = "supportedKeyCodes"
@@ -935,6 +945,7 @@ class Attribute(StrEnum):
     SUPPORTED_PLAYBACK_COMMANDS = "supportedPlaybackCommands"
     SUPPORTED_POSITIONS = "supportedPositions"
     SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
+    SUPPORTED_PUBLISHER_I_DS = "supportedPublisherIDs"
     SUPPORTED_RADON_VALUES = "supportedRadonValues"
     SUPPORTED_RINSE_MODES = "supportedRinseModes"
     SUPPORTED_ROBOT_CLEANER_STATES = "supportedRobotCleanerStates"
@@ -1112,6 +1123,8 @@ class Attribute(StrEnum):
     WATER_FILTER_USAGE = "waterFilterUsage"
     WATER_FILTER_USAGE_STEP = "waterFilterUsageStep"
     WATER_LEVEL = "waterLevel"
+    WATER_PURIFIER_COLD_WATER_LOCK = "waterPurifierColdWaterLock"
+    WATER_PURIFIER_HOT_WATER_LOCK = "waterPurifierHotWaterLock"
     WATER_SPRAY_LEVEL = "waterSprayLevel"
     WATER_USAGE_DAY = "waterUsageDay"
     WATER_USAGE_MAX = "waterUsageMax"
@@ -2123,6 +2136,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OPERATION_MODE,
         Attribute.USER_LOCATION,
     ],
+    Capability.SAMSUNG_CE_COFFEE_BREWING_RECIPE: [
+        Attribute.COFFEE_BREWING_RECIPES,
+        Attribute.COFFEE_BREWING_STATUS,
+        Attribute.MAX_NUMBER_OF_RECIPES,
+        Attribute.SUPPORTED_PUBLISHER_I_DS,
+    ],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [Attribute.CONNECTION_STATE],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [
         Attribute.MONTHLY_USAGE,
@@ -2662,7 +2681,36 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WATER_VALVE,
     ],
     Capability.SAMSUNG_CE_WATER_CONSUMPTION_REPORT: [Attribute.WATER_CONSUMPTION],
+    Capability.SAMSUNG_CE_WATER_DISPENSER: [
+        Attribute.AMOUNT,
+        Attribute.AMOUNT_RESOLUTION,
+        Attribute.HOT_TEMPERATURE,
+        Attribute.MAX_SUPPORTED_AMOUNT,
+        Attribute.MIN_SUPPORTED_AMOUNT,
+        Attribute.MODE,
+        Attribute.STATUS,
+        Attribute.SUPPORTED_HOT_TEMPERATURES,
+        Attribute.SUPPORTED_MODES,
+    ],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_COLD_WATER_LOCK: [
+        Attribute.WATER_PURIFIER_COLD_WATER_LOCK
+    ],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_HOT_WATER_LOCK: [
+        Attribute.WATER_PURIFIER_HOT_WATER_LOCK
+    ],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_MEDICATION_MODE: [],
+    Capability.SAMSUNG_CE_WATER_PURIFIER_OPERATING_STATE: [Attribute.OPERATING_STATE],
     Capability.SAMSUNG_CE_WATER_RESERVOIR: [Attribute.SLOT_STATE],
+    Capability.SAMSUNG_CE_WATER_STERILIZATION_OPERATING_STATE: [
+        Attribute.MAX_OPERATION_TIME,
+        Attribute.REMAINING_TIME,
+    ],
+    Capability.SAMSUNG_CE_WATER_STERILIZATION_SCHEDULE: [
+        Attribute.INTERVAL,
+        Attribute.LAST_STERILIZED_TIME,
+        Attribute.SCHEDULED_TIME,
+        Attribute.START_TIME,
+    ],
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: [Attribute.WEIGHT],
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: [],
     Capability.SAMSUNG_CE_WELCOME_COOLING: [
