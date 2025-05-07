@@ -84,6 +84,7 @@ class Category(StrEnum):
     AIR_CONDITIONER = "AirConditioner"
     AIR_PURIFIER = "AirPurifier"
     AIR_QUALITY_DETECTOR = "AirQualityDetector"
+    AIR_QUALITY_DETECTOR_2 = "Air Quality Detector"
     BATTERY = "Battery"
     BED = "Bed"
     BIDET = "Bidet"
