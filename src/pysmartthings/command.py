@@ -254,6 +254,7 @@ class Command(StrEnum):
     SET_CONTROL_MODE = "setControlMode"
     SET_COOK_RECIPE = "setCookRecipe"
     SET_COOK_TIME = "setCookTime"
+    SET_COOKTOP_COOK_RECIPE = "setCooktopCookRecipe"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_COORDINATES = "setCoordinates"
     SET_COURSE = "setCourse"
@@ -954,6 +955,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SPEECH_SYNTHESIS: [Command.SPEAK],
     Capability.STATELESS_CUSTOM_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_FANSPEED_BUTTON: [Command.SET_BUTTON],
+    Capability.STATELESS_POWER_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_POWER_TOGGLE_BUTTON: [Command.SET_BUTTON],
     Capability.STEP_SENSOR: [],
     Capability.SWITCH: [Command.OFF, Command.ON],
@@ -1199,6 +1201,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Command.DISABLE, Command.ENABLE],
     Capability.SAMSUNG_CE_AUTO_VENTILATION: [Command.ACTION],
+    Capability.SAMSUNG_CE_BURNER_INFO: [],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [],
     Capability.SAMSUNG_CE_CAMERA_STREAMING: [
         Command.CANCEL_ONBOARDING,
@@ -1215,6 +1218,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [Command.SET_TIME_OFFSET],
     Capability.SAMSUNG_CE_COOK_RECIPE: [Command.SET_COOK_RECIPE],
     Capability.SAMSUNG_CE_COOKTOP_BURNER_MODE: [],
+    Capability.SAMSUNG_CE_COOKTOP_COOK_RECIPE: [Command.SET_COOKTOP_COOK_RECIPE],
     Capability.SAMSUNG_CE_COOKTOP_FLEX_ZONE: [],
     Capability.SAMSUNG_CE_COOKTOP_HEATING_POWER: [],
     Capability.SAMSUNG_CE_COOKTOP_PAN_DETECTION: [],

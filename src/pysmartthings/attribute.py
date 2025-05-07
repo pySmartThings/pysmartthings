@@ -71,6 +71,7 @@ class Attribute(StrEnum):
     AVAILABLE_FAN_OSCILLATION_MODES = "availableFanOscillationModes"
     AVAILABLE_FANSPEED_BUTTONS = "availableFanspeedButtons"
     AVAILABLE_MODULES = "availableModules"
+    AVAILABLE_POWER_BUTTONS = "availablePowerButtons"
     AVAILABLE_POWER_TOGGLE_BUTTONS = "availablePowerToggleButtons"
     AVAILABLE_PROGRAMS = "availablePrograms"
     AVAILABLE_TYPES = "availableTypes"
@@ -94,6 +95,7 @@ class Attribute(StrEnum):
     BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
     BRIGHTNESS_INTENSITY = "brightnessIntensity"
     BRIGHTNESS_LEVEL = "brightnessLevel"
+    BURNER_ID = "burnerId"
     BUTTON = "button"
     BYPASS_STATUS = "bypassStatus"
     CALL_STATUS = "callStatus"
@@ -161,6 +163,7 @@ class Attribute(StrEnum):
     COOKER_MODE = "cookerMode"
     COOKER_STATE = "cookerState"
     COOKTOP_BURNER_MODE = "cooktopBurnerMode"
+    COOKTOP_COOK_RECIPE = "cooktopCookRecipe"
     COOKTOP_OPERATING_STATE = "cooktopOperatingState"
     COOLING_SETPOINT = "coolingSetpoint"
     COOLING_SETPOINT_RANGE = "coolingSetpointRange"
@@ -624,6 +627,7 @@ class Attribute(StrEnum):
     OVEN_MODE = "ovenMode"
     OVEN_SETPOINT = "ovenSetpoint"
     OVEN_SETPOINT_RANGE = "ovenSetpointRange"
+    OVERHEAT_FOR_RECIPES = "overheatForRecipes"
     OZONE = "ozone"
     OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
     PH = "pH"
@@ -675,6 +679,7 @@ class Attribute(StrEnum):
     PROGRESS = "progress"
     PROGRESS_PERCENTAGE = "progressPercentage"
     PROTOCOL_TYPE = "protocolType"
+    PROTOCOL_VERSION = "protocolVersion"
     PROTOCOLS = "protocols"
     PUSHED = "pushed"
     QUANTITY = "quantity"
@@ -1693,6 +1698,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SPEECH_SYNTHESIS: [],
     Capability.STATELESS_CUSTOM_BUTTON: [Attribute.AVAILABLE_CUSTOM_BUTTONS],
     Capability.STATELESS_FANSPEED_BUTTON: [Attribute.AVAILABLE_FANSPEED_BUTTONS],
+    Capability.STATELESS_POWER_BUTTON: [Attribute.AVAILABLE_POWER_BUTTONS],
     Capability.STATELESS_POWER_TOGGLE_BUTTON: [
         Attribute.AVAILABLE_POWER_TOGGLE_BUTTONS
     ],
@@ -2119,6 +2125,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Attribute.AUTO_DOOR_RELEASE_ENABLED],
     Capability.SAMSUNG_CE_AUTO_VENTILATION: [Attribute.SUPPORTED_ACTIONS],
+    Capability.SAMSUNG_CE_BURNER_INFO: [Attribute.BURNER_ID],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [Attribute.SWITCH],
     Capability.SAMSUNG_CE_CAMERA_STREAMING: [
         Attribute.AVAILABLE,
@@ -2149,6 +2156,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_COOK_RECIPE: [Attribute.COOK_RECIPE, Attribute.STAGE_STATUS],
     Capability.SAMSUNG_CE_COOKTOP_BURNER_MODE: [Attribute.COOKTOP_BURNER_MODE],
+    Capability.SAMSUNG_CE_COOKTOP_COOK_RECIPE: [
+        Attribute.COOKTOP_COOK_RECIPE,
+        Attribute.OVERHEAT_FOR_RECIPES,
+        Attribute.PROTOCOL_VERSION,
+    ],
     Capability.SAMSUNG_CE_COOKTOP_FLEX_ZONE: [Attribute.FLEX_ZONES],
     Capability.SAMSUNG_CE_COOKTOP_HEATING_POWER: [
         Attribute.HEATING_MODE,
