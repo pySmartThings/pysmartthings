@@ -269,9 +269,11 @@ class Command(StrEnum):
     SET_DEFAULT_LEVEL = "setDefaultLevel"
     SET_DEFINED_RECIPE = "setDefinedRecipe"
     SET_DEFROST = "setDefrost"
+    SET_DEHUMIDIFIER_MODE = "setDehumidifierMode"
     SET_DELAY_END = "setDelayEnd"
     SET_DELAY_TIME = "setDelayTime"
     SET_DENSITY = "setDensity"
+    SET_DESIRED_HUMIDITY = "setDesiredHumidity"
     SET_DESIRED_TEMPERATURE = "setDesiredTemperature"
     SET_DETECTION_INTERVAL = "setDetectionInterval"
     SET_DETECTION_PROXIMITY = "setDetectionProximity"
@@ -1234,6 +1236,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.COOK_DEFINED_RECIPE,
         Command.SET_DEFINED_RECIPE,
     ],
+    Capability.SAMSUNG_CE_DEHUMIDIFIER_BEEP: [Command.OFF, Command.ON],
+    Capability.SAMSUNG_CE_DEHUMIDIFIER_MODE: [Command.SET_DEHUMIDIFIER_MODE],
     Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: [
         Command.DISABLE_ALARM,
         Command.ENABLE_ALARM,
@@ -1393,6 +1397,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_POWER_FREEZE: [Command.ACTIVATE, Command.DEACTIVATE],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [],
     Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [],
+    Capability.SAMSUNG_CE_RELATIVE_HUMIDITY_LEVEL: [Command.SET_DESIRED_HUMIDITY],
     Capability.SAMSUNG_CE_REMOTE_MANAGEMENT_DATA: [Command.RM_COMMAND],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_AUDIO_CLIP: [Command.DISABLE, Command.ENABLE],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_AVP_REGISTRATION: [Command.REGISTER],
@@ -1572,6 +1577,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: [],
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: [Command.ZERO_CALIBRATE],
     Capability.SAMSUNG_CE_WELCOME_COOLING: [Command.START],
+    Capability.SAMSUNG_CE_WELCOME_HUMIDITY: [Command.START],
     Capability.SAMSUNG_CE_WELCOME_MESSAGE: [
         Command.DELETE_WELCOME_MESSAGE,
         Command.SET_WELCOME_MESSAGE,
