@@ -198,6 +198,7 @@ class Attribute(StrEnum):
     DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
     DEFINED_RECIPE = "definedRecipe"
     DEFROST = "defrost"
+    DEHUMIDIFIER_MODE = "dehumidifierMode"
     DENSITY = "density"
     DEODOR_FILTER_CAPACITY = "deodorFilterCapacity"
     DEODOR_FILTER_LAST_RESET_DATE = "deodorFilterLastResetDate"
@@ -207,6 +208,8 @@ class Attribute(StrEnum):
     DEODOR_FILTER_USAGE_STEP = "deodorFilterUsageStep"
     DEPENDENCY_STATUS = "dependencyStatus"
     DESCRIPTION = "description"
+    DESIRED_HUMIDITY_LEVEL = "desiredHumidityLevel"
+    DESIRED_HUMIDITY_LEVEL_RANGE = "desiredHumidityLevelRange"
     DESIRED_TEMPERATURE = "desiredTemperature"
     DETAIL_NAME = "detailName"
     DETECTED = "detected"
@@ -713,6 +716,7 @@ class Attribute(StrEnum):
     REGULAR_SOFTENER_ORDER_THRESHOLD = "regularSoftenerOrderThreshold"
     REGULAR_SOFTENER_REMAINING_AMOUNT = "regularSoftenerRemainingAmount"
     REGULAR_SOFTENER_TYPE = "regularSoftenerType"
+    RELATIVE_HUMIDITY_LEVEL = "relativeHumidityLevel"
     RELEASE_YEAR = "releaseYear"
     REMAINING_AMOUNT = "remainingAmount"
     REMAINING_TIME = "remainingTime"
@@ -894,6 +898,7 @@ class Attribute(StrEnum):
     SUPPORTED_COURSES = "supportedCourses"
     SUPPORTED_CREDENTIALS = "supportedCredentials"
     SUPPORTED_CYCLES = "supportedCycles"
+    SUPPORTED_DEHUMIDIFIER_MODES = "supportedDehumidifierModes"
     SUPPORTED_DENSITY = "supportedDensity"
     SUPPORTED_DESIRED_TEMPERATURES = "supportedDesiredTemperatures"
     SUPPORTED_DETECTION_PROXIMITIES = "supportedDetectionProximities"
@@ -2177,6 +2182,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_CUSTOM_RECIPE: [],
     Capability.SAMSUNG_CE_DEFINED_RECIPE: [Attribute.DEFINED_RECIPE],
+    Capability.SAMSUNG_CE_DEHUMIDIFIER_BEEP: [Attribute.BEEP],
+    Capability.SAMSUNG_CE_DEHUMIDIFIER_MODE: [
+        Attribute.DEHUMIDIFIER_MODE,
+        Attribute.SUPPORTED_DEHUMIDIFIER_MODES,
+    ],
     Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: [
         Attribute.BABY_DETERGENT_ALARM_ENABLED,
         Attribute.BABY_DETERGENT_DOSAGE,
@@ -2445,6 +2455,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [
         Attribute.BATTERY,
         Attribute.CHARGING_STATUS,
+        Attribute.RESOLUTION,
+    ],
+    Capability.SAMSUNG_CE_RELATIVE_HUMIDITY_LEVEL: [
+        Attribute.DESIRED_HUMIDITY_LEVEL,
+        Attribute.DESIRED_HUMIDITY_LEVEL_RANGE,
+        Attribute.RELATIVE_HUMIDITY_LEVEL,
         Attribute.RESOLUTION,
     ],
     Capability.SAMSUNG_CE_REMOTE_MANAGEMENT_DATA: [
@@ -2726,6 +2742,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT: [Attribute.WEIGHT],
     Capability.SAMSUNG_CE_WEIGHT_MEASUREMENT_CALIBRATION: [],
     Capability.SAMSUNG_CE_WELCOME_COOLING: [
+        Attribute.LATEST_REQUEST_ID,
+        Attribute.OPERATING_STATE,
+    ],
+    Capability.SAMSUNG_CE_WELCOME_HUMIDITY: [
         Attribute.LATEST_REQUEST_ID,
         Attribute.OPERATING_STATE,
     ],
