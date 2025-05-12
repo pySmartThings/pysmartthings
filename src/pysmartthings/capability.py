@@ -361,6 +361,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_COOKTOP_PAN_DETECTION = "samsungce.cooktopPanDetection"
     SAMSUNG_CE_COUNT_DOWN_TIMER = "samsungce.countDownTimer"
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
+    SAMSUNG_CE_DDMS_MODE = "samsungce.ddmsMode"
     SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
     SAMSUNG_CE_DEHUMIDIFIER_BEEP = "samsungce.dehumidifierBeep"
     SAMSUNG_CE_DEHUMIDIFIER_MODE = "samsungce.dehumidifierMode"
@@ -530,6 +531,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
     SAMSUNG_CE_WIFI_KIT_SUB_DEVICES = "samsungce.wifiKitSubDevices"
 
+    SAMSUNG_VD_AI_ACTION = "samsungvd.aiAction"
     SAMSUNG_VD_AMBIENT = "samsungvd.ambient"
     SAMSUNG_VD_AMBIENT18 = "samsungvd.ambient18"
     SAMSUNG_VD_AMBIENT_CONTENT = "samsungvd.ambientContent"

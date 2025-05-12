@@ -190,6 +190,7 @@ class Command(StrEnum):
     SEARCH = "search"
     SELECT_AREAS = "selectAreas"
     SEND = "send"
+    SEND_CONTENT = "sendContent"
     SEND_KEY = "sendKey"
     SENSITIVE_TOGGLE = "sensitiveToggle"
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
@@ -1232,6 +1233,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.START,
     ],
     Capability.SAMSUNG_CE_CUSTOM_RECIPE: [Command.COOK_CUSTOM_RECIPE],
+    Capability.SAMSUNG_CE_DDMS_MODE: [],
     Capability.SAMSUNG_CE_DEFINED_RECIPE: [
         Command.COOK_DEFINED_RECIPE,
         Command.SET_DEFINED_RECIPE,
@@ -1583,6 +1585,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_WELCOME_MESSAGE,
     ],
     Capability.SAMSUNG_CE_WIFI_KIT_SUB_DEVICES: [],
+    Capability.SAMSUNG_VD_AI_ACTION: [Command.SEND_CONTENT],
     Capability.SAMSUNG_VD_AMBIENT: [Command.SET_AMBIENT_ON],
     Capability.SAMSUNG_VD_AMBIENT18: [Command.SET_AMBIENT_ON],
     Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Command.SET_AMBIENT_CONTENT],

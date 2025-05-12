@@ -173,6 +173,7 @@ class Attribute(StrEnum):
     CREATE_DEVICE = "createDevice"
     CREATE_QTY = "createQty"
     CREDENTIALS = "credentials"
+    CURATION_SUPPORT = "curationSupport"
     CURRENT = "current"
     CURRENT_ACTIVITY = "currentActivity"
     CURRENT_APP = "currentApp"
@@ -421,6 +422,7 @@ class Attribute(StrEnum):
     ILLUMINANCE = "illuminance"
     ILLUMVALUE = "illumvalue"
     IMAGE = "image"
+    IMAGE_SUPPORT = "imageSupport"
     IMAGE_TRANSFER_PROGRESS = "imageTransferProgress"
     IME_ADV_SUPPORTED = "imeAdvSupported"
     INDICATOR_STATUS = "indicatorStatus"
@@ -2181,6 +2183,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
     ],
     Capability.SAMSUNG_CE_CUSTOM_RECIPE: [],
+    Capability.SAMSUNG_CE_DDMS_MODE: [Attribute.MODE],
     Capability.SAMSUNG_CE_DEFINED_RECIPE: [Attribute.DEFINED_RECIPE],
     Capability.SAMSUNG_CE_DEHUMIDIFIER_BEEP: [Attribute.BEEP],
     Capability.SAMSUNG_CE_DEHUMIDIFIER_MODE: [
@@ -2753,6 +2756,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_WIFI_KIT_SUB_DEVICES: [
         Attribute.NUMBER_OF_CONNECTED_DEVICES,
         Attribute.SUB_DEVICES,
+    ],
+    Capability.SAMSUNG_VD_AI_ACTION: [
+        Attribute.CURATION_SUPPORT,
+        Attribute.IMAGE_SUPPORT,
     ],
     Capability.SAMSUNG_VD_AMBIENT: [Attribute.INFO],
     Capability.SAMSUNG_VD_AMBIENT18: [],
