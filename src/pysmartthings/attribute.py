@@ -217,6 +217,7 @@ class Attribute(StrEnum):
     DETECTION_INTERVAL = "detectionInterval"
     DETECTION_PROXIMITY = "detectionProximity"
     DETERGENT_TYPE = "detergentType"
+    DEVICE_ASSOCIATION_TYPE = "deviceAssociationType"
     DEVICE_CONNECTION_STATE = "deviceConnectionState"
     DEVICE_ICE = "deviceIce"
     DEVICE_ID = "deviceId"
@@ -368,9 +369,11 @@ class Attribute(StrEnum):
     GRID = "grid"
     GRID_STATUS_STATUS = "gridStatusStatus"
     GRID_STATUS_SUPPORT = "gridStatusSupport"
+    GROUP_COMMAND_OPTION = "groupCommandOption"
     GROUP_ID = "groupId"
     GROUP_MUTE = "groupMute"
     GROUP_NAME = "groupName"
+    GROUP_NUMBER = "groupNumber"
     GROUP_PRIMARY_DEVICE_ID = "groupPrimaryDeviceId"
     GROUP_ROLE = "groupRole"
     GROUP_VOLUME = "groupVolume"
@@ -594,6 +597,8 @@ class Attribute(StrEnum):
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
     NITROGEN_DIOXIDE = "nitrogenDioxide"
     NITROGEN_DIOXIDE_HEALTH_CONCERN = "nitrogenDioxideHealthConcern"
+    NODE_END_POINT = "nodeEndPoint"
+    NODE_TO_WRITE = "nodeToWrite"
     NONCE = "nonce"
     NOTIFICATION_COLOR = "notificationColor"
     NOTIFICATION_DURATION = "notificationDuration"
@@ -940,6 +945,7 @@ class Attribute(StrEnum):
     SUPPORTED_MIMES = "supportedMimes"
     SUPPORTED_MODE_MAP = "supportedModeMap"
     SUPPORTED_MODES = "supportedModes"
+    SUPPORTED_MOLD_VALUES = "supportedMoldValues"
     SUPPORTED_MOTION_POSITIONS = "supportedMotionPositions"
     SUPPORTED_MOVEMENTS = "supportedMovements"
     SUPPORTED_NITROGEN_DIOXIDE_VALUES = "supportedNitrogenDioxideValues"
@@ -1520,7 +1526,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_ARGUMENTS,
         Attribute.SUPPORTED_MODES,
     ],
-    Capability.MOLD_HEALTH_CONCERN: [Attribute.MOLD_HEALTH_CONCERN],
+    Capability.MOLD_HEALTH_CONCERN: [
+        Attribute.MOLD_HEALTH_CONCERN,
+        Attribute.SUPPORTED_MOLD_VALUES,
+    ],
     Capability.MOMENTARY: [],
     Capability.MOTION_BED: [
         Attribute.MODE,
@@ -2976,12 +2985,19 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [Attribute.CURRENT_TIME_PERIOD],
     Capability.LEGENDABSOLUTE60149_CURRENT_TWILIGHT: [Attribute.CURRENT_TWILIGHT],
     Capability.LEGENDABSOLUTE60149_DAY_LENGTH: [Attribute.DAY_LENGTH],
+    Capability.LEGENDABSOLUTE60149_DEVICE_ASSOCIATION_TYPE: [
+        Attribute.DEVICE_ASSOCIATION_TYPE
+    ],
     Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: [Attribute.DRIVER_VERSION],
     Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [Attribute.EFFECTS_SET_COMMAND],
     Capability.LEGENDABSOLUTE60149_ENERGY_RESET1: [Attribute.ENERGY_RESET],
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Attribute.EVEN_ODD_DAY],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Attribute.FORCED_ON_LEVEL],
     Capability.LEGENDABSOLUTE60149_GET_GROUPS: [Attribute.GET_GROUPS],
+    Capability.LEGENDABSOLUTE60149_GROUP_COMMAND_OPTION: [
+        Attribute.GROUP_COMMAND_OPTION
+    ],
+    Capability.LEGENDABSOLUTE60149_GROUP_NUMBER: [Attribute.GROUP_NUMBER],
     Capability.LEGENDABSOLUTE60149_HUE_STEPS: [Attribute.HUE_STEPS],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_CONDITION: [Attribute.HUMIDITY_CONDITION],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_TARGET: [Attribute.HUMIDITY_TARGET],
@@ -3009,6 +3025,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_MOTION_SENSOR_ENABLE: [
         Attribute.MOTION_SENSOR_ENABLE
     ],
+    Capability.LEGENDABSOLUTE60149_NODE_END_POINT: [Attribute.NODE_END_POINT],
+    Capability.LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX: [Attribute.NODE_TO_WRITE],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Attribute.PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Attribute.PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [

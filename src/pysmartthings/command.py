@@ -279,6 +279,7 @@ class Command(StrEnum):
     SET_DETECTION_INTERVAL = "setDetectionInterval"
     SET_DETECTION_PROXIMITY = "setDetectionProximity"
     SET_DETERGENT_TYPE = "setDetergentType"
+    SET_DEVICE_ASSOCIATION_TYPE = "setDeviceAssociationType"
     SET_DEVICE_EUI = "setDeviceEui"
     SET_DEVICE_TYPE = "setDeviceType"
     SET_DISHWASHER_DELAY_START_TIME = "setDishwasherDelayStartTime"
@@ -319,8 +320,10 @@ class Command(StrEnum):
     SET_FRIDGE_MODE = "setFridgeMode"
     SET_GEOFENCE = "setGeofence"
     SET_GET_GROUPS = "setGetGroups"
+    SET_GROUP_COMMAND_OPTION = "setGroupCommandOption"
     SET_GROUP_MUTE = "setGroupMute"
     SET_GROUP_NAME = "setGroupName"
+    SET_GROUP_NUMBER = "setGroupNumber"
     SET_GROUP_VOLUME = "setGroupVolume"
     SET_HEATED_DRY = "setHeatedDry"
     SET_HEATING_SETPOINT = "setHeatingSetpoint"
@@ -394,6 +397,8 @@ class Command(StrEnum):
     SET_MUTE = "setMute"
     SET_NAME = "setName"
     SET_NEXT_INPUT_SOURCE = "setNextInputSource"
+    SET_NODE_END_POINT = "setNodeEndPoint"
+    SET_NODE_TO_WRITE = "setNodeToWrite"
     SET_NOTIFICATION_COLOR = "setNotificationColor"
     SET_NOTIFICATION_DURATION = "setNotificationDuration"
     SET_NOTIFICATION_EFFECT = "setNotificationEffect"
@@ -1715,6 +1720,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.LEGENDABSOLUTE60149_CURRENT_TWILIGHT: [Command.SET_CURRENT_TWILIGHT],
     Capability.LEGENDABSOLUTE60149_DAY_LENGTH: [Command.SET_DAY_LENGTH],
+    Capability.LEGENDABSOLUTE60149_DEVICE_ASSOCIATION_TYPE: [
+        Command.SET_DEVICE_ASSOCIATION_TYPE
+    ],
     Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: [Command.SET_DRIVER_VERSION],
     Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [
         Command.SET_EFFECTS_SET_COMMAND
@@ -1723,6 +1731,10 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Command.SET_EVEN_ODD_DAY],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Command.SET_FORCED_ON_LEVEL],
     Capability.LEGENDABSOLUTE60149_GET_GROUPS: [Command.SET_GET_GROUPS],
+    Capability.LEGENDABSOLUTE60149_GROUP_COMMAND_OPTION: [
+        Command.SET_GROUP_COMMAND_OPTION
+    ],
+    Capability.LEGENDABSOLUTE60149_GROUP_NUMBER: [Command.SET_GROUP_NUMBER],
     Capability.LEGENDABSOLUTE60149_HUE_STEPS: [Command.SET_HUE_STEPS],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_CONDITION: [Command.SET_HUMIDITY_CONDITION],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_TARGET: [Command.SET_HUMIDITY_TARGET],
@@ -1754,6 +1766,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_MOTION_SENSOR_ENABLE: [
         Command.SET_MOTION_SENSOR_ENABLE
     ],
+    Capability.LEGENDABSOLUTE60149_NODE_END_POINT: [Command.SET_NODE_END_POINT],
+    Capability.LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX: [Command.SET_NODE_TO_WRITE],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Command.SET_PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Command.SET_PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
