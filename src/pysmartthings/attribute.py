@@ -88,6 +88,7 @@ class Attribute(StrEnum):
     BATON_TOUCH = "batonTouch"
     BATTERY = "battery"
     BEEP = "beep"
+    BELL_SOUNDS = "bellSounds"
     BINARY_ID = "binaryId"
     BLE_CONNECTION_STATE = "bleConnectionState"
     BLOCKING_STATUS = "blockingStatus"
@@ -141,6 +142,7 @@ class Attribute(StrEnum):
     COLOR_TEMPERATURE = "colorTemperature"
     COLOR_TEMPERATURE_RANGE = "colorTemperatureRange"
     COLOR_VALUE = "colorValue"
+    COMMAND_CLASS = "commandClass"
     COMMAND_RESULT = "commandResult"
     COMPLETION_TIME = "completionTime"
     CONDITION = "condition"
@@ -221,6 +223,7 @@ class Attribute(StrEnum):
     DEVICE_CONNECTION_STATE = "deviceConnectionState"
     DEVICE_ICE = "deviceIce"
     DEVICE_ID = "deviceId"
+    DEVICE_INFO = "deviceInfo"
     DEVICE_NETWORK_ID = "deviceNetworkId"
     DEVICE_TYPE = "deviceType"
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
@@ -642,6 +645,8 @@ class Attribute(StrEnum):
     OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
     PH = "pH"
     PANIC_ALARM = "panicAlarm"
+    PARAMETER_END = "parameterEnd"
+    PARAMETER_START = "parameterStart"
     PATH = "path"
     PATROL_STATUS = "patrolStatus"
     PAYLOAD = "payload"
@@ -801,6 +806,8 @@ class Attribute(StrEnum):
     SIGN_IN_STATUS = "signInStatus"
     SIGNAL_METRICS = "signalMetrics"
     SIGNIN_PERMISSION = "signinPermission"
+    SIREN_OR_BELL_ACTIVE = "sirenOrBellActive"
+    SIREN_SOUNDS = "sirenSounds"
     SLEEPING = "sleeping"
     SLOT_STATE = "slotState"
     SMOKE = "smoke"
@@ -2962,6 +2969,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.NOTIFICATION_EFFECT,
         Attribute.NOTIFICATION_LEVEL,
     ],
+    Capability.EVENTFLUTE36860_NOTIFICATION_LZW31SN: [
+        Attribute.NOTIFICATION_COLOR,
+        Attribute.NOTIFICATION_DURATION,
+        Attribute.NOTIFICATION_EFFECT,
+        Attribute.NOTIFICATION_LEVEL,
+    ],
     Capability.EVENTFLUTE36860_NOTIFICATION_SINGLE: [
         Attribute.NOTIFICATION_COLOR,
         Attribute.NOTIFICATION_DURATION,
@@ -2972,7 +2985,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.EVENTFLUTE36860_REMOTE_CONTROL: [Attribute.REMOTE_CONTROL],
     Capability.HCA_DRYER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
     Capability.HCA_WASHER_MODE: [Attribute.MODE, Attribute.SUPPORTED_MODES],
+    Capability.LEGENDABSOLUTE60149_ACTIONBUTTON2: [],
     Capability.LEGENDABSOLUTE60149_ATMOS_PRESSURE: [Attribute.ATMOS_PRESSURE],
+    Capability.LEGENDABSOLUTE60149_BELL_SOUNDS: [Attribute.BELL_SOUNDS],
     Capability.LEGENDABSOLUTE60149_CIRCADIAN: [Attribute.CIRCADIAN],
     Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_MODE1: [Attribute.COLOR_CHANGE_MODE],
     Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_TIMER: [Attribute.COLOR_CHANGE_TIMER],
@@ -2980,6 +2995,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_COLOR_TEMPERATURE_STEPS: [
         Attribute.COLOR_TEMP_STEPS
     ],
+    Capability.LEGENDABSOLUTE60149_COMMAND_CLASS: [Attribute.COMMAND_CLASS],
     Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: [Attribute.CREATE_DEVICE],
     Capability.LEGENDABSOLUTE60149_CURRENT_LOOP: [Attribute.CURRENT_LOOP],
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [Attribute.CURRENT_TIME_PERIOD],
@@ -2988,6 +3004,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_DEVICE_ASSOCIATION_TYPE: [
         Attribute.DEVICE_ASSOCIATION_TYPE
     ],
+    Capability.LEGENDABSOLUTE60149_DEVICE_INFO: [Attribute.DEVICE_INFO],
     Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: [Attribute.DRIVER_VERSION],
     Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [Attribute.EFFECTS_SET_COMMAND],
     Capability.LEGENDABSOLUTE60149_ENERGY_RESET1: [Attribute.ENERGY_RESET],
@@ -3027,6 +3044,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.LEGENDABSOLUTE60149_NODE_END_POINT: [Attribute.NODE_END_POINT],
     Capability.LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX: [Attribute.NODE_TO_WRITE],
+    Capability.LEGENDABSOLUTE60149_PARAMETER_START: [Attribute.PARAMETER_START],
+    Capability.LEGENDABSOLUTE60149_PARAMETEREND: [Attribute.PARAMETER_END],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Attribute.PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Attribute.PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
@@ -3041,6 +3060,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF2: [Attribute.RANDOM_ON_OFF],
     Capability.LEGENDABSOLUTE60149_RESETBUTTON: [],
     Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: [Attribute.SIGNAL_METRICS],
+    Capability.LEGENDABSOLUTE60149_SIREN_OR_BELL_ACTIVE: [
+        Attribute.SIREN_OR_BELL_ACTIVE
+    ],
+    Capability.LEGENDABSOLUTE60149_SIREN_SOUNDS: [Attribute.SIREN_SOUNDS],
     Capability.LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE: [Attribute.SUN_AZIMUTH_ANGLE],
     Capability.LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE: [Attribute.SUN_ELEVATION_ANGLE],
     Capability.LEGENDABSOLUTE60149_SUN_RISE: [Attribute.SUN_RISE],
@@ -3257,6 +3280,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.PROGRAM,
     ],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Attribute.STARTSTOP],
+    Capability.STSE_DEVICE_MODE: [Attribute.MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [
         Attribute.CURRENT_STATUS,
         Attribute.ENROLLMENT_STATUS,
