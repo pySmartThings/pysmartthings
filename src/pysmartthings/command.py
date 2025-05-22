@@ -222,6 +222,7 @@ class Command(StrEnum):
     SET_AUTOLOCK = "setAutolock"
     SET_AUTOMATIC_EXECUTION_MODE = "setAutomaticExecutionMode"
     SET_AUTOMATIC_EXECUTION_SETTING = "setAutomaticExecutionSetting"
+    SET_BELL_SOUNDS = "setBellSounds"
     SET_BRIGHTNESS_LEVEL = "setBrightnessLevel"
     SET_BUTTON = "setButton"
     SET_BUTTON_DOUBLE_PUSH = "setButtonDoublePush"
@@ -281,6 +282,7 @@ class Command(StrEnum):
     SET_DETERGENT_TYPE = "setDetergentType"
     SET_DEVICE_ASSOCIATION_TYPE = "setDeviceAssociationType"
     SET_DEVICE_EUI = "setDeviceEui"
+    SET_DEVICE_INFO = "setDeviceInfo"
     SET_DEVICE_TYPE = "setDeviceType"
     SET_DISHWASHER_DELAY_START_TIME = "setDishwasherDelayStartTime"
     SET_DISHWASHER_MODE = "setDishwasherMode"
@@ -417,6 +419,8 @@ class Command(StrEnum):
     SET_OUTING_MODE = "setOutingMode"
     SET_OVEN_MODE = "setOvenMode"
     SET_OVEN_SETPOINT = "setOvenSetpoint"
+    SET_PARAMETER_END = "setParameterEnd"
+    SET_PARAMETER_START = "setParameterStart"
     SET_PATH = "setPath"
     SET_PATROL = "setPatrol"
     SET_PERCENT = "setPercent"
@@ -472,6 +476,8 @@ class Command(StrEnum):
     SET_SHADE_LEVEL = "setShadeLevel"
     SET_SHADE_TILT_LEVEL = "setShadeTiltLevel"
     SET_SIGNAL_METRICS = "setSignalMetrics"
+    SET_SIREN_OR_BELL_ACTIVE = "setSirenOrBellActive"
+    SET_SIREN_SOUNDS = "setSirenSounds"
     SET_SOFTENER_TYPE = "setSoftenerType"
     SET_SOUND_FROM = "setSoundFrom"
     SET_SOUND_MODE = "setSoundMode"
@@ -1695,6 +1701,12 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_NOTIFICATION_EFFECT,
         Command.SET_NOTIFICATION_LEVEL,
     ],
+    Capability.EVENTFLUTE36860_NOTIFICATION_LZW31SN: [
+        Command.SET_NOTIFICATION_COLOR,
+        Command.SET_NOTIFICATION_DURATION,
+        Command.SET_NOTIFICATION_EFFECT,
+        Command.SET_NOTIFICATION_LEVEL,
+    ],
     Capability.EVENTFLUTE36860_NOTIFICATION_SINGLE: [
         Command.SET_NOTIFICATION_COLOR,
         Command.SET_NOTIFICATION_DURATION,
@@ -1705,7 +1717,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.EVENTFLUTE36860_REMOTE_CONTROL: [Command.SET_REMOTE_CONTROL],
     Capability.HCA_DRYER_MODE: [Command.SET_MODE],
     Capability.HCA_WASHER_MODE: [Command.SET_MODE],
+    Capability.LEGENDABSOLUTE60149_ACTIONBUTTON2: [Command.PUSH],
     Capability.LEGENDABSOLUTE60149_ATMOS_PRESSURE: [Command.SET_ATMOS_PRESSURE],
+    Capability.LEGENDABSOLUTE60149_BELL_SOUNDS: [Command.SET_BELL_SOUNDS],
     Capability.LEGENDABSOLUTE60149_CIRCADIAN: [Command.SET_CIRCADIAN],
     Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_MODE1: [Command.SET_COLOR_CHANGE_MODE],
     Capability.LEGENDABSOLUTE60149_COLOR_CHANGE_TIMER: [Command.SET_COLOR_CHANGE_TIMER],
@@ -1713,6 +1727,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_COLOR_TEMPERATURE_STEPS: [
         Command.SET_COLOR_TEMP_STEPS
     ],
+    Capability.LEGENDABSOLUTE60149_COMMAND_CLASS: [],
     Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: [Command.SET_CREATE_DEVICE],
     Capability.LEGENDABSOLUTE60149_CURRENT_LOOP: [Command.SET_CURRENT_LOOP],
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [
@@ -1723,6 +1738,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_DEVICE_ASSOCIATION_TYPE: [
         Command.SET_DEVICE_ASSOCIATION_TYPE
     ],
+    Capability.LEGENDABSOLUTE60149_DEVICE_INFO: [Command.SET_DEVICE_INFO],
     Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: [Command.SET_DRIVER_VERSION],
     Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [
         Command.SET_EFFECTS_SET_COMMAND
@@ -1768,6 +1784,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.LEGENDABSOLUTE60149_NODE_END_POINT: [Command.SET_NODE_END_POINT],
     Capability.LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX: [Command.SET_NODE_TO_WRITE],
+    Capability.LEGENDABSOLUTE60149_PARAMETER_START: [Command.SET_PARAMETER_START],
+    Capability.LEGENDABSOLUTE60149_PARAMETEREND: [Command.SET_PARAMETER_END],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Command.SET_PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Command.SET_PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
@@ -1782,6 +1800,10 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_RANDOM_ON_OFF2: [Command.SET_RANDOM_ON_OFF],
     Capability.LEGENDABSOLUTE60149_RESETBUTTON: [Command.PUSH],
     Capability.LEGENDABSOLUTE60149_SIGNAL_METRICS: [Command.SET_SIGNAL_METRICS],
+    Capability.LEGENDABSOLUTE60149_SIREN_OR_BELL_ACTIVE: [
+        Command.SET_SIREN_OR_BELL_ACTIVE
+    ],
+    Capability.LEGENDABSOLUTE60149_SIREN_SOUNDS: [Command.SET_SIREN_SOUNDS],
     Capability.LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE: [Command.SET_SUN_AZIMUTH_ANGLE],
     Capability.LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE: [
         Command.SET_SUN_ELEVATION_ANGLE
@@ -1947,6 +1969,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.STOP,
     ],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Command.SET_STARTSTOP],
+    Capability.STSE_DEVICE_MODE: [],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Command.SET_CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Command.SET_FADE],

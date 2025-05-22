@@ -618,13 +618,16 @@ class Capability(StrEnum):
     EVENTFLUTE36860_LOCAL_CONTROL = "eventflute36860.localControl"
     EVENTFLUTE36860_LOG = "eventflute36860.log"
     EVENTFLUTE36860_NOTIFICATION_ALL = "eventflute36860.notificationAll"
+    EVENTFLUTE36860_NOTIFICATION_LZW31SN = "eventflute36860.notificationLzw31sn"
     EVENTFLUTE36860_NOTIFICATION_SINGLE = "eventflute36860.notificationSingle"
     EVENTFLUTE36860_REMOTE_CONTROL = "eventflute36860.remoteControl"
 
     HCA_DRYER_MODE = "hca.dryerMode"
     HCA_WASHER_MODE = "hca.washerMode"
 
+    LEGENDABSOLUTE60149_ACTIONBUTTON2 = "legendabsolute60149.actionbutton2"
     LEGENDABSOLUTE60149_ATMOS_PRESSURE = "legendabsolute60149.atmosPressure"
+    LEGENDABSOLUTE60149_BELL_SOUNDS = "legendabsolute60149.bellSounds"
     LEGENDABSOLUTE60149_CIRCADIAN = "legendabsolute60149.circadian"
     LEGENDABSOLUTE60149_COLOR_CHANGE_MODE1 = "legendabsolute60149.colorChangeMode1"
     LEGENDABSOLUTE60149_COLOR_CHANGE_TIMER = "legendabsolute60149.colorChangeTimer"
@@ -632,6 +635,7 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_COLOR_TEMPERATURE_STEPS = (
         "legendabsolute60149.colorTemperatureSteps"
     )
+    LEGENDABSOLUTE60149_COMMAND_CLASS = "legendabsolute60149.commandClass"
     LEGENDABSOLUTE60149_CREATE_DEVICE2 = "legendabsolute60149.createDevice2"
     LEGENDABSOLUTE60149_CURRENT_LOOP = "legendabsolute60149.currentLoop"
     LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD = "legendabsolute60149.currentTimePeriod"
@@ -640,6 +644,7 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_DEVICE_ASSOCIATION_TYPE = (
         "legendabsolute60149.deviceAssociationType"
     )
+    LEGENDABSOLUTE60149_DEVICE_INFO = "legendabsolute60149.deviceInfo"
     LEGENDABSOLUTE60149_DRIVER_VERSION1 = "legendabsolute60149.driverVersion1"
     LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND = "legendabsolute60149.effectsSetCommand"
     LEGENDABSOLUTE60149_ENERGY_RESET1 = "legendabsolute60149.energyReset1"
@@ -675,6 +680,8 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_MOTION_SENSOR_ENABLE = "legendabsolute60149.motionSensorEnable"
     LEGENDABSOLUTE60149_NODE_END_POINT = "legendabsolute60149.nodeEndPoint"
     LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX = "legendabsolute60149.nodeToWriteHex"
+    LEGENDABSOLUTE60149_PARAMETER_START = "legendabsolute60149.parameterStart"
+    LEGENDABSOLUTE60149_PARAMETEREND = "legendabsolute60149.parameterend"
     LEGENDABSOLUTE60149_PROGRESSIVE_OFF1 = "legendabsolute60149.progressiveOff1"
     LEGENDABSOLUTE60149_PROGRESSIVE_ON1 = "legendabsolute60149.progressiveOn1"
     LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER = "legendabsolute60149.randomMaximumTimer"
@@ -685,6 +692,8 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_RANDOM_ON_OFF2 = "legendabsolute60149.randomOnOff2"
     LEGENDABSOLUTE60149_RESETBUTTON = "legendabsolute60149.resetbutton"
     LEGENDABSOLUTE60149_SIGNAL_METRICS = "legendabsolute60149.signalMetrics"
+    LEGENDABSOLUTE60149_SIREN_OR_BELL_ACTIVE = "legendabsolute60149.sirenOrBellActive"
+    LEGENDABSOLUTE60149_SIREN_SOUNDS = "legendabsolute60149.sirenSounds"
     LEGENDABSOLUTE60149_SUN_AZIMUTH_ANGLE = "legendabsolute60149.sunAzimuthAngle"
     LEGENDABSOLUTE60149_SUN_ELEVATION_ANGLE = "legendabsolute60149.sunElevationAngle"
     LEGENDABSOLUTE60149_SUN_RISE = "legendabsolute60149.sunRise"
@@ -834,6 +843,8 @@ class Capability(StrEnum):
     )
     SIGNALAHEAD13665_DISHWASHERPROGRAMSV2 = "signalahead13665.dishwasherprogramsv2"
     SIGNALAHEAD13665_STARTSTOPPROGRAMV2 = "signalahead13665.startstopprogramv2"
+
+    STSE_DEVICE_MODE = "stse.deviceMode"
 
     STSOLUTIONS_DEMAND_RESPONSE_STATUS = "stsolutions.demandResponseStatus"
 
