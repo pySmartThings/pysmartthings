@@ -779,6 +779,7 @@ class Capability(StrEnum):
     PARTYVOICE23922_WINDSPEED5 = "partyvoice23922.windspeed5"
     PARTYVOICE23922_WLEDEFFECTMODE2 = "partyvoice23922.wledeffectmode2"
 
+    PLATEMUSIC11009_AMPERAGE_MEASUREMENT = "platemusic11009.amperageMeasurement"
     PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR = "platemusic11009.associationGroupFour"
     PLATEMUSIC11009_ASSOCIATION_GROUP_THREE = "platemusic11009.associationGroupThree"
     PLATEMUSIC11009_ASSOCIATION_GROUP_TWO = "platemusic11009.associationGroupTwo"
@@ -787,6 +788,11 @@ class Capability(StrEnum):
     )
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
+    PLATEMUSIC11009_HS_LED_MODE = "platemusic11009.hsLedMode"
+    PLATEMUSIC11009_HS_STATUS_LED_FOUR_COLOR = "platemusic11009.hsStatusLedFourColor"
+    PLATEMUSIC11009_HS_STATUS_LED_ONE_COLOR = "platemusic11009.hsStatusLedOneColor"
+    PLATEMUSIC11009_HS_STATUS_LED_SIX_COLOR = "platemusic11009.hsStatusLedSixColor"
+    PLATEMUSIC11009_HS_STATUS_LED_THREE_COLOR = "platemusic11009.hsStatusLedThreeColor"
     PLATEMUSIC11009_HUMIDITY_ALARM = "platemusic11009.humidityAlarm"
     PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR = (
         "platemusic11009.temperatureHumiditySensor"
@@ -846,7 +852,9 @@ class Capability(StrEnum):
 
     STSE_DEVICE_MODE = "stse.deviceMode"
 
+    STSOLUTIONS_DEMAND_RESPONSE_MODE = "stsolutions.demandResponseMode"
     STSOLUTIONS_DEMAND_RESPONSE_STATUS = "stsolutions.demandResponseStatus"
+    STSOLUTIONS_MESSAGE = "stsolutions.message"
 
     SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT = "synthetic.lightingEffectCircadian"
     SYNTHETIC_FADE_LIGHTNING_EFFECT = "synthetic.lightingEffectFade"

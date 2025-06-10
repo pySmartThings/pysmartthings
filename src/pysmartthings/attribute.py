@@ -836,6 +836,10 @@ class Attribute(StrEnum):
     STATE = "state"
     STATELESS_MODE = "statelessMode"
     STATUS = "status"
+    STATUS_LED_FOUR_COLOR = "statusLedFourColor"
+    STATUS_LED_ONE_COLOR = "statusLedOneColor"
+    STATUS_LED_SIX_COLOR = "statusLedSixColor"
+    STATUS_LED_THREE_COLOR = "statusLedThreeColor"
     STATUS_MESSAGE = "statusMessage"
     STEAM_CLOSET_AUTO_CYCLE_LINK = "steamClosetAutoCycleLink"
     STEAM_CLOSET_CYCLE = "steamClosetCycle"
@@ -3149,6 +3153,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_WINDGUST: [Attribute.WINDGUST],
     Capability.PARTYVOICE23922_WINDSPEED5: [Attribute.W_SPEED],
     Capability.PARTYVOICE23922_WLEDEFFECTMODE2: [Attribute.EFFECT_MODE],
+    Capability.PLATEMUSIC11009_AMPERAGE_MEASUREMENT: [Attribute.AMPERAGE],
     Capability.PLATEMUSIC11009_ASSOCIATION_GROUP_FOUR: [
         Attribute.ASSOCIATION_GROUP_FOUR
     ],
@@ -3161,6 +3166,19 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [Attribute.DEVICE_NETWORK_ID],
     Capability.PLATEMUSIC11009_FIRMWARE: [Attribute.FIRMWARE_VERSION],
+    Capability.PLATEMUSIC11009_HS_LED_MODE: [Attribute.LED_MODE],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_FOUR_COLOR: [
+        Attribute.STATUS_LED_FOUR_COLOR
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_ONE_COLOR: [
+        Attribute.STATUS_LED_ONE_COLOR
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_SIX_COLOR: [
+        Attribute.STATUS_LED_SIX_COLOR
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_THREE_COLOR: [
+        Attribute.STATUS_LED_THREE_COLOR
+    ],
     Capability.PLATEMUSIC11009_HUMIDITY_ALARM: [Attribute.HUMIDITY_ALARM],
     Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [
         Attribute.TEMPERATURE_HUMIDITY
@@ -3281,11 +3299,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Attribute.STARTSTOP],
     Capability.STSE_DEVICE_MODE: [Attribute.MODE],
+    Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Attribute.MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [
         Attribute.CURRENT_STATUS,
         Attribute.ENROLLMENT_STATUS,
         Attribute.ENROLLMENT_STATUS_CODE,
     ],
+    Capability.STSOLUTIONS_MESSAGE: [Attribute.TEXT],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
     Capability.TAG_E2E_ENCRYPTION: [Attribute.ENCRYPTION],
