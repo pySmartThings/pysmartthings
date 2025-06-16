@@ -310,8 +310,11 @@ class Command(StrEnum):
     SET_ENERGY_SAVING_LEVEL = "setEnergySavingLevel"
     SET_ERROR = "setError"
     SET_EVEN_ODD_DAY = "setEvenOddDay"
+    SET_EXCLUDE_HOLIDAYS = "setExcludeHolidays"
     SET_FADE = "setFade"
+    SET_FAN_CYCLIC_MODE = "setFanCyclicMode"
     SET_FAN_MODE = "setFanMode"
+    SET_FAN_NEXT_CHANGE = "setFanNextChange"
     SET_FAN_OSCILLATION_MODE = "setFanOscillationMode"
     SET_FAN_SPEED = "setFanSpeed"
     SET_FILTER_CHANGE_NEEDED = "setFilterChangeNeeded"
@@ -339,6 +342,7 @@ class Command(StrEnum):
     SET_HUMIDITY_CONDITION = "setHumidityCondition"
     SET_HUMIDITY_TARGET = "setHumidityTarget"
     SET_ILLUM = "setIllum"
+    SET_INFO_PANEL = "setInfoPanel"
     SET_INFRARED_LEVEL = "setInfraredLevel"
     SET_INITIAL_AMOUNT = "setInitialAmount"
     SET_INPUT = "setInput"
@@ -401,6 +405,7 @@ class Command(StrEnum):
     SET_NEXT_INPUT_SOURCE = "setNextInputSource"
     SET_NODE_END_POINT = "setNodeEndPoint"
     SET_NODE_TO_WRITE = "setNodeToWrite"
+    SET_NORMAL_LED_COLOR = "setNormalLedColor"
     SET_NOTIFICATION_COLOR = "setNotificationColor"
     SET_NOTIFICATION_DURATION = "setNotificationDuration"
     SET_NOTIFICATION_EFFECT = "setNotificationEffect"
@@ -491,10 +496,15 @@ class Command(StrEnum):
     SET_START_VALUE = "setStartValue"
     SET_STARTSTOP = "setStartstop"
     SET_STATUS = "setStatus"
+    SET_STATUS_LED_BLINKING_FREQ = "setStatusLedBlinkingFreq"
+    SET_STATUS_LED_COLOR = "setStatusLedColor"
+    SET_STATUS_LED_FIVE_COLOR = "setStatusLedFiveColor"
     SET_STATUS_LED_FOUR_COLOR = "setStatusLedFourColor"
     SET_STATUS_LED_ONE_COLOR = "setStatusLedOneColor"
+    SET_STATUS_LED_SEVEN_COLOR = "setStatusLedSevenColor"
     SET_STATUS_LED_SIX_COLOR = "setStatusLedSixColor"
     SET_STATUS_LED_THREE_COLOR = "setStatusLedThreeColor"
+    SET_STATUS_LED_TWO_COLOR = "setStatusLedTwoColor"
     SET_STEAM_CLOSET_AUTO_CYCLE_LINK = "setSteamClosetAutoCycleLink"
     SET_STEAM_CLOSET_CYCLE = "setSteamClosetCycle"
     SET_STEAM_CLOSET_CYCLE_PRESET = "setSteamClosetCyclePreset"
@@ -520,6 +530,7 @@ class Command(StrEnum):
     SET_TEMPERATURE_SETPOINT = "setTemperatureSetpoint"
     SET_THERMOSTAT_FAN_MODE = "setThermostatFanMode"
     SET_THERMOSTAT_FAN_SETTING = "setThermostatFanSetting"
+    SET_THERMOSTAT_LOCKED = "setThermostatLocked"
     SET_THERMOSTAT_MODE = "setThermostatMode"
     SET_THING_TYPE = "setThingType"
     SET_TIME = "setTime"
@@ -1452,11 +1463,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_ROBOT_CLEANER_PET_CLEANING_SCHEDULE: [
         Command.DISABLE,
         Command.ENABLE,
+        Command.SET_EXCLUDE_HOLIDAYS,
         Command.SET_SCHEDULE,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_PET_MONITOR: [
         Command.DISABLE,
         Command.ENABLE,
+        Command.SET_EXCLUDE_HOLIDAYS,
         Command.SET_MONITOR,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_PET_MONITOR_REPORT: [],
@@ -1749,6 +1762,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.LEGENDABSOLUTE60149_ENERGY_RESET1: [Command.SET_ENERGY_RESET],
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Command.SET_EVEN_ODD_DAY],
+    Capability.LEGENDABSOLUTE60149_FAN_CYCLIC_MODE: [Command.SET_FAN_CYCLIC_MODE],
+    Capability.LEGENDABSOLUTE60149_FAN_NEXT_CHANGE: [Command.SET_FAN_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Command.SET_FORCED_ON_LEVEL],
     Capability.LEGENDABSOLUTE60149_GET_GROUPS: [Command.SET_GET_GROUPS],
     Capability.LEGENDABSOLUTE60149_GROUP_COMMAND_OPTION: [
@@ -1758,6 +1773,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_HUE_STEPS: [Command.SET_HUE_STEPS],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_CONDITION: [Command.SET_HUMIDITY_CONDITION],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_TARGET: [Command.SET_HUMIDITY_TARGET],
+    Capability.LEGENDABSOLUTE60149_INFO_PANEL: [Command.SET_INFO_PANEL],
     Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: [Command.SET_LEVEL_STEPS],
     Capability.LEGENDABSOLUTE60149_LOCAL_DATE: [Command.SET_LOCAL_DATE],
     Capability.LEGENDABSOLUTE60149_LOCAL_DATE_ONE: [Command.SET_LOCAL_DATE_ONE],
@@ -1819,6 +1835,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_SWITCH_ALL_ON_OFF1: [Command.SET_SWITCH_ALL_ON_OFF],
     Capability.LEGENDABSOLUTE60149_TEMP_CONDITION2: [Command.SET_TEMP_CONDITION],
     Capability.LEGENDABSOLUTE60149_TEMP_TARGET: [Command.SET_TEMP_TARGET],
+    Capability.LEGENDABSOLUTE60149_THERMOSTAT_LOCKED: [Command.SET_THERMOSTAT_LOCKED],
     Capability.LEGENDABSOLUTE60149_TIMER_NEXT_CHANGE: [Command.SET_TIMER_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_TIMER_SECONDS: [Command.SET_TIMER_SECONDS],
     Capability.LEGENDABSOLUTE60149_TIMER_TYPE: [Command.SET_TIMER_TYPE],
@@ -1899,17 +1916,33 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [],
     Capability.PLATEMUSIC11009_FIRMWARE: [],
     Capability.PLATEMUSIC11009_HS_LED_MODE: [Command.SET_LED_MODE],
+    Capability.PLATEMUSIC11009_HS_NORMAL_LED_COLOR: [Command.SET_NORMAL_LED_COLOR],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_BLINKING_COLOR: [
+        Command.SET_STATUS_LED_COLOR
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_BLINKING_FREQ: [
+        Command.SET_STATUS_LED_BLINKING_FREQ
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_FIVE_COLOR: [
+        Command.SET_STATUS_LED_FIVE_COLOR
+    ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_FOUR_COLOR: [
         Command.SET_STATUS_LED_FOUR_COLOR
     ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_ONE_COLOR: [
         Command.SET_STATUS_LED_ONE_COLOR
     ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_SEVEN_COLOR: [
+        Command.SET_STATUS_LED_SEVEN_COLOR
+    ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_SIX_COLOR: [
         Command.SET_STATUS_LED_SIX_COLOR
     ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_THREE_COLOR: [
         Command.SET_STATUS_LED_THREE_COLOR
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_TWO_COLOR: [
+        Command.SET_STATUS_LED_TWO_COLOR
     ],
     Capability.PLATEMUSIC11009_HUMIDITY_ALARM: [],
     Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [],
@@ -1942,6 +1975,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_TAMPER_SENSITIVITY,
         Command.TAMPER,
     ],
+    Capability.PLATINUMMASSIVE43262_STATUS_MESSAGE: [],
     Capability.PLATINUMMASSIVE43262_UNLOCK_CODE_NAME: [],
     Capability.PLATINUMMASSIVE43262_VACATION_MODE: [Command.OFF, Command.VACATION],
     Capability.RBOYAPPS_LOCK_AUDIO: [
@@ -1971,11 +2005,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_SENSITIVITY,
     ],
     Capability.RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE: [],
+    Capability.RIVERTALENT14263_BATCH_GAS_CONSUMPTION_REPORT: [],
     Capability.RIVERTALENT14263_BATCH_POWER_CONSUMPTION_REPORT: [],
     Capability.RIVERTALENT14263_ENERGY_METER_PROPERTIES: [
         Command.SET_METERING_DATE,
         Command.SET_SERVICE_MESSAGE,
     ],
+    Capability.RIVERTALENT14263_GAS_CONSUMPTION_REPORT: [],
     Capability.SEC_CALM_CONNECTION_CARE: [],
     Capability.SEC_DEVICE_CONNECTION_STATE: [Command.REFRESH_CONNECTION],
     Capability.SEC_DIAGNOSTICS_INFORMATION: [],
@@ -1991,6 +2027,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Command.SET_MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [],
     Capability.STSOLUTIONS_MESSAGE: [],
+    Capability.STUS_SOFTWARE_GENERATION: [],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Command.SET_CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Command.SET_FADE],
     Capability.TAG_E2E_ENCRYPTION: [Command.OFF, Command.ON],
