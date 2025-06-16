@@ -649,6 +649,8 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND = "legendabsolute60149.effectsSetCommand"
     LEGENDABSOLUTE60149_ENERGY_RESET1 = "legendabsolute60149.energyReset1"
     LEGENDABSOLUTE60149_EVEN_ODD_DAY = "legendabsolute60149.evenOddDay"
+    LEGENDABSOLUTE60149_FAN_CYCLIC_MODE = "legendabsolute60149.fanCyclicMode"
+    LEGENDABSOLUTE60149_FAN_NEXT_CHANGE = "legendabsolute60149.fanNextChange"
     LEGENDABSOLUTE60149_FORCED_ON_LEVEL = "legendabsolute60149.forcedOnLevel"
     LEGENDABSOLUTE60149_GET_GROUPS = "legendabsolute60149.getGroups"
     LEGENDABSOLUTE60149_GROUP_COMMAND_OPTION = "legendabsolute60149.groupCommandOption"
@@ -656,6 +658,7 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_HUE_STEPS = "legendabsolute60149.hueSteps"
     LEGENDABSOLUTE60149_HUMIDITY_CONDITION = "legendabsolute60149.humidityCondition"
     LEGENDABSOLUTE60149_HUMIDITY_TARGET = "legendabsolute60149.humidityTarget"
+    LEGENDABSOLUTE60149_INFO_PANEL = "legendabsolute60149.infoPanel"
     LEGENDABSOLUTE60149_LEVEL_STEPS = "legendabsolute60149.levelSteps"
     LEGENDABSOLUTE60149_LOCAL_DATE = "legendabsolute60149.localDate"
     LEGENDABSOLUTE60149_LOCAL_DATE_ONE = "legendabsolute60149.localDateOne"
@@ -703,6 +706,7 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_SWITCH_ALL_ON_OFF1 = "legendabsolute60149.switchAllOnOff1"
     LEGENDABSOLUTE60149_TEMP_CONDITION2 = "legendabsolute60149.tempCondition2"
     LEGENDABSOLUTE60149_TEMP_TARGET = "legendabsolute60149.tempTarget"
+    LEGENDABSOLUTE60149_THERMOSTAT_LOCKED = "legendabsolute60149.thermostatLocked"
     LEGENDABSOLUTE60149_TIMER_NEXT_CHANGE = "legendabsolute60149.timerNextChange"
     LEGENDABSOLUTE60149_TIMER_SECONDS = "legendabsolute60149.timerSeconds"
     LEGENDABSOLUTE60149_TIMER_TYPE = "legendabsolute60149.timerType"
@@ -789,10 +793,20 @@ class Capability(StrEnum):
     PLATEMUSIC11009_DEVICE_NETWORK_ID = "platemusic11009.deviceNetworkId"
     PLATEMUSIC11009_FIRMWARE = "platemusic11009.firmware"
     PLATEMUSIC11009_HS_LED_MODE = "platemusic11009.hsLedMode"
+    PLATEMUSIC11009_HS_NORMAL_LED_COLOR = "platemusic11009.hsNormalLedColor"
+    PLATEMUSIC11009_HS_STATUS_LED_BLINKING_COLOR = (
+        "platemusic11009.hsStatusLedBlinkingColor"
+    )
+    PLATEMUSIC11009_HS_STATUS_LED_BLINKING_FREQ = (
+        "platemusic11009.hsStatusLedBlinkingFreq"
+    )
+    PLATEMUSIC11009_HS_STATUS_LED_FIVE_COLOR = "platemusic11009.hsStatusLedFiveColor"
     PLATEMUSIC11009_HS_STATUS_LED_FOUR_COLOR = "platemusic11009.hsStatusLedFourColor"
     PLATEMUSIC11009_HS_STATUS_LED_ONE_COLOR = "platemusic11009.hsStatusLedOneColor"
+    PLATEMUSIC11009_HS_STATUS_LED_SEVEN_COLOR = "platemusic11009.hsStatusLedSevenColor"
     PLATEMUSIC11009_HS_STATUS_LED_SIX_COLOR = "platemusic11009.hsStatusLedSixColor"
     PLATEMUSIC11009_HS_STATUS_LED_THREE_COLOR = "platemusic11009.hsStatusLedThreeColor"
+    PLATEMUSIC11009_HS_STATUS_LED_TWO_COLOR = "platemusic11009.hsStatusLedTwoColor"
     PLATEMUSIC11009_HUMIDITY_ALARM = "platemusic11009.humidityAlarm"
     PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR = (
         "platemusic11009.temperatureHumiditySensor"
@@ -819,6 +833,7 @@ class Capability(StrEnum):
         "platinummassive43262.schlageInteriorButton"
     )
     PLATINUMMASSIVE43262_SCHLAGE_LOCK_ALARM = "platinummassive43262.schlageLockAlarm"
+    PLATINUMMASSIVE43262_STATUS_MESSAGE = "platinummassive43262.statusMessage"
     PLATINUMMASSIVE43262_UNLOCK_CODE_NAME = "platinummassive43262.unlockCodeName"
     PLATINUMMASSIVE43262_VACATION_MODE = "platinummassive43262.vacationMode"
 
@@ -833,10 +848,14 @@ class Capability(StrEnum):
     RIVERTALENT14263_ADAPTIVE_ENERGY_USAGE_STATE = (
         "rivertalent14263.adaptiveEnergyUsageState"
     )
+    RIVERTALENT14263_BATCH_GAS_CONSUMPTION_REPORT = (
+        "rivertalent14263.batchGasConsumptionReport"
+    )
     RIVERTALENT14263_BATCH_POWER_CONSUMPTION_REPORT = (
         "rivertalent14263.batchPowerConsumptionReport"
     )
     RIVERTALENT14263_ENERGY_METER_PROPERTIES = "rivertalent14263.energyMeterProperties"
+    RIVERTALENT14263_GAS_CONSUMPTION_REPORT = "rivertalent14263.gasConsumptionReport"
 
     SEC_CALM_CONNECTION_CARE = "sec.calmConnectionCare"
     SEC_DEVICE_CONNECTION_STATE = "sec.deviceConnectionState"
@@ -855,6 +874,8 @@ class Capability(StrEnum):
     STSOLUTIONS_DEMAND_RESPONSE_MODE = "stsolutions.demandResponseMode"
     STSOLUTIONS_DEMAND_RESPONSE_STATUS = "stsolutions.demandResponseStatus"
     STSOLUTIONS_MESSAGE = "stsolutions.message"
+
+    STUS_SOFTWARE_GENERATION = "stus.softwareGeneration"
 
     SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT = "synthetic.lightingEffectCircadian"
     SYNTHETIC_FADE_LIGHTNING_EFFECT = "synthetic.lightingEffectFade"

@@ -76,6 +76,7 @@ class Attribute(StrEnum):
     AVAILABLE_PROGRAMS = "availablePrograms"
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
+    AVAILABLE_WATER_SPRAY_LEVELS = "availableWaterSprayLevels"
     BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
     BABY_DETERGENT_DOSAGE = "babyDetergentDosage"
     BABY_DETERGENT_INITIAL_AMOUNT = "babyDetergentInitialAmount"
@@ -328,10 +329,13 @@ class Attribute(StrEnum):
     EVEN_ODD_DAY = "evenOddDay"
     EVENT = "event"
     EVENTS = "events"
+    EXCLUDE_HOLIDAYS = "excludeHolidays"
     EXECUTABLE_SERVICE_LIST = "executableServiceList"
     FACE_RECOGNIZED_EVENT = "faceRecognizedEvent"
     FADE = "fade"
+    FAN_CYCLIC_MODE = "fanCyclicMode"
     FAN_MODE = "fanMode"
+    FAN_NEXT_CHANGE = "fanNextChange"
     FAN_OSCILLATION_MODE = "fanOscillationMode"
     FAN_SPEED = "fanSpeed"
     FAULT_STATE = "faultState"
@@ -359,12 +363,14 @@ class Attribute(StrEnum):
     FUEL_LEVEL = "fuelLevel"
     GAS = "gas"
     GAS_CONSUMPTION = "gasConsumption"
+    GAS_CONSUMPTIONS = "gasConsumptions"
     GAS_METER = "gasMeter"
     GAS_METER_CALORIFIC = "gasMeterCalorific"
     GAS_METER_CONVERSION = "gasMeterConversion"
     GAS_METER_PRECISION = "gasMeterPrecision"
     GAS_METER_TIME = "gasMeterTime"
     GAS_METER_VOLUME = "gasMeterVolume"
+    GENERATION = "generation"
     GEOFENCE = "geofence"
     GEOFENCES = "geofences"
     GET_GROUPS = "getGroups"
@@ -435,6 +441,7 @@ class Attribute(StrEnum):
     INDOOR = "indoor"
     INFO = "info"
     INFO_HTML = "infoHtml"
+    INFO_PANEL = "infoPanel"
     INFO_TEXT = "infoText"
     INFRARED_LEVEL = "infraredLevel"
     INITIAL_AMOUNT = "initialAmount"
@@ -603,6 +610,7 @@ class Attribute(StrEnum):
     NODE_END_POINT = "nodeEndPoint"
     NODE_TO_WRITE = "nodeToWrite"
     NONCE = "nonce"
+    NORMAL_LED_COLOR = "normalLedColor"
     NOTIFICATION_COLOR = "notificationColor"
     NOTIFICATION_DURATION = "notificationDuration"
     NOTIFICATION_EFFECT = "notificationEffect"
@@ -836,10 +844,15 @@ class Attribute(StrEnum):
     STATE = "state"
     STATELESS_MODE = "statelessMode"
     STATUS = "status"
+    STATUS_LED_BLINKING_FREQ = "statusLedBlinkingFreq"
+    STATUS_LED_COLOR = "statusLedColor"
+    STATUS_LED_FIVE_COLOR = "statusLedFiveColor"
     STATUS_LED_FOUR_COLOR = "statusLedFourColor"
     STATUS_LED_ONE_COLOR = "statusLedOneColor"
+    STATUS_LED_SEVEN_COLOR = "statusLedSevenColor"
     STATUS_LED_SIX_COLOR = "statusLedSixColor"
     STATUS_LED_THREE_COLOR = "statusLedThreeColor"
+    STATUS_LED_TWO_COLOR = "statusLedTwoColor"
     STATUS_MESSAGE = "statusMessage"
     STEAM_CLOSET_AUTO_CYCLE_LINK = "steamClosetAutoCycleLink"
     STEAM_CLOSET_CYCLE = "steamClosetCycle"
@@ -1043,6 +1056,7 @@ class Attribute(StrEnum):
     TEXT = "text"
     THERMOSTAT_FAN_MODE = "thermostatFanMode"
     THERMOSTAT_FAN_SETTING = "thermostatFanSetting"
+    THERMOSTAT_LOCKED = "thermostatLocked"
     THERMOSTAT_MODE = "thermostatMode"
     THERMOSTAT_OPERATING_STATE = "thermostatOperatingState"
     THERMOSTAT_SETPOINT = "thermostatSetpoint"
@@ -2560,6 +2574,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AREA_IDS,
         Attribute.DAY_OF_WEEK,
         Attribute.ENABLED,
+        Attribute.EXCLUDE_HOLIDAYS,
         Attribute.MAP_ID,
         Attribute.OBSOLETED,
         Attribute.ORIGINATOR,
@@ -2571,6 +2586,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DAY_OF_WEEK,
         Attribute.ENABLED,
         Attribute.END_TIME,
+        Attribute.EXCLUDE_HOLIDAYS,
         Attribute.INTERVAL,
         Attribute.MAP_ID,
         Attribute.MONITORING_STATUS,
@@ -2591,6 +2607,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_SOUND_MODES,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_WATER_SPRAY_LEVEL: [
+        Attribute.AVAILABLE_WATER_SPRAY_LEVELS,
         Attribute.SUPPORTED_WATER_SPRAY_LEVELS,
         Attribute.WATER_SPRAY_LEVEL,
     ],
@@ -3013,6 +3030,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [Attribute.EFFECTS_SET_COMMAND],
     Capability.LEGENDABSOLUTE60149_ENERGY_RESET1: [Attribute.ENERGY_RESET],
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Attribute.EVEN_ODD_DAY],
+    Capability.LEGENDABSOLUTE60149_FAN_CYCLIC_MODE: [Attribute.FAN_CYCLIC_MODE],
+    Capability.LEGENDABSOLUTE60149_FAN_NEXT_CHANGE: [Attribute.FAN_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Attribute.FORCED_ON_LEVEL],
     Capability.LEGENDABSOLUTE60149_GET_GROUPS: [Attribute.GET_GROUPS],
     Capability.LEGENDABSOLUTE60149_GROUP_COMMAND_OPTION: [
@@ -3022,6 +3041,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_HUE_STEPS: [Attribute.HUE_STEPS],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_CONDITION: [Attribute.HUMIDITY_CONDITION],
     Capability.LEGENDABSOLUTE60149_HUMIDITY_TARGET: [Attribute.HUMIDITY_TARGET],
+    Capability.LEGENDABSOLUTE60149_INFO_PANEL: [Attribute.INFO_PANEL],
     Capability.LEGENDABSOLUTE60149_LEVEL_STEPS: [Attribute.LEVEL_STEPS],
     Capability.LEGENDABSOLUTE60149_LOCAL_DATE: [Attribute.LOCAL_DATE],
     Capability.LEGENDABSOLUTE60149_LOCAL_DATE_ONE: [Attribute.LOCAL_DATE_ONE],
@@ -3077,6 +3097,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_SWITCH_ALL_ON_OFF1: [Attribute.SWITCH_ALL_ON_OFF],
     Capability.LEGENDABSOLUTE60149_TEMP_CONDITION2: [Attribute.TEMP_CONDITION],
     Capability.LEGENDABSOLUTE60149_TEMP_TARGET: [Attribute.TEMP_TARGET],
+    Capability.LEGENDABSOLUTE60149_THERMOSTAT_LOCKED: [Attribute.THERMOSTAT_LOCKED],
     Capability.LEGENDABSOLUTE60149_TIMER_NEXT_CHANGE: [Attribute.TIMER_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_TIMER_SECONDS: [Attribute.TIMER_SECONDS],
     Capability.LEGENDABSOLUTE60149_TIMER_TYPE: [Attribute.TIMER_TYPE],
@@ -3167,17 +3188,33 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PLATEMUSIC11009_DEVICE_NETWORK_ID: [Attribute.DEVICE_NETWORK_ID],
     Capability.PLATEMUSIC11009_FIRMWARE: [Attribute.FIRMWARE_VERSION],
     Capability.PLATEMUSIC11009_HS_LED_MODE: [Attribute.LED_MODE],
+    Capability.PLATEMUSIC11009_HS_NORMAL_LED_COLOR: [Attribute.NORMAL_LED_COLOR],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_BLINKING_COLOR: [
+        Attribute.STATUS_LED_COLOR
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_BLINKING_FREQ: [
+        Attribute.STATUS_LED_BLINKING_FREQ
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_FIVE_COLOR: [
+        Attribute.STATUS_LED_FIVE_COLOR
+    ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_FOUR_COLOR: [
         Attribute.STATUS_LED_FOUR_COLOR
     ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_ONE_COLOR: [
         Attribute.STATUS_LED_ONE_COLOR
     ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_SEVEN_COLOR: [
+        Attribute.STATUS_LED_SEVEN_COLOR
+    ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_SIX_COLOR: [
         Attribute.STATUS_LED_SIX_COLOR
     ],
     Capability.PLATEMUSIC11009_HS_STATUS_LED_THREE_COLOR: [
         Attribute.STATUS_LED_THREE_COLOR
+    ],
+    Capability.PLATEMUSIC11009_HS_STATUS_LED_TWO_COLOR: [
+        Attribute.STATUS_LED_TWO_COLOR
     ],
     Capability.PLATEMUSIC11009_HUMIDITY_ALARM: [Attribute.HUMIDITY_ALARM],
     Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [
@@ -3207,6 +3244,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.FORCED_ENTRY_SENSITIVITY,
         Attribute.TAMPER_SENSITIVITY,
     ],
+    Capability.PLATINUMMASSIVE43262_STATUS_MESSAGE: [Attribute.STATUS_MESSAGE],
     Capability.PLATINUMMASSIVE43262_UNLOCK_CODE_NAME: [Attribute.UNLOCK_CODE_NAME],
     Capability.PLATINUMMASSIVE43262_VACATION_MODE: [Attribute.VACATION_MODE],
     Capability.RBOYAPPS_LOCK_AUDIO: [Attribute.AUDIO],
@@ -3231,6 +3269,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STORM_WATCH_ENABLED,
         Attribute.STORM_WATCH_SUPPORT,
     ],
+    Capability.RIVERTALENT14263_BATCH_GAS_CONSUMPTION_REPORT: [
+        Attribute.GAS_CONSUMPTIONS
+    ],
     Capability.RIVERTALENT14263_BATCH_POWER_CONSUMPTION_REPORT: [
         Attribute.POWER_CONSUMPTIONS
     ],
@@ -3252,6 +3293,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.TOU_EVENT_NOTIFICATION,
         Attribute.TOU_INFO,
     ],
+    Capability.RIVERTALENT14263_GAS_CONSUMPTION_REPORT: [Attribute.GAS_CONSUMPTION],
     Capability.SEC_CALM_CONNECTION_CARE: [
         Attribute.PROTOCOLS,
         Attribute.ROLE,
@@ -3306,6 +3348,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ENROLLMENT_STATUS_CODE,
     ],
     Capability.STSOLUTIONS_MESSAGE: [Attribute.TEXT],
+    Capability.STUS_SOFTWARE_GENERATION: [Attribute.GENERATION],
     Capability.SYNTHETIC_CIRCADIAN_LIGHTING_EFFECT: [Attribute.CIRCADIAN],
     Capability.SYNTHETIC_FADE_LIGHTNING_EFFECT: [Attribute.FADE],
     Capability.TAG_E2E_ENCRYPTION: [Attribute.ENCRYPTION],
