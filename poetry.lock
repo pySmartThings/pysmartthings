@@ -1353,17 +1353,17 @@ files = [
 
 [[package]]
 name = "treelib"
-version = "1.7.1"
+version = "1.8.0"
 description = "A Python implementation of tree structure."
 optional = false
-python-versions = "*"
+python-versions = "<4.0,>=3.7"
 files = [
-    {file = "treelib-1.7.1-py3-none-any.whl", hash = "sha256:69aa12559c603273c77580cc86089021756654a754a7c674038de20f9daeafde"},
-    {file = "treelib-1.7.1.tar.gz", hash = "sha256:a2b57ba38290f7da6af97b41de8ff7be98e7a8c00815f95d0782241f77503952"},
+    {file = "treelib-1.8.0-py3-none-any.whl", hash = "sha256:5235d1ebf988c5026f26ce6e5e0cd470007f16d4978185f5c9b3eee8a25aef81"},
+    {file = "treelib-1.8.0.tar.gz", hash = "sha256:e1be2c6b66ffbfae85079fc4c76fb4909946d01d915ee29ff6795de53aed5d55"},
 ]
 
 [package.dependencies]
-six = "*"
+six = ">=1.13.0"
 
 [[package]]
 name = "typing-extensions"
@@ -1535,4 +1535,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "3be495547370b8e8a4e414b8740879fd835d52b1ebfe654d73bf119680a81d7a"
+content-hash = "fd546fcf3802cc8105e8bac6c3d6e0ca69c6f7245cd4b169e8bc281ab3b7a925"
