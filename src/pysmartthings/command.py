@@ -118,6 +118,7 @@ class Command(StrEnum):
     INDICATOR_WHEN_OFF = "indicatorWhenOff"
     INDICATOR_WHEN_ON = "indicatorWhenOn"
     LAUNCH_APP = "launchApp"
+    LAUNCH_T_V_PLUS = "launchTVPlus"
     LINK_DRYER_CYCLE = "linkDryerCycle"
     LINK_STEAM_CLOSET_CYCLE = "linkSteamClosetCycle"
     LOCK = "lock"
@@ -213,6 +214,7 @@ class Command(StrEnum):
     SET_AMOUNT = "setAmount"
     SET_AP_OPERATION_MODE = "setApOperationMode"
     SET_APP_NAME = "setAppName"
+    SET_ART_ON = "setArtOn"
     SET_ATMOS_PRESSURE = "setAtmosPressure"
     SET_AUDIO = "setAudio"
     SET_AUDIO_TRACK = "setAudioTrack"
@@ -333,6 +335,7 @@ class Command(StrEnum):
     SET_HEATED_DRY = "setHeatedDry"
     SET_HEATING_SETPOINT = "setHeatingSetpoint"
     SET_HIGH_TEMP_WASH = "setHighTempWash"
+    SET_HOME_APP = "setHomeApp"
     SET_HOOD_FAN_SPEED = "setHoodFanSpeed"
     SET_HOT_AIR_DRY = "setHotAirDry"
     SET_HOT_TEMPERATURE = "setHotTemperature"
@@ -400,6 +403,7 @@ class Command(StrEnum):
     SET_MONITOR = "setMonitor"
     SET_MOTION_SENSITIVITY = "setMotionSensitivity"
     SET_MOTION_SENSOR_ENABLE = "setMotionSensorEnable"
+    SET_MULTIVIEW = "setMultiview"
     SET_MUTE = "setMute"
     SET_NAME = "setName"
     SET_NEXT_INPUT_SOURCE = "setNextInputSource"
@@ -428,6 +432,7 @@ class Command(StrEnum):
     SET_PARAMETER_START = "setParameterStart"
     SET_PATH = "setPath"
     SET_PATROL = "setPatrol"
+    SET_PAUSE_STATE = "setPauseState"
     SET_PERCENT = "setPercent"
     SET_PERIODIC_SENSING = "setPeriodicSensing"
     SET_PERIODIC_SENSING_INTERVAL = "setPeriodicSensingInterval"
@@ -443,6 +448,7 @@ class Command(StrEnum):
     SET_PROG_OFF = "setProgOff"
     SET_PROG_ON = "setProgOn"
     SET_PROGRAM = "setProgram"
+    SET_PROGRAM_DURATION = "setProgramDuration"
     SET_RANDOM_MAXIMUM_TIMER = "setRandomMaximumTimer"
     SET_RANDOM_MINIMUM_TIMER = "setRandomMinimumTimer"
     SET_RANDOM_NEXT = "setRandomNext"
@@ -1617,13 +1623,17 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_VD_AMBIENT: [Command.SET_AMBIENT_ON],
     Capability.SAMSUNG_VD_AMBIENT18: [Command.SET_AMBIENT_ON],
     Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Command.SET_AMBIENT_CONTENT],
+    Capability.SAMSUNG_VD_ART: [Command.SET_ART_ON],
     Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [],
     Capability.SAMSUNG_VD_AUDIO_INPUT_SOURCE: [Command.SET_NEXT_INPUT_SOURCE],
     Capability.SAMSUNG_VD_DEVICE_CATEGORY: [],
     Capability.SAMSUNG_VD_FIRMWARE_VERSION: [Command.SET_FIRMWARE_VERSION],
     Capability.SAMSUNG_VD_GROUP_INFO: [],
+    Capability.SAMSUNG_VD_HOME_APP: [Command.SET_HOME_APP],
+    Capability.SAMSUNG_VD_LAUNCH_SERVICE: [Command.LAUNCH_T_V_PLUS],
     Capability.SAMSUNG_VD_LIGHT_CONTROL: [Command.SET_LIGHT_CONTROL_MODE],
     Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: [Command.SET_INPUT_SOURCE],
+    Capability.SAMSUNG_VD_MULTIVIEW: [Command.SET_MULTIVIEW],
     Capability.SAMSUNG_VD_PICTURE_MODE: [Command.SET_PICTURE_MODE],
     Capability.SAMSUNG_VD_REMOTE_CONTROL: [Command.SEND],
     Capability.SAMSUNG_VD_SOUND_DETECTION: [],
@@ -2022,6 +2032,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_PROGRAM,
         Command.STOP,
     ],
+    Capability.SIGNALAHEAD13665_OVENPROGRAMSV2: [Command.SET_PROGRAM, Command.STOP],
+    Capability.SIGNALAHEAD13665_PAUSERESUMEV2: [Command.SET_PAUSE_STATE],
+    Capability.SIGNALAHEAD13665_PROGRAMDURATIONV2: [Command.SET_PROGRAM_DURATION],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Command.SET_STARTSTOP],
     Capability.STSE_DEVICE_MODE: [],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Command.SET_MODE],

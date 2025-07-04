@@ -657,6 +657,7 @@ class Attribute(StrEnum):
     PARAMETER_START = "parameterStart"
     PATH = "path"
     PATROL_STATUS = "patrolStatus"
+    PAUSE_STATE = "pauseState"
     PAYLOAD = "payload"
     PERCENT = "percent"
     PERIODIC_SENSING = "periodicSensing"
@@ -1015,6 +1016,8 @@ class Attribute(StrEnum):
     SUPPORTED_UNLOCK_DIRECTIONS = "supportedUnlockDirections"
     SUPPORTED_VALUES = "supportedValues"
     SUPPORTED_VERY_FINE_DUST_VALUES = "supportedVeryFineDustValues"
+    SUPPORTED_VIEW_MODES = "supportedViewModes"
+    SUPPORTED_VIEW_MODES_MAP = "supportedViewModesMap"
     SUPPORTED_VOLUME_LEVELS = "supportedVolumeLevels"
     SUPPORTED_WASHER_RINSE_CYCLES = "supportedWasherRinseCycles"
     SUPPORTED_WASHER_SOIL_LEVEL = "supportedWasherSoilLevel"
@@ -2801,6 +2804,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_VD_AMBIENT: [Attribute.INFO],
     Capability.SAMSUNG_VD_AMBIENT18: [],
     Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Attribute.SUPPORTED_AMBIENT_APPS],
+    Capability.SAMSUNG_VD_ART: [],
     Capability.SAMSUNG_VD_AUDIO_GROUP_INFO: [
         Attribute.CHANNEL,
         Attribute.ROLE,
@@ -2818,6 +2822,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ROLE,
         Attribute.STATUS,
     ],
+    Capability.SAMSUNG_VD_HOME_APP: [
+        Attribute.SUPPORTED_VIEW_MODES,
+        Attribute.SUPPORTED_VIEW_MODES_MAP,
+    ],
+    Capability.SAMSUNG_VD_LAUNCH_SERVICE: [],
     Capability.SAMSUNG_VD_LIGHT_CONTROL: [
         Attribute.ERROR_CODE,
         Attribute.REQUEST_ID,
@@ -2830,6 +2839,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: [
         Attribute.INPUT_SOURCE,
         Attribute.SUPPORTED_INPUT_SOURCES_MAP,
+    ],
+    Capability.SAMSUNG_VD_MULTIVIEW: [
+        Attribute.SUPPORTED_VIEW_MODES,
+        Attribute.SUPPORTED_VIEW_MODES_MAP,
     ],
     Capability.SAMSUNG_VD_PICTURE_MODE: [
         Attribute.PICTURE_MODE,
@@ -3339,6 +3352,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AVAILABLE_PROGRAMS,
         Attribute.PROGRAM,
     ],
+    Capability.SIGNALAHEAD13665_OVENPROGRAMSV2: [
+        Attribute.AVAILABLE_PROGRAMS,
+        Attribute.PROGRAM,
+    ],
+    Capability.SIGNALAHEAD13665_PAUSERESUMEV2: [Attribute.PAUSE_STATE],
+    Capability.SIGNALAHEAD13665_PROGRAMDURATIONV2: [Attribute.DURATION],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Attribute.STARTSTOP],
     Capability.STSE_DEVICE_MODE: [Attribute.MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Attribute.MODE],
