@@ -36,7 +36,7 @@ aiohttp-sse-client2 = "^0.3.0"
 [tool.poetry.group.dev.dependencies]
 codespell = "2.4.1"
 covdefaults = "2.3.0"
-coverage = {version = "7.9.1", extras = ["toml"]}
+coverage = {version = "7.9.2", extras = ["toml"]}
 pylint = "3.3.7"
 pytest = "8.4.1"
 pytest-asyncio = "1.0.0"
