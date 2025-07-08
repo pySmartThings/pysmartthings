@@ -951,12 +951,14 @@ class Attribute(StrEnum):
     SUPPORTED_FORMALDEHYDE_VALUES = "supportedFormaldehydeValues"
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
+    SUPPORTED_FULL_FRIDGE_MODES = "supportedFullFridgeModes"
     SUPPORTED_HEATING_MODES = "supportedHeatingModes"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
     SUPPORTED_HOT_TEMPERATURES = "supportedHotTemperatures"
     SUPPORTED_INPUT_SOURCES = "supportedInputSources"
     SUPPORTED_INPUT_SOURCES_MAP = "supportedInputSourcesMap"
     SUPPORTED_KEY_CODES = "supportedKeyCodes"
+    SUPPORTED_KIMCHI_STORAGE_MODES = "supportedKimchiStorageModes"
     SUPPORTED_LANGUAGES = "supportedLanguages"
     SUPPORTED_LEVELS = "supportedLevels"
     SUPPORTED_LIGHT_CONTROLLER_MODES = "supportedLightControllerModes"
@@ -2027,6 +2029,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.FRIDGE_MODE,
         Attribute.FRIDGE_MODE_VALUE,
         Attribute.SUPPORTED_FRIDGE_MODES,
+        Attribute.SUPPORTED_FULL_FRIDGE_MODES,
     ],
     Capability.CUSTOM_HEPA_FILTER: [
         Attribute.HEPA_FILTER_CAPACITY,
@@ -2435,6 +2438,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK: [Attribute.LOCK_STATE],
     Capability.SAMSUNG_CE_KIDS_LOCK: [Attribute.LOCK_STATE],
     Capability.SAMSUNG_CE_KIDS_LOCK_CONTROL: [Attribute.LOCK_STATE],
+    Capability.SAMSUNG_CE_KIMCHI_LABEL_SCAN_MODE: [
+        Attribute.SUPPORTED_KIMCHI_STORAGE_MODES
+    ],
+    Capability.SAMSUNG_CE_KIMCHI_REFRIGERATOR_OPERATING_STATE: [
+        Attribute.OPERATING_STATE,
+        Attribute.SUPPORTED_MODES,
+    ],
     Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: [
         Attribute.DEFAULT_OPERATION_TIME,
         Attribute.DEFAULT_OVEN_MODE,
