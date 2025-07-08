@@ -418,6 +418,10 @@ class Capability(StrEnum):
     SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK = "samsungce.individualControlLock"
     SAMSUNG_CE_KIDS_LOCK = "samsungce.kidsLock"
     SAMSUNG_CE_KIDS_LOCK_CONTROL = "samsungce.kidsLockControl"
+    SAMSUNG_CE_KIMCHI_LABEL_SCAN_MODE = "samsungce.kimchiLabelScanMode"
+    SAMSUNG_CE_KIMCHI_REFRIGERATOR_OPERATING_STATE = (
+        "samsungce.kimchiRefrigeratorOperatingState"
+    )
     SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS = "samsungce.kitchenDeviceDefaults"
     SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION = "samsungce.kitchenDeviceIdentification"
     SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION = "samsungce.kitchenModeSpecification"

@@ -355,6 +355,7 @@ class Command(StrEnum):
     SET_INTENSITY_WHOLE = "setIntensityWhole"
     SET_INVENTORY = "setInventory"
     SET_KEYPAD = "setKeypad"
+    SET_KIMCHI_LABEL_SCAN_MODE = "setKimchiLabelScanMode"
     SET_LANGUAGE = "setLanguage"
     SET_LED_BAR_OFF_COLOR = "setLedBarOffColor"
     SET_LED_BAR_OFF_LEVEL = "setLedBarOffLevel"
@@ -1398,6 +1399,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK: [],
     Capability.SAMSUNG_CE_KIDS_LOCK: [],
     Capability.SAMSUNG_CE_KIDS_LOCK_CONTROL: [Command.LOCK, Command.UNLOCK],
+    Capability.SAMSUNG_CE_KIMCHI_LABEL_SCAN_MODE: [Command.SET_KIMCHI_LABEL_SCAN_MODE],
+    Capability.SAMSUNG_CE_KIMCHI_REFRIGERATOR_OPERATING_STATE: [Command.SET_MODE],
     Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: [],
     Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: [],
     Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: [],
