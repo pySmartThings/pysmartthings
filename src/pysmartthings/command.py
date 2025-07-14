@@ -446,6 +446,7 @@ class Command(StrEnum):
     SET_PORTION = "setPortion"
     SET_POWER_LEVEL = "setPowerLevel"
     SET_POWER_STATE = "setPowerState"
+    SET_PRESSURE_LEVEL = "setPressureLevel"
     SET_PROG_OFF = "setProgOff"
     SET_PROG_ON = "setProgOn"
     SET_PROGRAM = "setProgram"
@@ -1236,6 +1237,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_DENSITY,
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Command.DISABLE, Command.ENABLE],
+    Capability.SAMSUNG_CE_AUTO_OPEN_DOOR: [
+        Command.OFF,
+        Command.ON,
+        Command.SET_PRESSURE_LEVEL,
+    ],
     Capability.SAMSUNG_CE_AUTO_VENTILATION: [Command.ACTION],
     Capability.SAMSUNG_CE_BURNER_INFO: [],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [],
@@ -1382,6 +1388,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_FOOD_DEFROST: [Command.SET_DEFROST],
     Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: [Command.SET_FREEZER_CONVERT_MODE],
     Capability.SAMSUNG_CE_FRIDGE_FOOD_LIST: [Command.REFRESH],
+    Capability.SAMSUNG_CE_FRIDGE_ICEMAKER_INFO: [],
     Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: [],
     Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: [Command.SET_MODE],
     Capability.SAMSUNG_CE_FRIDGE_VACATION_MODE: [],
