@@ -58,6 +58,7 @@ class Attribute(StrEnum):
     AUTO_DOOR_RELEASE_ENABLED = "autoDoorReleaseEnabled"
     AUTO_LOCK = "autoLock"
     AUTO_MODE = "autoMode"
+    AUTO_OPEN_DOOR = "autoOpenDoor"
     AUTO_RECONNECTION = "autoReconnection"
     AUTO_UPDATE_ENABLED = "autoUpdateEnabled"
     AUTOLOCK = "autolock"
@@ -696,6 +697,7 @@ class Attribute(StrEnum):
     PRESETS = "presets"
     PRESSURE = "pressure"
     PRESSURE_ALARM = "pressureAlarm"
+    PRESSURE_LEVEL = "pressureLevel"
     PROBABILITY = "probability"
     PROG_OFF = "progOff"
     PROG_ON = "progOn"
@@ -990,6 +992,7 @@ class Attribute(StrEnum):
     SUPPORTED_PLAYBACK_COMMANDS = "supportedPlaybackCommands"
     SUPPORTED_POSITIONS = "supportedPositions"
     SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
+    SUPPORTED_PRESSURE_LEVELS = "supportedPressureLevels"
     SUPPORTED_PUBLISHER_I_DS = "supportedPublisherIDs"
     SUPPORTED_RADON_VALUES = "supportedRadonValues"
     SUPPORTED_RINSE_MODES = "supportedRinseModes"
@@ -2171,6 +2174,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_DENSITY,
     ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Attribute.AUTO_DOOR_RELEASE_ENABLED],
+    Capability.SAMSUNG_CE_AUTO_OPEN_DOOR: [
+        Attribute.AUTO_OPEN_DOOR,
+        Attribute.PRESSURE_LEVEL,
+        Attribute.SUPPORTED_PRESSURE_LEVELS,
+    ],
     Capability.SAMSUNG_CE_AUTO_VENTILATION: [Attribute.SUPPORTED_ACTIONS],
     Capability.SAMSUNG_CE_BURNER_INFO: [Attribute.BURNER_ID],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [Attribute.SWITCH],
@@ -2404,6 +2412,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.OUT_OF_SYNC_CHANGES,
         Attribute.REFRESH_RESULT,
     ],
+    Capability.SAMSUNG_CE_FRIDGE_ICEMAKER_INFO: [Attribute.NAME],
     Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: [Attribute.NAME],
     Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: [
         Attribute.MODE,
