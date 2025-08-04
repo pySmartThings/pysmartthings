@@ -1923,7 +1923,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WINDOW_SHADE,
     ],
     Capability.WINDOW_SHADE_LEVEL: [Attribute.SHADE_LEVEL],
-    Capability.WINDOW_SHADE_PRESET: [],
+    Capability.WINDOW_SHADE_PRESET: [Attribute.POSITION, Attribute.SUPPORTED_COMMANDS],
     Capability.WINDOW_SHADE_TILT_LEVEL: [Attribute.SHADE_TILT_LEVEL],
     Capability.WIRELESS_OPERATING_MODE: [Attribute.WIRELESS_OPERATING_MODE],
     Capability.ZWAVE_MULTICHANNEL: [Attribute.EP_EVENT, Attribute.EP_INFO],
