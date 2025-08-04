@@ -446,6 +446,7 @@ class Command(StrEnum):
     SET_PORTION = "setPortion"
     SET_POWER_LEVEL = "setPowerLevel"
     SET_POWER_STATE = "setPowerState"
+    SET_PRESET_POSITION = "setPresetPosition"
     SET_PRESSURE_LEVEL = "setPressureLevel"
     SET_PROG_OFF = "setProgOff"
     SET_PROG_ON = "setProgOn"
@@ -1116,7 +1117,10 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.WIND_SPEED: [],
     Capability.WINDOW_SHADE: [Command.CLOSE, Command.OPEN, Command.PAUSE],
     Capability.WINDOW_SHADE_LEVEL: [Command.SET_SHADE_LEVEL],
-    Capability.WINDOW_SHADE_PRESET: [Command.PRESET_POSITION],
+    Capability.WINDOW_SHADE_PRESET: [
+        Command.PRESET_POSITION,
+        Command.SET_PRESET_POSITION,
+    ],
     Capability.WINDOW_SHADE_TILT_LEVEL: [Command.SET_SHADE_TILT_LEVEL],
     Capability.WIRELESS_OPERATING_MODE: [Command.SET_WIRELESS_OPERATING_MODE],
     Capability.ZWAVE_MULTICHANNEL: [Command.ENABLE_EP_EVENTS, Command.EP_CMD],
