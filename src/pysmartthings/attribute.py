@@ -8,6 +8,7 @@ from pysmartthings.capability import Capability
 class Attribute(StrEnum):
     """Attribute model."""
 
+    ABSENCE_PERIOD = "absencePeriod"
     AC_OPTIONAL_MODE = "acOptionalMode"
     AC_TROPICAL_NIGHT_MODE_LEVEL = "acTropicalNightModeLevel"
     ACCELERATION = "acceleration"
@@ -219,6 +220,7 @@ class Attribute(StrEnum):
     DETAIL_NAME = "detailName"
     DETECTED = "detected"
     DETECTION_INTERVAL = "detectionInterval"
+    DETECTION_METHOD = "detectionMethod"
     DETECTION_PROXIMITY = "detectionProximity"
     DETERGENT_TYPE = "detergentType"
     DEVICE_ASSOCIATION_TYPE = "deviceAssociationType"
@@ -557,6 +559,7 @@ class Attribute(StrEnum):
     METERING_DATE = "meteringDate"
     METHOD = "method"
     MICOM_ASSAY_CODE = "micomAssayCode"
+    MIGRATED = "migrated"
     MIN_CODE_LENGTH = "minCodeLength"
     MIN_CURRENT = "minCurrent"
     MIN_PIN_CODE_LEN = "minPinCodeLen"
@@ -684,6 +687,7 @@ class Attribute(StrEnum):
     POWER_CONSUMPTIONS = "powerConsumptions"
     POWER_CURRENT = "powerCurrent"
     POWER_LEVEL = "powerLevel"
+    POWER_SAVING = "powerSaving"
     POWER_SOURCE = "powerSource"
     POWER_STATE = "powerState"
     POWERFACTOR = "powerfactor"
@@ -890,6 +894,7 @@ class Attribute(StrEnum):
     SUPPORT_REPEAT_MODE = "supportRepeatMode"
     SUPPORT_TOU_EVENT_NOTIFICATION = "supportTouEventNotification"
     SUPPORT_TOU_INFO = "supportTouInfo"
+    SUPPORTED_ABSENCE_PERIODS = "supportedAbsencePeriods"
     SUPPORTED_AC_FAN_MODES = "supportedAcFanModes"
     SUPPORTED_AC_MODES = "supportedAcModes"
     SUPPORTED_AC_OPTIONAL_MODE = "supportedAcOptionalMode"
@@ -922,6 +927,7 @@ class Attribute(StrEnum):
     SUPPORTED_CHARGING_STATES = "supportedChargingStates"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
     SUPPORTED_CLEANING_TYPES = "supportedCleaningTypes"
+    SUPPORTED_COLOR_TEMPERATURES = "supportedColorTemperatures"
     SUPPORTED_COMMANDS = "supportedCommands"
     SUPPORTED_CONDITIONS = "supportedConditions"
     SUPPORTED_CONTAINER_STATES = "supportedContainerStates"
@@ -992,6 +998,7 @@ class Attribute(StrEnum):
     SUPPORTED_PLAYBACK_COMMANDS = "supportedPlaybackCommands"
     SUPPORTED_POSITIONS = "supportedPositions"
     SUPPORTED_POWER_LEVELS = "supportedPowerLevels"
+    SUPPORTED_POWER_SAVINGS = "supportedPowerSavings"
     SUPPORTED_PRESSURE_LEVELS = "supportedPressureLevels"
     SUPPORTED_PUBLISHER_I_DS = "supportedPublisherIDs"
     SUPPORTED_RADON_VALUES = "supportedRadonValues"
@@ -1490,6 +1497,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.LOCK_CODES,
         Attribute.MAX_CODES,
         Attribute.MAX_CODE_LENGTH,
+        Attribute.MIGRATED,
         Attribute.MIN_CODE_LENGTH,
         Attribute.SCAN_CODES,
     ],
@@ -2135,6 +2143,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.WATER_FILTER_USAGE_STEP,
     ],
     Capability.CUSTOM_WELCOME_CARE_MODE: [Attribute.WELCOME_CARE_MODE],
+    Capability.SAMSUNG_CE_ABSENCE_DETECTION: [
+        Attribute.ABSENCE_PERIOD,
+        Attribute.STATUS,
+        Attribute.SUPPORTED_ABSENCE_PERIODS,
+    ],
     Capability.SAMSUNG_CE_ACTIVATION_STATE: [Attribute.ACTIVATION_STATE],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [
         Attribute.SUPPORTED_VOLUME_LEVELS,
@@ -2203,6 +2216,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.COFFEE_BREWING_STATUS,
         Attribute.MAX_NUMBER_OF_RECIPES,
         Attribute.SUPPORTED_PUBLISHER_I_DS,
+    ],
+    Capability.SAMSUNG_CE_COLOR_TEMPERATURE: [
+        Attribute.COLOR_TEMPERATURE,
+        Attribute.SUPPORTED_COLOR_TEMPERATURES,
     ],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [Attribute.CONNECTION_STATE],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [
@@ -2510,6 +2527,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_POWER_CONSUMPTION_RECORD: [Attribute.PAYLOAD],
     Capability.SAMSUNG_CE_POWER_COOL: [Attribute.ACTIVATED],
     Capability.SAMSUNG_CE_POWER_FREEZE: [Attribute.ACTIVATED],
+    Capability.SAMSUNG_CE_POWER_SAVING_WHILE_AWAY: [
+        Attribute.DETECTION_METHOD,
+        Attribute.POWER_SAVING,
+        Attribute.SUPPORTED_POWER_SAVINGS,
+    ],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [Attribute.VERSION],
     Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [
         Attribute.BATTERY,

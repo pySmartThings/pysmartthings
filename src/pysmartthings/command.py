@@ -124,6 +124,7 @@ class Command(StrEnum):
     LOCK = "lock"
     LOCKANDLEAVE = "lockandleave"
     LOWER_SETPOINT = "lowerSetpoint"
+    MIGRATE = "migrate"
     MUTE = "mute"
     MUTE_GROUP = "muteGroup"
     MUTED = "muted"
@@ -445,6 +446,7 @@ class Command(StrEnum):
     SET_PLAYLIST = "setPlaylist"
     SET_PORTION = "setPortion"
     SET_POWER_LEVEL = "setPowerLevel"
+    SET_POWER_SAVING = "setPowerSaving"
     SET_POWER_STATE = "setPowerState"
     SET_PRESET_POSITION = "setPresetPosition"
     SET_PRESSURE_LEVEL = "setPressureLevel"
@@ -796,6 +798,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LOCK_CODES: [
         Command.DELETE_CODE,
         Command.LOCK,
+        Command.MIGRATE,
         Command.NAME_SLOT,
         Command.RELOAD_ALL_CODES,
         Command.REQUEST_CODE,
@@ -1213,6 +1216,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_WASHER_WATER_TEMPERATURE: [Command.SET_WASHER_WATER_TEMPERATURE],
     Capability.CUSTOM_WATER_FILTER: [Command.RESET_WATER_FILTER],
     Capability.CUSTOM_WELCOME_CARE_MODE: [Command.TURN_WELCOME_CARE_ON],
+    Capability.SAMSUNG_CE_ABSENCE_DETECTION: [],
     Capability.SAMSUNG_CE_ACTIVATION_STATE: [],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [Command.SET_VOLUME_LEVEL],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Command.OFF, Command.ON],
@@ -1260,6 +1264,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_USER_LOCATION,
     ],
     Capability.SAMSUNG_CE_COFFEE_BREWING_RECIPE: [Command.SET_COFFEE_BREWING_RECIPE],
+    Capability.SAMSUNG_CE_COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [Command.SET_TIME_OFFSET],
     Capability.SAMSUNG_CE_COOK_RECIPE: [Command.SET_COOK_RECIPE],
@@ -1443,6 +1448,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_POWER_CONSUMPTION_RECORD: [],
     Capability.SAMSUNG_CE_POWER_COOL: [Command.ACTIVATE, Command.DEACTIVATE],
     Capability.SAMSUNG_CE_POWER_FREEZE: [Command.ACTIVATE, Command.DEACTIVATE],
+    Capability.SAMSUNG_CE_POWER_SAVING_WHILE_AWAY: [Command.SET_POWER_SAVING],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [],
     Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [],
     Capability.SAMSUNG_CE_RELATIVE_HUMIDITY_LEVEL: [Command.SET_DESIRED_HUMIDITY],

@@ -332,6 +332,7 @@ class Capability(StrEnum):
     CUSTOM_WATER_FILTER = "custom.waterFilter"
     CUSTOM_WELCOME_CARE_MODE = "custom.welcomeCareMode"
 
+    SAMSUNG_CE_ABSENCE_DETECTION = "samsungce.absenceDetection"
     SAMSUNG_CE_ACTIVATION_STATE = "samsungce.activationState"
     SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK = "samsungce.airConditionerAudioFeedback"
     SAMSUNG_CE_AIR_CONDITIONER_BEEP = "samsungce.airConditionerBeep"
@@ -352,6 +353,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_CLEAN_STATION_UV_CLEANING = "samsungce.cleanStationUvCleaning"
     SAMSUNG_CE_CLOTHING_EXTRA_CARE = "samsungce.clothingExtraCare"
     SAMSUNG_CE_COFFEE_BREWING_RECIPE = "samsungce.coffeeBrewingRecipe"
+    SAMSUNG_CE_COLOR_TEMPERATURE = "samsungce.colorTemperature"
     SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CONSUMED_ENERGY = "samsungce.consumedEnergy"
     SAMSUNG_CE_COOK_RECIPE = "samsungce.cookRecipe"
@@ -441,6 +443,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_POWER_CONSUMPTION_RECORD = "samsungce.powerConsumptionRecord"
     SAMSUNG_CE_POWER_COOL = "samsungce.powerCool"
     SAMSUNG_CE_POWER_FREEZE = "samsungce.powerFreeze"
+    SAMSUNG_CE_POWER_SAVING_WHILE_AWAY = "samsungce.powerSavingWhileAway"
     SAMSUNG_CE_QUICK_CONTROL = "samsungce.quickControl"
     SAMSUNG_CE_RECHARGEABLE_BATTERY = "samsungce.rechargeableBattery"
     SAMSUNG_CE_RELATIVE_HUMIDITY_LEVEL = "samsungce.relativeHumidityLevel"
