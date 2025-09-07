@@ -40,7 +40,7 @@ coverage = {version = "7.10.6", extras = ["toml"]}
 pylint = "3.3.8"
 pytest = "8.4.2"
 pytest-asyncio = "1.1.0"
-pytest-cov = "6.2.1"
+pytest-cov = "6.3.0"
 pytest-timeout = "2.4.0"
 pre-commit = "4.3.0"
 pre-commit-hooks = "6.0.0"
