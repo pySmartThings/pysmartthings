@@ -1107,12 +1107,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pyperclip"
-version = "1.9.0"
+version = "1.10.0"
 description = "A cross-platform clipboard module for Python. (Only handles plain text for now.)"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pyperclip-1.9.0.tar.gz", hash = "sha256:b7de0142ddc81bfc5c7507eea19da920b92252b548b96186caf94a5e2527d310"},
+    {file = "pyperclip-1.10.0-py3-none-any.whl", hash = "sha256:596fbe55dc59263bff26e61d2afbe10223e2fccb5210c9c96a28d6887cfcc7ec"},
+    {file = "pyperclip-1.10.0.tar.gz", hash = "sha256:180c8346b1186921c75dfd14d9048a6b5d46bfc499778811952c6dd6eb1ca6be"},
 ]
 
 [[package]]
@@ -1571,4 +1572,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "a066e53955dcd79bdef04a9eaf4c5720239637cea9614c338d49f7768245a5ea"
+content-hash = "5250fc99b8f4777dc8b9bd1dd36e826b0edf4d3f121695ddf943120ffcfcd6c7"
