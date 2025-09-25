@@ -62,6 +62,7 @@ class DeviceType(StrEnum):
     MQTT = "MQTT"
     OCF = "OCF"
     PENGYOU = "PENGYOU"
+    SAFER = "SAFER"
     SHP = "SHP"
     VIDEO = "VIDEO"
     VIPER = "VIPER"
