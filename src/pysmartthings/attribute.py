@@ -597,6 +597,7 @@ class Attribute(StrEnum):
     MOTOR_FILTER_STATUS = "motorFilterStatus"
     MOVEMENT = "movement"
     MOVIE_MODE = "movieMode"
+    MULTI_TAB = "multiTab"
     MUTE = "mute"
     DEVICE_NAME = "n"
     NAME = "name"
@@ -793,6 +794,7 @@ class Attribute(StrEnum):
     SCHEDULED_TIME = "scheduledTime"
     SCHEDULING_ENABLED = "schedulingEnabled"
     SDP_ANSWER = "sdpAnswer"
+    SDP_OFFER = "sdpOffer"
     SEARCHING_STATUS = "searchingStatus"
     SECURITY_SYSTEM_STATUS = "securitySystemStatus"
     SELECTED_APP_ID = "selectedAppId"
@@ -808,6 +810,7 @@ class Attribute(StrEnum):
     SERIAL_NUMBER_EXTRA = "serialNumberExtra"
     SERVER = "server"
     SERVICE_MESSAGE = "serviceMessage"
+    SERVICE_PROVIDER = "serviceProvider"
     SESSION_STATUS = "sessionStatus"
     SESSION_TIME = "sessionTime"
     SETTABLE = "settable"
@@ -1910,6 +1913,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AUDIO_ONLY,
         Attribute.DEVICE_ICE,
         Attribute.SDP_ANSWER,
+        Attribute.SDP_OFFER,
+        Attribute.STANDBY_MODE,
         Attribute.STUN_URL,
         Attribute.SUPPORTED_FEATURES,
         Attribute.TALKBACK,
@@ -2325,6 +2330,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.HEATED_DRY,
         Attribute.HIGH_TEMP_WASH,
         Attribute.HOT_AIR_DRY,
+        Attribute.MULTI_TAB,
         Attribute.RINSE_PLUS,
         Attribute.SANITIZE,
         Attribute.SANITIZING_WASH,
@@ -3348,6 +3354,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.TOU_INFO,
     ],
     Capability.RIVERTALENT14263_GAS_CONSUMPTION_REPORT: [Attribute.GAS_CONSUMPTION],
+    Capability.SAFE_PANIC_BUTTON: [Attribute.SERVICE_PROVIDER, Attribute.STATUS],
+    Capability.SAFE_USERS: [Attribute.USERS],
     Capability.SEC_CALM_CONNECTION_CARE: [
         Attribute.PROTOCOLS,
         Attribute.ROLE,
