@@ -870,6 +870,9 @@ class Capability(StrEnum):
     RIVERTALENT14263_ENERGY_METER_PROPERTIES = "rivertalent14263.energyMeterProperties"
     RIVERTALENT14263_GAS_CONSUMPTION_REPORT = "rivertalent14263.gasConsumptionReport"
 
+    SAFE_PANIC_BUTTON = "safe.panicButton"
+    SAFE_USERS = "safe.users"
+
     SEC_CALM_CONNECTION_CARE = "sec.calmConnectionCare"
     SEC_DEVICE_CONNECTION_STATE = "sec.deviceConnectionState"
     SEC_DIAGNOSTICS_INFORMATION = "sec.diagnosticsInformation"

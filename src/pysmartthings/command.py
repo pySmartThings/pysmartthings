@@ -188,6 +188,7 @@ class Command(StrEnum):
     RM_COMMAND = "rmCommand"
     RUN = "run"
     SCHEDULE_COOKING = "scheduleCooking"
+    SDP_ANSWER = "sdpAnswer"
     SDP_OFFER = "sdpOffer"
     SEARCH = "search"
     SELECT_AREAS = "selectAreas"
@@ -405,6 +406,7 @@ class Command(StrEnum):
     SET_MONITOR = "setMonitor"
     SET_MOTION_SENSITIVITY = "setMotionSensitivity"
     SET_MOTION_SENSOR_ENABLE = "setMotionSensorEnable"
+    SET_MULTI_TAB = "setMultiTab"
     SET_MULTIVIEW = "setMultiview"
     SET_MUTE = "setMute"
     SET_NAME = "setName"
@@ -588,6 +590,7 @@ class Command(StrEnum):
     SIGN_IN = "signIn"
     SIGN_OUT = "signOut"
     SIREN = "siren"
+    SOLICIT_OFFER = "solicitOffer"
     SPEAK = "speak"
     START = "start"
     START_ACTIVITY = "startActivity"
@@ -1106,7 +1109,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.CLIENT_ICE,
         Command.END,
         Command.REQUEST_TURN_INFO,
+        Command.SDP_ANSWER,
         Command.SDP_OFFER,
+        Command.SOLICIT_OFFER,
         Command.START_TALKBACK,
         Command.STOP_TALKBACK,
     ],
@@ -1332,6 +1337,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_HEATED_DRY,
         Command.SET_HIGH_TEMP_WASH,
         Command.SET_HOT_AIR_DRY,
+        Command.SET_MULTI_TAB,
         Command.SET_OPTIONS,
         Command.SET_RINSE_PLUS,
         Command.SET_SANITIZE,
@@ -2042,6 +2048,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_SERVICE_MESSAGE,
     ],
     Capability.RIVERTALENT14263_GAS_CONSUMPTION_REPORT: [],
+    Capability.SAFE_PANIC_BUTTON: [],
+    Capability.SAFE_USERS: [],
     Capability.SEC_CALM_CONNECTION_CARE: [],
     Capability.SEC_DEVICE_CONNECTION_STATE: [Command.REFRESH_CONNECTION],
     Capability.SEC_DIAGNOSTICS_INFORMATION: [],
