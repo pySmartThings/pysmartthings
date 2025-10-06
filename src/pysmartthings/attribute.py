@@ -675,6 +675,7 @@ class Attribute(StrEnum):
     PLATFORM_ID = "pi"
     PICTURE = "picture"
     PICTURE_MODE = "pictureMode"
+    PICTURE_MUTE = "pictureMute"
     PIN_USERS_SUPPORTED = "pinUsersSupported"
     PLAN = "plan"
     PLAYBACK_REPEAT_MODE = "playbackRepeatMode"
@@ -3284,6 +3285,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR: [Attribute.LED_COLOR],
     Capability.PLATEMUSIC11009_ZOOZ_LED_MODE: [Attribute.LED_MODE],
     Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Attribute.AUTO_LOCK],
+    Capability.PLATINUMMASSIVE43262_HOME_BUTTON: [],
     Capability.PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL: [Attribute.DEFAULT_LEVEL],
     Capability.PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING: [Attribute.LIGHT_SENSING],
     Capability.PLATINUMMASSIVE43262_JASCO_MOTION_SENSITIVITY: [
@@ -3295,6 +3297,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.PLATINUMMASSIVE43262_KEYPAD_BEEP: [Attribute.KEYPAD_BEEP],
     Capability.PLATINUMMASSIVE43262_LOCK_AND_LEAVE: [Attribute.LOCK_AND_LEAVE],
+    Capability.PLATINUMMASSIVE43262_ONKYO_INPUT_SOURCE: [
+        Attribute.INPUT_SOURCE,
+        Attribute.SUPPORTED_INPUT_SOURCES,
+    ],
+    Capability.PLATINUMMASSIVE43262_ONKYO_RAW_COMMAND: [],
+    Capability.PLATINUMMASSIVE43262_PICTURE_MUTE: [Attribute.PICTURE_MUTE],
     Capability.PLATINUMMASSIVE43262_SCHLAGE_INTERIOR_BUTTON: [
         Attribute.INTERIOR_BUTTON
     ],
@@ -3305,6 +3313,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.TAMPER_SENSITIVITY,
     ],
     Capability.PLATINUMMASSIVE43262_STATUS_MESSAGE: [Attribute.STATUS_MESSAGE],
+    Capability.PLATINUMMASSIVE43262_TV_CHANNEL: [Attribute.TV_CHANNEL],
     Capability.PLATINUMMASSIVE43262_UNLOCK_CODE_NAME: [Attribute.UNLOCK_CODE_NAME],
     Capability.PLATINUMMASSIVE43262_VACATION_MODE: [Attribute.VACATION_MODE],
     Capability.RBOYAPPS_LOCK_AUDIO: [Attribute.AUDIO],

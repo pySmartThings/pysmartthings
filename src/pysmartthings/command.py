@@ -114,6 +114,7 @@ class Command(StrEnum):
     GROUP_VOLUME_DOWN = "groupVolumeDown"
     GROUP_VOLUME_UP = "groupVolumeUp"
     HEAT = "heat"
+    HOME = "home"
     INDICATOR_NEVER = "indicatorNever"
     INDICATOR_WHEN_OFF = "indicatorWhenOff"
     INDICATOR_WHEN_ON = "indicatorWhenOn"
@@ -193,6 +194,7 @@ class Command(StrEnum):
     SEARCH = "search"
     SELECT_AREAS = "selectAreas"
     SEND = "send"
+    SEND_COMMAND = "sendCommand"
     SEND_CONTENT = "sendContent"
     SEND_KEY = "sendKey"
     SENSITIVE_TOGGLE = "sensitiveToggle"
@@ -1986,6 +1988,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR: [Command.SET_LED_COLOR],
     Capability.PLATEMUSIC11009_ZOOZ_LED_MODE: [Command.SET_LED_MODE],
     Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Command.AUTOLOCK, Command.OFF],
+    Capability.PLATINUMMASSIVE43262_HOME_BUTTON: [Command.HOME],
     Capability.PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL: [Command.SET_DEFAULT_LEVEL],
     Capability.PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING: [Command.SET_LIGHT_SENSING],
     Capability.PLATINUMMASSIVE43262_JASCO_MOTION_SENSITIVITY: [
@@ -1997,6 +2000,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.PLATINUMMASSIVE43262_KEYPAD_BEEP: [Command.BEEP, Command.OFF],
     Capability.PLATINUMMASSIVE43262_LOCK_AND_LEAVE: [Command.LOCKANDLEAVE, Command.OFF],
+    Capability.PLATINUMMASSIVE43262_ONKYO_INPUT_SOURCE: [Command.SET_INPUT_SOURCE],
+    Capability.PLATINUMMASSIVE43262_ONKYO_RAW_COMMAND: [Command.SEND_COMMAND],
+    Capability.PLATINUMMASSIVE43262_PICTURE_MUTE: [
+        Command.MUTE,
+        Command.SET_MUTE,
+        Command.UNMUTE,
+    ],
     Capability.PLATINUMMASSIVE43262_SCHLAGE_INTERIOR_BUTTON: [
         Command.DISABLE,
         Command.ENABLE,
@@ -2012,6 +2022,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.TAMPER,
     ],
     Capability.PLATINUMMASSIVE43262_STATUS_MESSAGE: [],
+    Capability.PLATINUMMASSIVE43262_TV_CHANNEL: [
+        Command.CHANNEL_DOWN,
+        Command.CHANNEL_UP,
+        Command.SET_TV_CHANNEL,
+    ],
     Capability.PLATINUMMASSIVE43262_UNLOCK_CODE_NAME: [],
     Capability.PLATINUMMASSIVE43262_VACATION_MODE: [Command.OFF, Command.VACATION],
     Capability.RBOYAPPS_LOCK_AUDIO: [
