@@ -829,6 +829,7 @@ class Capability(StrEnum):
     PLATEMUSIC11009_ZOOZ_LED_MODE = "platemusic11009.zoozLedMode"
 
     PLATINUMMASSIVE43262_AUTO_LOCK = "platinummassive43262.autoLock"
+    PLATINUMMASSIVE43262_HOME_BUTTON = "platinummassive43262.homeButton"
     PLATINUMMASSIVE43262_JASCO_DEFAULT_LEVEL = "platinummassive43262.jascoDefaultLevel"
     PLATINUMMASSIVE43262_JASCO_LIGHT_SENSING = "platinummassive43262.jascoLightSensing"
     PLATINUMMASSIVE43262_JASCO_MOTION_SENSITIVITY = (
@@ -842,11 +843,15 @@ class Capability(StrEnum):
     )
     PLATINUMMASSIVE43262_KEYPAD_BEEP = "platinummassive43262.keypadBeep"
     PLATINUMMASSIVE43262_LOCK_AND_LEAVE = "platinummassive43262.lockAndLeave"
+    PLATINUMMASSIVE43262_ONKYO_INPUT_SOURCE = "platinummassive43262.onkyoInputSource"
+    PLATINUMMASSIVE43262_ONKYO_RAW_COMMAND = "platinummassive43262.onkyoRawCommand"
+    PLATINUMMASSIVE43262_PICTURE_MUTE = "platinummassive43262.pictureMute"
     PLATINUMMASSIVE43262_SCHLAGE_INTERIOR_BUTTON = (
         "platinummassive43262.schlageInteriorButton"
     )
     PLATINUMMASSIVE43262_SCHLAGE_LOCK_ALARM = "platinummassive43262.schlageLockAlarm"
     PLATINUMMASSIVE43262_STATUS_MESSAGE = "platinummassive43262.statusMessage"
+    PLATINUMMASSIVE43262_TV_CHANNEL = "platinummassive43262.tvChannel"
     PLATINUMMASSIVE43262_UNLOCK_CODE_NAME = "platinummassive43262.unlockCodeName"
     PLATINUMMASSIVE43262_VACATION_MODE = "platinummassive43262.vacationMode"
 
