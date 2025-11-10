@@ -20,6 +20,7 @@ class Command(StrEnum):
     AGREE_UPDATE = "agreeUpdate"
     ALARM_TOGGLE = "alarmToggle"
     ANNOUNCE = "announce"
+    APPLY = "apply"
     ARM_AWAY = "armAway"
     ARM_STAY = "armStay"
     AUTO = "auto"
@@ -45,6 +46,7 @@ class Command(StrEnum):
     CLIENT_ICE = "clientIce"
     CLOSE = "close"
     CONFIGURE = "configure"
+    CONNECT = "connect"
     COOK_CUSTOM_RECIPE = "cookCustomRecipe"
     COOK_DEFINED_RECIPE = "cookDefinedRecipe"
     COOL = "cool"
@@ -77,6 +79,8 @@ class Command(StrEnum):
     DISABLE_WIFI_NETWORK = "disableWifiNetwork"
     DISAGREE_UPDATE = "disagreeUpdate"
     DISARM = "disarm"
+    DISCONNECT = "disconnect"
+    DISCOVER = "discover"
     DO_NOT_DISTURB_OFF = "doNotDisturbOff"
     DO_NOT_DISTURB_ON = "doNotDisturbOn"
     EDIT_RESERVATION = "editReservation"
@@ -120,6 +124,7 @@ class Command(StrEnum):
     INDICATOR_WHEN_ON = "indicatorWhenOn"
     LAUNCH_APP = "launchApp"
     LAUNCH_T_V_PLUS = "launchTVPlus"
+    LINK = "link"
     LINK_DRYER_CYCLE = "linkDryerCycle"
     LINK_STEAM_CLOSET_CYCLE = "linkSteamClosetCycle"
     LOCK = "lock"
@@ -196,6 +201,7 @@ class Command(StrEnum):
     SEND = "send"
     SEND_COMMAND = "sendCommand"
     SEND_CONTENT = "sendContent"
+    SEND_DATA = "sendData"
     SEND_KEY = "sendKey"
     SENSITIVE_TOGGLE = "sensitiveToggle"
     SET_AC_OPTIONAL_MODE = "setAcOptionalMode"
@@ -1648,7 +1654,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_WIFI_KIT_SUB_DEVICES: [],
     Capability.SAMSUNG_VD_AI_ACTION: [Command.SEND_CONTENT],
-    Capability.SAMSUNG_VD_AMBIENT: [Command.SET_AMBIENT_ON],
+    Capability.SAMSUNG_VD_AMBIENT: [Command.SEND_DATA, Command.SET_AMBIENT_ON],
     Capability.SAMSUNG_VD_AMBIENT18: [Command.SET_AMBIENT_ON],
     Capability.SAMSUNG_VD_AMBIENT_CONTENT: [Command.SET_AMBIENT_CONTENT],
     Capability.SAMSUNG_VD_ART: [Command.SET_ART_ON],
@@ -1881,6 +1887,15 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.MUSICAHEAD43206_POWERMODE: [Command.OFF, Command.ON],
     Capability.MUSICAHEAD43206_SNOOZE: [Command.OFF, Command.ON],
     Capability.MUSICAHEAD43206_STAGE: [Command.SET_STAGE],
+    Capability.ORANGEBROOK39927_HUE_ALERTS: [Command.APPLY],
+    Capability.ORANGEBROOK39927_HUE_BRIDGE: [
+        Command.CONNECT,
+        Command.DISCONNECT,
+        Command.LINK,
+    ],
+    Capability.ORANGEBROOK39927_HUE_DISCOVERY: [Command.DISCOVER],
+    Capability.ORANGEBROOK39927_HUE_GEOFENCE: [Command.REMOVE, Command.UPDATE],
+    Capability.ORANGEBROOK39927_HUE_GROUP: [],
     Capability.PARTYVOICE23922_ADD2: [Command.PUSH],
     Capability.PARTYVOICE23922_AMPERAGE: [],
     Capability.PARTYVOICE23922_APIWEBREQUEST: [Command.G_E_T, Command.P_O_S_T],

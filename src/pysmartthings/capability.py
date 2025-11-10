@@ -730,6 +730,12 @@ class Capability(StrEnum):
     MUSICAHEAD43206_SNOOZE = "musicahead43206.snooze"
     MUSICAHEAD43206_STAGE = "musicahead43206.stage"
 
+    ORANGEBROOK39927_HUE_ALERTS = "orangebrook39927.hueAlerts"
+    ORANGEBROOK39927_HUE_BRIDGE = "orangebrook39927.hueBridge"
+    ORANGEBROOK39927_HUE_DISCOVERY = "orangebrook39927.hueDiscovery"
+    ORANGEBROOK39927_HUE_GEOFENCE = "orangebrook39927.hueGeofence"
+    ORANGEBROOK39927_HUE_GROUP = "orangebrook39927.hueGroup"
+
     PARTYVOICE23922_ADD2 = "partyvoice23922.add2"
     PARTYVOICE23922_AMPERAGE = "partyvoice23922.amperage"
     PARTYVOICE23922_APIWEBREQUEST = "partyvoice23922.apiwebrequest"
