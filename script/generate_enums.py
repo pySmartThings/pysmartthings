@@ -1,10 +1,11 @@
 """Process the device status JSON file to generate a tree of a device status."""
 
+from collections.abc import Callable
 import json
 from pathlib import Path
 import re
 import sys
-from typing import Any, Callable
+from typing import Any
 
 ORDER = ["standard", "custom", "samsungce", "samsungvd", "samsungim"]
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass, field
-from typing import TYPE_CHECKING, Any, Callable, Self, cast
+from typing import TYPE_CHECKING, Any, Self, cast
 
 from aiohttp import ClientConnectionError, ClientError, ClientSession, ClientTimeout
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
@@ -45,7 +45,7 @@ from .models import (
 )
 
 if TYPE_CHECKING:
-    from collections.abc import Awaitable
+    from collections.abc import Awaitable, Callable
 
     from .attribute import Attribute
     from .capability import Capability
