@@ -661,6 +661,7 @@ class Attribute(StrEnum):
     PARAMETER_END = "parameterEnd"
     PARAMETER_START = "parameterStart"
     PATH = "path"
+    PATROL_STATE = "patrolState"
     PATROL_STATUS = "patrolStatus"
     PAUSE_STATE = "pauseState"
     PAYLOAD = "payload"
@@ -912,6 +913,7 @@ class Attribute(StrEnum):
     SUPPORTED_ALARM_STATUSES = "supportedAlarmStatuses"
     SUPPORTED_ALARM_THRESHOLDS = "supportedAlarmThresholds"
     SUPPORTED_ALARM_VALUES = "supportedAlarmValues"
+    SUPPORTED_ALERTS = "supportedAlerts"
     SUPPORTED_AMBIENT_APPS = "supportedAmbientApps"
     SUPPORTED_AMOUNT = "supportedAmount"
     SUPPORTED_AP_OPERATION_MODE = "supportedApOperationMode"
@@ -1046,6 +1048,10 @@ class Attribute(StrEnum):
     SUPPORTED_WI_FI_FREQ = "supportedWiFiFreq"
     SUPPORTED_WIND_MODES = "supportedWindModes"
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
+    SUPPORTS_COLOR = "supportsColor"
+    SUPPORTS_COLOR_TEMPERATURE = "supportsColorTemperature"
+    SUPPORTS_DIMMING = "supportsDimming"
+    SUPPORTS_ON = "supportsOn"
     SUPPORTS_POWER_ON_BY_OCF = "supportsPowerOnByOcf"
     SUPPORTS_PROGRESS_REPORTS = "supportsProgressReports"
     SURFACE_RESIDUAL_HEAT = "surfaceResidualHeat"
@@ -1056,6 +1062,7 @@ class Attribute(StrEnum):
     TAG_BUTTON = "tagButton"
     TAG_STATUS = "tagStatus"
     TALKBACK = "talkback"
+    TALKBACK_DUPLEX = "talkbackDuplex"
     TAMPER = "tamper"
     TAMPER_SENSITIVITY = "tamperSensitivity"
     TARGET_END_TIME = "targetEndTime"
@@ -1367,7 +1374,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.DUST_SENSOR: [Attribute.DUST_LEVEL, Attribute.FINE_DUST_LEVEL],
     Capability.ELEVATOR_CALL: [Attribute.CALL_STATUS],
-    Capability.END_TO_END_ENCRYPTION: [Attribute.ENCRYPTED_KEK, Attribute.NONCE],
+    Capability.END_TO_END_ENCRYPTION: [
+        Attribute.ENCRYPTED_KEK,
+        Attribute.ERROR,
+        Attribute.NONCE,
+    ],
     Capability.ENERGY_METER: [Attribute.ENERGY],
     Capability.EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT: [
         Attribute.EQUIVALENT_CARBON_DIOXIDE_MEASUREMENT
@@ -1714,6 +1725,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.ROBOT_CLEANER_MOVEMENT: [Attribute.ROBOT_CLEANER_MOVEMENT],
     Capability.ROBOT_CLEANER_OPERATING_STATE: [
         Attribute.OPERATING_STATE,
+        Attribute.SUPPORTED_COMMANDS,
         Attribute.SUPPORTED_OPERATING_STATES,
         Attribute.SUPPORTED_OPERATING_STATE_COMMANDS,
     ],
@@ -1919,6 +1931,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STUN_URL,
         Attribute.SUPPORTED_FEATURES,
         Attribute.TALKBACK,
+        Attribute.TALKBACK_DUPLEX,
         Attribute.TURN_INFO,
     ],
     Capability.WIFI_MESH_ROUTER: [
@@ -2583,6 +2596,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_GUIDED_PATROL: [
         Attribute.MAP_ID,
+        Attribute.PATROL_STATE,
         Attribute.WAYPOINTS,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_AREA_INFO: [Attribute.AREA_INFO],
@@ -3170,6 +3184,19 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.MUSICAHEAD43206_POWERMODE: [Attribute.PMODE],
     Capability.MUSICAHEAD43206_SNOOZE: [Attribute.SNOOZE],
     Capability.MUSICAHEAD43206_STAGE: [Attribute.STAGE],
+    Capability.ORANGEBROOK39927_HUE_ALERTS: [Attribute.SUPPORTED_ALERTS],
+    Capability.ORANGEBROOK39927_HUE_BRIDGE: [Attribute.STATUS],
+    Capability.ORANGEBROOK39927_HUE_DISCOVERY: [
+        Attribute.MODE,
+        Attribute.SUPPORTED_MODES,
+    ],
+    Capability.ORANGEBROOK39927_HUE_GEOFENCE: [],
+    Capability.ORANGEBROOK39927_HUE_GROUP: [
+        Attribute.SUPPORTS_COLOR,
+        Attribute.SUPPORTS_COLOR_TEMPERATURE,
+        Attribute.SUPPORTS_DIMMING,
+        Attribute.SUPPORTS_ON,
+    ],
     Capability.PARTYVOICE23922_ADD2: [],
     Capability.PARTYVOICE23922_AMPERAGE: [Attribute.AMPERAGE],
     Capability.PARTYVOICE23922_APIWEBREQUEST: [],
