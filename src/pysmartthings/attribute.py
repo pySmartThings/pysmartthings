@@ -2508,6 +2508,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.BRIGHTNESS_LEVEL,
         Attribute.SUPPORTED_BRIGHTNESS_LEVEL,
     ],
+    Capability.SAMSUNG_CE_MAINTENANCE_MODE: [Attribute.MODE, Attribute.OPERATING_STATE],
     Capability.SAMSUNG_CE_MEAT_AGING: [
         Attribute.STATUS,
         Attribute.SUPPORTED_AGING_METHODS,
