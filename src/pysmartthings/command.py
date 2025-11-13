@@ -1435,6 +1435,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: [],
     Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: [],
     Capability.SAMSUNG_CE_LAMP: [Command.SET_BRIGHTNESS_LEVEL],
+    Capability.SAMSUNG_CE_MAINTENANCE_MODE: [],
     Capability.SAMSUNG_CE_MEAT_AGING: [
         Command.ADD_AGING,
         Command.CANCEL_AGING,

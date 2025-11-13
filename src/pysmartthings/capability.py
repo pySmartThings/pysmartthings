@@ -430,6 +430,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION = "samsungce.kitchenDeviceIdentification"
     SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION = "samsungce.kitchenModeSpecification"
     SAMSUNG_CE_LAMP = "samsungce.lamp"
+    SAMSUNG_CE_MAINTENANCE_MODE = "samsungce.maintenanceMode"
     SAMSUNG_CE_MEAT_AGING = "samsungce.meatAging"
     SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
     SAMSUNG_CE_MICROPHONE_SETTINGS = "samsungce.microphoneSettings"
