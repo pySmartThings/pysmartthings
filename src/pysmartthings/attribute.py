@@ -245,6 +245,7 @@ class Attribute(StrEnum):
     DISHWASHER_OPERATING_PERCENTAGE = "dishwasherOperatingPercentage"
     DISHWASHER_OPERATING_PROGRESS = "dishwasherOperatingProgress"
     DISPLAY = "display"
+    DISPLAY_STATUS = "displayStatus"
     DISTANCE = "distance"
     DATA_MODEL_VERSION = "dmv"
     DO_NOT_DISTURB = "doNotDisturb"
@@ -2877,6 +2878,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.INPUT_SOURCE,
         Attribute.SUPPORTED_INPUT_SOURCES,
     ],
+    Capability.SAMSUNG_VD_AUDIO_SOUND_MODE: [
+        Attribute.DISPLAY_STATUS,
+        Attribute.SOUND_MODE,
+        Attribute.SUPPORTED_SOUND_MODES,
+    ],
     Capability.SAMSUNG_VD_DEVICE_CATEGORY: [Attribute.CATEGORY],
     Capability.SAMSUNG_VD_FIRMWARE_VERSION: [Attribute.FIRMWARE_VERSION],
     Capability.SAMSUNG_VD_GROUP_INFO: [
@@ -3249,6 +3255,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_SUMMARY: [Attribute.SUMMARY],
     Capability.PARTYVOICE23922_TEMPMAX: [Attribute.MAXTEMP],
     Capability.PARTYVOICE23922_TEMPMIN: [Attribute.MINTEMP],
+    Capability.PARTYVOICE23922_TEXTFIELD: [Attribute.TEXT],
     Capability.PARTYVOICE23922_TOPICLIST: [Attribute.TOPICLIST],
     Capability.PARTYVOICE23922_TVCHANNEL: [Attribute.TVCHANNEL],
     Capability.PARTYVOICE23922_VHUMIDITYSET: [Attribute.VHUMIDITY],
