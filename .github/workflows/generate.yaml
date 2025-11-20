@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5.0.1
       - name: 🏗 Set up Poetry
         run: pipx install poetry
       - name: 🏗 Set up Python ${{ env.DEFAULT_PYTHON }}
@@ -30,7 +30,7 @@ jobs:
       - name: 🏗 Install Python dependencies
         run: poetry install --no-interaction
       - name: ⤵️ Check out capabilities from GitHub
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5.0.1
         with:
           repository: "pysmartthings/capabilities"
           path: "capabilities"
