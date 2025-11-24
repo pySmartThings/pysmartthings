@@ -118,6 +118,18 @@ class SmartThings:
             **self._get_headers(),
         }
 
+        return await self.__internal_request(
+            method, url, headers, data=data, params=params
+        )
+
+    async def __internal_request(
+        self,
+        method: str,
+        url: URL,
+        headers: dict[str, str],
+        data: dict[str, Any] | None = None,
+        params: dict[str, Any] | None = None,
+    ) -> str:
         if self.session is None:
             self.session = ClientSession()
             self._close_session = True
@@ -323,6 +335,23 @@ class SmartThings:
     async def get_capability(self, capability: Capability | str) -> str:
         """Retrieve the capability schema."""
         return await self._get(f"v1/capabilities/{capability}/1")
+
+    async def delete_smart_app(
+        self, personal_access_token: str, smart_app_id: str
+    ) -> None:
+        """Delete a SmartApp."""
+        url = URL.build(
+            scheme="https",
+            host=API_BASE,
+            port=443,
+        ).joinpath(f"v1/apps/{smart_app_id}")
+
+        headers = {
+            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
+            "Authorization": f"Bearer {personal_access_token}",
+        }
+
+        await self.__internal_request(METH_DELETE, url, headers)
 
     async def execute_device_command(
         self,
