@@ -376,7 +376,7 @@ async def test_fetching_multiple_pages(
         status=200,
         body=load_fixture("devices_18.json"),
     )
-    assert len(await client.get_devices()) == 7
+    assert len(await client.get_devices()) == 8
     responses.assert_called_with(
         f"{MOCK_URL}/v1/devices",
         METH_GET,
