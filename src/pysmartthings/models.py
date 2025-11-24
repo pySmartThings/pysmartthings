@@ -45,6 +45,30 @@ class Room(DataClassORJSONMixin):
     name: str
 
 
+class MatterProvisioningState(StrEnum):
+    """Matter provisioning state."""
+
+    PROVISIONED = "PROVISIONED"
+    TYPED = "TYPED"
+    DRIVER_SWITCH = "DRIVER_SWITCH"
+    NONFUNCTIONAL = "NONFUNCTIONAL"
+
+
+class MatterListeningType(StrEnum):
+    """Matter listening type."""
+
+    ALWAYS = "ALWAYS"
+    SLEEPY = "SLEEPY"
+
+
+class MatterSupportedNetworkInterfaces(StrEnum):
+    """Matter supported network interfaces."""
+
+    THREAD = "THREAD"
+    WIFI = "WIFI"
+    ETHERNET = "ETHERNET"
+
+
 class DeviceType(StrEnum):
     """Device type."""
 
@@ -273,6 +297,50 @@ class OCF(DataClassORJSONMixin):
 
 
 @dataclass
+class Matter(DataClassORJSONMixin):
+    """Matter model."""
+
+    driver_id: str = field(metadata=field_options(alias="driverId"))
+    hub_id: str = field(metadata=field_options(alias="hubId"))
+    provisioning_state: MatterProvisioningState = field(
+        metadata=field_options(alias="provisioningState")
+    )
+    network_id: str = field(metadata=field_options(alias="networkId"))
+    executing_locally: bool = field(metadata=field_options(alias="executingLocally"))
+    supported_network_interfaces: list[MatterSupportedNetworkInterfaces] = field(
+        metadata=field_options(alias="supportedNetworkInterfaces"), default_factory=list
+    )
+    unique_id: str | None = field(
+        metadata=field_options(alias="uniqueId"), default=None
+    )
+    vendor_id: int | None = field(
+        metadata=field_options(alias="vendorId"), default=None
+    )
+    product_id: int | None = field(
+        metadata=field_options(alias="productId"), default=None
+    )
+    serial_number: str | None = field(
+        metadata=field_options(alias="serialNumber"), default=None
+    )
+    listening_type: MatterListeningType | None = field(
+        metadata=field_options(alias="listeningType"), default=None
+    )
+    hardware_version: str | None = field(
+        metadata=field_options(alias="hardwareVersion"), default=None
+    )
+    software_version: str | None = field(
+        metadata=field_options(alias="softwareVersion"), default=None
+    )
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
+        """Pre deserialize hook."""
+        d["hardwareVersion"] = d.get("version", {}).get("hardwareLabel")
+        d["softwareVersion"] = d.get("version", {}).get("softwareLabel")
+        return d
+
+
+@dataclass
 class Viper(DataClassORJSONMixin):
     """Viper model."""
 
@@ -333,6 +401,7 @@ class Device(DataClassORJSONMixin):
     ocf: OCF | None = None
     viper: Viper | None = None
     hub: Hub | None = None
+    matter: Matter | None = None
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
