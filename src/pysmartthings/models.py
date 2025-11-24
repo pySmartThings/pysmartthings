@@ -18,6 +18,18 @@ ALREADY_LOGGED_CAPABILITIES = set()
 
 
 @dataclass
+class InstalledApp(DataClassORJSONMixin):
+    """Installed app model."""
+
+    installed_app_id: str = field(metadata=field_options(alias="installedAppId"))
+    location_id: str = field(metadata=field_options(alias="locationId"))
+    app_id: str = field(metadata=field_options(alias="appId"))
+    display_name: str | None = field(
+        metadata=field_options(alias="displayName"), default=None
+    )
+
+
+@dataclass
 class BaseLocation(DataClassORJSONMixin):
     """Base location model."""
 

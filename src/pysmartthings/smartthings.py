@@ -33,6 +33,7 @@ from .models import (
     DeviceStatus,
     ErrorResponse,
     EventType,
+    InstalledApp,
     Lifecycle,
     Location,
     LocationResponse,
@@ -352,6 +353,24 @@ class SmartThings:
         }
 
         await self.__internal_request(METH_DELETE, url, headers)
+
+    async def get_installed_app(
+        self, personal_access_token: str, installed_app_id: str
+    ) -> InstalledApp:
+        """Delete a SmartApp."""
+        url = URL.build(
+            scheme="https",
+            host=API_BASE,
+            port=443,
+        ).joinpath(f"v1/installedapps/{installed_app_id}")
+
+        headers = {
+            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
+            "Authorization": f"Bearer {personal_access_token}",
+        }
+
+        resp = await self.__internal_request(METH_GET, url, headers)
+        return InstalledApp.from_json(resp)
 
     async def execute_device_command(
         self,

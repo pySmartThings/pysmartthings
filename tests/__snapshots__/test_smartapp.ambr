@@ -1,0 +1,9 @@
+# serializer version: 1
+# name: test_get_installed_app
+  dict({
+    'app_id': 'c6cde2b0-203e-44cf-a510-3b3ed4706996',
+    'display_name': 'pysmartthings',
+    'installed_app_id': '4514eb36-f5fd-4ab2-9520-0597acd1d212',
+    'location_id': '397678e5-9995-4a39-9d9f-ae6ba310236b',
+  })
+# ---
