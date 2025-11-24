@@ -260,6 +260,16 @@ class OCF(DataClassORJSONMixin):
     firmware_version: str | None = field(
         metadata=field_options(alias="firmwareVersion"), default=None
     )
+    model_code: str | None = field(
+        metadata=field_options(alias="modelCode"), default=None
+    )
+
+    @classmethod
+    def __post_deserialize__(cls, obj: OCF) -> OCF:
+        """Post deserialize hook."""
+        if obj.model_code in {"", "NONE"}:
+            obj.model_code = None
+        return obj
 
 
 @dataclass
