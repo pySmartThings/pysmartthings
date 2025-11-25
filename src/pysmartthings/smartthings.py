@@ -357,7 +357,7 @@ class SmartThings:
     async def get_installed_app(
         self, personal_access_token: str, installed_app_id: str
     ) -> InstalledApp:
-        """Delete a SmartApp."""
+        """Retrieve an installed SmartApp."""
         url = URL.build(
             scheme="https",
             host=API_BASE,
@@ -371,6 +371,23 @@ class SmartThings:
 
         resp = await self.__internal_request(METH_GET, url, headers)
         return InstalledApp.from_json(resp)
+
+    async def delete_installed_app(
+        self, personal_access_token: str, installed_app_id: str
+    ) -> None:
+        """Delete an installed SmartApp."""
+        url = URL.build(
+            scheme="https",
+            host=API_BASE,
+            port=443,
+        ).joinpath(f"v1/installedapps/{installed_app_id}")
+
+        headers = {
+            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
+            "Authorization": f"Bearer {personal_access_token}",
+        }
+
+        await self.__internal_request(METH_DELETE, url, headers)
 
     async def execute_device_command(
         self,
