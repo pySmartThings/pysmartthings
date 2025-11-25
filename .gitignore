@@ -136,6 +136,9 @@ PROJECT_VALIDATION.md
 .claude-mpm/
 .claude/
 
+# Temporary documentation (user-specific)
+docs/bobmatnyc/
+
 # Added by Claude MPM /mpm-init
 $RECYCLE.BIN/
 *.backup
