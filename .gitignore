@@ -129,6 +129,9 @@ CLAUDE.md
 ARCHITECTURE.md
 PROJECT_VALIDATION.md
 
+# MCP Configuration (environment-specific)
+.mcp.json
+
 # Claude MPM Directories (all content)
 .claude-mpm/
 .claude/
@@ -199,3 +202,12 @@ virtualenv/
 wheels/
 yarn-debug.log*
 yarn-error.log*
+
+# Added by Claude MPM /mpm-init
+.claude-mpm/*.log
+.claude-mpm/cache/
+.claude-mpm/logs/
+.claude-mpm/sessions/
+.claude-mpm/tmp/
+.claude/cache/
+.claude/sessions/
