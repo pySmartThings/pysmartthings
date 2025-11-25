@@ -244,6 +244,7 @@ class Component(DataClassORJSONMixin):
     manufacturer_category: Category | str
     label: str | None = None
     user_category: Category | str | None = None
+    optional: bool = False
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
@@ -414,11 +415,48 @@ class Device(DataClassORJSONMixin):
     viper: Viper | None = None
     hub: Hub | None = None
     matter: Matter | None = None
+    # Core additional fields from SmartThings API (issue #529)
+    manufacturer_name: str | None = field(
+        metadata=field_options(alias="manufacturerName"), default=None
+    )
+    presentation_id: str | None = field(
+        metadata=field_options(alias="presentationId"), default=None
+    )
+    owner_id: str | None = field(metadata=field_options(alias="ownerId"), default=None)
+    create_time: str | None = field(
+        metadata=field_options(alias="createTime"), default=None
+    )
+    profile: dict[str, Any] | None = None
+    restriction_tier: int | None = field(
+        metadata=field_options(alias="restrictionTier"), default=None
+    )
+    allowed: list[str] | None = None
+    execution_context: str | None = field(
+        metadata=field_options(alias="executionContext"), default=None
+    )
+    relationships: dict[str, Any] | list[dict[str, Any]] | None = None
+    # Network-specific objects (device-type dependent, issue #529)
+    zigbee: dict[str, Any] | None = None
+    zwave: dict[str, Any] | None = None
+    lan: dict[str, Any] | None = None
+    virtual: dict[str, Any] | None = None
+    edge_child: dict[str, Any] | None = field(
+        metadata=field_options(alias="edgeChild"), default=None
+    )
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
         """Pre deserialize hook."""
         d["components"] = {component["id"]: component for component in d["components"]}
+
+        # Handle empty relationships: API returns [] for empty, convert to None
+        if "relationships" in d and d["relationships"] == []:
+            d["relationships"] = None
+
+        # Handle empty viper dict: has required fields, empty should be None
+        if "viper" in d and isinstance(d["viper"], dict) and not d["viper"]:
+            d["viper"] = None
+
         return d
 
 
