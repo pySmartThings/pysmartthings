@@ -30,6 +30,26 @@ async def test_deleting_smart_app(
     )
 
 
+async def test_deleting_installed_app(
+    client: SmartThings,
+    responses: aioresponses,
+) -> None:
+    """Test deleting an installed SmartApp."""
+    responses.delete(
+        f"{MOCK_URL}/v1/installedapps/4514eb36-f5fd-4ab2-9520-0597acd1d212", status=200
+    )
+    await client.delete_installed_app(
+        "abcabcabcabc", "4514eb36-f5fd-4ab2-9520-0597acd1d212"
+    )
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/v1/installedapps/4514eb36-f5fd-4ab2-9520-0597acd1d212",
+        METH_DELETE,
+        headers={**HEADERS, "Authorization": "Bearer abcabcabcabc"},
+        params=None,
+        json=None,
+    )
+
+
 async def test_get_installed_app(
     client: SmartThings,
     responses: aioresponses,
