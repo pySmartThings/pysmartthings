@@ -38,6 +38,7 @@ class Command(StrEnum):
     CAPTURE_CLIP = "captureClip"
     CHANNEL_DOWN = "channelDown"
     CHANNEL_UP = "channelUp"
+    CHARGE = "charge"
     CHECK_FOR_FIRMWARE_UPDATE = "checkForFirmwareUpdate"
     CHIME = "chime"
     CLEAR = "clear"
@@ -1079,12 +1080,18 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.TVOC_MEASUREMENT: [],
     Capability.ULTRAVIOLET_INDEX: [],
     Capability.VALVE: [Command.CLOSE, Command.OPEN],
+    Capability.VEHICLE_BATTERY: [Command.CHARGE, Command.STOP],
+    Capability.VEHICLE_DOOR_STATE: [Command.LOCK, Command.UNLOCK],
     Capability.VEHICLE_ENGINE: [Command.START_ENGINE, Command.STOP_ENGINE],
     Capability.VEHICLE_FUEL_LEVEL: [],
+    Capability.VEHICLE_HVAC: [],
+    Capability.VEHICLE_HVAC_REMOTE_SWITCH: [Command.OFF, Command.ON],
     Capability.VEHICLE_INFORMATION: [],
     Capability.VEHICLE_ODOMETER: [],
     Capability.VEHICLE_RANGE: [],
     Capability.VEHICLE_TIRE_PRESSURE_MONITOR: [],
+    Capability.VEHICLE_WARNING: [],
+    Capability.VEHICLE_WINDOW_STATE: [],
     Capability.VERY_FINE_DUST_HEALTH_CONCERN: [],
     Capability.VERY_FINE_DUST_SENSOR: [],
     Capability.VIDEO_CAMERA: [
