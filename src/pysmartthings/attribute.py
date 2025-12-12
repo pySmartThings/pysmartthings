@@ -65,6 +65,7 @@ class Attribute(StrEnum):
     AUTOLOCK = "autolock"
     AUTOMATIC_EXECUTION_MODE = "automaticExecutionMode"
     AUTOMATIC_EXECUTION_SETTING = "automaticExecutionSetting"
+    AUXILIARY_BATTERY = "auxiliaryBattery"
     AVAILABILITY = "availability"
     AVAILABLE = "available"
     AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
@@ -90,6 +91,7 @@ class Attribute(StrEnum):
     BASIC_SET_ASSOCIATION_GROUP = "basicSetAssociationGroup"
     BATON_TOUCH = "batonTouch"
     BATTERY = "battery"
+    BATTERY_LEVEL = "batteryLevel"
     BEEP = "beep"
     BELL_SOUNDS = "bellSounds"
     BINARY_ID = "binaryId"
@@ -97,6 +99,7 @@ class Attribute(StrEnum):
     BLOCKING_STATUS = "blockingStatus"
     BMI_MEASUREMENT = "bmiMeasurement"
     BODY_WEIGHT_MEASUREMENT = "bodyWeightMeasurement"
+    BRAKE_FLUID = "brakeFluid"
     BRIGHTNESS_INTENSITY = "brightnessIntensity"
     BRIGHTNESS_LEVEL = "brightnessLevel"
     BURNER_ID = "burnerId"
@@ -115,6 +118,9 @@ class Attribute(StrEnum):
     CELL_SIZE = "cellSize"
     CHANNEL = "channel"
     CHARGE_POINT_STATE = "chargePointState"
+    CHARGING_DETAIL = "chargingDetail"
+    CHARGING_PLUG = "chargingPlug"
+    CHARGING_REMAIN_TIME = "chargingRemainTime"
     CHARGING_STATE = "chargingState"
     CHARGING_STATUS = "chargingStatus"
     CHECK_INTERVAL = "checkInterval"
@@ -203,6 +209,7 @@ class Attribute(StrEnum):
     DEFAULT_OVEN_MODE = "defaultOvenMode"
     DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
     DEFINED_RECIPE = "definedRecipe"
+    DEFOG_STATE = "defogState"
     DEFROST = "defrost"
     DEHUMIDIFIER_MODE = "dehumidifierMode"
     DENSITY = "density"
@@ -296,6 +303,7 @@ class Attribute(StrEnum):
     ELECTRIC_HEPA_FILTER_STATUS = "electricHepaFilterStatus"
     ELECTRIC_HEPA_FILTER_USAGE = "electricHepaFilterUsage"
     ELECTRIC_HEPA_FILTER_USAGE_STEP = "electricHepaFilterUsageStep"
+    ELECTRIC_VEHICLE_BATTERY = "electricVehicleBattery"
     ENABLE_STATE = "enableState"
     ENABLED = "enabled"
     ENCRYPTED = "encrypted"
@@ -316,6 +324,7 @@ class Attribute(StrEnum):
     ENERGY_USAGE_MAX = "energyUsageMax"
     ENERGY_USAGE_MONTH = "energyUsageMonth"
     ENERGY_USAGE_STATE = "energyUsageState"
+    ENGINE_OIL = "engineOil"
     ENGINE_STATE = "engineState"
     ENROLLMENT_STATUS = "enrollmentStatus"
     ENROLLMENT_STATUS_CODE = "enrollmentStatusCode"
@@ -362,6 +371,10 @@ class Attribute(StrEnum):
     FREEZER_CONVERT_MODE = "freezerConvertMode"
     FRIDGE_MODE = "fridgeMode"
     FRIDGE_MODE_VALUE = "fridgeModeValue"
+    FRONT_LEFT_DOOR = "frontLeftDoor"
+    FRONT_LEFT_WINDOW = "frontLeftWindow"
+    FRONT_RIGHT_DOOR = "frontRightDoor"
+    FRONT_RIGHT_WINDOW = "frontRightWindow"
     FSV_SETTINGS = "fsvSettings"
     FUEL = "fuel"
     FUEL_LEVEL = "fuelLevel"
@@ -434,6 +447,9 @@ class Attribute(StrEnum):
     HUMIDITY_ALARM = "humidityAlarm"
     HUMIDITY_CONDITION = "humidityCondition"
     HUMIDITY_TARGET = "humidityTarget"
+    HVAC_SPEED = "hvacSpeed"
+    HVAC_SPEED_RANGE = "hvacSpeedRange"
+    HVAC_STATE = "hvacState"
     SPEC_VERSION = "icv"
     ILLUMINANCE = "illuminance"
     ILLUMVALUE = "illumvalue"
@@ -465,6 +481,7 @@ class Attribute(StrEnum):
     KEYPAD = "keypad"
     KEYPAD_BEEP = "keypadBeep"
     KEYVALUE = "keyvalue"
+    LAMP_WIRE = "lampWire"
     LANGUAGE = "language"
     LAST_EMPTIED_TIME = "lastEmptiedTime"
     LAST_FINISHED_TIME = "lastFinishedTime"
@@ -729,6 +746,10 @@ class Attribute(StrEnum):
     RATE_ALARM = "rateAlarm"
     RATE_TYPE = "rateType"
     REACTIVE = "reactive"
+    REAR_LEFT_DOOR = "rearLeftDoor"
+    REAR_LEFT_WINDOW = "rearLeftWindow"
+    REAR_RIGHT_DOOR = "rearRightDoor"
+    REAR_RIGHT_WINDOW = "rearRightWindow"
     RECOMMENDED_AMOUNT = "recommendedAmount"
     REFERENCE_TABLE = "referenceTable"
     REFRESH_RESULT = "refreshResult"
@@ -831,6 +852,7 @@ class Attribute(StrEnum):
     SIREN_SOUNDS = "sirenSounds"
     SLEEPING = "sleeping"
     SLOT_STATE = "slotState"
+    SMART_KEY_BATTERY = "smartKeyBattery"
     SMOKE = "smoke"
     SNOOZE = "snooze"
     SOFTENER_TYPE = "softenerType"
@@ -920,6 +942,7 @@ class Attribute(StrEnum):
     SUPPORTED_AP_OPERATION_MODE = "supportedApOperationMode"
     SUPPORTED_AREAS = "supportedAreas"
     SUPPORTED_ARGUMENTS = "supportedArguments"
+    SUPPORTED_ATTRIBUTES = "supportedAttributes"
     SUPPORTED_AUTH_TYPE = "supportedAuthType"
     SUPPORTED_AUTO_CLEANING_MODES = "supportedAutoCleaningModes"
     SUPPORTED_AUTOMATIC_EXECUTION_MODE = "supportedAutomaticExecutionMode"
@@ -1100,6 +1123,10 @@ class Attribute(StrEnum):
     TIMER_SECONDS = "timerSeconds"
     TIMER_TYPE = "timerType"
     TIMEZONE = "timezone"
+    TIRE_PRESSURE_FRONT_LEFT = "tirePressureFrontLeft"
+    TIRE_PRESSURE_FRONT_RIGHT = "tirePressureFrontRight"
+    TIRE_PRESSURE_REAR_LEFT = "tirePressureRearLeft"
+    TIRE_PRESSURE_REAR_RIGHT = "tirePressureRearRight"
     TIRE_PRESSURE_STATE = "tirePressureState"
     TITLE = "title"
     TODAY_USAGE_VIEW_AVAILABLE = "todayUsageViewAvailable"
@@ -1174,6 +1201,7 @@ class Attribute(StrEnum):
     WASHER_AUTO_DETERGENT = "washerAutoDetergent"
     WASHER_AUTO_SOFTENER = "washerAutoSoftener"
     WASHER_CYCLE = "washerCycle"
+    WASHER_FLUID = "washerFluid"
     WASHER_JOB_PHASE = "washerJobPhase"
     WASHER_JOB_STATE = "washerJobState"
     WASHER_MODE = "washerMode"
@@ -1855,8 +1883,32 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.TVOC_MEASUREMENT: [Attribute.TVOC_LEVEL],
     Capability.ULTRAVIOLET_INDEX: [Attribute.ULTRAVIOLET_INDEX],
     Capability.VALVE: [Attribute.VALVE],
+    Capability.VEHICLE_BATTERY: [
+        Attribute.BATTERY_LEVEL,
+        Attribute.CHARGING_DETAIL,
+        Attribute.CHARGING_PLUG,
+        Attribute.CHARGING_REMAIN_TIME,
+        Attribute.CHARGING_STATE,
+    ],
+    Capability.VEHICLE_DOOR_STATE: [
+        Attribute.FRONT_LEFT_DOOR,
+        Attribute.FRONT_RIGHT_DOOR,
+        Attribute.LOCK_STATE,
+        Attribute.REAR_LEFT_DOOR,
+        Attribute.REAR_RIGHT_DOOR,
+        Attribute.SUPPORTED_ATTRIBUTES,
+    ],
     Capability.VEHICLE_ENGINE: [Attribute.ENGINE_STATE],
     Capability.VEHICLE_FUEL_LEVEL: [Attribute.FUEL_LEVEL],
+    Capability.VEHICLE_HVAC: [
+        Attribute.DEFOG_STATE,
+        Attribute.HVAC_SPEED,
+        Attribute.HVAC_SPEED_RANGE,
+        Attribute.HVAC_STATE,
+        Attribute.TEMPERATURE,
+        Attribute.TEMPERATURE_RANGE,
+    ],
+    Capability.VEHICLE_HVAC_REMOTE_SWITCH: [],
     Capability.VEHICLE_INFORMATION: [
         Attribute.VEHICLE_COLOR,
         Attribute.VEHICLE_ID,
@@ -1870,6 +1922,28 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.VEHICLE_ODOMETER: [Attribute.ODOMETER_READING],
     Capability.VEHICLE_RANGE: [Attribute.ESTIMATED_REMAINING_RANGE],
     Capability.VEHICLE_TIRE_PRESSURE_MONITOR: [Attribute.TIRE_PRESSURE_STATE],
+    Capability.VEHICLE_WARNING: [
+        Attribute.AUXILIARY_BATTERY,
+        Attribute.BRAKE_FLUID,
+        Attribute.ELECTRIC_VEHICLE_BATTERY,
+        Attribute.ENGINE_OIL,
+        Attribute.FUEL,
+        Attribute.LAMP_WIRE,
+        Attribute.SMART_KEY_BATTERY,
+        Attribute.SUPPORTED_ATTRIBUTES,
+        Attribute.TIRE_PRESSURE_FRONT_LEFT,
+        Attribute.TIRE_PRESSURE_FRONT_RIGHT,
+        Attribute.TIRE_PRESSURE_REAR_LEFT,
+        Attribute.TIRE_PRESSURE_REAR_RIGHT,
+        Attribute.WASHER_FLUID,
+    ],
+    Capability.VEHICLE_WINDOW_STATE: [
+        Attribute.FRONT_LEFT_WINDOW,
+        Attribute.FRONT_RIGHT_WINDOW,
+        Attribute.REAR_LEFT_WINDOW,
+        Attribute.REAR_RIGHT_WINDOW,
+        Attribute.SUPPORTED_ATTRIBUTES,
+    ],
     Capability.VERY_FINE_DUST_HEALTH_CONCERN: [
         Attribute.SUPPORTED_VERY_FINE_DUST_VALUES,
         Attribute.VERY_FINE_DUST_HEALTH_CONCERN,
