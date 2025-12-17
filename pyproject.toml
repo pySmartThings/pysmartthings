@@ -50,7 +50,7 @@ syrupy = "5.0.0"
 aioresponses = "0.7.8"
 treelib = "1.8.0"
 pyperclip = "1.11.0"
-mypy = "1.19.0"
+mypy = "1.19.1"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/pySmartThings/pysmartthings/issues"
