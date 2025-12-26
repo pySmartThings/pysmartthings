@@ -115,6 +115,7 @@ repos:
         name: 🌟 Starring code with pylint
         language: system
         types: [python]
+        exclude: ^examples/
         entry: poetry run pylint
       - id: trailing-whitespace
         name: ✄  Trim Trailing Whitespace
