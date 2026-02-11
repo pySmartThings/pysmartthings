@@ -365,6 +365,7 @@ class Command(StrEnum):
     SET_INTENSITY_HEAD = "setIntensityHead"
     SET_INTENSITY_WHOLE = "setIntensityWhole"
     SET_INVENTORY = "setInventory"
+    SET_INVISIBLE_LIST = "setInvisibleList"
     SET_KEYPAD = "setKeypad"
     SET_KIMCHI_LABEL_SCAN_MODE = "setKimchiLabelScanMode"
     SET_LANGUAGE = "setLanguage"
@@ -491,6 +492,7 @@ class Command(StrEnum):
     SET_SANITIZE = "setSanitize"
     SET_SANITIZING_WASH = "setSanitizingWash"
     SET_SATURATION = "setSaturation"
+    SET_SAVER_MODE = "setSaverMode"
     SET_SCENE = "setScene"
     SET_SCENT_INTENSITY = "setScentIntensity"
     SET_SCHEDULE = "setSchedule"
@@ -543,6 +545,7 @@ class Command(StrEnum):
     SET_SUN_SET = "setSunSet"
     SET_SUN_SET_OFFSET = "setSunSetOffset"
     SET_SWITCH_ALL_ON_OFF = "setSwitchAllOnOff"
+    SET_SWITCH_TO_SAVER_MODE = "setSwitchToSaverMode"
     SET_SYSTEM_PREHEATING = "setSystemPreheating"
     SET_TAMPER_SENSITIVITY = "setTamperSensitivity"
     SET_TARGET_END_TIME = "setTargetEndTime"
@@ -566,9 +569,11 @@ class Command(StrEnum):
     SET_TV_CHANNEL = "setTvChannel"
     SET_TV_CHANNEL_NAME = "setTvChannelName"
     SET_TYPE = "setType"
+    SET_USER_DEFINED_BREWING_RECIPES = "setUserDefinedBrewingRecipes"
     SET_USER_LOCATION = "setUserLocation"
     SET_VALUE = "setValue"
     SET_VIRUS_DOCTOR_MODE = "setVirusDoctorMode"
+    SET_VISIBLE_LIST = "setVisibleList"
     SET_VOLUME = "setVolume"
     SET_VOLUME_LEVEL = "setVolumeLevel"
     SET_WASHER_AUTO_DETERGENT = "setWasherAutoDetergent"
@@ -1006,6 +1011,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SOUND_SENSOR: [],
     Capability.SPEECH_RECOGNITION: [],
     Capability.SPEECH_SYNTHESIS: [Command.SPEAK],
+    Capability.STATELESS_CURTAIN_POWER_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_CUSTOM_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_FANSPEED_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_POWER_BUTTON: [Command.SET_BUTTON],
@@ -1283,7 +1289,14 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_OPERATION_MODE,
         Command.SET_USER_LOCATION,
     ],
-    Capability.SAMSUNG_CE_COFFEE_BREWING_RECIPE: [Command.SET_COFFEE_BREWING_RECIPE],
+    Capability.SAMSUNG_CE_COFFEE_BREWING_RECIPE: [
+        Command.ACTIVATE,
+        Command.DEACTIVATE,
+        Command.SET_COFFEE_BREWING_RECIPE,
+        Command.SET_INVISIBLE_LIST,
+        Command.SET_USER_DEFINED_BREWING_RECIPES,
+        Command.SET_VISIBLE_LIST,
+    ],
     Capability.SAMSUNG_CE_COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [Command.SET_TIME_OFFSET],
@@ -1470,7 +1483,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_POWER_CONSUMPTION_RECORD: [],
     Capability.SAMSUNG_CE_POWER_COOL: [Command.ACTIVATE, Command.DEACTIVATE],
     Capability.SAMSUNG_CE_POWER_FREEZE: [Command.ACTIVATE, Command.DEACTIVATE],
-    Capability.SAMSUNG_CE_POWER_SAVING_WHILE_AWAY: [Command.SET_POWER_SAVING],
+    Capability.SAMSUNG_CE_POWER_SAVING_WHILE_AWAY: [
+        Command.SET_POWER_SAVING,
+        Command.SET_SAVER_MODE,
+        Command.SET_SWITCH_TO_SAVER_MODE,
+    ],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [],
     Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [],
     Capability.SAMSUNG_CE_RELATIVE_HUMIDITY_LEVEL: [Command.SET_DESIRED_HUMIDITY],
@@ -2011,6 +2028,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [],
     Capability.PLATEMUSIC11009_ZOOZ_LED_BRIGHTNESS: [Command.SET_LED_BRIGHTNESS],
     Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR: [Command.SET_LED_COLOR],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR2: [Command.SET_LED_COLOR],
     Capability.PLATEMUSIC11009_ZOOZ_LED_MODE: [Command.SET_LED_MODE],
     Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Command.AUTOLOCK, Command.OFF],
     Capability.PLATINUMMASSIVE43262_HOME_BUTTON: [Command.HOME],

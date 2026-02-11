@@ -70,7 +70,9 @@ class Attribute(StrEnum):
     AVAILABLE = "available"
     AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
     AVAILABLE_AC_MODES = "availableAcModes"
+    AVAILABLE_CURTAIN_POWER_BUTTONS = "availableCurtainPowerButtons"
     AVAILABLE_CUSTOM_BUTTONS = "availableCustomButtons"
+    AVAILABLE_DEHUMIDIFIER_MODES = "availableDehumidifierModes"
     AVAILABLE_FAN_OSCILLATION_MODES = "availableFanOscillationModes"
     AVAILABLE_FANSPEED_BUTTONS = "availableFanspeedButtons"
     AVAILABLE_MODULES = "availableModules"
@@ -475,6 +477,7 @@ class Attribute(StrEnum):
     INVALID_CODE = "invalidCode"
     INVENTORY = "inventory"
     INVISIBLE_FEATURES = "invisibleFeatures"
+    INVISIBLE_LIST = "invisibleList"
     IS_MAP_BASED_OPERATION_AVAILABLE = "isMapBasedOperationAvailable"
     JOB_BEGINNING_STATUS = "jobBeginningStatus"
     KEYNUMVALUE = "keynumvalue"
@@ -717,6 +720,7 @@ class Attribute(StrEnum):
     PRECIPITATION_LEVEL = "precipitationLevel"
     PRECIPITATION_RATE = "precipitationRate"
     PREDEFINED_COURSES = "predefinedCourses"
+    PRELOADED_BREWING_RECIPES = "preloadedBrewingRecipes"
     PRESENCE = "presence"
     PRESENCE_STATUS = "presenceStatus"
     PRESETS = "presets"
@@ -769,6 +773,7 @@ class Attribute(StrEnum):
     REGULAR_SOFTENER_REMAINING_AMOUNT = "regularSoftenerRemainingAmount"
     REGULAR_SOFTENER_TYPE = "regularSoftenerType"
     RELATIVE_HUMIDITY_LEVEL = "relativeHumidityLevel"
+    RELEASE_COUNTRY = "releaseCountry"
     RELEASE_YEAR = "releaseYear"
     REMAINING_AMOUNT = "remainingAmount"
     REMAINING_TIME = "remainingTime"
@@ -806,6 +811,7 @@ class Attribute(StrEnum):
     SANITIZE = "sanitize"
     SANITIZING_WASH = "sanitizingWash"
     SATURATION = "saturation"
+    SAVER_MODE = "saverMode"
     SCAN_CODES = "scanCodes"
     SCAN_RESULTS = "scanResults"
     SCENE = "scene"
@@ -1036,6 +1042,7 @@ class Attribute(StrEnum):
     SUPPORTED_ROBOT_CLEANER_STATES = "supportedRobotCleanerStates"
     SUPPORTED_ROBOT_COMMANDS = "supportedRobotCommands"
     SUPPORTED_ROBOT_STATES = "supportedRobotStates"
+    SUPPORTED_SAVER_MODES = "supportedSaverModes"
     SUPPORTED_SCENES = "supportedScenes"
     SUPPORTED_SECURITY_SYSTEM_COMMANDS = "supportedSecuritySystemCommands"
     SUPPORTED_SECURITY_SYSTEM_STATUSES = "supportedSecuritySystemStatuses"
@@ -1048,6 +1055,7 @@ class Attribute(StrEnum):
     SUPPORTED_STATUSES = "supportedStatuses"
     SUPPORTED_STEAM_CLOSET_JOB_STATE = "supportedSteamClosetJobState"
     SUPPORTED_STEAM_CLOSET_MACHINE_STATE = "supportedSteamClosetMachineState"
+    SUPPORTED_SWITCH_TO_SAVER_MODES = "supportedSwitchToSaverModes"
     SUPPORTED_TEMPERATURE_LEVELS = "supportedTemperatureLevels"
     SUPPORTED_THERMOSTAT_FAN_MODES = "supportedThermostatFanModes"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
@@ -1082,6 +1090,7 @@ class Attribute(StrEnum):
     SWITCH = "switch"
     SWITCH_ALL_ON_OFF = "switchAllOnOff"
     SWITCH_STATE = "switchState"
+    SWITCH_TO_SAVER_MODE = "switchToSaverMode"
     SYSTEM_PREHEATING = "systemPreheating"
     TAG_BUTTON = "tagButton"
     TAG_STATUS = "tagStatus"
@@ -1157,6 +1166,7 @@ class Attribute(StrEnum):
     USAGE = "usage"
     USAGE_TIME = "usageTime"
     USER_CODE = "userCode"
+    USER_DEFINED_BREWING_RECIPES = "userDefinedBrewingRecipes"
     USER_ID = "userId"
     USER_LIST = "userList"
     USER_LOCATION = "userLocation"
@@ -1191,6 +1201,7 @@ class Attribute(StrEnum):
     VIDEO_CLIP = "videoClip"
     VIRUS_DOCTOR_MODE = "virusDoctorMode"
     VISIBLE_FEATURES = "visibleFeatures"
+    VISIBLE_LIST = "visibleList"
     VOLTAGE = "voltage"
     VOLUME = "volume"
     VOLUME_ALARM = "volumeAlarm"
@@ -1798,6 +1809,9 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SOUND_SENSOR: [Attribute.SOUND],
     Capability.SPEECH_RECOGNITION: [Attribute.PHRASE_SPOKEN],
     Capability.SPEECH_SYNTHESIS: [],
+    Capability.STATELESS_CURTAIN_POWER_BUTTON: [
+        Attribute.AVAILABLE_CURTAIN_POWER_BUTTONS
+    ],
     Capability.STATELESS_CUSTOM_BUTTON: [Attribute.AVAILABLE_CUSTOM_BUTTONS],
     Capability.STATELESS_FANSPEED_BUTTON: [Attribute.AVAILABLE_FANSPEED_BUTTONS],
     Capability.STATELESS_POWER_BUTTON: [Attribute.AVAILABLE_POWER_BUTTONS],
@@ -2306,10 +2320,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.USER_LOCATION,
     ],
     Capability.SAMSUNG_CE_COFFEE_BREWING_RECIPE: [
+        Attribute.ACTIVATED,
         Attribute.COFFEE_BREWING_RECIPES,
         Attribute.COFFEE_BREWING_STATUS,
+        Attribute.INVISIBLE_LIST,
         Attribute.MAX_NUMBER_OF_RECIPES,
+        Attribute.PRELOADED_BREWING_RECIPES,
         Attribute.SUPPORTED_PUBLISHER_I_DS,
+        Attribute.USER_DEFINED_BREWING_RECIPES,
+        Attribute.VISIBLE_LIST,
     ],
     Capability.SAMSUNG_CE_COLOR_TEMPERATURE: [
         Attribute.COLOR_TEMPERATURE,
@@ -2346,6 +2365,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_DEFINED_RECIPE: [Attribute.DEFINED_RECIPE],
     Capability.SAMSUNG_CE_DEHUMIDIFIER_BEEP: [Attribute.BEEP],
     Capability.SAMSUNG_CE_DEHUMIDIFIER_MODE: [
+        Attribute.AVAILABLE_DEHUMIDIFIER_MODES,
         Attribute.DEHUMIDIFIER_MODE,
         Attribute.SUPPORTED_DEHUMIDIFIER_MODES,
     ],
@@ -2385,6 +2405,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MICOM_ASSAY_CODE,
         Attribute.MODEL_CLASSIFICATION_CODE,
         Attribute.MODEL_NAME,
+        Attribute.RELEASE_COUNTRY,
         Attribute.RELEASE_YEAR,
         Attribute.SERIAL_NUMBER,
         Attribute.SERIAL_NUMBER_EXTRA,
@@ -2626,7 +2647,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_POWER_SAVING_WHILE_AWAY: [
         Attribute.DETECTION_METHOD,
         Attribute.POWER_SAVING,
+        Attribute.SAVER_MODE,
         Attribute.SUPPORTED_POWER_SAVINGS,
+        Attribute.SUPPORTED_SAVER_MODES,
+        Attribute.SUPPORTED_SWITCH_TO_SAVER_MODES,
+        Attribute.SWITCH_TO_SAVER_MODE,
     ],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [Attribute.VERSION],
     Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [
@@ -3392,6 +3417,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.PLATEMUSIC11009_ZOOZ_LED_BRIGHTNESS: [Attribute.LED_BRIGHTNESS],
     Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR: [Attribute.LED_COLOR],
+    Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR2: [Attribute.LED_COLOR],
     Capability.PLATEMUSIC11009_ZOOZ_LED_MODE: [Attribute.LED_MODE],
     Capability.PLATINUMMASSIVE43262_AUTO_LOCK: [Attribute.AUTO_LOCK],
     Capability.PLATINUMMASSIVE43262_HOME_BUTTON: [],

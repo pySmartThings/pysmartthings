@@ -210,6 +210,7 @@ class Capability(StrEnum):
     SOUND_SENSOR = "soundSensor"
     SPEECH_RECOGNITION = "speechRecognition"
     SPEECH_SYNTHESIS = "speechSynthesis"
+    STATELESS_CURTAIN_POWER_BUTTON = "statelessCurtainPowerButton"
     STATELESS_CUSTOM_BUTTON = "statelessCustomButton"
     STATELESS_FANSPEED_BUTTON = "statelessFanspeedButton"
     STATELESS_POWER_BUTTON = "statelessPowerButton"
@@ -841,6 +842,7 @@ class Capability(StrEnum):
     )
     PLATEMUSIC11009_ZOOZ_LED_BRIGHTNESS = "platemusic11009.zoozLedBrightness"
     PLATEMUSIC11009_ZOOZ_LED_COLOR = "platemusic11009.zoozLedColor"
+    PLATEMUSIC11009_ZOOZ_LED_COLOR2 = "platemusic11009.zoozLedColor2"
     PLATEMUSIC11009_ZOOZ_LED_MODE = "platemusic11009.zoozLedMode"
 
     PLATINUMMASSIVE43262_AUTO_LOCK = "platinummassive43262.autoLock"
