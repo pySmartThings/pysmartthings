@@ -72,6 +72,7 @@ class Attribute(StrEnum):
     AVAILABLE_AC_MODES = "availableAcModes"
     AVAILABLE_CURTAIN_POWER_BUTTONS = "availableCurtainPowerButtons"
     AVAILABLE_CUSTOM_BUTTONS = "availableCustomButtons"
+    AVAILABLE_CYCLE_TYPES = "availableCycleTypes"
     AVAILABLE_DEHUMIDIFIER_MODES = "availableDehumidifierModes"
     AVAILABLE_FAN_OSCILLATION_MODES = "availableFanOscillationModes"
     AVAILABLE_FANSPEED_BUTTONS = "availableFanspeedButtons"
@@ -79,6 +80,7 @@ class Attribute(StrEnum):
     AVAILABLE_POWER_BUTTONS = "availablePowerButtons"
     AVAILABLE_POWER_TOGGLE_BUTTONS = "availablePowerToggleButtons"
     AVAILABLE_PROGRAMS = "availablePrograms"
+    AVAILABLE_SWITCHES = "availableSwitches"
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
     AVAILABLE_WATER_SPRAY_LEVELS = "availableWaterSprayLevels"
@@ -148,6 +150,7 @@ class Attribute(StrEnum):
     COLOR_CHANGE_MODE = "colorChangeMode"
     COLOR_CHANGE_TIMER = "colorChangeTimer"
     COLOR_CHANGING = "colorChanging"
+    COLOR_INVERSION = "colorInversion"
     COLOR_MODE = "colorMode"
     COLOR_TEMP_STEPS = "colorTempSteps"
     COLOR_TEMPERATURE = "colorTemperature"
@@ -232,12 +235,14 @@ class Attribute(StrEnum):
     DETECTION_METHOD = "detectionMethod"
     DETECTION_PROXIMITY = "detectionProximity"
     DETERGENT_TYPE = "detergentType"
+    DEVICE_APPLICATIONS = "deviceApplications"
     DEVICE_ASSOCIATION_TYPE = "deviceAssociationType"
     DEVICE_CONNECTION_STATE = "deviceConnectionState"
     DEVICE_ICE = "deviceIce"
     DEVICE_ID = "deviceId"
     DEVICE_INFO = "deviceInfo"
     DEVICE_NETWORK_ID = "deviceNetworkId"
+    DEVICE_SETTINGS = "deviceSettings"
     DEVICE_TYPE = "deviceType"
     DEVICE_WATCH_DEVICE_STATUS = "DeviceWatch-DeviceStatus"
     DEVICE_WATCH_ENROLL = "DeviceWatch-Enroll"
@@ -283,6 +288,7 @@ class Attribute(StrEnum):
     DRYER_JOB_STATE = "dryerJobState"
     DRYER_MODE = "dryerMode"
     DRYER_WRINKLE_PREVENT = "dryerWrinklePrevent"
+    DRYING_PROGRESS = "dryingProgress"
     DRYING_TEMPERATURE = "dryingTemperature"
     DRYING_TIME = "dryingTime"
     DUMP_TYPE = "dumpType"
@@ -365,6 +371,7 @@ class Attribute(StrEnum):
     FLEX_ZONES = "flexZones"
     FLOW = "flow"
     FLOW_RANGE = "flowRange"
+    FONT_SIZE = "fontSize"
     FOOD_TYPE = "foodType"
     FORCED_ENTRY_SENSITIVITY = "forcedEntrySensitivity"
     FORCED_ON_LEVEL = "forcedOnLevel"
@@ -394,6 +401,7 @@ class Attribute(StrEnum):
     GEOFENCES = "geofences"
     GET_GROUPS = "getGroups"
     GOAL = "goal"
+    GRAYSCALE = "grayscale"
     GRID = "grid"
     GRID_STATUS_STATUS = "gridStatusStatus"
     GRID_STATUS_SUPPORT = "gridStatusSupport"
@@ -424,6 +432,7 @@ class Attribute(StrEnum):
     HEPA_FILTER_STATUS = "hepaFilterStatus"
     HEPA_FILTER_USAGE = "hepaFilterUsage"
     HEPA_FILTER_USAGE_STEP = "hepaFilterUsageStep"
+    HIGH_CONTRAST = "highContrast"
     HIGH_TEMP_WASH = "highTempWash"
     HISTORY = "history"
     HOMING_REASON = "homingReason"
@@ -551,6 +560,8 @@ class Attribute(StrEnum):
     LOOPS_NUMBER = "loopsNumber"
     LQI = "lqi"
     MACHINE_STATE = "machineState"
+    MAGNIFICATION = "magnification"
+    MAGNIFICATION_LEVEL = "magnificationLevel"
     MANUAL_LEVEL = "manualLevel"
     MANUAL_LEVEL_MAX = "manualLevelMax"
     MANUAL_LEVEL_MIN = "manualLevelMin"
@@ -775,6 +786,7 @@ class Attribute(StrEnum):
     RELATIVE_HUMIDITY_LEVEL = "relativeHumidityLevel"
     RELEASE_COUNTRY = "releaseCountry"
     RELEASE_YEAR = "releaseYear"
+    RELUMINO = "relumino"
     REMAINING_AMOUNT = "remainingAmount"
     REMAINING_TIME = "remainingTime"
     REMAINING_TIME_STR = "remainingTimeStr"
@@ -963,6 +975,7 @@ class Attribute(StrEnum):
     SUPPORTED_CHARGING_STATES = "supportedChargingStates"
     SUPPORTED_CLEANING_MODE = "supportedCleaningMode"
     SUPPORTED_CLEANING_TYPES = "supportedCleaningTypes"
+    SUPPORTED_COLOR_INVERSIONS = "supportedColorInversions"
     SUPPORTED_COLOR_TEMPERATURES = "supportedColorTemperatures"
     SUPPORTED_COMMANDS = "supportedCommands"
     SUPPORTED_CONDITIONS = "supportedConditions"
@@ -992,11 +1005,14 @@ class Attribute(StrEnum):
     SUPPORTED_FILTER_COMMANDS = "supportedFilterCommands"
     SUPPORTED_FINE_DUST_VALUES = "supportedFineDustValues"
     SUPPORTED_FOCUS_AREAS = "supportedFocusAreas"
+    SUPPORTED_FONT_SIZES = "supportedFontSizes"
     SUPPORTED_FORMALDEHYDE_VALUES = "supportedFormaldehydeValues"
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
     SUPPORTED_FULL_FRIDGE_MODES = "supportedFullFridgeModes"
+    SUPPORTED_GRAYSCALES = "supportedGrayscales"
     SUPPORTED_HEATING_MODES = "supportedHeatingModes"
+    SUPPORTED_HIGH_CONTRASTS = "supportedHighContrasts"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
     SUPPORTED_HOT_TEMPERATURES = "supportedHotTemperatures"
     SUPPORTED_INPUT_SOURCES = "supportedInputSources"
@@ -1011,6 +1027,8 @@ class Attribute(StrEnum):
     SUPPORTED_LOCK_COMMANDS = "supportedLockCommands"
     SUPPORTED_LOCK_VALUES = "supportedLockValues"
     SUPPORTED_MACHINE_STATES = "supportedMachineStates"
+    SUPPORTED_MAGNIFICATION_LEVELS = "supportedMagnificationLevels"
+    SUPPORTED_MAGNIFICATIONS = "supportedMagnifications"
     SUPPORTED_MEAT_TYPES = "supportedMeatTypes"
     SUPPORTED_MENUS = "supportedMenus"
     SUPPORTED_MIMES = "supportedMimes"
@@ -1038,6 +1056,7 @@ class Attribute(StrEnum):
     SUPPORTED_PRESSURE_LEVELS = "supportedPressureLevels"
     SUPPORTED_PUBLISHER_I_DS = "supportedPublisherIDs"
     SUPPORTED_RADON_VALUES = "supportedRadonValues"
+    SUPPORTED_RELUMINOS = "supportedReluminos"
     SUPPORTED_RINSE_MODES = "supportedRinseModes"
     SUPPORTED_ROBOT_CLEANER_STATES = "supportedRobotCleanerStates"
     SUPPORTED_ROBOT_COMMANDS = "supportedRobotCommands"
@@ -1056,6 +1075,7 @@ class Attribute(StrEnum):
     SUPPORTED_STEAM_CLOSET_JOB_STATE = "supportedSteamClosetJobState"
     SUPPORTED_STEAM_CLOSET_MACHINE_STATE = "supportedSteamClosetMachineState"
     SUPPORTED_SWITCH_TO_SAVER_MODES = "supportedSwitchToSaverModes"
+    SUPPORTED_SWITCHES = "supportedSwitches"
     SUPPORTED_TEMPERATURE_LEVELS = "supportedTemperatureLevels"
     SUPPORTED_THERMOSTAT_FAN_MODES = "supportedThermostatFanModes"
     SUPPORTED_THERMOSTAT_MODES = "supportedThermostatModes"
@@ -1068,6 +1088,7 @@ class Attribute(StrEnum):
     SUPPORTED_VERY_FINE_DUST_VALUES = "supportedVeryFineDustValues"
     SUPPORTED_VIEW_MODES = "supportedViewModes"
     SUPPORTED_VIEW_MODES_MAP = "supportedViewModesMap"
+    SUPPORTED_VOICE_GUIDES = "supportedVoiceGuides"
     SUPPORTED_VOLUME_LEVELS = "supportedVolumeLevels"
     SUPPORTED_WASHER_RINSE_CYCLES = "supportedWasherRinseCycles"
     SUPPORTED_WASHER_SOIL_LEVEL = "supportedWasherSoilLevel"
@@ -1202,6 +1223,7 @@ class Attribute(StrEnum):
     VIRUS_DOCTOR_MODE = "virusDoctorMode"
     VISIBLE_FEATURES = "visibleFeatures"
     VISIBLE_LIST = "visibleList"
+    VOICE_GUIDE = "voiceGuide"
     VOLTAGE = "voltage"
     VOLUME = "volume"
     VOLUME_ALARM = "volumeAlarm"
@@ -1222,6 +1244,7 @@ class Attribute(StrEnum):
     WASHER_WATER_TEMPERATURE = "washerWaterTemperature"
     WASHING_COUNT_AFTER_SELF_CLEAN = "washingCountAfterSelfClean"
     WASHING_COURSE = "washingCourse"
+    WASHING_PROGRESS = "washingProgress"
     WASHING_TIME = "washingTime"
     WATER = "water"
     WATER_CONSUMPTION = "waterConsumption"
@@ -2256,6 +2279,25 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
         Attribute.SUPPORTED_ABSENCE_PERIODS,
     ],
+    Capability.SAMSUNG_CE_ACCESSIBILITY: [
+        Attribute.COLOR_INVERSION,
+        Attribute.FONT_SIZE,
+        Attribute.GRAYSCALE,
+        Attribute.HIGH_CONTRAST,
+        Attribute.MAGNIFICATION,
+        Attribute.MAGNIFICATION_LEVEL,
+        Attribute.RELUMINO,
+        Attribute.SUPPORTED_COLOR_INVERSIONS,
+        Attribute.SUPPORTED_FONT_SIZES,
+        Attribute.SUPPORTED_GRAYSCALES,
+        Attribute.SUPPORTED_HIGH_CONTRASTS,
+        Attribute.SUPPORTED_MAGNIFICATIONS,
+        Attribute.SUPPORTED_MAGNIFICATION_LEVELS,
+        Attribute.SUPPORTED_OPTIONS,
+        Attribute.SUPPORTED_RELUMINOS,
+        Attribute.SUPPORTED_VOICE_GUIDES,
+        Attribute.VOICE_GUIDE,
+    ],
     Capability.SAMSUNG_CE_ACTIVATION_STATE: [Attribute.ACTIVATION_STATE],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [
         Attribute.SUPPORTED_VOLUME_LEVELS,
@@ -2398,6 +2440,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DOSAGE,
         Attribute.INITIAL_AMOUNT,
         Attribute.REMAINING_AMOUNT,
+    ],
+    Capability.SAMSUNG_CE_DEVICE_APPLICATIONS_AND_SETTINGS: [
+        Attribute.DEVICE_APPLICATIONS,
+        Attribute.DEVICE_SETTINGS,
     ],
     Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: [
         Attribute.BINARY_ID,
@@ -2557,6 +2603,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
         Attribute.SUPPORTED_DETECTION_PROXIMITIES,
     ],
+    Capability.SAMSUNG_CE_FRIDGE_ZONE_INFO: [Attribute.NAME],
     Capability.SAMSUNG_CE_HOOD_FAN_SPEED: [
         Attribute.HOOD_FAN_SPEED,
         Attribute.SETTABLE_MAX_FAN_SPEED,
@@ -2857,6 +2904,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
     ],
     Capability.SAMSUNG_CE_SURFACE_RESIDUAL_HEAT: [Attribute.SURFACE_RESIDUAL_HEAT],
+    Capability.SAMSUNG_CE_SWITCH: [
+        Attribute.AVAILABLE_SWITCHES,
+        Attribute.SUPPORTED_SWITCHES,
+        Attribute.SWITCH,
+    ],
     Capability.SAMSUNG_CE_SYSTEM_AIR_CONDITIONER_RESERVATION: [
         Attribute.MAX_NUMBER_OF_RESERVATIONS,
         Attribute.RESERVATIONS,
@@ -2874,6 +2926,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Attribute.STATUS],
     Capability.SAMSUNG_CE_WASHER_CYCLE: [
+        Attribute.AVAILABLE_CYCLE_TYPES,
         Attribute.CYCLE_TYPE,
         Attribute.REFERENCE_TABLE,
         Attribute.SPECIALIZED_FUNCTION_CLASSIFICATION,
@@ -2891,6 +2944,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_WASHER_FREEZE_PREVENT: [Attribute.OPERATING_STATE],
     Capability.SAMSUNG_CE_WASHER_LABEL_SCAN_CYCLE_PRESET: [Attribute.PRESETS],
     Capability.SAMSUNG_CE_WASHER_OPERATING_STATE: [
+        Attribute.DRYING_PROGRESS,
         Attribute.OPERATING_STATE,
         Attribute.OPERATION_TIME,
         Attribute.PROGRESS,
@@ -2901,6 +2955,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_OPERATING_STATES,
         Attribute.WASHER_JOB_PHASE,
         Attribute.WASHER_JOB_STATE,
+        Attribute.WASHING_PROGRESS,
     ],
     Capability.SAMSUNG_CE_WASHER_WASHING_TIME: [
         Attribute.SUPPORTED_WASHING_TIMES,
@@ -3552,6 +3607,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SIGNALAHEAD13665_PAUSERESUMEV2: [Attribute.PAUSE_STATE],
     Capability.SIGNALAHEAD13665_PROGRAMDURATIONV2: [Attribute.DURATION],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Attribute.STARTSTOP],
+    Capability.SIGNALAHEAD13665_WASHERPROGRAMSV2: [
+        Attribute.AVAILABLE_PROGRAMS,
+        Attribute.PROGRAM,
+    ],
     Capability.STSE_DEVICE_MODE: [Attribute.MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Attribute.MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [

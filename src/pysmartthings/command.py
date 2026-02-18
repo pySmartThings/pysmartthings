@@ -255,6 +255,7 @@ class Command(StrEnum):
     SET_COLOR_CHANGE_MODE = "setColorChangeMode"
     SET_COLOR_CHANGE_TIMER = "setColorChangeTimer"
     SET_COLOR_CHANGING = "setColorChanging"
+    SET_COLOR_INVERSION = "setColorInversion"
     SET_COLOR_TEMP_STEPS = "setColorTempSteps"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COLOR_VALUE = "setColorValue"
@@ -279,6 +280,7 @@ class Command(StrEnum):
     SET_CURRENT_TIME_PERIOD = "setCurrentTimePeriod"
     SET_CURRENT_TWILIGHT = "setCurrentTwilight"
     SET_CUSTOM_COURSE = "setCustomCourse"
+    SET_CYCLE_TYPE = "setCycleType"
     SET_DATA = "setData"
     SET_DAY_LENGTH = "setDayLength"
     SET_DEFAULT_LEVEL = "setDefaultLevel"
@@ -332,12 +334,14 @@ class Command(StrEnum):
     SET_FAN_SPEED = "setFanSpeed"
     SET_FILTER_CHANGE_NEEDED = "setFilterChangeNeeded"
     SET_FIRMWARE_VERSION = "setFirmwareVersion"
+    SET_FONT_SIZE = "setFontSize"
     SET_FORCED_ON_LEVEL = "setForcedOnLevel"
     SET_FORCED_SENSITIVITY = "setForcedSensitivity"
     SET_FREEZER_CONVERT_MODE = "setFreezerConvertMode"
     SET_FRIDGE_MODE = "setFridgeMode"
     SET_GEOFENCE = "setGeofence"
     SET_GET_GROUPS = "setGetGroups"
+    SET_GRAYSCALE = "setGrayscale"
     SET_GROUP_COMMAND_OPTION = "setGroupCommandOption"
     SET_GROUP_MUTE = "setGroupMute"
     SET_GROUP_NAME = "setGroupName"
@@ -345,6 +349,7 @@ class Command(StrEnum):
     SET_GROUP_VOLUME = "setGroupVolume"
     SET_HEATED_DRY = "setHeatedDry"
     SET_HEATING_SETPOINT = "setHeatingSetpoint"
+    SET_HIGH_CONTRAST = "setHighContrast"
     SET_HIGH_TEMP_WASH = "setHighTempWash"
     SET_HOME_APP = "setHomeApp"
     SET_HOOD_FAN_SPEED = "setHoodFanSpeed"
@@ -403,6 +408,8 @@ class Command(StrEnum):
     SET_LOCK = "setLock"
     SET_LOOPS_NUMBER = "setLoopsNumber"
     SET_MACHINE_STATE = "setMachineState"
+    SET_MAGNIFICATION = "setMagnification"
+    SET_MAGNIFICATION_LEVEL = "setMagnificationLevel"
     SET_MASTER_DI = "setMasterDi"
     SET_MASTER_NAME = "setMasterName"
     SET_MAX_CURRENT = "setMaxCurrent"
@@ -475,6 +482,7 @@ class Command(StrEnum):
     SET_RECENTLY_USED_APPS = "setRecentlyUsedApps"
     SET_RECOMMENDED_AMOUNT = "setRecommendedAmount"
     SET_REFRIGERATION_SETPOINT = "setRefrigerationSetpoint"
+    SET_RELUMINO = "setRelumino"
     SET_REMAINING_AMOUNT = "setRemainingAmount"
     SET_REMOTE_CONTROL = "setRemoteControl"
     SET_REPORT_STATE_PERIOD = "setReportStatePeriod"
@@ -544,6 +552,7 @@ class Command(StrEnum):
     SET_SUN_RISE_OFFSET = "setSunRiseOffset"
     SET_SUN_SET = "setSunSet"
     SET_SUN_SET_OFFSET = "setSunSetOffset"
+    SET_SWITCH = "setSwitch"
     SET_SWITCH_ALL_ON_OFF = "setSwitchAllOnOff"
     SET_SWITCH_TO_SAVER_MODE = "setSwitchToSaverMode"
     SET_SYSTEM_PREHEATING = "setSystemPreheating"
@@ -574,6 +583,7 @@ class Command(StrEnum):
     SET_VALUE = "setValue"
     SET_VIRUS_DOCTOR_MODE = "setVirusDoctorMode"
     SET_VISIBLE_LIST = "setVisibleList"
+    SET_VOICE_GUIDE = "setVoiceGuide"
     SET_VOLUME = "setVolume"
     SET_VOLUME_LEVEL = "setVolumeLevel"
     SET_WASHER_AUTO_DETERGENT = "setWasherAutoDetergent"
@@ -1243,6 +1253,16 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.CUSTOM_WATER_FILTER: [Command.RESET_WATER_FILTER],
     Capability.CUSTOM_WELCOME_CARE_MODE: [Command.TURN_WELCOME_CARE_ON],
     Capability.SAMSUNG_CE_ABSENCE_DETECTION: [],
+    Capability.SAMSUNG_CE_ACCESSIBILITY: [
+        Command.SET_COLOR_INVERSION,
+        Command.SET_FONT_SIZE,
+        Command.SET_GRAYSCALE,
+        Command.SET_HIGH_CONTRAST,
+        Command.SET_MAGNIFICATION,
+        Command.SET_MAGNIFICATION_LEVEL,
+        Command.SET_RELUMINO,
+        Command.SET_VOICE_GUIDE,
+    ],
     Capability.SAMSUNG_CE_ACTIVATION_STATE: [],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [Command.SET_VOLUME_LEVEL],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Command.OFF, Command.ON],
@@ -1342,6 +1362,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_INITIAL_AMOUNT,
         Command.SET_REMAINING_AMOUNT,
     ],
+    Capability.SAMSUNG_CE_DEVICE_APPLICATIONS_AND_SETTINGS: [],
     Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: [],
     Capability.SAMSUNG_CE_DISHWASHER_JOB_STATE: [],
     Capability.SAMSUNG_CE_DISHWASHER_OPERATION: [
@@ -1440,6 +1461,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.ON,
         Command.SET_DETECTION_PROXIMITY,
     ],
+    Capability.SAMSUNG_CE_FRIDGE_ZONE_INFO: [],
     Capability.SAMSUNG_CE_HOOD_FAN_SPEED: [Command.SET_HOOD_FAN_SPEED],
     Capability.SAMSUNG_CE_HOOD_FILTER: [Command.RESET_HOOD_FILTER],
     Capability.SAMSUNG_CE_HOOD_LAMP_AUTOMATION: [
@@ -1615,6 +1637,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_STICK_CLEANER_STATUS: [],
     Capability.SAMSUNG_CE_STICK_CLEANER_STICK_STATUS: [],
     Capability.SAMSUNG_CE_SURFACE_RESIDUAL_HEAT: [],
+    Capability.SAMSUNG_CE_SWITCH: [Command.SET_SWITCH],
     Capability.SAMSUNG_CE_SYSTEM_AIR_CONDITIONER_RESERVATION: [],
     Capability.SAMSUNG_CE_TEMPERATURE_SETTING: [Command.SET_DESIRED_TEMPERATURE],
     Capability.SAMSUNG_CE_TOGGLE_SWITCH: [Command.OFF, Command.ON, Command.TOGGLE],
@@ -1625,7 +1648,10 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.REFRESH_SPECIFIC_AREA,
     ],
     Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Command.OFF, Command.ON],
-    Capability.SAMSUNG_CE_WASHER_CYCLE: [Command.SET_WASHER_CYCLE],
+    Capability.SAMSUNG_CE_WASHER_CYCLE: [
+        Command.SET_CYCLE_TYPE,
+        Command.SET_WASHER_CYCLE,
+    ],
     Capability.SAMSUNG_CE_WASHER_CYCLE_PRESET: [
         Command.DELETE,
         Command.SET_WASHER_CYCLE_PRESET,
@@ -2122,6 +2148,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SIGNALAHEAD13665_PAUSERESUMEV2: [Command.SET_PAUSE_STATE],
     Capability.SIGNALAHEAD13665_PROGRAMDURATIONV2: [Command.SET_PROGRAM_DURATION],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Command.SET_STARTSTOP],
+    Capability.SIGNALAHEAD13665_WASHERPROGRAMSV2: [Command.SET_PROGRAM, Command.STOP],
     Capability.STSE_DEVICE_MODE: [],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Command.SET_MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [],

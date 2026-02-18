@@ -340,6 +340,7 @@ class Capability(StrEnum):
     CUSTOM_WELCOME_CARE_MODE = "custom.welcomeCareMode"
 
     SAMSUNG_CE_ABSENCE_DETECTION = "samsungce.absenceDetection"
+    SAMSUNG_CE_ACCESSIBILITY = "samsungce.accessibility"
     SAMSUNG_CE_ACTIVATION_STATE = "samsungce.activationState"
     SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK = "samsungce.airConditionerAudioFeedback"
     SAMSUNG_CE_AIR_CONDITIONER_BEEP = "samsungce.airConditionerBeep"
@@ -378,6 +379,9 @@ class Capability(StrEnum):
     SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT = "samsungce.detergentAutoReplenishment"
     SAMSUNG_CE_DETERGENT_ORDER = "samsungce.detergentOrder"
     SAMSUNG_CE_DETERGENT_STATE = "samsungce.detergentState"
+    SAMSUNG_CE_DEVICE_APPLICATIONS_AND_SETTINGS = (
+        "samsungce.deviceApplicationsAndSettings"
+    )
     SAMSUNG_CE_DEVICE_IDENTIFICATION = "samsungce.deviceIdentification"
     SAMSUNG_CE_DISHWASHER_JOB_STATE = "samsungce.dishwasherJobState"
     SAMSUNG_CE_DISHWASHER_OPERATION = "samsungce.dishwasherOperation"
@@ -423,6 +427,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_FRIDGE_PANTRY_MODE = "samsungce.fridgePantryMode"
     SAMSUNG_CE_FRIDGE_VACATION_MODE = "samsungce.fridgeVacationMode"
     SAMSUNG_CE_FRIDGE_WELCOME_LIGHTING = "samsungce.fridgeWelcomeLighting"
+    SAMSUNG_CE_FRIDGE_ZONE_INFO = "samsungce.fridgeZoneInfo"
     SAMSUNG_CE_HOOD_FAN_SPEED = "samsungce.hoodFanSpeed"
     SAMSUNG_CE_HOOD_FILTER = "samsungce.hoodFilter"
     SAMSUNG_CE_HOOD_LAMP_AUTOMATION = "samsungce.hoodLampAutomation"
@@ -513,6 +518,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_STICK_CLEANER_STATUS = "samsungce.stickCleanerStatus"
     SAMSUNG_CE_STICK_CLEANER_STICK_STATUS = "samsungce.stickCleanerStickStatus"
     SAMSUNG_CE_SURFACE_RESIDUAL_HEAT = "samsungce.surfaceResidualHeat"
+    SAMSUNG_CE_SWITCH = "samsungce.switch"
     SAMSUNG_CE_SYSTEM_AIR_CONDITIONER_RESERVATION = (
         "samsungce.systemAirConditionerReservation"
     )
@@ -909,6 +915,7 @@ class Capability(StrEnum):
     SIGNALAHEAD13665_PAUSERESUMEV2 = "signalahead13665.pauseresumev2"
     SIGNALAHEAD13665_PROGRAMDURATIONV2 = "signalahead13665.programdurationv2"
     SIGNALAHEAD13665_STARTSTOPPROGRAMV2 = "signalahead13665.startstopprogramv2"
+    SIGNALAHEAD13665_WASHERPROGRAMSV2 = "signalahead13665.washerprogramsv2"
 
     STSE_DEVICE_MODE = "stse.deviceMode"
 
