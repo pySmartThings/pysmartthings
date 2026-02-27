@@ -121,10 +121,9 @@ def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # no
     file += '    """Attribute model."""\n'
     for attribute in sorted(
         attributes,
-        key=lambda x: re.sub(r"(?<!^)(?=[A-Z])", "_", x)
-        .upper()
-        .replace("-", "")
-        .lower(),
+        key=lambda x: (
+            re.sub(r"(?<!^)(?=[A-Z])", "_", x).upper().replace("-", "").lower()
+        ),
     ):
         name = prepare_attribute_name(attribute)
         file += f'    {name} = "{attribute}"\n'
@@ -158,10 +157,9 @@ def main() -> int:  # pylint: disable=too-many-locals, too-many-statements  # no
     command_file += '    """Command model."""\n'
     for command in sorted(
         commands,
-        key=lambda x: re.sub(r"(?<!^)(?=[A-Z])", "_", x)
-        .upper()
-        .replace("-", "")
-        .lower(),
+        key=lambda x: (
+            re.sub(r"(?<!^)(?=[A-Z])", "_", x).upper().replace("-", "").lower()
+        ),
     ):
         name = prepare_command_name(command)
         command_file += f'    {name} = "{command}"\n'
