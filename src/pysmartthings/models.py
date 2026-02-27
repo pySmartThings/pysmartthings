@@ -394,6 +394,9 @@ class Device(DataClassORJSONMixin):
     location_id: str = field(metadata=field_options(alias="locationId"))
     type: DeviceType
     components: dict[str, Component]
+    presentation_id: str | None = field(
+        metadata=field_options(alias="presentationId"), default=None
+    )
     parent_device_id: str | None = field(
         metadata=field_options(alias="parentDeviceId"), default=None
     )
