@@ -949,5 +949,14 @@ class Capability(StrEnum):
     WATCHDIGIT58804_SYSTEMPREHEATING = "watchdigit58804.systempreheating"
     WATCHDIGIT58804_THERMOSTATFANSETTING = "watchdigit58804.thermostatfansetting"
 
+    WATCHFORGE35799_AVERAGE_POWER = "watchforge35799.averagePower"
+    WATCHFORGE35799_DAILY_COST = "watchforge35799.dailyCost"
+    WATCHFORGE35799_DAILY_ENERGY = "watchforge35799.dailyEnergy"
+    WATCHFORGE35799_EYEDRO_LICENSE = "watchforge35799.eyedroLicense"
+    WATCHFORGE35799_MANUAL = "watchforge35799.manual"
+    WATCHFORGE35799_MONTHLY_COST = "watchforge35799.monthlyCost"
+    WATCHFORGE35799_MONTHLY_ENERGY = "watchforge35799.monthlyEnergy"
+    WATCHFORGE35799_REFRESH_RATE = "watchforge35799.refreshRate"
+
     WATCHPANEL55613_LCCTHERMOSTAT = "watchpanel55613.lccthermostat"
     WATCHPANEL55613_TCCTHERMOSTAT = "watchpanel55613.tccthermostat"

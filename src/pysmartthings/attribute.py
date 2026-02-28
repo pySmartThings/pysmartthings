@@ -84,6 +84,7 @@ class Attribute(StrEnum):
     AVAILABLE_TYPES = "availableTypes"
     AVAILABLE_VERSION = "availableVersion"
     AVAILABLE_WATER_SPRAY_LEVELS = "availableWaterSprayLevels"
+    AVERAGEPOWER = "averagepower"
     BABY_DETERGENT_ALARM_ENABLED = "babyDetergentAlarmEnabled"
     BABY_DETERGENT_DOSAGE = "babyDetergentDosage"
     BABY_DETERGENT_INITIAL_AMOUNT = "babyDetergentInitialAmount"
@@ -204,6 +205,8 @@ class Attribute(StrEnum):
     CURRENT_VERSION = "currentVersion"
     CUSTOM_COURSE_CANDIDATES = "customCourseCandidates"
     CYCLE_TYPE = "cycleType"
+    DAILYCOST = "dailycost"
+    DAILYENERGY = "dailyenergy"
     DASH_BOARD_VALUE = "dashBoardValue"
     DATA = "data"
     DATE_STARTED = "dateStarted"
@@ -524,6 +527,7 @@ class Attribute(StrEnum):
     LEVEL_LOCAL = "levelLocal"
     LEVEL_RANGE = "levelRange"
     LEVEL_STEPS = "levelSteps"
+    LICENSE = "license"
     LIFESPAN = "lifespan"
     LIGHT_CONTROLLER_MODE = "lightControllerMode"
     LIGHT_SENSING = "lightSensing"
@@ -562,6 +566,7 @@ class Attribute(StrEnum):
     MACHINE_STATE = "machineState"
     MAGNIFICATION = "magnification"
     MAGNIFICATION_LEVEL = "magnificationLevel"
+    MANUAL = "manual"
     MANUAL_LEVEL = "manualLevel"
     MANUAL_LEVEL_MAX = "manualLevelMax"
     MANUAL_LEVEL_MIN = "manualLevelMin"
@@ -622,6 +627,8 @@ class Attribute(StrEnum):
     MONITORING_MODE = "monitoringMode"
     MONITORING_STATUS = "monitoringStatus"
     MONTHLY_USAGE = "monthlyUsage"
+    MONTHLYCOST = "monthlycost"
+    MONTHLYENERGY = "monthlyenergy"
     MOTION = "motion"
     MOTION_SENSITIVITY = "motionSensitivity"
     MOTION_SENSOR_ENABLE = "motionSensorEnable"
@@ -758,6 +765,7 @@ class Attribute(StrEnum):
     RANDOM_ON_OFF = "randomOnOff"
     RAPID_COOLING = "rapidCooling"
     RAPID_FREEZING = "rapidFreezing"
+    RATE = "rate"
     RATE_ALARM = "rateAlarm"
     RATE_TYPE = "rateType"
     REACTIVE = "reactive"
@@ -3646,6 +3654,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.WATCHDIGIT58804_STANDBYMODE: [Attribute.STANDBY_MODE],
     Capability.WATCHDIGIT58804_SYSTEMPREHEATING: [Attribute.SYSTEM_PREHEATING],
     Capability.WATCHDIGIT58804_THERMOSTATFANSETTING: [Attribute.THERMOSTAT_FAN_SETTING],
+    Capability.WATCHFORGE35799_AVERAGE_POWER: [Attribute.AVERAGEPOWER],
+    Capability.WATCHFORGE35799_DAILY_COST: [Attribute.DAILYCOST],
+    Capability.WATCHFORGE35799_DAILY_ENERGY: [Attribute.DAILYENERGY],
+    Capability.WATCHFORGE35799_EYEDRO_LICENSE: [Attribute.LICENSE],
+    Capability.WATCHFORGE35799_MANUAL: [Attribute.MANUAL],
+    Capability.WATCHFORGE35799_MONTHLY_COST: [Attribute.MONTHLYCOST],
+    Capability.WATCHFORGE35799_MONTHLY_ENERGY: [Attribute.MONTHLYENERGY],
+    Capability.WATCHFORGE35799_REFRESH_RATE: [Attribute.RATE],
     Capability.WATCHPANEL55613_LCCTHERMOSTAT: [Attribute.DRCAPABLE],
     Capability.WATCHPANEL55613_TCCTHERMOSTAT: [Attribute.DRCAPABLE],
 }
