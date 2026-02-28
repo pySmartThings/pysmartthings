@@ -94,9 +94,14 @@ warn_return_any = true
 warn_unused_configs = true
 warn_unused_ignores = true
 
+[[tool.mypy.overrides]]
+module = "examples.*"
+ignore_errors = true
+
 [tool.pylint.MASTER]
 ignore = [
   "tests",
+  "examples",
 ]
 
 [tool.pylint.BASIC]

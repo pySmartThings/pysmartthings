@@ -22,6 +22,64 @@ This package allows you to fetch data from SmartThings.
 pip install pysmartthings
 ```
 
+## Usage
+
+### Quick Start
+
+```python
+import asyncio
+from aiohttp import ClientSession
+from pysmartthings import SmartThings
+
+async def main():
+    # Get your token at: https://account.smartthings.com/tokens
+    token = "YOUR_SMARTTHINGS_TOKEN"
+
+    async with ClientSession() as session:
+        api = SmartThings(session=session)
+        api.authenticate(token)
+
+        # List all devices
+        devices = await api.get_devices()
+        for device in devices:
+            print(f"{device.label} ({device.device_id})")
+
+        # Get device status
+        if devices:
+            status = await api.get_device_status(devices[0].device_id)
+            print(f"Status: {status}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Features
+
+- **Async/await API** - Built on aiohttp for high-performance async operations
+- **Type-safe models** - Full type hints and data validation using dataclasses
+- **Comprehensive device control** - Support for switches, dimmers, locks, thermostats, and more
+- **Real-time events** - Subscribe to device events via Server-Sent Events (SSE)
+- **Scene execution** - Trigger SmartThings scenes and automations
+- **Lock code management** - Set and manage smart lock PIN codes
+- **Error handling** - Specific exceptions for different error conditions
+
+### Examples
+
+Check out the [examples](examples/) directory for comprehensive examples:
+
+- **[basic_usage.py](examples/basic_usage.py)** - Authentication, listing devices, getting device details
+- **[control_devices.py](examples/control_devices.py)** - Control switches, dimmers, color lights, thermostats
+- **[scenes.py](examples/scenes.py)** - List and execute scenes
+- **[lock_codes.py](examples/lock_codes.py)** - Manage smart lock PIN codes
+- **[event_subscription.py](examples/event_subscription.py)** - Subscribe to real-time device events
+- **[async_patterns.py](examples/async_patterns.py)** - Production-ready async patterns and best practices
+
+See the [examples/README.md](examples/README.md) for setup instructions and detailed documentation.
+
+### API Documentation
+
+For detailed API documentation and technical information, see [CLAUDE.md](CLAUDE.md).
+
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]
