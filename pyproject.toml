@@ -34,7 +34,7 @@ orjson = "^3.9.10"
 aiohttp-sse-client2 = "^0.3.0"
 
 [tool.poetry.group.dev.dependencies]
-codespell = "2.4.1"
+codespell = "2.4.2"
 covdefaults = "2.3.0"
 coverage = {version = "7.13.4", extras = ["toml"]}
 pylint = "4.0.5"
