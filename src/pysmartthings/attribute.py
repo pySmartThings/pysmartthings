@@ -16,6 +16,7 @@ class Attribute(StrEnum):
     ACM_MODE = "acmMode"
     ACTION_SETTING = "actionSetting"
     ACTIVATED = "activated"
+    ACTIVATED_NETWORK = "activatedNetwork"
     ACTIVATED_SCENE = "activatedScene"
     ACTIVATION_STATE = "activationState"
     ACTIVITIES = "activities"
@@ -453,6 +454,7 @@ class Attribute(StrEnum):
     HTTPCODE = "httpcode"
     HUB_DEVICE_ID = "hubDeviceId"
     HUB_EUI = "hubEui"
+    HUB_GROUP_ID = "hubGroupId"
     HUB_ONBOARDING_STATUS = "hubOnboardingStatus"
     HUE = "hue"
     HUE_STEPS = "hueSteps"
@@ -507,6 +509,7 @@ class Attribute(StrEnum):
     LAST_SENSING_TIME = "lastSensingTime"
     LAST_SEVEN_DAYS = "lastSevenDays"
     LAST_STERILIZED_TIME = "lastSterilizedTime"
+    LAST_TRIGGER_TYPE = "lastTriggerType"
     LAST_TWENTY_FOUR_HOURS = "lastTwentyFourHours"
     LAST_UPDATE_STATUS = "lastUpdateStatus"
     LAST_UPDATE_STATUS_REASON = "lastUpdateStatusReason"
@@ -693,6 +696,7 @@ class Attribute(StrEnum):
     OVEN_SETPOINT = "ovenSetpoint"
     OVEN_SETPOINT_RANGE = "ovenSetpointRange"
     OVERHEAT_FOR_RECIPES = "overheatForRecipes"
+    OVERRIDE = "override"
     OZONE = "ozone"
     OZONE_HEALTH_CONCERN = "ozoneHealthConcern"
     PH = "pH"
@@ -738,6 +742,7 @@ class Attribute(StrEnum):
     PRECIPITATION_LEVEL = "precipitationLevel"
     PRECIPITATION_RATE = "precipitationRate"
     PREDEFINED_COURSES = "predefinedCourses"
+    PREFERRED_HUB_STATUS = "preferredHubStatus"
     PRELOADED_BREWING_RECIPES = "preloadedBrewingRecipes"
     PRESENCE = "presence"
     PRESENCE_STATUS = "presenceStatus"
@@ -745,6 +750,7 @@ class Attribute(StrEnum):
     PRESSURE = "pressure"
     PRESSURE_ALARM = "pressureAlarm"
     PRESSURE_LEVEL = "pressureLevel"
+    PRIMARY_ZIGBEE_REACHABLE = "primaryZigbeeReachable"
     PROBABILITY = "probability"
     PROG_OFF = "progOff"
     PROG_ON = "progOn"
@@ -894,6 +900,7 @@ class Attribute(StrEnum):
     SPEED_BOOSTER = "speedBooster"
     SPI_MODE = "spiMode"
     SPIN_SPEED = "spinSpeed"
+    SSID = "ssid"
     SYSTEM_TIME = "st"
     STAGE = "stage"
     STAGE_STATUS = "stageStatus"
@@ -1045,6 +1052,7 @@ class Attribute(StrEnum):
     SUPPORTED_MOLD_VALUES = "supportedMoldValues"
     SUPPORTED_MOTION_POSITIONS = "supportedMotionPositions"
     SUPPORTED_MOVEMENTS = "supportedMovements"
+    SUPPORTED_NETWORK = "supportedNetwork"
     SUPPORTED_NITROGEN_DIOXIDE_VALUES = "supportedNitrogenDioxideValues"
     SUPPORTED_OPERATING_STATE = "supportedOperatingState"
     SUPPORTED_OPERATING_STATE_COMMANDS = "supportedOperatingStateCommands"
@@ -1106,7 +1114,9 @@ class Attribute(StrEnum):
     SUPPORTED_WATER_LEVEL = "supportedWaterLevel"
     SUPPORTED_WATER_SPRAY_LEVELS = "supportedWaterSprayLevels"
     SUPPORTED_WATER_VALVE = "supportedWaterValve"
+    SUPPORTED_WI_FI_AUTH_TYPES = "supportedWiFiAuthTypes"
     SUPPORTED_WI_FI_FREQ = "supportedWiFiFreq"
+    SUPPORTED_WI_FI_FREQUENCIES = "supportedWiFiFrequencies"
     SUPPORTED_WIND_MODES = "supportedWindModes"
     SUPPORTED_WINDOW_SHADE_COMMANDS = "supportedWindowShadeCommands"
     SUPPORTS_COLOR = "supportsColor"
@@ -1120,6 +1130,7 @@ class Attribute(StrEnum):
     SWITCH_ALL_ON_OFF = "switchAllOnOff"
     SWITCH_STATE = "switchState"
     SWITCH_TO_SAVER_MODE = "switchToSaverMode"
+    SYNC_STATUS = "syncStatus"
     SYSTEM_PREHEATING = "systemPreheating"
     TAG_BUTTON = "tagButton"
     TAG_STATUS = "tagStatus"
@@ -1840,6 +1851,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SOUND_SENSOR: [Attribute.SOUND],
     Capability.SPEECH_RECOGNITION: [Attribute.PHRASE_SPOKEN],
     Capability.SPEECH_SYNTHESIS: [],
+    Capability.STATELESS_COLOR_TEMPERATURE_STEP: [],
     Capability.STATELESS_CURTAIN_POWER_BUTTON: [
         Attribute.AVAILABLE_CURTAIN_POWER_BUTTONS
     ],
@@ -1849,6 +1861,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.STATELESS_POWER_TOGGLE_BUTTON: [
         Attribute.AVAILABLE_POWER_TOGGLE_BUTTONS
     ],
+    Capability.STATELESS_SWITCH_LEVEL_STEP: [],
     Capability.STEP_SENSOR: [Attribute.GOAL, Attribute.STEPS],
     Capability.SWITCH: [Attribute.SWITCH],
     Capability.SWITCH_LEVEL: [Attribute.LEVEL, Attribute.LEVEL_RANGE],
@@ -2053,6 +2066,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.TALKBACK,
         Attribute.TALKBACK_DUPLEX,
         Attribute.TURN_INFO,
+    ],
+    Capability.WIFI_INFORMATION: [
+        Attribute.SSID,
+        Attribute.SUPPORTED_WI_FI_AUTH_TYPES,
+        Attribute.SUPPORTED_WI_FI_FREQUENCIES,
     ],
     Capability.WIFI_MESH_ROUTER: [
         Attribute.CONNECTED_DEVICE_COUNT,
@@ -2317,6 +2335,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.LIGHTING,
         Attribute.SUPPORTED_LIGHTING_LEVELS,
     ],
+    Capability.SAMSUNG_CE_AIR_PURIFIER_LIGHTING: [Attribute.LIGHTING],
     Capability.SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN: [
         Attribute.AIR_QUALITY_HEALTH_CONCERN,
         Attribute.SUPPORTED_AIR_QUALITY_HEALTH_CONCERNS,
@@ -2682,6 +2701,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_ACTION_SETTINGS,
         Attribute.SUPPORTED_CONTEXTS,
         Attribute.SUPPORT_CUSTOM_CONTENT,
+    ],
+    Capability.SAMSUNG_CE_OPEN_AUTOMATED_DEMAND_RESPONSE2: [
+        Attribute.EVENT,
+        Attribute.OPERATING_STATE,
+        Attribute.OVERRIDE,
     ],
     Capability.SAMSUNG_CE_OPERATION_ORIGIN: [],
     Capability.SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT: [Attribute.DRAINAGE_REQUIREMENT],
@@ -3475,6 +3499,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS_LED_TWO_COLOR
     ],
     Capability.PLATEMUSIC11009_HUMIDITY_ALARM: [Attribute.HUMIDITY_ALARM],
+    Capability.PLATEMUSIC11009_SYNC_STATUS: [Attribute.SYNC_STATUS],
     Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [
         Attribute.TEMPERATURE_HUMIDITY
     ],
@@ -3563,6 +3588,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.RIVERTALENT14263_GAS_CONSUMPTION_REPORT: [Attribute.GAS_CONSUMPTION],
     Capability.SAFE_PANIC_BUTTON: [Attribute.SERVICE_PROVIDER, Attribute.STATUS],
     Capability.SAFE_USERS: [Attribute.USERS],
+    Capability.SEC_APPLIED_HUB_GROUP_MEMBER_STATE: [
+        Attribute.HUB_GROUP_ID,
+        Attribute.LAST_TRIGGER_TYPE,
+        Attribute.PREFERRED_HUB_STATUS,
+        Attribute.PRIMARY_ZIGBEE_REACHABLE,
+        Attribute.ROLE,
+    ],
     Capability.SEC_CALM_CONNECTION_CARE: [
         Attribute.PROTOCOLS,
         Attribute.ROLE,
@@ -3579,6 +3611,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SETUP_ID,
         Attribute.SIGNIN_PERMISSION,
         Attribute.TS_ID,
+    ],
+    Capability.SEC_NETWORK_CONFIGURATION: [
+        Attribute.ACTIVATED_NETWORK,
+        Attribute.SUPPORTED_NETWORK,
     ],
     Capability.SEC_SMARTTHINGS_HUB: [
         Attribute.AVAILABILITY,

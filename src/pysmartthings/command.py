@@ -31,6 +31,7 @@ class Command(StrEnum):
     CALL = "call"
     CANCEL = "cancel"
     CANCEL_AGING = "cancelAging"
+    CANCEL_EVENT = "cancelEvent"
     CANCEL_ONBOARDING = "cancelOnboarding"
     CANCEL_REMAINING_JOB = "cancelRemainingJob"
     CANCEL_SELF_CHECK = "cancelSelfCheck"
@@ -325,6 +326,7 @@ class Command(StrEnum):
     SET_ENERGY_SAVING_LEVEL = "setEnergySavingLevel"
     SET_ERROR = "setError"
     SET_EVEN_ODD_DAY = "setEvenOddDay"
+    SET_EVENT = "setEvent"
     SET_EXCLUDE_HOLIDAYS = "setExcludeHolidays"
     SET_FADE = "setFade"
     SET_FAN_CYCLIC_MODE = "setFanCyclicMode"
@@ -449,6 +451,7 @@ class Command(StrEnum):
     SET_OUTING_MODE = "setOutingMode"
     SET_OVEN_MODE = "setOvenMode"
     SET_OVEN_SETPOINT = "setOvenSetpoint"
+    SET_OVERRIDE = "setOverride"
     SET_PARAMETER_END = "setParameterEnd"
     SET_PARAMETER_START = "setParameterStart"
     SET_PATH = "setPath"
@@ -629,6 +632,8 @@ class Command(StrEnum):
     START_TALKBACK = "startTalkback"
     START_WASHING_COURSE = "startWashingCourse"
     START_WASHING_COURSE_WITH_OPTIONS = "startWashingCourseWithOptions"
+    STEP_COLOR_TEMPERATURE_BY_PERCENT = "stepColorTemperatureByPercent"
+    STEP_LEVEL = "stepLevel"
     STF_INSTALLED = "stfInstalled"
     STF_UNINSTALLED = "stfUninstalled"
     STOP = "stop"
@@ -1021,11 +1026,15 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SOUND_SENSOR: [],
     Capability.SPEECH_RECOGNITION: [],
     Capability.SPEECH_SYNTHESIS: [Command.SPEAK],
+    Capability.STATELESS_COLOR_TEMPERATURE_STEP: [
+        Command.STEP_COLOR_TEMPERATURE_BY_PERCENT
+    ],
     Capability.STATELESS_CURTAIN_POWER_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_CUSTOM_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_FANSPEED_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_POWER_BUTTON: [Command.SET_BUTTON],
     Capability.STATELESS_POWER_TOGGLE_BUTTON: [Command.SET_BUTTON],
+    Capability.STATELESS_SWITCH_LEVEL_STEP: [Command.STEP_LEVEL],
     Capability.STEP_SENSOR: [],
     Capability.SWITCH: [Command.OFF, Command.ON],
     Capability.SWITCH_LEVEL: [Command.SET_LEVEL],
@@ -1146,6 +1155,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.START_TALKBACK,
         Command.STOP_TALKBACK,
     ],
+    Capability.WIFI_INFORMATION: [],
     Capability.WIFI_MESH_ROUTER: [
         Command.DISABLE_WIFI_GUEST_NETWORK,
         Command.DISABLE_WIFI_NETWORK,
@@ -1272,6 +1282,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.ON,
         Command.SET_LIGHTING_LEVEL,
     ],
+    Capability.SAMSUNG_CE_AIR_PURIFIER_LIGHTING: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN: [],
     Capability.SAMSUNG_CE_ALWAYS_ON_SENSING: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AUDIO_VOLUME_LEVEL: [
@@ -1492,6 +1503,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_CONTENT_TEXT,
         Command.SET_CONTENT_TITLE,
         Command.SET_CONTEXTS,
+    ],
+    Capability.SAMSUNG_CE_OPEN_AUTOMATED_DEMAND_RESPONSE2: [
+        Command.CANCEL_EVENT,
+        Command.SET_EVENT,
+        Command.SET_OVERRIDE,
     ],
     Capability.SAMSUNG_CE_OPERATION_ORIGIN: [Command.SET_OPERATION_ORIGIN],
     Capability.SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT: [],
@@ -2051,6 +2067,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_STATUS_LED_TWO_COLOR
     ],
     Capability.PLATEMUSIC11009_HUMIDITY_ALARM: [],
+    Capability.PLATEMUSIC11009_SYNC_STATUS: [],
     Capability.PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR: [],
     Capability.PLATEMUSIC11009_ZOOZ_LED_BRIGHTNESS: [Command.SET_LED_BRIGHTNESS],
     Capability.PLATEMUSIC11009_ZOOZ_LED_COLOR: [Command.SET_LED_COLOR],
@@ -2134,9 +2151,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.RIVERTALENT14263_GAS_CONSUMPTION_REPORT: [],
     Capability.SAFE_PANIC_BUTTON: [],
     Capability.SAFE_USERS: [],
+    Capability.SEC_APPLIED_HUB_GROUP_MEMBER_STATE: [],
     Capability.SEC_CALM_CONNECTION_CARE: [],
     Capability.SEC_DEVICE_CONNECTION_STATE: [Command.REFRESH_CONNECTION],
     Capability.SEC_DIAGNOSTICS_INFORMATION: [],
+    Capability.SEC_NETWORK_CONFIGURATION: [],
     Capability.SEC_SMARTTHINGS_HUB: [Command.CANCEL_ONBOARDING, Command.ONBOARDING],
     Capability.SEC_WIFI_CONFIGURATION: [],
     Capability.SIGNALAHEAD13665_APPLIANCEOPERATIONSTATESV2: [],
