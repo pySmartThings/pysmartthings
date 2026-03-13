@@ -210,11 +210,13 @@ class Capability(StrEnum):
     SOUND_SENSOR = "soundSensor"
     SPEECH_RECOGNITION = "speechRecognition"
     SPEECH_SYNTHESIS = "speechSynthesis"
+    STATELESS_COLOR_TEMPERATURE_STEP = "statelessColorTemperatureStep"
     STATELESS_CURTAIN_POWER_BUTTON = "statelessCurtainPowerButton"
     STATELESS_CUSTOM_BUTTON = "statelessCustomButton"
     STATELESS_FANSPEED_BUTTON = "statelessFanspeedButton"
     STATELESS_POWER_BUTTON = "statelessPowerButton"
     STATELESS_POWER_TOGGLE_BUTTON = "statelessPowerToggleButton"
+    STATELESS_SWITCH_LEVEL_STEP = "statelessSwitchLevelStep"
     STEP_SENSOR = "stepSensor"
     SWITCH = "switch"
     SWITCH_LEVEL = "switchLevel"
@@ -273,6 +275,7 @@ class Capability(StrEnum):
     WATER_TEMPERATURE_MEASUREMENT = "waterTemperatureMeasurement"
     WATER_USAGE_METER = "waterUsageMeter"
     WEBRTC = "webrtc"
+    WIFI_INFORMATION = "wifiInformation"
     WIFI_MESH_ROUTER = "wifiMeshRouter"
     WIND_MODE = "windMode"
     WIND_SPEED = "windSpeed"
@@ -346,6 +349,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_AIR_CONDITIONER_BEEP = "samsungce.airConditionerBeep"
     SAMSUNG_CE_AIR_CONDITIONER_DISPLAY = "samsungce.airConditionerDisplay"
     SAMSUNG_CE_AIR_CONDITIONER_LIGHTING = "samsungce.airConditionerLighting"
+    SAMSUNG_CE_AIR_PURIFIER_LIGHTING = "samsungce.airPurifierLighting"
     SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN = "samsungce.airQualityHealthConcern"
     SAMSUNG_CE_ALWAYS_ON_SENSING = "samsungce.alwaysOnSensing"
     SAMSUNG_CE_AUDIO_VOLUME_LEVEL = "samsungce.audioVolumeLevel"
@@ -449,6 +453,9 @@ class Capability(StrEnum):
     SAMSUNG_CE_MICROWAVE_POWER = "samsungce.microwavePower"
     SAMSUNG_CE_MUSIC_PLAYLIST = "samsungce.musicPlaylist"
     SAMSUNG_CE_NOTIFICATION = "samsungce.notification"
+    SAMSUNG_CE_OPEN_AUTOMATED_DEMAND_RESPONSE2 = (
+        "samsungce.openAutomatedDemandResponse2"
+    )
     SAMSUNG_CE_OPERATION_ORIGIN = "samsungce.operationOrigin"
     SAMSUNG_CE_OVEN_DRAINAGE_REQUIREMENT = "samsungce.ovenDrainageRequirement"
     SAMSUNG_CE_OVEN_MODE = "samsungce.ovenMode"
@@ -843,6 +850,7 @@ class Capability(StrEnum):
     PLATEMUSIC11009_HS_STATUS_LED_THREE_COLOR = "platemusic11009.hsStatusLedThreeColor"
     PLATEMUSIC11009_HS_STATUS_LED_TWO_COLOR = "platemusic11009.hsStatusLedTwoColor"
     PLATEMUSIC11009_HUMIDITY_ALARM = "platemusic11009.humidityAlarm"
+    PLATEMUSIC11009_SYNC_STATUS = "platemusic11009.syncStatus"
     PLATEMUSIC11009_TEMPERATURE_HUMIDITY_SENSOR = (
         "platemusic11009.temperatureHumiditySensor"
     )
@@ -901,9 +909,11 @@ class Capability(StrEnum):
     SAFE_PANIC_BUTTON = "safe.panicButton"
     SAFE_USERS = "safe.users"
 
+    SEC_APPLIED_HUB_GROUP_MEMBER_STATE = "sec.appliedHubGroupMemberState"
     SEC_CALM_CONNECTION_CARE = "sec.calmConnectionCare"
     SEC_DEVICE_CONNECTION_STATE = "sec.deviceConnectionState"
     SEC_DIAGNOSTICS_INFORMATION = "sec.diagnosticsInformation"
+    SEC_NETWORK_CONFIGURATION = "sec.networkConfiguration"
     SEC_SMARTTHINGS_HUB = "sec.smartthingsHub"
     SEC_WIFI_CONFIGURATION = "sec.wifiConfiguration"
 
