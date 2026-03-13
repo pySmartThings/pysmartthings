@@ -58,6 +58,7 @@
       'room_id': 'bce1d0a8-cd33-4896-a5ad-05f50467c8db',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -93,6 +94,9 @@
       'room_id': 'd855b759-f7d5-4369-b5a2-a154de4b1e14',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700011415D1',
+      }),
     }),
     dict({
       'components': dict({
@@ -125,6 +129,9 @@
       'room_id': 'cdf080f0-0542-41d7-a606-aff69683e04c',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '0015BC001A028E5C',
+      }),
     }),
     dict({
       'components': dict({
@@ -160,6 +167,9 @@
       'room_id': '7641a6ce-bb42-4d37-8c94-e8a20a1f8d2c',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700011419D7',
+      }),
     }),
     dict({
       'components': dict({
@@ -181,6 +191,7 @@
       'hub': dict({
         'firmware_version': '000.055.00005',
         'hardware_type': 'V3_HUB',
+        'hub_eui': 'D052A8B6033F0001',
         'mac_address': '28:6D:97:AF:94:78',
       }),
       'label': 'SmartThings v3 Hub',
@@ -193,6 +204,7 @@
       'room_id': '40dca7a1-3ba7-4e31-be11-2c05292d8605',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -228,6 +240,9 @@
       'room_id': '2464cde2-4420-4f2b-9af8-95d1f08653a5',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700010D3F80',
+      }),
     }),
     dict({
       'components': dict({
@@ -263,6 +278,9 @@
       'room_id': 'bce1d0a8-cd33-4896-a5ad-05f50467c8db',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700010A41E1',
+      }),
     }),
     dict({
       'components': dict({
@@ -298,6 +316,9 @@
       'room_id': 'cdf080f0-0542-41d7-a606-aff69683e04c',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700010D90EE',
+      }),
     }),
     dict({
       'components': dict({
@@ -333,6 +354,9 @@
       'room_id': '52bdaef4-ac6b-4ccf-9e59-fe304bcc72fc',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D970001127FD6',
+      }),
     }),
     dict({
       'components': dict({
@@ -368,6 +392,9 @@
       'room_id': '0f611f5c-5164-4a56-9cab-433907debeee',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700010A4009',
+      }),
     }),
     dict({
       'components': dict({
@@ -403,6 +430,9 @@
       'room_id': 'f7667cb2-aeca-414e-8ea6-a7bee7ccdbb6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700011417DB',
+      }),
     }),
     dict({
       'components': dict({
@@ -436,6 +466,9 @@
       'room_id': 'ea75d25c-881b-4e39-967e-c0a3101cfa5e',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700010C9EAF',
+      }),
     }),
     dict({
       'components': dict({
@@ -471,6 +504,9 @@
       'room_id': '2464cde2-4420-4f2b-9af8-95d1f08653a5',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D97000112ABD2',
+      }),
     }),
     dict({
       'components': dict({
@@ -506,6 +542,9 @@
       'room_id': 'ebd35c19-c180-4d7d-9bcb-95279f74d7ad',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '286D9700011415C1',
+      }),
     }),
     dict({
       'components': dict({
@@ -583,6 +622,7 @@
       'room_id': '0f611f5c-5164-4a56-9cab-433907debeee',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -657,6 +697,7 @@
       'room_id': 'bce1d0a8-cd33-4896-a5ad-05f50467c8db',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -690,6 +731,7 @@
       'room_id': 'cdf080f0-0542-41d7-a606-aff69683e04c',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -732,6 +774,7 @@
         'model_name': 'skyplus',
         'software_version': 'SKY40147',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -836,6 +879,7 @@
       'room_id': '023deeb7-c4b9-44a2-ad73-01c7c4d4f80c',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -857,6 +901,7 @@
       'hub': dict({
         'firmware_version': '000.055.00005',
         'hardware_type': 'V3_HUB',
+        'hub_eui': 'D052A8BB45100001',
         'mac_address': '28:6D:97:71:F3:61',
       }),
       'label': 'Garage Hub',
@@ -869,6 +914,7 @@
       'room_id': 'adc5f7f4-55f2-4df5-b91e-119cd82b3c57',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -890,6 +936,7 @@
       'hub': dict({
         'firmware_version': '000.055.00005',
         'hardware_type': 'V3_HUB',
+        'hub_eui': 'D052A8BBDADC0001',
         'mac_address': '28:6D:97:71:ED:E5',
       }),
       'label': 'Upstairs Hub',
@@ -902,6 +949,7 @@
       'room_id': 'd2ae804d-e94f-4235-a09f-3d73f06d5ab4',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -934,6 +982,7 @@
       'room_id': 'd2ae804d-e94f-4235-a09f-3d73f06d5ab4',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -972,6 +1021,7 @@
         'model_name': 'skyv2',
         'software_version': 'SKY30046',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1004,6 +1054,7 @@
       'room_id': 'adc5f7f4-55f2-4df5-b91e-119cd82b3c57',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1042,6 +1093,7 @@
         'model_name': 'skyv2',
         'software_version': 'SKY30046',
       }),
+      'zigbee': None,
     }),
   ])
 # ---
@@ -1150,6 +1202,7 @@
       'room_id': '24f7842f-5424-4024-95e0-a4409e3f9d95',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1223,6 +1276,7 @@
       'room_id': '21af8dce-8b94-4ec1-bbbf-7412c31175f7',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -1248,6 +1302,7 @@
       'hub': dict({
         'firmware_version': '000.055.00005',
         'hardware_type': 'V2_HUB',
+        'hub_eui': 'D052A8540CAF0001',
         'mac_address': 'D0:52:A8:54:09:EC',
       }),
       'label': 'Home',
@@ -1260,6 +1315,7 @@
       'room_id': None,
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1292,6 +1348,7 @@
       'room_id': '5cfe905f-0afb-4042-9c00-9889ba1d96d5',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1396,6 +1453,7 @@
       'room_id': '33e79495-441b-456e-baab-f3962f2b786d',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -1500,6 +1558,7 @@
       'room_id': 'a0d57919-07c0-4385-abbd-0c61dee01e67',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1573,6 +1632,7 @@
       'room_id': '4ee72ee8-5475-4a64-81eb-4225995aa4bc',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1630,6 +1690,7 @@
       'room_id': '4ee72ee8-5475-4a64-81eb-4225995aa4bc',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1704,6 +1765,7 @@
       'room_id': 'bd362890-6541-49a0-a164-455f8883a5f3',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1725,6 +1787,7 @@
       'hub': dict({
         'firmware_version': '000.055.00005',
         'hardware_type': 'V3_HUB',
+        'hub_eui': 'D052A8B582DD0001',
         'mac_address': '28:6D:97:CF:CE:88',
       }),
       'label': 'Hubb',
@@ -1737,6 +1800,7 @@
       'room_id': '105e6d1a-52a4-4797-a235-5a48d7d433c8',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1808,6 +1872,7 @@
       'room_id': '24c83614-3f5d-4cb2-a1d5-beaf30144ec5',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1892,6 +1957,7 @@
       'room_id': '38e04dda-c5bb-4471-9357-e003bedc0173',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -1929,6 +1995,7 @@
       'room_id': '105e6d1a-52a4-4797-a235-5a48d7d433c8',
       'type': <DeviceType.LAN: 'LAN'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2144,6 +2211,7 @@
       'room_id': '38e04dda-c5bb-4471-9357-e003bedc0173',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2230,6 +2298,7 @@
       'room_id': 'a0d57919-07c0-4385-abbd-0c61dee01e67',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -2449,6 +2518,7 @@
       'room_id': 'ca620fa7-b615-4802-92c2-be40a5c9ddf4',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2549,6 +2619,7 @@
       'room_id': '4c9052ba-4430-4cb1-a788-f1e4449c43c9',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2579,6 +2650,7 @@
       'room_id': 'e1e0123f-c14b-4427-a9a9-5051f3d281b6',
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2652,6 +2724,7 @@
       'room_id': '4c9052ba-4430-4cb1-a788-f1e4449c43c9',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2703,6 +2776,7 @@
       'room_id': '8a4fac38-48d1-4a8c-922b-92620442363b',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2780,6 +2854,7 @@
       'room_id': '8a4fac38-48d1-4a8c-922b-92620442363b',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2830,6 +2905,7 @@
       'room_id': '8a4fac38-48d1-4a8c-922b-92620442363b',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -2888,6 +2964,7 @@
       'room_id': '8a4fac38-48d1-4a8c-922b-92620442363b',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -2951,6 +3028,7 @@
       'room_id': '547b08f3-505a-44b9-a893-773dab079f22',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3003,6 +3081,7 @@
       'room_id': '4fa9334c-f0e8-4e97-8c3a-16c2be572486',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -3028,6 +3107,7 @@
       'hub': dict({
         'firmware_version': '',
         'hardware_type': 'OTHER',
+        'hub_eui': 'virtual-8330dc84-358d-4f86-8692-5a32e14266c8',
         'mac_address': None,
       }),
       'label': 'Hub - 27" Smart Monitor M5',
@@ -3040,6 +3120,7 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -3106,6 +3187,7 @@
       'room_id': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3321,6 +3403,7 @@
       'room_id': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3536,6 +3619,7 @@
       'room_id': '14591410-f1b4-4e5a-af3f-2dd0424c580a',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3769,6 +3853,7 @@
       'room_id': 'b19fa610-62f8-4109-b9cc-47f85fcefd29',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3819,6 +3904,7 @@
       'room_id': '11374ab5-9b4e-416b-91d1-745bbf9b6db4',
       'type': <DeviceType.MATTER: 'MATTER'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -3863,6 +3949,7 @@
         'model_name': 'Hue ambiance spot',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3905,6 +3992,7 @@
         'model_name': 'Hue color lamp',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3945,6 +4033,7 @@
         'model_name': 'Hue ambiance spot',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -3982,6 +4071,7 @@
         'model_name': 'WoCurtain3',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4019,6 +4109,7 @@
         'model_name': 'WoCurtain3',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4059,6 +4150,7 @@
         'model_name': 'Hue ambiance spot',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4096,6 +4188,7 @@
         'model_name': 'Hue motion sensor',
         'software_version': '67.115.5',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4136,6 +4229,7 @@
         'model_name': 'Hue ambiance spot',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4176,6 +4270,7 @@
         'model_name': 'Hue ambiance spot',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4218,6 +4313,7 @@
         'model_name': 'Hue color candle',
         'software_version': '1.116.3',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4254,6 +4350,7 @@
         'model_name': 'NAPlug',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4296,6 +4393,7 @@
         'model_name': 'Hue Play',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4334,6 +4432,7 @@
         'model_name': 'WoHub2',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4376,6 +4475,7 @@
         'model_name': 'Hue Play',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4412,6 +4512,7 @@
         'model_name': 'remote',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4454,6 +4555,7 @@
         'model_name': 'Hue lightstrip plus',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4494,6 +4596,7 @@
         'model_name': 'Hue ambiance spot',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4536,6 +4639,7 @@
         'model_name': 'Hue Play',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4576,6 +4680,7 @@
         'model_name': 'Hue ambiance spot',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4618,6 +4723,7 @@
         'model_name': 'Hue Play',
         'software_version': '1.122.2',
       }),
+      'zigbee': None,
     }),
   ])
 # ---
@@ -4706,6 +4812,7 @@
       'room_id': 'fc307cd9-3b32-4fc0-bf23-e0d3985101b9',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -4796,6 +4903,7 @@
       'room_id': '2a8637b2-77ad-475e-b537-7b6f7f97fff6',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4868,6 +4976,7 @@
       'room_id': 'f4d03391-ab13-4c1d-b4dc-d6ddf86014a2',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -4947,6 +5056,7 @@
       'room_id': 'f4d03391-ab13-4c1d-b4dc-d6ddf86014a2',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5135,6 +5245,7 @@
       'room_id': 'acaa060a-7c19-4579-8a4a-5ad891a2f0c1',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5156,6 +5267,7 @@
       'hub': dict({
         'firmware_version': '000.054.00013',
         'hardware_type': 'SAMSUNG_DA_REFRIGERATOR_HUB',
+        'hub_eui': 'D052A8C6B0F50001',
         'mac_address': '70:2C:1F:8D:D9:64',
       }),
       'label': 'SmartThings Hub - FamilyHub',
@@ -5168,6 +5280,7 @@
       'room_id': 'acaa060a-7c19-4579-8a4a-5ad891a2f0c1',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5228,6 +5341,7 @@
       'room_id': '5d425f41-042a-4d9a-92c4-e43150a61bae',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5328,6 +5442,7 @@
       'room_id': '2a8637b2-77ad-475e-b537-7b6f7f97fff6',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -5373,6 +5488,7 @@
       'room_id': 'redacted_roomid',
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5473,6 +5589,7 @@
       'room_id': '1b0c6ae7-e93d-4e3b-b31c-d22f2f420baa',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5514,6 +5631,7 @@
       'room_id': 'redacted_roomid',
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5555,6 +5673,7 @@
       'room_id': 'redacted_roomid',
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5596,6 +5715,7 @@
       'room_id': 'redacted_roomid',
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5637,6 +5757,7 @@
       'room_id': 'redacted_roomid',
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5678,6 +5799,7 @@
       'room_id': 'redacted_roomid',
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -5778,6 +5900,7 @@
       'room_id': '1f66199a-1773-4d8f-97b7-44c312a62cf7',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5835,6 +5958,7 @@
       'room_id': 'db506ec3-83b1-4125-9c4c-eb597da5db6a',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5888,6 +6012,7 @@
       'room_id': '072d28ca-996a-420f-95e6-0bedf5df4718',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -5963,6 +6088,7 @@
       'room_id': '072d28ca-996a-420f-95e6-0bedf5df4718',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6059,6 +6185,7 @@
       'room_id': 'f1dabf87-1533-44ee-940c-d350ce0d7283',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -6176,6 +6303,7 @@
       'room_id': '85a79db4-9cf2-4f09-a5b2-cd70a5c0cef0',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -6222,6 +6350,7 @@
         'model_name': 'VMC4060B',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6265,6 +6394,9 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '00158D0000948BF6',
+      }),
     }),
     dict({
       'components': dict({
@@ -6297,6 +6429,9 @@
       'room_id': '68b45114-9af8-4906-8636-b973a6faa271',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F000A9303D9',
+      }),
     }),
     dict({
       'components': dict({
@@ -6330,6 +6465,9 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': 'B0CE181403113BAC',
+      }),
     }),
     dict({
       'components': dict({
@@ -6365,6 +6503,9 @@
       'room_id': '0d2e9b09-6f13-452b-8482-932d53eb6f79',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000B57FFFE9A322F',
+      }),
     }),
     dict({
       'components': dict({
@@ -6396,6 +6537,7 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6458,6 +6600,7 @@
       'room_id': '0d2e9b09-6f13-452b-8482-932d53eb6f79',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6489,6 +6632,7 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6530,6 +6674,7 @@
         'model_name': 'VMC4030P',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6565,6 +6710,9 @@
       'room_id': 'b277a3c0-b8fe-44de-9133-c1108747810c',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '24FD5B00010AED6B',
+      }),
     }),
     dict({
       'components': dict({
@@ -6598,6 +6746,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F0002FB6E24',
+      }),
     }),
     dict({
       'components': dict({
@@ -6670,6 +6821,7 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6701,6 +6853,7 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6732,6 +6885,7 @@
       'room_id': 'b277a3c0-b8fe-44de-9133-c1108747810c',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -6764,6 +6918,9 @@
       'room_id': '68b45114-9af8-4906-8636-b973a6faa271',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F000542337E',
+      }),
     }),
     dict({
       'components': dict({
@@ -6797,6 +6954,9 @@
       'room_id': '68b45114-9af8-4906-8636-b973a6faa271',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F000576F604',
+      }),
     }),
     dict({
       'components': dict({
@@ -6818,6 +6978,7 @@
       'hub': dict({
         'firmware_version': '000.054.00013',
         'hardware_type': 'SAMSUNG_VD_TV_HUB',
+        'hub_eui': 'D052A8D8B1AC0001',
         'mac_address': '70:09:71:C5:65:A2',
       }),
       'label': 'Hub - 27" Smart Monitor M5',
@@ -6830,6 +6991,7 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7002,6 +7164,7 @@
       'room_id': '3a1f7e7c-4e59-4c29-adb0-0813be691efd',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7035,6 +7198,9 @@
       'room_id': '3a1f7e7c-4e59-4c29-adb0-0813be691efd',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F000576E45E',
+      }),
     }),
     dict({
       'components': dict({
@@ -7065,6 +7231,7 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7097,6 +7264,9 @@
       'room_id': '972f7f0e-9bd2-4387-8df1-06fddc80269d',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F0005855215',
+      }),
     }),
     dict({
       'components': dict({
@@ -7129,6 +7299,9 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F0004064BE0',
+      }),
     }),
     dict({
       'components': dict({
@@ -7164,6 +7337,9 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000B57FFFE974C46',
+      }),
     }),
     dict({
       'components': dict({
@@ -7195,6 +7371,7 @@
       'room_id': '0d2e9b09-6f13-452b-8482-932d53eb6f79',
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7225,6 +7402,7 @@
       'room_id': '3a1f7e7c-4e59-4c29-adb0-0813be691efd',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7256,6 +7434,9 @@
       'room_id': '0d2e9b09-6f13-452b-8482-932d53eb6f79',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': 'F0D1B8000010F1E4',
+      }),
     }),
     dict({
       'components': dict({
@@ -7287,6 +7468,7 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7329,6 +7511,7 @@
         'model_name': 'VMC2030B',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7360,6 +7543,7 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7402,6 +7586,7 @@
         'model_name': 'FB1001A',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7434,6 +7619,7 @@
       'room_id': 'fabca29a-3fea-4c02-848d-b5382ec44797',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7467,6 +7653,9 @@
       'room_id': '3a1f7e7c-4e59-4c29-adb0-0813be691efd',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F0005773EFD',
+      }),
     }),
     dict({
       'components': dict({
@@ -7509,6 +7698,7 @@
         'model_name': 'VMC2030B',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7538,6 +7728,7 @@
       'room_id': None,
       'type': <DeviceType.MOBILE: 'MOBILE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7605,6 +7796,7 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7658,6 +7850,7 @@
       'room_id': '972f7f0e-9bd2-4387-8df1-06fddc80269d',
       'type': <DeviceType.LAN: 'LAN'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7689,6 +7882,7 @@
       'room_id': 'b277a3c0-b8fe-44de-9133-c1108747810c',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7722,6 +7916,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F0003C04BC9',
+      }),
     }),
     dict({
       'components': dict({
@@ -7755,6 +7952,9 @@
       'room_id': '3a1f7e7c-4e59-4c29-adb0-0813be691efd',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F00059144B3',
+      }),
     }),
     dict({
       'components': dict({
@@ -7785,6 +7985,7 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7821,6 +8022,7 @@
         'model_name': 'KP115(US)',
         'software_version': '1.0.21 Build 231129 Rel.171238',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7852,6 +8054,7 @@
       'room_id': '5cbd562e-44e4-4fb4-8639-5ad986ee92ee',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7883,6 +8086,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': 'F0D1B80000051E05',
+      }),
     }),
     dict({
       'components': dict({
@@ -7919,6 +8125,7 @@
         'model_name': 'VMB4000',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7951,6 +8158,7 @@
       'room_id': 'e73dcd00-6953-431d-ae79-73fd2f2c528e',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -7982,6 +8190,7 @@
       'room_id': 'fabca29a-3fea-4c02-848d-b5382ec44797',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8017,6 +8226,9 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '24FD5B00010A3E4E',
+      }),
     }),
     dict({
       'components': dict({
@@ -8049,6 +8261,7 @@
       'room_id': '68b45114-9af8-4906-8636-b973a6faa271',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8084,6 +8297,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '24FD5B000108053C',
+      }),
     }),
     dict({
       'components': dict({
@@ -8122,6 +8338,7 @@
         'model_name': 'ES20M(US)',
         'software_version': '1.0.11 Build 240514 Rel.110351',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8155,6 +8372,9 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': 'B0CE18140311AA35',
+      }),
     }),
     dict({
       'components': dict({
@@ -8187,6 +8407,9 @@
       'room_id': '0d2e9b09-6f13-452b-8482-932d53eb6f79',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F000585751E',
+      }),
     }),
     dict({
       'components': dict({
@@ -8230,6 +8453,9 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '00158D000094885B',
+      }),
     }),
     dict({
       'components': dict({
@@ -8262,6 +8488,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F000A72D1D5',
+      }),
     }),
     dict({
       'components': dict({
@@ -8295,6 +8524,9 @@
       'room_id': '68b45114-9af8-4906-8636-b973a6faa271',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '00158D0000948ABE',
+      }),
     }),
     dict({
       'components': dict({
@@ -8326,6 +8558,7 @@
       'room_id': 'fabca29a-3fea-4c02-848d-b5382ec44797',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8359,6 +8592,9 @@
       'room_id': 'b277a3c0-b8fe-44de-9133-c1108747810c',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '00158D0000579BC3',
+      }),
     }),
     dict({
       'components': dict({
@@ -8401,6 +8637,7 @@
         'model_name': 'AVD1001A',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8432,6 +8669,7 @@
       'room_id': '5cbd562e-44e4-4fb4-8639-5ad986ee92ee',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8464,6 +8702,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000D6F00055B6F62',
+      }),
     }),
     dict({
       'components': dict({
@@ -8495,6 +8736,7 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8530,6 +8772,9 @@
       'room_id': 'fabca29a-3fea-4c02-848d-b5382ec44797',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '000B57FFFE9A3238',
+      }),
     }),
     dict({
       'components': dict({
@@ -8559,6 +8804,7 @@
       'room_id': None,
       'type': <DeviceType.MOBILE: 'MOBILE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8580,6 +8826,7 @@
       'hub': dict({
         'firmware_version': '000.055.00005',
         'hardware_type': 'V2_HUB',
+        'hub_eui': 'D052A872947A0001',
         'mac_address': 'D0:52:A8:72:91:02',
       }),
       'label': 'Home Hub',
@@ -8592,6 +8839,7 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8627,6 +8875,9 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '24FD5B00010A3A95',
+      }),
     }),
     dict({
       'components': dict({
@@ -8669,6 +8920,7 @@
         'model_name': 'FB1001B',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8705,6 +8957,7 @@
         'model_name': 'KP115(US)',
         'software_version': '1.0.21 Build 231129 Rel.171238',
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8740,6 +8993,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '24FD5B00010ACFEE',
+      }),
     }),
     dict({
       'components': dict({
@@ -8790,6 +9046,9 @@
       'room_id': 'f7f39cf6-ff3a-4bcb-8d1b-00a3324c016d',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '90395EFFFEEBD886',
+      }),
     }),
     dict({
       'components': dict({
@@ -8820,6 +9079,7 @@
       'room_id': '972f7f0e-9bd2-4387-8df1-06fddc80269d',
       'type': <DeviceType.LAN: 'LAN'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8853,6 +9113,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': 'B0CE1814031167A5',
+      }),
     }),
     dict({
       'components': dict({
@@ -8884,6 +9147,7 @@
       'room_id': 'fabca29a-3fea-4c02-848d-b5382ec44797',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8915,6 +9179,7 @@
       'room_id': 'e73dcd00-6953-431d-ae79-73fd2f2c528e',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8956,6 +9221,7 @@
         'model_name': 'VMC4030P',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -8997,6 +9263,7 @@
         'model_name': 'VMC4030P',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9040,6 +9307,9 @@
       'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '00158D0000948BDE',
+      }),
     }),
     dict({
       'components': dict({
@@ -9075,6 +9345,9 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '24FD5B00010AD302',
+      }),
     }),
     dict({
       'components': dict({
@@ -9117,6 +9390,7 @@
         'model_name': 'VMC4041PB',
         'software_version': None,
       }),
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9149,6 +9423,7 @@
       'room_id': 'e73dcd00-6953-431d-ae79-73fd2f2c528e',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9181,6 +9456,7 @@
       'room_id': '94be4a1e-382a-4b7f-a5ef-fdb1a7d9f9e6',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9215,6 +9491,9 @@
       'room_id': '68b45114-9af8-4906-8636-b973a6faa271',
       'type': <DeviceType.ZIGBEE: 'ZIGBEE'>,
       'viper': None,
+      'zigbee': dict({
+        'eui': '00155F00782D1961',
+      }),
     }),
     dict({
       'components': dict({
@@ -9246,6 +9525,7 @@
       'room_id': 'fabca29a-3fea-4c02-848d-b5382ec44797',
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -9334,6 +9614,7 @@
       'room_id': '94f950fc-6d38-4092-808f-5c4cb69cfc3a',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9418,6 +9699,7 @@
       'room_id': '278e20e9-7dc1-4a2b-8d07-a89d899c29a3',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9495,6 +9777,7 @@
       'room_id': '9438790a-b4be-47dd-91ed-aef6dffc9f85',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9579,6 +9862,7 @@
       'room_id': '9438790a-b4be-47dd-91ed-aef6dffc9f85',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9663,6 +9947,7 @@
       'room_id': 'bf637e8b-0744-4144-8061-fa7a0e17b0f7',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
     dict({
       'components': dict({
@@ -9747,6 +10032,7 @@
       'room_id': '7f402cb7-cc5f-4ea6-90be-427e9c2a8dd4',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -9796,6 +10082,7 @@
       'room_id': 'acaa060a-7c19-4579-8a4a-5ad891a2f0c1',
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
+      'zigbee': None,
     }),
   ])
 # ---
@@ -12875,6 +13162,7 @@
       'model_name': 'Hue ambiance spot',
       'software_version': '1.122.2',
     }),
+    'zigbee': None,
   })
 # ---
 # name: test_fetching_status_of_single_device[27_smart_monitor_m5]
