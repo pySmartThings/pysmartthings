@@ -385,6 +385,13 @@ class Hub(DataClassORJSONMixin):
 
 
 @dataclass
+class Zigbee(DataClassORJSONMixin):
+    """Zigbee model."""
+
+    eui: str
+
+
+@dataclass
 class Device(DataClassORJSONMixin):
     """Device model."""
 
@@ -417,6 +424,7 @@ class Device(DataClassORJSONMixin):
     viper: Viper | None = None
     hub: Hub | None = None
     matter: Matter | None = None
+    zigbee: Zigbee | None = None
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
