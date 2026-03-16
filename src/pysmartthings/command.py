@@ -285,6 +285,7 @@ class Command(StrEnum):
     SET_DATA = "setData"
     SET_DAY_LENGTH = "setDayLength"
     SET_DEFAULT_LEVEL = "setDefaultLevel"
+    SET_DEFAULT_VIEWPORT = "setDefaultViewport"
     SET_DEFINED_RECIPE = "setDefinedRecipe"
     SET_DEFROST = "setDefrost"
     SET_DEHUMIDIFIER_MODE = "setDehumidifierMode"
@@ -363,6 +364,7 @@ class Command(StrEnum):
     SET_HUMIDITY_CONDITION = "setHumidityCondition"
     SET_HUMIDITY_TARGET = "setHumidityTarget"
     SET_ILLUM = "setIllum"
+    SET_ILLUMINATION = "setIllumination"
     SET_INFO_PANEL = "setInfoPanel"
     SET_INFRARED_LEVEL = "setInfraredLevel"
     SET_INITIAL_AMOUNT = "setInitialAmount"
@@ -430,6 +432,7 @@ class Command(StrEnum):
     SET_MUTE = "setMute"
     SET_NAME = "setName"
     SET_NEXT_INPUT_SOURCE = "setNextInputSource"
+    SET_NIGHT_VISION = "setNightVision"
     SET_NODE_END_POINT = "setNodeEndPoint"
     SET_NODE_TO_WRITE = "setNodeToWrite"
     SET_NORMAL_LED_COLOR = "setNormalLedColor"
@@ -549,6 +552,7 @@ class Command(StrEnum):
     SET_STEAM_SOAK = "setSteamSoak"
     SET_STEREO_TYPE = "setStereoType"
     SET_STORM_WASH = "setStormWash"
+    SET_STREAM = "setStream"
     SET_SUN_AZIMUTH_ANGLE = "setSunAzimuthAngle"
     SET_SUN_ELEVATION_ANGLE = "setSunElevationAngle"
     SET_SUN_RISE = "setSunRise"
@@ -719,6 +723,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.EXECUTE,
         Command.UPDATE,
     ],
+    Capability.CAMERA_VIEWPORT_SETTINGS: [Command.SET_DEFAULT_VIEWPORT],
     Capability.CARBON_DIOXIDE_HEALTH_CONCERN: [],
     Capability.CARBON_DIOXIDE_MEASUREMENT: [],
     Capability.CARBON_MONOXIDE_DETECTOR: [],
@@ -922,6 +927,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.UNMUTE,
     ],
     Capability.NETWORK_METER: [],
+    Capability.NIGHT_VISION: [Command.SET_ILLUMINATION, Command.SET_NIGHT_VISION],
     Capability.NITROGEN_DIOXIDE_HEALTH_CONCERN: [],
     Capability.NITROGEN_DIOXIDE_MEASUREMENT: [],
     Capability.NOTIFICATION: [Command.DEVICE_NOTIFICATION],
@@ -1135,6 +1141,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.VIDEO_CLIPS: [Command.CAPTURE_CLIP],
     Capability.VIDEO_STREAM: [Command.START_STREAM, Command.STOP_STREAM],
+    Capability.VIDEO_STREAM_SETTINGS: [Command.SET_STREAM],
     Capability.VOLTAGE_MEASUREMENT: [],
     Capability.WASHER_MODE: [Command.SET_WASHER_MODE],
     Capability.WASHER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
