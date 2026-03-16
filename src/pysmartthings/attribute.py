@@ -217,6 +217,7 @@ class Attribute(StrEnum):
     DEFAULT_OPERATION_TIME = "defaultOperationTime"
     DEFAULT_OVEN_MODE = "defaultOvenMode"
     DEFAULT_OVEN_SETPOINT = "defaultOvenSetpoint"
+    DEFAULT_VIEWPORT = "defaultViewport"
     DEFINED_RECIPE = "definedRecipe"
     DEFOG_STATE = "defogState"
     DEFROST = "defrost"
@@ -468,6 +469,7 @@ class Attribute(StrEnum):
     HVAC_STATE = "hvacState"
     SPEC_VERSION = "icv"
     ILLUMINANCE = "illuminance"
+    ILLUMINATION = "illumination"
     ILLUMVALUE = "illumvalue"
     IMAGE = "image"
     IMAGE_SUPPORT = "imageSupport"
@@ -605,6 +607,7 @@ class Attribute(StrEnum):
     MIN_PIN_CODE_LEN = "minPinCodeLen"
     MIN_SUPPORTED_AMOUNT = "minSupportedAmount"
     MIN_VERSION = "minVersion"
+    MIN_VIEWPORT_RESOLUTION = "minViewportResolution"
     MINIMUM_RESERVABLE_TIME = "minimumReservableTime"
     MINIMUM_SETPOINT = "minimumSetpoint"
     MINTEMP = "mintemp"
@@ -652,6 +655,7 @@ class Attribute(StrEnum):
     NEUTRAL_DETERGENT_REMAINING_AMOUNT = "neutralDetergentRemainingAmount"
     NEUTRAL_DETERGENT_TYPE = "neutralDetergentType"
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
+    NIGHT_VISION = "nightVision"
     NITROGEN_DIOXIDE = "nitrogenDioxide"
     NITROGEN_DIOXIDE_HEALTH_CONCERN = "nitrogenDioxideHealthConcern"
     NODE_END_POINT = "nodeEndPoint"
@@ -1073,6 +1077,7 @@ class Attribute(StrEnum):
     SUPPORTED_PUBLISHER_I_DS = "supportedPublisherIDs"
     SUPPORTED_RADON_VALUES = "supportedRadonValues"
     SUPPORTED_RELUMINOS = "supportedReluminos"
+    SUPPORTED_RESOLUTIONS = "supportedResolutions"
     SUPPORTED_RINSE_MODES = "supportedRinseModes"
     SUPPORTED_ROBOT_CLEANER_STATES = "supportedRobotCleanerStates"
     SUPPORTED_ROBOT_COMMANDS = "supportedRobotCommands"
@@ -1239,6 +1244,8 @@ class Attribute(StrEnum):
     VHUMIDITY = "vhumidity"
     VENDOR_ID = "vid"
     VIDEO_CLIP = "videoClip"
+    VIDEO_SENSOR_PARAMETERS = "videoSensorParameters"
+    VIDEO_STREAMS = "videoStreams"
     VIRUS_DOCTOR_MODE = "virusDoctorMode"
     VISIBLE_FEATURES = "visibleFeatures"
     VISIBLE_LIST = "visibleList"
@@ -1373,6 +1380,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.BYPASSABLE: [Attribute.BYPASS_STATUS],
     Capability.CAMERA_EVENT: [Attribute.EVENT, Attribute.SUPPORTED_EVENTS],
     Capability.CAMERA_PRESET: [Attribute.PRESETS],
+    Capability.CAMERA_VIEWPORT_SETTINGS: [
+        Attribute.DEFAULT_VIEWPORT,
+        Attribute.MIN_VIEWPORT_RESOLUTION,
+        Attribute.VIDEO_SENSOR_PARAMETERS,
+    ],
     Capability.CARBON_DIOXIDE_HEALTH_CONCERN: [
         Attribute.CARBON_DIOXIDE_HEALTH_CONCERN,
         Attribute.SUPPORTED_CARBON_DIOXIDE_VALUES,
@@ -1686,6 +1698,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.TRACK_DESCRIPTION,
     ],
     Capability.NETWORK_METER: [Attribute.DOWNLINK_SPEED, Attribute.UPLINK_SPEED],
+    Capability.NIGHT_VISION: [
+        Attribute.ILLUMINATION,
+        Attribute.NIGHT_VISION,
+        Attribute.SUPPORTED_ATTRIBUTES,
+    ],
     Capability.NITROGEN_DIOXIDE_HEALTH_CONCERN: [
         Attribute.NITROGEN_DIOXIDE_HEALTH_CONCERN,
         Attribute.SUPPORTED_NITROGEN_DIOXIDE_VALUES,
@@ -2017,6 +2034,11 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.VIDEO_CAPTURE2: [Attribute.CLIP],
     Capability.VIDEO_CLIPS: [Attribute.VIDEO_CLIP],
     Capability.VIDEO_STREAM: [Attribute.STREAM, Attribute.SUPPORTED_FEATURES],
+    Capability.VIDEO_STREAM_SETTINGS: [
+        Attribute.SUPPORTED_FEATURES,
+        Attribute.SUPPORTED_RESOLUTIONS,
+        Attribute.VIDEO_STREAMS,
+    ],
     Capability.VOLTAGE_MEASUREMENT: [Attribute.VOLTAGE],
     Capability.WASHER_MODE: [Attribute.WASHER_MODE],
     Capability.WASHER_OPERATING_STATE: [
