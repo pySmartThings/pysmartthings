@@ -176,6 +176,7 @@ class Command(StrEnum):
     REQUEST_DEMAND_RESPONSE_LOAD_CONTROL_ACTION = "requestDrlcAction"
     REQUEST_TURN_INFO = "requestTurnInfo"
     RESET = "reset"
+    RESET_BLADE_FILTER = "resetBladeFilter"
     RESET_DEODOR_FILTER = "resetDeodorFilter"
     RESET_DRAIN_FILTER = "resetDrainFilter"
     RESET_DUST_FILTER = "resetDustFilter"
@@ -243,6 +244,7 @@ class Command(StrEnum):
     SET_BUTTON_HOLD = "setButtonHold"
     SET_BUTTON_PUSH = "setButtonPush"
     SET_BUTTON_TRIPLE_PUSH = "setButtonTriplePush"
+    SET_BYPASS_MODE = "setBypassMode"
     SET_CHANNEL = "setChannel"
     SET_CIRCADIAN = "setCircadian"
     SET_CLEANING_MODE = "setCleaningMode"
@@ -1315,6 +1317,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_PRESSURE_LEVEL,
     ],
     Capability.SAMSUNG_CE_AUTO_VENTILATION: [Command.ACTION],
+    Capability.SAMSUNG_CE_BLADE_FILTER: [Command.RESET_BLADE_FILTER],
     Capability.SAMSUNG_CE_BURNER_INFO: [],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [],
     Capability.SAMSUNG_CE_CAMERA_STREAMING: [
@@ -1502,6 +1505,14 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.UPDATE_AGING,
     ],
     Capability.SAMSUNG_CE_MEAT_PROBE: [Command.SET_TEMPERATURE_SETPOINT],
+    Capability.SAMSUNG_CE_MICROFIBER_FILTER_OPERATING_STATE: [
+        Command.CANCEL,
+        Command.PAUSE,
+        Command.RESUME,
+        Command.START,
+    ],
+    Capability.SAMSUNG_CE_MICROFIBER_FILTER_SETTINGS: [Command.SET_BYPASS_MODE],
+    Capability.SAMSUNG_CE_MICROFIBER_FILTER_STATUS: [],
     Capability.SAMSUNG_CE_MICROPHONE_SETTINGS: [Command.MUTE, Command.UNMUTE],
     Capability.SAMSUNG_CE_MICROWAVE_POWER: [Command.SET_POWER_LEVEL],
     Capability.SAMSUNG_CE_MUSIC_PLAYLIST: [Command.SET_PLAYLIST],

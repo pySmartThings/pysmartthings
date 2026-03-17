@@ -101,6 +101,12 @@ class Attribute(StrEnum):
     BEEP = "beep"
     BELL_SOUNDS = "bellSounds"
     BINARY_ID = "binaryId"
+    BLADE_FILTER_CAPACITY = "bladeFilterCapacity"
+    BLADE_FILTER_LAST_RESET_DATE = "bladeFilterLastResetDate"
+    BLADE_FILTER_RESET_TYPE = "bladeFilterResetType"
+    BLADE_FILTER_STATUS = "bladeFilterStatus"
+    BLADE_FILTER_USAGE = "bladeFilterUsage"
+    BLADE_FILTER_USAGE_STEP = "bladeFilterUsageStep"
     BLE_CONNECTION_STATE = "bleConnectionState"
     BLOCKING_STATUS = "blockingStatus"
     BMI_MEASUREMENT = "bmiMeasurement"
@@ -110,6 +116,7 @@ class Attribute(StrEnum):
     BRIGHTNESS_LEVEL = "brightnessLevel"
     BURNER_ID = "burnerId"
     BUTTON = "button"
+    BYPASS_MODE = "bypassMode"
     BYPASS_STATUS = "bypassStatus"
     CALL_STATUS = "callStatus"
     CAMERA = "camera"
@@ -601,6 +608,7 @@ class Attribute(StrEnum):
     METERING_DATE = "meteringDate"
     METHOD = "method"
     MICOM_ASSAY_CODE = "micomAssayCode"
+    MICROFIBER_FILTER_JOB_STATE = "microfiberFilterJobState"
     MIGRATED = "migrated"
     MIN_CODE_LENGTH = "minCodeLength"
     MIN_CURRENT = "minCurrent"
@@ -1036,6 +1044,7 @@ class Attribute(StrEnum):
     SUPPORTED_HOT_TEMPERATURES = "supportedHotTemperatures"
     SUPPORTED_INPUT_SOURCES = "supportedInputSources"
     SUPPORTED_INPUT_SOURCES_MAP = "supportedInputSourcesMap"
+    SUPPORTED_JOB_STATES = "supportedJobStates"
     SUPPORTED_KEY_CODES = "supportedKeyCodes"
     SUPPORTED_KIMCHI_STORAGE_MODES = "supportedKimchiStorageModes"
     SUPPORTED_LANGUAGES = "supportedLanguages"
@@ -2392,6 +2401,14 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_PRESSURE_LEVELS,
     ],
     Capability.SAMSUNG_CE_AUTO_VENTILATION: [Attribute.SUPPORTED_ACTIONS],
+    Capability.SAMSUNG_CE_BLADE_FILTER: [
+        Attribute.BLADE_FILTER_CAPACITY,
+        Attribute.BLADE_FILTER_LAST_RESET_DATE,
+        Attribute.BLADE_FILTER_RESET_TYPE,
+        Attribute.BLADE_FILTER_STATUS,
+        Attribute.BLADE_FILTER_USAGE,
+        Attribute.BLADE_FILTER_USAGE_STEP,
+    ],
     Capability.SAMSUNG_CE_BURNER_INFO: [Attribute.BURNER_ID],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [Attribute.SWITCH],
     Capability.SAMSUNG_CE_CAMERA_STREAMING: [
@@ -2711,6 +2728,17 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.STATUS,
         Attribute.TEMPERATURE,
         Attribute.TEMPERATURE_SETPOINT,
+    ],
+    Capability.SAMSUNG_CE_MICROFIBER_FILTER_OPERATING_STATE: [
+        Attribute.MICROFIBER_FILTER_JOB_STATE,
+        Attribute.OPERATING_STATE,
+        Attribute.SUPPORTED_JOB_STATES,
+        Attribute.SUPPORTED_OPERATING_STATES,
+    ],
+    Capability.SAMSUNG_CE_MICROFIBER_FILTER_SETTINGS: [Attribute.BYPASS_MODE],
+    Capability.SAMSUNG_CE_MICROFIBER_FILTER_STATUS: [
+        Attribute.STATUS,
+        Attribute.SUPPORTED_STATUS,
     ],
     Capability.SAMSUNG_CE_MICROPHONE_SETTINGS: [Attribute.MUTE],
     Capability.SAMSUNG_CE_MICROWAVE_POWER: [

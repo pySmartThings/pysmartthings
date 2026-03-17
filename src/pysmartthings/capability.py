@@ -361,6 +361,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_AUTO_DOOR_RELEASE = "samsungce.autoDoorRelease"
     SAMSUNG_CE_AUTO_OPEN_DOOR = "samsungce.autoOpenDoor"
     SAMSUNG_CE_AUTO_VENTILATION = "samsungce.autoVentilation"
+    SAMSUNG_CE_BLADE_FILTER = "samsungce.bladeFilter"
     SAMSUNG_CE_BURNER_INFO = "samsungce.burnerInfo"
     SAMSUNG_CE_BUTTON_DISPLAY_CONDITION = "samsungce.buttonDisplayCondition"
     SAMSUNG_CE_CAMERA_STREAMING = "samsungce.cameraStreaming"
@@ -452,6 +453,11 @@ class Capability(StrEnum):
     SAMSUNG_CE_MAINTENANCE_MODE = "samsungce.maintenanceMode"
     SAMSUNG_CE_MEAT_AGING = "samsungce.meatAging"
     SAMSUNG_CE_MEAT_PROBE = "samsungce.meatProbe"
+    SAMSUNG_CE_MICROFIBER_FILTER_OPERATING_STATE = (
+        "samsungce.microfiberFilterOperatingState"
+    )
+    SAMSUNG_CE_MICROFIBER_FILTER_SETTINGS = "samsungce.microfiberFilterSettings"
+    SAMSUNG_CE_MICROFIBER_FILTER_STATUS = "samsungce.microfiberFilterStatus"
     SAMSUNG_CE_MICROPHONE_SETTINGS = "samsungce.microphoneSettings"
     SAMSUNG_CE_MICROWAVE_POWER = "samsungce.microwavePower"
     SAMSUNG_CE_MUSIC_PLAYLIST = "samsungce.musicPlaylist"
