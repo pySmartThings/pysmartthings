@@ -348,6 +348,10 @@ class Capability(StrEnum):
     SAMSUNG_CE_ABSENCE_DETECTION = "samsungce.absenceDetection"
     SAMSUNG_CE_ACCESSIBILITY = "samsungce.accessibility"
     SAMSUNG_CE_ACTIVATION_STATE = "samsungce.activationState"
+    SAMSUNG_CE_AI_MOTION_WIND = "samsungce.aiMotionWind"
+    SAMSUNG_CE_AIR_CONDITIONER_AIR_FLOW_DIRECTION = (
+        "samsungce.airConditionerAirFlowDirection"
+    )
     SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK = "samsungce.airConditionerAudioFeedback"
     SAMSUNG_CE_AIR_CONDITIONER_BEEP = "samsungce.airConditionerBeep"
     SAMSUNG_CE_AIR_CONDITIONER_DISPLAY = "samsungce.airConditionerDisplay"
@@ -809,6 +813,8 @@ class Capability(StrEnum):
     PARTYVOICE23922_RESETSELECT = "partyvoice23922.resetselect"
     PARTYVOICE23922_ROKUCURRENTAPP = "partyvoice23922.rokucurrentapp"
     PARTYVOICE23922_ROKUMEDIASTATUS = "partyvoice23922.rokumediastatus"
+    PARTYVOICE23922_ROKUPOWER = "partyvoice23922.rokupower"
+    PARTYVOICE23922_ROKUTVKEYS2 = "partyvoice23922.rokutvkeys2"
     PARTYVOICE23922_SETILLUMINANCE = "partyvoice23922.setilluminance"
     PARTYVOICE23922_SHADEPAUSE = "partyvoice23922.shadepause"
     PARTYVOICE23922_SHELLYDEVS4 = "partyvoice23922.shellydevs4"
@@ -936,6 +942,8 @@ class Capability(StrEnum):
     SIGNALAHEAD13665_STARTSTOPPROGRAMV2 = "signalahead13665.startstopprogramv2"
     SIGNALAHEAD13665_WASHERPROGRAMSV2 = "signalahead13665.washerprogramsv2"
 
+    STSE_CUBE_ACTION = "stse.cubeAction"
+    STSE_CUBE_FACE = "stse.cubeFace"
     STSE_DEVICE_MODE = "stse.deviceMode"
 
     STSOLUTIONS_DEMAND_RESPONSE_MODE = "stsolutions.demandResponseMode"

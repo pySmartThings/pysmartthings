@@ -157,6 +157,8 @@ class Command(StrEnum):
     PLAY_TRACK_AND_RESUME = "playTrackAndResume"
     POLL = "poll"
     POST_OCF_COMMAND = "postOcfCommand"
+    POWER_OFF = "powerOff"
+    POWER_ON = "powerOn"
     PRESET_POSITION = "presetPosition"
     PREVIOUS_TRACK = "previousTrack"
     PUBLISH = "publish"
@@ -201,6 +203,7 @@ class Command(StrEnum):
     SDP_OFFER = "sdpOffer"
     SEARCH = "search"
     SELECT_AREAS = "selectAreas"
+    SELECT_T_V_KEY = "selectTVKey"
     SEND = "send"
     SEND_COMMAND = "sendCommand"
     SEND_CONTENT = "sendContent"
@@ -358,6 +361,9 @@ class Command(StrEnum):
     SET_HIGH_TEMP_WASH = "setHighTempWash"
     SET_HOME_APP = "setHomeApp"
     SET_HOOD_FAN_SPEED = "setHoodFanSpeed"
+    SET_HORIZONTAL_ANGLE_STEP = "setHorizontalAngleStep"
+    SET_HORIZONTAL_DIRECTION = "setHorizontalDirection"
+    SET_HORIZONTAL_SWING_RANGE = "setHorizontalSwingRange"
     SET_HOT_AIR_DRY = "setHotAirDry"
     SET_HOT_TEMPERATURE = "setHotTemperature"
     SET_HUE = "setHue"
@@ -472,6 +478,7 @@ class Command(StrEnum):
     SET_PLAYBACK_STATUS = "setPlaybackStatus"
     SET_PLAYLIST = "setPlaylist"
     SET_PORTION = "setPortion"
+    SET_POWER = "setPower"
     SET_POWER_LEVEL = "setPowerLevel"
     SET_POWER_SAVING = "setPowerSaving"
     SET_POWER_STATE = "setPowerState"
@@ -590,6 +597,8 @@ class Command(StrEnum):
     SET_USER_DEFINED_BREWING_RECIPES = "setUserDefinedBrewingRecipes"
     SET_USER_LOCATION = "setUserLocation"
     SET_VALUE = "setValue"
+    SET_VERTICAL_ANGLE_STEP = "setVerticalAngleStep"
+    SET_VERTICAL_DIRECTION = "setVerticalDirection"
     SET_VIRUS_DOCTOR_MODE = "setVirusDoctorMode"
     SET_VISIBLE_LIST = "setVisibleList"
     SET_VOICE_GUIDE = "setVoiceGuide"
@@ -1283,6 +1292,14 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_VOICE_GUIDE,
     ],
     Capability.SAMSUNG_CE_ACTIVATION_STATE: [],
+    Capability.SAMSUNG_CE_AI_MOTION_WIND: [Command.SET_MODE],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_AIR_FLOW_DIRECTION: [
+        Command.SET_HORIZONTAL_ANGLE_STEP,
+        Command.SET_HORIZONTAL_DIRECTION,
+        Command.SET_HORIZONTAL_SWING_RANGE,
+        Command.SET_VERTICAL_ANGLE_STEP,
+        Command.SET_VERTICAL_DIRECTION,
+    ],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [Command.SET_VOLUME_LEVEL],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_BEEP: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_DISPLAY: [Command.OFF, Command.ON],
@@ -2024,6 +2041,12 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_RESETSELECT: [Command.SET_SELECT],
     Capability.PARTYVOICE23922_ROKUCURRENTAPP: [],
     Capability.PARTYVOICE23922_ROKUMEDIASTATUS: [],
+    Capability.PARTYVOICE23922_ROKUPOWER: [
+        Command.POWER_OFF,
+        Command.POWER_ON,
+        Command.SET_POWER,
+    ],
+    Capability.PARTYVOICE23922_ROKUTVKEYS2: [Command.SELECT_T_V_KEY],
     Capability.PARTYVOICE23922_SETILLUMINANCE: [Command.SET_ILLUM],
     Capability.PARTYVOICE23922_SHADEPAUSE: [Command.PUSH],
     Capability.PARTYVOICE23922_SHELLYDEVS4: [Command.SET_DEVICE_TYPE],
@@ -2186,6 +2209,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SIGNALAHEAD13665_PROGRAMDURATIONV2: [Command.SET_PROGRAM_DURATION],
     Capability.SIGNALAHEAD13665_STARTSTOPPROGRAMV2: [Command.SET_STARTSTOP],
     Capability.SIGNALAHEAD13665_WASHERPROGRAMSV2: [Command.SET_PROGRAM, Command.STOP],
+    Capability.STSE_CUBE_ACTION: [],
+    Capability.STSE_CUBE_FACE: [],
     Capability.STSE_DEVICE_MODE: [],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Command.SET_MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [],

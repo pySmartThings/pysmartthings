@@ -77,6 +77,7 @@ class Attribute(StrEnum):
     AVAILABLE_DEHUMIDIFIER_MODES = "availableDehumidifierModes"
     AVAILABLE_FAN_OSCILLATION_MODES = "availableFanOscillationModes"
     AVAILABLE_FANSPEED_BUTTONS = "availableFanspeedButtons"
+    AVAILABLE_MODES = "availableModes"
     AVAILABLE_MODULES = "availableModules"
     AVAILABLE_POWER_BUTTONS = "availablePowerButtons"
     AVAILABLE_POWER_TOGGLE_BUTTONS = "availablePowerToggleButtons"
@@ -198,6 +199,8 @@ class Attribute(StrEnum):
     CREATE_DEVICE = "createDevice"
     CREATE_QTY = "createQty"
     CREDENTIALS = "credentials"
+    CUBE_ACTION = "cubeAction"
+    CUBE_FACE = "cubeFace"
     CURATION_SUPPORT = "curationSupport"
     CURRENT = "current"
     CURRENT_ACTIVITY = "currentActivity"
@@ -455,6 +458,9 @@ class Attribute(StrEnum):
     HOOD_FILTER_STATUS = "hoodFilterStatus"
     HOOD_FILTER_USAGE = "hoodFilterUsage"
     HOOD_FILTER_USAGE_STEP = "hoodFilterUsageStep"
+    HORIZONTAL_ANGLE_STEP = "horizontalAngleStep"
+    HORIZONTAL_DIRECTION = "horizontalDirection"
+    HORIZONTAL_SWING_RANGE = "horizontalSwingRange"
     HOT_AIR_DRY = "hotAirDry"
     HOT_TEMPERATURE = "hotTemperature"
     HOURLY_GAS_CONSUMPTIONS = "hourlyGasConsumptions"
@@ -748,6 +754,7 @@ class Attribute(StrEnum):
     POWER_SAVING = "powerSaving"
     POWER_SOURCE = "powerSource"
     POWER_STATE = "powerState"
+    POWER_SWITCH = "powerSwitch"
     POWERFACTOR = "powerfactor"
     PRECIP = "precip"
     PRECIPITATION_INTENSITY = "precipitationIntensity"
@@ -844,6 +851,7 @@ class Attribute(StrEnum):
     ROBOT_CLEANER_TURBO_MODE = "robotCleanerTurboMode"
     ROBOT_CLEANER_TURBO_STATE = "robotCleanerTurboState"
     ROBOT_STATE = "robotState"
+    ROKU_T_V_KEY = "rokuTVKey"
     ROLE = "role"
     RSSI = "rssi"
     SANITIZE = "sanitize"
@@ -1036,11 +1044,15 @@ class Attribute(StrEnum):
     SUPPORTED_FORMALDEHYDE_VALUES = "supportedFormaldehydeValues"
     SUPPORTED_FREEZER_CONVERT_MODES = "supportedFreezerConvertModes"
     SUPPORTED_FRIDGE_MODES = "supportedFridgeModes"
+    SUPPORTED_FRIDGE_OPTIONS = "supportedFridgeOptions"
     SUPPORTED_FULL_FRIDGE_MODES = "supportedFullFridgeModes"
     SUPPORTED_GRAYSCALES = "supportedGrayscales"
     SUPPORTED_HEATING_MODES = "supportedHeatingModes"
     SUPPORTED_HIGH_CONTRASTS = "supportedHighContrasts"
     SUPPORTED_HOOD_FAN_SPEED = "supportedHoodFanSpeed"
+    SUPPORTED_HORIZONTAL_ANGLE_STEPS = "supportedHorizontalAngleSteps"
+    SUPPORTED_HORIZONTAL_DIRECTIONS = "supportedHorizontalDirections"
+    SUPPORTED_HORIZONTAL_SWING_RANGES = "supportedHorizontalSwingRanges"
     SUPPORTED_HOT_TEMPERATURES = "supportedHotTemperatures"
     SUPPORTED_INPUT_SOURCES = "supportedInputSources"
     SUPPORTED_INPUT_SOURCES_MAP = "supportedInputSourcesMap"
@@ -1115,6 +1127,8 @@ class Attribute(StrEnum):
     SUPPORTED_TYPES = "supportedTypes"
     SUPPORTED_UNLOCK_DIRECTIONS = "supportedUnlockDirections"
     SUPPORTED_VALUES = "supportedValues"
+    SUPPORTED_VERTICAL_ANGLE_STEPS = "supportedVerticalAngleSteps"
+    SUPPORTED_VERTICAL_DIRECTIONS = "supportedVerticalDirections"
     SUPPORTED_VERY_FINE_DUST_VALUES = "supportedVeryFineDustValues"
     SUPPORTED_VIEW_MODES = "supportedViewModes"
     SUPPORTED_VIEW_MODES_MAP = "supportedViewModesMap"
@@ -1242,6 +1256,8 @@ class Attribute(StrEnum):
     VERSION = "version"
     VERSION_NUMBER = "versionNumber"
     VERSIONS = "versions"
+    VERTICAL_ANGLE_STEP = "verticalAngleStep"
+    VERTICAL_DIRECTION = "verticalDirection"
     VERY_FINE_DUST_FILTER_CAPACITY = "veryFineDustFilterCapacity"
     VERY_FINE_DUST_FILTER_LAST_RESET_DATE = "veryFineDustFilterLastResetDate"
     VERY_FINE_DUST_FILTER_RESET_TYPE = "veryFineDustFilterResetType"
@@ -2228,6 +2244,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.FRIDGE_MODE,
         Attribute.FRIDGE_MODE_VALUE,
         Attribute.SUPPORTED_FRIDGE_MODES,
+        Attribute.SUPPORTED_FRIDGE_OPTIONS,
         Attribute.SUPPORTED_FULL_FRIDGE_MODES,
     ],
     Capability.CUSTOM_HEPA_FILTER: [
@@ -2356,6 +2373,23 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.VOICE_GUIDE,
     ],
     Capability.SAMSUNG_CE_ACTIVATION_STATE: [Attribute.ACTIVATION_STATE],
+    Capability.SAMSUNG_CE_AI_MOTION_WIND: [
+        Attribute.AVAILABLE_MODES,
+        Attribute.MODE,
+        Attribute.SUPPORTED_MODES,
+    ],
+    Capability.SAMSUNG_CE_AIR_CONDITIONER_AIR_FLOW_DIRECTION: [
+        Attribute.HORIZONTAL_ANGLE_STEP,
+        Attribute.HORIZONTAL_DIRECTION,
+        Attribute.HORIZONTAL_SWING_RANGE,
+        Attribute.SUPPORTED_HORIZONTAL_ANGLE_STEPS,
+        Attribute.SUPPORTED_HORIZONTAL_DIRECTIONS,
+        Attribute.SUPPORTED_HORIZONTAL_SWING_RANGES,
+        Attribute.SUPPORTED_VERTICAL_ANGLE_STEPS,
+        Attribute.SUPPORTED_VERTICAL_DIRECTIONS,
+        Attribute.VERTICAL_ANGLE_STEP,
+        Attribute.VERTICAL_DIRECTION,
+    ],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AUDIO_FEEDBACK: [
         Attribute.SUPPORTED_VOLUME_LEVELS,
         Attribute.VOLUME_LEVEL,
@@ -3482,6 +3516,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.PARTYVOICE23922_RESETSELECT: [Attribute.CMD_SELECT],
     Capability.PARTYVOICE23922_ROKUCURRENTAPP: [Attribute.CURRENT_APP],
     Capability.PARTYVOICE23922_ROKUMEDIASTATUS: [Attribute.MEDIA_STATUS],
+    Capability.PARTYVOICE23922_ROKUPOWER: [Attribute.POWER_SWITCH],
+    Capability.PARTYVOICE23922_ROKUTVKEYS2: [Attribute.ROKU_T_V_KEY],
     Capability.PARTYVOICE23922_SETILLUMINANCE: [Attribute.ILLUMVALUE],
     Capability.PARTYVOICE23922_SHADEPAUSE: [],
     Capability.PARTYVOICE23922_SHELLYDEVS4: [Attribute.DEVICE_TYPE],
@@ -3705,6 +3741,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.AVAILABLE_PROGRAMS,
         Attribute.PROGRAM,
     ],
+    Capability.STSE_CUBE_ACTION: [Attribute.CUBE_ACTION],
+    Capability.STSE_CUBE_FACE: [Attribute.CUBE_FACE],
     Capability.STSE_DEVICE_MODE: [Attribute.MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Attribute.MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [
