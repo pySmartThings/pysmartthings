@@ -4,7 +4,7 @@
 [![Python Versions][python-versions-shield]][pypi]
 ![Project Stage][project-stage-shield]
 ![Project Maintenance][maintenance-shield]
-[![License][license-shield]](LICENSE.md)
+[![License][license-shield]](./LICENSE)
 
 [![Build Status][build-shield]][build]
 [![Code Coverage][codecov-shield]][codecov]
