@@ -172,6 +172,7 @@ class Attribute(StrEnum):
     CONDITION = "condition"
     CONNECTED_DEVICE_COUNT = "connectedDeviceCount"
     CONNECTED_DEVICE_ID = "connectedDeviceId"
+    CONNECTED_DEVICES = "connectedDevices"
     CONNECTED_ROUTER_COUNT = "connectedRouterCount"
     CONNECTED_USER_ID = "connectedUserId"
     CONNECTION = "connection"
@@ -596,6 +597,7 @@ class Attribute(StrEnum):
     MAX_CODE_LENGTH = "maxCodeLength"
     MAX_CODES = "maxCodes"
     MAX_CURRENT = "maxCurrent"
+    MAX_DEVICES = "maxDevices"
     MAX_NUMBER_OF_PRESETS = "maxNumberOfPresets"
     MAX_NUMBER_OF_RECIPES = "maxNumberOfRecipes"
     MAX_NUMBER_OF_RESERVATIONS = "maxNumberOfReservations"
@@ -903,6 +905,8 @@ class Attribute(StrEnum):
     SIREN_OR_BELL_ACTIVE = "sirenOrBellActive"
     SIREN_SOUNDS = "sirenSounds"
     SLEEPING = "sleeping"
+    SLEEP_DATA = "sleepData"
+    SLEEP_STATUS = "sleepStatus"
     SLOT_STATE = "slotState"
     SMART_KEY_BATTERY = "smartKeyBattery"
     SMOKE = "smoke"
@@ -2954,6 +2958,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_SENSING_ON_SUSPEND_MODE: [Attribute.SENSING_ON_SUSPEND_MODE],
     Capability.SAMSUNG_CE_SILENT_ACTION: [],
+    Capability.SAMSUNG_CE_SLEEP_DATA_INTEROPERATION: [
+        Attribute.CONNECTED_DEVICES,
+        Attribute.ENABLED,
+        Attribute.MAX_DEVICES,
+        Attribute.SLEEP_DATA,
+        Attribute.SLEEP_STATUS,
+    ],
     Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: [
         Attribute.REGULAR_SOFTENER_ALARM_ENABLED,
         Attribute.REGULAR_SOFTENER_DOSAGE,

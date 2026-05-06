@@ -266,6 +266,7 @@ class Command(StrEnum):
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COLOR_VALUE = "setColorValue"
     SET_COMPLETION_TIME = "setCompletionTime"
+    SET_CONNECTED_DEVICES = "setConnectedDevices"
     SET_CONDITION = "setCondition"
     SET_CONTENT_TEXT = "setContentText"
     SET_CONTENT_TITLE = "setContentTitle"
@@ -530,6 +531,8 @@ class Command(StrEnum):
     SET_SIGNAL_METRICS = "setSignalMetrics"
     SET_SIREN_OR_BELL_ACTIVE = "setSirenOrBellActive"
     SET_SIREN_SOUNDS = "setSirenSounds"
+    SET_SLEEP_DATA = "setSleepData"
+    SET_SLEEP_STATUS = "setSleepStatus"
     SET_SOFTENER_TYPE = "setSoftenerType"
     SET_SOUND_FROM = "setSoundFrom"
     SET_SOUND_MODE = "setSoundMode"
@@ -1641,6 +1644,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_SENSING_ON_SUSPEND_MODE: [],
     Capability.SAMSUNG_CE_SILENT_ACTION: [Command.ACT_SILENTLY],
+    Capability.SAMSUNG_CE_SLEEP_DATA_INTEROPERATION: [
+        Command.DISABLE,
+        Command.ENABLE,
+        Command.SET_CONNECTED_DEVICES,
+        Command.SET_SLEEP_DATA,
+        Command.SET_SLEEP_STATUS,
+    ],
     Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: [
         Command.DISABLE_ALARM,
         Command.ENABLE_ALARM,

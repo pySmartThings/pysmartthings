@@ -521,6 +521,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_SELF_CHECK = "samsungce.selfCheck"
     SAMSUNG_CE_SENSING_ON_SUSPEND_MODE = "samsungce.sensingOnSuspendMode"
     SAMSUNG_CE_SILENT_ACTION = "samsungce.silentAction"
+    SAMSUNG_CE_SLEEP_DATA_INTEROPERATION = "samsungce.sleepDataInteroperation"
     SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT = "samsungce.softenerAutoReplenishment"
     SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
     SAMSUNG_CE_SOFTENER_STATE = "samsungce.softenerState"
