@@ -71,6 +71,7 @@ class Attribute(StrEnum):
     AVAILABLE = "available"
     AVAILABLE_AC_FAN_MODES = "availableAcFanModes"
     AVAILABLE_AC_MODES = "availableAcModes"
+    AVAILABLE_CLEANING_TYPES = "availableCleaningTypes"
     AVAILABLE_CURTAIN_POWER_BUTTONS = "availableCurtainPowerButtons"
     AVAILABLE_CUSTOM_BUTTONS = "availableCustomButtons"
     AVAILABLE_CYCLE_TYPES = "availableCycleTypes"
@@ -172,6 +173,7 @@ class Attribute(StrEnum):
     CONDITION = "condition"
     CONNECTED_DEVICE_COUNT = "connectedDeviceCount"
     CONNECTED_DEVICE_ID = "connectedDeviceId"
+    CONNECTED_DEVICES = "connectedDevices"
     CONNECTED_ROUTER_COUNT = "connectedRouterCount"
     CONNECTED_USER_ID = "connectedUserId"
     CONNECTION = "connection"
@@ -596,6 +598,7 @@ class Attribute(StrEnum):
     MAX_CODE_LENGTH = "maxCodeLength"
     MAX_CODES = "maxCodes"
     MAX_CURRENT = "maxCurrent"
+    MAX_DEVICES = "maxDevices"
     MAX_NUMBER_OF_PRESETS = "maxNumberOfPresets"
     MAX_NUMBER_OF_RECIPES = "maxNumberOfRecipes"
     MAX_NUMBER_OF_RESERVATIONS = "maxNumberOfReservations"
@@ -670,6 +673,7 @@ class Attribute(StrEnum):
     NEUTRAL_DETERGENT_TYPE = "neutralDetergentType"
     NEW_VERSION_AVAILABLE = "newVersionAvailable"
     NIGHT_VISION = "nightVision"
+    NIGHT_VISION_MODE = "nightVisionMode"
     NITROGEN_DIOXIDE = "nitrogenDioxide"
     NITROGEN_DIOXIDE_HEALTH_CONCERN = "nitrogenDioxideHealthConcern"
     NODE_END_POINT = "nodeEndPoint"
@@ -902,6 +906,8 @@ class Attribute(StrEnum):
     SIGNIN_PERMISSION = "signinPermission"
     SIREN_OR_BELL_ACTIVE = "sirenOrBellActive"
     SIREN_SOUNDS = "sirenSounds"
+    SLEEP_DATA = "sleepData"
+    SLEEP_STATUS = "sleepStatus"
     SLEEPING = "sleeping"
     SLOT_STATE = "slotState"
     SMART_KEY_BATTERY = "smartKeyBattery"
@@ -1726,6 +1732,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.NIGHT_VISION: [
         Attribute.ILLUMINATION,
         Attribute.NIGHT_VISION,
+        Attribute.NIGHT_VISION_MODE,
         Attribute.SUPPORTED_ATTRIBUTES,
     ],
     Capability.NITROGEN_DIOXIDE_HEALTH_CONCERN: [
@@ -2843,6 +2850,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORT_REPEAT_MODE,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_CLEANING_TYPE: [
+        Attribute.AVAILABLE_CLEANING_TYPES,
         Attribute.CLEANING_TYPE,
         Attribute.SUPPORTED_CLEANING_TYPES,
     ],
@@ -2954,6 +2962,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_SENSING_ON_SUSPEND_MODE: [Attribute.SENSING_ON_SUSPEND_MODE],
     Capability.SAMSUNG_CE_SILENT_ACTION: [],
+    Capability.SAMSUNG_CE_SLEEP_DATA_INTEROPERATION: [
+        Attribute.CONNECTED_DEVICES,
+        Attribute.ENABLED,
+        Attribute.MAX_DEVICES,
+        Attribute.SLEEP_DATA,
+        Attribute.SLEEP_STATUS,
+    ],
     Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: [
         Attribute.REGULAR_SOFTENER_ALARM_ENABLED,
         Attribute.REGULAR_SOFTENER_DOSAGE,
@@ -3726,7 +3741,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_WI_FI_FREQ,
     ],
     Capability.SIGNALAHEAD13665_APPLIANCEOPERATIONSTATESV2: [Attribute.OPERATION_STATE],
+    Capability.SIGNALAHEAD13665_COFFEEMAKERPROGRAMSV2: [
+        Attribute.AVAILABLE_PROGRAMS,
+        Attribute.PROGRAM,
+    ],
     Capability.SIGNALAHEAD13665_DISHWASHERPROGRAMSV2: [
+        Attribute.AVAILABLE_PROGRAMS,
+        Attribute.PROGRAM,
+    ],
+    Capability.SIGNALAHEAD13665_DRYERPROGRAMSV2: [
         Attribute.AVAILABLE_PROGRAMS,
         Attribute.PROGRAM,
     ],
