@@ -14,7 +14,7 @@ from .attribute import Attribute
 from .capability import Capability
 from .const import LOGGER
 
-ALREADY_LOGGED_CAPABILITIES = set()
+ALREADY_LOGGED_CAPABILITIES: set[str | Capability] = set()
 
 
 @dataclass
