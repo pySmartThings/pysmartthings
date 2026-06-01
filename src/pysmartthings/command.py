@@ -267,6 +267,7 @@ class Command(StrEnum):
     SET_COLOR_VALUE = "setColorValue"
     SET_COMPLETION_TIME = "setCompletionTime"
     SET_CONDITION = "setCondition"
+    SET_CONNECTED_DEVICES = "setConnectedDevices"
     SET_CONTENT_TEXT = "setContentText"
     SET_CONTENT_TITLE = "setContentTitle"
     SET_CONTEXT = "setContext"
@@ -441,6 +442,7 @@ class Command(StrEnum):
     SET_NAME = "setName"
     SET_NEXT_INPUT_SOURCE = "setNextInputSource"
     SET_NIGHT_VISION = "setNightVision"
+    SET_NIGHT_VISION_MODE = "setNightVisionMode"
     SET_NODE_END_POINT = "setNodeEndPoint"
     SET_NODE_TO_WRITE = "setNodeToWrite"
     SET_NORMAL_LED_COLOR = "setNormalLedColor"
@@ -530,6 +532,8 @@ class Command(StrEnum):
     SET_SIGNAL_METRICS = "setSignalMetrics"
     SET_SIREN_OR_BELL_ACTIVE = "setSirenOrBellActive"
     SET_SIREN_SOUNDS = "setSirenSounds"
+    SET_SLEEP_DATA = "setSleepData"
+    SET_SLEEP_STATUS = "setSleepStatus"
     SET_SOFTENER_TYPE = "setSoftenerType"
     SET_SOUND_FROM = "setSoundFrom"
     SET_SOUND_MODE = "setSoundMode"
@@ -938,7 +942,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.UNMUTE,
     ],
     Capability.NETWORK_METER: [],
-    Capability.NIGHT_VISION: [Command.SET_ILLUMINATION, Command.SET_NIGHT_VISION],
+    Capability.NIGHT_VISION: [
+        Command.SET_ILLUMINATION,
+        Command.SET_NIGHT_VISION,
+        Command.SET_NIGHT_VISION_MODE,
+    ],
     Capability.NITROGEN_DIOXIDE_HEALTH_CONCERN: [],
     Capability.NITROGEN_DIOXIDE_MEASUREMENT: [],
     Capability.NOTIFICATION: [Command.DEVICE_NOTIFICATION],
@@ -1641,6 +1649,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_SENSING_ON_SUSPEND_MODE: [],
     Capability.SAMSUNG_CE_SILENT_ACTION: [Command.ACT_SILENTLY],
+    Capability.SAMSUNG_CE_SLEEP_DATA_INTEROPERATION: [
+        Command.DISABLE,
+        Command.ENABLE,
+        Command.SET_CONNECTED_DEVICES,
+        Command.SET_SLEEP_DATA,
+        Command.SET_SLEEP_STATUS,
+    ],
     Capability.SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT: [
         Command.DISABLE_ALARM,
         Command.ENABLE_ALARM,
@@ -2200,10 +2215,15 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SEC_SMARTTHINGS_HUB: [Command.CANCEL_ONBOARDING, Command.ONBOARDING],
     Capability.SEC_WIFI_CONFIGURATION: [],
     Capability.SIGNALAHEAD13665_APPLIANCEOPERATIONSTATESV2: [],
+    Capability.SIGNALAHEAD13665_COFFEEMAKERPROGRAMSV2: [
+        Command.SET_PROGRAM,
+        Command.STOP,
+    ],
     Capability.SIGNALAHEAD13665_DISHWASHERPROGRAMSV2: [
         Command.SET_PROGRAM,
         Command.STOP,
     ],
+    Capability.SIGNALAHEAD13665_DRYERPROGRAMSV2: [Command.SET_PROGRAM, Command.STOP],
     Capability.SIGNALAHEAD13665_OVENPROGRAMSV2: [Command.SET_PROGRAM, Command.STOP],
     Capability.SIGNALAHEAD13665_PAUSERESUMEV2: [Command.SET_PAUSE_STATE],
     Capability.SIGNALAHEAD13665_PROGRAMDURATIONV2: [Command.SET_PROGRAM_DURATION],
