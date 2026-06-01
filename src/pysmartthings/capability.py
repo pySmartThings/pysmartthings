@@ -521,6 +521,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_SELF_CHECK = "samsungce.selfCheck"
     SAMSUNG_CE_SENSING_ON_SUSPEND_MODE = "samsungce.sensingOnSuspendMode"
     SAMSUNG_CE_SILENT_ACTION = "samsungce.silentAction"
+    SAMSUNG_CE_SLEEP_DATA_INTEROPERATION = "samsungce.sleepDataInteroperation"
     SAMSUNG_CE_SOFTENER_AUTO_REPLENISHMENT = "samsungce.softenerAutoReplenishment"
     SAMSUNG_CE_SOFTENER_ORDER = "samsungce.softenerOrder"
     SAMSUNG_CE_SOFTENER_STATE = "samsungce.softenerState"
@@ -935,7 +936,9 @@ class Capability(StrEnum):
     SIGNALAHEAD13665_APPLIANCEOPERATIONSTATESV2 = (
         "signalahead13665.applianceoperationstatesv2"
     )
+    SIGNALAHEAD13665_COFFEEMAKERPROGRAMSV2 = "signalahead13665.coffeemakerprogramsv2"
     SIGNALAHEAD13665_DISHWASHERPROGRAMSV2 = "signalahead13665.dishwasherprogramsv2"
+    SIGNALAHEAD13665_DRYERPROGRAMSV2 = "signalahead13665.dryerprogramsv2"
     SIGNALAHEAD13665_OVENPROGRAMSV2 = "signalahead13665.ovenprogramsv2"
     SIGNALAHEAD13665_PAUSERESUMEV2 = "signalahead13665.pauseresumev2"
     SIGNALAHEAD13665_PROGRAMDURATIONV2 = "signalahead13665.programdurationv2"
