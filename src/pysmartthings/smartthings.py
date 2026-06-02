@@ -143,7 +143,7 @@ class SmartThings:
                     json=data,
                     params=params,
                 )
-        except asyncio.TimeoutError as exception:
+        except TimeoutError as exception:
             msg = "Timeout occurred while connecting to SmartThings"
             raise SmartThingsConnectionError(msg) from exception
         except ClientConnectionError as exception:
@@ -577,7 +577,7 @@ class SmartThings:
                     raw = await asyncio.wait_for(
                         resp.content.readline(), timeout=SSE_READ_TIMEOUT
                     )
-                except asyncio.TimeoutError:
+                except TimeoutError:
                     LOGGER.warning(
                         "SSE read timeout, closing connection and restarting"
                     )
@@ -645,7 +645,7 @@ class SmartThings:
                 await self._internal_subscribe(session, subscription_url)
                 using_initial = False
                 await self.delete_subscription(subscription_id)
-            except SmartThingsSinkError:  # noqa: PERF203
+            except SmartThingsSinkError:
                 # This is only triggered by creating a new one
                 # So we don't have an active one and thus don't have to delete one
                 if self.max_connections_reached_callback:

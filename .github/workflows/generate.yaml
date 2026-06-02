@@ -15,29 +15,21 @@ jobs:
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.2
-      - name: 🏗 Set up Poetry
-        run: pipx install poetry
-      - name: 🏗 Set up Python ${{ env.DEFAULT_PYTHON }}
-        id: python
-        uses: actions/setup-python@v6.2.0
+      - name: 🏗 Install uv
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
-          cache: "poetry"
-      - name: 🏗 Install workflow dependencies
-        run: |
-          poetry config virtualenvs.create true
-          poetry config virtualenvs.in-project true
       - name: 🏗 Install Python dependencies
-        run: poetry install --no-interaction
+        run: uv sync --all-groups
       - name: ⤵️ Check out capabilities from GitHub
         uses: actions/checkout@v6.0.2
         with:
           repository: "pysmartthings/capabilities"
           path: "capabilities"
       - name: Generate
-        run: python script/generate_enums.py
+        run: uv run python script/generate_enums.py
       - name: Run ruff
-        run: poetry run ruff format src && poetry run ruff check src --fix
+        run: uv run ruff format src && uv run ruff check src --fix
       - name: Remove capabilities
         run: rm -rf capabilities
       - name: Create Pull Request

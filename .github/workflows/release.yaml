@@ -8,7 +8,7 @@ on:
       - published
 
 env:
-  DEFAULT_PYTHON: "3.12"
+  DEFAULT_PYTHON: "3.13"
 
 jobs:
   release:
@@ -16,35 +16,27 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: release
-      url: https://pypi.org/p/spotifyaio
+      url: https://pypi.org/p/pysmartthings
     permissions:
       contents: write
       id-token: write
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.2
-      - name: 🏗 Set up Poetry
-        run: pipx install poetry
-      - name: 🏗 Set up Python ${{ env.DEFAULT_PYTHON }}
-        id: python
-        uses: actions/setup-python@v6.2.0
+      - name: 🏗 Install uv
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
-          cache: "poetry"
-      - name: 🏗 Install workflow dependencies
-        run: |
-          poetry config virtualenvs.create true
-          poetry config virtualenvs.in-project true
       - name: 🏗 Install dependencies
-        run: poetry install --no-interaction
+        run: uv sync --all-groups
       - name: 🏗 Set package version
         run: |
           version="${{ github.event.release.tag_name }}"
           version="${version,,}"
           version="${version#v}"
-          poetry version --no-interaction "${version}"
+          uv version "${version}"
       - name: 🏗 Build package
-        run: poetry build --no-interaction
+        run: uv build
       - name: 🚀 Publish to PyPi
         uses: pypa/gh-action-pypi-publish@v1.14.0
         with:

@@ -1,59 +1,80 @@
-[tool.poetry]
+[project]
 name = "pysmartthings"
 version = "0.0.0"
 description = "Asynchronous Python client for SmartThings."
-authors = ["Andrew Sayre <andrew@sayre.net>"]
-maintainers = ["Joost Lekkerkerker <joostlek@outlook.com>"]
-license = "Apache-2.0"
+authors = [{ name = "Andrew Sayre", email = "andrew@sayre.net" }]
+requires-python = ">=3.13,<4"
 readme = "README.md"
-homepage = "https://github.com/pySmartThings/pysmartthings"
-repository = "https://github.com/pySmartThings/pysmartthings"
-documentation = "https://github.com/pySmartThings/pysmartthings"
-keywords = ["smartthings", "api", "async", "client"]
+license = "Apache-2.0"
+maintainers = [{ name = "Joost Lekkerkerker", email = "joostlek@outlook.com" }]
+keywords = [
+    "smartthings",
+    "api",
+    "async",
+    "client",
+]
 classifiers = [
-  "Development Status :: 5 - Production/Stable",
-  "Framework :: AsyncIO",
-  "Intended Audience :: Developers",
-  "Natural Language :: English",
-  "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
-  "Programming Language :: Python :: 3",
-  "Topic :: Home Automation",
-  "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3",
+    "Topic :: Home Automation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-packages = [
-    { include = "pysmartthings", from = "src" },
+dependencies = [
+    "aiohttp>=3.0.0",
+    "yarl>=1.6.0",
+    "mashumaro>=3.11,<4",
+    "orjson>=3.9.10,<4",
 ]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-aiohttp = ">=3.0.0"
-yarl = ">=1.6.0"
-mashumaro = "^3.11"
-orjson = "^3.9.10"
-
-[tool.poetry.group.dev.dependencies]
-codespell = "2.4.2"
-covdefaults = "2.3.0"
-coverage = {version = "7.14.1", extras = ["toml"]}
-pylint = "4.0.5"
-pytest = "9.0.3"
-pytest-asyncio = "1.3.0"
-pytest-cov = "7.1.0"
-pytest-timeout = "2.4.0"
-pre-commit = "4.6.0"
-pre-commit-hooks = "6.0.0"
-yamllint = "1.38.0"
-ruff = "0.15.15"
-syrupy = "5.2.0"
-aioresponses = "0.7.8"
-treelib = "1.8.0"
-pyperclip = "1.11.0"
-mypy = "2.1.0"
-
-[tool.poetry.urls]
+[project.urls]
+Homepage = "https://github.com/pySmartThings/pysmartthings"
+Repository = "https://github.com/pySmartThings/pysmartthings"
+Documentation = "https://github.com/pySmartThings/pysmartthings"
 "Bug Tracker" = "https://github.com/pySmartThings/pysmartthings/issues"
 Changelog = "https://github.com/pySmartThings/pysmartthings/releases"
+
+[dependency-groups]
+dev = [
+    "aiohttp<3.14",
+    "codespell==2.4.2",
+    "covdefaults==2.3.0",
+    "coverage[toml]==7.14.1",
+    "pylint==4.0.5",
+    "pytest==9.0.3",
+    "pytest-asyncio==1.4.0",
+    "pytest-cov==7.1.0",
+    "pytest-timeout==2.4.0",
+    "pre-commit==4.6.0",
+    "pre-commit-hooks==6.0.0",
+    "yamllint==1.38.0",
+    "ruff==0.15.15",
+    "syrupy==5.2.0",
+    "aioresponses==0.7.8",
+    "treelib==1.8.0",
+    "pyperclip==1.11.0",
+    "mypy==2.1.0",
+]
+
+[tool.uv]
+default-groups = "all"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/pysmartthings"]
+
+[tool.hatch.build.targets.wheel]
+include = ["src/pysmartthings"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/pysmartthings" = "pysmartthings"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.coverage.report]
 show_missing = true
@@ -68,7 +89,7 @@ source = ["pysmartthings"]
 # free to run mypy on Windows, Linux, or macOS and get consistent
 # results.
 platform = "linux"
-python_version = "3.12"
+python_version = "3.13"
 
 # show error messages from unrelated files
 follow_imports = "normal"
@@ -155,14 +176,10 @@ fixture-parentheses = false
 mark-parentheses = false
 
 [tool.ruff.lint.isort]
-known-first-party = ["python_overseerr"]
+known-first-party = ["pysmartthings"]
 force-sort-within-sections = true
 split-on-trailing-comma = false
 combine-as-imports = true
 
 [tool.ruff.lint.mccabe]
 max-complexity = 25
-
-[build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.0"]
