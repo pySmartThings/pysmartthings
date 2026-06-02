@@ -6,13 +6,12 @@ import asyncio
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, Self, cast
 
-from aiohttp import ClientConnectionError, ClientError, ClientSession, ClientTimeout
+from aiohttp import ClientConnectionError, ClientError, ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
-from aiohttp_sse_client2.client import EventSource
 import orjson
 from yarl import URL
 
-from .const import API_BASE, API_VERSION, LOGGER
+from .const import API_BASE, API_VERSION, LOGGER, SSE_READ_TIMEOUT
 from .exceptions import (
     SmartThingsAuthenticationFailedError,
     SmartThingsCommandError,
@@ -495,70 +494,126 @@ class SmartThings:
             raise SmartThingsSinkError(msg) from err
         return Subscription.from_json(resp)
 
-    async def _internal_subscribe(self, session: ClientSession, url: str) -> None:  # noqa: PLR0912
-        """Subscribe to events."""
+    def _dispatch_event(self, event_type: str, data: str) -> bool:  # noqa: PLR0912
+        """Dispatch a single SSE event. Return False to stop the connection."""
+        LOGGER.debug("Received event: %s", data)
+        if event_type == EventType.DEVICE_EVENT:
+            device_event = DeviceEventRoot.from_json(data).device_event
+            try:
+                for callback in self.__unspecified_device_event_listeners:
+                    callback(device_event)
+                if device_event.device_id in self.__device_event_listeners:
+                    for callback in self.__device_event_listeners[
+                        device_event.device_id
+                    ]:
+                        callback(device_event)
+                key = (
+                    device_event.device_id,
+                    device_event.component_id,
+                    device_event.capability,
+                )
+                if key in self.__capability_event_listeners:
+                    for callback in self.__capability_event_listeners[key]:
+                        callback(device_event)
+            except Exception:  # pylint: disable=broad-except  # noqa: BLE001
+                LOGGER.exception(
+                    "Error occurred while processing device event: %s",
+                    device_event,
+                )
+        elif event_type == EventType.DEVICE_LIFECYCLE_EVENT:
+            device_lifecycle_event = DeviceLifecycleEventRoot.from_json(
+                data
+            ).device_lifecycle_event
+            if (
+                device_lifecycle_event.lifecycle
+                in self.__device_lifecycle_event_listeners
+            ):
+                for dle_callback in self.__device_lifecycle_event_listeners[
+                    device_lifecycle_event.lifecycle
+                ]:
+                    dle_callback(device_lifecycle_event.device_id)
+        elif event_type == EventType.DEVICE_HEALTH_EVENT:
+            device_health_event = DeviceHealthEventRoot.from_json(
+                data
+            ).device_health_event
+            if (
+                device_health_event.device_id
+                in self.__device_availability_event_listeners
+            ):
+                for dhe_callback in self.__device_availability_event_listeners[
+                    device_health_event.device_id
+                ]:
+                    dhe_callback(device_health_event)
+        elif event_type == EventType.CONTROL_EVENT:
+            if data in {"goodbye", "goobye"}:
+                LOGGER.debug("Received goodbye event, closing connection")
+                return False
+        return True
+
+    async def _internal_subscribe(self, session: ClientSession, url: str) -> None:
+        """Subscribe to events via Server-Sent Events.
+
+        Reads the SSE stream directly with a per-line read timeout, so a
+        half-open TCP connection (e.g. after a router reboot) is detected and
+        the outer reconnect loop is triggered. This mirrors the approach used
+        by pymiele and avoids stacking a second reconnect mechanism on top of
+        ours via a third-party SSE client.
+        """
         await self.refresh_token()
-        async with EventSource(
-            url, session=session, headers=self._get_headers(), on_open=self.__on_open
-        ) as event_source:
-            async for event in event_source:
-                LOGGER.debug("Received event: %s", event.data)
-                if event.type == EventType.DEVICE_EVENT:
-                    event_type = DeviceEventRoot.from_json(event.data)
-                    device_event = event_type.device_event
-                    try:
-                        for callback in self.__unspecified_device_event_listeners:
-                            callback(device_event)
-                        if device_event.device_id in self.__device_event_listeners:
-                            for callback in self.__device_event_listeners[
-                                device_event.device_id
-                            ]:
-                                callback(device_event)
-                        key = (
-                            device_event.device_id,
-                            device_event.component_id,
-                            device_event.capability,
-                        )
-                        if key in self.__capability_event_listeners:
-                            for callback in self.__capability_event_listeners[key]:
-                                callback(device_event)
-                    except Exception:  # pylint: disable=broad-except  # noqa: BLE001
-                        LOGGER.exception(
-                            "Error occurred while processing device event: %s",
-                            device_event,
-                        )
-                elif event.type == EventType.DEVICE_LIFECYCLE_EVENT:
-                    lifecycle_event = DeviceLifecycleEventRoot.from_json(event.data)
-                    device_lifecycle_event = lifecycle_event.device_lifecycle_event
-                    if (
-                        device_lifecycle_event.lifecycle
-                        in self.__device_lifecycle_event_listeners
+        headers = {
+            **self._get_headers(),
+            "Accept": "text/event-stream",
+        }
+        async with session.get(url, headers=headers) as resp:
+            resp.raise_for_status()
+            self.__on_open()
+            event_type = ""
+            data_lines: list[str] = []
+            while True:
+                # Per-line read timeout. SmartThings sends keepalive comments
+                # periodically; if nothing is received for SSE_READ_TIMEOUT
+                # seconds we assume the connection is dead and reconnect.
+                try:
+                    raw = await asyncio.wait_for(
+                        resp.content.readline(), timeout=SSE_READ_TIMEOUT
+                    )
+                except TimeoutError:
+                    LOGGER.warning(
+                        "SSE read timeout, closing connection and restarting"
+                    )
+                    resp.close()
+                    return
+                if not raw:
+                    LOGGER.debug("SSE connection closed by server")
+                    return
+                line = raw.decode("utf-8").rstrip("\r\n")
+                if line == "":
+                    # Dispatch accumulated event
+                    if data_lines and not self._dispatch_event(
+                        event_type or "message", "\n".join(data_lines)
                     ):
-                        for dle_callback in self.__device_lifecycle_event_listeners[
-                            device_lifecycle_event.lifecycle
-                        ]:
-                            dle_callback(device_lifecycle_event.device_id)
-                elif event.type == EventType.DEVICE_HEALTH_EVENT:
-                    device_health_event = DeviceHealthEventRoot.from_json(event.data)
-                    if (
-                        device_health_event.device_health_event.device_id
-                        in self.__device_availability_event_listeners
-                    ):
-                        for dhe_callback in self.__device_availability_event_listeners[
-                            device_health_event.device_health_event.device_id
-                        ]:
-                            dhe_callback(device_health_event.device_health_event)
-                elif event.type == EventType.CONTROL_EVENT:
-                    if event.data in {"goodbye", "goobye"}:
-                        LOGGER.debug("Received goodbye event, closing connection")
-                        break
+                        return
+                    event_type = ""
+                    data_lines = []
+                    continue
+                if line.startswith(":"):
+                    # Comment / keepalive
+                    continue
+                field_name, sep, value = line.partition(":")
+                if sep and value.startswith(" "):
+                    value = value[1:]
+                if field_name == "event":
+                    event_type = value
+                elif field_name == "data":
+                    data_lines.append(value)
+                # id / retry fields ignored
 
     def __on_open(self) -> None:
         """Handle the opening of the connection."""
         LOGGER.debug("Connection opened")
         self.__retry_count = 0
 
-    async def subscribe(  # noqa: PLR0915  # pylint: disable=too-many-statements
+    async def subscribe(  # noqa: PLR0912, PLR0915  # pylint: disable=too-many-statements,too-many-branches
         self,
         location_id: str,
         installed_app_id: str,
@@ -567,61 +622,59 @@ class SmartThings:
         """Create a subscription."""
         self.__retry_count = 0
         using_initial = initial_subscription is not None
-        timeout = ClientTimeout(
-            total=None, connect=None, sock_connect=None, sock_read=120
-        )
-        async with ClientSession(timeout=timeout) as session:
-            while True:
+        if self.session is None:
+            self.session = ClientSession()
+            self._close_session = True
+        session = self.session
+        while True:
+            try:
+                if using_initial:
+                    assert initial_subscription is not None  # noqa: S101
+                    LOGGER.debug("Using initial subscription: %s", initial_subscription)
+                    subscription_id = initial_subscription.subscription_id
+                    subscription_url = initial_subscription.registration_url
+                else:
+                    subscription = await self.create_subscription(
+                        location_id, installed_app_id
+                    )
+                    subscription_id = subscription.subscription_id
+                    subscription_url = subscription.registration_url
+                    LOGGER.debug("Subscription created: %s", subscription)
+                    if self.new_subscription_id_callback:
+                        self.new_subscription_id_callback(subscription_id)
+                await self._internal_subscribe(session, subscription_url)
+                using_initial = False
+                await self.delete_subscription(subscription_id)
+            except SmartThingsSinkError:
+                # This is only triggered by creating a new one
+                # So we don't have an active one and thus don't have to delete one
+                if self.max_connections_reached_callback:
+                    self.max_connections_reached_callback()
+                    break
+            except (ClientError, ConnectionError):
+                msg = "Connection error occurred while subscribing to events"
+                LOGGER.exception(msg)
+                await asyncio.sleep(2**self.__retry_count)
+                self.__retry_count += 1
                 try:
-                    if using_initial:
-                        assert initial_subscription is not None  # noqa: S101
-                        LOGGER.debug(
-                            "Using initial subscription: %s", initial_subscription
-                        )
-                        subscription_id = initial_subscription.subscription_id
-                        subscription_url = initial_subscription.registration_url
-                    else:
-                        subscription = await self.create_subscription(
-                            location_id, installed_app_id
-                        )
-                        subscription_id = subscription.subscription_id
-                        subscription_url = subscription.registration_url
-                        LOGGER.debug("Subscription created: %s", subscription)
-                        if self.new_subscription_id_callback:
-                            self.new_subscription_id_callback(subscription_id)
-                    await self._internal_subscribe(session, subscription_url)
-                    using_initial = False
                     await self.delete_subscription(subscription_id)
-                except SmartThingsSinkError:
-                    # This is only triggered by creating a new one
-                    # So we don't have an active one and thus don't have to delete one
+                except SmartThingsConnectionError:
+                    LOGGER.debug("Connection error while deleting subscription")
                     if self.max_connections_reached_callback:
                         self.max_connections_reached_callback()
-                        break
-                except (ClientError, ConnectionError):
-                    msg = "Connection error occurred while subscribing to events"
-                    LOGGER.exception(msg)
-                    await asyncio.sleep(2**self.__retry_count)
-                    self.__retry_count += 1
-                    try:
-                        await self.delete_subscription(subscription_id)
-                    except SmartThingsConnectionError:
-                        LOGGER.debug("Connection error while deleting subscription")
-                        if self.max_connections_reached_callback:
-                            self.max_connections_reached_callback()
-                    using_initial = False
-                except Exception:  # pylint: disable=broad-except  # noqa: BLE001
-                    msg = "Error occurred while subscribing to events"
-                    LOGGER.exception(msg)
-                    await asyncio.sleep(2**self.__retry_count)
-                    self.__retry_count += 1
-                    try:
-                        await self.delete_subscription(subscription_id)
-                    except SmartThingsConnectionError:
-                        LOGGER.debug("Unknown error while deleting subscription")
-                        if self.max_connections_reached_callback:
-                            self.max_connections_reached_callback()
-                    using_initial = False
+                using_initial = False
+            except Exception:  # pylint: disable=broad-except  # noqa: BLE001
+                msg = "Error occurred while subscribing to events"
+                LOGGER.exception(msg)
+                await asyncio.sleep(2**self.__retry_count)
+                self.__retry_count += 1
+                try:
+                    await self.delete_subscription(subscription_id)
+                except SmartThingsConnectionError:
+                    LOGGER.debug("Unknown error while deleting subscription")
+                    if self.max_connections_reached_callback:
+                        self.max_connections_reached_callback()
+                using_initial = False
 
     async def delete_subscription(self, subscription_id: str) -> None:
         """Delete a subscription."""

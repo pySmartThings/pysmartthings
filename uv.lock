@@ -84,21 +84,6 @@ wheels = [
 ]
 
 [[package]]
-name = "aiohttp-sse-client2"
-version = "0.3.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "aiohttp" },
-    { name = "attrs" },
-    { name = "multidict" },
-    { name = "yarl" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/63/e5/d02277f6b7b7529ff67a476400a81f794410d068c5699750163a903b83e6/aiohttp-sse-client2-0.3.0.tar.gz", hash = "sha256:5cdd33fc0d034aea339e190726bb918bc61fd3424c7ab528d07b1d60790a979f", size = 15027, upload-time = "2023-02-07T11:20:43.633Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/b9/7b/6bd2f3767df21e44e77356e750753b7eab742586182deafe6d90363a9371/aiohttp_sse_client2-0.3.0-py2.py3-none-any.whl", hash = "sha256:1921bfe488667bf70651a38f54363fdd0c5f0d7021010e632bf80754c6850b25", size = 7322, upload-time = "2023-02-07T11:20:41.953Z" },
-]
-
-[[package]]
 name = "aioresponses"
 version = "0.7.8"
 source = { registry = "https://pypi.org/simple" }
@@ -850,7 +835,6 @@ version = "0.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "aiohttp" },
-    { name = "aiohttp-sse-client2" },
     { name = "mashumaro" },
     { name = "orjson" },
     { name = "yarl" },
@@ -881,7 +865,6 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "aiohttp", specifier = ">=3.0.0" },
-    { name = "aiohttp-sse-client2", specifier = ">=0.3.0,<0.4" },
     { name = "mashumaro", specifier = ">=3.11,<4" },
     { name = "orjson", specifier = ">=3.9.10,<4" },
     { name = "yarl", specifier = ">=1.6.0" },
