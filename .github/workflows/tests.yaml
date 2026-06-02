@@ -21,7 +21,7 @@ jobs:
         python: ["3.13", "3.14"]
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.3
       - name: 🏗 Install uv
         uses: astral-sh/setup-uv@v8.1.0
         with:
@@ -42,7 +42,7 @@ jobs:
     needs: pytest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.3
         with:
           fetch-depth: 0
       - name: ⬇️ Download coverage data
