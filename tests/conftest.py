@@ -19,7 +19,7 @@ def snapshot_assertion(snapshot: SnapshotAssertion) -> SnapshotAssertion:
 
 
 @pytest.fixture
-async def client() -> AsyncGenerator[SmartThings, None]:
+async def client() -> AsyncGenerator[SmartThings]:
     """Return a SmartThings client."""
     async with (
         ClientSession() as session,
@@ -32,7 +32,7 @@ async def client() -> AsyncGenerator[SmartThings, None]:
 
 
 @pytest.fixture(name="responses")
-def aioresponses_fixture() -> Generator[aioresponses, None, None]:
+def aioresponses_fixture() -> Generator[aioresponses]:
     """Return aioresponses fixture."""
     with aioresponses() as mocked_responses:
         yield mocked_responses
