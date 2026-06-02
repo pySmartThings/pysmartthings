@@ -1,6 +1,7 @@
 """Script to sort the capability constants."""
 
 import pyperclip
+
 from pysmartthings import Capability
 
 
