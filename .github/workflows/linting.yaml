@@ -20,7 +20,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.3
       - name: 🏗 Install uv
-        uses: astral-sh/setup-uv@v8.1.0
+        uses: astral-sh/setup-uv@v8.2.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: 🏗 Install Python dependencies
@@ -35,7 +35,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.3
       - name: 🏗 Install uv
-        uses: astral-sh/setup-uv@v8.1.0
+        uses: astral-sh/setup-uv@v8.2.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: 🏗 Install Python dependencies
@@ -52,7 +52,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.3
       - name: 🏗 Install uv
-        uses: astral-sh/setup-uv@v8.1.0
+        uses: astral-sh/setup-uv@v8.2.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: 🏗 Install Python dependencies
@@ -91,7 +91,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.3
       - name: 🏗 Install uv
-        uses: astral-sh/setup-uv@v8.1.0
+        uses: astral-sh/setup-uv@v8.2.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: 🏗 Install Python dependencies
@@ -106,7 +106,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.3
       - name: 🏗 Install uv
-        uses: astral-sh/setup-uv@v8.1.0
+        uses: astral-sh/setup-uv@v8.2.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: 🏗 Install Python dependencies
@@ -121,7 +121,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6.0.3
       - name: 🏗 Install uv
-        uses: astral-sh/setup-uv@v8.1.0
+        uses: astral-sh/setup-uv@v8.2.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: 🏗 Install Python dependencies
