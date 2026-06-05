@@ -6,7 +6,7 @@ import asyncio
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, Self, cast
 
-from aiohttp import ClientConnectionError, ClientError, ClientSession
+from aiohttp import ClientConnectionError, ClientError, ClientSession, ClientTimeout
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 import orjson
 from yarl import URL
@@ -564,7 +564,16 @@ class SmartThings:
             **self._get_headers(),
             "Accept": "text/event-stream",
         }
-        async with session.get(url, headers=headers) as resp:
+        # Disable aiohttp's default 5-minute total request timeout for the
+        # long-lived SSE stream. Without this, aiohttp aborts the request
+        # after 300s and raises an asyncio.TimeoutError from inside
+        # readline(), which our per-line wait_for would mis-report as an
+        # SSE read timeout. The per-line wait_for below remains responsible
+        # for detecting a silent / half-open connection.
+        timeout = ClientTimeout(
+            total=None, connect=None, sock_connect=5, sock_read=None
+        )
+        async with session.get(url, headers=headers, timeout=timeout) as resp:
             resp.raise_for_status()
             self.__on_open()
             event_type = ""
