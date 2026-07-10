@@ -299,6 +299,13 @@ class SmartThings:
         """Retrieve a device with the specified ID."""
         return cast("dict[str, Any]", orjson.loads(await self._get_device(device_id)))  # pylint: disable=no-member
 
+    async def get_device_presentation(self, device_id: str) -> dict[str, Any]:
+        """Retrieve the presentation for a device."""
+        resp = await self._get(
+            "v1/devices/presentation", params={"deviceId": device_id}
+        )
+        return cast("dict[str, Any]", orjson.loads(resp))  # pylint: disable=no-member
+
     async def get_scenes(self, location_id: str | None = None) -> list[Scene]:
         """Retrieve SmartThings scenes."""
         params = {}

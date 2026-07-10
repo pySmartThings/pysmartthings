@@ -121,6 +121,29 @@ async def test_fetching_single_device(
     )
 
 
+async def test_fetching_device_presentation(
+    client: SmartThings,
+    responses: aioresponses,
+) -> None:
+    """Test getting a device presentation."""
+    device_id = "440063de-a200-40b5-8a6b-f3399eaa0370"
+    presentation = {"presentationId": "generic-fan-5-speed"}
+    responses.get(
+        str(URL(f"{MOCK_URL}/v1/devices/presentation").with_query(deviceId=device_id)),
+        status=200,
+        payload=presentation,
+    )
+
+    assert await client.get_device_presentation(device_id) == presentation
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/v1/devices/presentation",
+        METH_GET,
+        headers=HEADERS,
+        params={"deviceId": device_id},
+        json=None,
+    )
+
+
 @pytest.mark.parametrize(
     "fixture",
     [
