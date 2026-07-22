@@ -30,6 +30,19 @@ class InstalledApp(DataClassORJSONMixin):
 
 
 @dataclass
+class SmartApp(DataClassORJSONMixin):
+    """API-only (OAuth) SmartApp model."""
+
+    app_id: str = field(metadata=field_options(alias="appId"))
+    client_id: str = field(metadata=field_options(alias="oauthClientId"))
+    client_secret: str = field(metadata=field_options(alias="oauthClientSecret"))
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
+        return {**d, "appId": d["app"]["appId"]}
+
+
+@dataclass
 class BaseLocation(DataClassORJSONMixin):
     """Base location model."""
 

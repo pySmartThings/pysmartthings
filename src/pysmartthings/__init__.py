@@ -38,6 +38,7 @@ from .models import (
     RoomResponse,
     Scene,
     SceneResponse,
+    SmartApp,
     Status,
     Subscription,
 )
@@ -73,6 +74,7 @@ __all__ = [
     "RoomResponse",
     "Scene",
     "SceneResponse",
+    "SmartApp",
     "SmartThings",
     "SmartThingsAuthenticationFailedError",
     "SmartThingsCommandError",

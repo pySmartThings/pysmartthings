@@ -17,6 +17,7 @@ from .exceptions import (
     SmartThingsCommandError,
     SmartThingsConnectionError,
     SmartThingsForbiddenError,
+    SmartThingsNotFoundError,
     SmartThingsSinkError,
 )
 from .models import (
@@ -40,6 +41,7 @@ from .models import (
     RoomResponse,
     Scene,
     SceneResponse,
+    SmartApp,
     Status,
     Subscription,
 )
@@ -159,6 +161,10 @@ class SmartThings:
         if response.status == 403:
             msg = "Forbidden"
             raise SmartThingsForbiddenError(msg)
+
+        if response.status == 404:
+            msg = "Not found"
+            raise SmartThingsNotFoundError(msg)
 
         if response.status in {409, 422}:
             raise SmartThingsCommandError(ErrorResponse.from_json(text))
@@ -691,6 +697,38 @@ class SmartThings:
         await self._delete(f"subscriptions/{subscription_id}")
         if self.new_subscription_id_callback:
             self.new_subscription_id_callback(None)
+
+    async def create_app(
+        self,
+        app_name: str,
+        display_name: str,
+        description: str,
+        redirect_uris: list[str],
+        scopes: list[str]
+    ) -> SmartApp:
+        """Create an API-only SmartApp with OAuth-In credentials."""
+        resp = await self._post(
+            # TODO: This is being deprecated soon and will need to be switched to `/smartapps` when available
+            "v1/apps",
+            data={
+                "appName": app_name,
+                "displayName": display_name,
+                "description": description,
+                "appType": "API_ONLY",
+                "classifications": ["CONNECTED_SERVICE"],
+                "apiOnly": {},
+                "oauth": {
+                    "clientName": display_name,
+                    "scope": scopes,
+                    "redirectUris": redirect_uris,
+                },
+            },
+        )
+        return SmartApp.from_json(resp)
+
+    async def delete_app(self, app_id: str) -> None:
+        """Delete an app."""
+        await self._delete(f"v1/apps/{app_id}")
 
     async def close(self) -> None:
         """Close open client session."""
