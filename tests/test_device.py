@@ -4,17 +4,17 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Any, TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
-import pytest
 from aiohttp.hdrs import METH_GET, METH_POST
 from aioresponses import aioresponses
+import pytest
 from yarl import URL
 
-from pysmartthings import SmartThings, Capability, Command, SmartThingsCommandError
-from . import load_fixture, load_json_fixture
+from pysmartthings import Capability, Command, SmartThings, SmartThingsCommandError
 
-from .const import MOCK_URL, HEADERS
+from . import load_fixture, load_json_fixture
+from .const import HEADERS, MOCK_URL
 
 if TYPE_CHECKING:
     from syrupy import SnapshotAssertion

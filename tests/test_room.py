@@ -7,7 +7,7 @@ from syrupy import SnapshotAssertion
 from pysmartthings import SmartThings
 
 from . import load_fixture
-from .const import MOCK_URL, HEADERS
+from .const import HEADERS, MOCK_URL
 
 
 async def test_fetching_all_rooms(

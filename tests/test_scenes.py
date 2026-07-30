@@ -6,7 +6,7 @@ from syrupy import SnapshotAssertion
 
 from pysmartthings import SmartThings
 from tests import load_fixture
-from tests.const import MOCK_URL, HEADERS
+from tests.const import HEADERS, MOCK_URL
 
 
 async def test_fetching_all_scenes(

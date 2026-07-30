@@ -5,9 +5,9 @@ from aioresponses import aioresponses
 from syrupy import SnapshotAssertion
 
 from pysmartthings import SmartThings
-from . import load_fixture
 
-from .const import MOCK_URL, HEADERS
+from . import load_fixture
+from .const import HEADERS, MOCK_URL
 
 
 async def test_deleting_smart_app(

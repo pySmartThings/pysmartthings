@@ -4,10 +4,10 @@ from collections.abc import AsyncGenerator, Generator
 
 from aiohttp import ClientSession
 from aioresponses import aioresponses
-
-from pysmartthings import SmartThings
 import pytest
 from syrupy import SnapshotAssertion
+
+from pysmartthings import SmartThings
 
 from .syrupy import SmartThingsSnapshotExtension
 
