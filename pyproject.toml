@@ -44,7 +44,7 @@ dev = [
     "codespell==2.4.3",
     "covdefaults==2.3.0",
     "coverage[toml]==7.15.4",
-    "pylint==4.0.7",
+    "pylint==4.0.8",
     "pytest==9.1.1",
     "pytest-asyncio==1.4.0",
     "pytest-cov==7.1.0",
