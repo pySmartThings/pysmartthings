@@ -708,11 +708,10 @@ class SmartThings:
         display_name: str,
         description: str,
         redirect_uris: list[str],
-        scopes: list[str]
+        scopes: list[str],
     ) -> SmartApp:
         """Create an API-only SmartApp with OAuth-In credentials."""
         resp = await self._post(
-            # TODO: This is being deprecated soon and will need to be switched to `/smartapps` when available
             "smartapps",
             data={
                 "appName": app_name,
@@ -728,8 +727,7 @@ class SmartThings:
                 },
             },
         )
-        app = SmartApp.from_json(resp)
-        return app
+        return SmartApp.from_json(resp)
 
     async def list_apps(self) -> list[SmartAppSummary]:
         """List API-only SmartApps for the authenticated account."""

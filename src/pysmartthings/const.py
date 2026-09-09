@@ -2,11 +2,9 @@
 
 import logging
 
-API_BASE = "api.stacceptance.com"
-AUTH_API_BASE = "auth-globala.api.stacceptance.com"
+API_BASE = "api.smartthings.com"
+AUTH_API_BASE = "auth.api.smartthings.com"
 
-# API_BASE = "api.smartthings.com"
-# AUTH_API_BASE = "auth.api.smartthings.com"
 # Version required to use SSE
 API_VERSION = 20250122
 

@@ -39,6 +39,7 @@ class SmartApp(DataClassORJSONMixin):
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
+        """Pre deserialize hook."""
         return {**d, "appId": d["app"]["appId"]}
 
 
@@ -63,9 +64,13 @@ class OAuthClient(DataClassORJSONMixin):
 
     scope: list[str] = field(metadata=field_options(alias="scope"))
     client_id: str = field(metadata=field_options(alias="client_id"))
-    authorized_grant_types: list[str] = field(metadata=field_options(alias="authorized_grant_types"))
+    authorized_grant_types: list[str] = field(
+        metadata=field_options(alias="authorized_grant_types"),
+    )
     redirect_uri: list[str] = field(metadata=field_options(alias="redirect_uri"))
-    access_token_validity: int = field(metadata=field_options(alias="access_token_validity"))
+    access_token_validity: int = field(
+        metadata=field_options(alias="access_token_validity"),
+    )
     authorities: list[str] = field(metadata=field_options(alias="authorities"))
     use_jwt: bool = field(metadata=field_options(alias="use_jwt"))
     app_id: str = field(metadata=field_options(alias="app_id"))

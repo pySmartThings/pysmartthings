@@ -19,7 +19,7 @@ async def test_create_app(
 ) -> None:
     """Test creating an app."""
     responses.post(
-        f"{MOCK_URL}/v1/apps",
+        f"{MOCK_URL}/smartapps",
         status=200,
         body=load_fixture("app_create_response.json"),
     )
@@ -34,7 +34,7 @@ async def test_create_app(
         == snapshot
     )
     responses.assert_called_once_with(
-        f"{MOCK_URL}/v1/apps",
+        f"{MOCK_URL}/smartapps",
         METH_POST,
         headers=HEADERS,
         params=None,
@@ -59,10 +59,10 @@ async def test_delete_app(
     responses: aioresponses,
 ) -> None:
     """Test deleting an app."""
-    responses.delete(f"{MOCK_URL}/v1/apps/{APP_ID}", status=200)
+    responses.delete(f"{MOCK_URL}/smartapps/{APP_ID}", status=200)
     await client.delete_app(APP_ID)
     responses.assert_called_once_with(
-        f"{MOCK_URL}/v1/apps/{APP_ID}",
+        f"{MOCK_URL}/smartapps/{APP_ID}",
         METH_DELETE,
         headers=HEADERS,
         params=None,
@@ -75,6 +75,6 @@ async def test_delete_app_not_found(
     responses: aioresponses,
 ) -> None:
     """Test deleting an app that does not exist."""
-    responses.delete(f"{MOCK_URL}/v1/apps/{APP_ID}", status=404)
+    responses.delete(f"{MOCK_URL}/smartapps/{APP_ID}", status=404)
     with pytest.raises(SmartThingsNotFoundError):
         await client.delete_app(APP_ID)
