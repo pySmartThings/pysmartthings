@@ -42,6 +42,8 @@ from .models import (
     Scene,
     SceneResponse,
     SmartApp,
+    SmartAppListResponse,
+    SmartAppSummary,
     Status,
     Subscription,
 )
@@ -105,11 +107,12 @@ class SmartThings:
         *,
         data: dict[str, Any] | None = None,
         params: dict[str, Any] | None = None,
+        host: str = API_BASE,
     ) -> str:
         """Handle a request to SmartThings."""
         url = URL.build(
             scheme="https",
-            host=API_BASE,
+            host=host,
             port=443,
         ).joinpath(uri)
 
@@ -189,9 +192,10 @@ class SmartThings:
         uri: str,
         data: dict[str, Any] | None = None,
         params: dict[str, Any] | None = None,
+        host: str = API_BASE,
     ) -> str:
         """Handle a PUT request to SmartThings."""
-        return await self._request(METH_PUT, uri, data=data, params=params)
+        return await self._request(METH_PUT, uri, data=data, params=params, host=host)
 
     async def _delete(
         self,
@@ -709,7 +713,7 @@ class SmartThings:
         """Create an API-only SmartApp with OAuth-In credentials."""
         resp = await self._post(
             # TODO: This is being deprecated soon and will need to be switched to `/smartapps` when available
-            "v1/apps",
+            "smartapps",
             data={
                 "appName": app_name,
                 "displayName": display_name,
@@ -724,11 +728,17 @@ class SmartThings:
                 },
             },
         )
-        return SmartApp.from_json(resp)
+        app = SmartApp.from_json(resp)
+        return app
+
+    async def list_apps(self) -> list[SmartAppSummary]:
+        """List API-only SmartApps for the authenticated account."""
+        resp = await self._get("smartapps")
+        return SmartAppListResponse.from_json(resp).items
 
     async def delete_app(self, app_id: str) -> None:
         """Delete an app."""
-        await self._delete(f"v1/apps/{app_id}")
+        await self._delete(f"smartapps/{app_id}")
 
     async def close(self) -> None:
         """Close open client session."""

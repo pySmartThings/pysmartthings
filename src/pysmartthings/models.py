@@ -43,6 +43,37 @@ class SmartApp(DataClassORJSONMixin):
 
 
 @dataclass
+class SmartAppSummary(DataClassORJSONMixin):
+    """Summary of a SmartApp as returned by the apps list endpoint."""
+
+    app_id: str = field(metadata=field_options(alias="appId"))
+    app_name: str = field(metadata=field_options(alias="appName"))
+
+
+@dataclass
+class SmartAppListResponse(DataClassORJSONMixin):
+    """Response model for listing SmartApps."""
+
+    items: list[SmartAppSummary]
+
+
+@dataclass
+class OAuthClient(DataClassORJSONMixin):
+    """API-only OAuth Client model."""
+
+    scope: list[str] = field(metadata=field_options(alias="scope"))
+    client_id: str = field(metadata=field_options(alias="client_id"))
+    authorized_grant_types: list[str] = field(metadata=field_options(alias="authorized_grant_types"))
+    redirect_uri: list[str] = field(metadata=field_options(alias="redirect_uri"))
+    access_token_validity: int = field(metadata=field_options(alias="access_token_validity"))
+    authorities: list[str] = field(metadata=field_options(alias="authorities"))
+    use_jwt: bool = field(metadata=field_options(alias="use_jwt"))
+    app_id: str = field(metadata=field_options(alias="app_id"))
+    quota_enforced: bool = field(metadata=field_options(alias="quota_enforced"))
+    name: str = field(metadata=field_options(alias="name"))
+
+
+@dataclass
 class BaseLocation(DataClassORJSONMixin):
     """Base location model."""
 
