@@ -31,7 +31,7 @@ class InstalledApp(DataClassORJSONMixin):
 
 @dataclass
 class OAuthCredentials(DataClassORJSONMixin):
-    """OAuth client id/secret pair shared by SmartApp OAuth responses."""
+    """OAuth clientId/clientSecret pair shared by SmartApp OAuth responses."""
 
     client_id: str = field(metadata=field_options(alias="oauthClientId"))
     client_secret: str = field(metadata=field_options(alias="oauthClientSecret"))
