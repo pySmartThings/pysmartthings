@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, Self, cast
 
 from aiohttp import ClientConnectionError, ClientError, ClientSession, ClientTimeout
-from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
+from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST
 import orjson
 from yarl import URL
 
@@ -43,6 +43,7 @@ from .models import (
     SceneResponse,
     SmartApp,
     SmartAppListResponse,
+    SmartAppOAuthRegenerateResponse,
     SmartAppSummary,
     Status,
     Subscription,
@@ -107,12 +108,11 @@ class SmartThings:
         *,
         data: dict[str, Any] | None = None,
         params: dict[str, Any] | None = None,
-        host: str = API_BASE,
     ) -> str:
         """Handle a request to SmartThings."""
         url = URL.build(
             scheme="https",
-            host=host,
+            host=API_BASE,
             port=443,
         ).joinpath(uri)
 
@@ -186,16 +186,6 @@ class SmartThings:
     ) -> str:
         """Handle a POST request to SmartThings."""
         return await self._request(METH_POST, uri, data=data, params=params)
-
-    async def _put(
-        self,
-        uri: str,
-        data: dict[str, Any] | None = None,
-        params: dict[str, Any] | None = None,
-        host: str = API_BASE,
-    ) -> str:
-        """Handle a PUT request to SmartThings."""
-        return await self._request(METH_PUT, uri, data=data, params=params, host=host)
 
     async def _delete(
         self,
@@ -733,6 +723,16 @@ class SmartThings:
         """List API-only SmartApps for the authenticated account."""
         resp = await self._get("smartapps")
         return SmartAppListResponse.from_json(resp).items
+
+    async def regenerate_oauth(
+        self, app_id: str, client_name: str, scopes: list[str]
+    ) -> SmartAppOAuthRegenerateResponse:
+        """Regenerate the OAuth ClientId and Secret for this appId."""
+        resp = await self._post(
+            f"smartapps/{app_id}/oauth/generate",
+            data={"clientName": client_name, "scope": scopes},
+        )
+        return SmartAppOAuthRegenerateResponse.from_json(resp)
 
     async def delete_app(self, app_id: str) -> None:
         """Delete an app."""

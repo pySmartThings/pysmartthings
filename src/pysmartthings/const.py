@@ -1,9 +1,9 @@
 """Define consts for the pysmartthings package."""
 
 import logging
+import os
 
-API_BASE = "api.smartthings.com"
-AUTH_API_BASE = "auth.api.smartthings.com"
+API_BASE = os.environ.get("SMARTTHINGS_API_BASE", "api.smartthings.com")
 
 # Version required to use SSE
 API_VERSION = 20250122

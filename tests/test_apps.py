@@ -1,6 +1,6 @@
 """Tests for SmartThings apps endpoints."""
 
-from aiohttp.hdrs import METH_DELETE, METH_POST
+from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST
 from aioresponses import aioresponses
 import pytest
 from syrupy import SnapshotAssertion
@@ -11,6 +11,7 @@ from . import load_fixture
 from .const import HEADERS, MOCK_URL
 
 APP_ID = "8d3b1c1a-2f0d-4b0a-9c1e-9f1234567890"
+
 
 async def test_create_app(
     client: SmartThings,
@@ -50,6 +51,58 @@ async def test_create_app(
                 "scope": ["r:devices:*"],
                 "redirectUris": ["https://example.com/auth/callback"],
             },
+        },
+    )
+
+
+async def test_list_apps(
+    client: SmartThings,
+    responses: aioresponses,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test listing apps."""
+    responses.get(
+        f"{MOCK_URL}/smartapps",
+        status=200,
+        body=load_fixture("app_list_response.json"),
+    )
+    assert await client.list_apps() == snapshot
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/smartapps",
+        METH_GET,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
+async def test_regenerate_oauth(
+    client: SmartThings,
+    responses: aioresponses,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test regenerating an app's OAuth client id and secret."""
+    responses.post(
+        f"{MOCK_URL}/smartapps/{APP_ID}/oauth/generate",
+        status=200,
+        body=load_fixture("app_oauth_regenerate_response.json"),
+    )
+    assert (
+        await client.regenerate_oauth(
+            app_id=APP_ID,
+            client_name="Home Assistant",
+            scopes=["r:devices:*"],
+        )
+        == snapshot
+    )
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/smartapps/{APP_ID}/oauth/generate",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={
+            "clientName": "Home Assistant",
+            "scope": ["r:devices:*"],
         },
     )
 

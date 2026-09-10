@@ -30,12 +30,18 @@ class InstalledApp(DataClassORJSONMixin):
 
 
 @dataclass
-class SmartApp(DataClassORJSONMixin):
+class OAuthCredentials(DataClassORJSONMixin):
+    """OAuth client id/secret pair shared by SmartApp OAuth responses."""
+
+    client_id: str = field(metadata=field_options(alias="oauthClientId"))
+    client_secret: str = field(metadata=field_options(alias="oauthClientSecret"))
+
+
+@dataclass
+class SmartApp(OAuthCredentials):
     """API-only (OAuth) SmartApp model."""
 
     app_id: str = field(metadata=field_options(alias="appId"))
-    client_id: str = field(metadata=field_options(alias="oauthClientId"))
-    client_secret: str = field(metadata=field_options(alias="oauthClientSecret"))
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
@@ -59,23 +65,8 @@ class SmartAppListResponse(DataClassORJSONMixin):
 
 
 @dataclass
-class OAuthClient(DataClassORJSONMixin):
-    """API-only OAuth Client model."""
-
-    scope: list[str] = field(metadata=field_options(alias="scope"))
-    client_id: str = field(metadata=field_options(alias="client_id"))
-    authorized_grant_types: list[str] = field(
-        metadata=field_options(alias="authorized_grant_types"),
-    )
-    redirect_uri: list[str] = field(metadata=field_options(alias="redirect_uri"))
-    access_token_validity: int = field(
-        metadata=field_options(alias="access_token_validity"),
-    )
-    authorities: list[str] = field(metadata=field_options(alias="authorities"))
-    use_jwt: bool = field(metadata=field_options(alias="use_jwt"))
-    app_id: str = field(metadata=field_options(alias="app_id"))
-    quota_enforced: bool = field(metadata=field_options(alias="quota_enforced"))
-    name: str = field(metadata=field_options(alias="name"))
+class SmartAppOAuthRegenerateResponse(OAuthCredentials):
+    """API-only OAuth Client Regenerate Response model."""
 
 
 @dataclass

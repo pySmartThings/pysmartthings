@@ -1,6 +1,8 @@
 """Constants for the SmartThings tests."""
 
-MOCK_URL = "https://api.smartthings.com"
+from pysmartthings.const import API_BASE
+
+MOCK_URL = f"https://{API_BASE}"
 
 
 HEADERS = {
