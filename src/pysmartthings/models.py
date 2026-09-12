@@ -393,6 +393,16 @@ class Zigbee(DataClassORJSONMixin):
 
 
 @dataclass
+class Zwave(DataClassORJSONMixin):
+    """Zwave model."""
+
+    network_id: str = field(metadata=field_options(alias="networkId"))
+    manufacturer_id: int = field(metadata=field_options(alias="manufacturerId"))
+    product_type: int = field(metadata=field_options(alias="productType"))
+    product_id: int = field(metadata=field_options(alias="productId"))
+
+
+@dataclass
 class Device(DataClassORJSONMixin):
     """Device model."""
 
@@ -426,6 +436,7 @@ class Device(DataClassORJSONMixin):
     hub: Hub | None = None
     matter: Matter | None = None
     zigbee: Zigbee | None = None
+    zwave: Zwave | None = None
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:

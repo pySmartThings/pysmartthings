@@ -59,6 +59,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -97,6 +98,7 @@
       'zigbee': dict({
         'eui': '286D9700011415D1',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -132,6 +134,7 @@
       'zigbee': dict({
         'eui': '0015BC001A028E5C',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -170,6 +173,7 @@
       'zigbee': dict({
         'eui': '286D9700011419D7',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -205,6 +209,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -243,6 +248,7 @@
       'zigbee': dict({
         'eui': '286D9700010D3F80',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -281,6 +287,7 @@
       'zigbee': dict({
         'eui': '286D9700010A41E1',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -319,6 +326,7 @@
       'zigbee': dict({
         'eui': '286D9700010D90EE',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -357,6 +365,7 @@
       'zigbee': dict({
         'eui': '286D970001127FD6',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -395,6 +404,7 @@
       'zigbee': dict({
         'eui': '286D9700010A4009',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -433,6 +443,7 @@
       'zigbee': dict({
         'eui': '286D9700011417DB',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -469,6 +480,7 @@
       'zigbee': dict({
         'eui': '286D9700010C9EAF',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -507,6 +519,7 @@
       'zigbee': dict({
         'eui': '286D97000112ABD2',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -545,6 +558,7 @@
       'zigbee': dict({
         'eui': '286D9700011415C1',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -623,6 +637,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -698,6 +713,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -732,6 +748,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 134,
+        'network_id': '0A',
+        'product_id': 95,
+        'product_type': 2,
+      }),
     }),
   ])
 # ---
@@ -775,6 +797,7 @@
         'software_version': 'SKY40147',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -880,6 +903,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -915,6 +939,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -950,6 +975,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -983,6 +1009,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 134,
+        'network_id': '06',
+        'product_id': 78,
+        'product_type': 3,
+      }),
     }),
     dict({
       'components': dict({
@@ -1022,6 +1054,7 @@
         'software_version': 'SKY30046',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1055,6 +1088,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 134,
+        'network_id': '06',
+        'product_id': 78,
+        'product_type': 3,
+      }),
     }),
     dict({
       'components': dict({
@@ -1094,6 +1133,7 @@
         'software_version': 'SKY30046',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -1203,6 +1243,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1277,6 +1318,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -1316,6 +1358,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1349,6 +1392,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 297,
+        'network_id': '0A',
+        'product_id': 2,
+        'product_type': 26112,
+      }),
     }),
     dict({
       'components': dict({
@@ -1454,6 +1503,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -1559,6 +1609,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1633,6 +1684,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1691,6 +1743,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1766,6 +1819,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1801,6 +1855,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1873,6 +1928,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1958,6 +2014,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -1996,6 +2053,7 @@
       'type': <DeviceType.LAN: 'LAN'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2212,6 +2270,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2299,6 +2358,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -2519,6 +2579,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2620,6 +2681,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2651,6 +2713,7 @@
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2725,6 +2788,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2777,6 +2841,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2855,6 +2920,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2906,6 +2972,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -2965,6 +3032,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -3029,6 +3097,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -3082,6 +3151,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -3121,6 +3191,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -3188,6 +3259,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -3404,6 +3476,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -3620,6 +3693,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -3854,6 +3928,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -3905,6 +3980,7 @@
       'type': <DeviceType.MATTER: 'MATTER'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -3950,6 +4026,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -3993,6 +4070,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4034,6 +4112,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4072,6 +4151,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4110,6 +4190,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4151,6 +4232,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4189,6 +4271,7 @@
         'software_version': '67.115.5',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4230,6 +4313,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4271,6 +4355,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4314,6 +4399,7 @@
         'software_version': '1.116.3',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4351,6 +4437,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4394,6 +4481,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4433,6 +4521,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4476,6 +4565,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4513,6 +4603,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4556,6 +4647,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4597,6 +4689,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4640,6 +4733,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4681,6 +4775,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4724,6 +4819,7 @@
         'software_version': '1.122.2',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -4813,6 +4909,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -4904,6 +5001,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -4977,6 +5075,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5057,6 +5156,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5246,6 +5346,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5281,6 +5382,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5342,6 +5444,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5443,6 +5546,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -5489,6 +5593,7 @@
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5590,6 +5695,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5632,6 +5738,7 @@
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5674,6 +5781,7 @@
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5716,6 +5824,7 @@
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5758,6 +5867,7 @@
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5800,6 +5910,7 @@
       'type': <DeviceType.BLE_D2D: 'BLE_D2D'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -5901,6 +6012,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -5959,6 +6071,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6013,6 +6126,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6089,6 +6203,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6186,6 +6301,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -6304,6 +6420,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -6351,6 +6468,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6397,6 +6515,7 @@
       'zigbee': dict({
         'eui': '00158D0000948BF6',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6432,6 +6551,7 @@
       'zigbee': dict({
         'eui': '000D6F000A9303D9',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6468,6 +6588,7 @@
       'zigbee': dict({
         'eui': 'B0CE181403113BAC',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6506,6 +6627,7 @@
       'zigbee': dict({
         'eui': '000B57FFFE9A322F',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6538,6 +6660,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '0F',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -6601,6 +6729,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 634,
+        'network_id': '33',
+        'product_id': 40970,
+        'product_type': 40960,
+      }),
     }),
     dict({
       'components': dict({
@@ -6633,6 +6767,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '13',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -6675,6 +6815,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6713,6 +6854,7 @@
       'zigbee': dict({
         'eui': '24FD5B00010AED6B',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6749,6 +6891,7 @@
       'zigbee': dict({
         'eui': '000D6F0002FB6E24',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6822,6 +6965,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6854,6 +6998,7 @@
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6886,6 +7031,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '2E',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -6921,6 +7072,7 @@
       'zigbee': dict({
         'eui': '000D6F000542337E',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6957,6 +7109,7 @@
       'zigbee': dict({
         'eui': '000D6F000576F604',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -6992,6 +7145,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7165,6 +7319,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7201,6 +7356,7 @@
       'zigbee': dict({
         'eui': '000D6F000576E45E',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7232,6 +7388,7 @@
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7267,6 +7424,7 @@
       'zigbee': dict({
         'eui': '000D6F0005855215',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7302,6 +7460,7 @@
       'zigbee': dict({
         'eui': '000D6F0004064BE0',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7340,6 +7499,7 @@
       'zigbee': dict({
         'eui': '000B57FFFE974C46',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7372,6 +7532,7 @@
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7403,6 +7564,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '24',
+        'product_id': 12599,
+        'product_type': 18770,
+      }),
     }),
     dict({
       'components': dict({
@@ -7437,6 +7604,7 @@
       'zigbee': dict({
         'eui': 'F0D1B8000010F1E4',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7469,6 +7637,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 134,
+        'network_id': '2A',
+        'product_id': 9,
+        'product_type': 2,
+      }),
     }),
     dict({
       'components': dict({
@@ -7512,6 +7686,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7544,6 +7719,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '31',
+        'product_id': 12344,
+        'product_type': 18770,
+      }),
     }),
     dict({
       'components': dict({
@@ -7587,6 +7768,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7620,6 +7802,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '27',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -7656,6 +7844,7 @@
       'zigbee': dict({
         'eui': '000D6F0005773EFD',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7699,6 +7888,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7729,6 +7919,7 @@
       'type': <DeviceType.MOBILE: 'MOBILE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7797,6 +7988,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7851,6 +8043,7 @@
       'type': <DeviceType.LAN: 'LAN'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7883,6 +8076,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '1E',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -7919,6 +8118,7 @@
       'zigbee': dict({
         'eui': '000D6F0003C04BC9',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7955,6 +8155,7 @@
       'zigbee': dict({
         'eui': '000D6F00059144B3',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -7986,6 +8187,7 @@
       'type': <DeviceType.VIRTUAL: 'VIRTUAL'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8023,6 +8225,7 @@
         'software_version': '1.0.21 Build 231129 Rel.171238',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8055,6 +8258,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '1D',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -8089,6 +8298,7 @@
       'zigbee': dict({
         'eui': 'F0D1B80000051E05',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8126,6 +8336,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8159,6 +8370,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '16',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -8191,6 +8408,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '18',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -8229,6 +8452,7 @@
       'zigbee': dict({
         'eui': '24FD5B00010A3E4E',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8262,6 +8486,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 297,
+        'network_id': '32',
+        'product_id': 2517,
+        'product_type': 33031,
+      }),
     }),
     dict({
       'components': dict({
@@ -8300,6 +8530,7 @@
       'zigbee': dict({
         'eui': '24FD5B000108053C',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8339,6 +8570,7 @@
         'software_version': '1.0.11 Build 240514 Rel.110351',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8375,6 +8607,7 @@
       'zigbee': dict({
         'eui': 'B0CE18140311AA35',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8410,6 +8643,7 @@
       'zigbee': dict({
         'eui': '000D6F000585751E',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8456,6 +8690,7 @@
       'zigbee': dict({
         'eui': '00158D000094885B',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8491,6 +8726,7 @@
       'zigbee': dict({
         'eui': '000D6F000A72D1D5',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8527,6 +8763,7 @@
       'zigbee': dict({
         'eui': '00158D0000948ABE',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8559,6 +8796,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '2F',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -8595,6 +8838,7 @@
       'zigbee': dict({
         'eui': '00158D0000579BC3',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8638,6 +8882,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8670,6 +8915,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '22',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -8705,6 +8956,7 @@
       'zigbee': dict({
         'eui': '000D6F00055B6F62',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8737,6 +8989,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '11',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -8775,6 +9033,7 @@
       'zigbee': dict({
         'eui': '000B57FFFE9A3238',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8805,6 +9064,7 @@
       'type': <DeviceType.MOBILE: 'MOBILE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8840,6 +9100,7 @@
       'type': <DeviceType.HUB: 'HUB'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8878,6 +9139,7 @@
       'zigbee': dict({
         'eui': '24FD5B00010A3A95',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8921,6 +9183,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8958,6 +9221,7 @@
         'software_version': '1.0.21 Build 231129 Rel.171238',
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -8996,6 +9260,7 @@
       'zigbee': dict({
         'eui': '24FD5B00010ACFEE',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9049,6 +9314,7 @@
       'zigbee': dict({
         'eui': '90395EFFFEEBD886',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9080,6 +9346,7 @@
       'type': <DeviceType.LAN: 'LAN'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9116,6 +9383,7 @@
       'zigbee': dict({
         'eui': 'B0CE1814031167A5',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9148,6 +9416,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '17',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -9180,6 +9454,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '14',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -9222,6 +9502,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9264,6 +9545,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9310,6 +9592,7 @@
       'zigbee': dict({
         'eui': '00158D0000948BDE',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9348,6 +9631,7 @@
       'zigbee': dict({
         'eui': '24FD5B00010AD302',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9391,6 +9675,7 @@
         'software_version': None,
       }),
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9424,6 +9709,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '1A',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -9457,6 +9748,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '12',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
     dict({
       'components': dict({
@@ -9494,6 +9791,7 @@
       'zigbee': dict({
         'eui': '00155F00782D1961',
       }),
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9526,6 +9824,12 @@
       'type': <DeviceType.ZWAVE: 'ZWAVE'>,
       'viper': None,
       'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': 99,
+        'network_id': '26',
+        'product_id': 12592,
+        'product_type': 18756,
+      }),
     }),
   ])
 # ---
@@ -9615,6 +9919,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9700,6 +10005,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9778,6 +10084,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9863,6 +10170,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -9948,6 +10256,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
     dict({
       'components': dict({
@@ -10033,6 +10342,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -10083,6 +10393,7 @@
       'type': <DeviceType.OCF: 'OCF'>,
       'viper': None,
       'zigbee': None,
+      'zwave': None,
     }),
   ])
 # ---
@@ -13163,6 +13474,7 @@
       'software_version': '1.122.2',
     }),
     'zigbee': None,
+    'zwave': None,
   })
 # ---
 # name: test_fetching_status_of_single_device[27_smart_monitor_m5]
