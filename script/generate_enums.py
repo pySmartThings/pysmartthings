@@ -48,6 +48,7 @@ def prepare_attribute_name(attribute: str) -> str:
         "pH": "PH",
         "pi": "PLATFORM_ID",
         "mnpv": "PLATFORM_VERSION",
+        "platformVersion": "SOFTWARE_PLATFORM_VERSION",
         "icv": "SPEC_VERSION",
         "mnsl": "SUPPORT_LINK",
         "st": "SYSTEM_TIME",
