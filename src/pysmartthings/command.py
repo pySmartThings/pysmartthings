@@ -16,6 +16,7 @@ class Command(StrEnum):
     ADD_AGING = "addAging"
     ADD_CREDENTIAL = "addCredential"
     ADD_RESERVATION = "addReservation"
+    ADD_SCHEDULE = "addSchedule"
     ADD_USER = "addUser"
     AGREE_UPDATE = "agreeUpdate"
     ALARM_TOGGLE = "alarmToggle"
@@ -28,13 +29,18 @@ class Command(StrEnum):
     BEEP = "beep"
     BIXBY_COMMAND = "bixbyCommand"
     BOTH = "both"
+    BUILD = "build"
     CALL = "call"
     CANCEL = "cancel"
     CANCEL_AGING = "cancelAging"
+    CANCEL_DEFROST = "cancelDefrost"
     CANCEL_EVENT = "cancelEvent"
     CANCEL_ONBOARDING = "cancelOnboarding"
     CANCEL_REMAINING_JOB = "cancelRemainingJob"
+    CANCEL_RIPENING = "cancelRipening"
+    CANCEL_SCHEDULE = "cancelSchedule"
     CANCEL_SELF_CHECK = "cancelSelfCheck"
+    CANCEL_UPLOAD = "cancelUpload"
     CAPTURE = "capture"
     CAPTURE_CLIP = "captureClip"
     CHANNEL_DOWN = "channelDown"
@@ -43,10 +49,18 @@ class Command(StrEnum):
     CHECK_FOR_FIRMWARE_UPDATE = "checkForFirmwareUpdate"
     CHIME = "chime"
     CLEAR = "clear"
+    CLEAR_AUTO_ADDED_NO_GO_ZONES = "clearAutoAddedNoGoZones"
+    CLEAR_CLIMB_ZONES = "clearClimbZones"
+    CLEAR_FAILED_CLIMB_ZONES = "clearFailedClimbZones"
+    CLEAR_NEWLY_SUGGESTED_CLIMB_ZONES = "clearNewlySuggestedClimbZones"
+    CLEAR_NEWLY_SUGGESTED_NO_GO_ZONES = "clearNewlySuggestedNoGoZones"
+    CLEAR_NO_GO_ZONE = "clearNoGoZone"
+    CLEAR_SPOTS = "clearSpots"
     CLEAR_WEEK_DAY_SCHEDULES = "clearWeekDaySchedules"
     CLEAR_YEAR_DAY_SCHEDULES = "clearYearDaySchedules"
     CLIENT_ICE = "clientIce"
     CLOSE = "close"
+    COMBINE_AREA = "combineArea"
     CONFIGURE = "configure"
     CONNECT = "connect"
     COOK_CUSTOM_RECIPE = "cookCustomRecipe"
@@ -60,6 +74,9 @@ class Command(StrEnum):
     DELETE_ALL_USERS = "deleteAllUsers"
     DELETE_CODE = "deleteCode"
     DELETE_CREDENTIAL = "deleteCredential"
+    DELETE_MAP = "deleteMap"
+    DELETE_OBJECTS = "deleteObjects"
+    DELETE_RECIPES = "deleteRecipes"
     DELETE_RESERVATION = "deleteReservation"
     DELETE_RESERVATIONS = "deleteReservations"
     DELETE_USER = "deleteUser"
@@ -83,8 +100,10 @@ class Command(StrEnum):
     DISARM = "disarm"
     DISCONNECT = "disconnect"
     DISCOVER = "discover"
+    DIVIDE_AREA = "divideArea"
     DO_NOT_DISTURB_OFF = "doNotDisturbOff"
     DO_NOT_DISTURB_ON = "doNotDisturbOn"
+    DRAW_MAP = "drawMap"
     EDIT_RESERVATION = "editReservation"
     EMERGENCY_HEAT = "emergencyHeat"
     ENABLE = "enable"
@@ -110,6 +129,8 @@ class Command(StrEnum):
     FAN_AUTO = "fanAuto"
     FAN_CIRCULATE = "fanCirculate"
     FAN_ON = "fanOn"
+    FANSPEED_DOWN = "fanspeedDown"
+    FANSPEED_UP = "fanspeedUp"
     FAST_FORWARD = "fastForward"
     FLIP = "flip"
     FORCEDENTRY = "forcedentry"
@@ -174,9 +195,13 @@ class Command(StrEnum):
     REGISTER = "register"
     RELOAD_ALL_CODES = "reloadAllCodes"
     REMOVE = "remove"
+    REMOVE_SCHEDULE = "removeSchedule"
+    RENAME_AREA = "renameArea"
+    RENAME_MAP = "renameMap"
     REQUEST_CODE = "requestCode"
     REQUEST_DEMAND_RESPONSE_LOAD_CONTROL_ACTION = "requestDrlcAction"
     REQUEST_TURN_INFO = "requestTurnInfo"
+    REQUEST_UPLOAD = "requestUpload"
     RESET = "reset"
     RESET_BLADE_FILTER = "resetBladeFilter"
     RESET_DEODOR_FILTER = "resetDeodorFilter"
@@ -203,10 +228,14 @@ class Command(StrEnum):
     SDP_OFFER = "sdpOffer"
     SEARCH = "search"
     SELECT_AREAS = "selectAreas"
+    SELECT_KEY = "selectKey"
+    SELECT_MAP = "selectMap"
     SELECT_T_V_KEY = "selectTVKey"
+    SELECT_TRACK = "selectTrack"
     SEND = "send"
     SEND_COMMAND = "sendCommand"
     SEND_CONTENT = "sendContent"
+    SEND_CONTENTS = "sendContents"
     SEND_DATA = "sendData"
     SEND_KEY = "sendKey"
     SENSITIVE_TOGGLE = "sensitiveToggle"
@@ -224,6 +253,7 @@ class Command(StrEnum):
     SET_ALARM = "setAlarm"
     SET_ALARM_MODE = "setAlarmMode"
     SET_ALARM_SENSOR_STATE = "setAlarmSensorState"
+    SET_ALARM_SOUND = "setAlarmSound"
     SET_ALARM_THRESHOLD = "setAlarmThreshold"
     SET_AMBIENT_CONTENT = "setAmbientContent"
     SET_AMBIENT_ON = "setAmbientOn"
@@ -231,16 +261,23 @@ class Command(StrEnum):
     SET_AP_OPERATION_MODE = "setApOperationMode"
     SET_APP_NAME = "setAppName"
     SET_ART_ON = "setArtOn"
+    SET_ATM_PRESSURE_RATE_CHANGE = "setAtmPressureRateChange"
     SET_ATMOS_PRESSURE = "setAtmosPressure"
     SET_AUDIO = "setAudio"
+    SET_AUDIO_MODE = "setAudioMode"
     SET_AUDIO_TRACK = "setAudioTrack"
     SET_AUTO_CLEANING_MODE = "setAutoCleaningMode"
+    SET_AUTO_DOOR_CONTROL = "setAutoDoorControl"
+    SET_AUTO_LIGHT_OFF = "setAutoLightOff"
     SET_AUTO_MODE = "setAutoMode"
     SET_AUTO_REPLENISHMENT = "setAutoReplenishment"
+    SET_AUTO_WAKE_UP = "setAutoWakeUp"
     SET_AUTOLOCK = "setAutolock"
     SET_AUTOMATIC_EXECUTION_MODE = "setAutomaticExecutionMode"
     SET_AUTOMATIC_EXECUTION_SETTING = "setAutomaticExecutionSetting"
     SET_BELL_SOUNDS = "setBellSounds"
+    SET_BIXBY_STATUS = "setBixbyStatus"
+    SET_BRIGHTEN_GRADUALLY = "setBrightenGradually"
     SET_BRIGHTNESS_LEVEL = "setBrightnessLevel"
     SET_BUTTON = "setButton"
     SET_BUTTON_DOUBLE_PUSH = "setButtonDoublePush"
@@ -248,6 +285,7 @@ class Command(StrEnum):
     SET_BUTTON_PUSH = "setButtonPush"
     SET_BUTTON_TRIPLE_PUSH = "setButtonTriplePush"
     SET_BYPASS_MODE = "setBypassMode"
+    SET_CAPSULE_PERMISSIONS = "setCapsulePermissions"
     SET_CHANNEL = "setChannel"
     SET_CIRCADIAN = "setCircadian"
     SET_CLEANING_MODE = "setCleaningMode"
@@ -262,6 +300,7 @@ class Command(StrEnum):
     SET_COLOR_CHANGE_TIMER = "setColorChangeTimer"
     SET_COLOR_CHANGING = "setColorChanging"
     SET_COLOR_INVERSION = "setColorInversion"
+    SET_COLOR_PRESET = "setColorPreset"
     SET_COLOR_TEMP_STEPS = "setColorTempSteps"
     SET_COLOR_TEMPERATURE = "setColorTemperature"
     SET_COLOR_VALUE = "setColorValue"
@@ -273,27 +312,34 @@ class Command(StrEnum):
     SET_CONTEXT = "setContext"
     SET_CONTEXT_SNAPSHOT = "setContextSnapshot"
     SET_CONTEXTS = "setContexts"
+    SET_CONTINUOUS_CONVERSATION = "setContinuousConversation"
     SET_CONTROL = "setControl"
     SET_CONTROL_MODE = "setControlMode"
+    SET_CONTROL_SOUND = "setControlSound"
     SET_COOK_RECIPE = "setCookRecipe"
     SET_COOK_TIME = "setCookTime"
     SET_COOKTOP_COOK_RECIPE = "setCooktopCookRecipe"
     SET_COOLING_SETPOINT = "setCoolingSetpoint"
     SET_COORDINATES = "setCoordinates"
+    SET_COUNTRY_CODE = "setCountryCode"
     SET_COURSE = "setCourse"
     SET_CREATE_DEVICE = "setCreateDevice"
     SET_CREATE_QTY = "setCreateQty"
+    SET_CURD_MAKER_MODE = "setCurdMakerMode"
     SET_CURRENT_LOOP = "setCurrentLoop"
     SET_CURRENT_TIME_PERIOD = "setCurrentTimePeriod"
     SET_CURRENT_TWILIGHT = "setCurrentTwilight"
     SET_CUSTOM_COURSE = "setCustomCourse"
     SET_CYCLE_TYPE = "setCycleType"
     SET_DATA = "setData"
+    SET_DATE_TIME = "setDateTime"
     SET_DAY_LENGTH = "setDayLength"
+    SET_DEBUG_INFO = "setDebugInfo"
     SET_DEFAULT_LEVEL = "setDefaultLevel"
     SET_DEFAULT_VIEWPORT = "setDefaultViewport"
     SET_DEFINED_RECIPE = "setDefinedRecipe"
     SET_DEFROST = "setDefrost"
+    SET_DEFROST_DELAY = "setDefrostDelay"
     SET_DEHUMIDIFIER_MODE = "setDehumidifierMode"
     SET_DELAY_END = "setDelayEnd"
     SET_DELAY_TIME = "setDelayTime"
@@ -311,6 +357,7 @@ class Command(StrEnum):
     SET_DISHWASHER_MODE = "setDishwasherMode"
     SET_DISTANCE = "setDistance"
     SET_DO_NOT_DISTURB_MODE = "setDoNotDisturbMode"
+    SET_DOOR_OPENING_ALERT = "setDoorOpeningAlert"
     SET_DOSAGE = "setDosage"
     SET_DRIVER_VERSION = "setDriverVersion"
     SET_DRIVING_MODE = "setDrivingMode"
@@ -350,6 +397,8 @@ class Command(StrEnum):
     SET_FRIDGE_MODE = "setFridgeMode"
     SET_GEOFENCE = "setGeofence"
     SET_GET_GROUPS = "setGetGroups"
+    SET_GLOBAL_ON_SCREEN_DISPLAY = "setGlobalOnScreenDisplay"
+    SET_GLOBAL_WATERMARK = "setGlobalWatermark"
     SET_GRAYSCALE = "setGrayscale"
     SET_GROUP_COMMAND_OPTION = "setGroupCommandOption"
     SET_GROUP_MUTE = "setGroupMute"
@@ -382,6 +431,7 @@ class Command(StrEnum):
     SET_INTENSITY_FOOT = "setIntensityFoot"
     SET_INTENSITY_HEAD = "setIntensityHead"
     SET_INTENSITY_WHOLE = "setIntensityWhole"
+    SET_INTERIOR_LIGHTING = "setInteriorLighting"
     SET_INVENTORY = "setInventory"
     SET_INVISIBLE_LIST = "setInvisibleList"
     SET_KEYPAD = "setKeypad"
@@ -418,6 +468,8 @@ class Command(StrEnum):
     SET_LOCAL_MONTH_TWO = "setLocalMonthTwo"
     SET_LOCAL_WEEK_DAY = "setLocalWeekDay"
     SET_LOCAL_YEAR = "setLocalYear"
+    SET_LOCALE_CODE = "setLocaleCode"
+    SET_LOCATION = "setLocation"
     SET_LOCK = "setLock"
     SET_LOOPS_NUMBER = "setLoopsNumber"
     SET_MACHINE_STATE = "setMachineState"
@@ -440,7 +492,11 @@ class Command(StrEnum):
     SET_MULTIVIEW = "setMultiview"
     SET_MUTE = "setMute"
     SET_NAME = "setName"
+    SET_NEED_EDIT_NAME = "setNeedEditName"
     SET_NEXT_INPUT_SOURCE = "setNextInputSource"
+    SET_NIGHT_LIGHT = "setNightLight"
+    SET_NIGHT_LIGHT_BRIGHTNESS_LEVEL = "setNightLightBrightnessLevel"
+    SET_NIGHT_LIGHT_SCHEDULE = "setNightLightSchedule"
     SET_NIGHT_VISION = "setNightVision"
     SET_NIGHT_VISION_MODE = "setNightVisionMode"
     SET_NODE_END_POINT = "setNodeEndPoint"
@@ -449,10 +505,15 @@ class Command(StrEnum):
     SET_NOTIFICATION_COLOR = "setNotificationColor"
     SET_NOTIFICATION_DURATION = "setNotificationDuration"
     SET_NOTIFICATION_EFFECT = "setNotificationEffect"
+    SET_NOTIFICATION_ENABLED = "setNotificationEnabled"
     SET_NOTIFICATION_LEVEL = "setNotificationLevel"
     SET_NOTIFICATION_NUMBER = "setNotificationNumber"
+    SET_NOTIFICATION_THRESHOLD = "setNotificationThreshold"
     SET_ONE_TOUCH_LOCK = "setOneTouchLock"
     SET_OPEN = "setOpen"
+    SET_OPEN_DOOR_OPTION = "setOpenDoorOption"
+    SET_OPEN_DOOR_TIME = "setOpenDoorTime"
+    SET_OPEN_DOOR_USING_VOICE = "setOpenDoorUsingVoice"
     SET_OPERATING_STATE = "setOperatingState"
     SET_OPERATION_MODE = "setOperationMode"
     SET_OPERATION_ORIGIN = "setOperationOrigin"
@@ -496,9 +557,11 @@ class Command(StrEnum):
     SET_RANDOM_ON_OFF = "setRandomOnOff"
     SET_RAPID_COOLING = "setRapidCooling"
     SET_RAPID_FREEZING = "setRapidFreezing"
+    SET_REACTION_TIME = "setReactionTime"
     SET_RECENTLY_USED_APPS = "setRecentlyUsedApps"
     SET_RECOMMENDED_AMOUNT = "setRecommendedAmount"
     SET_REFRIGERATION_SETPOINT = "setRefrigerationSetpoint"
+    SET_REGION_CODE = "setRegionCode"
     SET_RELUMINO = "setRelumino"
     SET_REMAINING_AMOUNT = "setRemainingAmount"
     SET_REMOTE_CONTROL = "setRemoteControl"
@@ -514,6 +577,7 @@ class Command(StrEnum):
     SET_ROBOT_CLEANER_TURBO_MODE = "setRobotCleanerTurboMode"
     SET_ROBOT_CLEANER_TURBO_STATE = "setRobotCleanerTurboState"
     SET_ROLE = "setRole"
+    SET_SAFE_CLOSING_TIME = "setSafeClosingTime"
     SET_SANITIZE = "setSanitize"
     SET_SANITIZING_WASH = "setSanitizingWash"
     SET_SATURATION = "setSaturation"
@@ -530,13 +594,18 @@ class Command(StrEnum):
     SET_SHADE_LEVEL = "setShadeLevel"
     SET_SHADE_TILT_LEVEL = "setShadeTiltLevel"
     SET_SIGNAL_METRICS = "setSignalMetrics"
+    SET_SINGLE_BIXBY_RESPONSE = "setSingleBixbyResponse"
     SET_SIREN_OR_BELL_ACTIVE = "setSirenOrBellActive"
     SET_SIREN_SOUNDS = "setSirenSounds"
     SET_SLEEP_DATA = "setSleepData"
     SET_SLEEP_STATUS = "setSleepStatus"
     SET_SOFTENER_TYPE = "setSoftenerType"
+    SET_SOUND_FEEDBACK = "setSoundFeedback"
+    SET_SOUND_FEEDBACK_WHEN_START = "setSoundFeedbackWhenStart"
+    SET_SOUND_FEEDBACK_WHEN_STOP = "setSoundFeedbackWhenStop"
     SET_SOUND_FROM = "setSoundFrom"
     SET_SOUND_MODE = "setSoundMode"
+    SET_SOUND_THEME = "setSoundTheme"
     SET_SOURCE = "setSource"
     SET_SPEED_BOOSTER = "setSpeedBooster"
     SET_SPI_MODE = "setSpiMode"
@@ -582,6 +651,7 @@ class Command(StrEnum):
     SET_TEMP_TARGET = "setTempTarget"
     SET_TEMPERATURE_LEVEL = "setTemperatureLevel"
     SET_TEMPERATURE_SETPOINT = "setTemperatureSetpoint"
+    SET_TEMPERATURE_UNIT = "setTemperatureUnit"
     SET_THERMOSTAT_FAN_MODE = "setThermostatFanMode"
     SET_THERMOSTAT_FAN_SETTING = "setThermostatFanSetting"
     SET_THERMOSTAT_LOCKED = "setThermostatLocked"
@@ -600,14 +670,20 @@ class Command(StrEnum):
     SET_TYPE = "setType"
     SET_USER_DEFINED_BREWING_RECIPES = "setUserDefinedBrewingRecipes"
     SET_USER_LOCATION = "setUserLocation"
+    SET_VACATION_MODE = "setVacationMode"
     SET_VALUE = "setValue"
     SET_VERTICAL_ANGLE_STEP = "setVerticalAngleStep"
     SET_VERTICAL_DIRECTION = "setVerticalDirection"
     SET_VIRUS_DOCTOR_MODE = "setVirusDoctorMode"
     SET_VISIBLE_LIST = "setVisibleList"
     SET_VOICE_GUIDE = "setVoiceGuide"
+    SET_VOICE_STYLE = "setVoiceStyle"
+    SET_VOICE_STYLE_CODE = "setVoiceStyleCode"
     SET_VOLUME = "setVolume"
     SET_VOLUME_LEVEL = "setVolumeLevel"
+    SET_WAKE_UP_LESS = "setWakeUpLess"
+    SET_WAKE_UP_PHRASE = "setWakeUpPhrase"
+    SET_WAKE_UP_SENSITIVITY = "setWakeUpSensitivity"
     SET_WASHER_AUTO_DETERGENT = "setWasherAutoDetergent"
     SET_WASHER_AUTO_SOFTENER = "setWasherAutoSoftener"
     SET_WASHER_CYCLE = "setWasherCycle"
@@ -630,6 +706,7 @@ class Command(StrEnum):
     SET_WIRELESS_OPERATING_MODE = "setWirelessOperatingMode"
     SET_YEAR_DAY_SCHEDULE = "setYearDaySchedule"
     SET_ZONE_BOOSTER = "setZoneBooster"
+    SET_ZONE_ID = "setZoneId"
     SETV_HUMIDITY = "setvHumidity"
     SETV_TEMP = "setvTemp"
     SHOW_MESSAGE = "showMessage"
@@ -679,9 +756,13 @@ class Command(StrEnum):
     UNSET_RECOMMENDED_AMOUNT = "unsetRecommendedAmount"
     UPDATE = "update"
     UPDATE_AGING = "updateAging"
+    UPDATE_CLIMB_ZONES = "updateClimbZones"
     UPDATE_CODES = "updateCodes"
     UPDATE_CREDENTIAL = "updateCredential"
     UPDATE_FIRMWARE = "updateFirmware"
+    UPDATE_NO_GO_ZONES = "updateNoGoZones"
+    UPDATE_OBJECTS = "updateObjects"
+    UPDATE_SPOTS = "updateSpots"
     UPDATE_USER = "updateUser"
     UPDATE_ZONE_NAME = "updateZoneName"
     UPLOAD_COMPLETE = "uploadComplete"
@@ -1160,7 +1241,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.VIDEO_CLIPS: [Command.CAPTURE_CLIP],
     Capability.VIDEO_STREAM: [Command.START_STREAM, Command.STOP_STREAM],
-    Capability.VIDEO_STREAM_SETTINGS: [Command.SET_STREAM],
+    Capability.VIDEO_STREAM_SETTINGS: [
+        Command.SET_GLOBAL_ON_SCREEN_DISPLAY,
+        Command.SET_GLOBAL_WATERMARK,
+        Command.SET_STREAM,
+    ],
     Capability.VOLTAGE_MEASUREMENT: [],
     Capability.WASHER_MODE: [Command.SET_WASHER_MODE],
     Capability.WASHER_OPERATING_STATE: [Command.SET_MACHINE_STATE],
@@ -1201,7 +1286,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.ZWAVE_MULTICHANNEL: [Command.ENABLE_EP_EVENTS, Command.EP_CMD],
     Capability.CUSTOM_ACCESSIBILITY: [Command.SET_ACCESSIBILITY],
     Capability.CUSTOM_AIR_CONDITIONER_ODOR_CONTROLLER: [
-        Command.SET_AIR_CONDITIONER_ODOR_CONTROLLER_STATE
+        Command.SET_AIR_CONDITIONER_ODOR_CONTROLLER_STATE,
+        Command.SET_NOTIFICATION_ENABLED,
+        Command.SET_NOTIFICATION_THRESHOLD,
     ],
     Capability.CUSTOM_AIR_CONDITIONER_OPTIONAL_MODE: [Command.SET_AC_OPTIONAL_MODE],
     Capability.CUSTOM_AIR_CONDITIONER_TROPICAL_NIGHT_MODE: [
@@ -1301,6 +1388,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_ACTIVATION_STATE: [],
     Capability.SAMSUNG_CE_AI_MOTION_WIND: [Command.SET_MODE],
+    Capability.SAMSUNG_CE_AI_PRECISE_COOLING: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AIR_CONDITIONER_AIR_FLOW_DIRECTION: [
         Command.SET_HORIZONTAL_ANGLE_STEP,
         Command.SET_HORIZONTAL_DIRECTION,
@@ -1319,6 +1407,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_AIR_PURIFIER_LIGHTING: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN: [],
     Capability.SAMSUNG_CE_ALWAYS_ON_SENSING: [Command.OFF, Command.ON],
+    Capability.SAMSUNG_CE_AUDIO_MODE: [Command.SET_AUDIO_MODE],
+    Capability.SAMSUNG_CE_AUDIO_MUTE: [Command.MUTE, Command.SET_MUTE, Command.UNMUTE],
+    Capability.SAMSUNG_CE_AUDIO_OUTPUT: [],
     Capability.SAMSUNG_CE_AUDIO_VOLUME_LEVEL: [
         Command.SET_VOLUME_LEVEL,
         Command.VOLUME_DOWN,
@@ -1335,13 +1426,45 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_AMOUNT,
         Command.SET_DENSITY,
     ],
+    Capability.SAMSUNG_CE_AUTO_DOOR_CONTROL: [
+        Command.SET_AUTO_DOOR_CONTROL,
+        Command.SET_CONTROL_SOUND,
+        Command.SET_SAFE_CLOSING_TIME,
+    ],
     Capability.SAMSUNG_CE_AUTO_DOOR_RELEASE: [Command.DISABLE, Command.ENABLE],
+    Capability.SAMSUNG_CE_AUTO_FILL_PITCHER: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_AUTO_OPEN_DOOR: [
         Command.OFF,
         Command.ON,
+        Command.SET_DOOR_OPENING_ALERT,
+        Command.SET_OPEN_DOOR_OPTION,
+        Command.SET_OPEN_DOOR_TIME,
+        Command.SET_OPEN_DOOR_USING_VOICE,
         Command.SET_PRESSURE_LEVEL,
     ],
     Capability.SAMSUNG_CE_AUTO_VENTILATION: [Command.ACTION],
+    Capability.SAMSUNG_CE_BIXBY_ADVANCED_SETTINGS: [
+        Command.SET_AUTO_WAKE_UP,
+        Command.SET_CONTINUOUS_CONVERSATION,
+        Command.SET_WAKE_UP_LESS,
+    ],
+    Capability.SAMSUNG_CE_BIXBY_DEBUG: [Command.SET_DEBUG_INFO],
+    Capability.SAMSUNG_CE_BIXBY_PLAYLIST: [Command.SELECT_TRACK],
+    Capability.SAMSUNG_CE_BIXBY_PRIVACY_PERMISSION_MANAGEMENT: [
+        Command.SET_CAPSULE_PERMISSIONS
+    ],
+    Capability.SAMSUNG_CE_BIXBY_SETTINGS: [
+        Command.SET_BIXBY_STATUS,
+        Command.SET_LOCALE_CODE,
+        Command.SET_LOCATION,
+        Command.SET_SINGLE_BIXBY_RESPONSE,
+        Command.SET_SOUND_FEEDBACK,
+        Command.SET_SOUND_FEEDBACK_WHEN_START,
+        Command.SET_SOUND_FEEDBACK_WHEN_STOP,
+        Command.SET_VOICE_STYLE_CODE,
+        Command.SET_WAKE_UP_PHRASE,
+        Command.SET_WAKE_UP_SENSITIVITY,
+    ],
     Capability.SAMSUNG_CE_BLADE_FILTER: [Command.RESET_BLADE_FILTER],
     Capability.SAMSUNG_CE_BURNER_INFO: [],
     Capability.SAMSUNG_CE_BUTTON_DISPLAY_CONDITION: [],
@@ -1358,11 +1481,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_COFFEE_BREWING_RECIPE: [
         Command.ACTIVATE,
         Command.DEACTIVATE,
+        Command.DELETE_RECIPES,
         Command.SET_COFFEE_BREWING_RECIPE,
         Command.SET_INVISIBLE_LIST,
         Command.SET_USER_DEFINED_BREWING_RECIPES,
         Command.SET_VISIBLE_LIST,
     ],
+    Capability.SAMSUNG_CE_COLOR_PRESET: [Command.SET_COLOR_PRESET],
     Capability.SAMSUNG_CE_COLOR_TEMPERATURE: [Command.SET_COLOR_TEMPERATURE],
     Capability.SAMSUNG_CE_CONNECTION_STATE: [],
     Capability.SAMSUNG_CE_CONSUMED_ENERGY: [Command.SET_TIME_OFFSET],
@@ -1379,13 +1504,20 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_START_VALUE,
         Command.START,
     ],
+    Capability.SAMSUNG_CE_CURD_MAKER_MODE: [Command.SET_CURD_MAKER_MODE],
     Capability.SAMSUNG_CE_CUSTOM_RECIPE: [Command.COOK_CUSTOM_RECIPE],
     Capability.SAMSUNG_CE_DDMS_MODE: [],
     Capability.SAMSUNG_CE_DEFINED_RECIPE: [
         Command.COOK_DEFINED_RECIPE,
         Command.SET_DEFINED_RECIPE,
     ],
+    Capability.SAMSUNG_CE_DEFROST_DELAY: [
+        Command.ADD_SCHEDULE,
+        Command.REMOVE_SCHEDULE,
+        Command.SET_DEFROST_DELAY,
+    ],
     Capability.SAMSUNG_CE_DEHUMIDIFIER_BEEP: [Command.OFF, Command.ON],
+    Capability.SAMSUNG_CE_DEHUMIDIFIER_DISPLAY: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_DEHUMIDIFIER_MODE: [Command.SET_DEHUMIDIFIER_MODE],
     Capability.SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT: [
         Command.DISABLE_ALARM,
@@ -1409,6 +1541,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_REMAINING_AMOUNT,
     ],
     Capability.SAMSUNG_CE_DEVICE_APPLICATIONS_AND_SETTINGS: [],
+    Capability.SAMSUNG_CE_DEVICE_CONFIGURATION: [
+        Command.SET_COUNTRY_CODE,
+        Command.SET_DATE_TIME,
+        Command.SET_REGION_CODE,
+        Command.SET_TEMPERATURE_UNIT,
+    ],
+    Capability.SAMSUNG_CE_DEVICE_GUARD: [Command.REFRESH],
     Capability.SAMSUNG_CE_DEVICE_IDENTIFICATION: [],
     Capability.SAMSUNG_CE_DISHWASHER_JOB_STATE: [],
     Capability.SAMSUNG_CE_DISHWASHER_OPERATION: [
@@ -1449,6 +1588,11 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_DURATION,
     ],
     Capability.SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION: [],
+    Capability.SAMSUNG_CE_DOOR_ALARM: [
+        Command.OFF,
+        Command.ON,
+        Command.SET_ALARM_SOUND,
+    ],
     Capability.SAMSUNG_CE_DOOR_STATE: [],
     Capability.SAMSUNG_CE_DRAIN_FILTER: [Command.RESET_DRAIN_FILTER],
     Capability.SAMSUNG_CE_DRIVER_STATE: [],
@@ -1486,8 +1630,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_EHS_FSV_SETTINGS: [Command.REFRESH, Command.SET_VALUE],
     Capability.SAMSUNG_CE_EHS_TEMPERATURE_REFERENCE: [],
     Capability.SAMSUNG_CE_EHS_THERMOSTAT: [],
+    Capability.SAMSUNG_CE_ENERGY_MANAGEMENT: [],
     Capability.SAMSUNG_CE_ENERGY_PLANNER: [Command.SET_DATA, Command.SET_PLAN],
     Capability.SAMSUNG_CE_ERROR_AND_ALARM_STATE: [],
+    Capability.SAMSUNG_CE_FILE_TRANSFER: [
+        Command.CANCEL_UPLOAD,
+        Command.REQUEST_UPLOAD,
+    ],
     Capability.SAMSUNG_CE_FLEXIBLE_AUTO_DISPENSE_DETERGENT: [
         Command.SET_AMOUNT,
         Command.SET_DENSITY,
@@ -1495,17 +1644,30 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_TYPE,
         Command.UNSET_RECOMMENDED_AMOUNT,
     ],
-    Capability.SAMSUNG_CE_FOOD_DEFROST: [Command.SET_DEFROST],
+    Capability.SAMSUNG_CE_FOOD_DEFROST: [Command.CANCEL_DEFROST, Command.SET_DEFROST],
     Capability.SAMSUNG_CE_FREEZER_CONVERT_MODE: [Command.SET_FREEZER_CONVERT_MODE],
     Capability.SAMSUNG_CE_FRIDGE_FOOD_LIST: [Command.REFRESH],
     Capability.SAMSUNG_CE_FRIDGE_ICEMAKER_INFO: [],
+    Capability.SAMSUNG_CE_FRIDGE_ICEMAKER_OPERATING_STATE: [],
+    Capability.SAMSUNG_CE_FRIDGE_INTERIOR_LIGHTING: [
+        Command.OFF,
+        Command.ON,
+        Command.SET_AUTO_LIGHT_OFF,
+        Command.SET_BRIGHTEN_GRADUALLY,
+        Command.SET_BRIGHTNESS_LEVEL,
+        Command.SET_INTERIOR_LIGHTING,
+        Command.SET_NIGHT_LIGHT,
+        Command.SET_NIGHT_LIGHT_BRIGHTNESS_LEVEL,
+        Command.SET_NIGHT_LIGHT_SCHEDULE,
+    ],
     Capability.SAMSUNG_CE_FRIDGE_PANTRY_INFO: [],
     Capability.SAMSUNG_CE_FRIDGE_PANTRY_MODE: [Command.SET_MODE],
-    Capability.SAMSUNG_CE_FRIDGE_VACATION_MODE: [],
+    Capability.SAMSUNG_CE_FRIDGE_VACATION_MODE: [Command.SET_VACATION_MODE],
     Capability.SAMSUNG_CE_FRIDGE_WELCOME_LIGHTING: [
         Command.OFF,
         Command.ON,
         Command.SET_DETECTION_PROXIMITY,
+        Command.SET_REACTION_TIME,
     ],
     Capability.SAMSUNG_CE_FRIDGE_ZONE_INFO: [],
     Capability.SAMSUNG_CE_HOOD_FAN_SPEED: [Command.SET_HOOD_FAN_SPEED],
@@ -1514,11 +1676,20 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_CONDITION,
         Command.SET_SCHEDULE,
     ],
+    Capability.SAMSUNG_CE_HYBRID_PRECISE_COOLING: [Command.OFF, Command.ON],
+    Capability.SAMSUNG_CE_ICEMAKER_NIGHT_MODE: [
+        Command.OFF,
+        Command.ON,
+        Command.SET_SCHEDULE,
+    ],
     Capability.SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK: [],
     Capability.SAMSUNG_CE_KIDS_LOCK: [],
     Capability.SAMSUNG_CE_KIDS_LOCK_CONTROL: [Command.LOCK, Command.UNLOCK],
     Capability.SAMSUNG_CE_KIMCHI_LABEL_SCAN_MODE: [Command.SET_KIMCHI_LABEL_SCAN_MODE],
-    Capability.SAMSUNG_CE_KIMCHI_REFRIGERATOR_OPERATING_STATE: [Command.SET_MODE],
+    Capability.SAMSUNG_CE_KIMCHI_REFRIGERATOR_OPERATING_STATE: [
+        Command.CANCEL_RIPENING,
+        Command.SET_MODE,
+    ],
     Capability.SAMSUNG_CE_KITCHEN_DEVICE_DEFAULTS: [],
     Capability.SAMSUNG_CE_KITCHEN_DEVICE_IDENTIFICATION: [],
     Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: [],
@@ -1571,6 +1742,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_QUICK_CONTROL: [],
     Capability.SAMSUNG_CE_RECHARGEABLE_BATTERY: [],
+    Capability.SAMSUNG_CE_REFRESH: [Command.REFRESH],
     Capability.SAMSUNG_CE_RELATIVE_HUMIDITY_LEVEL: [Command.SET_DESIRED_HUMIDITY],
     Capability.SAMSUNG_CE_REMOTE_MANAGEMENT_DATA: [Command.RM_COMMAND],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_AUDIO_CLIP: [Command.DISABLE, Command.ENABLE],
@@ -1587,7 +1759,27 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_ROBOT_CLEANER_GUIDED_PATROL: [Command.START, Command.STOP],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_AREA_INFO: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_CLEANING_INFO: [],
-    Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST: [],
+    Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST: [
+        Command.CLEAR_AUTO_ADDED_NO_GO_ZONES,
+        Command.CLEAR_CLIMB_ZONES,
+        Command.CLEAR_FAILED_CLIMB_ZONES,
+        Command.CLEAR_NEWLY_SUGGESTED_CLIMB_ZONES,
+        Command.CLEAR_NEWLY_SUGGESTED_NO_GO_ZONES,
+        Command.CLEAR_NO_GO_ZONE,
+        Command.CLEAR_SPOTS,
+        Command.COMBINE_AREA,
+        Command.DELETE_MAP,
+        Command.DELETE_OBJECTS,
+        Command.DIVIDE_AREA,
+        Command.RENAME_AREA,
+        Command.RENAME_MAP,
+        Command.SELECT_MAP,
+        Command.SET_NEED_EDIT_NAME,
+        Command.UPDATE_CLIMB_ZONES,
+        Command.UPDATE_NO_GO_ZONES,
+        Command.UPDATE_OBJECTS,
+        Command.UPDATE_SPOTS,
+    ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_METADATA: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MONITORING_AUTOMATION: [
         Command.ENABLE_MONITORING_AUTOMATION
@@ -1595,6 +1787,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MOTOR_FILTER: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_OPERATING_STATE: [
         Command.CANCEL_REMAINING_JOB,
+        Command.DRAW_MAP,
         Command.PAUSE,
         Command.RESUME,
         Command.RETURN_TO_HOME,
@@ -1647,6 +1840,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.CANCEL_SELF_CHECK,
         Command.START_SELF_CHECK,
     ],
+    Capability.SAMSUNG_CE_SEND_CONTENTS: [Command.SEND_CONTENTS],
     Capability.SAMSUNG_CE_SENSING_ON_SUSPEND_MODE: [],
     Capability.SAMSUNG_CE_SILENT_ACTION: [Command.ACT_SILENTLY],
     Capability.SAMSUNG_CE_SLEEP_DATA_INTEROPERATION: [
@@ -1679,10 +1873,18 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     ],
     Capability.SAMSUNG_CE_SOFTWARE_UPDATE: [
         Command.AGREE_UPDATE,
+        Command.CANCEL_SCHEDULE,
         Command.DISAGREE_UPDATE,
+        Command.SET_SCHEDULE,
     ],
     Capability.SAMSUNG_CE_SOFTWARE_VERSION: [],
     Capability.SAMSUNG_CE_SOUND_DETECTION_SENSITIVITY: [Command.SET_LEVEL],
+    Capability.SAMSUNG_CE_SOUND_THEME: [Command.SET_SOUND_THEME],
+    Capability.SAMSUNG_CE_STATEFUL_LAMP: [
+        Command.OFF,
+        Command.ON,
+        Command.SET_BRIGHTNESS_LEVEL,
+    ],
     Capability.SAMSUNG_CE_STEAM_CLOSET_AUTO_CYCLE_LINK: [
         Command.LINK_STEAM_CLOSET_CYCLE,
         Command.SET_STEAM_CLOSET_AUTO_CYCLE_LINK,
@@ -1706,13 +1908,16 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_SWITCH: [Command.SET_SWITCH],
     Capability.SAMSUNG_CE_SYSTEM_AIR_CONDITIONER_RESERVATION: [],
     Capability.SAMSUNG_CE_TEMPERATURE_SETTING: [Command.SET_DESIRED_TEMPERATURE],
+    Capability.SAMSUNG_CE_TIME_ZONE: [Command.SET_ZONE_ID],
     Capability.SAMSUNG_CE_TOGGLE_SWITCH: [Command.OFF, Command.ON, Command.TOGGLE],
     Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [],
+    Capability.SAMSUNG_CE_UV_DEODORIZING: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_VIEW_INSIDE: [
         Command.REFRESH,
         Command.REFRESH_ALL,
         Command.REFRESH_SPECIFIC_AREA,
     ],
+    Capability.SAMSUNG_CE_VOICE_STYLE: [Command.SET_VOICE_STYLE],
     Capability.SAMSUNG_CE_WASHER_BUBBLE_SOAK: [Command.OFF, Command.ON],
     Capability.SAMSUNG_CE_WASHER_CYCLE: [
         Command.SET_CYCLE_TYPE,
@@ -1769,6 +1974,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.DELETE_WELCOME_MESSAGE,
         Command.SET_WELCOME_MESSAGE,
     ],
+    Capability.SAMSUNG_CE_WIFI_CONNECTION_INFO: [],
     Capability.SAMSUNG_CE_WIFI_KIT_SUB_DEVICES: [],
     Capability.SAMSUNG_VD_AI_ACTION: [Command.SEND_CONTENT],
     Capability.SAMSUNG_VD_AMBIENT: [Command.SEND_DATA, Command.SET_AMBIENT_ON],
@@ -1794,6 +2000,12 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_VD_SUPPORTS_FEATURES: [],
     Capability.SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF: [],
     Capability.SAMSUNG_VD_THING_STATUS: [],
+    Capability.SAMSUNG_VD_TV_CHANNEL: [
+        Command.CHANNEL_DOWN,
+        Command.CHANNEL_UP,
+        Command.SET_TV_CHANNEL,
+        Command.SET_TV_CHANNEL_NAME,
+    ],
     Capability.SAMSUNG_IM_ANNOUNCEMENT: [Command.ANNOUNCE, Command.SET_ENABLE_STATE],
     Capability.SAMSUNG_IM_BIXBY_CONTENT: [Command.BIXBY_COMMAND],
     Capability.SAMSUNG_IM_CHARGER_FIRMWARE: [],
@@ -1817,7 +2029,13 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.DISABLE_LED_NOTIFICATION,
         Command.ENABLE_LED_NOTIFICATION,
     ],
-    Capability.SAMSUNG_IM_NEARBY_DETECTION: [Command.OFF, Command.ON, Command.REFRESH],
+    Capability.SAMSUNG_IM_NEARBY_DETECTION: [
+        Command.OFF,
+        Command.ON,
+        Command.REFRESH,
+        Command.STF_INSTALLED,
+        Command.STF_UNINSTALLED,
+    ],
     Capability.SAMSUNG_IM_NETWORK_AUDIO_GROUP_INFO: [
         Command.SET_ACM_MODE,
         Command.SET_CHANNEL,
@@ -1844,6 +2062,10 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.ABATEACHIEVE62503_STATELESS_AUDIO_VOLUME_UP: [Command.VOLUME_UP],
     Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN: [Command.CHANNEL_DOWN],
     Capability.ABATEACHIEVE62503_STATELESS_CHANNEL_UP: [Command.CHANNEL_UP],
+    Capability.ABATEACHIEVE62503_STATELESS_FANSPEED_DECREASE: [Command.FANSPEED_DOWN],
+    Capability.ABATEACHIEVE62503_STATELESS_FANSPEED_INCREASE: [Command.FANSPEED_UP],
+    Capability.ABATEACHIEVE62503_STATELESS_POWER_OFF: [Command.POWER_OFF],
+    Capability.ABATEACHIEVE62503_STATELESS_POWER_ON: [Command.POWER_ON],
     Capability.ABSOLUTEWEATHER46907_LANGUAGE_SUPPORT: [Command.SET_LANGUAGE],
     Capability.ABSOLUTEWEATHER46907_LOCK: [Command.SET_OPTION, Command.UNLOCK],
     Capability.ABSOLUTEWEATHER46907_LOCKSTATERELEASE: [Command.SET_LOCK],
@@ -1897,6 +2119,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.HCA_DRYER_MODE: [Command.SET_MODE],
     Capability.HCA_WASHER_MODE: [Command.SET_MODE],
     Capability.LEGENDABSOLUTE60149_ACTIONBUTTON2: [Command.PUSH],
+    Capability.LEGENDABSOLUTE60149_ATM_PRESSURE_RATE_CHANGE: [
+        Command.SET_ATM_PRESSURE_RATE_CHANGE
+    ],
     Capability.LEGENDABSOLUTE60149_ATMOS_PRESSURE: [Command.SET_ATMOS_PRESSURE],
     Capability.LEGENDABSOLUTE60149_BELL_SOUNDS: [Command.SET_BELL_SOUNDS],
     Capability.LEGENDABSOLUTE60149_CIRCADIAN: [Command.SET_CIRCADIAN],
@@ -1907,6 +2132,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_COLOR_TEMP_STEPS
     ],
     Capability.LEGENDABSOLUTE60149_COMMAND_CLASS: [],
+    Capability.LEGENDABSOLUTE60149_CREATE_DEVICE: [Command.SET_CREATE_DEVICE],
     Capability.LEGENDABSOLUTE60149_CREATE_DEVICE2: [Command.SET_CREATE_DEVICE],
     Capability.LEGENDABSOLUTE60149_CURRENT_LOOP: [Command.SET_CURRENT_LOOP],
     Capability.LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD: [
@@ -2014,6 +2240,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.ORANGEBROOK39927_HUE_DISCOVERY: [Command.DISCOVER],
     Capability.ORANGEBROOK39927_HUE_GEOFENCE: [Command.REMOVE, Command.UPDATE],
     Capability.ORANGEBROOK39927_HUE_GROUP: [],
+    Capability.ORANGEBROOK39927_VIRTUAL_FACTORY: [Command.BUILD],
+    Capability.ORANGEBROOK39927_VIRTUAL_INVENTORY: [],
     Capability.PARTYVOICE23922_ADD2: [Command.PUSH],
     Capability.PARTYVOICE23922_AMPERAGE: [],
     Capability.PARTYVOICE23922_APIWEBREQUEST: [Command.G_E_T, Command.P_O_S_T],
@@ -2055,6 +2283,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.PARTYVOICE23922_RESETALT: [Command.PUSH],
     Capability.PARTYVOICE23922_RESETSELECT: [Command.SET_SELECT],
     Capability.PARTYVOICE23922_ROKUCURRENTAPP: [],
+    Capability.PARTYVOICE23922_ROKUKEYS2: [Command.SELECT_KEY],
     Capability.PARTYVOICE23922_ROKUMEDIASTATUS: [],
     Capability.PARTYVOICE23922_ROKUPOWER: [
         Command.POWER_OFF,
@@ -2232,6 +2461,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.STSE_CUBE_ACTION: [],
     Capability.STSE_CUBE_FACE: [],
     Capability.STSE_DEVICE_MODE: [],
+    Capability.STSE_INVISIBLE_CAPABILITIES: [],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_MODE: [Command.SET_MODE],
     Capability.STSOLUTIONS_DEMAND_RESPONSE_STATUS: [],
     Capability.STSOLUTIONS_MESSAGE: [],
