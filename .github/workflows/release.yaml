@@ -47,3 +47,8 @@ jobs:
         with:
           inputs: ./dist/*.tar.gz ./dist/*.whl
           release-signing-artifacts: true
+        env:
+          # Clear setup-uv's job-wide vars so this action's own uv-managed
+          # virtualenv bootstraps correctly (else: No module named sigstore).
+          UV_PYTHON: ""
+          UV_PYTHON_INSTALL_DIR: ""
