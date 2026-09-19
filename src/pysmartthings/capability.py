@@ -349,6 +349,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_ACCESSIBILITY = "samsungce.accessibility"
     SAMSUNG_CE_ACTIVATION_STATE = "samsungce.activationState"
     SAMSUNG_CE_AI_MOTION_WIND = "samsungce.aiMotionWind"
+    SAMSUNG_CE_AI_PRECISE_COOLING = "samsungce.aiPreciseCooling"
     SAMSUNG_CE_AIR_CONDITIONER_AIR_FLOW_DIRECTION = (
         "samsungce.airConditionerAirFlowDirection"
     )
@@ -359,12 +360,24 @@ class Capability(StrEnum):
     SAMSUNG_CE_AIR_PURIFIER_LIGHTING = "samsungce.airPurifierLighting"
     SAMSUNG_CE_AIR_QUALITY_HEALTH_CONCERN = "samsungce.airQualityHealthConcern"
     SAMSUNG_CE_ALWAYS_ON_SENSING = "samsungce.alwaysOnSensing"
+    SAMSUNG_CE_AUDIO_MODE = "samsungce.audioMode"
+    SAMSUNG_CE_AUDIO_MUTE = "samsungce.audioMute"
+    SAMSUNG_CE_AUDIO_OUTPUT = "samsungce.audioOutput"
     SAMSUNG_CE_AUDIO_VOLUME_LEVEL = "samsungce.audioVolumeLevel"
     SAMSUNG_CE_AUTO_DISPENSE_DETERGENT = "samsungce.autoDispenseDetergent"
     SAMSUNG_CE_AUTO_DISPENSE_SOFTENER = "samsungce.autoDispenseSoftener"
+    SAMSUNG_CE_AUTO_DOOR_CONTROL = "samsungce.autoDoorControl"
     SAMSUNG_CE_AUTO_DOOR_RELEASE = "samsungce.autoDoorRelease"
+    SAMSUNG_CE_AUTO_FILL_PITCHER = "samsungce.autoFillPitcher"
     SAMSUNG_CE_AUTO_OPEN_DOOR = "samsungce.autoOpenDoor"
     SAMSUNG_CE_AUTO_VENTILATION = "samsungce.autoVentilation"
+    SAMSUNG_CE_BIXBY_ADVANCED_SETTINGS = "samsungce.bixbyAdvancedSettings"
+    SAMSUNG_CE_BIXBY_DEBUG = "samsungce.bixbyDebug"
+    SAMSUNG_CE_BIXBY_PLAYLIST = "samsungce.bixbyPlaylist"
+    SAMSUNG_CE_BIXBY_PRIVACY_PERMISSION_MANAGEMENT = (
+        "samsungce.bixbyPrivacyPermissionManagement"
+    )
+    SAMSUNG_CE_BIXBY_SETTINGS = "samsungce.bixbySettings"
     SAMSUNG_CE_BLADE_FILTER = "samsungce.bladeFilter"
     SAMSUNG_CE_BURNER_INFO = "samsungce.burnerInfo"
     SAMSUNG_CE_BUTTON_DISPLAY_CONDITION = "samsungce.buttonDisplayCondition"
@@ -373,6 +386,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_CLEAN_STATION_UV_CLEANING = "samsungce.cleanStationUvCleaning"
     SAMSUNG_CE_CLOTHING_EXTRA_CARE = "samsungce.clothingExtraCare"
     SAMSUNG_CE_COFFEE_BREWING_RECIPE = "samsungce.coffeeBrewingRecipe"
+    SAMSUNG_CE_COLOR_PRESET = "samsungce.colorPreset"
     SAMSUNG_CE_COLOR_TEMPERATURE = "samsungce.colorTemperature"
     SAMSUNG_CE_CONNECTION_STATE = "samsungce.connectionState"
     SAMSUNG_CE_CONSUMED_ENERGY = "samsungce.consumedEnergy"
@@ -383,10 +397,13 @@ class Capability(StrEnum):
     SAMSUNG_CE_COOKTOP_HEATING_POWER = "samsungce.cooktopHeatingPower"
     SAMSUNG_CE_COOKTOP_PAN_DETECTION = "samsungce.cooktopPanDetection"
     SAMSUNG_CE_COUNT_DOWN_TIMER = "samsungce.countDownTimer"
+    SAMSUNG_CE_CURD_MAKER_MODE = "samsungce.curdMakerMode"
     SAMSUNG_CE_CUSTOM_RECIPE = "samsungce.customRecipe"
     SAMSUNG_CE_DDMS_MODE = "samsungce.ddmsMode"
     SAMSUNG_CE_DEFINED_RECIPE = "samsungce.definedRecipe"
+    SAMSUNG_CE_DEFROST_DELAY = "samsungce.defrostDelay"
     SAMSUNG_CE_DEHUMIDIFIER_BEEP = "samsungce.dehumidifierBeep"
+    SAMSUNG_CE_DEHUMIDIFIER_DISPLAY = "samsungce.dehumidifierDisplay"
     SAMSUNG_CE_DEHUMIDIFIER_MODE = "samsungce.dehumidifierMode"
     SAMSUNG_CE_DETERGENT_AUTO_REPLENISHMENT = "samsungce.detergentAutoReplenishment"
     SAMSUNG_CE_DETERGENT_ORDER = "samsungce.detergentOrder"
@@ -394,6 +411,8 @@ class Capability(StrEnum):
     SAMSUNG_CE_DEVICE_APPLICATIONS_AND_SETTINGS = (
         "samsungce.deviceApplicationsAndSettings"
     )
+    SAMSUNG_CE_DEVICE_CONFIGURATION = "samsungce.deviceConfiguration"
+    SAMSUNG_CE_DEVICE_GUARD = "samsungce.deviceGuard"
     SAMSUNG_CE_DEVICE_IDENTIFICATION = "samsungce.deviceIdentification"
     SAMSUNG_CE_DISHWASHER_JOB_STATE = "samsungce.dishwasherJobState"
     SAMSUNG_CE_DISHWASHER_OPERATION = "samsungce.dishwasherOperation"
@@ -404,6 +423,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_DISHWASHER_WASHING_OPTIONS = "samsungce.dishwasherWashingOptions"
     SAMSUNG_CE_DO_NOT_DISTURB = "samsungce.doNotDisturb"
     SAMSUNG_CE_DONGLE_SOFTWARE_INSTALLATION = "samsungce.dongleSoftwareInstallation"
+    SAMSUNG_CE_DOOR_ALARM = "samsungce.doorAlarm"
     SAMSUNG_CE_DOOR_STATE = "samsungce.doorState"
     SAMSUNG_CE_DRAIN_FILTER = "samsungce.drainFilter"
     SAMSUNG_CE_DRIVER_STATE = "samsungce.driverState"
@@ -426,8 +446,10 @@ class Capability(StrEnum):
     SAMSUNG_CE_EHS_FSV_SETTINGS = "samsungce.ehsFsvSettings"
     SAMSUNG_CE_EHS_TEMPERATURE_REFERENCE = "samsungce.ehsTemperatureReference"
     SAMSUNG_CE_EHS_THERMOSTAT = "samsungce.ehsThermostat"
+    SAMSUNG_CE_ENERGY_MANAGEMENT = "samsungce.energyManagement"
     SAMSUNG_CE_ENERGY_PLANNER = "samsungce.energyPlanner"
     SAMSUNG_CE_ERROR_AND_ALARM_STATE = "samsungce.errorAndAlarmState"
+    SAMSUNG_CE_FILE_TRANSFER = "samsungce.fileTransfer"
     SAMSUNG_CE_FLEXIBLE_AUTO_DISPENSE_DETERGENT = (
         "samsungce.flexibleAutoDispenseDetergent"
     )
@@ -435,6 +457,10 @@ class Capability(StrEnum):
     SAMSUNG_CE_FREEZER_CONVERT_MODE = "samsungce.freezerConvertMode"
     SAMSUNG_CE_FRIDGE_FOOD_LIST = "samsungce.fridgeFoodList"
     SAMSUNG_CE_FRIDGE_ICEMAKER_INFO = "samsungce.fridgeIcemakerInfo"
+    SAMSUNG_CE_FRIDGE_ICEMAKER_OPERATING_STATE = (
+        "samsungce.fridgeIcemakerOperatingState"
+    )
+    SAMSUNG_CE_FRIDGE_INTERIOR_LIGHTING = "samsungce.fridgeInteriorLighting"
     SAMSUNG_CE_FRIDGE_PANTRY_INFO = "samsungce.fridgePantryInfo"
     SAMSUNG_CE_FRIDGE_PANTRY_MODE = "samsungce.fridgePantryMode"
     SAMSUNG_CE_FRIDGE_VACATION_MODE = "samsungce.fridgeVacationMode"
@@ -443,6 +469,8 @@ class Capability(StrEnum):
     SAMSUNG_CE_HOOD_FAN_SPEED = "samsungce.hoodFanSpeed"
     SAMSUNG_CE_HOOD_FILTER = "samsungce.hoodFilter"
     SAMSUNG_CE_HOOD_LAMP_AUTOMATION = "samsungce.hoodLampAutomation"
+    SAMSUNG_CE_HYBRID_PRECISE_COOLING = "samsungce.hybridPreciseCooling"
+    SAMSUNG_CE_ICEMAKER_NIGHT_MODE = "samsungce.icemakerNightMode"
     SAMSUNG_CE_INDIVIDUAL_CONTROL_LOCK = "samsungce.individualControlLock"
     SAMSUNG_CE_KIDS_LOCK = "samsungce.kidsLock"
     SAMSUNG_CE_KIDS_LOCK_CONTROL = "samsungce.kidsLockControl"
@@ -479,6 +507,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_POWER_SAVING_WHILE_AWAY = "samsungce.powerSavingWhileAway"
     SAMSUNG_CE_QUICK_CONTROL = "samsungce.quickControl"
     SAMSUNG_CE_RECHARGEABLE_BATTERY = "samsungce.rechargeableBattery"
+    SAMSUNG_CE_REFRESH = "samsungce.refresh"
     SAMSUNG_CE_RELATIVE_HUMIDITY_LEVEL = "samsungce.relativeHumidityLevel"
     SAMSUNG_CE_REMOTE_MANAGEMENT_DATA = "samsungce.remoteManagementData"
     SAMSUNG_CE_ROBOT_CLEANER_AUDIO_CLIP = "samsungce.robotCleanerAudioClip"
@@ -519,6 +548,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_SAC_DISPLAY_CONDITION = "samsungce.sacDisplayCondition"
     SAMSUNG_CE_SCALE_SETTINGS = "samsungce.scaleSettings"
     SAMSUNG_CE_SELF_CHECK = "samsungce.selfCheck"
+    SAMSUNG_CE_SEND_CONTENTS = "samsungce.sendContents"
     SAMSUNG_CE_SENSING_ON_SUSPEND_MODE = "samsungce.sensingOnSuspendMode"
     SAMSUNG_CE_SILENT_ACTION = "samsungce.silentAction"
     SAMSUNG_CE_SLEEP_DATA_INTEROPERATION = "samsungce.sleepDataInteroperation"
@@ -528,6 +558,8 @@ class Capability(StrEnum):
     SAMSUNG_CE_SOFTWARE_UPDATE = "samsungce.softwareUpdate"
     SAMSUNG_CE_SOFTWARE_VERSION = "samsungce.softwareVersion"
     SAMSUNG_CE_SOUND_DETECTION_SENSITIVITY = "samsungce.soundDetectionSensitivity"
+    SAMSUNG_CE_SOUND_THEME = "samsungce.soundTheme"
+    SAMSUNG_CE_STATEFUL_LAMP = "samsungce.statefulLamp"
     SAMSUNG_CE_STEAM_CLOSET_AUTO_CYCLE_LINK = "samsungce.steamClosetAutoCycleLink"
     SAMSUNG_CE_STEAM_CLOSET_CYCLE = "samsungce.steamClosetCycle"
     SAMSUNG_CE_STEAM_CLOSET_CYCLE_PRESET = "samsungce.steamClosetCyclePreset"
@@ -544,9 +576,12 @@ class Capability(StrEnum):
         "samsungce.systemAirConditionerReservation"
     )
     SAMSUNG_CE_TEMPERATURE_SETTING = "samsungce.temperatureSetting"
+    SAMSUNG_CE_TIME_ZONE = "samsungce.timeZone"
     SAMSUNG_CE_TOGGLE_SWITCH = "samsungce.toggleSwitch"
     SAMSUNG_CE_UNAVAILABLE_CAPABILITIES = "samsungce.unavailableCapabilities"
+    SAMSUNG_CE_UV_DEODORIZING = "samsungce.uvDeodorizing"
     SAMSUNG_CE_VIEW_INSIDE = "samsungce.viewInside"
+    SAMSUNG_CE_VOICE_STYLE = "samsungce.voiceStyle"
     SAMSUNG_CE_WASHER_BUBBLE_SOAK = "samsungce.washerBubbleSoak"
     SAMSUNG_CE_WASHER_CYCLE = "samsungce.washerCycle"
     SAMSUNG_CE_WASHER_CYCLE_PRESET = "samsungce.washerCyclePreset"
@@ -573,6 +608,7 @@ class Capability(StrEnum):
     SAMSUNG_CE_WELCOME_COOLING = "samsungce.welcomeCooling"
     SAMSUNG_CE_WELCOME_HUMIDITY = "samsungce.welcomeHumidity"
     SAMSUNG_CE_WELCOME_MESSAGE = "samsungce.welcomeMessage"
+    SAMSUNG_CE_WIFI_CONNECTION_INFO = "samsungce.wifiConnectionInfo"
     SAMSUNG_CE_WIFI_KIT_SUB_DEVICES = "samsungce.wifiKitSubDevices"
 
     SAMSUNG_VD_AI_ACTION = "samsungvd.aiAction"
@@ -599,6 +635,7 @@ class Capability(StrEnum):
     SAMSUNG_VD_SUPPORTS_FEATURES = "samsungvd.supportsFeatures"
     SAMSUNG_VD_SUPPORTS_POWER_ON_BY_OCF = "samsungvd.supportsPowerOnByOcf"
     SAMSUNG_VD_THING_STATUS = "samsungvd.thingStatus"
+    SAMSUNG_VD_TV_CHANNEL = "samsungvd.tvChannel"
 
     SAMSUNG_IM_ANNOUNCEMENT = "samsungim.announcement"
     SAMSUNG_IM_BIXBY_CONTENT = "samsungim.bixbyContent"
@@ -633,6 +670,14 @@ class Capability(StrEnum):
     )
     ABATEACHIEVE62503_STATELESS_CHANNEL_DOWN = "abateachieve62503.statelessChannelDown"
     ABATEACHIEVE62503_STATELESS_CHANNEL_UP = "abateachieve62503.statelessChannelUp"
+    ABATEACHIEVE62503_STATELESS_FANSPEED_DECREASE = (
+        "abateachieve62503.statelessFanspeedDecrease"
+    )
+    ABATEACHIEVE62503_STATELESS_FANSPEED_INCREASE = (
+        "abateachieve62503.statelessFanspeedIncrease"
+    )
+    ABATEACHIEVE62503_STATELESS_POWER_OFF = "abateachieve62503.statelessPowerOff"
+    ABATEACHIEVE62503_STATELESS_POWER_ON = "abateachieve62503.statelessPowerOn"
 
     ABSOLUTEWEATHER46907_LANGUAGE_SUPPORT = "absoluteweather46907.languageSupport"
     ABSOLUTEWEATHER46907_LOCK = "absoluteweather46907.lock"
@@ -675,6 +720,9 @@ class Capability(StrEnum):
     HCA_WASHER_MODE = "hca.washerMode"
 
     LEGENDABSOLUTE60149_ACTIONBUTTON2 = "legendabsolute60149.actionbutton2"
+    LEGENDABSOLUTE60149_ATM_PRESSURE_RATE_CHANGE = (
+        "legendabsolute60149.atmPressureRateChange"
+    )
     LEGENDABSOLUTE60149_ATMOS_PRESSURE = "legendabsolute60149.atmosPressure"
     LEGENDABSOLUTE60149_BELL_SOUNDS = "legendabsolute60149.bellSounds"
     LEGENDABSOLUTE60149_CIRCADIAN = "legendabsolute60149.circadian"
@@ -685,6 +733,7 @@ class Capability(StrEnum):
         "legendabsolute60149.colorTemperatureSteps"
     )
     LEGENDABSOLUTE60149_COMMAND_CLASS = "legendabsolute60149.commandClass"
+    LEGENDABSOLUTE60149_CREATE_DEVICE = "legendabsolute60149.createDevice"
     LEGENDABSOLUTE60149_CREATE_DEVICE2 = "legendabsolute60149.createDevice2"
     LEGENDABSOLUTE60149_CURRENT_LOOP = "legendabsolute60149.currentLoop"
     LEGENDABSOLUTE60149_CURRENT_TIME_PERIOD = "legendabsolute60149.currentTimePeriod"
@@ -771,6 +820,8 @@ class Capability(StrEnum):
     ORANGEBROOK39927_HUE_DISCOVERY = "orangebrook39927.hueDiscovery"
     ORANGEBROOK39927_HUE_GEOFENCE = "orangebrook39927.hueGeofence"
     ORANGEBROOK39927_HUE_GROUP = "orangebrook39927.hueGroup"
+    ORANGEBROOK39927_VIRTUAL_FACTORY = "orangebrook39927.virtualFactory"
+    ORANGEBROOK39927_VIRTUAL_INVENTORY = "orangebrook39927.virtualInventory"
 
     PARTYVOICE23922_ADD2 = "partyvoice23922.add2"
     PARTYVOICE23922_AMPERAGE = "partyvoice23922.amperage"
@@ -813,6 +864,7 @@ class Capability(StrEnum):
     PARTYVOICE23922_RESETALT = "partyvoice23922.resetalt"
     PARTYVOICE23922_RESETSELECT = "partyvoice23922.resetselect"
     PARTYVOICE23922_ROKUCURRENTAPP = "partyvoice23922.rokucurrentapp"
+    PARTYVOICE23922_ROKUKEYS2 = "partyvoice23922.rokukeys2"
     PARTYVOICE23922_ROKUMEDIASTATUS = "partyvoice23922.rokumediastatus"
     PARTYVOICE23922_ROKUPOWER = "partyvoice23922.rokupower"
     PARTYVOICE23922_ROKUTVKEYS2 = "partyvoice23922.rokutvkeys2"
@@ -948,6 +1000,7 @@ class Capability(StrEnum):
     STSE_CUBE_ACTION = "stse.cubeAction"
     STSE_CUBE_FACE = "stse.cubeFace"
     STSE_DEVICE_MODE = "stse.deviceMode"
+    STSE_INVISIBLE_CAPABILITIES = "stse.invisibleCapabilities"
 
     STSOLUTIONS_DEMAND_RESPONSE_MODE = "stsolutions.demandResponseMode"
     STSOLUTIONS_DEMAND_RESPONSE_STATUS = "stsolutions.demandResponseStatus"
