@@ -8,7 +8,7 @@ from typing import Any, TYPE_CHECKING
 
 import pytest
 from aiohttp.hdrs import METH_GET, METH_POST
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 from yarl import URL
 
 from pysmartthings import SmartThings, Capability, Command, SmartThingsCommandError
@@ -45,7 +45,7 @@ if TYPE_CHECKING:
 )
 async def test_fetching_devices(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
     fixture: str,
 ) -> None:
@@ -79,7 +79,7 @@ async def test_fetching_devices(
 )
 async def test_fetching_specific_devices(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     kwargs: dict[str, Any],
     params: dict[str, Any],
 ) -> None:
@@ -102,7 +102,7 @@ async def test_fetching_specific_devices(
 
 async def test_fetching_single_device(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting a single device."""
@@ -200,7 +200,7 @@ async def test_fetching_single_device(
 )
 async def test_fetching_status_of_single_device(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
     fixture: str,
 ) -> None:
@@ -225,7 +225,7 @@ async def test_fetching_status_of_single_device(
 
 async def test_fetching_health(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting health state of a device."""
@@ -260,7 +260,7 @@ async def test_fetching_health(
 )
 async def test_executing_command(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     capability: Capability,
     command: Command,
     argument: int | str | list[Any] | dict[str, Any] | None,
@@ -286,7 +286,7 @@ async def test_executing_command(
 
 async def test_executing_command_error(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test executing a command."""
     responses.post(
@@ -310,7 +310,7 @@ async def test_executing_command_error(
 
 async def test_fetching_unknown_capability(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
     caplog: pytest.LogCaptureFixture,
 ) -> None:
@@ -344,7 +344,7 @@ async def test_fetching_unknown_capability(
 
 async def test_fetching_unknown_category(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     caplog: pytest.LogCaptureFixture,
 ) -> None:
     """Test getting a single device."""
@@ -363,7 +363,7 @@ async def test_fetching_unknown_category(
 
 async def test_fetching_multiple_pages(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test getting multiple device pages."""
     responses.get(
@@ -389,15 +389,15 @@ async def test_fetching_multiple_pages(
         METH_GET,
         headers=HEADERS,
         params={
-            "max": 200,
-            "page": 1,
+            "max": "200",
+            "page": "1",
         },
         json=None,
     )
 
 
 async def test_fetching_multiple_pages_raw(
-    client: SmartThings, responses: aioresponses, snapshot: SnapshotAssertion
+    client: SmartThings, responses: aiointercept, snapshot: SnapshotAssertion
 ) -> None:
     """Test getting multiple device pages."""
     responses.get(
@@ -423,8 +423,8 @@ async def test_fetching_multiple_pages_raw(
         METH_GET,
         headers=HEADERS,
         params={
-            "max": 200,
-            "page": 1,
+            "max": "200",
+            "page": "1",
         },
         json=None,
     )

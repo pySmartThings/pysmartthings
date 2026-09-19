@@ -1,7 +1,7 @@
 """Tests for SmartThings SmartApp endpoints."""
 
 from aiohttp.hdrs import METH_DELETE, METH_GET
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 from syrupy import SnapshotAssertion
 
 from pysmartthings import SmartThings
@@ -12,7 +12,7 @@ from .const import MOCK_URL, HEADERS
 
 async def test_deleting_smart_app(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test deleting a SmartApp."""
     responses.delete(
@@ -32,7 +32,7 @@ async def test_deleting_smart_app(
 
 async def test_deleting_installed_app(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test deleting an installed SmartApp."""
     responses.delete(
@@ -52,7 +52,7 @@ async def test_deleting_installed_app(
 
 async def test_get_installed_app(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting an installed SmartApp."""

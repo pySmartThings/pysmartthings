@@ -1,7 +1,7 @@
 """Tests for the scene module."""
 
 from aiohttp.hdrs import METH_GET, METH_POST
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 from syrupy import SnapshotAssertion
 
 from pysmartthings import SmartThings
@@ -11,7 +11,7 @@ from tests.const import MOCK_URL, HEADERS
 
 async def test_fetching_all_scenes(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting all scenes."""
@@ -32,7 +32,7 @@ async def test_fetching_all_scenes(
 
 async def test_fetch_scenes_for_location(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test getting all scenes."""
     responses.get(
@@ -52,7 +52,7 @@ async def test_fetch_scenes_for_location(
 
 async def test_executing_scene(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test executing a scene."""
     responses.post(

@@ -1,9 +1,9 @@
 """Define test configuration."""
 
-from collections.abc import AsyncGenerator, Generator
+from collections.abc import AsyncGenerator
 
 from aiohttp import ClientSession
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 
 from pysmartthings import SmartThings
 import pytest
@@ -32,7 +32,7 @@ async def client() -> AsyncGenerator[SmartThings]:
 
 
 @pytest.fixture(name="responses")
-def aioresponses_fixture() -> Generator[aioresponses]:
-    """Return aioresponses fixture."""
-    with aioresponses() as mocked_responses:
+async def aiointercept_fixture() -> AsyncGenerator[aiointercept]:
+    """Return aiointercept fixture."""
+    async with aiointercept(mock_external_urls=True) as mocked_responses:
         yield mocked_responses

@@ -1,7 +1,7 @@
 """Tests for the Location module."""
 
 from aiohttp.hdrs import METH_GET
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 from syrupy import SnapshotAssertion
 
 from pysmartthings import SmartThings
@@ -12,7 +12,7 @@ from .const import MOCK_URL, HEADERS
 
 async def test_fetching_all_locations(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting all locations."""
@@ -31,7 +31,7 @@ async def test_fetching_all_locations(
 
 async def test_fetching_single_location(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting a single location."""

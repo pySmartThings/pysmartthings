@@ -1,7 +1,7 @@
 """Tests for the room module."""
 
 from aiohttp.hdrs import METH_GET
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 from syrupy import SnapshotAssertion
 
 from pysmartthings import SmartThings
@@ -12,7 +12,7 @@ from .const import MOCK_URL, HEADERS
 
 async def test_fetching_all_rooms(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting all rooms for a location."""
@@ -33,7 +33,7 @@ async def test_fetching_all_rooms(
 
 async def test_fetching_single_room(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test getting a single room."""

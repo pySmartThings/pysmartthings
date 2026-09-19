@@ -54,7 +54,7 @@ dev = [
     "yamllint==1.38.0",
     "ruff==0.15.22",
     "syrupy==6.1.1",
-    "aioresponses==0.7.9",
+    "aiointercept==0.1.10",
     "treelib==1.8.0",
     "pyperclip==1.11.0",
     "mypy==2.3.1",
