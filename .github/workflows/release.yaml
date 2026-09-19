@@ -48,11 +48,7 @@ jobs:
           inputs: ./dist/*.tar.gz ./dist/*.whl
           release-signing-artifacts: true
         env:
-          # setup-uv exports UV_PYTHON / UV_PYTHON_INSTALL_DIR for the whole
-          # job. This action bootstraps its own uv-managed virtualenv, and the
-          # leaked variables make uv install sigstore into a different
-          # interpreter than the one the action runs, producing
-          # "No module named sigstore" / "No module named 'requests'".
-          # Clear them so the action sets up its environment as designed.
+          # Clear setup-uv's job-wide vars so this action's own uv-managed
+          # virtualenv bootstraps correctly (else: No module named sigstore).
           UV_PYTHON: ""
           UV_PYTHON_INSTALL_DIR: ""
