@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.13, <4"
 resolution-markers = [
     "python_full_version >= '3.15'",
@@ -98,16 +98,16 @@ wheels = [
 
 [[package]]
 name = "aiointercept"
-version = "0.1.10"
+version = "0.1.12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
     { name = "multidict" },
     { name = "yarl" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6d/dd/da393ac24bfc44a49b1aa8d0dc01672ea8cde744f3118e3c4cceffbe9898/aiointercept-0.1.10.tar.gz", hash = "sha256:360129466937d3f12d07451a6685a59dee4823c4aa5e28ddb0ef3202e9ed1627", size = 174106, upload-time = "2026-09-01T14:35:04.774Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/0e/ba2ed3a3ecb3f4edfe21bd4af7325c41118d18ccda2b4132bcc1d77a3049/aiointercept-0.1.12.tar.gz", hash = "sha256:d5f36e5ed69ffa7caf9b686ca7a32cc26d57564ff1a68c5a2a94c6c9c0f7a75d", size = 174930, upload-time = "2026-09-28T18:38:42.447Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/03/8d/920952902c6df0c8a8fa4abac63620c028e54aa2a4cebc3b524a29747205/aiointercept-0.1.10-py3-none-any.whl", hash = "sha256:7b87ffacd995c9beb6b990549130f56a646b81fb5b7c8cb7775989ba5ae3a69b", size = 19574, upload-time = "2026-09-01T14:35:03.224Z" },
+    { url = "https://files.pythonhosted.org/packages/5f/62/d818ad10279a09b2e4ebc39c82990318fa768a8c1bc0d401c90ff1c23bdb/aiointercept-0.1.12-py3-none-any.whl", hash = "sha256:6b63d0512bb0d3ff1d6e2f43ba491c2ea9ad5d99e10114995f6582d7314e66b9", size = 19883, upload-time = "2026-09-28T18:38:41.076Z" },
 ]
 
 [[package]]
@@ -1019,6 +1019,7 @@ wheels = [
 name = "pysmartthings"
 version = "0.0.0"
 source = { editable = "." }
+default-groups = "all"
 dependencies = [
     { name = "aiohttp" },
     { name = "mashumaro" },
@@ -1059,7 +1060,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "aiohttp", specifier = "<3.15" },
-    { name = "aiointercept", specifier = "==0.1.10" },
+    { name = "aiointercept", specifier = "==0.1.12" },
     { name = "codespell", specifier = "==2.4.3" },
     { name = "covdefaults", specifier = "==2.3.0" },
     { name = "coverage", extras = ["toml"], specifier = "==7.16.1" },
