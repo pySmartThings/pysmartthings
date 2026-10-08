@@ -3984,6 +3984,48 @@
     }),
   ])
 # ---
+# name: test_fetching_devices[devices_19]
+  list([
+    dict({
+      'components': dict({
+        'main': dict({
+          'capabilities': list([
+            <Capability.SWITCH: 'switch'>,
+            <Capability.SWITCH_LEVEL: 'switchLevel'>,
+            <Capability.REFRESH: 'refresh'>,
+          ]),
+          'id': 'main',
+          'label': 'Masterbed room lights',
+          'manufacturer_category': <Category.SWITCH: 'Switch'>,
+          'user_category': <Category.SWITCH: 'Switch'>,
+        }),
+      }),
+      'device_id': '5a0b6c33-4e1f-4f0d-9c8a-2d6b0e7f1a19',
+      'device_manufacturer_code': '0063-4944-3130',
+      'device_network_type': None,
+      'device_type_id': None,
+      'device_type_name': None,
+      'hub': None,
+      'label': 'Garage door sensor',
+      'location_id': 'c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ',
+      'matter': None,
+      'name': 'GE In-Wall Smart Dimmer',
+      'ocf': None,
+      'parent_device_id': '074fa784-8be8-4c70-8e22-6f5ed6f81b7e',
+      'presentation_id': '31cf01ee-cb49-3d95-ac2d-2afab47f25c7',
+      'room_id': '19cec9f9-9947-4568-a98e-ab09a44d2b56',
+      'type': <DeviceType.ZWAVE: 'ZWAVE'>,
+      'viper': None,
+      'zigbee': None,
+      'zwave': dict({
+        'manufacturer_id': None,
+        'network_id': '02',
+        'product_id': None,
+        'product_type': None,
+      }),
+    }),
+  ])
+# ---
 # name: test_fetching_devices[devices_2]
   list([
     dict({

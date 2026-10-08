@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "deviceId": "5a0b6c33-4e1f-4f0d-9c8a-2d6b0e7f1a19",
+      "name": "GE In-Wall Smart Dimmer",
+      "label": "Garage door sensor",
+      "manufacturerName": "SmartThingsCommunity",
+      "presentationId": "31cf01ee-cb49-3d95-ac2d-2afab47f25c7",
+      "deviceManufacturerCode": "0063-4944-3130",
+      "locationId": "c4d3b2a1-09f8-765e-4d3c-2b1a09f8e7d6 ",
+      "roomId": "19cec9f9-9947-4568-a98e-ab09a44d2b56",
+      "components": [
+        {
+          "id": "main",
+          "label": "Masterbed room lights",
+          "capabilities": [
+            {
+              "id": "switch",
+              "version": 1
+            },
+            {
+              "id": "switchLevel",
+              "version": 1
+            },
+            {
+              "id": "refresh",
+              "version": 1
+            }
+          ],
+          "categories": [
+            {
+              "name": "Switch",
+              "categoryType": "manufacturer"
+            },
+            {
+              "name": "Switch",
+              "categoryType": "user"
+            }
+          ]
+        }
+      ],
+      "createTime": "2020-03-02T23:56:45Z",
+      "parentDeviceId": "074fa784-8be8-4c70-8e22-6f5ed6f81b7e",
+      "profile": {
+        "id": "ec5458c2-c011-3479-a59b-82b42820c2f7"
+      },
+      "zwave": {
+        "networkId": "02",
+        "driverId": "f2f2679a-24fb-40da-9322-4c85988e9b53",
+        "executingLocally": true,
+        "hubId": "ba093390-3773-4b09-96d5-77c3e0c22e95",
+        "networkSecurityLevel": "ZWAVE_S0_FAILED",
+        "provisioningState": "PROVISIONED"
+      },
+      "type": "ZWAVE",
+      "restrictionTier": 0,
+      "allowed": [],
+      "executionContext": "LOCAL"
+    }
+  ],
+  "_links": {}
+}
