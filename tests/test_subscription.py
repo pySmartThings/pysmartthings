@@ -399,7 +399,7 @@ async def test_subscribe_retries_on_unexpected_error(
     responses: aiointercept,
     caplog: pytest.LogCaptureFixture,
 ) -> None:
-    """Test an unparseable event backs off, cleans up and resubscribes."""
+    """Test an unparsable event backs off, cleans up and resubscribes."""
     mock_create_subscription(responses)
     responses.get(
         REGISTRATION_URL,
