@@ -1,7 +1,7 @@
 """Tests for SmartThings apps endpoints."""
 
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 import pytest
 from syrupy import SnapshotAssertion
 
@@ -19,7 +19,7 @@ APP_ID = "8d3b1c1a-2f0d-4b0a-9c1e-9f1234567890"
 
 async def test_create_app(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test creating an app."""
@@ -61,7 +61,7 @@ async def test_create_app(
 
 async def test_list_apps(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test listing apps."""
@@ -82,7 +82,7 @@ async def test_list_apps(
 
 async def test_regenerate_oauth(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test regenerating an app's OAuth client id and secret."""
@@ -113,7 +113,7 @@ async def test_regenerate_oauth(
 
 async def test_delete_app(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test deleting an app."""
     responses.delete(f"{MOCK_URL}/smartapps/{APP_ID}", status=200)
@@ -129,7 +129,7 @@ async def test_delete_app(
 
 async def test_delete_app_not_found(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test deleting an app that does not exist."""
     responses.delete(f"{MOCK_URL}/smartapps/{APP_ID}", status=404)
@@ -139,7 +139,7 @@ async def test_delete_app_not_found(
 
 async def test_create_app_quota_exceeded(
     client: SmartThings,
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test creating an app when the quota is exceeded."""
     responses.post(f"{MOCK_URL}/smartapps", status=402)
