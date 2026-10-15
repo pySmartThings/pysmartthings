@@ -7,16 +7,21 @@ from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, Self, cast
 
 from aiohttp import ClientConnectionError, ClientError, ClientSession, ClientTimeout
-from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
+from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT, USER_AGENT
 import orjson
 from yarl import URL
 
-from .const import API_BASE, API_VERSION, LOGGER, SSE_READ_TIMEOUT
+from .const import API_BASE, DEFAULT_USER_AGENT, LOGGER, SSE_READ_TIMEOUT
 from .exceptions import (
     SmartThingsAuthenticationFailedError,
+    SmartThingsBlockedError,
     SmartThingsCommandError,
     SmartThingsConnectionError,
     SmartThingsForbiddenError,
+    SmartThingsNotFoundError,
+    SmartThingsQuotaExceededError,
+    SmartThingsRateLimitError,
+    SmartThingsServerError,
     SmartThingsSinkError,
 )
 from .models import (
@@ -40,6 +45,10 @@ from .models import (
     RoomResponse,
     Scene,
     SceneResponse,
+    SmartApp,
+    SmartAppListResponse,
+    SmartAppOAuthRegenerateResponse,
+    SmartAppSummary,
     Status,
     Subscription,
 )
@@ -57,6 +66,7 @@ class SmartThings:
     """Define a class for interacting with the SmartThings Cloud API."""
 
     request_timeout: int = 10
+    user_agent: str | None = None
     _close_session: bool = False
     _token: str | None = None
     session: ClientSession | None = None
@@ -90,10 +100,19 @@ class SmartThings:
         """Authenticate the user with a token."""
         self._token = token
 
+    def _get_user_agent_header(self) -> dict[str, str]:
+        """Get the User-Agent header, unless the session already sets one."""
+        if self.user_agent:
+            return {USER_AGENT: self.user_agent}
+        if self.session is not None and USER_AGENT in self.session.headers:
+            return {}
+        return {USER_AGENT: DEFAULT_USER_AGENT}
+
     def _get_headers(self) -> dict[str, str]:
         """Get headers for requests."""
         return {
             "Authorization": f"Bearer {self._token}",
+            **self._get_user_agent_header(),
         }
 
     async def _request(
@@ -114,7 +133,7 @@ class SmartThings:
         await self.refresh_token()
 
         headers = {
-            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
+            "Accept": "application/json",
             **self._get_headers(),
         }
 
@@ -156,12 +175,32 @@ class SmartThings:
             msg = "Authentication failed with SmartThings"
             raise SmartThingsAuthenticationFailedError(msg)
 
+        if response.status == 402:
+            msg = "Quota exceeded"
+            raise SmartThingsQuotaExceededError(msg)
+
         if response.status == 403:
             msg = "Forbidden"
             raise SmartThingsForbiddenError(msg)
 
+        if response.status == 404:
+            msg = "Not found"
+            raise SmartThingsNotFoundError(msg)
+
         if response.status in {409, 422}:
             raise SmartThingsCommandError(ErrorResponse.from_json(text))
+
+        if response.status == 418:
+            msg = "SmartThings has flagged this client as problematic"
+            raise SmartThingsBlockedError(msg)
+
+        if response.status == 429:
+            msg = "Rate limit exceeded"
+            raise SmartThingsRateLimitError(msg)
+
+        if response.status >= 500:
+            msg = f"SmartThings server error ({response.status})"
+            raise SmartThingsServerError(msg)
 
         return text
 
@@ -347,8 +386,9 @@ class SmartThings:
         ).joinpath(f"v1/apps/{smart_app_id}")
 
         headers = {
-            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
+            "Accept": "application/json",
             "Authorization": f"Bearer {personal_access_token}",
+            **self._get_user_agent_header(),
         }
 
         await self.__internal_request(METH_DELETE, url, headers)
@@ -364,8 +404,9 @@ class SmartThings:
         ).joinpath(f"v1/installedapps/{installed_app_id}")
 
         headers = {
-            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
+            "Accept": "application/json",
             "Authorization": f"Bearer {personal_access_token}",
+            **self._get_user_agent_header(),
         }
 
         resp = await self.__internal_request(METH_GET, url, headers)
@@ -382,8 +423,9 @@ class SmartThings:
         ).joinpath(f"v1/installedapps/{installed_app_id}")
 
         headers = {
-            "Accept": f"application/vnd.smartthings+json;v={API_VERSION}",
+            "Accept": "application/json",
             "Authorization": f"Bearer {personal_access_token}",
+            **self._get_user_agent_header(),
         }
 
         await self.__internal_request(METH_DELETE, url, headers)
@@ -465,17 +507,13 @@ class SmartThings:
             callback
         )
 
-    async def create_subscription(
-        self, location_id: str, installed_app_id: str
-    ) -> Subscription:
+    async def create_subscription(self, location_id: str) -> Subscription:
         """Create a subscription."""
         try:
             resp = await self._post(
-                "subscriptions",
+                "v1/sse/subscriptions",
                 data={
                     "name": "My Home Assistant sub",
-                    "version": API_VERSION,
-                    "clientDeviceId": f"iapp_{installed_app_id}",
                     "subscriptionFilters": [
                         {
                             "type": "LOCATIONIDS",
@@ -490,6 +528,10 @@ class SmartThings:
                 },
             )
         except SmartThingsCommandError as err:
+            if not any(
+                detail.code == "LimitExceeded" for detail in err.error.error.details
+            ):
+                raise
             msg = "Reached limit of subscriptions"
             raise SmartThingsSinkError(msg) from err
         return Subscription.from_json(resp)
@@ -622,10 +664,9 @@ class SmartThings:
         LOGGER.debug("Connection opened")
         self.__retry_count = 0
 
-    async def subscribe(  # noqa: PLR0912, PLR0915  # pylint: disable=too-many-statements,too-many-branches
+    async def subscribe(
         self,
         location_id: str,
-        installed_app_id: str,
         initial_subscription: Subscription | None = None,
     ) -> None:
         """Create a subscription."""
@@ -635,7 +676,9 @@ class SmartThings:
             self.session = ClientSession()
             self._close_session = True
         session = self.session
+        subscription_id: str | None
         while True:
+            subscription_id = None
             try:
                 if using_initial:
                     assert initial_subscription is not None  # noqa: S101
@@ -643,9 +686,7 @@ class SmartThings:
                     subscription_id = initial_subscription.subscription_id
                     subscription_url = initial_subscription.registration_url
                 else:
-                    subscription = await self.create_subscription(
-                        location_id, installed_app_id
-                    )
+                    subscription = await self.create_subscription(location_id)
                     subscription_id = subscription.subscription_id
                     subscription_url = subscription.registration_url
                     LOGGER.debug("Subscription created: %s", subscription)
@@ -653,44 +694,101 @@ class SmartThings:
                         self.new_subscription_id_callback(subscription_id)
                 await self._internal_subscribe(session, subscription_url)
                 using_initial = False
-                await self.delete_subscription(subscription_id)
+                await self._delete_subscription_if_exists(subscription_id)
             except SmartThingsSinkError:
                 # This is only triggered by creating a new one
                 # So we don't have an active one and thus don't have to delete one
                 if self.max_connections_reached_callback:
                     self.max_connections_reached_callback()
-                    break
+                break
+            except SmartThingsBlockedError:
+                # Retrying a flagged client keeps being rejected, so give up.
+                raise
             except (ClientError, ConnectionError):
                 msg = "Connection error occurred while subscribing to events"
                 LOGGER.exception(msg)
-                await asyncio.sleep(2**self.__retry_count)
-                self.__retry_count += 1
-                try:
-                    await self.delete_subscription(subscription_id)
-                except SmartThingsConnectionError:
-                    LOGGER.debug("Connection error while deleting subscription")
-                    if self.max_connections_reached_callback:
-                        self.max_connections_reached_callback()
+                await self._backoff_and_clean_up(subscription_id)
                 using_initial = False
             except Exception:  # pylint: disable=broad-except  # noqa: BLE001
                 msg = "Error occurred while subscribing to events"
                 LOGGER.exception(msg)
-                await asyncio.sleep(2**self.__retry_count)
-                self.__retry_count += 1
-                try:
-                    await self.delete_subscription(subscription_id)
-                except SmartThingsConnectionError:
-                    LOGGER.debug("Unknown error while deleting subscription")
-                    if self.max_connections_reached_callback:
-                        self.max_connections_reached_callback()
+                await self._backoff_and_clean_up(subscription_id)
                 using_initial = False
+
+    async def _backoff_and_clean_up(self, subscription_id: str | None) -> None:
+        """Wait before retrying and delete the failed subscription, if any."""
+        await asyncio.sleep(2**self.__retry_count)
+        self.__retry_count += 1
+        if subscription_id is None:
+            return
+        try:
+            await self._delete_subscription_if_exists(subscription_id)
+        except SmartThingsConnectionError:
+            LOGGER.debug("Connection error while deleting subscription")
+            if self.max_connections_reached_callback:
+                self.max_connections_reached_callback()
+
+    async def _delete_subscription_if_exists(self, subscription_id: str) -> None:
+        """Delete a subscription, treating an expired or missing one as deleted."""
+        try:
+            await self.delete_subscription(subscription_id)
+        except (SmartThingsForbiddenError, SmartThingsNotFoundError):
+            LOGGER.debug("Subscription %s already expired or deleted", subscription_id)
+            if self.new_subscription_id_callback:
+                self.new_subscription_id_callback(None)
 
     async def delete_subscription(self, subscription_id: str) -> None:
         """Delete a subscription."""
         LOGGER.debug("Deleting subscription: %s", subscription_id)
-        await self._delete(f"subscriptions/{subscription_id}")
+        await self._delete(f"v1/sse/subscriptions/{subscription_id}")
         if self.new_subscription_id_callback:
             self.new_subscription_id_callback(None)
+
+    async def create_app(
+        self,
+        app_name: str,
+        display_name: str,
+        description: str,
+        redirect_uris: list[str],
+        scopes: list[str],
+    ) -> SmartApp:
+        """Create an API-only SmartApp with OAuth-In credentials."""
+        resp = await self._post(
+            "smartapps",
+            data={
+                "appName": app_name,
+                "displayName": display_name,
+                "description": description,
+                "appType": "API_ONLY",
+                "classifications": ["CONNECTED_SERVICE"],
+                "apiOnly": {},
+                "oauth": {
+                    "clientName": display_name,
+                    "scope": scopes,
+                    "redirectUris": redirect_uris,
+                },
+            },
+        )
+        return SmartApp.from_json(resp)
+
+    async def list_apps(self) -> list[SmartAppSummary]:
+        """List API-only SmartApps for the authenticated account."""
+        resp = await self._get("smartapps")
+        return SmartAppListResponse.from_json(resp).items
+
+    async def regenerate_oauth(
+        self, app_id: str, client_name: str, scopes: list[str]
+    ) -> SmartAppOAuthRegenerateResponse:
+        """Regenerate the OAuth ClientId and Secret for this appId."""
+        resp = await self._post(
+            f"smartapps/{app_id}/oauth/generate",
+            data={"clientName": client_name, "scope": scopes},
+        )
+        return SmartAppOAuthRegenerateResponse.from_json(resp)
+
+    async def delete_app(self, app_id: str) -> None:
+        """Delete an app."""
+        await self._delete(f"smartapps/{app_id}")
 
     async def close(self) -> None:
         """Close open client session."""

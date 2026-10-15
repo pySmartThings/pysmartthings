@@ -1,10 +1,21 @@
 """Define consts for the pysmartthings package."""
 
+from importlib.metadata import PackageNotFoundError, version
 import logging
+import os
 
-API_BASE = "api.smartthings.com"
-# Version required to use SSE
-API_VERSION = 20250122
+API_BASE = os.environ.get("SMARTTHINGS_API_BASE", "api.smartthings.com")
+
+try:
+    __version__ = version("pysmartthings")
+except PackageNotFoundError:  # pragma: no cover
+    __version__ = "unknown"
+
+# Sent when the caller has not set a User-Agent, as the SSE Subscriptions API
+# requires a human-readable one. Integrations should set their own.
+DEFAULT_USER_AGENT = (
+    f"pysmartthings/{__version__} (+https://github.com/pySmartThings/pysmartthings)"
+)
 
 LOGGER = logging.getLogger(__package__)
 
