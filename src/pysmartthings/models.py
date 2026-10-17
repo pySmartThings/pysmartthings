@@ -397,9 +397,17 @@ class Zwave(DataClassORJSONMixin):
     """Zwave model."""
 
     network_id: str = field(metadata=field_options(alias="networkId"))
-    manufacturer_id: int = field(metadata=field_options(alias="manufacturerId"))
-    product_type: int = field(metadata=field_options(alias="productType"))
-    product_id: int = field(metadata=field_options(alias="productId"))
+    # SmartThings leaves these out for some devices, e.g. when the secure
+    # inclusion failed (networkSecurityLevel ZWAVE_S0_FAILED)
+    manufacturer_id: int | None = field(
+        default=None, metadata=field_options(alias="manufacturerId")
+    )
+    product_type: int | None = field(
+        default=None, metadata=field_options(alias="productType")
+    )
+    product_id: int | None = field(
+        default=None, metadata=field_options(alias="productId")
+    )
 
 
 @dataclass
