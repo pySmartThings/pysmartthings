@@ -694,15 +694,19 @@ class SmartThings:
                         self.new_subscription_id_callback(subscription_id)
                 await self._internal_subscribe(session, subscription_url)
                 using_initial = False
-                await self._delete_subscription_if_exists(subscription_id)
+                await self.delete_subscription(subscription_id)
             except SmartThingsSinkError:
                 # This is only triggered by creating a new one
                 # So we don't have an active one and thus don't have to delete one
                 if self.max_connections_reached_callback:
                     self.max_connections_reached_callback()
                 break
-            except SmartThingsBlockedError:
-                # Retrying a flagged client keeps being rejected, so give up.
+            except (
+                SmartThingsAuthenticationFailedError,
+                SmartThingsBlockedError,
+                SmartThingsForbiddenError,
+            ):
+                # Retrying keeps being rejected, so leave it to the caller.
                 raise
             except (ClientError, ConnectionError):
                 msg = "Connection error occurred while subscribing to events"
@@ -722,25 +726,19 @@ class SmartThings:
         if subscription_id is None:
             return
         try:
-            await self._delete_subscription_if_exists(subscription_id)
+            await self.delete_subscription(subscription_id)
         except SmartThingsConnectionError:
             LOGGER.debug("Connection error while deleting subscription")
             if self.max_connections_reached_callback:
                 self.max_connections_reached_callback()
 
-    async def _delete_subscription_if_exists(self, subscription_id: str) -> None:
+    async def delete_subscription(self, subscription_id: str) -> None:
         """Delete a subscription, treating an expired or missing one as deleted."""
+        LOGGER.debug("Deleting subscription: %s", subscription_id)
         try:
-            await self.delete_subscription(subscription_id)
+            await self._delete(f"v1/sse/subscriptions/{subscription_id}")
         except (SmartThingsForbiddenError, SmartThingsNotFoundError):
             LOGGER.debug("Subscription %s already expired or deleted", subscription_id)
-            if self.new_subscription_id_callback:
-                self.new_subscription_id_callback(None)
-
-    async def delete_subscription(self, subscription_id: str) -> None:
-        """Delete a subscription."""
-        LOGGER.debug("Deleting subscription: %s", subscription_id)
-        await self._delete(f"v1/sse/subscriptions/{subscription_id}")
         if self.new_subscription_id_callback:
             self.new_subscription_id_callback(None)
 

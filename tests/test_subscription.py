@@ -17,8 +17,10 @@ from pysmartthings import (
     Capability,
     Lifecycle,
     SmartThings,
+    SmartThingsAuthenticationFailedError,
     SmartThingsBlockedError,
     SmartThingsCommandError,
+    SmartThingsForbiddenError,
     SmartThingsRateLimitError,
     SmartThingsServerError,
     SmartThingsSinkError,
@@ -213,6 +215,22 @@ async def test_delete_subscription(
         params=None,
         json=None,
     )
+    new_subscription_id_callback.assert_called_once_with(None)
+
+
+@pytest.mark.parametrize("status", [403, 404])
+async def test_delete_expired_subscription(
+    client: SmartThings,
+    responses: aiointercept,
+    status: int,
+) -> None:
+    """Test deleting an expired or missing subscription counts as deleted."""
+    responses.delete(SUBSCRIPTION_URL, status=status)
+    new_subscription_id_callback = MagicMock()
+    client.new_subscription_id_callback = new_subscription_id_callback
+
+    await client.delete_subscription(SUBSCRIPTION_ID)
+
     new_subscription_id_callback.assert_called_once_with(None)
 
 
@@ -574,3 +592,33 @@ async def test_subscribe_create_error_does_not_delete(
     mock_sleep.assert_awaited_once_with(1)
     with pytest.raises(AssertionError):
         responses.assert_any_call(SUBSCRIPTION_URL, METH_DELETE)
+
+
+@pytest.mark.parametrize(
+    ("status", "error"),
+    [
+        (401, SmartThingsAuthenticationFailedError),
+        (403, SmartThingsForbiddenError),
+    ],
+)
+async def test_subscribe_reconnect_authorization_error_raises(
+    client: SmartThings,
+    responses: aiointercept,
+    status: int,
+    error: type[Exception],
+) -> None:
+    """Test an authorization error while resubscribing stops instead of retrying."""
+    mock_create_subscription(responses)
+    responses.get(REGISTRATION_URL, status=200, body=GOODBYE)
+    responses.delete(SUBSCRIPTION_URL, status=200)
+    responses.post(SUBSCRIPTIONS_URL, status=status)
+
+    with (
+        patch(
+            "pysmartthings.smartthings.asyncio.sleep", new_callable=AsyncMock
+        ) as mock_sleep,
+        pytest.raises(error),
+    ):
+        await client.subscribe(LOCATION_ID)
+
+    mock_sleep.assert_not_awaited()
