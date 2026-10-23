@@ -30,6 +30,46 @@ class InstalledApp(DataClassORJSONMixin):
 
 
 @dataclass
+class OAuthCredentials(DataClassORJSONMixin):
+    """OAuth clientId/clientSecret pair shared by SmartApp OAuth responses."""
+
+    client_id: str = field(metadata=field_options(alias="oauthClientId"))
+    client_secret: str = field(metadata=field_options(alias="oauthClientSecret"))
+
+
+@dataclass
+class SmartApp(OAuthCredentials):
+    """API-only (OAuth) SmartApp model."""
+
+    app_id: str = field(metadata=field_options(alias="appId"))
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[str, Any]) -> dict[str, Any]:
+        """Pre deserialize hook."""
+        return {**d, "appId": d["app"]["appId"]}
+
+
+@dataclass
+class SmartAppSummary(DataClassORJSONMixin):
+    """Summary of a SmartApp as returned by the apps list endpoint."""
+
+    app_id: str = field(metadata=field_options(alias="appId"))
+    app_name: str = field(metadata=field_options(alias="appName"))
+
+
+@dataclass
+class SmartAppListResponse(DataClassORJSONMixin):
+    """Response model for listing SmartApps."""
+
+    items: list[SmartAppSummary]
+
+
+@dataclass
+class SmartAppOAuthRegenerateResponse(OAuthCredentials):
+    """API-only OAuth Client Regenerate Response model."""
+
+
+@dataclass
 class BaseLocation(DataClassORJSONMixin):
     """Base location model."""
 

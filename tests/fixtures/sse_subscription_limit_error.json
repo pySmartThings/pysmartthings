@@ -1,0 +1,15 @@
+{
+  "requestId": "6227382114813935616",
+  "error": {
+    "code": "ConstraintViolationError",
+    "message": "The request is malformed.",
+    "details": [
+      {
+        "code": "LimitExceeded",
+        "target": "subscriptions",
+        "message": "Maximum number of subscriptions reached",
+        "details": []
+      }
+    ]
+  }
+}
