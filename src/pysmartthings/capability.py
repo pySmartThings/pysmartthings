@@ -628,6 +628,7 @@ class Capability(StrEnum):
     SAMSUNG_VD_MEDIA_INPUT_SOURCE = "samsungvd.mediaInputSource"
     SAMSUNG_VD_MULTIVIEW = "samsungvd.multiview"
     SAMSUNG_VD_PICTURE_MODE = "samsungvd.pictureMode"
+    SAMSUNG_VD_REFRESH = "samsungvd.refresh"
     SAMSUNG_VD_REMOTE_CONTROL = "samsungvd.remoteControl"
     SAMSUNG_VD_SOUND_DETECTION = "samsungvd.soundDetection"
     SAMSUNG_VD_SOUND_FROM = "samsungvd.soundFrom"
@@ -743,10 +744,12 @@ class Capability(StrEnum):
         "legendabsolute60149.deviceAssociationType"
     )
     LEGENDABSOLUTE60149_DEVICE_INFO = "legendabsolute60149.deviceInfo"
+    LEGENDABSOLUTE60149_DEVICE_NAME = "legendabsolute60149.deviceName"
     LEGENDABSOLUTE60149_DRIVER_VERSION1 = "legendabsolute60149.driverVersion1"
     LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND = "legendabsolute60149.effectsSetCommand"
     LEGENDABSOLUTE60149_ENERGY_RESET1 = "legendabsolute60149.energyReset1"
     LEGENDABSOLUTE60149_EVEN_ODD_DAY = "legendabsolute60149.evenOddDay"
+    LEGENDABSOLUTE60149_EXECUTE_RULE_NUMBER = "legendabsolute60149.executeRuleNumber"
     LEGENDABSOLUTE60149_FAN_CYCLIC_MODE = "legendabsolute60149.fanCyclicMode"
     LEGENDABSOLUTE60149_FAN_NEXT_CHANGE = "legendabsolute60149.fanNextChange"
     LEGENDABSOLUTE60149_FORCED_ON_LEVEL = "legendabsolute60149.forcedOnLevel"
@@ -773,6 +776,7 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_LOCAL_WEEK_DAY = "legendabsolute60149.localWeekDay"
     LEGENDABSOLUTE60149_LOCAL_YEAR = "legendabsolute60149.localYear"
     LEGENDABSOLUTE60149_LOOPS_NUMBER = "legendabsolute60149.loopsNumber"
+    LEGENDABSOLUTE60149_MANUFACTURER = "legendabsolute60149.manufacturer"
     LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION = (
         "legendabsolute60149.mirrorGroupFunction"
     )
@@ -783,6 +787,8 @@ class Capability(StrEnum):
     LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX = "legendabsolute60149.nodeToWriteHex"
     LEGENDABSOLUTE60149_PARAMETER_START = "legendabsolute60149.parameterStart"
     LEGENDABSOLUTE60149_PARAMETEREND = "legendabsolute60149.parameterend"
+    LEGENDABSOLUTE60149_PRODUCT_ID = "legendabsolute60149.productId"
+    LEGENDABSOLUTE60149_PRODUCT_TYPE = "legendabsolute60149.productType"
     LEGENDABSOLUTE60149_PROGRESSIVE_OFF1 = "legendabsolute60149.progressiveOff1"
     LEGENDABSOLUTE60149_PROGRESSIVE_ON1 = "legendabsolute60149.progressiveOn1"
     LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER = "legendabsolute60149.randomMaximumTimer"
