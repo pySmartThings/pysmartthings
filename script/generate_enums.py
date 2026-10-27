@@ -38,6 +38,7 @@ def prepare_attribute_name(attribute: str) -> str:
         "drlcStatus": "DEMAND_RESPONSE_LOAD_CONTROL_STATUS",
         "di": "OCF_DEVICE_ID",
         "n": "DEVICE_NAME",
+        "deviceName": "CUSTOM_DEVICE_NAME",
         "mnhw": "HARDWARE_VERSION",
         "mnml": "MANUFACTURER_DETAILS_LINK",
         "mnmn": "MANUFACTURER_NAME",
