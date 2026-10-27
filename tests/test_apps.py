@@ -1,0 +1,153 @@
+"""Tests for SmartThings apps endpoints."""
+
+from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST
+from aiointercept import aiointercept
+import pytest
+from syrupy import SnapshotAssertion
+
+from pysmartthings import (
+    SmartThings,
+    SmartThingsNotFoundError,
+    SmartThingsQuotaExceededError,
+)
+from . import load_fixture
+
+from .const import HEADERS, MOCK_URL
+
+APP_ID = "8d3b1c1a-2f0d-4b0a-9c1e-9f1234567890"
+
+
+async def test_create_app(
+    client: SmartThings,
+    responses: aiointercept,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test creating an app."""
+    responses.post(
+        f"{MOCK_URL}/smartapps",
+        status=200,
+        body=load_fixture("app_create_response.json"),
+    )
+    assert (
+        await client.create_app(
+            app_name=f"homeassistant-{APP_ID}",
+            display_name="Home Assistant",
+            description="Home Assistant SmartThings integration",
+            redirect_uris=["https://example.com/auth/callback"],
+            scopes=["r:devices:*"],
+        )
+        == snapshot
+    )
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/smartapps",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={
+            "appName": f"homeassistant-{APP_ID}",
+            "displayName": "Home Assistant",
+            "description": "Home Assistant SmartThings integration",
+            "appType": "API_ONLY",
+            "classifications": ["CONNECTED_SERVICE"],
+            "apiOnly": {},
+            "oauth": {
+                "clientName": "Home Assistant",
+                "scope": ["r:devices:*"],
+                "redirectUris": ["https://example.com/auth/callback"],
+            },
+        },
+    )
+
+
+async def test_list_apps(
+    client: SmartThings,
+    responses: aiointercept,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test listing apps."""
+    responses.get(
+        f"{MOCK_URL}/smartapps",
+        status=200,
+        body=load_fixture("app_list_response.json"),
+    )
+    assert await client.list_apps() == snapshot
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/smartapps",
+        METH_GET,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
+async def test_regenerate_oauth(
+    client: SmartThings,
+    responses: aiointercept,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test regenerating an app's OAuth client id and secret."""
+    responses.post(
+        f"{MOCK_URL}/smartapps/{APP_ID}/oauth/generate",
+        status=200,
+        body=load_fixture("app_oauth_regenerate_response.json"),
+    )
+    assert (
+        await client.regenerate_oauth(
+            app_id=APP_ID,
+            client_name="Home Assistant",
+            scopes=["r:devices:*"],
+        )
+        == snapshot
+    )
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/smartapps/{APP_ID}/oauth/generate",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={
+            "clientName": "Home Assistant",
+            "scope": ["r:devices:*"],
+        },
+    )
+
+
+async def test_delete_app(
+    client: SmartThings,
+    responses: aiointercept,
+) -> None:
+    """Test deleting an app."""
+    responses.delete(f"{MOCK_URL}/smartapps/{APP_ID}", status=200)
+    await client.delete_app(APP_ID)
+    responses.assert_called_once_with(
+        f"{MOCK_URL}/smartapps/{APP_ID}",
+        METH_DELETE,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
+async def test_delete_app_not_found(
+    client: SmartThings,
+    responses: aiointercept,
+) -> None:
+    """Test deleting an app that does not exist."""
+    responses.delete(f"{MOCK_URL}/smartapps/{APP_ID}", status=404)
+    with pytest.raises(SmartThingsNotFoundError):
+        await client.delete_app(APP_ID)
+
+
+async def test_create_app_quota_exceeded(
+    client: SmartThings,
+    responses: aiointercept,
+) -> None:
+    """Test creating an app when the quota is exceeded."""
+    responses.post(f"{MOCK_URL}/smartapps", status=402)
+    with pytest.raises(SmartThingsQuotaExceededError):
+        await client.create_app(
+            app_name=f"homeassistant-{APP_ID}",
+            display_name="Home Assistant",
+            description="Home Assistant",
+            redirect_uris=["https://my.home-assistant.io/redirect/oauth"],
+            scopes=["r:devices:*"],
+        )
