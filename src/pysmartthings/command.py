@@ -50,6 +50,7 @@ class Command(StrEnum):
     CHIME = "chime"
     CLEAR = "clear"
     CLEAR_AUTO_ADDED_NO_GO_ZONES = "clearAutoAddedNoGoZones"
+    CLEAR_CARPET_ZONES = "clearCarpetZones"
     CLEAR_CLIMB_ZONES = "clearClimbZones"
     CLEAR_FAILED_CLIMB_ZONES = "clearFailedClimbZones"
     CLEAR_NEWLY_SUGGESTED_CLIMB_ZONES = "clearNewlySuggestedClimbZones"
@@ -77,6 +78,7 @@ class Command(StrEnum):
     DELETE_MAP = "deleteMap"
     DELETE_OBJECTS = "deleteObjects"
     DELETE_RECIPES = "deleteRecipes"
+    DELETE_RECOGNITIONS = "deleteRecognitions"
     DELETE_RESERVATION = "deleteReservation"
     DELETE_RESERVATIONS = "deleteReservations"
     DELETE_USER = "deleteUser"
@@ -187,6 +189,7 @@ class Command(StrEnum):
     RAISE_SETPOINT = "raiseSetpoint"
     RECORD_START = "recordStart"
     RECORD_STOP = "recordStop"
+    REDRAW_MAP = "redrawMap"
     REFRESH = "refresh"
     REFRESH_ALL = "refreshAll"
     REFRESH_CONNECTION = "refreshConnection"
@@ -216,6 +219,7 @@ class Command(StrEnum):
     RESET_PRECIPITATION_LEVEL = "resetPrecipitationLevel"
     RESET_VERY_FINE_DUST_FILTER = "resetVeryFineDustFilter"
     RESET_WATER_FILTER = "resetWaterFilter"
+    RESTORE_MAP = "restoreMap"
     RESTORE_TRACK = "restoreTrack"
     RESUME = "resume"
     RESUME_TRACK = "resumeTrack"
@@ -307,6 +311,7 @@ class Command(StrEnum):
     SET_COMPLETION_TIME = "setCompletionTime"
     SET_CONDITION = "setCondition"
     SET_CONNECTED_DEVICES = "setConnectedDevices"
+    SET_CONNECTED_DEVICES_WITH_NAME = "setConnectedDevicesWithName"
     SET_CONTENT_TEXT = "setContentText"
     SET_CONTENT_TITLE = "setContentTitle"
     SET_CONTEXT = "setContext"
@@ -332,6 +337,7 @@ class Command(StrEnum):
     SET_CUSTOM_COURSE = "setCustomCourse"
     SET_CYCLE_TYPE = "setCycleType"
     SET_DATA = "setData"
+    SET_DATA_ACTIVATED = "setDataActivated"
     SET_DATE_TIME = "setDateTime"
     SET_DAY_LENGTH = "setDayLength"
     SET_DEBUG_INFO = "setDebugInfo"
@@ -352,6 +358,7 @@ class Command(StrEnum):
     SET_DEVICE_ASSOCIATION_TYPE = "setDeviceAssociationType"
     SET_DEVICE_EUI = "setDeviceEui"
     SET_DEVICE_INFO = "setDeviceInfo"
+    SET_DEVICE_NAME = "setDeviceName"
     SET_DEVICE_TYPE = "setDeviceType"
     SET_DISHWASHER_DELAY_START_TIME = "setDishwasherDelayStartTime"
     SET_DISHWASHER_MODE = "setDishwasherMode"
@@ -382,6 +389,7 @@ class Command(StrEnum):
     SET_EVEN_ODD_DAY = "setEvenOddDay"
     SET_EVENT = "setEvent"
     SET_EXCLUDE_HOLIDAYS = "setExcludeHolidays"
+    SET_EXECUTE_RULE_NUMBER = "setExecuteRuleNumber"
     SET_FADE = "setFade"
     SET_FAN_CYCLIC_MODE = "setFanCyclicMode"
     SET_FAN_MODE = "setFanMode"
@@ -475,6 +483,7 @@ class Command(StrEnum):
     SET_MACHINE_STATE = "setMachineState"
     SET_MAGNIFICATION = "setMagnification"
     SET_MAGNIFICATION_LEVEL = "setMagnificationLevel"
+    SET_MANUFACTURER = "setManufacturer"
     SET_MASTER_DI = "setMasterDi"
     SET_MASTER_NAME = "setMasterName"
     SET_MAX_CURRENT = "setMaxCurrent"
@@ -547,6 +556,8 @@ class Command(StrEnum):
     SET_POWER_STATE = "setPowerState"
     SET_PRESET_POSITION = "setPresetPosition"
     SET_PRESSURE_LEVEL = "setPressureLevel"
+    SET_PRODUCT_ID = "setProductId"
+    SET_PRODUCT_TYPE = "setProductType"
     SET_PROG_OFF = "setProgOff"
     SET_PROG_ON = "setProgOn"
     SET_PROGRAM = "setProgram"
@@ -568,6 +579,7 @@ class Command(StrEnum):
     SET_REPORT_STATE_PERIOD = "setReportStatePeriod"
     SET_REPORT_STATE_REALTIME = "setReportStateRealtime"
     SET_REPORT_STATE_REALTIME_PERIOD = "setReportStateRealtimePeriod"
+    SET_RESULT_FEEDBACK = "setResultFeedback"
     SET_RINSE_MODE = "setRinseMode"
     SET_RINSE_PLUS = "setRinsePlus"
     SET_ROBOT_CLEANER_CLEANING_MODE = "setRobotCleanerCleaningMode"
@@ -756,10 +768,12 @@ class Command(StrEnum):
     UNSET_RECOMMENDED_AMOUNT = "unsetRecommendedAmount"
     UPDATE = "update"
     UPDATE_AGING = "updateAging"
+    UPDATE_CARPET_ZONES = "updateCarpetZones"
     UPDATE_CLIMB_ZONES = "updateClimbZones"
     UPDATE_CODES = "updateCodes"
     UPDATE_CREDENTIAL = "updateCredential"
     UPDATE_FIRMWARE = "updateFirmware"
+    UPDATE_FLOOR_PATTERNS = "updateFloorPatterns"
     UPDATE_NO_GO_ZONES = "updateNoGoZones"
     UPDATE_OBJECTS = "updateObjects"
     UPDATE_SPOTS = "updateSpots"
@@ -1761,6 +1775,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_CLEANING_INFO: [],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST: [
         Command.CLEAR_AUTO_ADDED_NO_GO_ZONES,
+        Command.CLEAR_CARPET_ZONES,
         Command.CLEAR_CLIMB_ZONES,
         Command.CLEAR_FAILED_CLIMB_ZONES,
         Command.CLEAR_NEWLY_SUGGESTED_CLIMB_ZONES,
@@ -1770,12 +1785,16 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.COMBINE_AREA,
         Command.DELETE_MAP,
         Command.DELETE_OBJECTS,
+        Command.DELETE_RECOGNITIONS,
         Command.DIVIDE_AREA,
         Command.RENAME_AREA,
         Command.RENAME_MAP,
+        Command.RESTORE_MAP,
         Command.SELECT_MAP,
         Command.SET_NEED_EDIT_NAME,
+        Command.UPDATE_CARPET_ZONES,
         Command.UPDATE_CLIMB_ZONES,
+        Command.UPDATE_FLOOR_PATTERNS,
         Command.UPDATE_NO_GO_ZONES,
         Command.UPDATE_OBJECTS,
         Command.UPDATE_SPOTS,
@@ -1789,6 +1808,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.CANCEL_REMAINING_JOB,
         Command.DRAW_MAP,
         Command.PAUSE,
+        Command.REDRAW_MAP,
         Command.RESUME,
         Command.RETURN_TO_HOME,
         Command.SET_OPERATING_STATE,
@@ -1847,6 +1867,9 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.DISABLE,
         Command.ENABLE,
         Command.SET_CONNECTED_DEVICES,
+        Command.SET_CONNECTED_DEVICES_WITH_NAME,
+        Command.SET_DATA_ACTIVATED,
+        Command.SET_RESULT_FEEDBACK,
         Command.SET_SLEEP_DATA,
         Command.SET_SLEEP_STATUS,
     ],
@@ -1993,6 +2016,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.SAMSUNG_VD_MEDIA_INPUT_SOURCE: [Command.SET_INPUT_SOURCE],
     Capability.SAMSUNG_VD_MULTIVIEW: [Command.SET_MULTIVIEW],
     Capability.SAMSUNG_VD_PICTURE_MODE: [Command.SET_PICTURE_MODE],
+    Capability.SAMSUNG_VD_REFRESH: [Command.REFRESH],
     Capability.SAMSUNG_VD_REMOTE_CONTROL: [Command.SEND],
     Capability.SAMSUNG_VD_SOUND_DETECTION: [],
     Capability.SAMSUNG_VD_SOUND_FROM: [Command.SET_SOUND_FROM],
@@ -2144,12 +2168,16 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
         Command.SET_DEVICE_ASSOCIATION_TYPE
     ],
     Capability.LEGENDABSOLUTE60149_DEVICE_INFO: [Command.SET_DEVICE_INFO],
+    Capability.LEGENDABSOLUTE60149_DEVICE_NAME: [Command.SET_DEVICE_NAME],
     Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: [Command.SET_DRIVER_VERSION],
     Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [
         Command.SET_EFFECTS_SET_COMMAND
     ],
     Capability.LEGENDABSOLUTE60149_ENERGY_RESET1: [Command.SET_ENERGY_RESET],
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Command.SET_EVEN_ODD_DAY],
+    Capability.LEGENDABSOLUTE60149_EXECUTE_RULE_NUMBER: [
+        Command.SET_EXECUTE_RULE_NUMBER
+    ],
     Capability.LEGENDABSOLUTE60149_FAN_CYCLIC_MODE: [Command.SET_FAN_CYCLIC_MODE],
     Capability.LEGENDABSOLUTE60149_FAN_NEXT_CHANGE: [Command.SET_FAN_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Command.SET_FORCED_ON_LEVEL],
@@ -2182,6 +2210,7 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_LOCAL_WEEK_DAY: [Command.SET_LOCAL_WEEK_DAY],
     Capability.LEGENDABSOLUTE60149_LOCAL_YEAR: [Command.SET_LOCAL_YEAR],
     Capability.LEGENDABSOLUTE60149_LOOPS_NUMBER: [Command.SET_LOOPS_NUMBER],
+    Capability.LEGENDABSOLUTE60149_MANUFACTURER: [Command.SET_MANUFACTURER],
     Capability.LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION: [
         Command.SET_MIRROR_GROUP_FUNCTION
     ],
@@ -2194,6 +2223,8 @@ CAPABILITY_COMMANDS: dict[Capability, list[Command]] = {
     Capability.LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX: [Command.SET_NODE_TO_WRITE],
     Capability.LEGENDABSOLUTE60149_PARAMETER_START: [Command.SET_PARAMETER_START],
     Capability.LEGENDABSOLUTE60149_PARAMETEREND: [Command.SET_PARAMETER_END],
+    Capability.LEGENDABSOLUTE60149_PRODUCT_ID: [Command.SET_PRODUCT_ID],
+    Capability.LEGENDABSOLUTE60149_PRODUCT_TYPE: [Command.SET_PRODUCT_TYPE],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Command.SET_PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Command.SET_PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [

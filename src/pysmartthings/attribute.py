@@ -114,6 +114,7 @@ class Attribute(StrEnum):
     BABY_DETERGENT_ORDER_THRESHOLD = "babyDetergentOrderThreshold"
     BABY_DETERGENT_REMAINING_AMOUNT = "babyDetergentRemainingAmount"
     BABY_DETERGENT_TYPE = "babyDetergentType"
+    BACKUP_MAPS = "backupMaps"
     BASIC_HTML = "basicHtml"
     BASIC_HTML_DISABLE = "basicHtmlDisable"
     BASIC_SET_ASSOCIATION_GROUP = "basicSetAssociationGroup"
@@ -152,6 +153,7 @@ class Attribute(StrEnum):
     CARBON_MONOXIDE = "carbonMonoxide"
     CARBON_MONOXIDE_HEALTH_CONCERN = "carbonMonoxideHealthConcern"
     CARBON_MONOXIDE_LEVEL = "carbonMonoxideLevel"
+    CARPET_ZONES = "carpetZones"
     CAST_CONTROL = "castControl"
     CATEGORY = "category"
     CELL_SIZE = "cellSize"
@@ -201,6 +203,7 @@ class Attribute(StrEnum):
     CONNECTED_DEVICE_COUNT = "connectedDeviceCount"
     CONNECTED_DEVICE_ID = "connectedDeviceId"
     CONNECTED_DEVICES = "connectedDevices"
+    CONNECTED_DEVICES_WITH_NAME = "connectedDevicesWithName"
     CONNECTED_ROUTER_COUNT = "connectedRouterCount"
     CONNECTED_USER_ID = "connectedUserId"
     CONNECTION = "connection"
@@ -241,8 +244,7 @@ class Attribute(StrEnum):
     CURRENT_APP = "currentApp"
     CURRENT_CONTROL_MODE = "currentControlMode"
     CURRENT_LOOP = "currentLoop"
-    CURRENT_MAP = "currentMap"
-    CURRENT_MAP_ID = "currentMapId"
+    CURRENT_OPERATING_MAP_ID = "currentOperatingMapId"
     CURRENT_OPERATION_MODE = "currentOperationMode"
     CURRENT_STATUS = "currentStatus"
     CURRENT_TIME_PERIOD = "currentTimePeriod"
@@ -256,6 +258,7 @@ class Attribute(StrEnum):
     DAILYENERGY = "dailyenergy"
     DASH_BOARD_VALUE = "dashBoardValue"
     DATA = "data"
+    DATA_ACTIVATED = "dataActivated"
     DATE_STARTED = "dateStarted"
     DAY_LENGTH = "dayLength"
     DAY_OF_WEEK = "dayOfWeek"
@@ -294,6 +297,8 @@ class Attribute(StrEnum):
     DEVICE_ICE = "deviceIce"
     DEVICE_ID = "deviceId"
     DEVICE_INFO = "deviceInfo"
+    DEVICE_MODEL_TYPE = "deviceModelType"
+    CUSTOM_DEVICE_NAME = "deviceName"
     DEVICE_NETWORK_ID = "deviceNetworkId"
     DEVICE_SETTINGS = "deviceSettings"
     DEVICE_STATE = "deviceState"
@@ -411,6 +416,7 @@ class Attribute(StrEnum):
     EVENTS = "events"
     EXCLUDE_HOLIDAYS = "excludeHolidays"
     EXECUTABLE_SERVICE_LIST = "executableServiceList"
+    EXECUTE_RULE_NUMBER = "executeRuleNumber"
     EXPLORING_MAP_ID = "exploringMapId"
     EXTRA_CLEANING_INFO = "extraCleaningInfo"
     FACE_RECOGNIZED_EVENT = "faceRecognizedEvent"
@@ -433,6 +439,7 @@ class Attribute(StrEnum):
     FIRMWARE_VERSION = "firmwareVersion"
     FLEX_CHARGING_PLAN = "flexChargingPlan"
     FLEX_ZONES = "flexZones"
+    FLOOR_PATTERN_INFO = "floorPatternInfo"
     FLOW = "flow"
     FLOW_RANGE = "flowRange"
     FONT_SIZE = "fontSize"
@@ -609,6 +616,9 @@ class Attribute(StrEnum):
     LIGHT_SENSING = "lightSensing"
     LIGHTING = "lighting"
     LIGHTING_MODE = "lightingMode"
+    LINKAGE_START_TIME = "linkageStartTime"
+    LINKAGE_STATUS = "linkageStatus"
+    LINKAGE_STOP_TIME = "linkageStopTime"
     LOCAL_CONTROL = "localControl"
     LOCAL_DATE = "localDate"
     LOCAL_DATE_ONE = "localDateOne"
@@ -646,6 +656,7 @@ class Attribute(StrEnum):
     MANUAL_LEVEL = "manualLevel"
     MANUAL_LEVEL_MAX = "manualLevelMax"
     MANUAL_LEVEL_MIN = "manualLevelMin"
+    MANUFACTURER = "manufacturer"
     MAP = "map"
     MAP_EDIT_RESULT = "mapEditResult"
     MAP_ID = "mapId"
@@ -857,6 +868,8 @@ class Attribute(StrEnum):
     PRESSURE_LEVEL = "pressureLevel"
     PRIMARY_ZIGBEE_REACHABLE = "primaryZigbeeReachable"
     PROBABILITY = "probability"
+    PRODUCT_ID = "productId"
+    PRODUCT_TYPE = "productType"
     PROG_OFF = "progOff"
     PROG_ON = "progOn"
     PROGRAM = "program"
@@ -885,6 +898,7 @@ class Attribute(StrEnum):
     REAR_LEFT_WINDOW = "rearLeftWindow"
     REAR_RIGHT_DOOR = "rearRightDoor"
     REAR_RIGHT_WINDOW = "rearRightWindow"
+    RECOGNITION_INFO = "recognitionInfo"
     RECOMMENDED_AMOUNT = "recommendedAmount"
     REFERENCE_TABLE = "referenceTable"
     REFRESH_RESULT = "refreshResult"
@@ -921,6 +935,7 @@ class Attribute(StrEnum):
     REPORT_STATE_REALTIME = "reportStateRealtime"
     REPORT_STATE_REALTIME_PERIOD = "reportStateRealtimePeriod"
     REPRESENTATIVE_COMPONENT = "representativeComponent"
+    REQUEST_FEEDBACK = "requestFeedback"
     REQUEST_ID = "requestId"
     REQUEST_INVITATION = "requestInvitation"
     RESERVABLE = "reservable"
@@ -928,6 +943,7 @@ class Attribute(StrEnum):
     RESOLUTION = "resolution"
     RESPONSE = "response"
     RESULT = "result"
+    RESULT_FEEDBACK = "resultFeedback"
     RING_MOBILE = "ringMobile"
     RINSE_MODE = "rinseMode"
     RINSE_PLUS = "rinsePlus"
@@ -1240,6 +1256,7 @@ class Attribute(StrEnum):
     SUPPORTED_SCENES = "supportedScenes"
     SUPPORTED_SECURITY_SYSTEM_COMMANDS = "supportedSecuritySystemCommands"
     SUPPORTED_SECURITY_SYSTEM_STATUSES = "supportedSecuritySystemStatuses"
+    SUPPORTED_SERVICE_LIST = "supportedServiceList"
     SUPPORTED_SET_TIMES = "supportedSetTimes"
     SUPPORTED_SINGLE_BIXBY_RESPONSES = "supportedSingleBixbyResponses"
     SUPPORTED_SOUND_FEEDBACK_WHEN_START = "supportedSoundFeedbackWhenStart"
@@ -1373,6 +1390,7 @@ class Attribute(StrEnum):
     TXIC_DEVICE_FW_VER = "txicDeviceFwVer"
     TYPE = "type"
     ULTRAVIOLET_INDEX = "ultravioletIndex"
+    UNAVAILABLE_CAPABILITIES = "unavailableCapabilities"
     UNAVAILABLE_COMMANDS = "unavailableCommands"
     UNLOCK_CODE_NAME = "unlockCodeName"
     UPDATE_AVAILABLE = "updateAvailable"
@@ -3059,6 +3077,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.MODEL_CODE,
         Attribute.REGION_CODE,
         Attribute.REPRESENTATIVE_COMPONENT,
+        Attribute.SUPPORTED_SERVICE_LIST,
         Attribute.TYPE,
     ],
     Capability.SAMSUNG_CE_KITCHEN_MODE_SPECIFICATION: [Attribute.SPECIFICATION],
@@ -3202,10 +3221,13 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_MAP_LIST: [
         Attribute.AREA_INFO,
+        Attribute.BACKUP_MAPS,
+        Attribute.CARPET_ZONES,
         Attribute.CLIMB_ZONES,
-        Attribute.CURRENT_MAP,
-        Attribute.CURRENT_MAP_ID,
+        Attribute.CURRENT_OPERATING_MAP_ID,
+        Attribute.DEVICE_MODEL_TYPE,
         Attribute.EXPLORING_MAP_ID,
+        Attribute.FLOOR_PATTERN_INFO,
         Attribute.MAP,
         Attribute.MAPS,
         Attribute.MAP_EDIT_RESULT,
@@ -3214,6 +3236,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.NO_GO_ZONES,
         Attribute.OBJECT_INFO,
         Attribute.ONLINE_STATION,
+        Attribute.RECOGNITION_INFO,
         Attribute.SPOT_INFO,
         Attribute.STATION,
         Attribute.STATION_MODEL_TYPE,
@@ -3235,6 +3258,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.POWER_SAVING_REASON,
         Attribute.SHOW_LIVE_MAP_ON_SUSPEND,
         Attribute.SUPPORTED_OPERATING_STATE,
+        Attribute.SUPPORTED_OPTIONAL_FEATURES,
         Attribute.WHEELS_LIFTED_UP,
     ],
     Capability.SAMSUNG_CE_ROBOT_CLEANER_PATROL: [
@@ -3313,8 +3337,15 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.SAMSUNG_CE_SILENT_ACTION: [],
     Capability.SAMSUNG_CE_SLEEP_DATA_INTEROPERATION: [
         Attribute.CONNECTED_DEVICES,
+        Attribute.CONNECTED_DEVICES_WITH_NAME,
+        Attribute.DATA_ACTIVATED,
         Attribute.ENABLED,
+        Attribute.LINKAGE_START_TIME,
+        Attribute.LINKAGE_STATUS,
+        Attribute.LINKAGE_STOP_TIME,
         Attribute.MAX_DEVICES,
+        Attribute.REQUEST_FEEDBACK,
+        Attribute.RESULT_FEEDBACK,
         Attribute.SLEEP_DATA,
         Attribute.SLEEP_STATUS,
     ],
@@ -3419,7 +3450,10 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.ZONE_ID,
     ],
     Capability.SAMSUNG_CE_TOGGLE_SWITCH: [Attribute.SWITCH],
-    Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [Attribute.UNAVAILABLE_COMMANDS],
+    Capability.SAMSUNG_CE_UNAVAILABLE_CAPABILITIES: [
+        Attribute.UNAVAILABLE_CAPABILITIES,
+        Attribute.UNAVAILABLE_COMMANDS,
+    ],
     Capability.SAMSUNG_CE_UV_DEODORIZING: [Attribute.UV_DEODORIZING],
     Capability.SAMSUNG_CE_VIEW_INSIDE: [
         Attribute.CONTENTS,
@@ -3583,6 +3617,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.SUPPORTED_PICTURE_MODES,
         Attribute.SUPPORTED_PICTURE_MODES_MAP,
     ],
+    Capability.SAMSUNG_VD_REFRESH: [],
     Capability.SAMSUNG_VD_REMOTE_CONTROL: [],
     Capability.SAMSUNG_VD_SOUND_DETECTION: [Attribute.SOUND_DETECTED],
     Capability.SAMSUNG_VD_SOUND_FROM: [Attribute.DETAIL_NAME, Attribute.MODE],
@@ -3593,6 +3628,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     ],
     Capability.SAMSUNG_VD_SUPPORTS_FEATURES: [
         Attribute.ART_SUPPORTED,
+        Attribute.DATA,
         Attribute.EXECUTABLE_SERVICE_LIST,
         Attribute.IME_ADV_SUPPORTED,
         Attribute.MEDIA_OUTPUT_SUPPORTED,
@@ -3782,10 +3818,12 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
         Attribute.DEVICE_ASSOCIATION_TYPE
     ],
     Capability.LEGENDABSOLUTE60149_DEVICE_INFO: [Attribute.DEVICE_INFO],
+    Capability.LEGENDABSOLUTE60149_DEVICE_NAME: [Attribute.CUSTOM_DEVICE_NAME],
     Capability.LEGENDABSOLUTE60149_DRIVER_VERSION1: [Attribute.DRIVER_VERSION],
     Capability.LEGENDABSOLUTE60149_EFFECTS_SET_COMMAND: [Attribute.EFFECTS_SET_COMMAND],
     Capability.LEGENDABSOLUTE60149_ENERGY_RESET1: [Attribute.ENERGY_RESET],
     Capability.LEGENDABSOLUTE60149_EVEN_ODD_DAY: [Attribute.EVEN_ODD_DAY],
+    Capability.LEGENDABSOLUTE60149_EXECUTE_RULE_NUMBER: [Attribute.EXECUTE_RULE_NUMBER],
     Capability.LEGENDABSOLUTE60149_FAN_CYCLIC_MODE: [Attribute.FAN_CYCLIC_MODE],
     Capability.LEGENDABSOLUTE60149_FAN_NEXT_CHANGE: [Attribute.FAN_NEXT_CHANGE],
     Capability.LEGENDABSOLUTE60149_FORCED_ON_LEVEL: [Attribute.FORCED_ON_LEVEL],
@@ -3814,6 +3852,7 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_LOCAL_WEEK_DAY: [Attribute.LOCAL_WEEK_DAY],
     Capability.LEGENDABSOLUTE60149_LOCAL_YEAR: [Attribute.LOCAL_YEAR],
     Capability.LEGENDABSOLUTE60149_LOOPS_NUMBER: [Attribute.LOOPS_NUMBER],
+    Capability.LEGENDABSOLUTE60149_MANUFACTURER: [Attribute.MANUFACTURER],
     Capability.LEGENDABSOLUTE60149_MIRROR_GROUP_FUNCTION: [
         Attribute.MIRROR_GROUP_FUNCTION
     ],
@@ -3826,6 +3865,8 @@ CAPABILITY_ATTRIBUTES: dict[Capability, list[Attribute]] = {
     Capability.LEGENDABSOLUTE60149_NODE_TO_WRITE_HEX: [Attribute.NODE_TO_WRITE],
     Capability.LEGENDABSOLUTE60149_PARAMETER_START: [Attribute.PARAMETER_START],
     Capability.LEGENDABSOLUTE60149_PARAMETEREND: [Attribute.PARAMETER_END],
+    Capability.LEGENDABSOLUTE60149_PRODUCT_ID: [Attribute.PRODUCT_ID],
+    Capability.LEGENDABSOLUTE60149_PRODUCT_TYPE: [Attribute.PRODUCT_TYPE],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_OFF1: [Attribute.PROG_OFF],
     Capability.LEGENDABSOLUTE60149_PROGRESSIVE_ON1: [Attribute.PROG_ON],
     Capability.LEGENDABSOLUTE60149_RANDOM_MAXIMUM_TIMER: [
