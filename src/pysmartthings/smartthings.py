@@ -727,7 +727,9 @@ class SmartThings:
             return
         try:
             await self.delete_subscription(subscription_id)
-        except SmartThingsConnectionError:
+        # The delete refreshes the token first, and refresh_token_function
+        # raises the caller's own errors. Letting one escape ends subscribe().
+        except (SmartThingsConnectionError, ClientError, ConnectionError):
             LOGGER.debug("Connection error while deleting subscription")
             if self.max_connections_reached_callback:
                 self.max_connections_reached_callback()
