@@ -11,7 +11,13 @@ from aiohttp.hdrs import METH_GET, METH_POST
 from aiointercept import aiointercept
 from yarl import URL
 
-from pysmartthings import SmartThings, Capability, Command, SmartThingsCommandError
+from pysmartthings import (
+    SmartThings,
+    Capability,
+    Command,
+    SmartThingsCommandError,
+    SmartThingsError,
+)
 from . import load_fixture, load_json_fixture
 
 from .const import MOCK_URL, HEADERS
@@ -306,6 +312,27 @@ async def test_executing_command_error(
             Capability.COLOR_TEMPERATURE,
             Command.SET_COLOR_TEMPERATURE,
             argument=300000,
+        )
+
+
+@pytest.mark.parametrize("status", [400, 405, 410])
+async def test_executing_command_unmapped_client_error(  # noqa: D103
+    client: SmartThings,
+    responses: aiointercept,
+    status: int,
+) -> None:
+    responses.post(
+        f"{MOCK_URL}/v1/devices/440063de-a200-40b5-8a6b-f3399eaa0370/commands",
+        status=status,
+        body="{}",
+    )
+    with pytest.raises(
+        SmartThingsError, match=re.escape(f"SmartThings returned an error ({status})")
+    ):
+        await client.execute_device_command(
+            "440063de-a200-40b5-8a6b-f3399eaa0370",
+            Capability.SWITCH,
+            Command.ON,
         )
 
 

@@ -17,6 +17,7 @@ from .exceptions import (
     SmartThingsBlockedError,
     SmartThingsCommandError,
     SmartThingsConnectionError,
+    SmartThingsError,
     SmartThingsForbiddenError,
     SmartThingsNotFoundError,
     SmartThingsQuotaExceededError,
@@ -201,6 +202,10 @@ class SmartThings:
         if response.status >= 500:
             msg = f"SmartThings server error ({response.status})"
             raise SmartThingsServerError(msg)
+
+        if response.status >= 400:
+            msg = f"SmartThings returned an error ({response.status})"
+            raise SmartThingsError(msg)
 
         return text
 
