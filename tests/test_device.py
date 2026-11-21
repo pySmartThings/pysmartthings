@@ -316,7 +316,7 @@ async def test_executing_command_error(
 
 
 @pytest.mark.parametrize("status", [400, 405, 410])
-async def test_executing_command_unmapped_client_error(  # noqa: D103
+async def test_executing_command_unmapped_client_error(  # noqa: D103  # pylint: disable=missing-function-docstring
     client: SmartThings,
     responses: aiointercept,
     status: int,
