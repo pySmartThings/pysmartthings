@@ -7,7 +7,7 @@ import logging
 from typing import TYPE_CHECKING
 from unittest.mock import AsyncMock, MagicMock, patch
 
-from aiohttp import ClientSession
+from aiohttp import ClientConnectionError, ClientSession
 from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST
 from aiointercept import aiointercept
 import orjson
@@ -410,6 +410,39 @@ async def test_subscribe_retries_on_connection_error(
     mock_sleep.assert_awaited_once_with(1)
     responses.assert_any_call(SUBSCRIPTION_URL, METH_DELETE)
     max_connections_reached_callback.assert_called_once_with()
+
+
+async def test_subscribe_survives_token_refresh_error_while_cleaning_up(
+    client: SmartThings,
+    responses: aiointercept,
+) -> None:
+    """Test a failing token refresh during clean up does not end subscribe()."""
+    mock_create_subscription(responses)
+    responses.get(REGISTRATION_URL, exception=True)
+    mock_subscription_limit(responses)
+    # Create and connect refresh fine, then the network is gone by the time
+    # the failed subscription is deleted. Callers raise their own ClientError
+    # subclasses from the refresh, not SmartThingsConnectionError.
+    refresh_token_function = AsyncMock(
+        side_effect=[
+            "token",
+            "token",
+            ClientConnectionError("Domain name not found"),
+            "token",
+        ]
+    )
+    client.refresh_token_function = refresh_token_function
+    max_connections_reached_callback = MagicMock()
+    client.max_connections_reached_callback = max_connections_reached_callback
+
+    with patch(
+        "pysmartthings.smartthings.asyncio.sleep", new_callable=AsyncMock
+    ) as mock_sleep:
+        await client.subscribe(LOCATION_ID)
+
+    mock_sleep.assert_awaited_once_with(1)
+    assert refresh_token_function.await_count == 4
+    assert max_connections_reached_callback.call_count == 2
 
 
 async def test_subscribe_retries_on_unexpected_error(
